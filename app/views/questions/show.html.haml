@@ -1,0 +1,19 @@
+%p
+  %b
+    Title:
+  = h @question.title
+%p
+  %b
+    Body:
+  = h @question.body
+%p
+  %b
+    User:
+  = h @question.user_id
+%p
+  %b
+    Answered:
+  = h @question.answered
+= link_to 'Edit', edit_question_path(@question)
+|
+= link_to 'Back', questions_path

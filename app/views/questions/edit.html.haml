@@ -1,0 +1,26 @@
+%h1
+  Editing question
+- form_for(@question) do |f|
+= f.error_messages
+%p
+  = f.label :title
+  %br
+  = f.text_field :title
+%p
+  = f.label :body
+  %br
+  = f.text_area :body
+%p
+  = f.label :user_id
+  %br
+  = f.text_field :user_id
+%p
+  = f.label :answered
+  %br
+  = f.check_box :answered
+%p
+  = f.submit 'Update'
+- end
+= link_to 'Show', @question
+|
+= link_to 'Back', questions_path
