@@ -1,0 +1,4 @@
+*~
+coverage
+*.log
+*.sqlite3
