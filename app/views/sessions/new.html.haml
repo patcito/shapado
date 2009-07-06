@@ -1,0 +1,14 @@
+%h1
+  Log In
+- form_tag session_path do
+  %p
+    = label_tag 'login'
+    %br
+    = text_field_tag 'login', @login
+  %p
+    = label_tag 'password'
+    %br
+    = password_field_tag 'password', nil
+  %p
+    = submit_tag 'Log in'
+

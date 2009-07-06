@@ -1,0 +1,24 @@
+%h1
+  Sign up as a new user
+- @user.password = @user.password_confirmation = nil
+= error_messages_for :user
+- form_for :user, :url => users_path do |f|
+  %p
+    = label_tag 'login'
+    %br
+    = f.text_field :login
+  %p
+    = label_tag 'email'
+    %br
+    = f.text_field :email
+  %p
+    = label_tag 'password'
+    %br
+    = f.password_field :password
+  %p
+    = label_tag 'password_confirmation', 'Confirm Password'
+    %br
+    = f.password_field :password_confirmation
+  %p
+    = submit_tag 'Sign up'
+

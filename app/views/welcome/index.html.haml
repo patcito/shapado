@@ -2,3 +2,7 @@
   Welcome#index
 %p
   Find me in app/views/welcome/index.html.erb
+
+-if logged_in?
+  Logged in as:
+  = h(current_user.login)

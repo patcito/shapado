@@ -1,5 +1,5 @@
 class Question
-  include CouchMapper::Document
+  include MongoMapper::Document
 
   key :title, String
   key :body, String
