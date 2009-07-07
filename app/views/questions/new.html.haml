@@ -1,24 +1,16 @@
 %h1
   New question
 - form_for(@question) do |f|
-= f.error_messages
-%p
-  = f.label :title
-  %br
-  = f.text_field :title
-%p
-  = f.label :body
-  %br
-  = f.text_area :body
-%p
-  = f.label :user_id
-  %br
-  = f.text_field :user_id
-%p
-  = f.label :answered
-  %br
-  = f.check_box :answered
-%p
-  = f.submit 'Create'
-- end
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.submit 'Create'
+
 = link_to 'Back', questions_path
