@@ -41,4 +41,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-MongoMapper.database = "stackopenflow" # FIXME
+MongoMapper.database = "shapado" # FIXME
