@@ -25,6 +25,7 @@ class Question
   key :answer_id, String
   belongs_to :answer
   has_many :answers, :dependent => :destroy
+  has_many :votes, :as => "voteable"
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug
