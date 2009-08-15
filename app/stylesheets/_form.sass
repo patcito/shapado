@@ -1,0 +1,76 @@
+@import compass/utilities/general/inline_block.sass
+
+form.form
+  .field-group
+    :margin 0 0 0.5em 0.5em
+    :overflow hidden
+    &.col
+      :margin-left 10%
+
+  .label-container
+    :float left
+    :padding 0.3em 0 0.4em
+    :width 140px
+
+  .field
+    :margin-left 140px
+    :margin-rigth 0.5em
+    :padding 4px 0
+    &.without-label
+      :margin-left 20px
+
+  table
+    :width 100%
+
+  input
+    :padding 3px
+
+    &.radio, &.checkbox
+      :margin 0.5em
+
+    &.text-field
+      :border 1px solid #6B6B6B
+      :line-height 1.6em
+      :padding 2px 6px 4px
+      +inline-block
+      :background-color #fff
+      &.huge
+        :width 96%
+      &:focus
+        :border 1px solid #77B7FF
+
+  textarea.text-area
+    :border 1px solid #6B6B6B
+    :width 350px
+    :height 100px
+    :padding 3px
+    :background-color #fff
+
+    &:focus
+      :border 1px solid #77B7FF
+
+    &.huge
+      :width 97%
+
+  label.label
+    :color #444
+
+
+  a.cancel-form, a.close-dialog
+    font-size: 0.8em
+
+
+  fieldset
+    :border-style none none solid
+    :border-width 0 0 0px
+    :overflow hidden
+    :padding 0
+
+    legend
+      :color #322D20
+      :display block
+      :font-size 100%
+      :font-weight bold
+      :margin 0
+      :padding 0
+

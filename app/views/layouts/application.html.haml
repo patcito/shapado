@@ -20,14 +20,17 @@
           #user-nav
             -if !logged_in?
               .box
-                -form_tag session_path, :id => "main_head_login" do
+                .left
+                  =link_to "signup", signup_path
+                -form_tag session_path, :id => "main_head_login", :class => "form" do
                   %fieldset
-                    %p
+                    .field-group.left
                       = label_tag "Email"
-                      = text_field_tag 'login', @login
-                    %p
+                      = text_field_tag 'login', @login, :class => "text-field", :size => 12
+
+                    .field-group.left
                       = label_tag "Password"
-                      = password_field_tag 'password', nil
+                      = password_field_tag 'password', nil, :class => "text-field", :size => 12
                       %em.helper
                         %a{ :href => "#" }
                           Forgot?
@@ -35,15 +38,16 @@
                       %button{ :type => "submit" }
                         Log in
             -else
-              %form.box{:style => "float:right"}
-                %fieldset
-                  %p
-                    = text_field_tag 'search', "search"
-              %div
+              .left{:style =>"text-align: right"}
                 Logged in as
                 %b
                   =current_user.login
                 =link_to "Logout", logout_path
+              .box.right
+                %form.form
+                  %fieldset
+                    %p
+                      = text_field_tag 'search', "search", :class => "text-field"
 
       .clear
       %br
