@@ -1,0 +1,9 @@
+%h2
+  Editing answer
+- form_for(@answer, :html => {:class => "form"}) do |f|
+  = f.error_messages
+  =render :partial => "form", :locals => {:f => f}
+  .field-group
+    .buttons
+      = f.submit 'Update'
+      = link_to 'Cancel', @question, :class => "button cancel"

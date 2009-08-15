@@ -28,6 +28,9 @@
       .answer_body
         = vote_box
         = h answer.body
+        .buttons
+          = link_to "Edit", edit_answer_path(answer), :class =>"button"
+          = link_to "Delete", answer, :confirm => 'Are you sure?', :method => :delete, :class =>"button cancel"
       .clear
 
 %hr
