@@ -54,9 +54,9 @@
             %li
               =link_to "tags", "#"
             %li
-              =link_to "users", "#"
+              =link_to "users", users_path
             %li
-              =link_to "questions", "#"
+              =link_to "unanswered", "#"
             %li{:style=>"float: right;"}
               =link_to "ask question", new_question_path, :style => "background: #B5CBE6"
       #main-content
@@ -75,4 +75,4 @@
       #footer
         %hr
         %p
-          \&copy; 2009 Ricodigo. All rights reserved.
+          \&copy; 2009 Ricodigo. Some rights reserved.

@@ -1,12 +1,12 @@
 class Question
   include MongoMapper::Document
 
-  key :title, String
-  key :body, String
-  key :answered, Boolean
+  key :title, String, :required => true
+  key :body, String, :required => true
+  key :answered, Boolean, :default => false
 
   belongs_to :user
 
-  validates_presence_of :user_id, :body, :title
+  validates_presence_of :user_id
 end
 
