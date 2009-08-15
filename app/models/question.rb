@@ -37,7 +37,6 @@ class Question
 
   def update_answer_count
     self.answers_count = self.answers.count
-    self.answered = true if self.answers_count > 0
   end
 end
 

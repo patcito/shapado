@@ -8,4 +8,7 @@
       %strong
         = link_to h(question.title), question_path(question)
       %br
+      Answers:
+      = question.answers_count
+      %br
       = truncate(question.body, :length => 400)
