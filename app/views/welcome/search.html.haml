@@ -1,7 +1,22 @@
-%ul
-  -@questions.each do |question|
-    %li{:style => "border: 1px solid black"}
-      %strong
-        = link_to h(question.title), question_path(question)
-      %br
-      = truncate(question.body, :length => 400)
+-if !@questions.empty?
+  %h1
+    Questions
+  %ul
+    -@questions.each do |question|
+      %li{:style => "border: 1px solid black"}
+        %strong
+          = link_to h(question.title), question_path(question)
+        %br
+        = truncate(question.body, :length => 400)
+
+-if !@answers.empty?
+  %h1
+    Answers
+  %ul
+    -@answers.each do |answer|
+      %li{:style => "border: 1px solid black"}
+        %strong
+          = link_to h(answer.question.title), question_path(answer.question)
+        %br
+        = truncate(answer.body, :length => 400)
+
