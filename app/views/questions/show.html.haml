@@ -19,7 +19,7 @@
   %ul
     %li
       = link_to h(answer.user.login), user_path(answer.user)
-      = time_ago_in_words(answer.created_at)+" "+t("ago")
+      = time_ago_in_words(answer.created_at)+" "+ "ago"
     %li
       = h answer.body
 
