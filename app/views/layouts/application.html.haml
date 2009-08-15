@@ -44,10 +44,13 @@
                   =current_user.login
                 =link_to "Logout", logout_path
               .box.right
-                %form.form
+                -form_tag search_path, :class => "form", :method => :get do
                   %fieldset
                     %p
-                      = text_field_tag 'search', "search", :class => "text-field"
+                      = text_field_tag 'q', params[:q], :class => "text-field"
+                  .buttons
+                    %button{:type => "submit"}
+                      Go
 
       .clear
       %br
