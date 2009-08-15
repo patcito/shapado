@@ -14,6 +14,19 @@
   %b
     Answered:
   = h @question.answered
+
+%hr
+%h1
+  Answers
+
+-@question.answers.each do |answer|
+  %ul
+    %li
+      = link_to h(answer.user.login), user_path(answer.user)
+      = time_ago_in_words(answer.created_at)+" ago"
+    %li
+      = answer.body
+
 = link_to 'Edit', edit_question_path(@question)
 |
 = link_to 'Back', questions_path
