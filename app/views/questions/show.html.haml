@@ -25,3 +25,12 @@
 .buttons
   = link_to 'Edit', edit_question_path(@question), :class => "button"
   = link_to 'Back', questions_path, :class => "button"
+
+-content_for :sidebar do
+  %b asked by
+  = link_to @question.user.login, user_path(@question.user)
+  %b
+    = time_ago_in_words(@question.created_at)+" ago"
+  %br
+  %h1 tags
+

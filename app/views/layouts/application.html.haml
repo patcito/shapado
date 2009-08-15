@@ -66,7 +66,7 @@
             %li
               =link_to "unanswered", "#"
             %li{:style=>"float: right;"}
-              =link_to "ask question", new_question_path, :style => "background: #B5CBE6"
+              =link_to "ask question", new_question_path, :style => "background: #004181;color: #dedede"
       #main-content
         -flash.each do |k,v|
           .message{:class => k.to_s}
@@ -78,9 +78,9 @@
               = yield
           #sidebar
             .internal
-              %h1
-                SideBar
+              = yield :sidebar
       #footer
         %hr
         %p
           \&copy; 2009 Ricodigo. Some rights reserved.
+      .clear
