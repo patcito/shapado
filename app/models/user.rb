@@ -24,7 +24,7 @@ class User
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
   validates_uniqueness_of   :login
-  validates_format_of       :login,    :with => Authentication.login_regex, :message => Authentication.bad_login_message
+  validates_format_of       :login,    :with => /\w+/, :message => Authentication.bad_login_message
 
   validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
   validates_length_of       :name,     :maximum => 100
@@ -63,7 +63,11 @@ class User
   end
 
   def to_param
-    self.login.blank? ? self.id : self.login.gsub(/\W/, "-")
+    if self.login.blank? || self.login.match(/\W/)
+      self.id
+    else
+      self.login
+    end
   end
 
   protected

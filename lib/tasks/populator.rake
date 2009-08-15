@@ -26,7 +26,7 @@ namespace :populator do
   desc "Creates 10 random users"
   task :users => :environment do
     10.times do
-      user = User.create(:login => Faker::Internet.user_name,
+      user = User.create(:login => Faker::Internet.user_name.gsub(/\W/, "-"),
                          :email => Faker::Internet.email,
                          :name => Faker::Name.name,
                          :password => "test123", :password_confirmation => "test123")
