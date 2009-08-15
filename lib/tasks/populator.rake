@@ -11,6 +11,12 @@ namespace :populator do
                        :body => Faker::Lorem.paragraphs(rand(10)+1),
                        :answered => (rand(100) % 2 == 0))
       q.user = users.rand
+
+      rand(20).times do |i|
+        q.answers << Answer.new(:user => users.rand,
+                                :body => Faker::Lorem.paragraphs(rand(10)+1))
+      end
+
       q.save!
     end
   end
