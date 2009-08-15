@@ -1,0 +1,6 @@
+= hidden_field_tag "question_id", @question.id
+.field-group
+  .label-container
+    %label
+      Answer the question
+  = f.text_area :body, :class => "text-area huge"
