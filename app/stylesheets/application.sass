@@ -1,0 +1,491 @@
+@import buttons
+
+body
+  background: #eee
+  color: #666
+  font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+
+a:link, a:visited
+  font-weight: bold
+  color: #669933
+
+
+a:hover, a:active
+  color: #96a51e
+
+a, strong, b
+  line-height: 17px
+
+
+.clear
+  clear: both
+
+strong, b
+  line-height: 19px
+
+
+abbr
+  border-bottom: 1px dotted #b4b4b4
+  cursor: help
+
+
+.hidden
+  display: none
+
+
+#header
+  display: block
+
+  #logo
+    margin: 20px 10px
+
+    a
+      background: transparent url("/images/logo.png") no-repeat
+      border: 0
+      display: block
+      height: 40px
+      width: 154px
+
+      img
+        display: block
+        display: block
+        width: 0
+
+
+  #user-actions
+    em.label
+      color: #91ce9b
+      font-size: .75em
+      font-style: normal
+      font-weight: bold
+      margin-top: 35px
+      text-transform: uppercase
+      text-align: right
+
+    p
+      float: left
+      margin: 0 3px
+
+    label
+      color: #fff
+      display: block
+      font-size: .75em
+      font-weight: bold
+      text-transform: uppercase
+
+    input
+      background: #444
+      border: 1px solid #444
+      color: #d4d4d4
+      width: 148px
+
+      &:focus
+        background: #fff
+        border: 1px solid #91ce9b
+        color: #444
+
+    em.helper
+      font-size: .75em
+      font-style: normal
+
+  .buttons
+    clear: none
+    margin: 20px 0 0 0
+
+    button
+      float: none
+
+
+input
+  float: none
+
+
+
+x
+  &:-moz-any-link, &:default
+    -moz-border-radius: 14px
+
+
+
+#banner
+  background: #86c340 url("/images/bg_banner.png") top center repeat-x
+  border-top: 1px solid #6cbd92
+  border-bottom: 1px solid #78af39
+
+
+#wrapper
+  background: #fff url("/images/bg.png") top center repeat-x
+
+
+.home #wrapper
+  padding-top: 20px
+
+
+.tour #wrapper
+  background: #000
+
+
+#header
+  margin: 0 10px
+  position: relative
+
+
+#highlight
+  position: absolute
+  right: 0
+  top: 60px
+
+
+h1, h2
+  letter-spacing: -.05em
+  line-height: 40px
+
+
+h1
+  color: #000
+  font-size: 32px
+  font-weight: bold
+  margin-top: 40px
+
+
+h2
+  color: #666
+  font-size: 28px
+  font-weight: normal
+  margin-bottom: 40px
+
+
+h3
+  color: #59892f
+  font-size: 18px
+  margin-bottom: 20px
+
+  &.section
+    border-top: 1px solid #eee
+    clear: both
+    color: #888
+    font-size: .75em
+    margin: 0 0 20px 0
+    padding: 9px 0 10px 0
+    text-transform: uppercase
+
+
+.blog_post .copy h4
+  border-top: 1px solid #eee
+  clear: both
+  color: #888
+  font-size: .75em
+  margin: 0 0 20px 0
+  padding: 9px 0 10px 0
+  text-transform: uppercase
+
+
+h4
+  color: #3f5c26
+  font-size: 1em
+
+  &.section
+    border-top: 1px solid #eee
+    clear: both
+    color: #888
+    font-size: .75em
+    margin: 0 0 20px 0
+    padding: 9px 0 10px 0
+    text-transform: uppercase
+
+
+h5
+  color: #3f5c26
+  font-size: 1em
+
+
+h3 span, h4 span, h5 span
+  font-weight: normal
+
+
+input
+  font: normal 1em 'Helvetica Neue', Helvetica, Arial, sans-serif
+  padding: 5px
+
+  &:focus
+    background: #fff
+
+
+label.required
+  font-weight: bold
+
+
+#content
+  label.error
+    color: #d12f19
+    font-size: 0.75em
+    font-weight: bold
+
+  input.error
+    border-color: #fbc2c4
+
+
+input.error:focus
+  border-color: #fbc2c4
+
+
+.odd
+  background-color: #efefef
+
+
+hr
+  border: 0
+  border-top: 1px solid #eee
+  clear: both
+  height: 0
+  margin: 0
+
+
+q, .pullquote
+  color: #666
+  font: italic 1em/20px Cambria, Georgia, Times, 'Times New Roman', serif
+
+
+cite
+  display: block
+  font-style: normal
+  font-weight: bold
+
+  span
+    font-weight: normal
+
+
+#content p
+  margin-bottom: 20px
+
+
+.bulleted li
+  list-style-type: disc
+  margin-left: 1em
+
+
+.newsletter
+  .bulleted, .numbered
+    margin-bottom: 20px
+
+
+.numbered li
+  list-style-type: decimal
+  margin-left: 20px
+
+
+.download
+  background: transparent url("/images/icons/download_16x16.png") left center no-repeat
+  padding-left: 20px
+
+
+a.download
+  &:hover, &:active
+    background-image: url("/images/icons/download_16x16.png")
+    background-position: left center
+    background-repeat: no-repeat
+
+
+.info
+  background-color: #ecf8fa
+
+
+.important
+  margin-bottom: 0
+
+  p
+    font-size: 1.15em
+
+
+#content .message p
+  margin: 0
+
+
+#errorExplanation
+  background-color: #fbe3e4
+  border: 1px solid #fbc2c4
+  margin: 20px
+  padding: 10px
+
+  h3
+    color: #260000
+    margin-bottom: 10px
+
+  p
+    margin-bottom: 10px
+
+  ul
+    margin-bottom: 10px
+
+    li
+      float: none
+      margin-bottom: 0
+      padding: 0
+
+
+#post_form .fieldWithErrors
+  input, textarea
+    border-color: #fbc2c4
+
+
+#contact_form .fieldWithErrors
+  input, textarea
+    border-color: #fbc2c4
+
+  #runner
+    border-top: 1px solid #444
+    clear: both
+    color: #444
+    margin-top: 20px
+    padding-top: 19px
+
+    .sitemap_primary, .sitemap_secondary, p
+      text-align: right
+
+    .sitemap_primary li, .sitemap_secondary li
+      display: inline
+      margin-left: 20px
+
+    .sitemap_primary li a
+      font-weight: normal
+
+    #watermark
+      padding: 7px 0
+
+    .omega
+      float: right
+
+    #watermark img
+      display: block
+
+  #pitch a
+    &:link, &:visited
+      color: #666
+      font-weight: normal
+
+    &:hover, &:active
+      color: #fff
+
+
+blockquote
+  cite
+    margin-bottom: 20px
+
+  em
+    color: #b4b4b4
+    font-style: normal
+    font-weight: normal
+
+#navigation
+  #menu_primary
+    ul
+      list-style-type: none
+      overflow: hidden
+      margin: 0px
+      li
+        float: left
+        margin-right: 10px
+        margin-left: 0px
+        a
+          border-top: 1px solid #d4d4d4
+          border-left: 1px solid #d4d4d4
+          border-right: 1px solid #d4d4d4
+          display: block
+          font-size: .75em
+          padding: 6px 20px
+          text-align: center
+          background: #FFF
+          color: #999
+          text-transform: uppercase
+          text-decoration: none
+        a:hover, a:focus, a:active
+          color: #828282
+          outline: none
+
+        &.selected
+          a
+            background-color: #ddd
+            color: #000
+
+#system-msg
+  background: #FFFCDE
+  border: 1px solid #E1DCAA
+  text-align: center
+
+.message
+  margin-bottom: 5px
+  &.notice
+    :background #E6EFC2
+    :color #264409
+    :border-color #C6D880
+    a
+      :color #264409
+  &.error
+    :background #FBE3E4
+    :color #8a1f11
+    :border-color #FBC2C4
+    a
+      :color #8a1f11
+  &.warn
+    :background #FFF6BF
+    :color #514721
+    :border-color #FFD324
+    a
+      :color #514721
+
+#main-content
+  background: #dfdfdf
+  border-left: 1px solid #d4d4d4
+  border-bottom: 1px solid #b4b4b4
+  border-right: 1px solid #b4b4b4
+  clear: both
+  overflow: hidden
+  padding: 9px
+
+#user-nav
+  margin-top: 20px
+
+.box
+  padding: 5px
+  border: 1px solid #b4b4b4
+  background: #ddd
+
+#layout
+  background: #F6F6F6
+  border: 1px solid #E6E6E6
+
+#content
+  background: #FFF
+
+#sidebar
+
+.internal
+  padding: 5px
+
+#footer
+  clear: both
+  margin: 18px 0
+  padding: 0 0 18px 0
+  text-align: left
+  p
+    float: left
+    margin: 0
+
+    &.feedback
+      float: right
+
+    &#powered_by
+      clear: both
+      margin-bottom: 18px
+
+  a:link, a:visited
+    font-weight: bold
+    color: #666
+
+  em a:link, em a:visited
+    font-style: normal
+    color: #669933
+
+  a:hover, em a:hover, a:active, em a:active
+    color: #96a51e

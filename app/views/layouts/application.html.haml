@@ -7,68 +7,72 @@
     %meta{ :name => "description", :content => "" }
     %meta{ :name => "keywords", :content => "" }
 
-    %link{ :href => "/stylesheets/reset.css", :rel => "Stylesheet", :type => "text/css", :media => "screen, projection" }
-    %link{ :href => "/stylesheets/960.css", :rel => "Stylesheet", :type => "text/css", :media => "screen, projection" }
-    %link{ :href => "/stylesheets/application.css", :rel => "Stylesheet", :type => "text/css", :media => "screen, projection" }
-
+    = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
 
   %body
-    #main_head
-      .inner.container_16
-        #logo.grid_3
+    .two-column
+      #header
+        #logo
           =image_tag "logo.png", :height => "45", :alt => "Shapado"
-        -if !logged_in?
-          #login.grid_13
-            -form_tag session_path, :id => "main_head_login" do
-              %fieldset
-                %em.label.grid_5.alpha
-                  Existing Users &raquo;
-                %ul
-                  %li.grid_3
-                    = label_tag "Email"
-                    = text_field_tag 'login', @login
-                  %li.grid_3
-                    = label_tag "Password"
-                    = password_field_tag 'password', nil
-                    %em.helper
-                      %a{ :href => "#" }
-                        Forgot?
-                  %li
+        #user-actions
+          #user-nav
+            -if !logged_in?
+              .box
+                -form_tag session_path, :id => "main_head_login" do
+                  %fieldset
+                    %p
+                      = label_tag "Email"
+                      = text_field_tag 'login', @login
+                    %p
+                      = label_tag "Password"
+                      = password_field_tag 'password', nil
+                      %em.helper
+                        %a{ :href => "#" }
+                          Forgot?
                     .buttons
-                      %button.grid_2.flat.omega{ :type => "submit" }
+                      %button{ :type => "submit" }
                         Log in
-        -else
-          Logged In As
-          =current_user.login
-      %span.clear
-    #navigation
-      #menu_primary.container_16
-        %ul.grid_16
-          %li
-            =link_to "Questions", questions_path
-          %li
-            =link_to "Tags", "#"
-          %li
-            =link_to "Users", "#"
-          %li
-            =link_to "Unanswered", "#"
-      %span.clear
-    #wrapper
-      #content.container_16
-        = yield
-      %span.clear
-    #bg_footer
-      #footer.container_16
-        #runner.grid_16
-          .grid_14.omega
-            %ul.sitemap_primary
-              %li
-                =link_to "Questions", questions_path
-              %li
-                =link_to "Tags", "#"
-              %li
-                =link_to "Users", "#"
-              %li
-                =link_to "Unanswered", "#"
-            %p
-              \&copy; 2009 Ricodigo. All rights reserved.
+            -else
+              %form.box{:style => "float:right"}
+                %fieldset
+                  %p
+                    = text_field_tag 'search', "search"
+              %div
+                Logged in as
+                %b
+                  =current_user.login
+                =link_to "Logout", logout_path
+
+      .clear
+      %br
+      #navigation
+        #menu_primary
+          %ul
+            %li.selected
+              =link_to "questions", questions_path
+            %li
+              =link_to "tags", "#"
+            %li
+              =link_to "users", "#"
+            %li
+              =link_to "questions", "#"
+            %li{:style=>"float: right;"}
+              =link_to "ask question", new_question_path, :style => "background: #B5CBE6"
+      #main-content
+        -flash.each do |k,v|
+          .message{:class => k.to_s}
+            .internal
+              =v
+        #layout
+          #content
+            .internal
+              = yield
+          #sidebar
+            .internal
+              %h1
+                SideBar
+      #footer
+        %hr
+        %p
+          \&copy; 2009 Ricodigo. All rights reserved.
