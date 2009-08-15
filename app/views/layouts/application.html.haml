@@ -1,0 +1,78 @@
+!!! Strict
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %title
+      Shapado - Questions & Answers
+    %meta{ :name => "description", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+
+    = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
+
+  %body
+    .two-column
+      #header
+        #logo
+          =image_tag "logo.png", :height => "45", :alt => "Shapado"
+        #user-actions
+          #user-nav
+            -if !logged_in?
+              .box
+                -form_tag session_path, :id => "main_head_login" do
+                  %fieldset
+                    %p
+                      = label_tag "Email"
+                      = text_field_tag 'login', @login
+                    %p
+                      = label_tag "Password"
+                      = password_field_tag 'password', nil
+                      %em.helper
+                        %a{ :href => "#" }
+                          Forgot?
+                    .buttons
+                      %button{ :type => "submit" }
+                        Log in
+            -else
+              %form.box{:style => "float:right"}
+                %fieldset
+                  %p
+                    = text_field_tag 'search', "search"
+              %div
+                Logged in as
+                %b
+                  =current_user.login
+                =link_to "Logout", logout_path
+
+      .clear
+      %br
+      #navigation
+        #menu_primary
+          %ul
+            %li.selected
+              =link_to "questions", questions_path
+            %li
+              =link_to "tags", "#"
+            %li
+              =link_to "users", "#"
+            %li
+              =link_to "questions", "#"
+            %li{:style=>"float: right;"}
+              =link_to "ask question", new_question_path, :style => "background: #B5CBE6"
+      #main-content
+        -flash.each do |k,v|
+          .message{:class => k.to_s}
+            .internal
+              =v
+        #layout
+          #content
+            .internal
+              = yield
+          #sidebar
+            .internal
+              %h1
+                SideBar
+      #footer
+        %hr
+        %p
+          \&copy; 2009 Ricodigo. All rights reserved.

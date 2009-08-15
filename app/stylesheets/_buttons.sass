@@ -1,0 +1,192 @@
+
+.subtle_button
+  background-color: #efefef
+  border-top: 1px solid #ddd
+  padding: 10px 0
+
+  a.button
+    &:link, &:visited
+      background-color: transparent
+      border-color: transparent
+
+
+.buttons.message
+  padding: 10px 20px
+
+.buttons
+  clear: both
+  font-size: .785em
+  margin-bottom: 30px
+  overflow: hidden
+
+  a.button
+    background: #e2e2e2
+    border: 1px solid #e2e2e2
+    color: #646464
+    cursor: pointer
+    display: block
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 100%
+    font-weight: bold
+    margin-bottom: 0
+    padding: 4px 10px 5px 10px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    white-space: nowrap
+
+  button
+    background: #e2e2e2
+    border: 1px solid #e2e2e2
+    color: #646464
+    cursor: pointer
+    display: block
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 100%
+    font-weight: bold
+    margin-bottom: 0
+    padding: 4px 10px 5px 10px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    white-space: nowrap
+    line-height: 16px
+    overflow: visible
+    padding: 6px 10px 6px 10px
+    width: auto
+
+    &[type]
+      line-height: 20px
+      padding: 5px 10px 5px 7px
+
+
+*:first-child+html button[type]
+  padding: 4px 10px 3px 7px
+
+
+.buttons
+  button img, a img
+    border: none
+    margin: 0 3px -3px 0 !important
+    padding: 0
+
+  button
+    -webkit-border-radius: 14px
+
+  a.button
+    -webkit-border-radius: 14px
+    -moz-border-radius: 14px
+
+  button
+    -moz-border-radius: 14px
+
+
+x
+  &:-moz-any-link, &:default
+    -moz-border-radius: 14px
+
+
+.buttons
+  button:hover
+    background: #304812
+    border: 1px solid #304812
+    color: #fff
+
+  a.button
+    &:hover, &:active
+      background: #304812
+      border: 1px solid #304812
+      color: #fff
+
+
+button.reverse
+  background: #507526
+  border: 1px solid #507526
+  color: #fff
+
+
+.buttons a.reverse
+  background: #507526
+  border: 1px solid #507526
+  color: #fff
+
+  &:hover
+    background: #304812
+    border: 1px solid #304812
+    color: #fff
+
+
+button.reverse:hover
+  background: #304812
+  border: 1px solid #304812
+  color: #fff
+
+
+.buttons
+  a.reverse:active
+    background: #304812
+    border: 1px solid #304812
+    color: #fff
+
+  button.flat, a.flat
+    background: #e2e2e2
+    border: 1px solid #e2e2e2
+
+  button.flat:hover, a.flat:hover
+    background: #6b8d94
+    border: 1px solid #6b8d94
+    color: #fff
+
+.three-bigbuttons
+  margin-bottom: 20px
+  overflow: hidden
+
+  .bigbutton
+    cursor: pointer
+    float: left
+    margin: 15px 20px 15px 0
+    width: 300px
+
+    a
+      background-color: #eee
+      background-position: 245px 50%
+      background-repeat: no-repeat
+      border-raiuds: 5px
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      float: left
+      line-height: 40px
+      padding: 20px
+      width: 260px
+
+  .last
+    float: right
+    margin-right: 0
+
+  .bigbutton-newissue a
+    background-image: url("/images/icons/bigbtnicon-newissue.gif")
+
+  .bigbutton-discussions a
+    background-image: url("/images/icons/bigbtnicon-requests.gif")
+
+  .bigbutton-knowledgebase a
+    background-image: url("/images/icons/bigbtnicon-discussions.gif")
+
+
+.bigbutton
+  h2
+    font-size: 11px
+    margin: 0
+
+    a
+      letter-spacing: 0
+      text-decoration: none
+      text-transform: uppercase
+      color: #59892f
+
+      &:hover
+        color: #444
+
+  p
+    color: #666
+    margin: 0
