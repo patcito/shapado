@@ -7,7 +7,7 @@ class Question
   key :answered, Boolean, :default => false
 
   belongs_to :user
-  has_many :answers
+  has_many :answers, :dependent => :destroy
 
   validates_presence_of :user_id
 

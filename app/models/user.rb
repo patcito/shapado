@@ -17,8 +17,8 @@ class User
   key :remember_token,            String, :limit => 40
   key :remember_token_expires_at, Time
 
-  has_many :questions
-  has_many :answers
+  has_many :questions, :dependent => :destroy
+  has_many :answers, :dependent => :destroy
 
 
   validates_presence_of     :login
