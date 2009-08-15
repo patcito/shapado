@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
-    @question = Question.find(params[:id])
+    @question = Question.find_by_slug_or_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   def edit
-    @question = Question.find(params[:id])
+    @question = Question.find_by_slug_or_id(params[:id])
   end
 
   # POST /questions
@@ -58,7 +58,7 @@ class QuestionsController < ApplicationController
   # PUT /questions/1
   # PUT /questions/1.xml
   def update
-    @question = Question.find(params[:id])
+    @question = Question.find_by_slug_or_id(params[:id])
 
     respond_to do |format|
       if @question.update_attributes(params[:question])
@@ -75,7 +75,7 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
-    @question = Question.find(params[:id])
+    @question = Question.find_by_slug_or_id(params[:id])
     @question.destroy
 
     respond_to do |format|
