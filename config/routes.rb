@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
                             :member => {:solve => :get,
                                         :unsolve => :get}
   map.resources :answers
+  map.resources :votes
 
   map.search '/search', :controller => "welcome", :action => "search"
   map.root :controller => "welcome"

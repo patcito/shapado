@@ -26,6 +26,7 @@ class User
   key :timezone,                      String
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
+  has_many :votes, :dependent => :destroy
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
 

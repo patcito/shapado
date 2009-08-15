@@ -12,7 +12,7 @@ class Answer
 
   key :question_id, String
   belongs_to :question
-  has_many :votes, :as => "voteable"
+  has_many :votes, :as => "voteable", :dependent => :destroy
 
   validates_presence_of :user_id, :question_id
 

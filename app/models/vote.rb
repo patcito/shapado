@@ -1,9 +1,13 @@
 class Vote
   include MongoMapper::Document
 
-  key :value, Boolean, :required => true
+  key :value, Integer, :required => true
 
+  key :user_id, String
   belongs_to :user
+
+  key :voteable_id, String
+  key :voteable_type, String
   belongs_to :voteable, :polymorphic => true
 
   validates_presence_of :user_id, :voteable_id

@@ -6,6 +6,8 @@ class QuestionsController < ApplicationController
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question
 
+  helper :votes
+
   # GET /questions
   # GET /questions.xml
   def index

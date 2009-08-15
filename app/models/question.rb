@@ -27,7 +27,7 @@ class Question
   key :answer_id, String
   belongs_to :answer
   has_many :answers, :dependent => :destroy
-  has_many :votes, :as => "voteable"
+  has_many :votes, :as => "voteable", :dependent => :destroy
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug
@@ -91,7 +91,7 @@ class Question
   def update_answer_count
     self.answers_count = self.answers.count
     votes_average = 0
-    self.votes.each {|e| votes_average+e.value }
+    self.votes.each {|e| votes_average+=e.value }
     self.votes_average = votes_average
 
     self.votes_count = self.votes.count
