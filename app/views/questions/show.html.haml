@@ -9,11 +9,11 @@
       = h @question.title
   #question-body
     = h @question.body
-
-  .buttons
-    = link_to 'Edit', edit_question_path(@question), :class => "button"
-    or
-    = link_to 'Back', questions_path, :class => "button cancel"
+  -if logged_in? && current_user.can_modify?(@question)
+    .buttons
+      = link_to 'Edit', edit_question_path(@question), :class => "button"
+      or
+      = link_to 'Back', questions_path, :class => "button cancel"
 
 %hr
 %h2
@@ -28,10 +28,13 @@
       .answer_body
         = vote_box
         = h answer.body
-        .buttons
-          = link_to "Edit", edit_answer_path(answer), :class =>"button"
-          = link_to "Delete", answer, :confirm => 'Are you sure?', :method => :delete, :class =>"button cancel"
+        .clear
+        -if logged_in? && current_user.can_modify?(answer)
+          .buttons
+            = link_to "Edit", edit_answer_path(answer), :class =>"button"
+            = link_to "Delete", answer, :confirm => 'Are you sure?', :method => :delete, :class =>"button cancel"
       .clear
+
 
 %hr
 -form_for @answer, :html => {:class => "form"} do |f|

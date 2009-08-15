@@ -16,6 +16,7 @@ class User
   key :updated_at,                Time
   key :remember_token,            String, :limit => 40
   key :remember_token_expires_at, Time
+  key :admin,                     Boolean, :default => false
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -68,6 +69,15 @@ class User
     else
       self.login
     end
+  end
+
+  def admin?
+    self.admin
+  end
+
+  def can_modify?(model)
+    return false unless model.respond_to?(:user)
+    self.admin? || self == model.user
   end
 
   protected
