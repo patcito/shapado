@@ -2,3 +2,4 @@
 coverage
 *.log
 *.sqlite3
+public/stylesheets/compiled/
