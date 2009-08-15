@@ -1,10 +1,11 @@
 #header.grid_12
   %h1
-    Welcome#index
+    Welcome honey
 
 %ul
   -@questions.each do |question|
-    %li
+    %li{:style => "border: 1px solid black"}
       %strong
-        = question.title
-      = truncate(question.body, :lenght => 200)
+        = link_to h(question.title), question_path(question)
+      %br
+      = truncate(question.body, 400)
