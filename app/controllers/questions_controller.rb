@@ -16,6 +16,9 @@ class QuestionsController < ApplicationController
   # GET /questions/1.xml
   def show
     @question = Question.find_by_slug_or_id(params[:id])
+    @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
+                                          :order => "created_at asc")
+
     @answer = Answer.new
 
     respond_to do |format|

@@ -15,7 +15,7 @@
 %h2
   Answers
 
--@question.answers.each do |answer|
+-@answers.each do |answer|
   %ul
     %li
       = link_to h(answer.user.login), user_path(answer.user)
