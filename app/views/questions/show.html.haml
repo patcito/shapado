@@ -2,9 +2,7 @@
 
 #question
   #question-info.right
-    %span.votes
-      = link_to "↑", "", :class=> "vote_up"
-      = link_to "↓", "", :class=>"vote_down"
+    =vote_box
   #question-title
     %h2
       = h @question.title
