@@ -11,6 +11,8 @@ class Question
   key :slug, String, :required => true
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
+  key :votes_count, Integer, :default => 0
+  key :votes_average, Integer, :default => 0
 
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
@@ -88,6 +90,11 @@ class Question
 
   def update_answer_count
     self.answers_count = self.answers.count
+    votes_average = 0
+    self.votes.each {|e| votes_average+e.value }
+    self.votes_average = votes_average
+
+    self.votes_count = self.votes.count
   end
 
   def update_language
