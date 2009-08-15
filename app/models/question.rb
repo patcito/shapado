@@ -5,6 +5,7 @@ class Question
   key :title, String, :required => true
   key :body, String, :required => true
   key :slug, String, :required => true
+  key :answers_count, Integer, :default => 0, :required => true
 
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
@@ -17,6 +18,7 @@ class Question
   searchable_keys :title, :body
 
   before_validation_on_create :sluggize
+  before_validation_on_update :update_answer_count
 
   def to_param
     self.slug || self.id
@@ -31,6 +33,11 @@ class Question
     if self.slug.blank?
       self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-")
     end
+  end
+
+  def update_answer_count
+    self.answers_count = self.answers.count
+    self.answered = true if self.answers_count > 0
   end
 end
 

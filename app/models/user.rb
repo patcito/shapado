@@ -63,7 +63,7 @@ class User
   end
 
   def to_param
-    self.login.blank? ? self.id : self.login.gsub(/\W/, "")
+    self.login.blank? ? self.id : self.login.gsub(/\W/, "-")
   end
 
   protected
