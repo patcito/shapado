@@ -18,8 +18,9 @@
   font-size: .785em
   margin-bottom: 30px
   overflow: hidden
+  line-height: 30px
 
-  a.button
+  button, a.button
     background: #e2e2e2
     border: 1px solid #e2e2e2
     color: #646464
@@ -36,19 +37,6 @@
     white-space: nowrap
 
   button
-    background: #e2e2e2
-    border: 1px solid #e2e2e2
-    color: #646464
-    cursor: pointer
-    display: block
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
-    font-size: 100%
-    font-weight: bold
-    margin-bottom: 0
-    padding: 4px 10px 5px 10px
-    text-align: center
-    text-decoration: none
-    text-transform: uppercase
     white-space: nowrap
     line-height: 16px
     overflow: visible
@@ -76,6 +64,7 @@
   a.button
     -webkit-border-radius: 14px
     -moz-border-radius: 14px
+    display: inline
 
   button
     -moz-border-radius: 14px
@@ -85,18 +74,12 @@ x
   &:-moz-any-link, &:default
     -moz-border-radius: 14px
 
-
 .buttons
-  button:hover
-    background: #304812
-    border: 1px solid #304812
-    color: #fff
-
-  a.button
+  button:hover,a.button
     &:hover, &:active
-      background: #304812
-      border: 1px solid #304812
-      color: #fff
+      background: #eee
+      :border 1px solid #77B7FF
+      color: #333
 
 
 button.reverse

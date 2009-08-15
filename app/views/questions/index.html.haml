@@ -1,23 +1,16 @@
-%h1
-  Listing questions
-%table
-  %tr
-    %th
-      Title
-    %th
-      Body
-    %th
-      User
-    %th
-      Answered
+
+.buttons
+  = link_to 'Ask question', new_question_path, :class => "button"
+
+%table.list
   - @questions.each do |question|
     %tr
       %td
         = h question.title
       %td
-        = h question.body
+        = h truncate(question.body, :length => 30)
       %td
-        = h question.user_id
+        = h question.user.login
       %td
         = h question.answered
       %td
@@ -27,4 +20,3 @@
       %td
         = link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete
 %br
-= link_to 'New question', new_question_path

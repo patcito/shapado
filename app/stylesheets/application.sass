@@ -1,5 +1,6 @@
 @import buttons
 @import form
+@import compass/utilities/tables/scaffolding
 
 body
   background: #eee
@@ -86,23 +87,17 @@ abbr
       float: none
       margin-left: 5px
 
-
 input
   float: none
-
-
 
 x
   &:-moz-any-link, &:default
     -moz-border-radius: 14px
 
-
-
 #banner
   background: #86c340 url("/images/bg_banner.png") top center repeat-x
   border-top: 1px solid #6cbd92
   border-bottom: 1px solid #78af39
-
 
 #wrapper
   background: #fff url("/images/bg.png") top center repeat-x
@@ -136,20 +131,19 @@ h1
   color: #000
   font-size: 32px
   font-weight: bold
-  margin-top: 40px
-
+  margin-top: 10px
 
 h2
   color: #666
   font-size: 28px
   font-weight: normal
-  margin-bottom: 40px
+  margin-bottom: 10px
 
 
 h3
   color: #59892f
   font-size: 18px
-  margin-bottom: 20px
+  margin-bottom: 10px
 
   &.section
     border-top: 1px solid #eee
@@ -479,3 +473,11 @@ blockquote
 
   a:hover, em a:hover, a:active, em a:active
     color: #96a51e
+
+table.list
+  +table-scaffolding
+  :width 100%
+
+.votes
+  a
+    font-size: 30px
