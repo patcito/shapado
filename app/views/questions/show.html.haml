@@ -25,7 +25,7 @@
       = link_to h(answer.user.login), user_path(answer.user)
       = time_ago_in_words(answer.created_at)+" ago"
     %li
-      = answer.body
+      = h answer.body
 
 = link_to 'Edit', edit_question_path(@question)
 |

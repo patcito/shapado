@@ -58,5 +58,13 @@ class User
     write_attribute :email, (value ? value.downcase : nil)
   end
 
+  def self.find_by_login_or_id(login)
+    find_by_login(login) || find_by_id(login)
+  end
+
+  def to_param
+    self.login.blank? ? self.id : self.login.gsub(/\W/, "")
+  end
+
   protected
 end
