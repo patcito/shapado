@@ -3,6 +3,7 @@ class Answer
   include MongoMapper::Search
 
   key :body, String, :required => true
+  key :language, String, :default => "en"
 
   belongs_to :user
   belongs_to :question

@@ -5,6 +5,7 @@ class Question
   key :title, String, :required => true
   key :body, String, :required => true
   key :answered, Boolean, :default => false
+  key :language, String, :default => "en"
 
   belongs_to :user
   has_many :answers, :dependent => :destroy
