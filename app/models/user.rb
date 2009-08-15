@@ -18,6 +18,7 @@ class User
   key :remember_token_expires_at, Time
 
   has_many :questions
+  has_many :answers
 
 
   validates_presence_of     :login
