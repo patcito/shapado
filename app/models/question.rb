@@ -10,6 +10,8 @@ class Question
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
 
+  key :tags, Array, :default => []
+
   belongs_to :user
   has_many :answers, :dependent => :destroy
 
@@ -26,6 +28,10 @@ class Question
 
   def self.find_by_slug_or_id(id)
     self.find_by_slug(id) || self.find_by_id(id)
+  end
+
+  def tags=(str)
+    self[:tags] = str.split(",").join(" ").split(" ")
   end
 
   protected

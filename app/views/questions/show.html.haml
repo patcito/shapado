@@ -51,4 +51,5 @@
     = time_ago_in_words(@question.created_at)+" ago"
   %br
   %h1 tags
+  =@question.tags.join(",")
 
