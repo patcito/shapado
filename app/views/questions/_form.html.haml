@@ -1,0 +1,10 @@
+= f.error_messages
+.field-group
+  .label-container
+    = f.label :title
+  .field
+    = f.text_field :title, :class => "text-field"
+.field-group
+  .label-container
+    = f.label :body
+  = f.text_area :body, :class => "text-area huge"

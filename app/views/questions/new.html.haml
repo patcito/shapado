@@ -1,16 +1,9 @@
-%h1
+%h2
   New question
-- form_for(@question) do |f|
-  = f.error_messages
-  %p
-    = f.label :title
-    %br
-    = f.text_field :title
-  %p
-    = f.label :body
-    %br
-    = f.text_area :body
-  %p
-    = f.submit 'Create'
+- form_for(@question, :html=>{:class => "form"}) do |f|
+  =render :partial => "form", :locals => {:f => f}
 
-= link_to 'Back', questions_path
+  .field-group
+    .buttons
+      = f.submit 'Create'
+      = link_to 'Cancel', questions_path, :class => "button cancel"

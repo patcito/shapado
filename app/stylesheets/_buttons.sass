@@ -9,7 +9,6 @@
       background-color: transparent
       border-color: transparent
 
-
 .buttons.message
   padding: 10px 20px
 
@@ -35,6 +34,10 @@
     text-decoration: none
     text-transform: uppercase
     white-space: nowrap
+    &.cancel
+      background: #A40500
+      border: 1px solid #FF0500
+      color: #ddd
 
   button
     white-space: nowrap
@@ -65,6 +68,9 @@
     -webkit-border-radius: 14px
     -moz-border-radius: 14px
     display: inline
+    &.elegance
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
 
   button
     -moz-border-radius: 14px
@@ -75,11 +81,17 @@ x
     -moz-border-radius: 14px
 
 .buttons
-  button:hover,a.button
+  button, a.button
     &:hover, &:active
       background: #eee
       :border 1px solid #77B7FF
       color: #333
+
+  button.cancel,a.button.cancel
+    &:hover, &:active
+      background: #C00500
+      border: 1px solid #FF6666
+      color: #ddd
 
 
 button.reverse
