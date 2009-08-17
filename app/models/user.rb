@@ -21,6 +21,7 @@ class User
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
 
+  timestamps!
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40

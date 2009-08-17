@@ -12,6 +12,7 @@ class Question
 
   key :tags, Array, :default => []
 
+  key :user_id, String
   belongs_to :user
   has_many :answers, :dependent => :destroy
 
@@ -21,6 +22,8 @@ class Question
 
   before_validation_on_create :sluggize
   before_validation_on_update :update_answer_count
+
+  timestamps!
 
   def to_param
     self.slug || self.id
