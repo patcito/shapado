@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
   map.resource :session
-  map.resources :questions
+  map.resources :questions, :collection => {:tags => :get}
   map.resources :answers
 
   map.search '/search', :controller => "welcome", :action => "search"

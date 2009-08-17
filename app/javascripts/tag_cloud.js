@@ -19,12 +19,12 @@ function tagCloud() {
   // maybe sort to by nice
   var sorted = [];
   for ( var tag in counts ){
-    sorted.push( { name : tag , num : counts[tag] } )
+    sorted.push( { name : tag , count : counts[tag] } )
   }
 
   return sorted.sort(
     function(l,r){
-      return r.num - l.num;
+      return r.count - l.count;
     }
   );
 }

@@ -12,6 +12,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def tags
+    @tag_cloud = Question.tag_cloud
+  end
+
   # GET /questions/1
   # GET /questions/1.xml
   def show
