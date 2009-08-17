@@ -30,8 +30,11 @@ class Question
     self.find_by_slug(id) || self.find_by_id(id)
   end
 
-  def tags=(str)
-    self[:tags] = str.split(",").join(" ").split(" ")
+  def tags=(t)
+    if t.kind_of?(String)
+      t = t.split(",").join(" ").split(" ")
+    end
+    self[:tags] = t
   end
 
   protected
