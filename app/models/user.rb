@@ -18,6 +18,8 @@ class User
   key :remember_token_expires_at, Time
   key :admin,                     Boolean, :default => false
 
+  key :preferred_tags,            Array, :default => []
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
 

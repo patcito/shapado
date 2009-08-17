@@ -10,8 +10,15 @@ class ApplicationController < ActionController::Base
 
   protected
   def find_current_tags
-    if current_tag.present?
-      @current_tags ||= [current_tag]
+    @current_tags ||= begin
+      tags = []
+      if params[:tags]
+        tags += params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
+      end
+      if current_tag.present?
+        tags += [current_tag]
+      end
+      tags
     end
   end
   alias :current_tags :find_current_tags
