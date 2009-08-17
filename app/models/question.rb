@@ -40,6 +40,13 @@ class Question
     self[:tags] = t
   end
 
+  def self.tag_cloud
+    @tag_cloud ||= begin
+      path = RAILS_ROOT + "/app/javascripts/tag_cloud.js"
+      self.database.eval(File.read(path))
+    end
+  end
+
   protected
   def sluggize
     if self.slug.blank?
