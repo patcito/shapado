@@ -10,7 +10,8 @@ namespace :populator do
       q = Question.new(:title =>  Faker::Lorem.words(rand(6)+6).join(" "),
                        :body => Faker::Lorem.paragraphs(rand(10)+1),
                        :answered => (rand(100) % 2 == 0),
-                       :language => (rand(100) % 2 == 0) ? 'en' : 'es')
+                       :language => (rand(100) % 2 == 0) ? 'en' : 'es',
+                       :tags => Faker::Lorem.words(rand(6)))
       q.user = users.rand
 
       rand(20).times do |i|
