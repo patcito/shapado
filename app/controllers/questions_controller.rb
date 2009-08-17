@@ -4,12 +4,17 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    @questions = Question.all
+    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :conditions => scoped_conditions)
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @questions }
     end
+  end
+
+  def unanswered
+    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :conditions => scoped_conditions({:answered => false}))
+    render :action => "index"
   end
 
   def tags

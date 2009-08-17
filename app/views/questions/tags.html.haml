@@ -1,0 +1,8 @@
+%table
+  -@tag_cloud.each_slice(5) do |tags|
+    %tr
+      -tags.each do |tag|
+        %td
+          = h(tag["name"])
+          x
+          = h(tag["count"])
