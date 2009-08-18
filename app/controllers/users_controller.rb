@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update]
 
+  def index
+    @users = User.paginate(:per_page => params[:per_page]||25, :page => params[:page] || 1)
+  end
+
   # render new.rhtml
   def new
     @user = User.new
