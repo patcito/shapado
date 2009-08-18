@@ -2,6 +2,9 @@ class Question
   include MongoMapper::Document
   include MongoMapper::Search
 
+  ensure_index :slug
+  ensure_index :tags
+
   key :title, String, :required => true
   key :body, String, :required => true
   key :slug, String, :required => true

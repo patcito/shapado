@@ -2,6 +2,7 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
+  ensure_index :login
 
   include Authentication
   include Authentication::ByPassword
