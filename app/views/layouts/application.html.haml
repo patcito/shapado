@@ -7,8 +7,10 @@
     %meta{ :name => "description", :content => "" }
     %meta{ :name => "keywords", :content => "" }
 
+    = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
 
   %body
     .two-column

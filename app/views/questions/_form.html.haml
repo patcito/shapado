@@ -7,10 +7,12 @@
 .field-group
   .label-container
     = f.label :body
-  = f.text_area :body, :class => "text-area huge"
+  = f.text_area :body, :class => "text-area huge", :id => "markdown_editor"
 
+  #markdown_preview
 .field-group
   .label-container
     = f.label :tags
   .field
     = f.text_field :tags, :class => "text-field"
+
