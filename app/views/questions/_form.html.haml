@@ -14,5 +14,4 @@
   .label-container
     = f.label :tags
   .field
-    = f.text_field :tags, :class => "text-field"
-
+    = f.text_field :tags, :value => @question.tags.join(", "),:class => "text-field"
