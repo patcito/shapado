@@ -1,6 +1,6 @@
 
 .buttons
-  = link_to 'Ask question', new_question_path, :class => "button"
+  = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
 
 %table.list
   - @questions.each do |question|
@@ -14,10 +14,10 @@
       %td
         = h question.answered
       %td
-        = link_to 'Show', question
+        = link_to I18n.t("scaffold.show"), question
       -if logged_in? && current_user.can_modify?(question)
         %td
-          = link_to 'Edit', edit_question_path(question)
+          = link_to I18n.t('scaffold.edit'), edit_question_path(question)
         %td
-          = link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete
+          = link_to I18n.t('scaffold.destroy'), question, :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete
 %br

@@ -20,6 +20,7 @@ class User
   key :admin,                     Boolean, :default => false
 
   key :preferred_tags,            Array, :default => []
+  key :lang,                      String, :default => "en"
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy

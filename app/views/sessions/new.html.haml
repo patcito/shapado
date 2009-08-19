@@ -2,13 +2,13 @@
   Log In
 - form_tag session_path do
   %p
-    = label_tag 'login'
+    = label_tag 'login', t(:login, :scope => "activerecord.attributes.user")
     %br
     = text_field_tag 'login', @login
   %p
-    = label_tag 'password'
+    = label_tag t(:password, :scope => "activerecord.attributes.user")
     %br
     = password_field_tag 'password', nil
   %p
-    = submit_tag 'Log in'
+    = submit_tag t("views.layout.log_in")
 

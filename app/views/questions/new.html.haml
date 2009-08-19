@@ -1,9 +1,9 @@
 %h2
-  New question
+  = I18n.t("views.questions.new.title")
 - form_for(@question, :html=>{:class => "form"}) do |f|
   =render :partial => "form", :locals => {:f => f}
 
   .field-group
     .buttons
-      = f.submit 'Create'
-      = link_to 'Cancel', questions_path, :class => "button cancel"
+      = f.submit I18n.t('scaffold.create')
+      = link_to I18n.t('scaffold.cancel'), questions_path, :class => "button cancel"
