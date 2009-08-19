@@ -11,13 +11,13 @@
     = h @question.body
   -if logged_in? && current_user.can_modify?(@question)
     .buttons
-      = link_to 'Edit', edit_question_path(@question), :class => "button"
+      = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
       or
-      = link_to 'Back', questions_path, :class => "button cancel"
+      = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
 
 %hr
 %h2
-  Answers
+  =I18n.t('views.questions.show.answers')
 
 #answers
   -@answers.each do |answer|
@@ -31,25 +31,26 @@
         .clear
         -if logged_in? && current_user.can_modify?(answer)
           .buttons
-            = link_to "Edit", edit_answer_path(answer), :class =>"button"
-            = link_to "Delete", answer, :confirm => 'Are you sure?', :method => :delete, :class =>"button cancel"
+            = link_to I18n.t("scaffold.edit"), edit_answer_path(answer), :class =>"button"
+            = link_to I18n.t("scaffold.destroy"), answer, :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
       .clear
 
 
 %hr
 -form_for @answer, :html => {:class => "form"} do |f|
   = render :partial => "answers/form", :locals => {:f => f}
-  = submit_tag "Answer"
-
+  = submit_tag I18n.t('views.answers.form.submit')
 %hr
 
 
 -content_for :sidebar do
-  %b asked by
+  %b
+    = I18n.t('activerecord.attributes.user.asked_by')
   = link_to @question.user.login, user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)+" ago"
   %br
-  %h1 tags
+  %h1
+    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"])
   =@question.tags.join(",")
 

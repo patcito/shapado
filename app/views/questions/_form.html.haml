@@ -1,18 +1,17 @@
 = f.error_messages
 .field-group
   .label-container
-    = f.label :title
+    = f.label :title, t(:title, :scope => "activerecord.attributes.question")
   .field
     = f.text_field :title, :class => "text-field"
 .field-group
   .label-container
-    = f.label :body
+    = f.label :body, t(:body, :scope => "activerecord.attributes.question")
   = f.text_area :body, :class => "text-area huge", :id => "markdown_editor"
 
   #markdown_preview
 .field-group
   .label-container
-    = f.label :tags
+    = f.label :tags, t(:tags, :scope => "activerecord.attributes.question")
   .field
-    = f.text_field :tags, :class => "text-field"
-
+    = f.text_field :tags, :value => @question.tags.join(", "),:class => "text-field"

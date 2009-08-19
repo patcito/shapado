@@ -23,28 +23,26 @@
             -if !logged_in?
               .box
                 .left
-                  =link_to "signup", signup_path
+                  =link_to t('views.layout.signup'), signup_path
                 -form_tag session_path, :id => "main_head_login", :class => "form" do
                   %fieldset
                     .field-group.left
-                      = label_tag "Email"
+                      = label_tag "Email", t(:email, :scope => "activerecord.attributes.user")
                       = text_field_tag 'login', @login, :class => "text-field", :size => 12
 
                     .field-group.left
-                      = label_tag "Password"
+                      = label_tag "Password", t(:password, :scope => "activerecord.attributes.user")
                       = password_field_tag 'password', nil, :class => "text-field", :size => 12
                       %em.helper
                         %a{ :href => "#" }
-                          Forgot?
+                          =t('views.layout.forgot')
                     .buttons
                       %button{ :type => "submit"}
-                        Log in
+                        =t('views.layout.log_in')
             -else
               .left{:style =>"text-align: right"}
-                Logged in as
-                %b
-                  =current_user.login
-                =link_to "Logout", logout_path
+                = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => current_user.login)
+                =link_to link_to I18n.t('views.layout.logout'), logout_path
               .box.right
                 -form_tag search_path, :class => "form", :method => :get do
                   %fieldset
@@ -52,7 +50,7 @@
                       = text_field_tag 'q', params[:q], :class => "text-field"
                   .buttons
                     %button{:type => "submit"}
-                      Go
+                      = I18n.t('views.layout.search', :default => "Go")
 
       .clear
       %br
@@ -60,19 +58,19 @@
         #menu_primary
           %ul
             %li.selected
-              =link_to "questions", questions_path
+              =link_to I18n.t("views.layout.questions"), questions_path
             %li
-              =link_to "tags", tags_questions_path
+              =link_to I18n.t("views.layout.tags"), tags_questions_path
             %li
-              =link_to "users", users_path
+              =link_to I18n.t("views.layout.users"), users_path
             %li
-              =link_to "unanswered", unanswered_questions_path
+              =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path
             -if logged_in?
               -current_user.preferred_tags.each do |tag|
                 %li
                   =link_to h(tag), questions_path(:tags => tag)
             %li{:style=>"float: right;"}
-              =link_to "ask question", new_question_path, :style => "background: #004181;color: #dedede"
+              =link_to I18n.t("views.layout.ask_question"), new_question_path, :style => "background: #004181;color: #dedede"
       #main-content
         -flash.each do |k,v|
           .message{:class => k.to_s}

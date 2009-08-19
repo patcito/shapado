@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :find_current_tags
+  before_filter :set_locale
 
   protected
   def find_current_tags
@@ -29,5 +30,11 @@ class ApplicationController < ActionController::Base
     else
       conditions
     end
+  end
+
+  def available_locales; AVAILABLE_LOCALES; end
+
+  def set_locale
+    I18n.locale = current_user.lang if logged_in?
   end
 end

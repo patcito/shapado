@@ -28,10 +28,8 @@
           %span.tag
             =tag
         .right
-          asked by
+          = t(:asked_by, :scope => "activerecord.attributes.user")
           =question.user.login
           %b
             = time_ago_in_words(question.created_at)+" ago"
       .clear
-
-

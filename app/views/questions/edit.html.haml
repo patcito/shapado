@@ -1,9 +1,9 @@
 %h2
-  Editing question
+  = I18n.t("views.questions.edit.title")
 - form_for(@question, :html => {:class => "form"}) do |f|
   = f.error_messages
   =render :partial => "form", :locals => {:f => f}
   .field-group
     .buttons
-      = f.submit 'Update'
-      = link_to 'Cancel', @question, :class => "button cancel"
+      = f.submit I18n.t("scaffold.update")
+      = link_to I18n.t("scaffold.cancel"), @question, :class => "button cancel"
