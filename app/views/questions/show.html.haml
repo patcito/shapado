@@ -45,7 +45,7 @@
 
 -content_for :sidebar do
   %b
-    = I18n.t('views.questions.sidebar.asked_by')
+    = I18n.t('activerecord.attributes.user.asked_by')
   = link_to @question.user.login, user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)+" ago"

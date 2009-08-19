@@ -23,7 +23,7 @@
             -if !logged_in?
               .box
                 .left
-                  =link_to "signup", signup_path
+                  =link_to t('views.layout.signup'), signup_path
                 -form_tag session_path, :id => "main_head_login", :class => "form" do
                   %fieldset
                     .field-group.left

@@ -16,14 +16,12 @@ en:
       users: users
       unanswered: unanswered
       logout: logout
-      login: login
       logged: Logged in as {{login}}
       search: Go
       forgot: forgot?
       log_in: Log in
+      signup: Signup
     questions:
-      sidebar:
-        asked_by: asked by
       show:
         answers: Answers
       edit:
@@ -46,6 +44,7 @@ en:
         title: Title
         body: Body
         tags: Tags
+        asked_by: Asked by
       user:
         login: Login
         email: Email
@@ -56,3 +55,4 @@ en:
         activation_code: Activation Code
         activated_at: Activated At
         fullname: Full name
+        lang: Language
