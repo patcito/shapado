@@ -29,6 +29,7 @@ class QuestionsController < ApplicationController
                                           :order => "created_at asc")
 
     @answer = Answer.new
+    @question.viewed!
 
     respond_to do |format|
       format.html # show.html.erb

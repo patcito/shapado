@@ -1,31 +1,34 @@
 .question
   %span.right
     .item.count_answers
-      = question.answers_count
+      %span.counter
+        = question.answers_count
       %br
       = t(:answers, :scope => "activerecord.attributes.question")
     .item.count_votes
-      = 0
+      %span.counter
+        = 0
       %br
       = t(:votes, :scope => "activerecord.attributes.question")
     .item.count_views
-      = 0
+      %span.counter
+        = question.views_count
       %br
       = t(:views, :scope => "activerecord.attributes.question")
   %span
-    %strong
+    %h4
       = link_to h(question.title), question_path(question)
     %span
-      = truncate(question.body, :length => 400)
+      = truncate(question.body, :length => 60)
   .clear
     -question.tags.each do |tag|
       %span.tag
-        =tag
+        = h(tag)
     .right
       = t(:asked_by, :scope => "activerecord.attributes.question")
-      =question.user.login
+      = link_to h(question.user.login), user_path(question.user)
       %b
-        = time_ago_in_words(question.created_at)+" ago"
+        = time_ago_in_words(question.created_at)
     -if logged_in? && current_user.can_modify?(question)
       .buttons
         = link_to I18n.t('scaffold.edit'), edit_question_path(question), :class => "button"

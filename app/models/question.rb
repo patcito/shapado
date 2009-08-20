@@ -9,6 +9,7 @@ class Question
   key :body, String, :required => true
   key :slug, String, :required => true
   key :answers_count, Integer, :default => 0, :required => true
+  key :views_count, Integer, :default => 0
 
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
@@ -48,6 +49,10 @@ class Question
       path = RAILS_ROOT + "/app/javascripts/tag_cloud.js"
       self.database.eval(File.read(path))
     end
+  end
+
+  def viewed!
+    self.collection.repsert({:_id => self.id}, {:$inc => {:views_count => 1}})
   end
 
   protected
