@@ -22,7 +22,10 @@ en:
       log_in: Log in
       signup: Signup
       settings: settings
+      recent_questions: Recent questions
     questions:
+      index:
+        title: All questions
       show:
         answers: Answers
       edit:
@@ -49,6 +52,9 @@ en:
         body: Body
         tags: Tags
         asked_by: Asked by
+        answers: Answers
+        views: Views
+        votes: Votes
       user:
         login: Login
         email: Email
