@@ -166,6 +166,10 @@
         title: Titulo
         body: Contenido
         tags: Etiquetas
+        asked_by: Preguntado por
+        answers: Respuestas
+        views: Visitas
+        votes: Votos
       user:
         current_password: Contraseña actual
         password: Contraseña
@@ -178,7 +182,6 @@
         activated_at: activado en
         fullname: Nombre completo
         lang: Idioma
-        asked_by: Preguntado por
         timezone: Zona horaria
         preferred_tags: Etiquetas preferidas
   support:
@@ -209,7 +212,10 @@
       log_in: acceder
       signup: Registrarse
       settings: configuración
+      recent_questions: Preguntas recientes
     questions:
+      index:
+        title: Todas las preguntas
       show:
         answers: Respuestas
       edit:

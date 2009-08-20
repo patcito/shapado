@@ -1,17 +1,17 @@
 .question
   %span.right
     .item.count_answers
-      Answers:
-      %br
       = question.answers_count
+      %br
+      = t(:answers, :scope => "activerecord.attributes.question")
     .item.count_votes
-      Votes:
-      %br
       = 0
+      %br
+      = t(:votes, :scope => "activerecord.attributes.question")
     .item.count_views
-      Views:
-      %br
       = 0
+      %br
+      = t(:views, :scope => "activerecord.attributes.question")
   %span
     %strong
       = link_to h(question.title), question_path(question)
@@ -22,7 +22,7 @@
       %span.tag
         =tag
     .right
-      = t(:asked_by, :scope => "activerecord.attributes.user")
+      = t(:asked_by, :scope => "activerecord.attributes.question")
       =question.user.login
       %b
         = time_ago_in_words(question.created_at)+" ago"
