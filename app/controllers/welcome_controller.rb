@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
     @questions = Question.paginate(:per_page => 25,
                                    :page => params[:page] || 1,
                                    :limit => 20,
-                                   :order => "created_at desc",
+                                   :order => "updated_at desc",
                                    :conditions => {:answered => false})
   end
 
