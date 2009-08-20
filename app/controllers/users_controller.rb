@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(params[:user])
       redirect_to "/settings"
     else
-      render "/settings"
+      render :action => "edit"
     end
   end
 end
