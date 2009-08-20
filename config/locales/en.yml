@@ -61,5 +61,6 @@ en:
         activated_at: Activated At
         fullname: Full name
         lang: Language
+        asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags

@@ -1,0 +1,33 @@
+.question
+  %span.right
+    .item.count_answers
+      Answers:
+      %br
+      = question.answers_count
+    .item.count_votes
+      Votes:
+      %br
+      = 0
+    .item.count_views
+      Views:
+      %br
+      = 0
+  %span
+    %strong
+      = link_to h(question.title), question_path(question)
+    %span
+      = truncate(question.body, :length => 400)
+  .clear
+    -question.tags.each do |tag|
+      %span.tag
+        =tag
+    .right
+      = t(:asked_by, :scope => "activerecord.attributes.user")
+      =question.user.login
+      %b
+        = time_ago_in_words(question.created_at)+" ago"
+    -if logged_in? && current_user.can_modify?(question)
+      .buttons
+        = link_to I18n.t('scaffold.edit'), edit_question_path(question), :class => "button"
+        = link_to I18n.t('scaffold.destroy'), question, :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
+  .clear

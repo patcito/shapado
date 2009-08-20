@@ -1,35 +1,9 @@
+
 #header
   %h1
     Welcome honey
+%br.clear
 
 #questions
   -@questions.each do |question|
-    .question
-      %span.right
-        .item
-          Answers:
-          %br
-          = question.answers_count
-        .item
-          Votes:
-          %br
-          = 0
-        .item
-          Views:
-          %br
-          = 0
-      %span
-        %strong
-          = link_to h(question.title), question_path(question)
-        %span
-          = truncate(question.body, :length => 400)
-      .clear
-        -question.tags.each do |tag|
-          %span.tag
-            =tag
-        .right
-          = t(:asked_by, :scope => "activerecord.attributes.user")
-          =question.user.login
-          %b
-            = time_ago_in_words(question.created_at)+" ago"
-      .clear
+    = render :partial => "shared/question", :locals => {:question => question}
