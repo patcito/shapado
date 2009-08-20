@@ -1,0 +1,31 @@
+
+
+.field-group
+  .label-container
+    = f.label :login, t(:login, :scope => "activerecord.attributes.user")
+  .field
+    = f.text_field :login, :class => "text-field"
+
+.field-group
+  .label-container
+    = f.label :email, t(:email, :scope => "activerecord.attributes.user")
+  .field
+    = f.text_field :email, :class => "text-field"
+
+.field-group
+  .label-container
+    = f.label :password, t(:password, :scope => "activerecord.attributes.user")
+  .field
+    = f.password_field :password, :class => "text-field"
+
+.field-group
+  .label-container
+    = f.label :password_confirmation, t(:password_confirmation, :scope => "activerecord.attributes.user")
+  .field
+    = f.password_field :password_confirmation, :class => "text-field"
+
+.field-group
+  .label-container
+    = f.label :lang, t(:lang, :scope => "activerecord.attributes.user")
+  .field
+    = select :user, :lang, AVAILABLE_LOCALES

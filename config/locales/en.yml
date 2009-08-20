@@ -38,6 +38,9 @@ en:
       new:
         title: Sign up as a new user
         submit: Sign up
+      edit:
+        title: Settings
+        submit: Save
   activerecord:
     attributes:
       question:

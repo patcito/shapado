@@ -176,6 +176,7 @@
         activation_code: código de activación
         activated_at: activado en
         fullname: Nombre completo
+        lang: Idioma
         asked_by: Preguntado por
   support:
     array:
@@ -206,18 +207,21 @@
       signup: Registrarse
     questions:
       show:
-        answers: Answers
+        answers: Respuestas
       edit:
-        title: Editing question
+        title: Rditar preguntas
       new:
-        title: Ask question
+        title: Pregunte
     answers:
       form:
-        answer_label: Answer the question
-        submit: Answer
+        answer_label: Conteste la pregunta
+        submit: Cointestar
       edit:
-        title: Editing answer
+        title: Editar respuesta
     users:
       new:
-        title: Sign up as a new user
-        submit: Sign up
+        title: Registrar un nuevo usuario
+        submit: Registrar
+      edit:
+        title: Configuración
+        submit: Guardar

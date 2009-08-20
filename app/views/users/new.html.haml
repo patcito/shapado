@@ -2,25 +2,7 @@
   =t(:title, :scope => "views.users.new")
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user
-- form_for :user, :url => users_path do |f|
-  %p
-    = label_tag 'login', t(:login, :scope => "activerecord.attributes.user")
-    %br
-    = f.text_field :login
-  %p
-    = label_tag 'email', t(:email, :scope => "activerecord.attributes.user")
-    %br
-    = f.text_field :email
-  %p
-    = label_tag 'password', t(:password, :scope => "activerecord.attributes.user")
-    %br
-    = f.password_field :password
-  %p
-    = label_tag 'password_confirmation', t(:password_confirmation, :scope => "activerecord.attributes.user")
-    %br
-    = f.password_field :password_confirmation
-  %p
-    = label_tag 'lang', t(:lang, :scope => "activerecord.attributes.user")
-    = select :user, :lang, AVAILABLE_LOCALES
+- form_for @user, :url => users_path, :html => {:class => "form"} do |f|
+  =render :partial => "form", :locals => {:f => f}
   %p
     = submit_tag t('submit', :scope => "views.users.new")
