@@ -179,6 +179,7 @@
         lang: Idioma
         asked_by: Preguntado por
         timezone: Zona horaria
+        preferred_tags: Etiquetas preferidas
   support:
     array:
       words_connector: ", "

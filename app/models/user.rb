@@ -76,6 +76,14 @@ class User
     end
   end
 
+
+  def preferred_tags=(t)
+    if t.kind_of?(String)
+      t = t.split(",").join(" ").split(" ")
+    end
+    self[:preferred_tags] = t
+  end
+
   def admin?
     self.admin
   end

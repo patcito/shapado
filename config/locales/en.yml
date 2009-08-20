@@ -61,3 +61,4 @@ en:
         fullname: Full name
         lang: Language
         timezone: Time zone
+        preferred_tags: Preferred tags

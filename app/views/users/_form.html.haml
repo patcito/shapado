@@ -35,3 +35,12 @@
     = f.label :timezone, t(:timezone, :scope => "activerecord.attributes.user")
   .field
     =time_zone_select( "user", "timezone", ActiveSupport::TimeZone.all, :include_blank => true)
+
+-unless @user.new_record?
+  .field-group
+    .label-container
+      = f.label :preferred_tags, t(:preferred_tags, :scope => "activerecord.attributes.user")
+    .field
+      = f.text_field :preferred_tags, :value => @user.preferred_tags.join(", "), :class => "text-field"
+
+
