@@ -21,6 +21,7 @@ en:
       forgot: forgot?
       log_in: Log in
       signup: Signup
+      settings: settings
     questions:
       show:
         answers: Answers
@@ -59,3 +60,4 @@ en:
         activated_at: Activated At
         fullname: Full name
         lang: Language
+        timezone: Time zone

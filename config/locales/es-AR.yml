@@ -178,6 +178,7 @@
         fullname: Nombre completo
         lang: Idioma
         asked_by: Preguntado por
+        timezone: Zona horaria
   support:
     array:
       words_connector: ", "
@@ -205,6 +206,7 @@
       forgot: la olvido?
       log_in: acceder
       signup: Registrarse
+      settings: configuración
     questions:
       show:
         answers: Respuestas

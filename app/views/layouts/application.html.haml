@@ -42,7 +42,8 @@
             -else
               .left{:style =>"text-align: right"}
                 = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => current_user.login)
-                =link_to link_to I18n.t('views.layout.logout'), logout_path
+                =link_to I18n.t('views.layout.logout'), logout_path
+                =link_to I18n.t('views.layout.settings'), settings_path
               .box.right
                 -form_tag search_path, :class => "form", :method => :get do
                   %fieldset

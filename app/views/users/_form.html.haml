@@ -29,3 +29,9 @@
     = f.label :lang, t(:lang, :scope => "activerecord.attributes.user")
   .field
     = select :user, :lang, AVAILABLE_LOCALES
+
+.field-group
+  .label-container
+    = f.label :timezone, t(:timezone, :scope => "activerecord.attributes.user")
+  .field
+    =time_zone_select( "user", "timezone", ActiveSupport::TimeZone.all, :include_blank => true)
