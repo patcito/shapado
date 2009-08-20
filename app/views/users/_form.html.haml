@@ -12,6 +12,13 @@
   .field
     = f.text_field :email, :class => "text-field"
 
+-if !@user.new?
+  .field-group
+    .label-container
+      = label_tag :current_password, t(:current_password, :scope => "activerecord.attributes.user")
+    .field
+      = password_field :current_password, '', :class => 'text-field'
+
 .field-group
   .label-container
     = f.label :password, t(:password, :scope => "activerecord.attributes.user")

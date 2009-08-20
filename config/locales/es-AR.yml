@@ -167,6 +167,7 @@
         body: Contenido
         tags: Etiquetas
       user:
+        current_password: Contraseña actual
         password: Contraseña
         password_confirmation: Confirmación de contraseña
         email: Correo electrónico

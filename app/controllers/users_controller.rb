@@ -38,6 +38,13 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
+
+    if params[:current_password] && User.authenticate(@user.login, params[:current_password])
+      @user.crypted_password = ""
+      @user.password = params[:user][:password]
+      @user.password_confirmation = params[:user][:password_confirmation]
+    end
+
     if @user.update_attributes(params[:user])
       redirect_to "/settings"
     else
