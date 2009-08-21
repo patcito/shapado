@@ -1,5 +1,3 @@
-require 'will_paginate/core_ext'
-
 module WillPaginate
   # = Will Paginate view helpers
   #
