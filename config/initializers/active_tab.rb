@@ -15,6 +15,7 @@ module ActiveTab
       define_method(:set_active_tab) do
         @active_tab = tabs[params[:action].to_sym]
         @active_tab = tabs[:default] if tabs[:default] && @active_tab.nil?
+        @action_tab = 'default_tab' if @active_tab.nil?
         @active_tab
       end
     end

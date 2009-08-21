@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
+  tabs :default => :questions, :tags => :tags, :unanswered => :unanswered
 
   # GET /questions
   # GET /questions.xml

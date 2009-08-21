@@ -54,16 +54,16 @@
                       = I18n.t('views.layout.search', :default => "Go")
       .clear
       %br
-      #navigation
+      #navigation{:class => "#{@active_tab}"}
         #menu_primary
           %ul
-            %li.selected
+            %li.questions
               =link_to I18n.t("views.layout.questions"), questions_path
-            %li
+            %li.tags
               =link_to I18n.t("views.layout.tags"), tags_questions_path
-            %li
+            %li.users
               =link_to I18n.t("views.layout.users"), users_path
-            %li
+            %li.unanswered
               =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path
             -if logged_in?
               -current_user.preferred_tags.each do |tag|
