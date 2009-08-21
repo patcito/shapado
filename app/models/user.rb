@@ -11,6 +11,7 @@ class User
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :email,                     String, :limit => 100
+  key :identity_url,              String
   key :crypted_password,          String, :limit => 40
   key :salt,                      String, :limit => 40
   key :created_at,                Time
@@ -110,6 +111,16 @@ class User
 
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
+  end
+
+  def openid_login?
+    !identity_url.blank?
+  end
+
+  def password_required?
+    return false if openid_login?
+
+    (crypted_password.blank? || !password.blank?)
   end
 end
 
