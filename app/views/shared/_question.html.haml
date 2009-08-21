@@ -2,24 +2,24 @@
   %span.right
     .item.count_answers
       %span.counter
-        = question.answers_count
+        &= question.answers_count
       %br
       = t(:answers, :scope => "activerecord.attributes.question")
     .item.count_votes
       %span.counter
-        = 0
+        &= 0
       %br
       = t(:votes, :scope => "activerecord.attributes.question")
     .item.count_views
       %span.counter
-        = question.views_count
+        &= question.views_count
       %br
       = t(:views, :scope => "activerecord.attributes.question")
   %span
     %h4
       = link_to h(question.title), question_path(question)
     %span
-      = truncate(question.body, :length => 60)
+      &= truncate(question.body, :length => 60)
   .clear
     -question.tags.each do |tag|
       %span.tag

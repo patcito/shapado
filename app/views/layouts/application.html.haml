@@ -41,7 +41,7 @@
                         =t('views.layout.log_in')
             -else
               .left{:style =>"text-align: right"}
-                = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => current_user.login)
+                = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => h(current_user.login))
                 =link_to I18n.t('views.layout.logout'), logout_path
                 =link_to I18n.t('views.layout.settings'), settings_path
               .box.right
