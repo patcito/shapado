@@ -24,7 +24,7 @@ class Question
 
   searchable_keys :title, :body
 
-  before_validation_on_create :sluggize
+  before_validation_on_create :sluggize, :update_language
   before_validation_on_update :update_answer_count
 
   timestamps!
@@ -64,6 +64,10 @@ class Question
 
   def update_answer_count
     self.answers_count = self.answers.count
+  end
+
+  def update_language
+    self.language = self.language.split("-").first
   end
 end
 

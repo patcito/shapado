@@ -25,11 +25,16 @@ class ApplicationController < ActionController::Base
   alias :current_tags :find_current_tags
 
   def scoped_conditions(conditions = {})
+
     if current_tags && !current_tags.empty?
-      conditions.deep_merge({:tags => current_tags})
-    else
-      conditions
+      conditions.deep_merge!({:tags => current_tags})
     end
+
+    if current_user && !current_user.preferred_languages.empty?
+      conditions.deep_merge!({:language => {:$in => current_user.preferred_languages }})
+    end
+
+    conditions
   end
 
   def available_locales; AVAILABLE_LOCALES; end

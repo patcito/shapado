@@ -20,6 +20,7 @@ class User
   key :admin,                     Boolean, :default => false
 
   key :preferred_tags,            Array, :default => []
+  key :preferred_languages,       Array
   key :lang,                      String, :default => "en"
   key :timezone,                      String
   has_many :questions, :dependent => :destroy
@@ -39,6 +40,9 @@ class User
   validates_length_of       :email,    :within => 6..100 #r@a.wk
   validates_uniqueness_of   :email
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
+
+  before_validation_on_create :add_user_language
+  before_save :update_languages
 
   attr_accessor :password, :password_confirmation
 
@@ -93,5 +97,19 @@ class User
     self.admin? || self == model.user
   end
 
+  def main_language
+    @main_language ||= self.lang.split("-").first
+  end
+
   protected
+  def add_user_language
+    if !self.lang.empty? && !self.preferred_languages.include?(self.main_language)
+      self.preferred_languages << main_language
+    end
+  end
+
+  def update_languages
+    self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
+  end
 end
+
