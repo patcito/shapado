@@ -2,7 +2,8 @@ class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   before_filter :set_active_tag
 
-  tabs :default => :questions, :tags => :tags, :unanswered => :unanswered
+  tabs :default => :questions, :tags => :tags,
+       :unanswered => :unanswered, :new => :ask_question
 
   # GET /questions
   # GET /questions.xml
