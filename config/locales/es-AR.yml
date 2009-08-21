@@ -220,13 +220,13 @@
       show:
         answers: Respuestas
       edit:
-        title: Rditar preguntas
+        title: Editar pregunta
       new:
         title: Pregunte
     answers:
       form:
         answer_label: Conteste la pregunta
-        submit: Cointestar
+        submit: Contestar
       edit:
         title: Editar respuesta
     users:
