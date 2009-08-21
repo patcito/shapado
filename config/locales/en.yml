@@ -55,6 +55,7 @@ en:
         answers: Answers
         views: Views
         votes: Votes
+        language: Language
       user:
         login: Login
         email: Email

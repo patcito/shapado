@@ -6,6 +6,12 @@
     = f.text_field :title, :class => "text-field"
 .field-group
   .label-container
+    = f.label :language, t(:language, :scope => "activerecord.attributes.question")
+  .field
+    = select :question, :language, AVAILABLE_LOCALES, {:selected => current_user.lang}
+
+.field-group
+  .label-container
     = f.label :body, t(:body, :scope => "activerecord.attributes.question")
   = f.text_area :body, :class => "text-area huge", :id => "markdown_editor"
 

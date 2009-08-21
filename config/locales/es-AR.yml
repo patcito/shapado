@@ -170,6 +170,7 @@
         answers: Respuestas
         views: Visitas
         votes: Votos
+        language: Idioma
       user:
         current_password: Contraseña actual
         password: Contraseña
