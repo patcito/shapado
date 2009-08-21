@@ -7,3 +7,5 @@
 #questions
   -@questions.each do |question|
     = render :partial => "shared/question", :locals => {:question => question}
+
+= will_paginate @questions

@@ -10,5 +10,7 @@
   -@questions.each do |question|
     = render :partial => "shared/question", :locals => {:question => question}
 
+=will_paginate @questions
+
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
