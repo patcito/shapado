@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
                                    :page => params[:page] || 1,
                                    :limit => 20,
                                    :order => "updated_at desc",
-                                   :conditions => {:answered => false})
+                                   :conditions => scoped_conditions({:answered => false}))
   end
 
   def search
@@ -12,3 +12,4 @@ class WelcomeController < ApplicationController
     @answers = Answer.search(params[:q], :limit => 25)
   end
 end
+
