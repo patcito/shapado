@@ -69,8 +69,8 @@
               -current_user.preferred_tags.each do |tag|
                 %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
                   =link_to h(tag), questions_path(:tags => tag)
-            %li{:style=>"float: right;"}
-              =link_to I18n.t("views.layout.ask_question"), new_question_path, :style => "background: #004181;color: #dedede"
+            %li.ask_question
+              =link_to I18n.t("views.layout.ask_question"), new_question_path
       #main-content
         -flash.each do |k,v|
           .message{:class => k.to_s}
