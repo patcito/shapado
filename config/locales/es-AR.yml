@@ -171,6 +171,7 @@
         views: Visitas
         votes: Votos
         language: Idioma
+        category: Categoria
       user:
         current_password: Contraseña actual
         password: Contraseña
@@ -236,3 +237,14 @@
       edit:
         title: Configuración
         submit: Guardar
+  categories:
+    technology:   Tecnología
+    programming:  Programación
+    science:      Ciencia
+    politics:     Politica
+    society:      Sociedad
+    religion:     Religión
+    sports:       Deportes
+    music:        Musica
+    gaming:       Juegos
+    lifestyle:    Estilo de vida

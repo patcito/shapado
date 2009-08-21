@@ -56,6 +56,7 @@ en:
         views: Views
         votes: Votes
         language: Language
+        category: Category
       user:
         login: Login
         email: Email
@@ -71,3 +72,4 @@ en:
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags
+
