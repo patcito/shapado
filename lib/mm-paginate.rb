@@ -402,3 +402,6 @@ module WillPaginate
     end
   end
 end
+
+ActionView::Base.send :include, WillPaginate::ViewHelpers
+
