@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
+  before_filter :set_active_tag
+
   tabs :default => :questions, :tags => :tags, :unanswered => :unanswered
 
   # GET /questions
@@ -99,5 +101,11 @@ class QuestionsController < ApplicationController
       format.html { redirect_to(questions_url) }
       format.xml  { head :ok }
     end
+  end
+
+  protected
+  def set_active_tag
+    @active_tag = "tag_#{params[:tags]}" if params[:tags]
+    @active_tag
   end
 end
