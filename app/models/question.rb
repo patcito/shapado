@@ -4,6 +4,7 @@ class Question
 
   ensure_index :slug
   ensure_index :tags
+  ensure_index :language
 
   key :title, String, :required => true
   key :body, String, :required => true
