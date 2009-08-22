@@ -68,7 +68,7 @@ en:
         activation_code: Activation Code
         activated_at: Activated At
         fullname: Full name
-        lang: Language
+        language: Language
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags

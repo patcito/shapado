@@ -33,9 +33,9 @@
 
 .field-group
   .label-container
-    = f.label :lang, t(:lang, :scope => "activerecord.attributes.user")
+    = f.label :languaje, t(:language, :scope => "activerecord.attributes.user")
   .field
-    = select :user, :lang, AVAILABLE_LOCALES
+    = select :user, :language, AVAILABLE_LOCALES
 
 .field-group
   .label-container

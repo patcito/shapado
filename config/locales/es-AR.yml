@@ -183,7 +183,7 @@
         activation_code: código de activación
         activated_at: activado en
         fullname: Nombre completo
-        lang: Idioma
+        language: Idioma
         timezone: Zona horaria
         preferred_tags: Etiquetas preferidas
   support:

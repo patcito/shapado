@@ -22,7 +22,7 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
-  key :lang,                      String, :default => "en"
+  key :language,                      String, :default => "en"
   key :timezone,                      String
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
