@@ -72,6 +72,7 @@ en:
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags
+        preferred_languages: Choose the language which you know
   languages:
     en:      English
     es:      Spanish

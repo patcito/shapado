@@ -186,6 +186,7 @@
         language: Idioma
         timezone: Zona horaria
         preferred_tags: Etiquetas preferidas
+        preferred_languages: Escoja los idiomas que conozca
   support:
     array:
       words_connector: ", "

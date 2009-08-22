@@ -43,11 +43,19 @@
   .field
     =time_zone_select( "user", "timezone", ActiveSupport::TimeZone.all, :include_blank => true)
 
+.field-group
+  .label-container
+    = f.label :preferred_languages, t(:preferred_languages, :scope => "activerecord.attributes.user")
+  .field
+    -NORMALIZE_AVAILABLE_LOCALES.each do |lang|
+      = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang)
+      = language_desc(lang)
+
+
 -unless @user.new_record?
   .field-group
     .label-container
       = f.label :preferred_tags, t(:preferred_tags, :scope => "activerecord.attributes.user")
     .field
       = f.text_field :preferred_tags, :value => @user.preferred_tags.join(", "), :class => "text-field"
-
 

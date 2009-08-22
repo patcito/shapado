@@ -99,12 +99,12 @@ class User
   end
 
   def main_language
-    @main_language ||= self.lang.split("-").first
+    @main_language ||= self.language.split("-").first
   end
 
   protected
   def add_user_language
-    if !self.lang.empty? && !self.preferred_languages.include?(self.main_language)
+    if !self.language.empty? && !self.preferred_languages.include?(self.main_language)
       self.preferred_languages << main_language
     end
   end
