@@ -24,7 +24,7 @@
     .answer
       .answer_title
         = link_to h(answer.user.login), user_path(answer.user)
-        = time_ago_in_words(answer.created_at)+" "+ "ago"
+        = time_ago_in_words(answer.created_at)
       .answer_body
         = vote_box
         = h answer.body
@@ -42,15 +42,19 @@
   = submit_tag I18n.t('views.answers.form.submit')
 %hr
 
-
 -content_for :sidebar do
   %b
     = I18n.t('activerecord.attributes.question.asked_by')
   = link_to @question.user.login, user_path(@question.user)
   %b
-    = time_ago_in_words(@question.created_at)+" ago"
+    = time_ago_in_words(@question.created_at)
+  = link_to @question.user.login, user_path(@question.user)
+  %br
+  %b
+    = I18n.t('activerecord.attributes.question.category')
+  = category_desc @question.category
   %br
   %h1
-    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"])
+    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
   &=@question.tags.join(",")
 

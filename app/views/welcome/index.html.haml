@@ -9,3 +9,8 @@
     = render :partial => "shared/question", :locals => {:question => question}
 
 = will_paginate @questions
+
+-content_for :sidebar do
+  %h1
+    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+  = tag_cloud

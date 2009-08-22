@@ -14,3 +14,8 @@
 
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
+
+-content_for :sidebar do
+  %h1
+    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+  = tag_cloud
