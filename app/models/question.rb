@@ -16,6 +16,7 @@ class Question
   key :language, String, :default => "en"
 
   key :tags, Array, :default => []
+  key :category, String
 
   key :user_id, String
   belongs_to :user

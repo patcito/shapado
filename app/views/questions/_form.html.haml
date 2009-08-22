@@ -18,6 +18,12 @@
   #markdown_preview
 .field-group
   .label-container
+    = f.label :category, t(:category, :scope => "activerecord.attributes.question")
+  .field
+    = select :question, :category, category_options
+
+.field-group
+  .label-container
     = f.label :tags, t(:tags, :scope => "activerecord.attributes.question")
   .field
     = f.text_field :tags, :value => @question.tags.join(", "),:class => "text-field"
