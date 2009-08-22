@@ -1,11 +1,6 @@
 = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
 
 %h1
-  Log in with OpenID
-- form_tag session_path, :id => 'openid' do
-  &nbsp;
-
-%h1
   Log In
 - form_tag session_path do
   %p
@@ -18,4 +13,6 @@
     = password_field_tag 'password', nil
   %p
     = submit_tag t("views.layout.log_in")
+  or
+  = link_to "Register", signup_path
 
