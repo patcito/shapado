@@ -109,7 +109,11 @@ class User
   protected
   def add_email_validation
     if !self.email.blank?
-      self.class.validates_uniqueness_of   :email
+      doc = User.find(:first, :conditions => {:email => self.email}, :limit => 1)
+      valid = doc.nil? || self.id == doc.id
+      if !valid
+        self.errors.add(:email, 'Email has already been taken')
+      end
     end
   end
 
