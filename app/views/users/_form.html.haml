@@ -6,11 +6,12 @@
   .field
     = f.text_field :login, :class => "text-field"
 
-.field-group
-  .label-container
-    = f.label :email, t(:email, :scope => "activerecord.attributes.user")
-  .field
-    = f.text_field :email, :class => "text-field"
+-if @user.new? || @user.openid_login?
+  .field-group
+    .label-container
+      = f.label :email, t(:email, :scope => "activerecord.attributes.user")
+    .field
+      = f.text_field :email, :class => "text-field"
 
 -if !@user.openid_login?
   -if !@user.new?

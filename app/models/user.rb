@@ -37,10 +37,10 @@ class User
   validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
   validates_length_of       :name,     :maximum => 100
 
-  validates_presence_of     :email
-  validates_length_of       :email,    :within => 6..100 #r@a.wk
-  validates_uniqueness_of   :email
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
+  validates_presence_of     :email, :if => lambda { |e| !e.openid_login? }
+  validates_length_of       :email,    :within => 6..100, :allow_nil => true #r@a.wk
+  validates_uniqueness_of   :email, :allow_nil => true
+  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true
 
   before_validation_on_create :add_user_language
   before_save :update_languages
