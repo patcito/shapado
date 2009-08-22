@@ -65,9 +65,10 @@
         #layout
           #content
             .internal
-              .box.highlight
-                -form_tag session_path, :id => 'openid' do
-                  &nbsp;
+              -if !logged_in?
+                .box.highlight
+                  -form_tag session_path, :id => 'openid' do
+                    &nbsp;
               = yield
           #sidebar
             .internal
