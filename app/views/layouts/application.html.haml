@@ -69,9 +69,17 @@
                 .box.highlight
                   -form_tag session_path, :id => 'openid' do
                     &nbsp;
+              %br
               = yield
           #sidebar
             .internal
+              .questions_count
+                -if @questions
+                  = number_with_delimiter(@questions.total_entries)
+                -else
+                  = number_with_delimiter(Question.count)
+              %p
+                questions
               = yield :sidebar
       #footer
         %hr
