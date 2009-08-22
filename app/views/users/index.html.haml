@@ -1,4 +1,22 @@
-%ul
-  -@users.each do |user|
-    %li
-      = link_to h(user.login), user_path(user)
+%h2
+  =t(:title, :scope => "views.users.index")
+
+
+%table.list#users
+  -@users.each_slice(3) do |line|
+    %tr
+      -line.each do |user|
+        %td
+          %span.left
+            = gravatar_for user
+          %span.internal.left
+            = link_to h(user.login), user_path(user)
+            %ul
+              %li
+                &= user.questions.count
+                %b
+                  questions
+              %li
+                &= user.answers.count
+                %b
+                  answers

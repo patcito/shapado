@@ -237,6 +237,8 @@
       edit:
         title: Editar respuesta
     users:
+      index:
+        title: Todos los usuarios
       new:
         title: Registrar un nuevo usuario
         submit: Registrar

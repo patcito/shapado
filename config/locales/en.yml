@@ -39,6 +39,8 @@ en:
       edit:
         title: Editing answer
     users:
+      index:
+        title: All users
       new:
         title: Sign up as a new user
         submit: Sign up
