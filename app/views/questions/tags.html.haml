@@ -1,11 +1,12 @@
-%table.tags-list
-  -@tag_cloud.each_slice(5) do |tags|
+%table.tags-list{:style => "width: 100%"}
+  -@tag_cloud.each_slice(4) do |tags|
     %tr
       -tags.each do |tag|
-        %td
+        %td{:style => "line-height: 14px"}
           %span.tag
-            =link_to h(tag["name"]), ""
-          %span{:style => "margin-left: 5px; padding: 4px 8px;"}
+            =link_to h(tag["name"]), questions_path(:tags => tag["name"])
+          %span{:style => "padding-left: 4px; clear:both"}
             %b
               x
               = h(tag["count"])
+

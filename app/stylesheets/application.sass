@@ -553,12 +553,13 @@ table.list
     overflow: hidden
     float: left
     a
-      -webkit-border-radius: 4px
-      -moz-border-radius: 4px
+      -webkit-border-radius: 2px
+      -moz-border-radius-bottomleft: 0
+      -moz-border-radius-bottomright: 4px
+      -moz-border-radius-topleft: 4px
+      -moz-border-radius-topright: 0
       color: #666
-      border: 1px solid #999
-      border-bottom: 1px solid #666
-      background: #bbf
+      background: #DDDDEC
       cursor: pointer
       display: block
       font-size: 100%
@@ -569,7 +570,7 @@ table.list
       text-decoration: none
       text-transform: uppercase
       white-space: nowrap
+      line-height: 12px
       &:hover
         color: #dedede
-        border: 1px solid #bbb
         background: #004181
