@@ -98,7 +98,7 @@ protected
 
     email = registration["email"]
 
-    @user = User.create(:login => login, :email => nil, :identity_url=> identity_url)
+    @user = User.create(:login => login, :email => email, :identity_url=> identity_url)
     if !@user.valid?
       Rails.logger.error("FAILED OPENID LOGIN WITH: #{identity_url} #{registration.inspect}")
       Rails.logger.error(">>>> #{@user.errors.full_messages.join(", ")}")
