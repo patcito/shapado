@@ -46,6 +46,11 @@ en:
         title: Settings
         submit: Save
   activerecord:
+    models:
+      questions: Questions
+      answers: Answers
+      users: Users
+      votes: Votes
     attributes:
       question:
         title: Title

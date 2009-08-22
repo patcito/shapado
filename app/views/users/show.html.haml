@@ -1,0 +1,26 @@
+
+%h1
+  = gravatar_for @user
+  = @user.login
+
+%h2
+  =t(:questions, :scope => "activerecord.models")
+
+-questions = @user.questions
+#questions
+  -questions.each do |question|
+    = render :partial => "shared/question", :locals => {:question => question}
+
+#answers
+  %h2
+    = t(:answers, :scope => "activerecord.models")
+  %table.list
+    -@user.answers.each do |answer|
+      / TODO: add the answer anchor
+      %tr
+        %td.votes{:style=>"text-align: center; width: 10%"}
+          -#&=@user.answers.votes
+          = 0
+          = t(:votes, :scope => "activerecord.attributes.question")
+        %td.question
+          = link_to h(answer.question.title), question_path(answer.question)
