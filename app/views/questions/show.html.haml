@@ -55,7 +55,7 @@
   = category_desc @question.category
   %br
   %h1
-    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize
   .tags-list
     -@question.tags.each do |tag|
       %span.tag

@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def category_desc(key)
-    I18n.t("categories.#{key}", :default => key.capitalize)
+    I18n.t("categories.#{key}", :default => key.to_s.capitalize)
   end
 
   def category_options
