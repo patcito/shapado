@@ -56,5 +56,8 @@
   %br
   %h1
     = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  &=@question.tags.join(",")
-
+  .tags-list
+    -@question.tags.each do |tag|
+      %span.tag
+        = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
+  .clear
