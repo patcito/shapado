@@ -19,4 +19,30 @@ module ApplicationHelper
       [language_desc(lang), lang]
     end
   end
+
+
+  def tag_cloud(tags = Question.tag_cloud, options = {})
+    return '' if tags.size <= 2
+
+    max_size = options.delete(:max_size) || 35
+    min_size = options.delete(:min_size) || 12
+
+    tag_class = options.delete(:tag_class) || "tag"
+
+    lowest_value, highest_value = tags.minmax_by { |tag| tag["count"].to_i }
+
+    spread = (highest_value["count"] - lowest_value["count"])
+    spread = 1 if spread == 0
+    ratio = (max_size - min_size) / spread
+
+    cloud = '<div class="tag_cloud">'
+    tags.each do |tag|
+      size = min_size + (tag["count"] - lowest_value["count"]) * ratio
+      url = questions_path(:tags => tag["name"])
+      cloud << "<span>#{link_to(tag["name"], url,
+          :style => "font-size:#{size}px", :class => "#{tag_class}")}</span> "
+    end
+    cloud += "</div>"
+    cloud
+  end
 end
