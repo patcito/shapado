@@ -102,6 +102,10 @@ class User
     @main_language ||= self.language.split("-").first
   end
 
+  def openid_login?
+    !identity_url.blank?
+  end
+
   protected
   def add_user_language
     if !self.language.empty? && !self.preferred_languages.include?(self.main_language)
@@ -111,10 +115,6 @@ class User
 
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
-  end
-
-  def openid_login?
-    !identity_url.blank?
   end
 
   def password_required?
