@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
   before_filter :set_active_tag
 
   tabs :default => :questions, :tags => :tags,

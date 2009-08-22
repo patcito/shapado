@@ -9,9 +9,13 @@
     %link{:rel=>"icon", :type=>"image/png", :href=>"/favicon.ico"}
 
     = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
+    = javascript_include_tag 'modules/sessions.js'
+    = javascript_include_tag 'openid/js/jquery.openid.min.js'
+
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
+    = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
 
   %body
     .two-column
@@ -21,26 +25,7 @@
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
         #user-actions
           #user-nav
-            -if !logged_in?
-              .box
-                .left
-                  =link_to t('views.layout.signup'), signup_path
-                -form_tag session_path, :id => "main_head_login", :class => "form" do
-                  %fieldset
-                    .field-group.left
-                      = label_tag "Email", t(:email, :scope => "activerecord.attributes.user")
-                      = text_field_tag 'login', @login, :class => "text-field", :size => 12
-
-                    .field-group.left
-                      = label_tag "Password", t(:password, :scope => "activerecord.attributes.user")
-                      = password_field_tag 'password', nil, :class => "text-field", :size => 12
-                      %em.helper
-                        %a{ :href => "#" }
-                          =t('views.layout.forgot')
-                    .buttons
-                      %button{ :type => "submit"}
-                        =t('views.layout.log_in')
-            -else
+            -if logged_in?
               .left{:style =>"text-align: right"}
                 = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => h(current_user.login))
                 =link_to I18n.t('views.layout.logout'), logout_path
@@ -76,10 +61,13 @@
         -flash.each do |k,v|
           .message{:class => k.to_s}
             .internal
-              =v
+              = h(v)
         #layout
           #content
             .internal
+              .box.highlight
+                -form_tag session_path, :id => 'openid' do
+                  &nbsp;
               = yield
           #sidebar
             .internal
