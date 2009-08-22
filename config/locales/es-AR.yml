@@ -248,3 +248,8 @@
     music:        Musica
     gaming:       Juegos
     lifestyle:    Estilo de vida
+  languages:
+    en:      Inglés
+    es:      Español
+    es-AR:   Español latino
+    pt:      Portugués

@@ -72,4 +72,8 @@ en:
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags
-
+  languages:
+    en:      English
+    es:      Spanish
+    es-AR:   Latin American Spanish
+    pt:      Portuguese
