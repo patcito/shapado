@@ -40,10 +40,19 @@ class ApplicationController < ActionController::Base
   def available_locales; AVAILABLE_LOCALES; end
 
   def set_locale
+    locale = 'en'
     if logged_in?
-      I18n.locale = current_user.language
+      locale = current_user.language
     else
-      I18n.locale = "en"
+      if request.env['Accept-Language'] =~ /^(\w\w)/
+        lang = $1
+        case lang
+        when 'es'
+          locale = 'es-AR'
+        end
+      end
     end
+
+    I18n.locale = locale
   end
 end
