@@ -8,6 +8,7 @@ module ApplicationHelper
     Shapado::CATEGORIES.collect do |category|
       [category_desc(category), category]
     end
+  end
 
   def language_desc(lang)
     I18n.t("languages.#{lang}", :default => lang)
