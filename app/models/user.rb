@@ -38,14 +38,14 @@ class User
   validates_length_of       :name,     :maximum => 100
 
   validates_presence_of     :email, :if => lambda { |e| !e.openid_login? }
-  validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.empty? } #r@a.wk
-  validates_uniqueness_of   :email, :allow_nil => true, :if => lambda { |e| !e.email.empty? }
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true, :if => lambda { |e| !e.email.empty? }
+  validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? } #r@a.wk
+  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
 
   before_validation_on_create :add_user_language
   before_save :update_languages
 
   attr_accessor :password, :password_confirmation
+  before_validation :add_email_validation
 
 
 
@@ -107,6 +107,12 @@ class User
   end
 
   protected
+  def add_email_validation
+    if !self.email.blank?
+      self.class.validates_uniqueness_of   :email
+    end
+  end
+
   def add_user_language
     if !self.language.empty? && !self.preferred_languages.include?(self.main_language)
       self.preferred_languages << main_language
