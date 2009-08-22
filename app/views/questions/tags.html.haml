@@ -1,8 +1,11 @@
-%table
+%table.tags-list
   -@tag_cloud.each_slice(5) do |tags|
     %tr
       -tags.each do |tag|
         %td
-          = h(tag["name"])
-          x
-          = h(tag["count"])
+          %span.tag
+            =link_to h(tag["name"]), ""
+          %span{:style => "margin-left: 5px; padding: 4px 8px;"}
+            %b
+              x
+              = h(tag["count"])
