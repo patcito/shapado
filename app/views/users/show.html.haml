@@ -4,18 +4,19 @@
   = @user.login
 
 %h2
+  = number_with_delimiter(@questions.total_entries)
   =t(:questions, :scope => "activerecord.models")
 
--questions = @user.questions
 #questions
-  -questions.each do |question|
+  -@questions.each do |question|
     = render :partial => "shared/question", :locals => {:question => question}
-
+  = will_paginate @questions, :param_name => "questions_page"
 #answers
   %h2
+    = number_with_delimiter(@answers.total_entries)
     = t(:answers, :scope => "activerecord.models")
   %table.list
-    -@user.answers.each do |answer|
+    -@answers.each do |answer|
       / TODO: add the answer anchor
       %tr
         %td.votes{:style=>"text-align: center; width: 10%"}
@@ -24,3 +25,4 @@
           = t(:votes, :scope => "activerecord.attributes.question")
         %td.question
           = link_to h(answer.question.title), question_path(answer.question)
+  =will_paginate @answers, :param_name => "answers_page"
