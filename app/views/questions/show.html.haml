@@ -28,7 +28,7 @@
       .answer_body
         = vote_box
         %span.markdown
-        = markdown(answer.body)
+          = markdown(answer.body)
         .clear
         -if logged_in? && current_user.can_modify?(answer)
           .buttons

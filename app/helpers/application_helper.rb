@@ -47,6 +47,6 @@ module ApplicationHelper
   end
 
   def markdown(txt)
-    Maruku.new(sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i em table])).to_html
+    Maruku.new(sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i em table pre code blockquote])).to_html
   end
 end
