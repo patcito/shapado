@@ -57,10 +57,6 @@ class Question
     self.collection.repsert({:_id => self.id}, {:$inc => {:views_count => 1}})
   end
 
-  def to_html
-    Maruku.new(self.body).to_html
-  end
-
   protected
   def sluggize
     if self.slug.blank?
