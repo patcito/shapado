@@ -3,4 +3,5 @@
   .label-container
     %label
       = I18n.t('views.answers.form.answer_label')
-  = f.text_area :body, :class => "text-area huge"
+  = f.text_area :body, :class => "text-area huge", :id => "markdown_editor"
+  #markdown_preview.markdown

@@ -7,8 +7,8 @@
   #question-title
     %h2
       = h @question.title
-  #question-body
-    = h @question.body
+  #question-body.markdown
+    = @question.to_html
   -if logged_in? && current_user.can_modify?(@question)
     .buttons
       = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
@@ -27,7 +27,8 @@
         = time_ago_in_words(answer.created_at)
       .answer_body
         = vote_box
-        = h answer.body
+        %span.markdown
+        = answer.to_html
         .clear
         -if logged_in? && current_user.can_modify?(answer)
           .buttons

@@ -16,4 +16,8 @@ class Answer
   validates_presence_of :user_id, :question_id
 
   searchable_keys :body
+
+  def to_html
+    Maruku.new(self.body).to_html
+  end
 end
