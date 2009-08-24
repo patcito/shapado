@@ -8,7 +8,7 @@
       -line.each do |user|
         %td
           %span.left
-            = gravatar_for user
+            = gravatar user.email.to_s
           %span.internal.left
             = link_to h(user.login), user_path(user)
             %ul

@@ -1,6 +1,6 @@
 
 %h1
-  = gravatar_for @user
+  = gravatar @user.email.to_s
   = @user.login
 
 %h2
