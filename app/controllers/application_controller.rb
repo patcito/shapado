@@ -32,6 +32,8 @@ class ApplicationController < ActionController::Base
 
     if current_user && !current_user.preferred_languages.empty?
       conditions.deep_merge!({:language => {:$in => current_user.preferred_languages }})
+    else
+      conditions.deep_merge!({:language => I18n.locale.to_s})
     end
 
     conditions
