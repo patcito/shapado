@@ -1,0 +1,17 @@
+.answer
+  .answer_title
+    = link_to h(answer.user.login), user_path(answer.user)
+    = time_ago_in_words(answer.created_at)
+  .answer_body
+    = vote_box
+    %span.markdown
+      = markdown(answer.body)
+    .clear
+    -if logged_in?
+      .buttons
+        -if current_user.can_modify?(answer)
+          = link_to I18n.t("scaffold.edit"), edit_answer_path(answer), :class =>"button"
+          = link_to I18n.t("scaffold.destroy"), answer, :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
+        -if current_user.can_modify?(@question) && !@question.answered
+          = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer => answer), :class =>"button"
+  .clear

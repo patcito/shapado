@@ -20,6 +20,9 @@ class Question
 
   key :user_id, String
   belongs_to :user
+
+  key :answer_id, String
+  belongs_to :answer
   has_many :answers, :dependent => :destroy
 
   validates_presence_of :user_id
