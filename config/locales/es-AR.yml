@@ -227,6 +227,7 @@
       show:
         answers: Respuestas
         pick_answer: Escoger como solución
+        unset_answer: Quitar como solución?
         another_answers: Otras respuestas
         solution: Solución
       edit:

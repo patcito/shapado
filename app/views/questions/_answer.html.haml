@@ -1,4 +1,7 @@
-.answer
+
+-solution = solution || false
+
+.answer{:class => solution ? "solution" : ""}
   .answer_title
     = link_to h(answer.user.login), user_path(answer.user)
     = time_ago_in_words(answer.created_at)
@@ -12,6 +15,9 @@
         -if current_user.can_modify?(answer)
           = link_to I18n.t("scaffold.edit"), edit_answer_path(answer), :class =>"button"
           = link_to I18n.t("scaffold.destroy"), answer, :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
-        -if current_user.can_modify?(@question) && !@question.answered
-          = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer_id => answer), :class =>"button"
+        -if current_user.can_modify?(@question)
+          -unless @question.answered
+            = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer_id => answer), :class =>"button"
+          -if solution
+            = link_to t("unset_answer", :scope => "views.questions.show"),  unsolve_question_path(@question), :class =>"button"
   .clear

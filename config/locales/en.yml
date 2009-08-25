@@ -29,6 +29,7 @@ en:
       show:
         answers: Answers
         pick_answer: Pick as solution
+        unset_answer: Unset as solution?
         another_answers: Another answers
         solution: Solution
       edit:

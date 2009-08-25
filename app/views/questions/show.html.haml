@@ -21,7 +21,7 @@
   -if @question.answered
     %h2
       = t("solution", :scope => "views.questions.show")
-    =render :partial=> "answer", :locals=> {:answer => @question.answer}
+    =render :partial=> "answer", :locals=> {:answer => @question.answer, :solution => true}
     -@answers.delete(@question.answer)
     %hr
     %h2
