@@ -46,10 +46,10 @@ class Question
     self[:tags] = t
   end
 
-  def self.tag_cloud
+  def self.tag_cloud(conditions = {})
     @tag_cloud ||= begin
       path = RAILS_ROOT + "/app/javascripts/tag_cloud.js"
-      self.database.eval(File.read(path))
+      self.database.eval(File.read(path), conditions)
     end
   end
 

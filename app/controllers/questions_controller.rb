@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
   end
 
   def tags
-    @tag_cloud = Question.tag_cloud
+    @tag_cloud = Question.tag_cloud(language_conditions)
   end
 
   # GET /questions/1

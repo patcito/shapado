@@ -1,8 +1,8 @@
-function tagCloud() {
+function tagCloud(q) {
   var counts = db.eval(
-    function(){
+    function(q){
       var counts = {};
-      db.questions.find().forEach(
+      db.questions.find(q).forEach(
         function(p){
           if ( p.tags ){
             for ( var i=0; i<p.tags.length; i++ ){
@@ -13,7 +13,8 @@ function tagCloud() {
         }
       );
       return counts;
-    }
+    },
+    q
   );
 
   // maybe sort to by nice

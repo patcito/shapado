@@ -21,7 +21,11 @@ module ApplicationHelper
   end
 
 
-  def tag_cloud(tags = Question.tag_cloud, options = {})
+  def tag_cloud(tags = [], options = {})
+    if tags.empty?
+      tags = Question.tag_cloud(language_conditions)
+    end
+
     return '' if tags.size <= 2
 
     max_size = options.delete(:max_size) || 35
