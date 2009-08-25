@@ -16,32 +16,31 @@
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
 
 %hr
-%h2
-  =I18n.t('views.questions.show.answers')
 
 #answers
-  -@answers.each do |answer|
-    .answer
-      .answer_title
-        = link_to h(answer.user.login), user_path(answer.user)
-        = time_ago_in_words(answer.created_at)
-      .answer_body
-        = vote_box
-        %span.markdown
-          = markdown(answer.body)
-        .clear
-        -if logged_in? && current_user.can_modify?(answer)
-          .buttons
-            = link_to I18n.t("scaffold.edit"), edit_answer_path(answer), :class =>"button"
-            = link_to I18n.t("scaffold.destroy"), answer, :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
-      .clear
+  -if @question.answered
+    %h2
+      = t("solution", :scope => "views.questions.show")
+    =render :partial=> "answer", :locals=> {:answer => @question.answer, :solution => true}
+    -@answers.delete(@question.answer)
+    %hr
+    %h2
+      = t("another_answers", :scope => "views.questions.show")
+    -@answers.each do |answer|
+      =render :partial=> "answer", :locals=> {:answer => answer}
+  -else
+    %h2
+      =I18n.t('views.questions.show.answers')
+    -@answers.each do |answer|
+      =render :partial=> "answer", :locals=> {:answer => answer}
 
 
 %hr
--form_for @answer, :html => {:class => "form"} do |f|
-  = render :partial => "answers/form", :locals => {:f => f}
-  = submit_tag I18n.t('views.answers.form.submit')
-%hr
+-unless @question.answered
+  -form_for @answer, :html => {:class => "form"} do |f|
+    = render :partial => "answers/form", :locals => {:f => f}
+    = submit_tag I18n.t('views.answers.form.submit')
+  %hr
 
 -content_for :sidebar do
   %b

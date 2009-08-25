@@ -8,7 +8,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
   map.resource :session
-  map.resources :questions, :collection => {:tags => :get, :unanswered => :get}
+  map.resources :questions, :collection => {:tags => :get,
+                                            :unanswered => :get},
+                            :member => {:solve => :get,
+                                        :unsolve => :get}
   map.resources :answers
 
   map.search '/search', :controller => "welcome", :action => "search"

@@ -104,6 +104,37 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def solve
+    @question = Question.find_by_slug_or_id(params[:id])
+    @answer = @question.answers.find(params[:answer_id])
+    @question.answer = @answer
+    @question.answered = true
+
+    respond_to do |format|
+      if @question.save
+        flash[:notice] = 'Question was solved.'
+        format.html { redirect_to question_path(@question) }
+      else
+        format.html { render :action => "show" }
+      end
+    end
+  end
+
+  def unsolve
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.answer = nil
+    @question.answered = false
+
+    respond_to do |format|
+      if @question.save
+        flash[:notice] = 'Question now is not solved.'
+        format.html { redirect_to question_path(@question) }
+      else
+        format.html { render :action => "show" }
+      end
+    end
+  end
+
   protected
   def set_active_tag
     @active_tag = "tag_#{params[:tags]}" if params[:tags]
