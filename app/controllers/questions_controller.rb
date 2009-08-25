@@ -106,14 +106,14 @@ class QuestionsController < ApplicationController
 
   def solve
     @question = Question.find_by_slug_or_id(params[:id])
-    @answer = @question.answers.find(params[:answer])
+    @answer = @question.answers.find(params[:answer_id])
     @question.answer = @answer
     @question.answered = true
 
     respond_to do |format|
       if @question.save
         flash[:notice] = 'Question was solved.'
-        format.html { redirect_to(@question) }
+        format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }
       end
@@ -128,7 +128,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         flash[:notice] = 'Question now is not solved.'
-        format.html { redirect_to(@question) }
+        format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }
       end
