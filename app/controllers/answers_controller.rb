@@ -8,6 +8,8 @@ class AnswersController < ApplicationController
     @answer.user = current_user
 
     if @answer.save
+      @question.answer_added!
+
       flash[:notice] = "Thanks!"
       redirect_to question_path(@question)
     else

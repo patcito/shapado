@@ -55,6 +55,10 @@ class Question
     self.collection.repsert({:_id => self.id}, {:$inc => {:views_count => 1}})
   end
 
+  def answer_added!
+    self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => 1}})
+  end
+
   protected
   def sluggize
     if self.slug.blank?
