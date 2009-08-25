@@ -41,7 +41,7 @@ class Question
 
   def tags=(t)
     if t.kind_of?(String)
-      t = t.split(",").join(" ").split(" ")
+      t = t.downcase.split(",").join(" ").split(" ")
     end
     self[:tags] = t
   end
