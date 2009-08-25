@@ -47,10 +47,8 @@ class Question
   end
 
   def self.tag_cloud(conditions = {})
-    @tag_cloud ||= begin
-      path = RAILS_ROOT + "/app/javascripts/tag_cloud.js"
-      self.database.eval(File.read(path), conditions)
-    end
+    @tag_cloud_code ||= RAILS_ROOT + "/app/javascripts/tag_cloud.js"
+    self.database.eval(File.read(@tag_cloud_code), conditions)
   end
 
   def viewed!
