@@ -8,7 +8,8 @@
   .label-container
     = f.label :language, t(:language, :scope => "activerecord.attributes.question")
   .field
-    = select :question, :language, languages_options(current_user.preferred_languages), {:selected => current_user.language}
+    -lang = @question.new? ? current_user.main_language : @question.language
+    = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
 
 .field-group
   .label-container

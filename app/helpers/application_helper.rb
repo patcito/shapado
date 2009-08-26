@@ -15,6 +15,11 @@ module ApplicationHelper
   end
 
   def languages_options(languages=nil)
+    languages = AVAILABLE_LANGUAGES if languages.blank?
+    locales_options(languages)
+  end
+
+  def locales_options(languages=nil)
     languages = AVAILABLE_LOCALES if languages.blank?
     languages.collect do |lang|
       [language_desc(lang), lang]
