@@ -52,6 +52,8 @@ class ApplicationController < ActionController::Base
     locale = 'en'
     if logged_in?
       locale = current_user.language
+    elsif params[:lang] =~ /\w\w/
+      locale = params[:lang]
     else
       if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
         lang = $1
