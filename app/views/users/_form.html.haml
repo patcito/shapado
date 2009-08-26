@@ -47,7 +47,7 @@
   .label-container
     = f.label :preferred_languages, t(:preferred_languages, :scope => "activerecord.attributes.user")
   .field
-    -NORMALIZE_AVAILABLE_LOCALES.each do |lang|
+    -AVAILABLE_LANGUAGES.each do |lang|
       = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang)
       = language_desc(lang)
 

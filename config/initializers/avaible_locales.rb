@@ -17,5 +17,6 @@ end
 I18n.backend.send(:init_translations)
 
 AVAILABLE_LOCALES = I18n.backend.available_locales
-NORMALIZE_AVAILABLE_LOCALES = I18n.backend.available_locales.map { |l| l.split("-").first}
+AVAILABLE_LANGUAGES = I18n.backend.available_locales.map { |l| l.split("-").first}.uniq
 RAILS_DEFAULT_LOGGER.debug "* Loaded locales: #{AVAILABLE_LOCALES.inspect}"
+

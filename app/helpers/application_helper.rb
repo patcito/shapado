@@ -14,8 +14,8 @@ module ApplicationHelper
     I18n.t("languages.#{lang}", :default => lang)
   end
 
-  def languages_options(languages=AVAILABLE_LOCALES)
-    languages = NORMALIZE_AVAILABLE_LOCALES if languages.empty?
+  def languages_options(languages=nil)
+    languages = AVAILABLE_LANGUAGES if languages.blank?
     languages.collect do |lang|
       [language_desc(lang), lang]
     end
