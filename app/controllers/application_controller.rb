@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
     if current_user && !current_user.preferred_languages.empty?
       conditions[:language] = {:$in => current_user.preferred_languages }
     else
-      conditions[:language] = I18n.locale.to_s
+      conditions[:language] = I18n.locale.to_s.split("-").first
     end
     conditions
   end
@@ -52,18 +52,24 @@ class ApplicationController < ActionController::Base
     locale = 'en'
     if logged_in?
       locale = current_user.language
-    elsif params[:lang] =~ /\w\w/
-      locale = params[:lang]
+    elsif params[:lang] =~ /^(\w\w)/
+      locale = find_valid_locale($1)
     else
       if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
-        lang = $1
-        case lang
-        when 'es'
-          locale = 'es-AR'
-        end
+        locale = find_valid_locale($1)
       end
     end
 
     I18n.locale = locale
   end
+
+  def find_valid_locale(lang)
+    case lang
+      when /^es/
+        'es-AR'
+      else
+        'en'
+    end
+  end
+  helper_method :find_valid_locale
 end
