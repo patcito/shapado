@@ -41,7 +41,6 @@ class User
   validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? } #r@a.wk
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
 
-  before_validation_on_create :add_user_language
   before_save :update_languages
 
   attr_accessor :password, :password_confirmation
@@ -81,7 +80,6 @@ class User
     end
   end
 
-
   def preferred_tags=(t)
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
@@ -114,12 +112,6 @@ class User
       if !valid
         self.errors.add(:email, 'Email has already been taken')
       end
-    end
-  end
-
-  def add_user_language
-    if !self.language.empty? && !self.preferred_languages.include?(self.main_language)
-      self.preferred_languages << main_language
     end
   end
 
