@@ -55,7 +55,7 @@ protected
       failed = !result.successful?
       if !failed
         if identity_url =~ %r{//www.google.com}
-          identity_url = 'http://'+registration["http://axschema.org/contact/email"][0]
+          identity_url = "http://google_id_#{registration["http://axschema.org/contact/email"][0]}"
         end
         if @user = User.find_by_identity_url(identity_url)
           self.current_user = @user
@@ -81,7 +81,7 @@ protected
 
   def create_openid_user(registration, identity_url)
     google_id = false
-    if identity_url =~ %r{gmail.com}
+    if identity_url =~ /google_id_/
       google_id = true
       registration["email"] = registration["http://axschema.org/contact/email"][0]
       registration["nickname"] = registration["email"].split(/@/)[0]
