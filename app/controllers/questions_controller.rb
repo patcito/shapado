@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
+  before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
   before_filter :set_active_tag
 
   tabs :default => :questions, :tags => :tags,
@@ -55,9 +56,6 @@ class QuestionsController < ApplicationController
   # GET /questions/1/edit
   def edit
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_modify?(@question)
-      redirect_to question_path(@question)
-    end
   end
 
   # POST /questions
@@ -83,10 +81,6 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find_by_slug_or_id(params[:id])
 
-    unless current_user.can_modify?(@question)
-      redirect_to question_path(@question)
-    end
-
     respond_to do |format|
       if @question.update_attributes(params[:question])
         flash[:notice] = 'Question was successfully updated.'
@@ -103,10 +97,6 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1.xml
   def destroy
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_modify?(@question)
-      redirect_to question_path(@question)
-    end
-
     @question.destroy
 
     respond_to do |format|
@@ -117,9 +107,6 @@ class QuestionsController < ApplicationController
 
   def solve
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_modify?(@question)
-      redirect_to question_path(@question)
-    end
 
     @answer = @question.answers.find(params[:answer_id])
     @question.answer = @answer
@@ -137,9 +124,6 @@ class QuestionsController < ApplicationController
 
   def unsolve
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_modify?(@question)
-      redirect_to question_path(@question)
-    end
 
     @question.answer = nil
     @question.answered = false
@@ -155,6 +139,13 @@ class QuestionsController < ApplicationController
   end
 
   protected
+  def check_permissions
+    if @question && !current_user.can_modify?(@question)
+      redirect_to question_path(@question)
+      return false
+    end
+  end
+
   def set_active_tag
     @active_tag = "tag_#{params[:tags]}" if params[:tags]
     @active_tag
