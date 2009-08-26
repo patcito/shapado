@@ -55,7 +55,6 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   def edit
-    @question = Question.find_by_slug_or_id(params[:id])
   end
 
   # POST /questions
@@ -79,8 +78,6 @@ class QuestionsController < ApplicationController
   # PUT /questions/1
   # PUT /questions/1.xml
   def update
-    @question = Question.find_by_slug_or_id(params[:id])
-
     respond_to do |format|
       if @question.update_attributes(params[:question])
         flash[:notice] = 'Question was successfully updated.'
@@ -96,7 +93,6 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
-    @question = Question.find_by_slug_or_id(params[:id])
     @question.destroy
 
     respond_to do |format|
@@ -106,8 +102,6 @@ class QuestionsController < ApplicationController
   end
 
   def solve
-    @question = Question.find_by_slug_or_id(params[:id])
-
     @answer = @question.answers.find(params[:answer_id])
     @question.answer = @answer
     @question.answered = true
@@ -123,8 +117,6 @@ class QuestionsController < ApplicationController
   end
 
   def unsolve
-    @question = Question.find_by_slug_or_id(params[:id])
-
     @question.answer = nil
     @question.answered = false
 
@@ -140,9 +132,12 @@ class QuestionsController < ApplicationController
 
   protected
   def check_permissions
-    if @question && !current_user.can_modify?(@question)
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    if @question.nil?
+      redirect_to questions_path
+    elsif !current_user.can_modify?(@question)
       redirect_to question_path(@question)
-      return false
     end
   end
 
