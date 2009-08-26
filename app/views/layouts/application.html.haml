@@ -75,7 +75,10 @@
             .internal
               .questions_count
                 -if @questions
-                  = number_with_delimiter(@questions.total_entries)
+                  -if @question.respond_to?(:total_entries)
+                    = number_with_delimiter(@questions.total_entries)
+                  -else
+                    = number_with_delimiter(@questions.size)
                 -else
                   = number_with_delimiter(Question.count(language_conditions))
               %p
