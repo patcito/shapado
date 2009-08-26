@@ -8,8 +8,8 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    @questions = Question.search(params[:q], :limit => 25)
-    @answers = Answer.search(params[:q], :limit => 25)
+    @questions = Question.search(params[:q], :per_page => 25, :page => params[:page] || 1)
+    @answers = Answer.search(params[:q], :per_page => 25, :page => params[:page] || 1)
   end
 end
 
