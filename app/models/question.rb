@@ -26,6 +26,7 @@ class Question
   has_many :answers, :dependent => :destroy
 
   validates_presence_of :user_id
+  validates_uniqueness_of :slug
 
   searchable_keys :title, :body
 
@@ -65,7 +66,7 @@ class Question
   protected
   def sluggize
     if self.slug.blank?
-      self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-")
+      self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-").downcase
     end
   end
 
