@@ -25,12 +25,12 @@
     -@answers.delete(@question.answer)
     %hr
     %h2
-      = t("another_answers", :scope => "views.questions.show")
+      = h(t("another_answers", :scope => "views.questions.show"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:answer => answer}
   -else
     %h2
-      =I18n.t('views.questions.show.answers')
+      = h(I18n.t('views.questions.show.answers'))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:answer => answer}
 
@@ -45,17 +45,17 @@
 -content_for :sidebar do
   %b
     = I18n.t('activerecord.attributes.question.asked_by')
-  = link_to @question.user.login, user_path(@question.user)
+  = link_to h(@question.user.login), user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)
-  = link_to @question.user.login, user_path(@question.user)
+  = link_to h(@question.user.login), user_path(@question.user)
   %br
   %b
     = I18n.t('activerecord.attributes.question.category')
-  = category_desc @question.category
+  = category_desc h(@question.category)
   %br
   %h1
-    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize
+    = h(I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
   .tags-list
     -@question.tags.each do |tag|
       %span.tag
