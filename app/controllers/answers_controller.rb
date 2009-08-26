@@ -1,5 +1,6 @@
 class AnswersController < ApplicationController
   before_filter :login_required
+  before_filter :check_permissions, :only => [:edit, :update, :destroy]
 
   def create
     @answer = Answer.new(params[:answer])
@@ -19,13 +20,10 @@ class AnswersController < ApplicationController
   end
 
   def edit
-    @answer = Answer.find(params[:id])
     @question = @answer.question
   end
 
   def update
-    @answer = Answer.find(params[:id])
-
     respond_to do |format|
       if @answer.update_attributes(params[:answer])
         flash[:notice] = 'Answer was successfully updated.'
@@ -39,13 +37,21 @@ class AnswersController < ApplicationController
   end
 
   def destroy
-    @answer = Answer.find(params[:id])
     @question = @answer.question
     @answer.destroy
 
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
       format.xml  { head :ok }
+    end
+  end
+
+  protected
+  def check_permissions
+    @answer = Answer.find(params[:id])
+    if @question.nil? || !current_user.can_modify?(@question)
+      flash[:error] = "Permission denied"
+      redirect_to questions_path
     end
   end
 end

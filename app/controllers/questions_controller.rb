@@ -137,6 +137,7 @@ class QuestionsController < ApplicationController
     if @question.nil?
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
+      flash[:error] = "Permission denied"
       redirect_to question_path(@question)
     end
   end
