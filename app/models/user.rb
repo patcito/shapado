@@ -27,6 +27,8 @@ class User
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
 
+  validates_inclusion_of :language, :within => AVAILABLE_LOCALES
+
   timestamps!
 
   validates_presence_of     :login
