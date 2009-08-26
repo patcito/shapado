@@ -15,6 +15,7 @@ module ApplicationHelper
   end
 
   def languages_options(languages=AVAILABLE_LOCALES)
+    languages = NORMALIZE_AVAILABLE_LOCALES if languages.empty?
     languages.collect do |lang|
       [language_desc(lang), lang]
     end
