@@ -1,5 +1,6 @@
 $(document).ready(function() {
   setupEditor();
+  $('#menu_logo').droppy({speed: 100});
 })
 
 function setupEditor() {

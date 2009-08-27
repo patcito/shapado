@@ -221,6 +221,8 @@
       signup: Registrarse
       settings: configuración
       recent_questions: Preguntas recientes
+      categories: Categorias
+      languages: Idiomas
     questions:
       index:
         title: Todas las preguntas
