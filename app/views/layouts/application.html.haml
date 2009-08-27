@@ -36,7 +36,7 @@
               %ul
                 -category_options.each do |desc, value|
                   %li
-                    = link_to(desc, tag_url(value))
+                    = link_to(desc, subdomain_url(value))
             %li
               -if @languages && !@languages.empty?
                 = link_to language_desc(@languages.first), ""
@@ -46,7 +46,7 @@
                 -if logged_in?
                   -languages_options(current_user.preferred_languages).each do |desc, value|
                     %li
-                      = link_to desc, tag_url(value)
+                      = link_to desc, subdomain_url(value)
                 -else
                   -languages_options.each do |desc, value|
                     %li

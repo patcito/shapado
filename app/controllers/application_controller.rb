@@ -10,6 +10,20 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   protected
+  def subdomain_url(subdomain, params = {})
+    host = request.host.split("\.").last(2).join(".")
+    request.protocol + "#{subdomain}." + host + request.port_string +
+                                          url_for({:only_path =>true}.merge(params))
+  end
+  helper_method :subdomain_url
+
+  def domain_url(params = {})
+    host = request.host.split("\.").last(2).join(".")
+    request.protocol + "://#{host}" + request.port_string+
+                                          url_for({:only_path =>true}.merge(params))
+  end
+  helper_method :domain_url
+
   def find_current_tags
     @current_tags ||= begin
       metatags = Set.new
@@ -22,16 +36,10 @@ class ApplicationController < ActionController::Base
                             languages << tag
                             metatags.delete(tag)
                           end
+                          @category ||= Shapado::CATEGORIES.detect {|e| e == tag}
                         end
                         languages
                       end
-
-      metatags.each do |tag|
-        if Shapado::CATEGORIES.include?(tag)
-          @category = tag
-          break
-        end
-      end
 
       if params[:tags]
         metatags += params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
