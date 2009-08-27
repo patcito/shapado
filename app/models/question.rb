@@ -16,6 +16,7 @@ class Question
   key :language, String, :default => "en"
 
   key :tags, Array, :default => []
+  key :_metatags, Array, :default => []
   key :category, String
 
   key :user_id, String
@@ -30,6 +31,7 @@ class Question
 
   searchable_keys :title, :body
 
+  before_save :update_metatags
   before_validation_on_create :sluggize, :update_language
   before_validation_on_update :update_answer_count
 
@@ -66,6 +68,13 @@ class Question
   end
 
   protected
+  def update_metatags
+    self._metatags = []
+    self._metatags << self.language
+    self._metatags << self.category
+    self._metatags += self.tags
+  end
+
   def sluggize
     if self.slug.blank?
       self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-").downcase
