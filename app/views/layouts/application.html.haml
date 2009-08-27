@@ -9,12 +9,14 @@
     %link{:rel=>"icon", :type=>"image/png", :href=>"/favicon.ico"}
 
     = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
+    = javascript_include_tag 'jquery.droppy'
     = javascript_include_tag 'modules/sessions.js'
     = javascript_include_tag 'openid/js/jquery.openid.min.js'
 
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/components/droppy.css', :media => 'screen, projection'
     = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
 
   %body
@@ -23,6 +25,34 @@
         #logo
           %a{:href => root_path}
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
+          %ul#menu_logo
+            %li
+              = link_to "FAQ", questions_path(:tags => "faq")
+            %li
+              -if Shapado::CATEGORIES.include?(current_tag)
+                = link_to category_desc(current_tag), "/"
+              -else
+                = link_to t("views.layout.categories"), request.domain
+              %ul
+                -category_options.each do |desc, value|
+                  %li
+                    = link_to(desc, tag_url(value))
+            %li
+              -if AVAILABLE_LANGUAGES.include?(current_tag)
+                = link_to language_desc(current_tag), ""
+              -else
+                = link_to t("views.layout.languages"), request.domain
+              %ul
+                -if logged_in?
+                  -languages_options(current_user.preferred_languages).each do |desc, value|
+                    %li
+                      = link_to desc, tag_url(value)
+                -else
+                  -languages_options.each do |desc, value|
+                    %li
+                      = link_to desc, tag_url(value)
+
+
         #user-actions
           #user-nav
             -if logged_in?

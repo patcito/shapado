@@ -23,6 +23,8 @@ en:
       signup: Signup
       settings: settings
       recent_questions: Recent questions
+      categories: Categories
+      languages: Languages
     questions:
       index:
         title: All questions
