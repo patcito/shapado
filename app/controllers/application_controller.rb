@@ -27,11 +27,21 @@ class ApplicationController < ActionController::Base
   def scoped_conditions(conditions = {})
     metatags = Set.new
     metatags += request.subdomains
-    @languages = []
+    @languages ||=  begin
+                      languages = []
+                      metatags.each do |tag|
+                        if AVAILABLE_LANGUAGES.include?(tag)
+                          languages << tag
+                          metatags.delete(tag)
+                        end
+                      end
+                      languages
+                    end
+
     metatags.each do |tag|
-      if AVAILABLE_LANGUAGES.include?(tag)
-        @languages << tag
-        metatags.delete(tag)
+      if Shapado::CATEGORIES.include?(tag)
+        @category = tag
+        break
       end
     end
 

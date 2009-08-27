@@ -29,8 +29,8 @@
             %li
               = link_to "FAQ", questions_path(:tags => "faq")
             %li
-              -if Shapado::CATEGORIES.include?(current_tag)
-                = link_to category_desc(current_tag), "/"
+              -if @category
+                = link_to category_desc(@category), "/"
               -else
                 = link_to t("views.layout.categories"), request.domain
               %ul
@@ -38,8 +38,8 @@
                   %li
                     = link_to(desc, tag_url(value))
             %li
-              -if AVAILABLE_LANGUAGES.include?(current_tag)
-                = link_to language_desc(current_tag), ""
+              -if @languages && !@languages.empty?
+                = link_to language_desc(@languages.first), ""
               -else
                 = link_to t("views.layout.languages"), request.domain
               %ul
