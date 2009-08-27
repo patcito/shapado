@@ -1,0 +1,6 @@
+development:
+  domain: localhost.lan
+production:
+  domain: shapado.com
+test:
+  domain: test.loc
