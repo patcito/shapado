@@ -12,45 +12,38 @@ class ApplicationController < ActionController::Base
   protected
   def find_current_tags
     @current_tags ||= begin
-      tags = []
+      metatags = Set.new
+      metatags += request.subdomains
+
+      @languages ||=  begin
+                        languages = []
+                        metatags.each do |tag|
+                          if AVAILABLE_LANGUAGES.include?(tag)
+                            languages << tag
+                            metatags.delete(tag)
+                          end
+                        end
+                        languages
+                      end
+
+      metatags.each do |tag|
+        if Shapado::CATEGORIES.include?(tag)
+          @category = tag
+          break
+        end
+      end
+
       if params[:tags]
-        tags += params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
+        metatags += params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
       end
-      if current_tag.present?
-        tags += [current_tag]
-      end
-      tags
+      metatags
     end
   end
   alias :current_tags :find_current_tags
 
   def scoped_conditions(conditions = {})
-    metatags = Set.new
-    metatags += request.subdomains
-    @languages ||=  begin
-                      languages = []
-                      metatags.each do |tag|
-                        if AVAILABLE_LANGUAGES.include?(tag)
-                          languages << tag
-                          metatags.delete(tag)
-                        end
-                      end
-                      languages
-                    end
-
-    metatags.each do |tag|
-      if Shapado::CATEGORIES.include?(tag)
-        @category = tag
-        break
-      end
-    end
-
-    if params[:tags]
-      metatags += (params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]])
-    end
-
-    unless metatags.empty?
-      conditions.deep_merge!({:_metatags => metatags.to_a})
+    unless current_tags.empty?
+      conditions.deep_merge!({:_metatags => current_tags.to_a})
     end
     conditions.deep_merge!(language_conditions)
   end

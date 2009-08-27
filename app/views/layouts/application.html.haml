@@ -30,9 +30,9 @@
               = link_to "FAQ", questions_path(:tags => "faq")
             %li
               -if @category
-                = link_to category_desc(@category), "/"
+                = link_to category_desc(@category), ""
               -else
-                = link_to t("views.layout.categories"), request.domain
+                = link_to t("views.layout.categories"), "/"
               %ul
                 -category_options.each do |desc, value|
                   %li
@@ -41,7 +41,7 @@
               -if @languages && !@languages.empty?
                 = link_to language_desc(@languages.first), ""
               -else
-                = link_to t("views.layout.languages"), request.domain
+                = link_to t("views.layout.languages"), "/"
               %ul
                 -if logged_in?
                   -languages_options(current_user.preferred_languages).each do |desc, value|
