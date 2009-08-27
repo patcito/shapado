@@ -3,27 +3,13 @@
 
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
-  include CurrentTags
+  include Subdomains
   protect_from_forgery
 
   before_filter :find_current_tags
   before_filter :set_locale
 
   protected
-  def subdomain_url(subdomain, params = {})
-    host = request.host.split("\.").last(2).join(".")
-    request.protocol + "#{subdomain}." + host + request.port_string +
-                                          url_for({:only_path =>true}.merge(params))
-  end
-  helper_method :subdomain_url
-
-  def domain_url(params = {})
-    host = request.host.split("\.").last(2).join(".")
-    request.protocol + "://#{host}" + request.port_string+
-                                          url_for({:only_path =>true}.merge(params))
-  end
-  helper_method :domain_url
-
   def find_current_tags
     @current_tags ||= begin
       metatags = Set.new

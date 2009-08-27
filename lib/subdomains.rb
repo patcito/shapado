@@ -18,12 +18,25 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-module CurrentTags
+module Subdomains
   def self.included(controller)
-    controller.helper_method(:tag_domain, :current_tag, :tag_host, :tag_url)
+    controller.helper_method(:tag_domain, :current_tag, :tag_host, :tag_url,
+                                                     :subdomain_url,:domain_url)
   end
 
   protected
+  def subdomain_url(subdomain, params = {})
+    host = request.host.split("\.").last(2).join(".")
+    request.protocol + "#{subdomain}." + host + request.port_string +
+                                          url_for({:only_path =>true}.merge(params))
+  end
+
+  def domain_url(params = {})
+    host = request.host.split("\.").last(2).join(".")
+    request.protocol + "://#{host}" + request.port_string+
+                                          url_for({:only_path =>true}.merge(params))
+  end
+
   def tag_url(tag, use_ssl = request.ssl?)
     (use_ssl ? "https://" : "http://") + tag_host(tag)
   end
