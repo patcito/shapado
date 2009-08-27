@@ -49,7 +49,7 @@ class AnswersController < ApplicationController
   protected
   def check_permissions
     @answer = Answer.find(params[:id])
-    if @question.nil? || !current_user.can_modify?(@question)
+    if @answer.nil? || !current_user.can_modify?(@answer)
       flash[:error] = "Permission denied"
       redirect_to questions_path
     end
