@@ -27,10 +27,12 @@ class ApplicationController < ActionController::Base
   def scoped_conditions(conditions = {})
 
     if current_tags && !current_tags.empty?
-      conditions.deep_merge!({:tags => current_tags})
+      tags = []
+      if params[:tags]
+        tags = params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
+      end
+      conditions.deep_merge!({:_metatags => tags.concat(request.subdomains)})
     end
-
-
     conditions.deep_merge(language_conditions)
   end
   helper_method :scoped_conditions

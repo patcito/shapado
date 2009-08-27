@@ -25,6 +25,7 @@
         #logo
           %a{:href => root_path}
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
+          = scoped_conditions.inspect
           %ul#menu_logo
             %li
               = link_to "FAQ", questions_path(:tags => "faq")
