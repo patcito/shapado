@@ -67,6 +67,10 @@ class Question
     self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => 1}})
   end
 
+  def answer_removed!
+    self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => -1}})
+  end
+
   protected
   def update_metatags
     self._metatags = []

@@ -39,6 +39,7 @@ class AnswersController < ApplicationController
   def destroy
     @question = @answer.question
     @answer.destroy
+    @question.answer_removed!
 
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
