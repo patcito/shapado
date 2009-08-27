@@ -25,21 +25,32 @@ class ApplicationController < ActionController::Base
   alias :current_tags :find_current_tags
 
   def scoped_conditions(conditions = {})
-
-    if current_tags && !current_tags.empty?
-      tags = []
-      if params[:tags]
-        tags = params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
+    metatags = Set.new
+    metatags += request.subdomains
+    @languages = []
+    metatags.each do |tag|
+      if AVAILABLE_LANGUAGES.include?(tag)
+        @languages << tag
+        metatags.delete(tag)
       end
-      conditions.deep_merge!({:_metatags => tags.concat(request.subdomains)})
     end
-    conditions.deep_merge(language_conditions)
+
+    if params[:tags]
+      metatags += (params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]])
+    end
+
+    unless metatags.empty?
+      conditions.deep_merge!({:_metatags => metatags.to_a})
+    end
+    conditions.deep_merge!(language_conditions)
   end
   helper_method :scoped_conditions
 
   def language_conditions
     conditions = {}
-    if current_user && !current_user.preferred_languages.empty?
+    if @languages && !@languages.empty?
+      conditions[:language] = {:$in => @languages}
+    elsif current_user && !current_user.preferred_languages.empty?
       conditions[:language] = {:$in => current_user.preferred_languages }
     else
       conditions[:language] = I18n.locale.to_s.split("-").first
