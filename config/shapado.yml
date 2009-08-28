@@ -1,9 +1,14 @@
+base: &common
+  site: http://www.shapado.com
+  googlean: UA-10385211-1
+
 development:
+  <<: *common
   domain: localhost.lan
 production:
+  <<: *common
   domain: shapado.com
 test:
+  <<: *common
   domain: test.loc
 
-site: http://www.shapado.com
-googlean: UA-10385211-1
