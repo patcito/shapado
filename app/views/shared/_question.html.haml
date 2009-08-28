@@ -7,7 +7,7 @@
       = t(:answers, :scope => "activerecord.attributes.question")
     .item.count_votes
       %span.counter
-        &= 0
+        &= question.votes_count
       %br
       = t(:votes, :scope => "activerecord.attributes.question")
     .item.count_views
