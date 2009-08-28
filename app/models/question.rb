@@ -74,6 +74,10 @@ class Question
     self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => -1}})
   end
 
+  def add_vote!(v)
+    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}, :$inc => {:votes_average => v}})
+  end
+
   protected
   def update_metatags
     self._metatags = []

@@ -12,8 +12,11 @@ class VotesController < ApplicationController
     vote.voteable_id = params[:voteable_id]
     vote.user = current_user
 
-    vote.save
-    vote.voteable.save
+    if vote.save
+      vote.voteable.add_vote!(vote.value)
+    else
+      flash[:error] = vote.errors.full_messages.join(", ")
+    end
 
     redirect_to params[:source]
   end
