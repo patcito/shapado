@@ -85,9 +85,10 @@ en:
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags
-        preferred_languages: Choose the language which you know
+        preferred_languages: Select the languages you know
   languages:
     en:      English
     es:      Spanish
     es-AR:   Latin American Spanish
+    fr:      French
     pt:      Portuguese
