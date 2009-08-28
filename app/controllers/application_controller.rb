@@ -77,6 +77,8 @@ class ApplicationController < ActionController::Base
     case lang
       when /^es/
         'es-AR'
+      when "fr"
+        'fr'
       else
         'en'
     end
