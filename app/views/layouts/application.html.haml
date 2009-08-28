@@ -23,7 +23,7 @@
     .two-column
       #header
         #logo
-          %a{:href => root_path}
+          %a{:href => AppConfig.site}
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
           %ul#menu_logo
             %li
@@ -116,8 +116,13 @@
               = yield :sidebar
       #footer
         %hr
-        %p
-          \&copy; 2009 Ricodigo. Some rights reserved.
+        %div
+          %p
+            Shapado.com is a multi-topic and multi-language question-and-answer website service brought to you by #{link_to "Ricodigo.com", "http://ricodigo.com"}. It runs the Shapado question-and-answer software, version 0.1, available under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}.
+        #cc
+          %p
+            = image_tag('/images/ccby.png')+"All Identi.ca content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}."
+
       .clear
   - if ENV["RAILS_ENV"] == "production"
     :erb

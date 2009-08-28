@@ -4,3 +4,5 @@ production:
   domain: shapado.com
 test:
   domain: test.loc
+
+site: http://www.shapado.com
