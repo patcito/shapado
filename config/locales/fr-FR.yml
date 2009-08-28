@@ -1,0 +1,103 @@
+en:
+  scaffold:
+    sure: Êtes-vous sûr de vouloir effacer ce {{model}} ?
+    show: Monter
+    edit: Éditer
+    destroy: Effacer
+    back: Retour
+    update: Actualiser
+    cancel: Annuler
+    create: Créer
+  views:
+    layout:
+      questions: questions
+      ask_question: poser une question
+      tags: tags
+      users: utilisateurs
+      unanswered: non répondues
+      logout: se déconnecter
+      logged: Connecté {{login}}
+      search: Chercher
+      forgot: oublié?
+      log_in: Se connecter
+      signup: Créer un compte
+      settings: Configuration
+      recent_questions: Questions récentes
+    questions:
+      index:
+        title: Toutes les questions
+      show:
+        answers: Réponses
+        pick_answer: Choisir une solution
+        unset_answer: Annuler solution?
+        another_answers: Autres réponses
+        solution: Solution
+      edit:
+        title: Éditer la question
+      new:
+        title: Poser une question
+    answers:
+      form:
+        answer_label: Répondre à la question
+        submit: Répondre
+      edit:
+        title: Éditer la réponse
+    users:
+      index:
+        title: Tous les utilisateurs
+      new:
+        title: Se connecter en tant que nouvel utilisateur
+        submit: Ouvrir un compte
+      edit:
+        title: Configuration
+        submit: Sauver
+  activerecord:
+    models:
+      questions: Questions
+      answers: Réponses
+      users: Utilisateurs
+      votes: Votes
+    attributes:
+      question:
+        title: Titre
+        body: Corps
+        tags: Tags
+        asked_by: Posée par
+        answers: Réponses
+        views: Vues
+        votes: Votes
+        language: Langage
+        category: Catégorie
+      user:
+        login: Login
+        email: Email
+        current_password: Mot de passe actuel
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        created_at: Crée le
+        updated_at: Crée le
+        activation_code: Code d'activation
+        activated_at: Activé le
+        fullname: Nom entier
+        language: Langue
+        asked_by: posée par
+        timezone: Fuseau horaire
+        preferred_tags: Tags préférés
+        preferred_languages: Choisir les langues que vous connaissez
+  categories:
+    technology:   Technologie
+    programming:  Programmation
+    science:      Science
+    politics:     Politique
+    society:      Société
+    religion:     Religion
+    sports:       Sports
+    music:        Musique
+    gaming:       Jeux vidéos
+    lifestyle:    Style de vie
+  languages:
+    en:      Anglais
+    es:      Espagnol
+    es-AR:   Espagnol d'Amérique Latine
+    fr:      Français
+    pt:      Portugais
