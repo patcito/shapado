@@ -156,6 +156,8 @@ fr:
       signup: Créer un compte
       settings: Configuration
       recent_questions: Questions récentes
+      categories: Catégories
+      languages: Langues
     questions:
       index:
         title: Toutes les questions
@@ -199,7 +201,7 @@ fr:
         answers: Réponses
         views: Vues
         votes: Votes
-        language: Langage
+        language: Langue
         category: Catégorie
       user:
         login: Login
