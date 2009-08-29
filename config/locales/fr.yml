@@ -163,7 +163,7 @@ fr:
         title: Toutes les questions
       show:
         answers: Réponses
-        pick_answer: Choisir une solution
+        pick_answer: Choisir comme solution
         unset_answer: Annuler solution?
         another_answers: Autres réponses
         solution: Solution
