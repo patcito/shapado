@@ -2,7 +2,7 @@ module VotesHelper
   def vote_box(voteable, source)
     if logged_in? && !current_user.has_voted?(voteable)
       %@
-      <form action='#{votes_path}' method='post'>
+      <form action='#{votes_path}' method='post' class='vote_form' >
         #{token_tag}
         <span class='votes'>
           #{hidden_field_tag "voteable_type", voteable.class.name}
@@ -11,7 +11,7 @@ module VotesHelper
           <button type="submit" name="vote_up" value="1" style="display:block; background-color: transparent">
             #{image_tag("vote_up.png", :width => 30, :height => 22)}
           </button>
-          <span style="display:block">
+          <span style="display:block" class="votes_average">
             #{calculate_votes_average(voteable)}
           </span>
           <button type="submit" name="vote_down" value="-1" style="display:block; background-color: transparent">
