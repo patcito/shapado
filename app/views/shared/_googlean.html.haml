@@ -1,0 +1,3 @@
+- if RAILS_ENV == "production" && !AppConfig.googlean.empty?
+  %a{:href => AppConfig.googlean, :style => "display: none"}
+  =javascript_include_tag 'modules/googlean'

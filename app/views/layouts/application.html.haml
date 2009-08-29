@@ -13,12 +13,14 @@
     = javascript_include_tag 'modules/sessions.js'
     = javascript_include_tag 'modules/show_question.js'
     = javascript_include_tag 'openid/js/jquery.openid.min.js'
+    = yield :js
 
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/components/droppy.css', :media => 'screen, projection'
     = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
+    = yield :css
 
   %body
     .two-column
@@ -124,16 +126,7 @@
           %p
             = image_tag('/images/ccby.png')+"All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}."
 
+      = render :partial => "shared/googlean"
       .clear
-  - if ENV["RAILS_ENV"] == "production"
-    :erb
 
-      <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-      try {
-      var pageTracker = _gat._getTracker(AppConfig.googlean);
-      pageTracker._trackPageview();
-      } catch(err) {}</script>
+
