@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     @current_tags ||= begin
       metatags = Set.new
       metatags += request.subdomains
+      metatags.delete("www")
 
       @languages ||=  begin
                         languages = []

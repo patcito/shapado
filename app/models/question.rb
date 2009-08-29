@@ -32,6 +32,9 @@ class Question
   validates_presence_of :user_id
   validates_uniqueness_of :slug
 
+  validates_length_of       :title,    :within => 6..100
+  validates_length_of       :body,     :minimum => 6
+  validates_true_for :tags, :logic => lambda { !tags.empty? }
   searchable_keys :title, :body
 
   before_save :update_metatags
@@ -54,6 +57,9 @@ class Question
     if t.kind_of?(String)
       t = t.downcase.split(",").join(" ").split(" ")
     end
+    t = t.collect do |tag|
+      tag.gsub("#", "sharp").gsub(".", "dot").gsub("www", "w3")
+    end
     self[:tags] = t
   end
 
@@ -75,7 +81,8 @@ class Question
   end
 
   def add_vote!(v)
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}, :$inc => {:votes_average => v}})
+    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}})
+    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_average => v}})
   end
 
   protected
