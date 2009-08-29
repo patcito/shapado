@@ -32,6 +32,9 @@ class Question
   validates_presence_of :user_id
   validates_uniqueness_of :slug
 
+  validates_length_of       :title,    :within => 6..100
+  validates_length_of       :body,     :minimum => 6
+  validates_true_for :tags, :logic => lambda { !tags.empty? }
   searchable_keys :title, :body
 
   before_save :update_metatags
