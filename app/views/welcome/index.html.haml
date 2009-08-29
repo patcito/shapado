@@ -1,8 +1,12 @@
 
-#header
-  %h1
-    = t("views.layout.recent_questions", :default => "Recent Questions")
-%br.clear
+.main-title
+  = t("views.layout.recent_questions", :default => "Recent Questions")
+  %span.right.tabs
+    %ul
+      %li.tab
+        = link_to "active", root_path(:tab=>"active")
+      %li.tab
+        = link_to "hot", root_path(:tab=>"hot")
 
 #questions
   -@questions.each do |question|

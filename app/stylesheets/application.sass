@@ -3,6 +3,7 @@
 @import markdown
 @import compass/utilities/tables/scaffolding
 @import compass/utilities/general/tag_cloud.sass
+@import compass/utilities/lists/horizontal_list.sass
 
 body
   background: #4A7499
@@ -12,6 +13,28 @@ body
 .two-column
   background: #eee
   padding: 5px
+
+.main-title
+  color: #000
+  font-size: 20px
+  font-weight: bold
+  border-bottom: 1px solid #999
+  margin-top: 10px
+  .tabs
+    ul
+      +horizontal-list(6px)
+      li.tab
+        a
+          color: #121314
+          text-decoration: none
+          border-width: 1px
+          border-style: solid solid none
+          border-color: #999
+          padding: 2px 10px
+          font-size: 85%
+        a:hover, a:focus, a:active
+          color: #828282
+          outline: none
 
 a:link, a:visited
   font-weight: bold
@@ -129,19 +152,16 @@ h1
   color: #000
   font-size: 32px
   font-weight: bold
-  margin-top: 10px
 
 h2
   color: #666
   font-size: 28px
   font-weight: normal
-  margin-bottom: 10px
 
 
 h3
   color: #59892f
   font-size: 18px
-  margin-bottom: 10px
 
   &.section
     border-top: 1px solid #eee
@@ -519,6 +539,8 @@ table.list
 
 
 //TODO: move it
+#questions
+  min-height: 10em
 
 .questions_count
   font-weight: bolder

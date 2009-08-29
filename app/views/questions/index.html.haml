@@ -1,6 +1,13 @@
 
-%h1
+
+.main-title
   = t("views.questions.index.title")
+  %span.right.tabs
+    %ul
+      %li.tab
+        = link_to "active", root_path(:sort=>"active")
+      %li.tab
+        = link_to "votes", root_path(:sort=>"votes")
 
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"

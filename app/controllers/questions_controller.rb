@@ -11,7 +11,8 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => "created_at desc", :conditions => scoped_conditions)
+    order = "created_at desc"
+    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => order, :conditions => scoped_conditions)
 
     respond_to do |format|
       format.html # index.html.erb
