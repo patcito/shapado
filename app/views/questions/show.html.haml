@@ -2,6 +2,7 @@
 
 = error_messages_for :answer
 
+
 #question
   =vote_box(@question, question_path(@question))
   #question-title
@@ -33,6 +34,7 @@
       = h(I18n.t('views.questions.show.answers'))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
+  =will_paginate(@answers)
 
 %hr
 -unless @question.answered
