@@ -24,6 +24,10 @@
 
   %body
     .two-column
+      -if !AppConfig.system_notice.blank?
+        #system-msg
+          .internal
+            = AppConfig.system_notice
       #header
         #logo
           %a{:href => AppConfig.site}
