@@ -107,6 +107,16 @@ class User
     !identity_url.blank?
   end
 
+  def has_voted?(voteable)
+    vote = Vote.find(:first, {:limit => 1,
+                              :conditions => {
+                                :voteable_type => voteable.class.to_s,
+                                :voteable_id => voteable.id,
+                                :user_id     => self.id}
+                             })
+    !vote.nil?
+  end
+
   protected
   def add_email_validation
     if !self.email.blank?
