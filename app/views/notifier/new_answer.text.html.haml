@@ -1,8 +1,0 @@
-
-%p
-  == Hi, #{@user.login}
-  %br
-  = @answer.user.login
-  == answered #{h(@answer.body)}
-  to the question
-  = link_to @question.title, url_for(:host => AppConfig.domain, :controller => "questions", :action => "show", :id => @question.slug)
