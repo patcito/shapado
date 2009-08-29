@@ -81,7 +81,8 @@ class Question
   end
 
   def add_vote!(v)
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}, :$inc => {:votes_average => v}})
+    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}})
+    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_average => v}})
   end
 
   protected
