@@ -73,6 +73,7 @@ en:
       user:
         login: Login
         email: Email
+        name: Real name
         current_password: Current Password
         password: Password
         password_confirmation: Password Confirmation

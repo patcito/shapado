@@ -33,6 +33,13 @@
 
 .field-group
   .label-container
+    = f.label :name, t(:name, :scope => "activerecord.attributes.user")
+  .field
+    = f.text_field :name, :class => "text-field"
+
+
+.field-group
+  .label-container
     = f.label :languaje, t(:language, :scope => "activerecord.attributes.user")
   .field
     = f.select :language, locales_options

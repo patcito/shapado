@@ -183,6 +183,7 @@
         password_confirmation: Confirmación de contraseña
         email: Correo electrónico
         login: Nombre de usuario
+        name: Nombre real
         created_at: creado en
         updated_at: actualizado en
         activation_code: código de activación
