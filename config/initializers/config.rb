@@ -5,6 +5,10 @@ if !File.exist?(config_file)
   config_file = RAILS_ROOT+"/config/shapado.yml"
 end
 
+if !File.exist?(config_file)
+  raise StandardError,  "Config file was not found"
+end
+
 options = YAML.load_file(config_file)
 if !options[RAILS_ENV]
   raise "'#{RAILS_ENV}' was not found in #{config_file}"
