@@ -13,3 +13,10 @@ end
 AppConfig = OpenStruct.new(options[RAILS_ENV])
 ActionController::Base.session_options[:domain] = ".#{AppConfig.domain}"
 
+REST_AUTH_SITE_KEY         = AppConfig.rest_auth_key
+REST_AUTH_DIGEST_STRETCHES = AppConfig.rest_aut_digest_stretches
+
+ActionController::Base.session = {
+  :key         => AppConfig.session_key,
+  :secret      => AppConfig.session_secret
+}
