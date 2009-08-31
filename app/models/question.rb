@@ -13,6 +13,7 @@ class Question
   key :views_count, Integer, :default => 0
   key :votes_count, Integer, :default => 0
   key :votes_average, Integer, :default => 0
+  key :hotness, Integer, :default => 0
 
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
@@ -79,7 +80,7 @@ class Question
   def answer_added!
     self.collection.update({:_id => self.id}, {:$inc => {:answers_count => 1}},
                                               :upsert => true)
-    update_activity_at
+    on_activity
   end
 
   def answer_removed!
@@ -92,7 +93,13 @@ class Question
                                                          :upsert => true)
     self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
                                                          :upsert => true)
+    on_activity
+  end
+
+  def on_activity
     update_activity_at
+    self.collection.update({:_id => self.id}, {:$inc => {:hotness => 1}},
+                                                         :upsert => true)
   end
 
   def update_activity_at

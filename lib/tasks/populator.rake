@@ -8,9 +8,9 @@ namespace :populator do
 
     10.times do
       q = Question.new(:title =>  Faker::Lorem.words(rand(6)+6).join(" "),
-                       :body => Faker::Lorem.paragraphs(rand(10)+1),
+                       :body => Faker::Lorem.paragraphs(rand(10)+6),
                        :language => (rand(100) % 2 == 0) ? 'en' : 'es',
-                       :tags => Faker::Lorem.words(rand(6)),
+                       :tags => Faker::Lorem.words(rand(6)+1),
                        :category => Shapado::CATEGORIES.rand)
       q.user = users.rand
 
@@ -18,6 +18,7 @@ namespace :populator do
         q.answers << Answer.new(:user => users.rand,
                                 :body => Faker::Lorem.paragraphs(rand(10)+1),
                                 :language => (rand(100) % 2 == 0) ? 'en' : 'es')
+        q.answer_added!
       end
 
       q.save!

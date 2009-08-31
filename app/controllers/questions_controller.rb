@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
       when "votes"
         order = "votes_count desc"
       when "hot"
-        order = "answers_count desc"
+        order = "hotness desc"
     end
 
     @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => order, :conditions => scoped_conditions)

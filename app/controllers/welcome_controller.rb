@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
       when "active"
         order = "activity_at desc"
       when "hot"
-        order = "answers_count desc"
+        order = "hotness desc"
     end
 
     @questions = Question.paginate(:per_page => 25,
