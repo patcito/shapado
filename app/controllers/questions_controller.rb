@@ -12,6 +12,16 @@ class QuestionsController < ApplicationController
   # GET /questions.xml
   def index
     order = "created_at desc"
+    @active_subtab = params.fetch(:sort, "newest")
+    case @active_subtab
+      when "active"
+        order = "activity_at desc"
+      when "votes"
+        order = "votes_count desc"
+      when "hot"
+        order = "answers_count desc"
+    end
+
     @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => order, :conditions => scoped_conditions)
 
     respond_to do |format|

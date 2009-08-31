@@ -1,11 +1,13 @@
 class WelcomeController < ApplicationController
   def index
-    order = "updated_at desc"
-    if params[:tab] == "votes"
-      order = "votes_average desc"
-    end
-    if params[:tab] == "hot"
-      order = "answers_count desc"
+    @active_subtab = params.fetch(:tab, "active")
+
+    order = "activity_at desc"
+    case @active_subtab
+      when "active"
+        order = "activity_at desc"
+      when "hot"
+        order = "answers_count desc"
     end
 
     @questions = Question.paginate(:per_page => 25,

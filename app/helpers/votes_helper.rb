@@ -4,7 +4,7 @@ module VotesHelper
       %@
       <form action='#{votes_path}' method='post' class='vote_form' >
         #{token_tag}
-        <span class='votes'>
+        <span class='vote_box'>
           #{hidden_field_tag "voteable_type", voteable.class.name}
           #{hidden_field_tag "voteable_id", voteable.id}
           #{hidden_field_tag "source", source}
@@ -22,7 +22,7 @@ module VotesHelper
       @
     else
       %@
-        <span class='votes'>
+        <span class='vote_box'>
           <span style="display:block">
             #{calculate_votes_average(voteable)}
           </span>

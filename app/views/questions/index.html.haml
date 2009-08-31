@@ -1,13 +1,17 @@
 
 
-.main-title
+#questions_index.subtitle{:class => @active_subtab}
   = t("views.questions.index.title")
   %span.right.tabs
     %ul
-      %li.tab
-        = link_to "active", root_path(:sort=>"active")
-      %li.tab
-        = link_to "votes", root_path(:sort=>"votes")
+      %li.tab.newest
+        = link_to "newest", questions_path(:sort=>"newest")
+      %li.tab.hot
+        = link_to "hot", questions_path(:sort=>"hot")
+      %li.tab.votes
+        = link_to "votes", questions_path(:sort=>"votes")
+      %li.tab.active
+        = link_to "active", questions_path(:sort=>"active")
 
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"

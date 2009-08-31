@@ -14,28 +14,6 @@ body
   background: #eee
   padding: 5px
 
-.main-title
-  color: #000
-  font-size: 20px
-  font-weight: bold
-  border-bottom: 1px solid #999
-  margin-top: 10px
-  .tabs
-    ul
-      +horizontal-list(6px)
-      li.tab
-        a
-          color: #121314
-          text-decoration: none
-          border-width: 1px
-          border-style: solid solid none
-          border-color: #999
-          padding: 2px 10px
-          font-size: 85%
-        a:hover, a:focus, a:active
-          color: #828282
-          outline: none
-
 a:link, a:visited
   font-weight: bold
   color: #669933
@@ -414,6 +392,7 @@ blockquote
   background-color: #ddd
   color: #000
 
+
 #navigation.questions #menu_primary ul li.selected a,
 #navigation.questions #menu_primary ul li.questions a,
 #navigation.ask_question #menu_primary ul li.ask_question a,
@@ -422,6 +401,39 @@ blockquote
 #navigation.users #menu_primary ul li.users a
   +active_tab
 
+.subtitle
+  color: #000
+  font-size: 20px
+  font-weight: bold
+  border-bottom: 1px solid #999
+  margin-top: 10px
+  .tabs
+    ul
+      +horizontal-list(6px)
+      li.tab
+        a
+          color: #828282
+          text-decoration: none
+          border-width: 1px
+          border-style: solid solid none
+          border-color: #999
+          padding: 2px 10px
+          font-size: 85%
+        a:hover, a:focus, a:active
+          color: #121314
+          outline: none
+
+=active_subtab
+  color: #121314
+  background-color: #ffd
+
+.subtitle#welcome.active .tabs li.active a,
+.subtitle#welcome.hot .tabs li.hot a,
+.subtitle#questions_index.active .tabs li.active a,
+.subtitle#questions_index.newest .tabs li.newest a,
+.subtitle#questions_index.hot .tabs li.hot a,
+.subtitle#questions_index.votes .tabs li.votes a
+  +active_subtab
 
 #system-msg
   background: #FFFCDE
@@ -511,7 +523,7 @@ table.list
   +table-scaffolding
   :width 100%
 
-.votes
+.vote_box
   border: 1px solid #d4d4d4
   border-radius: 2px
   -webkit-border-radius: 2px
