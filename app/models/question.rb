@@ -21,6 +21,8 @@ class Question
   key :_metatags, Array, :default => []
   key :category, String
 
+  key :activity_at, Time
+
   key :user_id, String
   belongs_to :user
 
@@ -38,6 +40,7 @@ class Question
   searchable_keys :title, :body
 
   before_save :update_metatags
+  before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
   before_validation_on_update :update_answer_count
 
@@ -69,20 +72,37 @@ class Question
   end
 
   def viewed!
-    self.collection.repsert({:_id => self.id}, {:$inc => {:views_count => 1}})
+    self.collection.update({:_id => self.id}, {:$inc => {:views_count => 1}},
+                                              :upsert => true)
   end
 
   def answer_added!
-    self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => 1}})
+    self.collection.update({:_id => self.id}, {:$inc => {:answers_count => 1}},
+                                              :upsert => true)
+    update_activity_at
   end
 
   def answer_removed!
-    self.collection.repsert({:_id => self.id}, {:$inc => {:answers_count => -1}})
+    self.collection.update({:_id => self.id}, {:$inc => {:answers_count => -1}},
+                                               :upsert => true)
   end
 
   def add_vote!(v)
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}})
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_average => v}})
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
+                                                         :upsert => true)
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
+                                                         :upsert => true)
+    update_activity_at
+  end
+
+  def update_activity_at
+    now = Time.now
+    if new?
+      self.activity_at = now
+    else
+      self.collection.update({:_id => self.id}, {:$set => {:activity_at => now}},
+                                                 :upsert => true)
+    end
   end
 
   protected
