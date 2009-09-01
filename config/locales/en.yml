@@ -61,6 +61,10 @@ en:
       edit:
         title: Settings
         submit: Save
+      form:
+        information: Information
+        notifications: Notifications
+        new_answer_notification: Get mail notifications for new answers
   activerecord:
     models:
       questions: Questions

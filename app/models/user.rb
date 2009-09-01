@@ -22,8 +22,11 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
+
+  key :notification_opts,      Hash, :default => {}
   key :language,                      String, :default => "en"
   key :timezone,                      String
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy

@@ -1,7 +1,9 @@
 class Notifier < ActionMailer::Base
-  layout 'notification'
+
+
   def new_answer(user, answer)
-    
+    self.class.layout "notification_#{user.language.downcase}"
+
     if user == answer.question.user
       @subject = "#{answer.user.login} answered your question #{answer.question.title}"
     else
@@ -17,4 +19,5 @@ class Notifier < ActionMailer::Base
     content_type  "text/html"
   end
 
+  protected
 end

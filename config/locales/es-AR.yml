@@ -260,6 +260,10 @@
       edit:
         title: Configuración
         submit: Guardar
+      form:
+        information: Información
+        notifications: Notificaciones
+        new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
   categories:
     technology:   Tecnología
     programming:  Programación

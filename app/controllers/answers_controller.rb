@@ -10,7 +10,9 @@ class AnswersController < ApplicationController
 
     if @answer.save
       @question.answer_added!
-      Notifier.deliver_new_answer(@question.user, @answer)
+      if @question.user.notification_opts["new_answer"] == "1"
+        Notifier.deliver_new_answer(@question.user, @answer)
+      end
 
       flash[:notice] = "Thanks!"
       redirect_to question_path(@question)
