@@ -26,3 +26,12 @@
         %td.question
           = link_to h(answer.question.title), question_path(answer.question)
   =will_paginate @answers, :param_name => "answers_page"
+
+-content_for :sidebar do
+  %b
+    = t(:created_at, :scope => "activerecord.attributes.user")
+  = time_ago_in_words(@user.created_at)
+  %br
+  %b
+    = t(:last_logged_at, :scope => "activerecord.attributes.user")
+  = time_ago_in_words(@user.last_logged_at)
