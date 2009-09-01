@@ -1,4 +1,37 @@
 en:
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute ago"
+      less_than_x_seconds:
+        one:   "less than 1 second ago"
+        other: "less than {{count}} seconds ago"
+      x_seconds:
+        one:   "1 second ago"
+        other: "{{count}} seconds ago"
+      less_than_x_minutes:
+        one:   "less than a minute ago"
+        other: "less than {{count}} minutes ago"
+      x_minutes:
+        one:   "1 minute ago"
+        other: "{{count}} minutes ago"
+      about_x_hours:
+        one:   "about 1 hour ago"
+        other: "about {{count}} hours ago"
+      x_days:
+        one:   "1 day ago"
+        other: "{{count}} days ago"
+      about_x_months:
+        one:   "about 1 month ago"
+        other: "about {{count}} months ago"
+      x_months:
+        one:   "1 month ago"
+        other: "{{count}} months ago"
+      about_x_years:
+        one:   "about 1 year ago"
+        other: "about {{count}} years ago"
+      over_x_years:
+        one:   "over 1 year ago"
+        other: "over {{count}} years ago"
   scaffold:
     sure: Are you sure you want to delete this {{model}} ?
     show: Show

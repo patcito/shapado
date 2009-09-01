@@ -49,7 +49,6 @@
   = link_to h(@question.user.login), user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)
-  = link_to h(@question.user.login), user_path(@question.user)
   %br
   %b
     = I18n.t('activerecord.attributes.question.category')
