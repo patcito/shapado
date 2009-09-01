@@ -25,6 +25,9 @@ class User
   key :preferred_languages,       Array
   key :language,                      String, :default => "en"
   key :timezone,                      String
+
+  key :reputation,                     Integer, :default => 1
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
@@ -125,6 +128,16 @@ class User
       self.last_logged_at = now
     else
       self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => now}},
+                                                 :upsert => true)
+    end
+  end
+
+  def update_reputation(key)
+    value = REPUTATION_CONF["reputation_values"][key.to_s]
+    p "#{self.login} recieve #{value} karma by #{key}"
+    value = key if value.nil? && key.kind_of?(Integer)
+    if value
+      self.collection.update({:_id => self.id}, {:$inc => {:reputation => value}},
                                                  :upsert => true)
     end
   end

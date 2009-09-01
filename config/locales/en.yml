@@ -97,6 +97,7 @@ en:
         preferred_languages: Select the languages you know
         last_logged_at: seen
         created_at: member for
+        reputation: Reputation
   languages:
     en:      English
     es:      Spanish

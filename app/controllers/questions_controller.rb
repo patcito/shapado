@@ -78,6 +78,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.update_reputation(:ask_question)
         flash[:notice] = 'Question was successfully created.'
         format.html { redirect_to(@question) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
@@ -121,6 +122,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.update_reputation(:close_question)
         flash[:notice] = 'Question was solved.'
         format.html { redirect_to question_path(@question) }
       else
@@ -136,6 +138,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         flash[:notice] = 'Question now is not solved.'
+        current_user.update_reputation(:reopen_question)
         format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }

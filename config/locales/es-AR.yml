@@ -195,6 +195,7 @@
         preferred_languages: Escoja los idiomas que conozca
         last_logged_at: visto
         created_at: miembro hace
+        reputation: Reputación
   support:
     array:
       words_connector: ", "

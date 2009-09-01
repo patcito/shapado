@@ -1,0 +1,17 @@
+
+reputation_values:
+  ask_question:                     4
+  answer_question:                  2
+  close_question:                   1
+  reopen_question:                 -2
+  vote_up_question:                 1
+  vote_down_question:              -1
+  question_receives_up_vote:        2
+  question_receives_down_vote:     -2
+  vote_up_answer:                   1
+  vote_down_answer:                -1
+  answer_receives_up_vote:          1
+  answer_receives_down_vote:       -2
+  day_with_activity:                0
+  day_without_activity:             0
+

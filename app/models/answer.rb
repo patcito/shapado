@@ -27,9 +27,18 @@ class Answer
 
   searchable_keys :body
 
-  def add_vote!(v)
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}})
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_average => v}})
+  def add_vote!(v, voter)
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
+                                                         :upsert => true)
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
+                                                         :upsert => true)
+    if v > 0
+      self.user.update_reputation(:answer_receives_up_vote)
+      voter.update_reputation(:vote_up_answer)
+    else
+      self.user.update_reputation(:answer_receives_down_vote)
+      voter.update_reputation(:vote_down_answer)
+    end
   end
 
   def to_html
