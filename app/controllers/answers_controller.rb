@@ -4,12 +4,16 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(params[:answer])
-    @question = Question.find(params[:question_id])
-    @answer.question = @question
     @answer.user = current_user
 
-    if @answer.save
-      @question.answer_added!
+    @question = Question.find(params[:question_id])
+
+    if @answer.parent_id.blank?
+      @answer.question = @question
+    end
+
+    if @question && @answer.save
+      @question.answer_added! if !@answer.parent_id.blank?
 
       flash[:notice] = "Thanks!"
       redirect_to question_path(@question)

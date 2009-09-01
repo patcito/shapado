@@ -43,7 +43,7 @@ class Question
   before_save :update_metatags
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
-  before_validation_on_update :update_answer_count
+#   before_validation_on_update :update_answer_count
 
   validates_inclusion_of :category, :within => Shapado::CATEGORIES
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
