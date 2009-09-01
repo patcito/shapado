@@ -264,6 +264,11 @@
         information: Información
         notifications: Notificaciones
         new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} respondio su pregunta {{title}}"
+          subject_other: "{{login}} respondio la pregunta {{title}}"
   categories:
     technology:   Tecnología
     programming:  Programación

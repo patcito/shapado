@@ -65,6 +65,11 @@ en:
         information: Information
         notifications: Notifications
         new_answer_notification: Get mail notifications for new answers
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} answered your question {{title}}"
+          subject_other: "{{login}} answered the question {{title}}"
   activerecord:
     models:
       questions: Questions

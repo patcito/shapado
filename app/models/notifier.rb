@@ -4,10 +4,16 @@ class Notifier < ActionMailer::Base
   def new_answer(user, answer)
     self.class.layout "notification_#{user.language.downcase}"
 
+    I18n.locale = user.language
+    scope = "views.mailers.notifications.new_answer"
     if user == answer.question.user
-      @subject = "#{answer.user.login} answered your question #{answer.question.title}"
+      @subject = I18n.t("subject_owner", :scope => scope,
+                                         :title => answer.question.title,
+                                         :login => answer.user.login)
     else
-      @subject = "#{answer.user.login} answered the question #{answer.question.title}"
+      @subject = I18n.t("subject_other", :scope => scope,
+                                         :title => answer.question.title,
+                                         :login => answer.user.login)
     end
 
     recipients user.email
