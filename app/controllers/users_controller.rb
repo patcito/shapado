@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_login_or_id(params[:id])
     @questions = @user.questions.paginate(:page=>params[:questions_page], :per_page => 10)
-    @answers = @user.answers.paginate(:page=>params[:answers_page], :per_page => 10)
+    @answers = @user.answers.paginate(:page=>params[:answers_page], :conditions => {:parent_id => nil}, :per_page => 10)
   end
 
   def edit

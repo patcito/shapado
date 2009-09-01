@@ -12,9 +12,6 @@
     .clear
     %hr
     / Nested Answers
-    -if answer.children.count > 0
-      %h2
-        Discussion
     .children{:style => "padding: 10px 20px; background-color: #DFDFDF"}
       -answer.children.each do |child|
         .child{:style => "padding-top: 10px"}
@@ -25,7 +22,7 @@
           = h(child.body)
           %hr
       .right
-        = link_to "Add Answer...", "#", :class => "addNestedAnswer"
+        = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear
       -form_for @answer, :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
