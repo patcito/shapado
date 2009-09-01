@@ -25,9 +25,17 @@ en:
       recent_questions: Recent questions
       categories: Categories
       languages: Languages
+    welcome:
+      index:
+        hot:     hot
+        active:  active
     questions:
       index:
         title: All questions
+        hot:     hot
+        active:  active
+        votes:   votes
+        newest:  newest
       show:
         answers: Answers
         pick_answer: Pick as solution

@@ -4,9 +4,9 @@
   %span.right.tabs
     %ul
       %li.tab.active
-        = link_to "active", root_path(:tab=>"active")
+        = link_to t("active", :scope => "views.welcome.index"), root_path(:tab=>"active")
       %li.tab.hot
-        = link_to "hot", root_path(:tab=>"hot")
+        = link_to t("hot", :scope => "views.welcome.index"), root_path(:tab=>"hot")
 
 #questions
   -@questions.each do |question|

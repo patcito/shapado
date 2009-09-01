@@ -224,9 +224,17 @@
       recent_questions: Preguntas recientes
       categories: Categorias
       languages: Idiomas
+    welcome:
+      index:
+        hot:     calientes
+        active:  activas
     questions:
       index:
         title: Todas las preguntas
+        hot:     calientes
+        active:  activas
+        votes:   votos
+        newest:  recientes
       show:
         answers: Respuestas
         pick_answer: Escoger como solución

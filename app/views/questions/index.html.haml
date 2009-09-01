@@ -5,13 +5,13 @@
   %span.right.tabs
     %ul
       %li.tab.newest
-        = link_to "newest", questions_path(:sort=>"newest")
+        = link_to t("newest", :scope => "views.questions.index"), questions_path(:sort=>"newest")
       %li.tab.hot
-        = link_to "hot", questions_path(:sort=>"hot")
+        = link_to t("hot", :scope => "views.questions.index"), questions_path(:sort=>"hot")
       %li.tab.votes
-        = link_to "votes", questions_path(:sort=>"votes")
+        = link_to t("votes", :scope => "views.questions.index"), questions_path(:sort=>"votes")
       %li.tab.active
-        = link_to "active", questions_path(:sort=>"active")
+        = link_to t("active", :scope => "views.questions.index"), questions_path(:sort=>"active")
 
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
