@@ -78,7 +78,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        flash[:notice] = 'Question was successfully created.'
+        flash[:notice] = t(:flash_notice, :scope => "views.questions.create")
         format.html { redirect_to(@question) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
@@ -93,7 +93,7 @@ class QuestionsController < ApplicationController
   def update
     respond_to do |format|
       if @question.update_attributes(params[:question])
-        flash[:notice] = 'Question was successfully updated.'
+        flash[:notice] = t(:flash_notice, :scope => "views.questions.update")
         format.html { redirect_to(@question) }
         format.xml  { head :ok }
       else
@@ -121,7 +121,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        flash[:notice] = 'Question was solved.'
+        flash[:notice] = t(:flash_notice, :scope => "views.questions.solve")
         format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }
@@ -135,7 +135,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        flash[:notice] = 'Question now is not solved.'
+        flash[:notice] = t(:flash_notice, :scope => "views.questions.unsolve")
         format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }
@@ -150,7 +150,7 @@ class QuestionsController < ApplicationController
     if @question.nil?
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
-      flash[:error] = "Permission denied"
+      flash[:error] = t("views.layout.permission_denied")
       redirect_to question_path(@question)
     end
   end

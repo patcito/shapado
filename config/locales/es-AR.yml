@@ -224,6 +224,7 @@
       recent_questions: Preguntas recientes
       categories: Categorias
       languages: Idiomas
+      permission_denied: Permiso denegado
     welcome:
       index:
         hot:     calientes
@@ -245,12 +246,25 @@
         title: Editar pregunta
       new:
         title: Pregunte
+      create:
+        flash_notice: "La pregunta fue creada exitosamente."
+      update:
+        flash_notice: "La pregunta fue actualizada exitosamente."
+      solve:
+        flash_notice: "La pregunta ha sido resuelta"
+      unsolve:
+        flash_notice: "La pregunta ahora no esta resuelta."
     answers:
       form:
         answer_label: Conteste la pregunta
         submit: Contestar
       edit:
         title: Editar respuesta
+      create:
+        flash_notice: "¡Gracias!"
+        flash_error:  "Algo fue mal añadiendo tu respuesta."
+      update:
+        flash_notice: "La respuesta fue actualizada exitosamente."
     users:
       index:
         title: Todos los usuarios
@@ -264,6 +278,9 @@
         information: Información
         notifications: Notificaciones
         new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+      create:
+        flash_notice: "Gracias por registrarse!"
+        flash_error:  "No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
     mailers:
       notifications:
         new_answer:

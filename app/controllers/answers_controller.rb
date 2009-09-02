@@ -13,11 +13,10 @@ class AnswersController < ApplicationController
       if @question.user.notification_opts["new_answer"] == "1"
         Notifier.deliver_new_answer(@question.user, @answer)
       end
-
-      flash[:notice] = "Thanks!"
+      flash[:notice] = t(:flash_notice, :scope => "views.answers.create")
       redirect_to question_path(@question)
     else
-      flash[:notice] = "Something went wrong adding your answer"
+      flash[:error] = t(:flash_error, :scope => "views.answers.create")
       redirect_to question_path(@question)
     end
   end
@@ -29,7 +28,7 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       if @answer.update_attributes(params[:answer])
-        flash[:notice] = 'Answer was successfully updated.'
+        flash[:notice] = t(:flash_notice, :scope => "views.answers.update")
         format.html { redirect_to(@answer.question) }
         format.xml  { head :ok }
       else
@@ -54,7 +53,7 @@ class AnswersController < ApplicationController
   def check_permissions
     @answer = Answer.find(params[:id])
     if @answer.nil? || !current_user.can_modify?(@answer)
-      flash[:error] = "Permission denied"
+      flash[:error] = t("views.layout.permission_denied")
       redirect_to questions_path
     end
   end

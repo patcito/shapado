@@ -58,6 +58,7 @@ en:
       recent_questions: Recent questions
       categories: Categories
       languages: Languages
+      permission_denied: Permission denied
     welcome:
       index:
         hot:     hot
@@ -79,12 +80,25 @@ en:
         title: Editing question
       new:
         title: Ask question
+      create:
+        flash_notice: "Question was successfully created."
+      update:
+        flash_notice: "Question was successfully updated."
+      solve:
+        flash_notice: "Question was solved."
+      unsolve:
+        flash_notice: "Question now is not solved."
     answers:
       form:
         answer_label: Answer the question
         submit: Answer
       edit:
         title: Editing answer
+      create:
+        flash_notice: "Thanks!"
+        flash_error:  "Something went wrong adding your answer"
+      update:
+        flash_notice: "Answer was successfully updated."
     users:
       index:
         title: All users
@@ -98,6 +112,9 @@ en:
         information: Information
         notifications: Notifications
         new_answer_notification: Get mail notifications for new answers
+      create:
+        flash_notice: "Thanks for signing up!"
+        flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
     mailers:
       notifications:
         new_answer:
