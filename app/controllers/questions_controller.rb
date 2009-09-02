@@ -123,6 +123,10 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         current_user.update_reputation(:close_question)
+        p "#"*80
+        if current_user != @answer.user
+          @answer.user.update_reputation(:answer_picked_as_solution)
+        end
         flash[:notice] = 'Question was solved.'
         format.html { redirect_to question_path(@question) }
       else
@@ -132,6 +136,7 @@ class QuestionsController < ApplicationController
   end
 
   def unsolve
+    answer_owner = @question.answer.user
     @question.answer = nil
     @question.answered = false
 
@@ -139,6 +144,9 @@ class QuestionsController < ApplicationController
       if @question.save
         flash[:notice] = 'Question now is not solved.'
         current_user.update_reputation(:reopen_question)
+        if current_user != answer_owner
+          answer_owner.update_reputation(:answer_unpicked_as_solution)
+        end
         format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }
