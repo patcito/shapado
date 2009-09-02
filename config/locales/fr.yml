@@ -203,6 +203,17 @@ fr:
       create:
         flash_notice: "Thanks for signing up!"
         flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} answered your question {{title}}"
+          subject_other: "{{login}} answered the question {{title}}"
+    sessions:
+      create:
+        flash_notice: "Logged in successfully"
+        flash_error: "Couldn't log you in as '{{login}}'"
+      destroy:
+        flash_notice: "You have been logged out."
   activerecord:
     models:
       questions: Questions

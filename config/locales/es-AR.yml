@@ -286,6 +286,12 @@
         new_answer:
           subject_owner: "{{login}} respondio su pregunta {{title}}"
           subject_other: "{{login}} respondio la pregunta {{title}}"
+    sessions:
+      create:
+        flash_notice: "Ingreso exitoso"
+        flash_error:  "No pudo ingresar como '{{login}}'"
+      destroy:
+        flash_notice: "Usted ha cerrado la sesión"
   categories:
     technology:   Tecnología
     programming:  Programación
