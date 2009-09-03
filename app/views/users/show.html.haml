@@ -20,8 +20,7 @@
       / TODO: add the answer anchor
       %tr
         %td.votes{:style=>"text-align: center; width: 10%"}
-          -#&=@user.answers.votes
-          = 0
+          &=answer.votes_average
           = t(:votes, :scope => "activerecord.attributes.question")
         %td.question
           = link_to h(answer.question.title), question_path(answer.question)
