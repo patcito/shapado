@@ -12,7 +12,7 @@
     .clear
     %hr
     / Nested Answers
-    .children{:style => "padding: 10px 20px; background-color: #DFDFDF"}
+    .children
       -answer.children.each do |child|
         .child{:style => "padding-top: 10px"}
           =link_to child.user.login, user_path(child.user)
