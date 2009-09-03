@@ -1,9 +1,3 @@
--feed_url = url_for(:format => "atom")
-
--content_for :rss do
-  %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> feed_url}
-
-
 = stylesheet_link_tag 'compiled/components/show_question.css'
 
 = error_messages_for :answer

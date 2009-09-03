@@ -85,4 +85,9 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :find_valid_locale
+
+  def add_feeds_url(url, title="atom")
+    @feed_urls = [] unless @feed_urls
+    @feed_urls << [title, url]
+  end
 end

@@ -10,6 +10,9 @@ class WelcomeController < ApplicationController
         order = "hotness desc"
     end
 
+
+    add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
+
     @questions = Question.paginate(:per_page => 25,
                                    :page => params[:page] || 1,
                                    :limit => 20,

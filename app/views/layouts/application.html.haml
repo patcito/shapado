@@ -7,7 +7,9 @@
     %meta{ :name => "description", :content => "" }
     %meta{ :name => "keywords", :content => "" }
     %link{:rel=>"icon", :type=>"image/png", :href=>"/favicon.ico"}
-    =yield :rss
+    -if @feed_urls && !@feed_urls.empty?
+      -@feed_urls.each do |title, url|
+        %link{:rel=>"alternate", :type=>"application/atom+xml", :title => h(title), :href=> url}
 
     = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
     = javascript_include_tag 'jquery.droppy'
