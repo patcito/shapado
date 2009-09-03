@@ -17,7 +17,8 @@
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
 %hr
 .internal
-  %h3 share this question
+  %h3
+    = t("views.questions.show.share")
   .buttons
     -if AppConfig.enable_sharing
       = render :partial => "twitter"

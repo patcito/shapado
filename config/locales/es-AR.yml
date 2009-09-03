@@ -241,6 +241,7 @@
         unset_answer: Quitar como solución?
         another_answers: Otras respuestas
         solution: Solución
+        share: "Compartir esta pregunta en:"
       edit:
         title: Editar pregunta
       new:
