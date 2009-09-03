@@ -168,6 +168,7 @@ fr:
         unset_answer: Annuler solution?
         another_answers: Autres réponses
         solution: Solution
+        share: "Share this question in:"
       edit:
         title: Éditer la question
       new:
