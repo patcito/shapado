@@ -10,15 +10,18 @@ class VotesController < ApplicationController
     end
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
-    vote.user = current_user
-
     voted = false
-
-    if vote.save
-      vote.voteable.add_vote!(vote.value, current_user)
-      voted = true
+    if vote.voteable.user != current_user
+      vote.user = current_user
+      if vote.save
+        vote.voteable.add_vote!(vote.value, current_user)
+        voted = true
+        flash[:notice] = t(:flash_notice, :scope => "views.votes.create")
+      else
+        flash[:error] = vote.errors.full_messages.join(", ")
+      end
     else
-      flash[:error] = vote.errors.full_messages.join(", ")
+      flash[:error] = t(:flash_error, :scope => "views.votes.create")
     end
 
 
@@ -28,6 +31,7 @@ class VotesController < ApplicationController
       format.json do
         if voted
           render(:json => {:status => :ok,
+                           :message => flash[:notice],
                            :average =>vote.voteable.votes_average+(vote.value)}.to_json)
         else
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
@@ -36,4 +40,5 @@ class VotesController < ApplicationController
 
     end
   end
+
 end

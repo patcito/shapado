@@ -41,6 +41,10 @@ class Answer
     end
   end
 
+  def comment?
+    !self.parent_id.blank?
+  end
+
   def to_html
     Maruku.new(self.body).to_html
   end

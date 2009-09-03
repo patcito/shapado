@@ -99,10 +99,11 @@
             %li.ask_question
               =link_to I18n.t("views.layout.ask_question"), new_question_path
       #main-content
-        -flash.each do |k,v|
-          .message{:class => k.to_s}
-            .internal
-              = h(v)
+        #messages
+          -flash.each do |k,v|
+            .message{:class => k.to_s}
+              .internal
+                = h(v)
         #layout
           #content
             .internal
