@@ -17,6 +17,8 @@
       = t(:views, :scope => "activerecord.attributes.question")
   %span
     %h4
+      .gravatar.left{:style => "padding: 5px"}
+        = gravatar(question.user.email, :size => 24)
       = link_to h(question.title), question_path(question)
     %span
       &= truncate(question.body, :length => 60)
