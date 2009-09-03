@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update]
   tabs :default => :users
   def index
-    @users = User.paginate(:per_page => params[:per_page]||25, :page => params[:page] || 1)
+    @users = User.paginate(:per_page => params[:per_page]||25,
+                           :order => "reputation desc",
+                           :page => params[:page] || 1)
   end
 
   # render new.rhtml
@@ -31,7 +33,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_login_or_id(params[:id])
     @questions = @user.questions.paginate(:page=>params[:questions_page], :per_page => 10)
-    @answers = @user.answers.paginate(:page=>params[:answers_page], :per_page => 10)
+    @answers = @user.answers.paginate(:page=>params[:answers_page], :conditions => {:parent_id => nil}, :per_page => 10)
   end
 
   def edit

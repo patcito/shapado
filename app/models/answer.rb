@@ -12,17 +12,33 @@ class Answer
   key :user_id, String
   belongs_to :user
 
+  key :parent_id, String
+  belongs_to :parent, :class_name => "Answer"
+
+  has_many :children, :foreign_key => "parent_id", :class_name => "Answer", :dependent => :destroy
+
   key :question_id, String
   belongs_to :question
   has_many :votes, :as => "voteable", :dependent => :destroy
 
-  validates_presence_of :user_id, :question_id
+  validates_presence_of :user_id
+  validates_presence_of :question_id, :if => lambda { |e| e.parent_id.blank? }
+  validates_presence_of :parent_id, :if => lambda { |e| e.question_id.blank? }
 
   searchable_keys :body
 
-  def add_vote!(v)
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_count => 1}})
-    self.collection.repsert({:_id => self.id}, {:$inc => {:votes_average => v}})
+  def add_vote!(v, voter)
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
+                                                         :upsert => true)
+    self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
+                                                         :upsert => true)
+    if v > 0
+      self.user.update_reputation(:answer_receives_up_vote)
+      voter.update_reputation(:vote_up_answer)
+    else
+      self.user.update_reputation(:answer_receives_down_vote)
+      voter.update_reputation(:vote_down_answer)
+    end
   end
 
   def to_html

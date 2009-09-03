@@ -38,8 +38,8 @@
 
 %hr
 -unless @question.answered
-  -form_for @answer, :html => {:class => "form"} do |f|
-    = render :partial => "answers/form", :locals => {:f => f}
+  -form_for @answer, :html => {:class => "form mainAnswerForm"} do |f|
+    = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
     = submit_tag I18n.t('views.answers.form.submit')
   %hr
 

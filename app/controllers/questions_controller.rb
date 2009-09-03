@@ -78,7 +78,9 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.update_reputation(:ask_question)
         flash[:notice] = t(:flash_notice, :scope => "views.questions.create")
+
         format.html { redirect_to(@question) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
@@ -121,6 +123,10 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.update_reputation(:close_question)
+        if current_user != @answer.user
+          @answer.user.update_reputation(:answer_picked_as_solution)
+        end
         flash[:notice] = t(:flash_notice, :scope => "views.questions.solve")
         format.html { redirect_to question_path(@question) }
       else
@@ -130,12 +136,17 @@ class QuestionsController < ApplicationController
   end
 
   def unsolve
+    answer_owner = @question.answer.user
     @question.answer = nil
     @question.answered = false
 
     respond_to do |format|
       if @question.save
         flash[:notice] = t(:flash_notice, :scope => "views.questions.unsolve")
+        current_user.update_reputation(:reopen_question)
+        if current_user != answer_owner
+          answer_owner.update_reputation(:answer_unpicked_as_solution)
+        end
         format.html { redirect_to question_path(@question) }
       else
         format.html { render :action => "show" }

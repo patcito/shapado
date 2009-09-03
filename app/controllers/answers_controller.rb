@@ -4,16 +4,25 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(params[:answer])
-    @question = Question.find(params[:question_id])
-    @answer.question = @question
     @answer.user = current_user
 
-    if @answer.save
-      @question.answer_added!
-      if @question.user.notification_opts["new_answer"] == "1"
-        Notifier.deliver_new_answer(@question.user, @answer)
+    @question = Question.find(params[:question_id])
+
+    if @answer.parent_id.blank?
+      @answer.question = @question
+    end
+
+    if @question && @answer.save
+      if !@answer.parent_id.blank?
+        @question.answer_added!
+        if @question.user.notification_opts["new_answer"] == "1"
+          Notifier.deliver_new_answer(@question.user, @answer)
+        end
+        current_user.update_reputation(:answer_question)
       end
+
       flash[:notice] = t(:flash_notice, :scope => "views.answers.create")
+
       redirect_to question_path(@question)
     else
       flash[:error] = t(:flash_error, :scope => "views.answers.create")

@@ -43,7 +43,7 @@ class Question
   before_save :update_metatags
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
-  before_validation_on_update :update_answer_count
+#   before_validation_on_update :update_answer_count
 
   validates_inclusion_of :category, :within => Shapado::CATEGORIES
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
@@ -88,11 +88,18 @@ class Question
                                                :upsert => true)
   end
 
-  def add_vote!(v)
+  def add_vote!(v, voter)
     self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
                                                          :upsert => true)
     self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
                                                          :upsert => true)
+    if v > 0
+      self.user.update_reputation(:question_receives_up_vote)
+      voter.update_reputation(:vote_up_question)
+    else
+      self.user.update_reputation(:question_receives_down_vote)
+      voter.update_reputation(:vote_down_question)
+    end
     on_activity
   end
 

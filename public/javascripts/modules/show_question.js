@@ -13,4 +13,10 @@ $(document).ready(function() {
     }, "json");
     return false;
   });
+
+  $("form.nestedAnswerForm").hide();
+  $(".addNestedAnswer").click(function() {
+    $(this).parent().next().next("form.nestedAnswerForm").slideToggle();
+    return false;
+  });
 });

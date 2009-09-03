@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
     else
       password_authentication(params[:login], params[:password])
     end
+    current_user.logged! if current_user
   end
 
   def destroy

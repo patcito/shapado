@@ -10,6 +10,24 @@
     %span.markdown
       = markdown(answer.body)
     .clear
+    %hr
+    / Nested Answers
+    .children{:style => "padding: 10px 20px; background-color: #DFDFDF"}
+      -answer.children.each do |child|
+        .child{:style => "padding-top: 10px"}
+          =link_to child.user.login, user_path(child.user)
+          =time_ago_in_words(child.created_at)
+          %br
+
+          = h(child.body)
+          %hr
+      .right
+        = link_to "Add Comment...", "#", :class => "addNestedAnswer"
+      .clear
+      -form_for @answer, :html => {:class => "form nestedAnswerForm"} do |f|
+        = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
+        = submit_tag I18n.t('views.answers.form.submit')
+    / Buttons
     -if logged_in?
       .buttons
         -if current_user.can_modify?(answer)
