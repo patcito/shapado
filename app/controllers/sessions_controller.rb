@@ -20,14 +20,14 @@ class SessionsController < ApplicationController
 
   def destroy
     logout_killing_session!
-    flash[:notice] = "You have been logged out."
+    flash[:notice] = t("flash_notice", :scope => "views.sessions.destroy")
     redirect_back_or_default('/')
   end
 
 protected
   # Track failed login attempts
   def note_failed_signin(message = nil)
-    message ||= "Couldn't log you in as '#{params[:login]}'"
+    message ||= t("flash_error", :scope => "views.sessions.create", :login => params[:login])
     flash[:error] = message
   end
 
@@ -122,6 +122,6 @@ protected
     else
       redirect_back_or_default('/')
     end
-    flash[:notice] = "Logged in successfully"
+    flash[:notice] = t("flash_notice", :scope => "views.sessions.create")
   end
 end

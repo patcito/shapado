@@ -1,3 +1,7 @@
+
+.subtitle
+  = t("information", :scope => "views.users.form")
+
 .field-group
   .label-container
     = f.label :login, t(:login, :scope => "activerecord.attributes.user")
@@ -65,4 +69,9 @@
       = f.label :preferred_tags, t(:preferred_tags, :scope => "activerecord.attributes.user")
     .field
       = f.text_field :preferred_tags, :value => @user.preferred_tags.join(", "), :class => "text-field"
+  .subtitle
+    = t("notifications", :scope => "views.users.form")
 
+  .field-group
+    = f.check_box "notification_opts[new_answer]", :checked => @user.notification_opts["new_answer"] == "1"
+    = t("new_answer_notification", :scope => "views.users.form")

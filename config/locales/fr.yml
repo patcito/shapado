@@ -158,6 +158,7 @@ fr:
       recent_questions: Questions récentes
       categories: Catégories
       languages: Langues
+      permission_denied: Permission denied
     questions:
       index:
         title: Toutes les questions
@@ -171,12 +172,25 @@ fr:
         title: Éditer la question
       new:
         title: Poser une question
+      create:
+        flash_notice: "Question was successfully created."
+      update:
+        flash_notice: "Question was successfully updated."
+      solve:
+        flash_notice: "Question was solved."
+      unsolve:
+        flash_notice: "Question now is not solved."
     answers:
       form:
         answer_label: Répondre à la question
         submit: Répondre
       edit:
         title: Éditer la réponse
+      create:
+        flash_notice: "Thanks!"
+        flash_error:  "Something went wrong adding your answer"
+      update:
+        flash_notice: "Answer was successfully updated."
     users:
       index:
         title: Tous les utilisateurs
@@ -186,6 +200,20 @@ fr:
       edit:
         title: Configuration
         submit: Sauver
+      create:
+        flash_notice: "Thanks for signing up!"
+        flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} answered your question {{title}}"
+          subject_other: "{{login}} answered the question {{title}}"
+    sessions:
+      create:
+        flash_notice: "Logged in successfully"
+        flash_error: "Couldn't log you in as '{{login}}'"
+      destroy:
+        flash_notice: "You have been logged out."
   activerecord:
     models:
       questions: Questions

@@ -1,4 +1,37 @@
 en:
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute ago"
+      less_than_x_seconds:
+        one:   "less than 1 second ago"
+        other: "less than {{count}} seconds ago"
+      x_seconds:
+        one:   "1 second ago"
+        other: "{{count}} seconds ago"
+      less_than_x_minutes:
+        one:   "less than a minute ago"
+        other: "less than {{count}} minutes ago"
+      x_minutes:
+        one:   "1 minute ago"
+        other: "{{count}} minutes ago"
+      about_x_hours:
+        one:   "about 1 hour ago"
+        other: "about {{count}} hours ago"
+      x_days:
+        one:   "1 day ago"
+        other: "{{count}} days ago"
+      about_x_months:
+        one:   "about 1 month ago"
+        other: "about {{count}} months ago"
+      x_months:
+        one:   "1 month ago"
+        other: "{{count}} months ago"
+      about_x_years:
+        one:   "about 1 year ago"
+        other: "about {{count}} years ago"
+      over_x_years:
+        one:   "over 1 year ago"
+        other: "over {{count}} years ago"
   scaffold:
     sure: Are you sure you want to delete this {{model}} ?
     show: Show
@@ -25,6 +58,7 @@ en:
       recent_questions: Recent questions
       categories: Categories
       languages: Languages
+      permission_denied: Permission denied
     welcome:
       index:
         hot:     hot
@@ -46,12 +80,25 @@ en:
         title: Editing question
       new:
         title: Ask question
+      create:
+        flash_notice: "Question was successfully created."
+      update:
+        flash_notice: "Question was successfully updated."
+      solve:
+        flash_notice: "Question was solved."
+      unsolve:
+        flash_notice: "Question now is not solved."
     answers:
       form:
         answer_label: Answer the question
         submit: Answer
       edit:
         title: Editing answer
+      create:
+        flash_notice: "Thanks!"
+        flash_error:  "Something went wrong adding your answer"
+      update:
+        flash_notice: "Answer was successfully updated."
     users:
       index:
         title: All users
@@ -61,6 +108,24 @@ en:
       edit:
         title: Settings
         submit: Save
+      form:
+        information: Information
+        notifications: Notifications
+        new_answer_notification: Get mail notifications for new answers
+      create:
+        flash_notice: "Thanks for signing up!"
+        flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} answered your question {{title}}"
+          subject_other: "{{login}} answered the question {{title}}"
+    sessions:
+      create:
+        flash_notice: "Logged in successfully"
+        flash_error: "Couldn't log you in as '{{login}}'"
+      destroy:
+        flash_notice: "You have been logged out."
   activerecord:
     models:
       questions: Questions

@@ -61,39 +61,39 @@
     pm: pm
   datetime:
     distance_in_words:
-      half_a_minute: medio minuto
+      half_a_minute: hace medio minuto
       less_than_x_seconds:
-        zero: menos de 1 segundo
-        one: menos de 1 segundo
-        other: menos de {{count}} segundos
+        zero: hace menos de 1 segundo
+        one: hace menos de 1 segundo
+        other: hace menos de {{count}} segundos
       x_seconds:
-        one: 1 second
-        other: "{{count}} seconds"
+        one: hace 1 segundo
+        other: "hace {{count}} segundos"
       less_than_x_minutes:
-        zero: menos de 1 minuto
-        one: menos de 1 minuto
-        other: menos de {{count}} minutos
+        zero: hace menos de 1 minuto
+        one: hace menos de 1 minuto
+        other: hace menos de {{count}} minutos
       x_minutes:
-        one: 1 minuto
-        other: "{{count}} minutos"
+        one: hace 1 minuto
+        other: "hace {{count}} minutos"
       about_x_hours:
-        one: aproximadamente 1 hora
-        other: aproximadamente {{count}} horas
+        one: hace aproximadamente 1 hora
+        other: hace aproximadamente {{count}} horas
       x_days:
-        one: "1 día"
-        other: "{{count}} días"
+        one: "hace 1 día"
+        other: "hace {{count}} días"
       about_x_months:
-        one: aproximandamente 1 mes
-        other: aproximadamente {{count}} mes
+        one: hace aproximandamente 1 mes
+        other: hace aproximadamente {{count}} mes
       x_months:
-        one: 1 month
-        other: "{{count}} mes"
+        one: hace 1 month
+        other: "hace {{count}} mes"
       about_x_years:
-        one: "aproximadamente 1 año"
-        other: "aproximadamente {{count}} años"
+        one: "hace aproximadamente 1 año"
+        other: "hace aproximadamente {{count}} años"
       over_x_years:
-        one: "más de 1 año"
-        other: "más de {{count}} años"
+        one: "hace más de 1 año"
+        other: "hace más de {{count}} años"
     prompts:
       year:   "Año"
       month:  "Mes"
@@ -227,6 +227,7 @@
       recent_questions: Preguntas recientes
       categories: Categorias
       languages: Idiomas
+      permission_denied: Permiso denegado
     welcome:
       index:
         hot:     calientes
@@ -248,12 +249,25 @@
         title: Editar pregunta
       new:
         title: Pregunte
+      create:
+        flash_notice: "La pregunta fue creada exitosamente."
+      update:
+        flash_notice: "La pregunta fue actualizada exitosamente."
+      solve:
+        flash_notice: "La pregunta ha sido resuelta"
+      unsolve:
+        flash_notice: "La pregunta ahora no esta resuelta."
     answers:
       form:
         answer_label: Conteste la pregunta
         submit: Contestar
       edit:
         title: Editar respuesta
+      create:
+        flash_notice: "¡Gracias!"
+        flash_error:  "Algo fue mal añadiendo tu respuesta."
+      update:
+        flash_notice: "La respuesta fue actualizada exitosamente."
     users:
       index:
         title: Todos los usuarios
@@ -263,6 +277,24 @@
       edit:
         title: Configuración
         submit: Guardar
+      form:
+        information: Información
+        notifications: Notificaciones
+        new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+      create:
+        flash_notice: "Gracias por registrarse!"
+        flash_error:  "No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
+    mailers:
+      notifications:
+        new_answer:
+          subject_owner: "{{login}} respondio su pregunta {{title}}"
+          subject_other: "{{login}} respondio la pregunta {{title}}"
+    sessions:
+      create:
+        flash_notice: "Ingreso exitoso"
+        flash_error:  "No pudo ingresar como '{{login}}'"
+      destroy:
+        flash_notice: "Usted ha cerrado la sesión"
   categories:
     technology:   Tecnología
     programming:  Programación
