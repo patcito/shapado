@@ -15,7 +15,7 @@ class AnswersController < ApplicationController
     if @question && @answer.save
       unless @answer.comment?
         @question.answer_added!
-        if @question.user.notification_opts["new_answer"] == "1"
+        if @question.user.blank? && @question.user.notification_opts["new_answer"] == "1"
           Notifier.deliver_new_answer(@question.user, @answer)
         end
         current_user.update_reputation(:answer_question)
