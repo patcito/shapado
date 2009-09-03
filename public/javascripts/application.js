@@ -3,6 +3,10 @@ $(document).ready(function() {
   $('#menu_logo').droppy({speed: 100});
 })
 
+function showMessage(message, t) {
+  $("#messages").append("<div class='message "+t+"'><div class='internal'>"+message+"</div></div>")
+}
+
 function setupEditor() {
   var converter = new Showdown.converter;
   var converter_callback = function(value) {

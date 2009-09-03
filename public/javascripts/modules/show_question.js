@@ -7,8 +7,9 @@ $(document).ready(function() {
       if(data.status == "ok"){
         form.find("button").remove()
         form.find(".votes_average").text(data.average)
+        showMessage(data.message, "notice")
       } else {
-        alert(data.message)
+        showMessage(data.message, "error")
       }
     }, "json");
     return false;

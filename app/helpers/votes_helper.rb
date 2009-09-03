@@ -1,6 +1,6 @@
 module VotesHelper
   def vote_box(voteable, source)
-    if logged_in? && !current_user.has_voted?(voteable)
+    if logged_in? && voteable.user != current_user && !current_user.has_voted?(voteable)
       %@
       <form action='#{votes_path}' method='post' class='vote_form' >
         #{token_tag}
