@@ -33,7 +33,8 @@
   %br
   %b
     = t(:last_logged_at, :scope => "activerecord.attributes.user")
-  = time_ago_in_words(@user.last_logged_at)
+  -if @user.last_logged_at
+    = time_ago_in_words(@user.last_logged_at)
   %br
   %b
     = t(:reputation, :scope => "activerecord.attributes.user")
