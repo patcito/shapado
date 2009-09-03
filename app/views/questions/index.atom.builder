@@ -1,5 +1,20 @@
 atom_feed do |feed|
-  feed.title("#{AppConfig.domain} - #{t("activerecord.models.questions")}")
+  title = "#{AppConfig.domain} - #{t("activerecord.models.questions")}"
+
+  if @category
+    title += " category: #{@category}"
+  end
+
+  tags = params[:tags]
+  if tags && !tags.empty?
+    title += " tags: #{tags.kind_of?(String) ? tags : tags.join(", ")}"
+  end
+
+  if @languages
+    title += " languages: #{@languages.join(", ")}"
+  end
+
+  feed.title(title)
   feed.updated(@questions.first.updated_at)
 
   for question in @questions

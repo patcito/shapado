@@ -22,7 +22,8 @@ class QuestionsController < ApplicationController
         order = "hotness desc"
     end
 
-    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => order, :conditions => scoped_conditions)
+    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1,
+                                   :order => order, :conditions => scoped_conditions)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -53,6 +54,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @question }
+      format.atom
     end
   end
 
