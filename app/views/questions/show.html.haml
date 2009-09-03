@@ -15,16 +15,17 @@
       = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
       or
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
-%hr
-.internal
-  %h3
-    = t("views.questions.show.share")
-  .buttons
-    -if AppConfig.enable_sharing
+-if AppConfig.enable_sharing
+  .right.internal{:style => "background: #DFDFDF; margin: 2px"}
+    %h2
+      = t("views.questions.show.share")
+    .buttons{:style => "padding: 2px"}
       = render :partial => "twitter"
       = render :partial => "identica"
       = render :partial => "facebook"
+  .clear
 
+%hr
 #answers
   -if @question.answered
     %h2
