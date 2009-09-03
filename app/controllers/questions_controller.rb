@@ -27,6 +27,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @questions }
+      format.atom
     end
   end
 

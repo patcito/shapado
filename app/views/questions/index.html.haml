@@ -1,4 +1,7 @@
+-feed_url = url_for(:format => "atom")
 
+-content_for :rss do
+  %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> feed_url}
 
 #questions_index.subtitle{:class => @active_subtab}
   = t("views.questions.index.title")
