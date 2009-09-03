@@ -4,7 +4,7 @@
 .answer{:class => solution ? "solution" : ""}
   .answer_title
     .gravatar.left{:style => "padding: 2px"}
-      = gravatar(answer.user.email, :size => 14)
+      = gravatar(answer.user.email.to_s, :size => 14)
     = link_to h(answer.user.login), user_path(answer.user)
     = time_ago_in_words(answer.created_at)
     .clear
