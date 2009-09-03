@@ -63,16 +63,20 @@
         #user-actions
           #user-nav
             -if logged_in?
-              .left{:style =>"text-align: right"}
-                = I18n.t('views.layout.logged', :default => "Logged in as {{login}}", :login => h(current_user.login))
-                =link_to I18n.t('views.layout.logout'), logout_path
-                =link_to I18n.t('views.layout.settings'), settings_path
-              .box.right
-                -form_tag search_path, :class => "form", :method => :get do
-                  %fieldset
-                    %p
-                      = text_field_tag 'q', params[:q], :class => "text-field"
-                  .buttons
+              .box.right{:style => "width: 50%;"}
+                .gravatar.left{:style => "margin: 2px;"}
+                  = gravatar current_user.email
+                .row1
+                  = link_to h(current_user.login), user_path(current_user)
+                  %span{:style => "font-size: 12px; font-weight: bold"}
+                    == (#{current_user.reputation.to_i})
+                  .right
+                    =link_to I18n.t('views.layout.settings'), settings_path
+                    |
+                    =link_to I18n.t('views.layout.logout'), logout_path
+                .row2{:style => "padding: 7px"}
+                  -form_tag search_path, :class => "form", :method => :get do
+                    = text_field_tag 'q', params[:q], :class => "text-field", :style => "width: 55%"
                     %button{:type => "submit"}
                       = I18n.t('views.layout.search', :default => "Go")
       .clear
@@ -128,8 +132,9 @@
             = link_to AppConfig.site, AppConfig.site
             is a multi-topic and multi-language question-and-answer website service brought to you by #{link_to "Ricodigo.com", "http://ricodigo.com"}. It runs the #{link_to 'Shapado', 'http://gitorious.org/shapado'} question-and-answer software, version 0.1, available under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}.
         #cc
-          %p
-            = image_tag('/images/ccby.png')+"All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}."
+          %center
+            = image_tag('/images/ccby.png')
+            == All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}.
 
       = render :partial => "shared/googlean"
       .clear

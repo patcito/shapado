@@ -3,7 +3,7 @@
     Questions
   %ul
     -@questions.each do |question|
-      %li{:style => "border: 1px solid black"}
+      %li{:style => "border-bottom: 1px solid grey"}
         %strong
           = link_to h(question.title), question_path(question)
         %br
@@ -14,9 +14,8 @@
     Answers
   %ul
     -@answers.each do |answer|
-      %li{:style => "border: 1px solid black"}
+      %li{:style => "border-bottom: 1px solid grey"}
         %strong
           = link_to h(answer.question.title), question_path(answer.question)
         %br
         = truncate(answer.body, :length => 400)
-
