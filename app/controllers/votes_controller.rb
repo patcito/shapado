@@ -15,7 +15,7 @@ class VotesController < ApplicationController
     voted = false
 
     if vote.save
-      vote.voteable.add_vote!(vote.value)
+      vote.voteable.add_vote!(vote.value, current_user)
       voted = true
     else
       flash[:error] = vote.errors.full_messages.join(", ")

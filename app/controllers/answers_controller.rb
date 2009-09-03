@@ -13,7 +13,10 @@ class AnswersController < ApplicationController
     end
 
     if @question && @answer.save
-      @question.answer_added! if !@answer.parent_id.blank?
+      if !@answer.parent_id.blank?
+        @question.answer_added!
+        current_user.update_reputation(:answer_question)
+      end
 
       flash[:notice] = "Thanks!"
       redirect_to question_path(@question)

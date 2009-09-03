@@ -219,6 +219,9 @@ fr:
         timezone: Fuseau horaire
         preferred_tags: Tags préférés
         preferred_languages: Choisir les langues que vous connaissez
+        last_logged_at: seen
+        created_at: member for
+        reputation: Reputation
   categories:
     technology:   Technologie
     programming:  Programmation

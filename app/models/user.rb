@@ -19,11 +19,15 @@ class User
   key :remember_token,            String, :limit => 40
   key :remember_token_expires_at, Time
   key :admin,                     Boolean, :default => false
+  key :last_logged_at,            Time
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
-  key :language,                      String, :default => "en"
-  key :timezone,                      String
+  key :language,                  String, :default => "en"
+  key :timezone,                  String
+
+  key :reputation,                Float, :default => 1.0
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
@@ -45,6 +49,7 @@ class User
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
 
   before_save :update_languages
+  before_create :logged!
 
   attr_accessor :password, :password_confirmation
   before_validation :add_email_validation
@@ -115,6 +120,26 @@ class User
                                 :user_id     => self.id}
                              })
     !vote.nil?
+  end
+
+  def logged!
+    now = Time.now
+    if new?
+      self.last_logged_at = now
+    else
+      self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => now}},
+                                                 :upsert => true)
+    end
+  end
+
+  def update_reputation(key)
+    value = REPUTATION_CONF[key.to_s]
+    p "#{self.login} recieve #{value} karma by #{key}"
+    value = key if value.nil? && key.kind_of?(Integer)
+    if value
+      self.collection.update({:_id => self.id}, {:$inc => {:reputation => value}},
+                                                 :upsert => true)
+    end
   end
 
   protected

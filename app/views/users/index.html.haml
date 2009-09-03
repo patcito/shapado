@@ -7,16 +7,18 @@
     %tr
       -line.each do |user|
         %td
-          %span.left
-            = gravatar user.email.to_s
-          %span.internal.left
+          %span
+            = gravatar user.email.to_s, :class => "left"
             = link_to h(user.login), user_path(user)
-            %ul
-              %li
-                &= user.questions.count
-                %b
-                  questions
-              %li
-                &= user.answers.count
-                %b
-                  answers
+            %br
+          %span.clear
+            %span
+              &= user.reputation
+              %b{:title => t(:reputation, :scope => "activerecord.attributes.user")}
+                = t(:reputation, :scope => "activerecord.attributes.user")[0..1]
+              &= user.questions.count
+              %b{:title => t(:questions, :scope => "activerecord.models")}
+                = t(:questions, :scope => "activerecord.models")[0..1]
+              &= user.answers.count
+              %b{:title => t(:answers, :scope => "activerecord.models")}
+                = t(:answers, :scope => "activerecord.models")[0..1]
