@@ -134,7 +134,7 @@ class User
 
   def update_reputation(key)
     value = REPUTATION_CONF[key.to_s]
-    p "#{self.login} recieve #{value} karma by #{key}"
+    Rails.logger.info "#{self.login} receive #{value} points of karma by #{key}"
     value = key if value.nil? && key.kind_of?(Integer)
     if value
       self.collection.update({:_id => self.id}, {:$inc => {:reputation => value}},
