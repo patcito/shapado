@@ -10,13 +10,19 @@
       = h @question.title
   #question-body.markdown
     = markdown(@question.body)
-  -if logged_in? && current_user.can_modify?(@question)
-    .buttons
+  .buttons
+    -if logged_in? && current_user.can_modify?(@question)
       = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
       or
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
-
 %hr
+.internal
+  %h3 share this question
+  .buttons
+    -if AppConfig.enable_sharing
+      = render :partial => "twitter"
+      = render :partial => "identica"
+      = render :partial => "facebook"
 
 #answers
   -if @question.answered
