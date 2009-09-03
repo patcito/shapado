@@ -1,7 +1,7 @@
 
 %h1
   = gravatar @user.email.to_s
-  = @user.login
+  &= @user.login
 
 %h2
   = number_with_delimiter(@questions.total_entries)

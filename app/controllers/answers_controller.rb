@@ -13,12 +13,14 @@ class AnswersController < ApplicationController
     end
 
     if @question && @answer.save
-      if !@answer.parent_id.blank?
+      unless @answer.comment?
         @question.answer_added!
         if @question.user.notification_opts["new_answer"] == "1"
           Notifier.deliver_new_answer(@question.user, @answer)
         end
         current_user.update_reputation(:answer_question)
+      else
+        current_user.update_reputation(:comment_question)
       end
 
       flash[:notice] = t(:flash_notice, :scope => "views.answers.create")
