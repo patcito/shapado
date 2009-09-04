@@ -14,7 +14,9 @@ class UsersController < ApplicationController
 
   def create
     logout_keeping_session!
-    @user = User.new(params[:user])
+    @user = User.new
+    @user.safe_update(%w[login email name password_confirmation password
+                         language timezone identity_url], params[:model])
     success = @user && @user.save
     if success && @user.errors.empty?
       # Protects against session fixation attacks, causes request forgery
@@ -49,7 +51,10 @@ class UsersController < ApplicationController
       @user.password_confirmation = params[:user][:password_confirmation]
     end
 
-    if @user.update_attributes(params[:user])
+    @user.safe_update(%w[login email name password_confirmation password
+                         language timezone preferred_languages
+                         preferred_tags notification_opts], params[:user])
+    if @user.valid? && @user.save
       redirect_to "/settings"
     else
       render :action => "edit"
