@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  before_filter :login_required
+  before_filter :check_permissions
 
   def create
     vote = Vote.new
@@ -21,7 +21,8 @@ class VotesController < ApplicationController
         flash[:error] = vote.errors.full_messages.join(", ")
       end
     else
-      flash[:error] = t(:flash_error, :scope => "views.votes.create")
+      flash[:error] = "#{t(:flash_error, :scope => "views.votes.create")} "
+      flash[:error] += t(params[:voteable_type].downcase, :scope => "activerecord.models").downcase
     end
 
 
@@ -30,14 +31,27 @@ class VotesController < ApplicationController
 
       format.json do
         if voted
+          average = vote.voteable.votes_average+(vote.value)
+          content = "#{average} #{t(:votes, :scope => "activerecord.models")}"
           render(:json => {:status => :ok,
                            :message => flash[:notice],
-                           :average =>vote.voteable.votes_average+(vote.value)}.to_json)
+                           :content => content}.to_json)
         else
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
         end
       end
+    end
+  end
 
+  protected
+  def check_permissions
+    unless logged_in?
+      flash[:error] = t(:unauthenticated, :scope => "views.votes.create")
+      flash[:error] += ", #{t(:please_login, :scope => "views.layout")}"
+      respond_to do |format|
+        format.html{redirect_to params[:source]}
+        format.json{render(:json => {:status => :error, :message => flash[:error] }.to_json)}
+      end
     end
   end
 

@@ -1,6 +1,7 @@
 module VotesHelper
   def vote_box(voteable, source)
-    if logged_in? && voteable.user != current_user && !current_user.has_voted?(voteable)
+    if (logged_in? && voteable.user != current_user && !current_user.has_voted?(voteable)) ||
+        !logged_in?
       %@
       <form action='#{votes_path}' method='post' class='vote_form' >
         #{token_tag}
@@ -26,6 +27,7 @@ module VotesHelper
           <span style="display:block">
             #{calculate_votes_average(voteable)}
           </span>
+          #{t(:votes, :scope => "activerecord.models")}
         </span>
       @
     end

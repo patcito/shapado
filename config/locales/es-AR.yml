@@ -163,9 +163,13 @@
         even: debe ser impar
     models:
       questions: Preguntas
+      question: Pregunta
       answers: Respuestas
+      answer: respuesta
       users: Usuarios
+      user: usuario
       votes: Votos
+      vote: voto
     attributes:
       question:
         title: Titulo
@@ -228,6 +232,7 @@
       categories: Categorias
       languages: Idiomas
       permission_denied: Permiso denegado
+      please_login: por favor inicia sesión
     welcome:
       index:
         hot:     calientes
@@ -288,7 +293,8 @@
     votes:
       create:
         flash_notice: "Gracias por su voto"
-        flash_error:  "Usted no puede votar esto"
+        flash_error:  "Usted no puede votar esta"
+        unauthenticated: "los usuarios anónimos no puede votar"
     mailers:
       notifications:
         new_answer:

@@ -6,7 +6,7 @@ $(document).ready(function() {
     $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.status == "ok"){
         form.find("button").remove()
-        form.find(".votes_average").text(data.average)
+        form.find(".votes_average").text(data.content)
         showMessage(data.message, "notice")
       } else {
         showMessage(data.message, "error")
