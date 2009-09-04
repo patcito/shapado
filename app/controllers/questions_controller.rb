@@ -22,11 +22,18 @@ class QuestionsController < ApplicationController
         order = "hotness desc"
     end
 
-    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :order => order, :conditions => scoped_conditions)
+    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1,
+                                   :order => order, :conditions => scoped_conditions)
+
+    add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
+    if params[:tags]
+      add_feeds_url(url_for(:format => "atom", :tags => params[:tags]), params[:tags].inspect)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @questions }
+      format.atom
     end
   end
 
@@ -49,9 +56,12 @@ class QuestionsController < ApplicationController
     @answer = Answer.new
     @question.viewed!
 
+    add_feeds_url(url_for(:format => "atom"), @question.title)
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @question }
+      format.atom
     end
   end
 
