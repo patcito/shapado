@@ -285,9 +285,10 @@
       create:
         flash_notice: "Gracias por registrarse!"
         flash_error:  "No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
+    votes:
       create:
-        flash_notice: "Gracias por su voto!"
-        flash_error:  "Usted no pude votar esto"
+        flash_notice: "Gracias por su voto"
+        flash_error:  "Usted no puede votar esto"
     mailers:
       notifications:
         new_answer:
