@@ -204,6 +204,7 @@ fr:
       create:
         flash_notice: "Thanks for signing up!"
         flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+    votes:
       create:
         flash_notice: "Thanks for your vote!"
         flash_error:  "You cannot vote it"
