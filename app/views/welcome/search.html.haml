@@ -16,6 +16,6 @@
     -@answers.each do |answer|
       %li{:style => "border-bottom: 1px solid grey"}
         %strong
-          = link_to h(answer.question.title), question_path(answer.question)
+          = link_to h(answer.question.title), question_path(answer.question, :anchor => answer.id)
         %br
         = truncate(answer.body, :length => 400)

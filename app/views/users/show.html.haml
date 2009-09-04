@@ -17,13 +17,12 @@
     = t(:answers, :scope => "activerecord.models")
   %table.list
     -@answers.each do |answer|
-      / TODO: add the answer anchor
       %tr
         %td.votes{:style=>"text-align: center; width: 10%"}
           &=answer.votes_average
           = t(:votes, :scope => "activerecord.attributes.question")
         %td.question
-          = link_to h(answer.question.title), question_path(answer.question)
+          = link_to h(answer.question.title), question_path(answer.question, :anchor => answer.id)
   =will_paginate @answers, :param_name => "answers_page"
 
 -content_for :sidebar do
