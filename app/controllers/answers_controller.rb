@@ -3,7 +3,8 @@ class AnswersController < ApplicationController
   before_filter :check_permissions, :only => [:edit, :update, :destroy]
 
   def create
-    @answer = Answer.new(params[:answer])
+    @answer = Answer.new
+    @answer.safe_update(%w[parent_id body], params[:answer])
     @answer.user = current_user
 
     @question = Question.find(params[:question_id])
@@ -39,7 +40,8 @@ class AnswersController < ApplicationController
 
   def update
     respond_to do |format|
-      if @answer.update_attributes(params[:answer])
+      @answer.safe_update(%w[parent_id body], params[:answer])
+      if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "views.answers.update")
         format.html { redirect_to(@answer.question) }
         format.xml  { head :ok }
