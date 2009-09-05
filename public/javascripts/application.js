@@ -4,7 +4,12 @@ $(document).ready(function() {
 })
 
 function showMessage(message, t) {
-  $("#messages").append("<div class='message "+t+"'><div class='internal'>"+message+"</div></div>")
+  $.notifyBar({
+    html: message,
+    delay: 3000,
+    animationSpeed: "normal",
+    barClass: "message "+ t
+  });
 }
 
 function setupEditor() {
