@@ -105,8 +105,8 @@
         #messages
           -flash.each do |k,v|
             .message{:class => k.to_s}
-              .internal
-                = h(v)
+              .internal.markdown
+                = markdown(v)
         #layout
           #content
             .internal

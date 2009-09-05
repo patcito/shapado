@@ -266,7 +266,10 @@
         title: Editar respuesta
       create:
         flash_notice: "¡Gracias!"
-        flash_error:  "Algo fue mal añadiendo tu respuesta."
+        flash_error:  "Algo fue mal añadiendo tu respuesta.
+\n  recuerda que:
+\n - no se permiten respuestas vacias ni repetidas.
+\n - y debes esperar 20 segundos antes de volver a contestar"
       update:
         flash_notice: "La respuesta fue actualizada exitosamente."
     users:
