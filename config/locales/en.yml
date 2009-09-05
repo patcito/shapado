@@ -59,6 +59,7 @@ en:
       categories: Categories
       languages: Languages
       permission_denied: Permission denied
+      please_login: please log in
     welcome:
       index:
         hot:     hot
@@ -123,7 +124,8 @@ en:
     votes:
       create:
         flash_notice: "Thanks for your vote!"
-        flash_error:  "You cannot vote it"
+        flash_error:  "You cannot vote this"
+        unauthenticated: "anonymous users can't vote"
     mailers:
       notifications:
         new_answer:
@@ -138,9 +140,13 @@ en:
   activerecord:
     models:
       questions: Questions
+      question: question
       answers: Answers
+      answer: answer
       users: Users
+      user: user
       votes: Votes
+      vote: vote
     attributes:
       question:
         title: Title

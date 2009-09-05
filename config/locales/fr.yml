@@ -159,6 +159,7 @@ fr:
       categories: Catégories
       languages: Langues
       permission_denied: Permission refusée
+      please_login: please log in
     questions:
       index:
         title: Toutes les questions
@@ -211,6 +212,7 @@ fr:
       create:
         flash_notice: "Merci d'avoir voté!"
         flash_error:  "Vous ne pouvez pas voter"
+        unauthenticated: "anonymous users can't vote, please log in"
     mailers:
       notifications:
         new_answer:
@@ -225,9 +227,13 @@ fr:
   activerecord:
     models:
       questions: Questions
+      question: question
       answers: Réponses
+      answer: Réponse
       users: Utilisateurs
+      user: Utilisateur
       votes: Votes
+      user: vote
     attributes:
       question:
         title: Titre
