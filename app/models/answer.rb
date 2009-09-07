@@ -20,6 +20,7 @@ class Answer
   key :question_id, String
   belongs_to :question
   has_many :votes, :as => "voteable", :dependent => :destroy
+  has_many :flags, :as => "flaggeable", :dependent => :destroy
 
   validates_presence_of :user_id
   validates_presence_of :question_id, :if => lambda { |e| e.parent_id.blank? }

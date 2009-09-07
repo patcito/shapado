@@ -2,6 +2,7 @@
 
 = error_messages_for :answer
 
+-flag = Flag.new
 
 #question
   =vote_box(@question, question_path(@question))
@@ -15,17 +16,21 @@
       = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
       or
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
-.left.internal{:style => "background: #DFDFDF; margin: 2px"}
-  = link_to "flag", flag_question_path(@question), :class => "flag-link"
--if AppConfig.enable_sharing
-  .right.internal{:style => "background: #DFDFDF; margin: 2px"}
-    %h2
-      = t("views.questions.show.share")
-    .buttons{:style => "padding: 2px"}
-      = render :partial => "twitter"
-      = render :partial => "identica"
-      = render :partial => "facebook"
-  .clear
+  .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
+    .left.internal
+      = link_to "flag", flag_question_path(@question), :class => "flag-link"
+    -if AppConfig.enable_sharing
+      .right
+        %h2
+          = t("views.questions.show.share")
+        .buttons{:style => "padding: 2px"}
+          = render :partial => "twitter"
+          = render :partial => "identica"
+          = render :partial => "facebook"
+    .clear
+  .flag_form.hidden
+    -flag.flaggeable = @question
+    = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
 
 %hr
 #answers
@@ -71,3 +76,7 @@
       %span.tag
         = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
   .clear
+  -unless @question.flags.empty?
+    %h1 reported as
+    = render :partial => "flags/list", :locals => {:flaggeable => @question}
+

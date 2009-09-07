@@ -21,6 +21,13 @@ namespace :populator do
         q.answer_added!
       end
 
+      rand(10).times do |i|
+        f = Flag.new(:flaggeable_id => q.id,
+                     :flaggeable_type => q.class.name,
+                     :user => users.rand,
+                     :type => Flag::TYPES[rand(Flag::TYPES.size)])
+      end
+
       q.save!
     end
   end

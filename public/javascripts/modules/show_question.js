@@ -18,6 +18,20 @@ $(document).ready(function() {
   $("form.nestedAnswerForm").hide();
   $(".addNestedAnswer").click(function() {
     $(this).parent().next().next("form.nestedAnswerForm").slideToggle();
+    $(this).parents(".flag_form").slideUp();
+    return false;
+  });
+
+
+  $(".flag_form .cancel").live("click", function() {
+    $(this).parents(".flag_form").slideUp();
+    return false;
+  });
+
+  $(".flag-link").live("click", function() {
+    $(this).parent().next().next("form.nestedAnswerForm").slideUp();
+    var form = $(this).parents(".actions").nextAll(".flag_form")
+    form.slideToggle();
     return false;
   });
 });

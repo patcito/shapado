@@ -13,6 +13,9 @@
     %span.markdown
       = markdown(answer.body)
     .clear
+    %h3 reported as
+    = render :partial => "flags/list", :locals => {:flaggeable => answer}
+    %br
     %hr
     / Nested Answers
     .children
@@ -24,13 +27,18 @@
 
           = h(child.body)
           %hr
-      = link_to "flag", flag_answer_path(answer)
+      %span.actions
+        = link_to "flag", flag_answer_path(answer), :class => "flag-link"
       .right
         = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear
       -form_for @answer, :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag I18n.t('views.answers.form.submit')
+      .flag_form.hidden
+        -flag = Flag.new
+        -flag.flaggeable = answer
+        = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
     / Buttons
     -if logged_in?
       .buttons
