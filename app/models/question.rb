@@ -31,6 +31,7 @@ class Question
   belongs_to :answer
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
+  has_many :flags, :as => "flagged", :dependent => :destroy
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug

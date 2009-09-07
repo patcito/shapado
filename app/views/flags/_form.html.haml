@@ -1,0 +1,22 @@
+
+-form_for flag, :html => {:class=>"form"} do |f|
+  =f.hidden_field "flaggeable_type", :value => flag.flaggeable.class.name
+  =f.hidden_field "flaggeable_id", :value => flag.flaggeable.id
+  =f.hidden_field "return_to", :value => source
+  .field-group
+    .label-container
+      %label
+        Please flag with care:
+
+  .field-group
+    .label-container
+      %label
+        Reason
+    .field
+      = f.select :type, Flag::TYPES
+
+  .field-group
+    .field
+      .buttons
+        = f.submit t("scaffold.create")
+        = link_to t("scaffold.cancel"), source, :class => "button cancel"

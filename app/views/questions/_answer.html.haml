@@ -24,6 +24,7 @@
 
           = h(child.body)
           %hr
+      = link_to "flag", flag_answer_path(answer)
       .right
         = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear

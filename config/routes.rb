@@ -11,9 +11,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :questions, :collection => {:tags => :get,
                                             :unanswered => :get},
                             :member => {:solve => :get,
-                                        :unsolve => :get}
-  map.resources :answers
+                                        :unsolve => :get,
+                                        :flag => :get}
+  map.resources :answers, :member => {:flag => :get}
   map.resources :votes
+  map.resources :flags
 
   map.search '/search', :controller => "welcome", :action => "search"
   map.root :controller => "welcome"

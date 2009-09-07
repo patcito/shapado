@@ -166,6 +166,16 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def flag
+    @question = Question.find_by_slug_or_id(params[:id])
+    @flag = Flag.new
+    @flag.flaggeable_type = @question.class.name
+    @flag.flaggeable_id = @question.id
+    respond_to do |format|
+      format.html
+    end
+  end
+
   protected
   def check_permissions
     @question = Question.find_by_slug_or_id(params[:id])

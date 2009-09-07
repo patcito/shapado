@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     logout_keeping_session!
     @user = User.new
     @user.safe_update(%w[login email name password_confirmation password
-                         language timezone identity_url], params[:model])
+                         language timezone identity_url], params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
       # Protects against session fixation attacks, causes request forgery

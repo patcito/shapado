@@ -15,6 +15,8 @@
       = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
       or
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
+.left.internal{:style => "background: #DFDFDF; margin: 2px"}
+  = link_to "flag", flag_question_path(@question), :class => "flag-link"
 -if AppConfig.enable_sharing
   .right.internal{:style => "background: #DFDFDF; margin: 2px"}
     %h2
