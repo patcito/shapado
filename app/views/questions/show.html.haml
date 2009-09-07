@@ -76,7 +76,6 @@
       %span.tag
         = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
   .clear
-  -unless @question.flags.empty?
+  -if @question.flags_count > 0
     %h1 reported as
     = render :partial => "flags/list", :locals => {:flaggeable => @question}
-

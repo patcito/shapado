@@ -9,6 +9,7 @@ class FlagsController < ApplicationController
       flag.user = current_user
       if flag.save
         flagged = true
+        flag.flaggeable.flagged!
         flash[:notice] = "thanks for your report"
       else
         flash[:error] = flag.errors.full_messages.join(", ")

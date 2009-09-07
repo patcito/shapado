@@ -6,6 +6,7 @@ class Answer
   key :language, String, :default => "en"
   key :votes_count, Integer, :default => 0
   key :votes_average, Integer, :default => 0
+  key :flags_count, Integer, :default => 0
 
   timestamps!
 
@@ -42,6 +43,11 @@ class Answer
       self.user.update_reputation(:answer_receives_down_vote)
       voter.update_reputation(:vote_down_answer)
     end
+  end
+
+  def flagged!
+    self.collection.update({:_id => self.id}, {:$inc => {:flags_count => 1}},
+                                               :upsert => true)
   end
 
   def comment?

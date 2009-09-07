@@ -13,8 +13,9 @@
     %span.markdown
       = markdown(answer.body)
     .clear
-    %h3 reported as
-    = render :partial => "flags/list", :locals => {:flaggeable => answer}
+    -if answer.flags_count > 0
+      %h3 reported as
+      = render :partial => "flags/list", :locals => {:flaggeable => answer}
     %br
     %hr
     / Nested Answers

@@ -14,6 +14,7 @@ class Question
   key :votes_count, Integer, :default => 0
   key :votes_average, Integer, :default => 0
   key :hotness, Integer, :default => 0
+  key :flags_count, Integer, :default => 0
 
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
@@ -86,6 +87,11 @@ class Question
 
   def answer_removed!
     self.collection.update({:_id => self.id}, {:$inc => {:answers_count => -1}},
+                                               :upsert => true)
+  end
+
+  def flagged!
+    self.collection.update({:_id => self.id}, {:$inc => {:flags_count => 1}},
                                                :upsert => true)
   end
 

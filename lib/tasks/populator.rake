@@ -13,6 +13,7 @@ namespace :populator do
                        :tags => Faker::Lorem.words(rand(6)+1),
                        :category => Shapado::CATEGORIES.rand)
       q.user = users.rand
+      q.save!
 
       rand(20).times do |i|
         q.answers << Answer.new(:user => users.rand,
@@ -26,9 +27,10 @@ namespace :populator do
                      :flaggeable_type => q.class.name,
                      :user => users.rand,
                      :type => Flag::TYPES[rand(Flag::TYPES.size)])
+        f.save
+        q.flagged!
       end
 
-      q.save!
     end
   end
 
