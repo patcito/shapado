@@ -4,6 +4,9 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include Subdomains
+  include ExceptionNotifiable
+  local_addresses.clear
+
   protect_from_forgery
 
   before_filter :find_current_tags

@@ -1,0 +1,10 @@
+<% unless @request.nil? -%>
+  <%= @request.protocol %><%= @host %><%= @request.request_uri %>
+<% end -%>
+A <%= @exception.class %> occurred in <%= @location %>:
+  <%= @exception.message %>
+  <%= @backtrace.first %>
+<% unless @the_blamed.nil? || @the_blamed[:author].nil? %>
+Git Blame: '<%=@the_blamed[:author]%>' last modified line #<%=@the_blamed[:line]%> in <%=@the_blamed[:file]%>
+<% end%>
+<%= @sections.map { |section| render_section(section) }.join %>
