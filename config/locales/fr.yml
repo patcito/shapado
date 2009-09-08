@@ -216,6 +216,22 @@ fr:
         flash_notice: "Merci d'avoir voté!"
         flash_error:  "Vous ne pouvez pas voter"
         unauthenticated: "anonymous users can't vote, please log in"
+    flags:
+      form:
+        spam: spam
+        offensive: offensive, abusive or Hate speech
+        attention: Requires Moderator attention
+        label: Please flag with care
+      create:
+        flash_notice: thanks for your report
+        flash_error: You cannot flag this
+    moderate:
+      index:
+        title: Moderate
+        ban: ban
+        content: content
+        item_title: title
+        all: all
     mailers:
       notifications:
         new_answer:

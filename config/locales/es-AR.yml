@@ -306,11 +306,21 @@
         flash_error:  "Usted no puede votar esta"
         unauthenticated: "los usuarios anónimos no puede votar"
     flags:
-        form:
-          spam: spam
-          offensive: ofensivo, abusivo o intolerante
-          attention: requiere atención de un moderador
-          label: por favor reporte con cuidado
+      form:
+        spam: spam
+        offensive: ofensivo, abusivo o intolerante
+        attention: requiere atención de un moderador
+        label: por favor reporte con cuidado
+      create:
+        flash_notice: gracias por su reporte
+        flash_error: usted no puede reportar como abuso esto
+    moderate:
+      index:
+        title: Moderar
+        ban: ban
+        content: contenido
+        item_title: titulo
+        all: todas
     mailers:
       notifications:
         new_answer:
