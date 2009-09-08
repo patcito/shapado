@@ -170,6 +170,8 @@
       user: usuario
       votes: Votos
       vote: voto
+      flags: reportes de abuso
+      flag: reporte de abuso
     attributes:
       question:
         title: Titulo
@@ -200,6 +202,8 @@
         last_logged_at: visto
         created_at: miembro hace
         reputation: Reputación
+      flag:
+        type: Razón
   support:
     array:
       words_connector: ", "
@@ -251,6 +255,8 @@
         another_answers: Otras respuestas
         solution: Solución
         share: "Compartir esta pregunta en"
+        flag: "Reportar abuso"
+        flags: Reportado como
       edit:
         title: Editar pregunta
       new:
@@ -298,6 +304,12 @@
         flash_notice: "Gracias por su voto"
         flash_error:  "Usted no puede votar esta"
         unauthenticated: "los usuarios anónimos no puede votar"
+    flags:
+        form:
+          spam: spam
+          offensive: ofensivo, abusivo o intolerante
+          attention: requiere atención de un moderador
+          label: por favor reporte con cuidado
     mailers:
       notifications:
         new_answer:

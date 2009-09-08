@@ -18,7 +18,7 @@
       = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
   .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
     .left.internal
-      = link_to "flag", flag_question_path(@question), :class => "flag-link"
+      = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link"
     -if AppConfig.enable_sharing
       .right
         %h2
@@ -77,5 +77,5 @@
         = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
   .clear
   -if @question.flags_count > 0
-    %h1 reported as
+    %h1= t("views.questions.show.flags")
     = render :partial => "flags/list", :locals => {:flaggeable => @question}

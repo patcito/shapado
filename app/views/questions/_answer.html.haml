@@ -14,7 +14,7 @@
       = markdown(answer.body)
     .clear
     -if answer.flags_count > 0
-      %h3 reported as
+      %h3= t("views.questions.show.flags")
       = render :partial => "flags/list", :locals => {:flaggeable => answer}
     %br
     %hr
@@ -29,7 +29,7 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to "flag", flag_answer_path(answer), :class => "flag-link"
+        = link_to t("views.questions.show.flag"), flag_answer_path(answer), :class => "flag-link"
       .right
         = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear

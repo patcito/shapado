@@ -4,16 +4,15 @@
   =f.hidden_field "flaggeable_id", :value => flag.flaggeable.id
   =f.hidden_field "return_to", :value => source
   .field-group
-    .label-container
-      %label
-        Please flag with care:
+    %label
+      =t(:label, :scope=>"views.flags.form")
 
   .field-group
     .label-container
       %label
-        Reason
+        =t(:type, :scope=>"activerecord.attributes.flag")
     .field
-      = f.select :type, Flag::TYPES
+      = f.select :type, Flag::TYPES.collect{|type| [t(type, :scope=>"views.flags.form"), type]}
 
   .field-group
     .field

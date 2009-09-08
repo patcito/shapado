@@ -170,6 +170,8 @@ fr:
         another_answers: Autres réponses
         solution: Solution
         share: "Partager cette question"
+        flag: flag
+        flags: reported as
       edit:
         title: Éditer la question
       new:
@@ -234,6 +236,8 @@ fr:
       user: Utilisateur
       votes: Votes
       user: vote
+      flags: flags
+      flag: flag
     attributes:
       question:
         title: Titre
