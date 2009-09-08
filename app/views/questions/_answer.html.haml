@@ -51,4 +51,7 @@
             = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer_id => answer), :class =>"button"
           -if solution
             = link_to t("unset_answer", :scope => "views.questions.show"),  unsolve_question_path(@question), :class =>"button"
+        -if current_user.moderator?
+          = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
+
   .clear

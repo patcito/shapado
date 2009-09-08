@@ -11,15 +11,26 @@ namespace :populator do
                        :body => Faker::Lorem.paragraphs(rand(10)+6),
                        :language => (rand(100) % 2 == 0) ? 'en' : 'es',
                        :tags => Faker::Lorem.words(rand(6)+1),
-                       :category => Shapado::CATEGORIES.rand)
+                       :category => Shapado::CATEGORIES.rand,
+                       :banned => false)
       q.user = users.rand
       q.save!
 
       rand(20).times do |i|
-        q.answers << Answer.new(:user => users.rand,
-                                :body => Faker::Lorem.paragraphs(rand(10)+1),
-                                :language => (rand(100) % 2 == 0) ? 'en' : 'es')
+        a = Answer.new( :user => users.rand,
+                        :body => Faker::Lorem.paragraphs(rand(10)+1),
+                        :language => (rand(100) % 2 == 0) ? 'en' : 'es')
+        q.answers << a
         q.answer_added!
+        rand(10).times do |i|
+          f = Flag.new(:flaggeable_id => a.id,
+                       :flaggeable_type => a.class.name,
+                       :user => users.rand,
+                       :type => Flag::TYPES[rand(Flag::TYPES.size)],
+                       :banned => false)
+          f.save
+          a.flagged!
+        end
       end
 
       rand(10).times do |i|

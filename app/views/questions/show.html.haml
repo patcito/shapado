@@ -12,10 +12,14 @@
   #question-body.markdown
     = markdown(@question.body)
   .buttons
-    -if logged_in? && current_user.can_modify?(@question)
-      = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
-      or
-      = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
+    -if logged_in?
+      -if current_user.can_modify?(@question)
+        = link_to I18n.t('scaffold.edit'), edit_question_path(@question), :class => "button"
+        or
+        = link_to I18n.t('scaffold.back'), questions_path, :class => "button cancel"
+      -if current_user.moderator?
+        = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+
   .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
     .left.internal
       = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link"

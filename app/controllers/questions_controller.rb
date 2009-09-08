@@ -23,7 +23,8 @@ class QuestionsController < ApplicationController
     end
 
     @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1,
-                                   :order => order, :conditions => scoped_conditions)
+                                   :order => order,
+                                   :conditions => scoped_conditions(:banned => false))
 
     add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
     if params[:tags]
@@ -51,7 +52,8 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find_by_slug_or_id(params[:id])
     @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
-                                          :order => "created_at asc")
+                                          :order => "created_at asc",
+                                          :conditions => {:banned => false})
 
     @answer = Answer.new
     @question.viewed!

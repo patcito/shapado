@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'
+  map.ban '/moderate/ban', :controller => 'admin/moderate', :action => 'ban'
 
   map.settings '/settings', :controller => 'users', :action => 'edit'
 

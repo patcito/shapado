@@ -7,6 +7,7 @@ class Answer
   key :votes_count, Integer, :default => 0
   key :votes_average, Integer, :default => 0
   key :flags_count, Integer, :default => 0
+  key :banned, Boolean, :default => false
 
   timestamps!
 
@@ -48,6 +49,19 @@ class Answer
   def flagged!
     self.collection.update({:_id => self.id}, {:$inc => {:flags_count => 1}},
                                                :upsert => true)
+  end
+
+
+  def ban
+    self.collection.update({:_id => self.id}, {:$set => {:banned => true}},
+                                               :upsert => true)
+  end
+
+  def self.ban(ids)
+    ids.each do |id|
+      self.collection.update({:_id => id}, {:$set => {:banned => true}},
+                                                       :upsert => true)
+    end
   end
 
   def comment?

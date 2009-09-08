@@ -16,6 +16,7 @@ class Question
   key :hotness, Integer, :default => 0
   key :flags_count, Integer, :default => 0
 
+  key :banned, Boolean, :default => false
   key :answered, Boolean, :default => false
   key :language, String, :default => "en"
 
@@ -123,6 +124,18 @@ class Question
     else
       self.collection.update({:_id => self.id}, {:$set => {:activity_at => now}},
                                                  :upsert => true)
+    end
+  end
+
+  def ban
+    self.collection.update({:_id => self.id}, {:$set => {:banned => true}},
+                                               :upsert => true)
+  end
+
+  def self.ban(ids)
+    ids.each do |id|
+      self.collection.update({:_id => id}, {:$set => {:banned => true}},
+                                                       :upsert => true)
     end
   end
 
