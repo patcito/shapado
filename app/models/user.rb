@@ -8,6 +8,8 @@ class User
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  ROLES = %w[user moderator admin]
+
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :email,                     String, :limit => 100
@@ -18,7 +20,7 @@ class User
   key :updated_at,                Time
   key :remember_token,            String, :limit => 40
   key :remember_token_expires_at, Time
-  key :admin,                     Boolean, :default => false
+  key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
   key :preferred_tags,            Array, :default => []
@@ -34,6 +36,7 @@ class User
   has_many :votes, :dependent => :destroy
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
+  validates_inclusion_of :role,  :within => ROLES
 
   timestamps!
 
@@ -97,7 +100,11 @@ class User
   end
 
   def admin?
-    self.admin
+    self.role == "admin"
+  end
+
+  def moderator?
+    admin? || self.role == "moderator"
   end
 
   def can_modify?(model)

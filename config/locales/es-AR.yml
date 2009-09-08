@@ -237,6 +237,7 @@
       languages: Idiomas
       permission_denied: Permiso denegado
       please_login: por favor inicia sesión
+      moderate: Moderar
     welcome:
       index:
         hot:     calientes

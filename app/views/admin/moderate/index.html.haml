@@ -1,0 +1,51 @@
+
+#moderate.subtitle{:class => @subtab}
+  = I18n.t("views.layout.moderate")
+  %span.right.tabs
+    %ul
+      %li.tab.all
+        = link_to "all", moderate_path(:tab=>"all")
+      %li.tab.questions
+        = link_to "questions", moderate_path(:tab=>"questions")
+      %li.tab.answers
+        = link_to "answers", moderate_path(:tab=>"answers")
+
+-if @questions
+  %h2  Questions
+  %table.list
+    %tr
+      %th
+        =t(:flags, :scope => "activerecord.models")
+      %th
+        title
+      %th
+        content
+    -@questions.each do |question|
+      %tr
+        %td.numeric
+          =question.flags_count
+        %td
+          = link_to h(question.title), question_path(question)
+        %td
+          = truncate(question.body, :length => 100)
+  = will_paginate @questions, :param_name => "questions_page"
+
+-if @answers
+  %h2 Answers
+  %table.list
+    %tr
+      %th
+        =t(:flags, :scope => "activerecord.models")
+      %th
+        title
+      %th
+        content
+    -@answers.each do |answer|
+      %tr
+        %td.numeric
+          =answer.flags_count
+        %td
+          = link_to h(answer.question.title), question_path(answer.question)
+        %td
+          = truncate(answer.body, :length => 100)
+  = will_paginate @answers, :param_name => "answers_page"

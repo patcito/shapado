@@ -160,6 +160,7 @@ fr:
       languages: Langues
       permission_denied: Permission refusée
       please_login: please log in
+      moderate: Moderate
     questions:
       index:
         title: Toutes les questions

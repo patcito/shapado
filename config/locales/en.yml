@@ -60,6 +60,7 @@ en:
       languages: Languages
       permission_denied: Permission denied
       please_login: please log in
+      moderate: Moderate
     welcome:
       index:
         hot:     hot

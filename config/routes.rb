@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'
 
   map.settings '/settings', :controller => 'users', :action => 'edit'
 
