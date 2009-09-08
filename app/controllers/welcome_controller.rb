@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
                                    :page => params[:page] || 1,
                                    :limit => 20,
                                    :order => order,
-                                   :conditions => scoped_conditions({:answered => false}))
+                                   :conditions => scoped_conditions({:answered => false, :banned => false}))
   end
 
   def search
