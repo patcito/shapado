@@ -1,6 +1,7 @@
 class Admin::ModerateController < ApplicationController
   before_filter :login_required
   before_filter :moderator_required
+
   def index
     @subtab = params.fetch(:tab, "all")
 
@@ -11,6 +12,7 @@ class Admin::ModerateController < ApplicationController
                                                      "banned" => false},
                                      :page => params[:questions_page] || 1)
     end
+
     if @subtab == "all" || @subtab == "answers"
       @answers = Answer.paginate(:per_page => 25,
                                  :order => "flags_count desc",
@@ -29,6 +31,7 @@ class Admin::ModerateController < ApplicationController
     end
   end
 
+  protected
   def moderator_required
     unless current_user.moderator?
       flash[:error] = t("views.layout.permission_denied")
@@ -37,3 +40,4 @@ class Admin::ModerateController < ApplicationController
   end
 
 end
+

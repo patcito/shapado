@@ -1,10 +1,11 @@
 class FlagsController < ApplicationController
-#   before_filter :check_permissions
+  before_filter :login_required
 
   def create
     flag = Flag.new
     flag.safe_update(%w[flaggeable_type flaggeable_id type], params[:flag])
     flagged = false
+
     if flag.flaggeable.user != current_user
       flag.user = current_user
       if flag.save
@@ -17,7 +18,6 @@ class FlagsController < ApplicationController
     else
       flash[:error] = "You cannot flag this"
     end
-
 
     respond_to do |format|
       format.html{redirect_to params[:flag][:return_to]}
@@ -33,3 +33,4 @@ class FlagsController < ApplicationController
     end
   end
 end
+
