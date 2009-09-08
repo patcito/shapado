@@ -11,12 +11,12 @@ class FlagsController < ApplicationController
       if flag.save
         flagged = true
         flag.flaggeable.flagged!
-        flash[:notice] = "thanks for your report"
+        flash[:notice] = t(:flash_notice, :scope => "views.flags.create")
       else
         flash[:error] = flag.errors.full_messages.join(", ")
       end
     else
-      flash[:error] = "You cannot flag this"
+      flash[:error] = t(:flash_error, :scope => "views.flags.create")
     end
 
     respond_to do |format|

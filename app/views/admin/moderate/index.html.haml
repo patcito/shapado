@@ -4,24 +4,25 @@
   %span.right.tabs
     %ul
       %li.tab.all
-        = link_to "all", moderate_path(:tab=>"all")
+        = link_to t(:all, :scope => "views.moderate.index"), moderate_path(:tab=>"all")
       %li.tab.questions
-        = link_to "questions", moderate_path(:tab=>"questions")
+        = link_to t(:questions, :scope => "activerecord.models"), moderate_path(:tab=>"questions")
       %li.tab.answers
-        = link_to "answers", moderate_path(:tab=>"answers")
+        = link_to t(:answers, :scope => "activerecord.models"), moderate_path(:tab=>"answers")
 
 -form_tag ban_path do
+  =submit_tag "ban"
   -if @questions
-    %h2  Questions
+    %h2= t(:questions, :scope => "activerecord.models")
     %table.list
       %tr
         %th
         %th
           =t(:flags, :scope => "activerecord.models")
         %th
-          title
+          =t(:item_title, :scope => "views.moderate.index")
         %th
-          content
+          =t(:content, :scope => "views.moderate.index")
       -@questions.each do |question|
         %tr
           %th
@@ -35,16 +36,16 @@
     = will_paginate @questions, :param_name => "questions_page"
 
   -if @answers
-    %h2 Answers
+    %h2= t(:answers, :scope => "activerecord.models")
     %table.list
       %tr
         %th
         %th
           =t(:flags, :scope => "activerecord.models")
         %th
-          title
+          =t(:item_title, :scope => "views.moderate.index")
         %th
-          content
+          =t(:content, :scope => "views.moderate.index")
       -@answers.each do |answer|
         %tr
           %th
@@ -57,4 +58,4 @@
             = truncate(answer.body, :length => 100)
     = will_paginate @answers, :param_name => "answers_page"
 
-  =submit_tag "ban"
+  = submit_tag "ban"
