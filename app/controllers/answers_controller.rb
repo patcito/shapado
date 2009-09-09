@@ -2,6 +2,13 @@ class AnswersController < ApplicationController
   before_filter :login_required
   before_filter :check_permissions, :only => [:edit, :update, :destroy]
 
+  helper :votes
+
+  def show
+    @answer = Answer.find(params[:id])
+    @question = @answer.question
+  end
+
   def create
     @answer = Answer.new
     @answer.safe_update(%w[parent_id body], params[:answer])

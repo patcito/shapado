@@ -30,17 +30,21 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
+        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(@question.id, answer, :anchor => answer.id)
+        -if current_user != answer.user
+          |
+          = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
       .right
         = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear
       -form_for @answer, :url => question_answers_path(@question.id, @answer), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag I18n.t('views.answers.form.submit')
-      .flag_form.hidden
-        -flag = Flag.new
-        -flag.flaggeable = answer
-        = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
+      -if current_user != answer.user
+        .flag_form.hidden
+          -flag = Flag.new
+          -flag.flaggeable = answer
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
     / Buttons
     -if logged_in?
       .buttons
