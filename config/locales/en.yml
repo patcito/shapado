@@ -199,6 +199,8 @@ en:
         last_logged_at: seen
         created_at: member for
         reputation: Reputation
+      answer:
+        link: link
       flag:
         type: Reason
   languages:

@@ -1,4 +1,5 @@
-= stylesheet_link_tag 'compiled/components/show_question.css'
+-content_for :css do
+  = stylesheet_link_tag 'compiled/components/show_question.css'
 
 = error_messages_for :answer
 
@@ -21,8 +22,9 @@
         = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
 
   .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
-    .left.internal
-      = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link"
+    -if current_user != @question.user
+      .left.internal
+        = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link"
     -if AppConfig.enable_sharing
       .right
         %h2
@@ -32,9 +34,10 @@
           = render :partial => "identica"
           = render :partial => "facebook"
     .clear
-  .flag_form.hidden
-    -flag.flaggeable = @question
-    = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
+  -if current_user != @question.user
+    .flag_form.hidden
+      -flag.flaggeable = @question
+      = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
 
 %hr
 #answers
@@ -57,7 +60,7 @@
 
 %hr
 -unless @question.answered
-  -form_for @answer, :html => {:class => "form mainAnswerForm"} do |f|
+  -form_for @answer, :url => question_answers_path(@question.id, @answer), :html => {:class => "form mainAnswerForm"} do |f|
     = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
     = submit_tag I18n.t('views.answers.form.submit')
   %hr

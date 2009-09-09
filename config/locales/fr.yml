@@ -285,6 +285,10 @@ fr:
         last_logged_at: vu
         created_at: member for
         reputation: Reputation
+      answer:
+        link: link
+      flag:
+        type: Reason
   categories:
     technology:   Technologie
     programming:  Programmation

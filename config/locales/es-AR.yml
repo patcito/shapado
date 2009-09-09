@@ -202,6 +202,8 @@
         last_logged_at: visto
         created_at: miembro hace
         reputation: Reputación
+      answer:
+        link: enlace
       flag:
         type: Razón
   support:

@@ -1,21 +1,22 @@
+
 -if !@questions.empty?
-  %h1
-    Questions
+  %h2
+    = t(:questions, :scope => "activerecord.models")
   %ul
     -@questions.each do |question|
-      %li{:style => "border-bottom: 1px solid grey"}
+      .question
         %strong
           = link_to h(question.title), question_path(question)
         %br
         = truncate(question.body, :length => 400)
 
 -if !@answers.empty?
-  %h1
-    Answers
+  %h2
+    = t(:answers, :scope => "activerecord.models")
   %ul
     -@answers.each do |answer|
-      %li{:style => "border-bottom: 1px solid grey"}
+      .question
         %strong
-          = link_to h(answer.question.title), question_path(answer.question)
+          = link_to h(answer.question.title), question_path(answer.question, :anchor => answer.id)
         %br
         = truncate(answer.body, :length => 400)

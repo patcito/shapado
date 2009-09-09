@@ -2,6 +2,7 @@
 -solution = solution || false
 
 .answer{:class => solution ? "solution" : ""}
+  %a{:name=>"#{answer.id}", :href=>"#{answer.id}"}
   .answer_title
     .gravatar.left{:style => "padding: 2px"}
       = gravatar(answer.user.email.to_s, :size => 14)
@@ -29,23 +30,27 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to t("views.questions.show.flag"), flag_answer_path(answer), :class => "flag-link"
+        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(@question.id, answer, :anchor => answer.id)
+        -if current_user != answer.user
+          |
+          = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
       .right
         = link_to "Add Comment...", "#", :class => "addNestedAnswer"
       .clear
-      -form_for @answer, :html => {:class => "form nestedAnswerForm"} do |f|
+      -form_for @answer, :url => question_answers_path(@question.id, @answer), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag I18n.t('views.answers.form.submit')
-      .flag_form.hidden
-        -flag = Flag.new
-        -flag.flaggeable = answer
-        = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
+      -if current_user != answer.user
+        .flag_form.hidden
+          -flag = Flag.new
+          -flag.flaggeable = answer
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
     / Buttons
     -if logged_in?
       .buttons
         -if current_user.can_modify?(answer)
-          = link_to I18n.t("scaffold.edit"), edit_answer_path(answer), :class =>"button"
-          = link_to I18n.t("scaffold.destroy"), answer, :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
+          = link_to I18n.t("scaffold.edit"), edit_question_answer_path(@question, answer), :class =>"button"
+          = link_to I18n.t("scaffold.destroy"), question_answer_path(@question, answer), :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
         -if current_user.can_modify?(@question)
           -unless @question.answered
             = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer_id => answer), :class =>"button"

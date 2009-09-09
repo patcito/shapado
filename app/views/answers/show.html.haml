@@ -1,0 +1,12 @@
+-content_for :css do
+  = stylesheet_link_tag 'compiled/components/show_question.css'
+
+#question
+  #question-title
+    %h2
+      = link_to h(@question.title), question_path(@question)
+  #question-body.markdown
+    = markdown(@question.body)
+
+#answers
+  =render :partial=> "questions/answer", :locals=> {:question => @question, :answer => @answer}
