@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update]
   tabs :default => :users
   def index
-    @users = User.paginate(:per_page => params[:per_page]||25,
+    @users = User.paginate(:per_page => params[:per_page]||24,
                            :order => "reputation desc",
                            :page => params[:page] || 1)
   end

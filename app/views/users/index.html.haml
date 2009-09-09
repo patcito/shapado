@@ -6,19 +6,27 @@
   -@users.each_slice(3) do |line|
     %tr
       -line.each do |user|
-        %td
-          %span
-            = gravatar user.email.to_s, :class => "left"
-            = link_to h(user.login), user_path(user)
-            %br
-          %span.clear
-            %span
-              &= user.reputation
-              %b{:title => t(:reputation, :scope => "activerecord.attributes.user")}
-                = t(:reputation, :scope => "activerecord.attributes.user")[0..1]
-              &= user.questions.count
-              %b{:title => t(:questions, :scope => "activerecord.models")}
-                = t(:questions, :scope => "activerecord.models")[0..1]
-              &= user.answers.count
-              %b{:title => t(:answers, :scope => "activerecord.models")}
-                = t(:answers, :scope => "activerecord.models")[0..1]
+        %td.users_info{:style => "padding: 4px"}
+          .gravatar.left{:style => "padding: 5px"}
+            = gravatar user.email.to_s, :size => 64
+          .user_box
+            %span.login{:style => "padding: 5px; font-size: 14px"}
+              = link_to h(user.login), user_path(user), :style => "color: #ACACAC"
+            %table{:style=> "border-bottom: 4px solid #F6F6F6; padding-top: 3px; width: 50%"}
+              %tr
+                %td.users_info_item.first_col.reputation
+                  &= user.reputation
+                %td.users_info_item.sec_col{:title => t(:reputation, :scope => "activerecord.attributes.user")}
+                  = t(:reputation, :scope => "activerecord.attributes.user")
+              %tr
+                %td.users_info_item.first_col.questions_count
+                  &= user.questions.count
+                %td.users_info_item.sec_col{:title => t(:questions, :scope => "activerecord.models")}
+                  = t(:questions, :scope => "activerecord.models")
+              %tr
+                %td.users_info_item.first_col.answers_count
+                  &= user.answers.count
+                %td.users_info_item.sec_col{:title => t(:answers, :scope => "activerecord.models")}
+                  = t(:answers, :scope => "activerecord.models")
+          .clear
+= will_paginate @users
