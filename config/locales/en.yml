@@ -81,6 +81,7 @@ en:
         share: "Share this question in"
         flag: flag
         flags: reported as
+        add_comment: Add comment...
       edit:
         title: Editing question
       new:

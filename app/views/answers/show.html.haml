@@ -9,4 +9,4 @@
     = markdown(@question.body)
 
 #answers
-  =render :partial=> "questions/answer", :locals=> {:question => @question, :answer => @answer}
+  =render :partial=> "questions/answer", :locals=> {:question => @question, :answer => @answer, :comment => Answer.new}

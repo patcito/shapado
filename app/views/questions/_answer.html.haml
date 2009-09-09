@@ -1,5 +1,5 @@
 
--solution = solution || false
+-solution = local_assigns[:solution]  || false
 
 .answer{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}", :href=>"#{answer.id}"}
@@ -35,9 +35,9 @@
           |
           = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
       .right
-        = link_to "Add Comment...", "#", :class => "addNestedAnswer"
+        = link_to t("views.questions.show.add_comment"), "#", :class => "addNestedAnswer"
       .clear
-      -form_for @answer, :url => question_answers_path(@question.id, @answer), :html => {:class => "form nestedAnswerForm"} do |f|
+      -form_for comment, :url => question_answers_path(@question.id, comment), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag I18n.t('views.answers.form.submit')
       -if current_user != answer.user
