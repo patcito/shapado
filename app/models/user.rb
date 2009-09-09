@@ -25,10 +25,10 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
-  key :notification_opts,      Hash, :default => {}
+  key :notification_opts,         Hash, :default => {}
 
-  key :language,                      String, :default => "en"
-  key :timezone,                      String
+  key :language,                  String, :default => "en"
+  key :timezone,                  String
   key :reputation,                Float, :default => 1.0
 
   has_many :questions, :dependent => :destroy
