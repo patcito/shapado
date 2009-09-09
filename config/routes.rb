@@ -14,8 +14,9 @@ ActionController::Routing::Routes.draw do |map|
                                             :unanswered => :get},
                             :member => {:solve => :get,
                                         :unsolve => :get,
-                                        :flag => :get}
-  map.resources :answers, :member => {:flag => :get}
+                                        :flag => :get} do |questions|
+    questions.resources :answers, :member => {:flag => :get}
+  end
   map.resources :votes
   map.resources :flags
 
