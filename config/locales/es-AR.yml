@@ -260,6 +260,7 @@
         share: "Compartir esta pregunta en"
         flag: "Reportar abuso"
         flags: Reportado como
+        add_comment: Añadir comentario...
       edit:
         title: Editar pregunta
       new:

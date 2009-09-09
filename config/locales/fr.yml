@@ -173,6 +173,7 @@ fr:
         share: "Partager cette question"
         flag: flag
         flags: reported as
+        add_comment: Add comment...
       edit:
         title: Éditer la question
       new:

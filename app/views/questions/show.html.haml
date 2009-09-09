@@ -44,18 +44,18 @@
   -if @question.answered
     %h2
       = t("solution", :scope => "views.questions.show")
-    =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true}
+    =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true, :comment => @answer}
     -@answers.delete(@question.answer)
     %hr
     %h2
       = h(t("another_answers", :scope => "views.questions.show"))
     -@answers.each do |answer|
-      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   -else
     %h2
       = h(I18n.t('views.questions.show.answers'))
     -@answers.each do |answer|
-      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   =will_paginate(@answers)
 
 %hr
