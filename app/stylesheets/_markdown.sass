@@ -1,20 +1,25 @@
 @import compass/utilities/general/reset.sass
 
 .markdown
-  font-size: 20px
-  color: #000
+  font-size: 14px
+  color: #222
   strong
     font-weight: bold
   em
     font-style: italic
   ul
     list-style: disc outside
+    padding: 4px
+
   ol
     list-style: decimal outside
+    padding: 4px
 
   li
     margin-left: 1.3em
     padding-left: 0.5em
+    font-weight: normal
+    font-size: 14px
 
   h1,h2,h3,h4,h5,h6
     +reset-font
@@ -22,17 +27,15 @@
     font-weight: bold
 
   h1
-    font-size: 32px
+    font-size: 20px
   h2
-    font-size: 30px
+    font-size: 18px
   h3
-    font-size: 28px
+    font-size: 16px
   h4
-    font-size: 26px
+    font-size: 14px
   h5
-    font-size: 24px
-  h5
-    font-size: 22px
+    font-size: 14px
 
   code
     width: 80%
