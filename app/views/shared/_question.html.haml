@@ -16,13 +16,12 @@
       %br
       = t(:views, :scope => "activerecord.attributes.question")
   %span
-    %h4
+    .question_header
       .gravatar.left{:style => "padding: 5px"}
-        = gravatar(question.user.email.to_s, :size => 24)
+        = gravatar(question.user.email.to_s, :size => 22)
       = link_to h(question.title), question_path(question)
-    %span
+    .question_body{:style => "padding: 3px"}
       &= truncate(question.body, :length => 60)
-  .clear
     .tags-list
       -question.tags.each do |tag|
         %span.tag
