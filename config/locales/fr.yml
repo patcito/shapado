@@ -161,6 +161,11 @@ fr:
       permission_denied: Permission refusée
       please_login: please log in
       moderate: Moderate
+      home: home
+    welcome:
+      index:
+        hot:     hot
+        active:  active
     questions:
       index:
         title: Toutes les questions
@@ -244,6 +249,22 @@ fr:
         flash_error: "Nous n'avons pas pu vous connecter en tant que '{{login}}'"
       destroy:
         flash_notice: "Vous avez été déconnecté."
+    errors:
+      options_label: "Other things to try:"
+      go_to: "go to {{link}} page"
+      help_us_answer: Help us to answer {{link}}
+      search: "search"
+      forbidden:
+        explanation: "You don't have the required rights to access this page."
+      not_found:
+        title: "Page not found."
+        explanation: "You may have mistyped the address or the page may have moved."
+      unprocessable_entity:
+        title: "The change you wanted was rejected."
+        explanation: "Maybe you tried to change something you didn't have access to."
+      internal_error:
+        title: "We're sorry, but something went wrong."
+        explanation: "We've been notified about this issue and we'll take a look at it shortly."
   activerecord:
     models:
       questions: Questions

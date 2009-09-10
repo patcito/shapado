@@ -22,6 +22,7 @@
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/errors.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/components/droppy.css', :media => 'screen, projection'
     = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
     = yield :css
@@ -63,7 +64,6 @@
                     %li
                       = link_to desc, tag_url(value)
 
-
         #user-actions
           #user-nav
             -if logged_in?
@@ -85,34 +85,9 @@
                       = I18n.t('views.layout.search', :default => "Go")
       .clear
       %br
-      #navigation{:class => "#{@active_tab}"}
-        #menu_primary
-          %ul
-            %li.questions
-              =link_to I18n.t("views.layout.questions"), questions_path
-            %li.tags
-              =link_to I18n.t("views.layout.tags"), tags_questions_path
-            %li.users
-              =link_to I18n.t("views.layout.users"), users_path
-            %li.unanswered
-              =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path
-            -if logged_in?
-              -if current_user.moderator?
-                %li.moderate
-                  =link_to I18n.t("views.layout.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
-              -current_user.preferred_tags.each do |tag|
-                %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
-                  =link_to h(tag), questions_path(:tags => tag)
-            %li.ask_question
-              =link_to I18n.t("views.layout.ask_question"), new_question_path
       #main-content
-        #messages
-          -flash.each do |k,v|
-            .message{:class => k.to_s}
-              .internal.markdown
-                = markdown(v)
         #layout
-          #content
+          #content{:style=>"width: 100%"}
             .internal
               -if !logged_in?
                 .box.highlight
@@ -121,19 +96,6 @@
                     &nbsp;
               %br
               = yield
-          #sidebar
-            .internal
-              .questions_count
-                -if @questions
-                  -if @question.respond_to?(:total_entries)
-                    = number_with_delimiter(@questions.total_entries)
-                  -else
-                    = number_with_delimiter(@questions.size)
-                -else
-                  = number_with_delimiter(Question.count(language_conditions))
-              %p
-                = t "views.layout.questions"
-              = yield :sidebar
       #footer
         %hr
         %div

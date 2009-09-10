@@ -1,0 +1,20 @@
+.error-dialog
+  %h1= title
+  #dialog-content
+    %span
+      = image_tag(error_image)
+      %p= explanation
+      .error-options
+        %b= t("options_label", :scope => "views.errors")
+        %ul
+          %li
+            = t("go_to", :scope => "views.errors", :link =>link_to(t("views.layout.home"), root_path))
+          %li
+            = t("help_us_answer", :scope => "views.errors", :link => link_to(t("views.layout.questions"), questions_path))
+          %li
+            -form_tag search_path, :class => "form", :method => :get do
+              =t("search", :scope => "views.errors")
+              = text_field_tag 'q', "", :class => "text-field"
+              %button{:type => "submit"}
+                = I18n.t('views.layout.search', :default => "Go")
+    .clear
