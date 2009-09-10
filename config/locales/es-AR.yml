@@ -353,16 +353,18 @@
         title: "Lo sentimos pero algo salió mal."
         explanation: "Ya se nos ha informado de este problema y lo resolveremos a la brevedad."
   categories:
-    technology:   Tecnología
-    programming:  Programación
-    science:      Ciencia
-    politics:     Politica
-    society:      Sociedad
-    religion:     Religión
-    sports:       Deportes
-    music:        Musica
-    gaming:       Juegos
-    lifestyle:    Estilo de vida
+    technology:    Tecnología
+    programming:   Programación
+    science:       Ciencia
+    politics:      Politica
+    religion:      Religión
+    sports:        Deportes
+    music:         Musica
+    gaming:        Juegos
+    lifestyle:     Estilo de vida
+    business:      Negocios
+    entertainment: Entretenimiento
+    offbeat:       Poco convencional
   languages:
     en:      Inglés
     es:      Español

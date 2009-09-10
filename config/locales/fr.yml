@@ -312,16 +312,18 @@ fr:
       flag:
         type: Reason
   categories:
-    technology:   Technologie
-    programming:  Programmation
-    science:      Science
-    politics:     Politique
-    society:      Société
-    religion:     Religion
-    sports:       Sports
-    music:        Musique
-    gaming:       Jeux vidéos
-    lifestyle:    Style de vie
+    technology:    Technologie
+    programming:   Programmation
+    science:       Science
+    politics:      Politiqu
+    religion:      Religion
+    sports:        Sports
+    music:         Musique
+    gaming:        Jeux vidéos
+    lifestyle:     Style de vie
+    business:      Business
+    entertainment: Entertainment
+    offbeat:       Offbeat
   languages:
     en:      Anglais
     es:      Espagnol
