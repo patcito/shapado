@@ -3,6 +3,10 @@
 
 class ApplicationController < ActionController::Base
   include ExceptionNotifiable
+  include SuperExceptionNotifier
+  include ExceptionNotifierHelper
+  self.error_layout = 'error'
+
   include AuthenticatedSystem
   include Subdomains
   local_addresses.clear
@@ -13,6 +17,10 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   protected
+  def access_denied
+    raise AccessDenied
+  end
+
   def find_current_tags
     @current_tags ||= begin
       metatags = Set.new

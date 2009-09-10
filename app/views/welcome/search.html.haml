@@ -15,8 +15,9 @@
     = t(:answers, :scope => "activerecord.models")
   %ul
     -@answers.each do |answer|
-      .question
-        %strong
-          = link_to h(answer.question.title), question_path(answer.question, :anchor => answer.id)
-        %br
-        = truncate(answer.body, :length => 400)
+      -if answer.question.id
+        .question
+          %strong
+            = link_to h(answer.question.title), question_answer_path(answer.question.id, answer.id, :anchor => answer.id)
+          %br
+          = truncate(answer.body, :length => 400)

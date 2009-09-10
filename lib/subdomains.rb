@@ -26,6 +26,7 @@ module Subdomains
 
   protected
   def subdomain_url(subdomain, params = {})
+    params = {:controller=>"welcome",:action=>"index"}.merge(params)
     host = request.host.split("\.").last(2).join(".")
     request.protocol + "#{subdomain}." + host + request.port_string +
                                           url_for({:only_path =>true}.merge(params))

@@ -61,6 +61,7 @@ en:
       permission_denied: Permission denied
       please_login: please log in
       moderate: Moderate
+      home: home
     welcome:
       index:
         hot:     hot
@@ -157,6 +158,22 @@ en:
         flash_error: "Couldn't log you in as '{{login}}'"
       destroy:
         flash_notice: "You have been logged out."
+    errors:
+      options_label: "Other things to try:"
+      go_to: "go to {{link}} page"
+      help_us_answer: Help us to answer {{link}}
+      search: "search"
+      forbidden:
+        explanation: "You don't have the required rights to access this page."
+      not_found:
+        title: "Page not found."
+        explanation: "You may have mistyped the address or the page may have moved."
+      unprocessable_entity:
+        title: "The change you wanted was rejected."
+        explanation: "Maybe you tried to change something you didn't have access to."
+      internal_error:
+        title: "We're sorry, but something went wrong."
+        explanation: "We've been notified about this issue and we'll take a look at it shortly."
   activerecord:
     models:
       questions: Questions
