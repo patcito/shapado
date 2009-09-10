@@ -1,3 +1,4 @@
 module Shapado
-  CATEGORIES = %w{technology programming science politics society religion sports music gaming lifestyle}
+  CATEGORIES = %w[technology programming business science politics religion
+                  sports entertainment gaming lifestyle offbeat]
 end
