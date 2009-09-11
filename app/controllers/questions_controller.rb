@@ -28,7 +28,8 @@ class QuestionsController < ApplicationController
 
     add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
     if params[:tags]
-      add_feeds_url(url_for(:format => "atom", :tags => params[:tags]), params[:tags].inspect)
+      add_feeds_url(url_for(:format => "atom", :tags => params[:tags]),
+                    "#{t("activerecord.models.questions")} #{params[:tags].inspect}")
     end
 
     respond_to do |format|
@@ -58,7 +59,7 @@ class QuestionsController < ApplicationController
     @answer = Answer.new
     @question.viewed!
 
-    add_feeds_url(url_for(:format => "atom"), @question.title)
+    add_feeds_url(url_for(:format => "atom"), "question")
 
     respond_to do |format|
       format.html # show.html.erb

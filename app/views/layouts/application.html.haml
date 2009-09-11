@@ -134,8 +134,11 @@
               %p
                 = t "views.layout.questions"
               = yield :sidebar
-            = render :partial => "shared/adbard"
-
+              = render :partial => "shared/adbard"
+              -if @feed_urls && !@feed_urls.empty?
+                -@feed_urls.each do |title, url|
+                  .feed-url
+                    =link_to h(title), url
       #footer
         %hr
         %div
