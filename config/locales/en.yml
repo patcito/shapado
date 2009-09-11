@@ -62,6 +62,7 @@ en:
       please_login: please log in
       moderate: Moderate
       home: home
+      from: from {{site}}
     welcome:
       index:
         hot:     hot

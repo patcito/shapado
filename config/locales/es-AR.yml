@@ -241,6 +241,7 @@
       please_login: por favor inicia sesión
       moderate: Moderar
       home: pagina principal
+      from: desde {{site}}
     welcome:
       index:
         hot:     calientes
