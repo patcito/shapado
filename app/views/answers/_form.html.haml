@@ -8,4 +8,6 @@
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]
   = f.text_area :body, opts
   -if local_assigns[:markdown]
+    %h3
+      = t("views.answers.form.preview")
     #markdown_preview.markdown

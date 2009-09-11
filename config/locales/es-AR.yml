@@ -276,6 +276,7 @@
     answers:
       form:
         answer_label: Conteste la pregunta
+        preview: Vista previa
         submit: Contestar
       edit:
         title: Editar respuesta
