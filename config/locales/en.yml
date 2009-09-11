@@ -99,6 +99,7 @@ en:
       form:
         answer_label: Answer the question
         submit: Answer
+        preview: Preview
       edit:
         title: Editing answer
       create:
