@@ -71,7 +71,8 @@
   = link_to h(@question.user.login), user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)
-  = t("views.layout.from", :site => "<b>#{@question.user.limitry_name}</b>")
+  = t("views.layout.from", :site => "<b>#{@question.user.country_name}</b>")
+  = country_flag(@question.user.country_code, @question.user.country_name)
   %br
   %b
     = I18n.t('activerecord.attributes.question.category')

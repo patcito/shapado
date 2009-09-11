@@ -32,8 +32,8 @@ class User
   key :reputation,                Float, :default => 1.0
 
   key :ip,                        String
-  key :limitry_code,              String
-  key :limitry_name,              String, :default => "unknown"
+  key :country_code,              String
+  key :country_name,              String, :default => "unknown"
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -155,8 +155,8 @@ class User
   def localize(ip)
     l = Localize.country(ip)
     self.ip = ip
-    self.limitry_code = l[2]
-    self.limitry_name = l[4]
+    self.country_code = l[2]
+    self.country_name = l[4]
     save
   end
 
