@@ -26,10 +26,10 @@ class QuestionsController < ApplicationController
                                    :order => order,
                                    :conditions => scoped_conditions(:banned => false))
 
-    add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
+    add_feeds_url(url_for(:format => "atom"), t("views.feeds.questions"))
     if params[:tags]
       add_feeds_url(url_for(:format => "atom", :tags => params[:tags]),
-                    "#{t("activerecord.models.questions")} #{params[:tags].inspect}")
+                    "#{t("views.feeds.tag")} #{params[:tags].inspect}")
     end
 
     respond_to do |format|
@@ -59,7 +59,7 @@ class QuestionsController < ApplicationController
     @answer = Answer.new
     @question.viewed!
 
-    add_feeds_url(url_for(:format => "atom"), "question")
+    add_feeds_url(url_for(:format => "atom"), t("views.feeds.question"))
 
     respond_to do |format|
       format.html # show.html.erb

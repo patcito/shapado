@@ -78,6 +78,7 @@
     = I18n.t('activerecord.attributes.question.category')
   = category_desc h(@question.category)
   %br
+  %br
   %h1
     = h(I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
   .tags-list
@@ -85,6 +86,7 @@
       %span.tag
         = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
   .clear
+  %br
   -if @question.flags_count > 0
     %h1= t("views.questions.show.flags")
     = render :partial => "flags/list", :locals => {:flaggeable => @question}

@@ -618,14 +618,30 @@ table.list
         color: #dedede
         background: #004181
 
-.feed-url
-  background: url("/images/application-rss-xml.png") no-repeat
-  padding-left: 24px
-  color: #dedede
-  margin: 5px
-  line-height: 20px
-  font-size: 0.9em
-  a
-    text-decoration: none
-    color: #666
+a.feed_url
+  background: #DEDEFE
+  color: #666
+  text-decoration: none
+  font: normal 15px arial, sans-serif
+  height: 54px
+  display: block
+  margin-right: 6px
+  padding-right: 18px
+  border-bottom: 2px #ACACAC solid
+  border-right: 1px #ACACAC solid
 
+  &:hover
+    background: #D0D0EE
+
+  span.icon
+    width: 32px
+    float: left
+    padding: 10px 0
+    img:
+      height: 100%
+
+  span.text
+    float: left
+    width: 145px
+    padding: 8px 0 5px 1px
+    text-align: center

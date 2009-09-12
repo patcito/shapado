@@ -176,6 +176,10 @@ en:
       internal_error:
         title: "We're sorry, but something went wrong."
         explanation: "We've been notified about this issue and we'll take a look at it shortly."
+    feeds:
+      question: Subscribe To This Question
+      questions: Subscribe To All Questions
+      tag: Subscribe To Tag
   activerecord:
     models:
       questions: Questions

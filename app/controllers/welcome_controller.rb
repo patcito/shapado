@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
     end
 
 
-    add_feeds_url(url_for(:format => "atom"), t("activerecord.models.questions"))
+    add_feeds_url(url_for(:format => "atom"), t("views.feeds.questions"))
 
     @questions = Question.paginate(:per_page => 25,
                                    :page => params[:page] || 1,

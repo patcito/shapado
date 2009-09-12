@@ -354,6 +354,10 @@
       internal_error:
         title: "Lo sentimos pero algo salió mal."
         explanation: "Ya se nos ha informado de este problema y lo resolveremos a la brevedad."
+    feeds:
+      question: Subscribirse A Esta Pregunta
+      questions: Subscribirse A Todas Las Preguntas
+      tag: Subscribirse Al Tag
   categories:
     technology:    Tecnología
     programming:   Programación
