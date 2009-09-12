@@ -9,7 +9,7 @@
     = link_to h(answer.user.login), user_path(answer.user)
     = time_ago_in_words(answer.created_at)
     = t("views.layout.from", :site => answer.user.country_name)
-    = country_flag(@question.user.country_code, @question.user.country_name)
+    = country_flag(answer.user.country_code, answer.user.country_name)
     .clear
   .answer_body
     = vote_box(answer, question_path(question))
