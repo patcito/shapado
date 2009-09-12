@@ -15,7 +15,10 @@ class SessionsController < ApplicationController
     else
       password_authentication(params[:login], params[:password])
     end
-    current_user.logged! if current_user
+    if current_user
+      current_user.localize(request.remote_ip)
+      current_user.logged!
+    end
   end
 
   def destroy

@@ -56,6 +56,12 @@ module ApplicationHelper
     cloud
   end
 
+  def country_flag(code, name)
+    if code
+      image_tag("flags/flag_#{code.downcase}.gif", :title => name, :alt => "")
+    end
+  end
+
   def markdown(txt)
     Maruku.new(sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table pre code blockquote a], :attributes => %w[href src title alt])).to_html
   end

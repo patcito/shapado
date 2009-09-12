@@ -31,6 +31,10 @@ class User
   key :timezone,                  String
   key :reputation,                Float, :default => 1.0
 
+  key :ip,                        String
+  key :country_code,              String
+  key :country_name,              String, :default => "unknown"
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
@@ -57,8 +61,6 @@ class User
 
   attr_accessor :password, :password_confirmation
   before_validation :add_email_validation
-
-
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
@@ -148,6 +150,14 @@ class User
       self.collection.update({:_id => self.id}, {:$inc => {:reputation => value}},
                                                  :upsert => true)
     end
+  end
+
+  def localize(ip)
+    l = Localize.country(ip)
+    self.ip = ip
+    self.country_code = l[2]
+    self.country_name = l[4]
+    save
   end
 
   protected
