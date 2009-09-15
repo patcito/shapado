@@ -6,6 +6,8 @@ base: &common
   rest_auth_key: b4d66d73a1ade79ce227fba01b33f2ab021888ef
   rest_aut_digest_stretches: 10
   enable_sharing: true
+  exception_sender_address:
+    "[Shapado] error notifier <error-notifier@example.com>"
   exception_recipients:
   - admin@example.com
   adbard_host_id: 2746b6d24c93f71df12503ec2ab667e5
