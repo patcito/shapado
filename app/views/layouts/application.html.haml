@@ -116,7 +116,8 @@
             .internal
               -if !logged_in?
                 .box.highlight
-                  If you'd like to register, or if you've already registered, enter your OpenID above
+                  = t("views.layout.openid.explaination")
+
                   -form_tag session_path, :id => 'openid' do
                     &nbsp;
               %br

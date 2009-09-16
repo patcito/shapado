@@ -242,6 +242,8 @@
       moderate: Moderar
       home: pagina principal
       from: desde {{site}}
+      openid:
+        explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor OpenID:"
     welcome:
       index:
         hot:     calientes
