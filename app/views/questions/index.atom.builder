@@ -15,7 +15,9 @@ atom_feed do |feed|
   end
 
   feed.title(title)
-  feed.updated(@questions.first.updated_at)
+  unless @questions.empty?
+    feed.updated(@questions.first.updated_at)
+  end
 
   for question in @questions
     next if question.updated_at.blank?
