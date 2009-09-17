@@ -1,22 +1,22 @@
 %span#facts
   %h1 Get the facts!
 
-%h2 Pricing:
+%h2 Pricing
 
 %table#pricing
   %tr
     %th
     %th
-      %h3 Small
+      Small
     %th
-      %h3 Medium
+      Medium
     %th
-      %h3 Large
+      Large
     %th
-      %h3= t('views.facts.prices.cols.onsite')
+      = t('views.facts.prices.cols.onsite')
   %tr
-    %td
-      StackExchange
+    %td.first
+      StackExchange*
     %td
       = t('views.facts.prices.stackexchange.small')
     %td
@@ -26,7 +26,7 @@
     %td
       = t('views.facts.prices.stackexchange.onsite')
   %tr
-    %td
+    %td.first
       Shapado
     %td
       = t('views.facts.prices.shapado.small')
@@ -37,24 +37,25 @@
     %td
       = t('views.facts.prices.shapado.onsite')
 
-%h2 Features:
+%br
+%h2 Features
 
 %table#pricing
   %tr
     %th
     %th
-      %h3= t('views.facts.features.cols.adaptable')
+      = t('views.facts.features.cols.adaptable')
     %th
-      %h3= t('views.facts.features.cols.multitopic')
+      = t('views.facts.features.cols.multitopic')
     %th
-      %h3= t('views.facts.features.cols.multilanguage')
+      = t('views.facts.features.cols.multilanguage')
     %th
-      %h3= t('views.facts.features.cols.foss')
+      = t('views.facts.features.cols.foss')
     %th
-      %h3= t('views.facts.features.cols.joel')
+      = t('views.facts.features.cols.joel')
   %tr
-    %td
-      StackExchange
+    %td.first
+      StackExchange*
     %td
       = t('views.facts.features.stackexchange.adaptable')
     %td
@@ -66,7 +67,7 @@
     %td
       = t('views.facts.features.stackexchange.joel')
   %tr
-    %td
+    %td.first
       Shapado
     %td
       = t('views.facts.features.shapado.adaptable')
@@ -79,3 +80,7 @@
     %td
       = t('views.facts.features.shapado.joel')
 
+%br
+#notes{:style => "font-size: 6px"}
+  *
+  = link_to "http://stackexchange.com", "http://stackexchange.com", :target => "_blank"
