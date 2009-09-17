@@ -133,7 +133,9 @@ en:
         flash_notice: "Question now is not solved."
     answers:
       form:
+        comment_label: Comment on this answer
         answer_label: Answer the question
+        comment_submit: Comment
         submit: Answer
         preview: Preview
       edit:
@@ -143,8 +145,8 @@ en:
         flash_error:  "Something went wrong adding your answer.
 \n  remember that:
 \n - empty and repeated answers are not allowed
-\n - and you need to wait 20 senconds before posting another answer."
-        flash_error:  "Something went wrong adding your answer"
+\n - you need to wait 20 senconds before posting another answer.
+\n - you can only post one answer by question."
       update:
         flash_notice: "Answer was successfully updated."
     users:

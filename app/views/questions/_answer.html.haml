@@ -43,7 +43,7 @@
       .clear
       -form_for comment, :url => question_answers_path(@question.id, comment), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
-        = submit_tag I18n.t('views.answers.form.submit')
+        = submit_tag I18n.t('views.answers.form.comment_submit')
       -if current_user != answer.user
         .flag_form.hidden
           -flag = Flag.new
