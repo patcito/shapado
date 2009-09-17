@@ -24,5 +24,8 @@ class WelcomeController < ApplicationController
     @questions = Question.search(params[:q], :per_page => 25, :page => params[:page] || 1)
     @answers = Answer.search(params[:q], :per_page => 25, :page => params[:page] || 1)
   end
+
+  def facts
+  end
 end
 
