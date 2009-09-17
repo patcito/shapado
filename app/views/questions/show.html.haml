@@ -24,7 +24,7 @@
   .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
     -if current_user != @question.user
       .left.internal
-        = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link"
+        = link_to t("views.questions.show.flag"), flag_question_path(@question), :class => "flag-link", :rel => 'nofollow'
     -if AppConfig.enable_sharing
       .right
         %h2

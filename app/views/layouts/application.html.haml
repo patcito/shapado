@@ -62,7 +62,8 @@
                   -languages_options.each do |desc, value|
                     %li
                       = link_to desc, tag_url(value)
-
+            -if !logged_in?
+              = link_to 'Get the facts!', "/facts#facts"
 
         #user-actions
           #user-nav
@@ -104,7 +105,7 @@
                 %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
                   =link_to h(tag), questions_path(:tags => tag)
             %li.ask_question
-              =link_to I18n.t("views.layout.ask_question"), new_question_path
+              =link_to I18n.t("views.layout.ask_question"), new_question_path, :rel => 'nofollow'
       #main-content
         #messages
           -flash.each do |k,v|
@@ -116,7 +117,8 @@
             .internal
               -if !logged_in?
                 .box.highlight
-                  If you'd like to register, or if you've already registered, enter your OpenID above
+                  = t("views.layout.openid.explaination")
+
                   -form_tag session_path, :id => 'openid' do
                     &nbsp;
               %br
