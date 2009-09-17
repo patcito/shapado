@@ -62,7 +62,8 @@
                   -languages_options.each do |desc, value|
                     %li
                       = link_to desc, tag_url(value)
-
+            -if !logged_in?
+              = link_to 'Get the facts!', "/facts#facts"
 
         #user-actions
           #user-nav
