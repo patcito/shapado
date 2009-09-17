@@ -42,6 +42,39 @@ en:
     cancel: Cancel
     create: Create
   views:
+    facts:
+      prices:
+        cols:
+          onsite: On site
+        stackexchange:
+          small: $129/month
+          medium: $999/month
+          large: $1299/month
+          onsite: $2500/month
+        shapado:
+          small: prolly like $50 to $100/month on most hosting providers
+          medium: <=== ditto
+          large: prolly like $500
+          onsite: prolly $0 on your own server duh
+      features:
+        cols:
+          adaptable: Adaptable
+          multitopic: Multi-topic
+          multilanguage: Multi-language
+          foss: Free/Open Source
+          joel: Will I make Joel richer?
+        stackexchange:
+          adaptable: no
+          multitopic: no
+          multilanguage: no
+          foss: no
+          joel: yes!
+        shapado:
+          adaptable: yes!
+          multitopic: yes!
+          multilanguage: yes!
+          foss: yes!
+          joel: no :/
     layout:
       questions: questions
       ask_question: ask question
