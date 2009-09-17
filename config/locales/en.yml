@@ -63,6 +63,8 @@ en:
       moderate: Moderate
       home: home
       from: from {{site}}
+      openid:
+        explaination: "If you'd like to register or just log in, please select your OpenID provider:"
     welcome:
       index:
         hot:     hot

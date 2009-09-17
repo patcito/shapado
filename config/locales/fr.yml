@@ -159,14 +159,16 @@ fr:
       categories: Catégories
       languages: Langues
       permission_denied: Permission refusée
-      please_login: please log in
-      moderate: Moderate
-      home: home
-      from: from {{site}}
+      please_login: ouvrez une session s'il vous plait
+      moderate: Modérer
+      home: page principale
+      from: depuis {{site}}
+      openid:
+        explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"
     welcome:
       index:
-        hot:     hot
-        active:  active
+        hot:     chaudes
+        active:  actives
     questions:
       index:
         title: Toutes les questions
@@ -177,9 +179,9 @@ fr:
         another_answers: Autres réponses
         solution: Solution
         share: "Partager cette question"
-        flag: flag
-        flags: reported as
-        add_comment: Add comment...
+        flag: reporter un abus
+        flags: reporter en tant que
+        add_comment: Ajouter un commentaire...
       edit:
         title: Éditer la question
       new:
@@ -199,13 +201,13 @@ fr:
       edit:
         title: Éditer la réponse
       create:
-        flash_notice: "Thanks!"
-        flash_error:  "Something went wrong adding your answer.
-\n  remember that:
-\n - empty and repeated answers are not allowed
-\n - and you need to wait 20 senconds before posting another answer."
+        flash_notice: "Merci!"
+        flash_error:  "Une erreur s'est produite lors de l'ajout de votre question.
+\n  n'oubliez pas que:
+\n - les réponses vides de contenu ou les doublons ne sont pas autorisées.
+\n - vous devez attendre au moins 20 secondes avant de poster une autre réponse."
       update:
-        flash_notice: "Answer was successfully updated."
+        flash_notice: "La réponse a été créée avec succès."
     users:
       index:
         title: Tous les utilisateurs
@@ -222,23 +224,23 @@ fr:
       create:
         flash_notice: "Merci d'avoir voté!"
         flash_error:  "Vous ne pouvez pas voter"
-        unauthenticated: "anonymous users can't vote, please log in"
+        unauthenticated: "les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait"
     flags:
       form:
         spam: spam
-        offensive: offensive, abusive or Hate speech
-        attention: Requires Moderator attention
-        label: Please flag with care
+        offensive: injurieux, abusif ou discours de haine
+        attention: Nécesite l'attention des modérateurs
+        label: S'il vous plait, raporter avec attention
       create:
-        flash_notice: thanks for your report
-        flash_error: You cannot flag this
+        flash_notice: merci pour votre rapport
+        flash_error: Vous ne pouvez rapporter ceci
     moderate:
       index:
-        title: Moderate
+        title: Modérer
         ban: ban
-        content: content
-        item_title: title
-        all: all
+        content: contenu
+        item_title: titre
+        all: tous
     mailers:
       notifications:
         new_answer:
@@ -251,25 +253,25 @@ fr:
       destroy:
         flash_notice: "Vous avez été déconnecté."
     errors:
-      options_label: "Other things to try:"
-      go_to: "go to {{link}} page"
-      help_us_answer: Help us to answer {{link}}
-      search: "search"
+      options_label: "Autres choses que vous pouvez faire:"
+      go_to: "aller à la page {{link}}"
+      help_us_answer: Aider nous à répondre à {{link}}
+      search: "chercher"
       forbidden:
-        explanation: "You don't have the required rights to access this page."
+        explanation: "Vous n'avez pas les permissions requises pour accéder à cette page."
       not_found:
-        title: "Page not found."
-        explanation: "You may have mistyped the address or the page may have moved."
+        title: "Page non trouvée."
+        explanation: "Vous avez peut-être mal écrit l'adresse ou bien la page en question a changé."
       unprocessable_entity:
-        title: "The change you wanted was rejected."
-        explanation: "Maybe you tried to change something you didn't have access to."
+        title: "Votre modification a été rejetée."
+        explanation: "Peut-être que vous avez éssayer de changer un élément dont vous n'avez pas accès."
       internal_error:
-        title: "We're sorry, but something went wrong."
-        explanation: "We've been notified about this issue and we'll take a look at it shortly."
+        title: "Nous somme désolé mais une erreur s'est produite."
+        explanation: "Nous avons été alerté à propos de cette erreur et nous allons vérifier d'ici peu."
     feeds:
-      question: Subscribe To This Question
-      questions: Subscribe To All Questions
-      tag: Subscribe To Tag
+      question: Souscrire à cette question
+      questions: Souscrire à toutes les questions
+      tag: Souscrite au tag
   activerecord:
     models:
       questions: Questions
@@ -280,8 +282,8 @@ fr:
       user: Utilisateur
       votes: Votes
       user: vote
-      flags: flags
-      flag: flag
+      flags: Rapports
+      flag: Rapport
     attributes:
       question:
         title: Titre
@@ -313,9 +315,9 @@ fr:
         created_at: member for
         reputation: Reputation
       answer:
-        link: link
+        link: lien
       flag:
-        type: Reason
+        type: Raison
   categories:
     technology:    Technologie
     programming:   Programmation
@@ -327,8 +329,8 @@ fr:
     gaming:        Jeux vidéos
     lifestyle:     Style de vie
     business:      Business
-    entertainment: Entertainment
-    offbeat:       Offbeat
+    entertainment: Divertissement
+    offbeat:       Peu conventionnel
   languages:
     en:      Anglais
     es:      Espagnol
