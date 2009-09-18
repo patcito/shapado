@@ -3,7 +3,10 @@
 .field-group
   .label-container
     %label
-      = I18n.t('views.answers.form.answer_label')
+      -if local_assigns[:parent]
+        = I18n.t('views.answers.form.comment_label')
+      -else
+        = I18n.t('views.answers.form.comment_label')
   -opts = {:class => "text-area huge"}
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]
   = f.text_area :body, opts

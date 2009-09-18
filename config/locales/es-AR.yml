@@ -312,6 +312,7 @@
         flash_notice: "La pregunta ahora no esta resuelta."
     answers:
       form:
+        comment_label: Commenta sobre esta respuesta
         answer_label: Conteste la pregunta
         preview: Vista previa
         submit: Contestar
@@ -322,7 +323,8 @@
         flash_error:  "Algo fue mal añadiendo tu respuesta.
 \n  recuerda que:
 \n - no se permiten respuestas vacias ni repetidas.
-\n - y debes esperar 20 segundos antes de volver a contestar"
+\n - debes esperar 20 segundos antes de volver a contestar.
+\n - solo puede hacer una sola respuesta por cada pregunta."
       update:
         flash_notice: "La respuesta fue actualizada exitosamente."
     users:

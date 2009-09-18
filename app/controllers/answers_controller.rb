@@ -13,13 +13,11 @@ class AnswersController < ApplicationController
     @answer = Answer.new
     @answer.safe_update(%w[parent_id body], params[:answer])
     @answer.user = current_user
-
     @question = Question.find(params[:question_id])
 
     if @answer.parent_id.blank?
       @answer.question = @question
     end
-
     if @question && @answer.save
       unless @answer.comment?
         @question.answer_added!

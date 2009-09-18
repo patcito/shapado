@@ -229,6 +229,7 @@ fr:
         flash_notice: "La question n'est pas résolue."
     answers:
       form:
+        comment_label: Commenter sur cette réponse
         answer_label: Répondre à la question
         submit: Répondre
       edit:
@@ -238,7 +239,8 @@ fr:
         flash_error:  "Une erreur s'est produite lors de l'ajout de votre question.
 \n  n'oubliez pas que:
 \n - les réponses vides de contenu ou les doublons ne sont pas autorisées.
-\n - vous devez attendre au moins 20 secondes avant de poster une autre réponse."
+\n - vous devez attendre au moins 20 secondes avant de poster une autre réponse.
+\n - vous ne pouvez poster qu'une réponse par question"
       update:
         flash_notice: "La réponse a été créée avec succès."
     users:
