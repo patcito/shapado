@@ -34,11 +34,11 @@ class Answer
   validate :check_unique_answer
 
   def check_unique_answer
-     check_answer = Answer.find(:all,
-          :conditions => {:question_id => self.question_id,
-          :user_id => self.user_id, :parent_id => nil})
-     puts check_answer
-    unless check_answer.empty?
+    check_answer = Answer.find(:first,
+                               :conditions => {:question_id => self.question_id,
+                               :user_id => self.user_id, :parent_id => nil})
+
+    if !check_answer.nil? && check_answer.id != self.id
       self.errors.add(:limitation, "Your can only post one answer by question.")
     end
   end
