@@ -3,3 +3,12 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-Agent: *
 # Disallow: /
+# robots.txt
+User-agent: *
+Disallow: /questions/new/
+Disallow: /*flag/
+Disallow: /votes/
+Disallow: /questions/new
+Disallow: /*flag
+Disallow: /votes
+
