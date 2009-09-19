@@ -44,7 +44,7 @@
                 = link_to category_desc(@category), ""
               -else
                 = link_to t("views.layout.categories"), "/"
-              %ul
+              %ul.hide
                 -category_options.each do |desc, value|
                   %li
                     = link_to(desc, subdomain_url(value))
@@ -53,7 +53,7 @@
                 = link_to language_desc(@languages.first), ""
               -else
                 = link_to t("views.layout.languages"), "/"
-              %ul
+              %ul.hide
                 -if logged_in?
                   -languages_options(current_user.preferred_languages).each do |desc, value|
                     %li
