@@ -120,7 +120,9 @@
                   = t("views.layout.openid.explaination")
 
                   -form_tag session_path, :id => 'openid' do
-                    &nbsp;
+                    #nojsopenid
+                      = text_field_tag "openid_identifier", "", :id => "openid_username"
+                      = submit_tag t("views.layout.log_in")
               %br
               = yield
           #sidebar
