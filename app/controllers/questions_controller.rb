@@ -51,9 +51,20 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
+    order = "created_at desc"
+    @active_subtab = params.fetch(:sort, "newest")
+    case @active_subtab
+      when "oldest"
+        order = "created_at asc"
+      when "newest"
+        order = "created_at desc"
+      when "votes"
+        order = "votes_count desc"
+    end
+
     @question = Question.find_by_slug_or_id(params[:id])
     @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
-                                          :order => "created_at asc",
+                                          :order => order,
                                           :conditions => {:banned => false})
 
     @answer = Answer.new

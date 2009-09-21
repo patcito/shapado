@@ -288,6 +288,7 @@
         active:  activas
         votes:   votos
         newest:  recientes
+        oldest:  antiguas
       show:
         answers: Respuestas
         pick_answer: Escoger como solución

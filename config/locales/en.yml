@@ -109,6 +109,7 @@ en:
         active:  active
         votes:   votes
         newest:  newest
+        oldest:  oldest
       show:
         answers: Answers
         pick_answer: Pick as solution
