@@ -6,16 +6,15 @@
 
 #questions_index.subtitle{:class => @active_subtab}
   = t("views.questions.index.title")
-  %span.right.tabs
-    %ul
-      %li.tab.newest
-        = link_to t("newest", :scope => "views.questions.index"), questions_path(:sort=>"newest")
-      %li.tab.hot
-        = link_to t("hot", :scope => "views.questions.index"), questions_path(:sort=>"hot")
-      %li.tab.votes
-        = link_to t("votes", :scope => "views.questions.index"), questions_path(:sort=>"votes")
-      %li.tab.active
-        = link_to t("active", :scope => "views.questions.index"), questions_path(:sort=>"active")
+  .right.tabs
+    .tab.newest
+      = link_to t("newest", :scope => "views.questions.index"), questions_path(:sort=>"newest")
+    .tab.hot
+      = link_to t("hot", :scope => "views.questions.index"), questions_path(:sort=>"hot")
+    .tab.votes
+      = link_to t("votes", :scope => "views.questions.index"), questions_path(:sort=>"votes")
+    .tab.active
+      = link_to t("active", :scope => "views.questions.index"), questions_path(:sort=>"active")
 
 .buttons
   = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"

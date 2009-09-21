@@ -1,12 +1,11 @@
 
 #welcome.subtitle{:class => @active_subtab}
   = t("views.layout.recent_questions", :default => "Recent Questions")
-  %span.right.tabs
-    %ul
-      %li.tab.active
-        = link_to t("active", :scope => "views.welcome.index"), root_path(:tab=>"active")
-      %li.tab.hot
-        = link_to t("hot", :scope => "views.welcome.index"), root_path(:tab=>"hot")
+  .right.tabs
+    .tab.active
+      = link_to t("active", :scope => "views.welcome.index"), root_path(:tab=>"active")
+    .tab.hot
+      = link_to t("hot", :scope => "views.welcome.index"), root_path(:tab=>"hot")
 
 #questions
   -@questions.each do |question|

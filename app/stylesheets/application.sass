@@ -408,36 +408,38 @@ blockquote
   font-size: 20px
   font-weight: bold
   border-bottom: 1px solid #999
-  margin-top: 10px
+  margin: 10px 0px
   .tabs
-    ul
-      +horizontal-list(6px)
-      li.tab
-        a
-          color: #828282
-          text-decoration: none
-          border-width: 1px
-          border-style: solid solid none
-          border-color: #999
-          padding: 2px 10px
-          font-size: 85%
-        a:hover, a:focus, a:active
-          color: #121314
-          outline: none
+    .tab
+      float: right
+      margin-right: 8px
+      margin-top: -1px
+      a
+        color: #828282
+        text-decoration: none
+        border-width: 1px
+        border-style: solid solid none
+        border-color: #999
+        padding: 2px 10px
+        font-size: 85%
+      a:hover, a:focus, a:active
+        color: #121314
+        outline: none
 
 =active_subtab
   color: #121314
-  background-color: #ffd
+  background-color: #fff
+  border-bottom: 1px solid #fff
 
-.subtitle#welcome.active .tabs li.active a,
-.subtitle#welcome.hot .tabs li.hot a,
-.subtitle#questions_index.active .tabs li.active a,
-.subtitle#questions_index.newest .tabs li.newest a,
-.subtitle#questions_index.hot .tabs li.hot a,
-.subtitle#questions_index.votes .tabs li.votes a,
-.subtitle#moderate.all .tabs li.all a,
-.subtitle#moderate.questions .tabs li.questions a,
-.subtitle#moderate.answers .tabs li.answers a
+.subtitle#welcome.active .tabs .tab.active a,
+.subtitle#welcome.hot .tabs .tab.hot a,
+.subtitle#questions_index.active .tabs .tab.active a,
+.subtitle#questions_index.newest .tabs .tab.newest a,
+.subtitle#questions_index.hot .tabs .tab.hot a,
+.subtitle#questions_index.votes .tabs .tab.votes a,
+.subtitle#moderate.all .tabs .tab.all a,
+.subtitle#moderate.questions .tabs .tab.questions a,
+.subtitle#moderate.answers .tabs .tab.answers a
   +active_subtab
 
 #system-msg
