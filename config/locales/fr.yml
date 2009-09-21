@@ -142,12 +142,45 @@ fr:
     cancel: Annuler
     create: Créer
   views:
+    facts:
+      prices:
+        cols:
+          onsite: Sur site
+        stackexchange:
+          small: $129/mois
+          medium: $999/mois
+          large: $1299/mois
+          onsite: $2500/mois
+        shapado:
+          small: à peu près $50-$100/mois sur ovh
+          medium: <=== idem
+          large: genre $500
+          onsite: bah que dalle sur votre propre serveur
+      features:
+        cols:
+          adaptable: Adaptable
+          multitopic: Multi-topic
+          multilanguage: Multilingue
+          foss: Libre/Open Source
+          joel: Vais-je rendre Joel plus riche?
+        stackexchange:
+          adaptable: non
+          multitopic: non
+          multilanguage: non
+          foss: non
+          joel: oui!
+        shapado:
+          adaptable: oui!
+          multitopic: oui!
+          multilanguage: oui!
+          foss: oui!
+          joel: non :/
     layout:
       questions: questions
       ask_question: poser une question
       tags: tags
       users: utilisateurs
-      unanswered: non répondues
+      unanswered: sans réponses
       logout: se déconnecter
       logged: Connecté {{login}}
       search: Chercher
@@ -196,6 +229,7 @@ fr:
         flash_notice: "La question n'est pas résolue."
     answers:
       form:
+        comment_label: Commenter sur cette réponse
         answer_label: Répondre à la question
         submit: Répondre
       edit:
@@ -205,7 +239,8 @@ fr:
         flash_error:  "Une erreur s'est produite lors de l'ajout de votre question.
 \n  n'oubliez pas que:
 \n - les réponses vides de contenu ou les doublons ne sont pas autorisées.
-\n - vous devez attendre au moins 20 secondes avant de poster une autre réponse."
+\n - vous devez attendre au moins 20 secondes avant de poster une autre réponse.
+\n - vous ne pouvez poster qu'une réponse par question"
       update:
         flash_notice: "La réponse a été créée avec succès."
     users:
@@ -217,6 +252,10 @@ fr:
       edit:
         title: Configuration
         submit: Sauver
+      form:
+        information: Information
+        notifications: Notifications
+        new_answer_notification: Obtenir des notifications via email de nouvelles réponses
       create:
         flash_notice: "Merci pour vous avoir enregistrer!"
         flash_error:  "Désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
