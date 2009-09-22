@@ -2,7 +2,7 @@
 -solution = local_assigns[:solution]  || false
 
 .answer{:class => solution ? "solution" : ""}
-  %a{:name=>"#{answer.id}", :href=>"#{answer.id}"}
+  %a{:name=>"#{answer.id}"}
   .answer_title
     .gravatar.left{:style => "padding: 2px"}
       = gravatar(answer.user.email.to_s, :size => 14)

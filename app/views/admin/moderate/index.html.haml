@@ -1,14 +1,13 @@
 
 #moderate.subtitle{:class => @subtab}
   = I18n.t("views.layout.moderate")
-  %span.right.tabs
-    %ul
-      %li.tab.all
-        = link_to t(:all, :scope => "views.moderate.index"), moderate_path(:tab=>"all")
-      %li.tab.questions
-        = link_to t(:questions, :scope => "activerecord.models"), moderate_path(:tab=>"questions")
-      %li.tab.answers
-        = link_to t(:answers, :scope => "activerecord.models"), moderate_path(:tab=>"answers")
+  .right.tabs
+    .tab.all
+      = link_to t(:all, :scope => "views.moderate.index"), moderate_path(:tab=>"all")
+    .tab.questions
+      = link_to t(:questions, :scope => "activerecord.models"), moderate_path(:tab=>"questions")
+    .tab.answers
+      = link_to t(:answers, :scope => "activerecord.models"), moderate_path(:tab=>"answers")
 
 -form_tag ban_path do
   =submit_tag "ban"

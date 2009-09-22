@@ -40,6 +40,7 @@
       = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
 
 %hr
+%a{:name=>"answers"}
 #answers
   -if @question.answered
     %h2
@@ -47,13 +48,27 @@
     =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true, :comment => @answer}
     -@answers.delete(@question.answer)
     %hr
-    %h2
-      = h(t("another_answers", :scope => "views.questions.show"))
+    .subtitle#question_answers{:class => @active_subtab}
+      = I18n.t('views.questions.show.another_answers')
+      .right.tabs
+        .tab.votes
+          = link_to(t('votes', :scope => "views.questions.index"), question_path(@question, :sort=>"votes", :anchor => "answers"))
+        .tab.newest
+          = link_to(t('newest', :scope => "views.questions.index"), question_path(@question, :sort=>"newest", :anchor => "answers"))
+        .tab.oldest
+          = link_to(t('oldest', :scope => "views.questions.index"), question_path(@question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   -else
-    %h2
+    .subtitle#question_answers{:class => @active_subtab}
       = h(I18n.t('views.questions.show.answers'))
+      .right.tabs
+        .tab.votes
+          = link_to(t('votes', :scope => "views.questions.index"), question_path(@question, :sort=>"votes", :anchor => "answers"))
+        .tab.newest
+          = link_to(t('newest', :scope => "views.questions.index"), question_path(@question, :sort=>"newest", :anchor => "answers"))
+        .tab.oldest
+          = link_to(t('oldest', :scope => "views.questions.index"), question_path(@question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   =will_paginate(@answers)
