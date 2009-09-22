@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 Benoit Chesneau <benoitc@e-engura.org> 
+ * Copyright (c) 2009 Benoit Chesneau <benoitc@e-engura.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -40,7 +40,7 @@
       return __method.apply(object, args.concat($A(arguments)));
     }
   }
-  
+
   Function.prototype.bindAsEventListener = function() {
     var __method = this,
     args = $A(arguments),
@@ -154,19 +154,19 @@
       this.doOnChange = function(e) {
         if (self._change_callback) {
           self._change_callback(self.element.value);
-        } 
+        }
         return;
       }
-      
+
       this.el.keyup(this.doOnChange);
       this.el.bind('paste', this.doOnChange);
       this.el.bind('input', this.doOnChange);
-      
+
       if(!!document.selection){
-  			this.el.bind('mouseup',this.saveRange.bindAsEventListener(this));  
+  			this.el.bind('mouseup',this.saveRange.bindAsEventListener(this));
   			this.el.bind('keyup',this.saveRange.bindAsEventListener(this));
   		}
-  		
+
   		if (this.isOpera) {
   		  this.el.bind('blur', function(e) {
   		    if (self.lastKey && self.lastKey == 9)
@@ -177,7 +177,7 @@
     },
 
     saveRange: function(){
-      this.range = document.selection.createRange();  
+      this.range = document.selection.createRange();
     },
     getValue: function(){
       return this.element.value;
@@ -191,7 +191,7 @@
       else
       return false;
     },
-	
+
     replaceSelection: function(text){
       var scroll_top = this.element.scrollTop;
       if(!!document.selection){
@@ -240,7 +240,7 @@
         e.stopPropagation();
         return false;
       } else if ((c == 13 || c == 10) && (!this.isOpera)) {
-        //FIXME: opera disabled for now 
+        //FIXME: opera disabled for now
         if (this.do_enter()) {
           if( window.event ){
             e.returnValue = false;
@@ -248,15 +248,15 @@
           e.preventDefault();
           e.stopPropagation();
           return false;
-        }        
+        }
       }
       return true;
-    }, 
+    },
 
     tab_selection: function() {
       if (this._is_tabbing)
         return;
-      
+
       this._is_tabbing = true;
       if (!!document.selection && !this.isOpera)
         this._getIESelection();
@@ -316,17 +316,17 @@
       var scrollLeft = this.el.scrollLeft();
       var start = this.element.selectionStart;
       var end = this.element.selectionEnd;
-      
+
       var start_last_line = Math.max(0, this.element.value.substring(0, start).lastIndexOf("\n") + 1);
       var latest_line = this.element.value.substring(start_last_line, start)
       if (latest_line.match(/^[ \t]+$/mg, ""))
         return false;
-      
+
       var begin_line = latest_line.replace(/^([ \t]*).*/gm, "$1");
       if (begin_line == "\n" || begin_line == "\r\n")
         return false;
-        
-      begin_line = begin_line.replace(/\r?\n/g, '') 
+
+      begin_line = begin_line.replace(/\r?\n/g, '')
       if ( !!document.selection) {
         begin_line = "\r\n" + begin_line;
       } else {
@@ -356,7 +356,7 @@
         } else {
           this.element.setSelectionRange(start, end);
         }
-        
+
       }
     },
 
@@ -403,7 +403,7 @@
     }
 
 });
-    
+
 
 $.Toolbar = function(textarea, options) {
   options = options || {};
@@ -473,6 +473,8 @@ $.extend(Toolbar.prototype, {
         var span = document.createElement('span');
         span.innerHTML = link_text;
         a.appendChild(span);
+        a.setAttribute('alt', link_text);
+        a.setAttribute('title', link_text);
       }
       container.container[0].appendChild(li);
     }
