@@ -12,7 +12,6 @@
         %link{:rel=>"alternate", :type=>"application/atom+xml", :title => h(title), :href=> url}
 
     = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
-    = javascript_include_tag 'jquery.droppy'
     = javascript_include_tag 'modules/sessions.js'
     = javascript_include_tag 'modules/show_question.js'
     = javascript_include_tag 'openid/js/jquery.openid.min.js'
@@ -120,7 +119,9 @@
                   = t("views.layout.openid.explaination")
 
                   -form_tag session_path, :id => 'openid' do
-                    &nbsp;
+                    #nojsopenid
+                      = text_field_tag "openid_identifier", "", :id => "openid_username"
+                      = submit_tag t("views.layout.log_in")
               %br
               = yield
           #sidebar
@@ -158,8 +159,10 @@
           = image_tag('/images/ccby.png')
           == All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}
         #blog.center
-          = link_to 'Our Blog', 'http://blog.ricodigo.com/shapado'
+          = link_to 'blog', 'http://blog.ricodigo.com/shapado'
+          |
+          = link_to 'twitter', 'http://twitter.com/shapado'
+          |
+          = link_to 'identi.ca', 'http://identi.ca/shapado'
       = render :partial => "shared/googlean"
       .clear
-
-
