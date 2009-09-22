@@ -205,6 +205,11 @@ fr:
     questions:
       index:
         title: Toutes les questions
+        hot:     hot
+        active:  active
+        votes:   votes
+        newest:  newest
+        oldest:  oldest
       show:
         answers: Réponses
         pick_answer: Choisir comme solution
@@ -361,7 +366,7 @@ fr:
     technology:    Technologie
     programming:   Programmation
     science:       Science
-    politics:      Politiqu
+    politics:      Politique
     religion:      Religion
     sports:        Sports
     music:         Musique
