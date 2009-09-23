@@ -21,7 +21,7 @@
   .label-container
     = f.label :category, t(:category, :scope => "activerecord.attributes.question")
   .field
-    = select :question, :category, category_options
+    = f.select :category, category_options, {:selected => @category}
 
 .field-group
   .label-container
