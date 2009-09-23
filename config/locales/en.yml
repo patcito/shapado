@@ -120,6 +120,11 @@ en:
         flag: flag
         flags: reported as
         add_comment: Add comment...
+      form:
+        body_tip: What's your question? Be descriptive.
+        language_tip: Select the language's question.
+        category_tip: Select the category that fits best your question.
+        tags_tip:  Use tags to add more information about your question.
       edit:
         title: Editing question
       new:

@@ -4,12 +4,9 @@
     = f.label :title, t(:title, :scope => "activerecord.attributes.question")
   .field
     = f.text_field :title, :class => "text-field"
-.field-group
-  .label-container
-    = f.label :language, t(:language, :scope => "activerecord.attributes.question")
-  .field
-    -lang = @question.new? ? current_user.main_language : @question.language
-    = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
+  .tip
+    = t(:body_tip, :scope => "views.questions.form")
+
 
 .field-group
   .label-container
@@ -17,14 +14,27 @@
   = f.text_area :body, :class => "text-area huge", :id => "markdown_editor"
 
   #markdown_preview.markdown
+
+.field-group
+  .label-container
+    = f.label :language, t(:language, :scope => "activerecord.attributes.question")
+  .field
+    -lang = @question.new? ? current_user.main_language : @question.language
+    = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
+    .tip
+      = t(:language_tip, :scope => "views.questions.form")
+
 .field-group
   .label-container
     = f.label :category, t(:category, :scope => "activerecord.attributes.question")
   .field
     = f.select :category, category_options, {:selected => @category}
-
+    .tip
+      = t(:category_tip, :scope => "views.questions.form")
 .field-group
   .label-container
     = f.label :tags, t(:tags, :scope => "activerecord.attributes.question")
   .field
     = f.text_field :tags, :value => @question.tags.join(", "),:class => "text-field"
+    .tip
+      = t(:tags_tip, :scope => "views.questions.form")

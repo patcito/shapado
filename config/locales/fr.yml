@@ -220,6 +220,11 @@ fr:
         flag: reporter un abus
         flags: reporter en tant que
         add_comment: Ajouter un commentaire...
+      form:
+        body_tip: What's your question? Be descriptive.
+        language_tip: Select the language's question.
+        category_tip: Select the category that fits best your question.
+        tags_tip:  Use tags to add more information about your question.
       edit:
         title: Éditer la question
       new:

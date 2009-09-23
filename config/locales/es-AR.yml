@@ -299,6 +299,11 @@
         flag: "Reportar abuso"
         flags: Reportado como
         add_comment: Añadir comentario...
+      form:
+        body_tip: ¿Cual es tu pregunta? por favor se descriptivo.
+        language_tip: Selecciona el idioma de tu pregunta.
+        category_tip: Selecciona la categoria que mejor se ajusta a la pregunta.
+        tags_tip:  Usa etiquetas para añadir más información sobre tu pregunta.
       edit:
         title: Editar pregunta
       new:
