@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     end
 
     @user.safe_update(%w[login email name password_confirmation password
-                         language timezone preferred_languages
+                         language timezone preferred_languages categories
                          preferred_tags notification_opts], params[:user])
     if @user.valid? && @user.save
       redirect_to "/settings"

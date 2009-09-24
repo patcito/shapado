@@ -25,6 +25,8 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
+  key :categories,                Array
+
   key :notification_opts,         Hash, :default => {"new_answer"=>"1"}
 
   key :language,                  String, :default => "en"

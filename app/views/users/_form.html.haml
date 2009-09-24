@@ -63,6 +63,18 @@
       = language_desc(lang)
 
 
+.field-group
+  .label-container
+    = f.label :categories, t(:categories, :scope => "activerecord.attributes.user", :default => "Categories")
+  .field
+    %table
+      -Shapado::CATEGORIES.each_slice(3) do |categories|
+        %tr
+          -categories.each do |cat|
+            %td
+              = check_box_tag "user[categories][]", cat, @user.categories.include?(cat)
+              = category_desc(cat)
+
 -unless @user.new_record?
   .field-group
     .label-container
