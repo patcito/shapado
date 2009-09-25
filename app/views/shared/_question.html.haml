@@ -21,7 +21,7 @@
         = gravatar(question.user.email.to_s, :size => 22)
       = link_to h(question.title), question_path(question)
     .question_body{:style => "padding: 3px"}
-      &= truncate(question.body, :length => 60)
+      &= truncate(question.body, :length => 200)
     .tags-list
       -question.tags.each do |tag|
         %span.tag
