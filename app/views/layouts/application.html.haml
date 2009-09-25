@@ -63,11 +63,10 @@
                       = link_to desc, tag_url(value)
             -if !logged_in?
               = link_to 'Get the facts!', "/facts#facts"
-
         #user-actions
           #user-nav
             -if logged_in?
-              .box.right{:style => "width: 55%;"}
+              .box
                 .gravatar.left{:style => "margin: 2px;"}
                   = gravatar current_user.email.to_s
                 .row1
@@ -149,6 +148,7 @@
                       = h(title)
                   .clear
                   %br
+          .clear
       #footer
         %hr
         %div
