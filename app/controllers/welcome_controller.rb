@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  before_filter :categories_required
   def index
     @active_subtab = params.fetch(:tab, "active")
 

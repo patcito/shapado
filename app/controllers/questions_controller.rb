@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
   before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
   before_filter :set_active_tag
+  before_filter :categories_required
 
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question

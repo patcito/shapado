@@ -74,6 +74,8 @@
             %td
               = check_box_tag "user[categories][]", cat, @user.categories.include?(cat)
               = category_desc(cat)
+    .tip
+      =t("categories_tip", :scope => "views.users.form")
 
 -unless @user.new_record?
   .field-group

@@ -203,6 +203,8 @@ fr:
       index:
         hot:     chaudes
         active:  actives
+    application:
+      not_categories_warn: "Inscrivez-vous aux catégories qui vous interessent"
     questions:
       index:
         title: Toutes les questions
@@ -267,6 +269,7 @@ fr:
         information: Information
         notifications: Notifications
         new_answer_notification: Obtenir des notifications via email de nouvelles réponses
+        categories_tip: seules les questions appartenant à ces catégories seront visible
       create:
         flash_notice: "Merci pour vous avoir enregistrer!"
         flash_error:  "Désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."

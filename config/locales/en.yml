@@ -103,6 +103,8 @@ en:
       index:
         hot:     hot
         active:  active
+    application:
+      not_categories_warn: "Subscribe to the categories you are interested in"
     questions:
       index:
         title: All questions
@@ -169,6 +171,7 @@ en:
         information: Information
         notifications: Notifications
         new_answer_notification: Get mail notifications for new answers
+        categories_tip: only questions belonging to these categories will show
       create:
         flash_notice: "Thanks for signing up!"
         flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."

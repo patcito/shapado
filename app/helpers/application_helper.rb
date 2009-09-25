@@ -5,7 +5,9 @@ module ApplicationHelper
   end
 
   def category_options
-    Shapado::CATEGORIES.collect do |category|
+    categories = Shapado::CATEGORIES
+    categories = current_user.categories if logged_in?
+    categories.collect do |category|
       [category_desc(category), category]
     end
   end

@@ -52,6 +52,7 @@ class ApplicationController < ActionController::Base
       conditions.deep_merge!({:_metatags => current_tags.to_a})
     end
     conditions.deep_merge!(language_conditions)
+    conditions.deep_merge!(categories_conditions)
   end
   helper_method :scoped_conditions
 
@@ -67,6 +68,23 @@ class ApplicationController < ActionController::Base
     conditions
   end
   helper_method :language_conditions
+
+  def categories_conditions
+    conditions = {}
+    if logged_in?
+      if current_user.categories && !current_user.categories.empty?
+        conditions[:category] = {:$in => current_user.categories}
+      end
+    end
+    conditions
+  end
+
+  def categories_required
+    if logged_in? && ( current_user.categories.nil? || current_user.categories.empty?)
+      flash[:warn] = t("not_categories_warn", :scope => "views.application")
+      redirect_to :controller => "users", :action => "edit"
+    end
+  end
 
   def available_locales; AVAILABLE_LOCALES; end
 
