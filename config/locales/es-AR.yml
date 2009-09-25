@@ -255,6 +255,7 @@
           foss: si!
           joel: no :/
     layout:
+      title: "Preguntas & Respuestas"
       questions: Preguntas
       ask_question: Pregunte
       tags: Etiquetas

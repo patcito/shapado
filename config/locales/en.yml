@@ -76,6 +76,7 @@ en:
           foss: yes!
           joel: no :/
     layout:
+      title: "Questions & Answers"
       questions: questions
       ask_question: ask question
       tags: tags
