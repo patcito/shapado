@@ -97,6 +97,19 @@ class ApplicationController < ActionController::Base
   end
   helper_method :find_valid_locale
 
+  def set_page_title(title)
+    title
+  end
+
+  def page_title
+    if @page_title
+      "#{@page_title} - #{AppConfig.application_name}: #{t("views.layout.title")}"
+    else
+      "#{AppConfig.application_name} - #{t("views.layout.title")}"
+    end
+  end
+  helper_method :page_title
+
   def add_feeds_url(url, title="atom")
     @feed_urls = [] unless @feed_urls
     @feed_urls << [title, url]

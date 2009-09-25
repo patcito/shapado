@@ -176,6 +176,7 @@ fr:
           foss: oui!
           joel: non :/
     layout:
+      title: "Questions & Réponses"
       questions: questions
       ask_question: poser une question
       tags: tags
