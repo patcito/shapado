@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    @page_title = t("views.questions.index.title")
+    set_page_title(t("views.questions.index.title"))
     order = "created_at desc"
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
@@ -46,7 +46,7 @@ class QuestionsController < ApplicationController
   end
 
   def tags
-    @page_title = t("views.layout.tags")
+    set_page_title(t("views.layout.tags"))
     @tag_cloud = Question.tag_cloud(language_conditions)
   end
 
@@ -72,7 +72,7 @@ class QuestionsController < ApplicationController
     @answer = Answer.new
     @question.viewed!
 
-    @page_title = @question.title
+    set_page_title(@question.title)
     add_feeds_url(url_for(:format => "atom"), t("views.feeds.question"))
 
     respond_to do |format|

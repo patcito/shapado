@@ -98,7 +98,7 @@ class ApplicationController < ActionController::Base
   helper_method :find_valid_locale
 
   def set_page_title(title)
-    title
+    @page_title = title
   end
 
   def page_title

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update]
   tabs :default => :users
   def index
-    @page_title = t("views.users.index.title")
+    set_page_title(t("views.users.index.title"))
     @users = User.paginate(:per_page => params[:per_page]||24,
                            :order => "reputation desc",
                            :page => params[:page] || 1)
