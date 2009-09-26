@@ -11,7 +11,11 @@ atom_feed do |feed|
   end
 
   if @langs_conds
-    title += " languages: #{@langs_conds.join(", ")}"
+    if @lang_conds.kind_of?(Array)
+      title += " languages: #{@langs_conds.join(", ")}"
+    else
+      title += " languages: #{@langs_conds}"
+    end
   end
 
   feed.title(title)
