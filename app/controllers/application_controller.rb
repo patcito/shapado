@@ -71,13 +71,12 @@ class ApplicationController < ActionController::Base
 
   def categories_conditions
     conditions = {}
-    if logged_in?
-      if current_user.categories && !current_user.categories.empty?
-        conditions[:category] = {:$in => current_user.categories}
-      end
+    if logged_in? && !current_user.categories.blank?
+      conditions[:category] = {:$in => current_user.categories}
     end
     conditions
   end
+  helper_method :categories_conditions
 
   def categories_required
     if logged_in? && current_user.categories.blank?
