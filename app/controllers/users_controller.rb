@@ -56,7 +56,7 @@ class UsersController < ApplicationController
                          language timezone preferred_languages categories
                          preferred_tags notification_opts], params[:user])
     if @user.valid? && @user.save
-      redirect_to "/settings"
+      redirect_to root_path
     else
       render :action => "edit"
     end
