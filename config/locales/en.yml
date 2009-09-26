@@ -227,6 +227,7 @@ en:
       question: Subscribe To This Question
       questions: Subscribe To All Questions
       tag: Subscribe To Tag
+      user: Subscribe To User Questions
   activerecord:
     models:
       questions: Questions

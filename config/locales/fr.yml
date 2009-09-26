@@ -325,6 +325,7 @@ fr:
       question: Souscrire à cette question
       questions: Souscrire à toutes les questions
       tag: Souscrite au tag
+      user:  Inscrivez-vous aux questions de l'utilisateur
   activerecord:
     models:
       questions: Questions
