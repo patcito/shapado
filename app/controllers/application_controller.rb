@@ -80,7 +80,7 @@ class ApplicationController < ActionController::Base
   end
 
   def categories_required
-    if logged_in? && ( current_user.categories.nil? || current_user.categories.empty?)
+    if logged_in? && current_user.categories.blank?
       flash[:warn] = t("not_categories_warn", :scope => "views.application")
       redirect_to :controller => "users", :action => "edit"
     end

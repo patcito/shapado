@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
 
   def tags
     set_page_title(t("views.layout.tags"))
-    @tag_cloud = Question.tag_cloud(language_conditions)
+    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions))
   end
 
   # GET /questions/1

@@ -31,7 +31,7 @@ module ApplicationHelper
 
   def tag_cloud(tags = [], options = {})
     if tags.empty?
-      tags = Question.tag_cloud(language_conditions)
+      tags = Question.tag_cloud(language_conditions.merge(categories_conditions))
     end
 
     return '' if tags.size <= 2
