@@ -10,8 +10,8 @@ atom_feed do |feed|
     title += " tags: #{tags.kind_of?(String) ? tags : tags.join(", ")}"
   end
 
-  if @languages
-    title += " languages: #{@languages.join(", ")}"
+  if @langs_conds
+    title += " languages: #{@langs_conds.join(", ")}"
   end
 
   feed.title(title)
