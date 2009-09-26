@@ -1,0 +1,17 @@
+
+-form_tag send_feedback_path, :class => "form", :method => "post" do
+  .field-group
+    .label-container
+      %label.label Title:
+    .field
+      = text_field_tag "feedback[title]", "", :class=> "text-field"
+    .label-container
+      %label.label Description:
+    .without-label
+      = text_area_tag "feedback[description]", "", :class=> "text-area"
+  .field-group.clear
+    .field
+      = submit_tag("Send")
+      %span.tip
+        or
+      = link_to 'Cancel', root_path, :class => 'cancel-feedback'

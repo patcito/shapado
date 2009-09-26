@@ -26,6 +26,8 @@
     = yield :css
 
   %body
+    .feedback
+      =link_to "Feedback", feedback_path
     .two-column
       -if !AppConfig.system_notice.blank?
         #system-msg

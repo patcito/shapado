@@ -1,6 +1,5 @@
 class Notifier < ActionMailer::Base
 
-
   def new_answer(user, answer)
     self.class.layout "notification_#{user.language.downcase}"
 
@@ -23,6 +22,15 @@ class Notifier < ActionMailer::Base
     body   :user => user, :answer => answer, :question => answer.question
     template "new_answer_#{user.language.downcase}"
     content_type  "text/html"
+  end
+
+  def new_feedback(user, subject, content)
+    recipients AppConfig.exception_recipients
+    from "Shapado[feedback] <notifications@shapado.com>"
+    subject "feedback: #{subject}"
+    sent_on Time.now
+    body   :user => user, :subject => subject, :content => content
+    content_type  "text/plain"
   end
 
   protected
