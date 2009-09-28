@@ -117,7 +117,7 @@ en:
         answers: Answers
         pick_answer: Pick as solution
         unset_answer: Unset as solution?
-        another_answers: Another answers
+        another_answers: Other answers
         solution: Solution
         share: "Share this question in"
         flag: flag
@@ -269,7 +269,7 @@ en:
         preferred_tags: Preferred tags
         preferred_languages: Select the languages you know
         last_logged_at: seen
-        created_at: member since
+        created_at: member for
         reputation: Reputation
       answer:
         link: link
