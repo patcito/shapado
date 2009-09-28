@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
                                    :order => order,
                                    :conditions => scoped_conditions(:banned => false))
 
-    @langs_conds = scoped_conditions[:language]
+    @langs_conds = scoped_conditions[:language][:$in]
 
     add_feeds_url(url_for(:format => "atom", :language=>@langs_conds), t("views.feeds.questions"))
     if params[:tags]

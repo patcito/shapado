@@ -59,14 +59,14 @@ class ApplicationController < ActionController::Base
   def language_conditions
     conditions = {}
     if @languages && !@languages.empty?
-      conditions[:language] = @languages
+      conditions[:language] = { :$in => @languages}
     elsif current_user && !current_user.preferred_languages.empty?
-      conditions[:language] = current_user.preferred_languages
+      conditions[:language] = { :$in => current_user.preferred_languages}
     elsif params[:language]
       langs = params[:language].kind_of?(Array) ? params[:language] : [params[:language]]
-      conditions[:language] = langs
+      conditions[:language] = {:$in => langs}
     else
-      conditions[:language] = I18n.locale.to_s.split("-").first
+      conditions[:language] = {:$in => [I18n.locale.to_s.split("-").first]}
     end
     conditions
   end

@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
         order = "hotness desc"
     end
 
-    @langs_conds = scoped_conditions[:language]
+    @langs_conds = scoped_conditions[:language][:$in]
     add_feeds_url(url_for(:format => "atom", :languages => @langs_conds), t("views.feeds.questions"))
 
     @questions = Question.paginate(:per_page => 25,
