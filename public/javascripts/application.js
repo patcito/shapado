@@ -1,5 +1,19 @@
 $(document).ready(function() {
   setupEditor();
+    $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"500px" })
+  $('.cancel-feedback').click(function(){
+    $(".feedbackform").dialog('close');
+    return false;
+  })
+  $('#feedback').click(function(){
+    var isOpen = $(".feedbackform").dialog('isOpen');
+    if (isOpen){
+      $(".feedbackform").dialog('close');
+    } else {
+      $(".feedbackform").dialog('open');
+    }
+    return false;
+  })
 })
 
 function showMessage(message, t) {

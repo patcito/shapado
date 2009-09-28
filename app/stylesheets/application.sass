@@ -723,11 +723,24 @@ table#pricing
 
 .feedback
   font-size: 15px
-  float: right
   border: #eee solid 1px
   padding: 4px
+  margin: 0
   background: #004181
+  float: right
   position: fixed
-  left: 45%
+  top: 350px
+  right: 0
+  -moz-transform: rotate(90deg)
+  -moz-transform-origin: right top
+  -webkit-transform: rotate(90deg)
+  -webkit-transform-origin: right top
   a
     color: #eee
+
+.hide
+  display: none
+
+#feedbackform
+  background: #FFFFFF
+  margin-top: 2em
