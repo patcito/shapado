@@ -200,7 +200,7 @@
         preferred_tags: Etiquetas preferidas
         preferred_languages: Escoja los idiomas que conozca
         last_logged_at: visto
-        created_at: miembro hace
+        created_at: registrado
         reputation: Reputación
       answer:
         link: enlace
