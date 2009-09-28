@@ -1,6 +1,7 @@
 $(document).ready(function() {
   setupEditor();
-  if(navigator.userAgent.indexOf('Gecko')!=-1 ||
+  if((navigator.userAgent.indexOf('Gecko')!=-1
+    && navigator.userAgent.indexOf('like Gecko')==-1) ||
     navigator.userAgent.indexOf('WebKit')!=-1){
   $(".feedback").removeClass("feedback").addClass("feedbackjs");}
   $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"500px" })
