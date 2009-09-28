@@ -269,7 +269,7 @@ en:
         preferred_tags: Preferred tags
         preferred_languages: Select the languages you know
         last_logged_at: seen
-        created_at: member for
+        created_at: member since
         reputation: Reputation
       answer:
         link: link
