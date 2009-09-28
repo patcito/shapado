@@ -1,6 +1,9 @@
 $(document).ready(function() {
   setupEditor();
-    $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"500px" })
+  if(navigator.userAgent.indexOf('Gecko')!=-1 ||
+    navigator.userAgent.indexOf('WebKit')!=-1){
+  $(".feedback").removeClass("feedback").addClass("feedbackjs");}
+  $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"500px" })
   $('.cancel-feedback').click(function(){
     $(".feedbackform").dialog('close');
     return false;
