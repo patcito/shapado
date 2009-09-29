@@ -11,4 +11,6 @@ Disallow: /votes/
 Disallow: /questions/new
 Disallow: /*flag
 Disallow: /votes
+Disallow: /feedback
+Disallow: /feedback/
 
