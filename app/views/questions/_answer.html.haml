@@ -34,7 +34,7 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(@question.id, answer, :anchor => answer.id)
+        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(@question, answer, :anchor => answer.id)
         -if current_user != answer.user
           |
           = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
