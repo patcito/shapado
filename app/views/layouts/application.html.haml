@@ -17,7 +17,8 @@
     = javascript_include_tag 'openid/js/jquery.openid.min.js'
     = javascript_include_tag 'jquery.notifyBar.js'
     = yield :js
-
+    = stylesheet_link_tag 'compoments/dialog.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'jquery-ui.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
@@ -25,12 +26,16 @@
     = yield :css
 
   %body
+    .feedback
+      =link_to "Feedback", feedback_path, :id => "feedback"
     .two-column
       -if !AppConfig.system_notice.blank?
         #system-msg
           .internal
             = AppConfig.system_notice
       #header
+        .feedbackform.hide
+          = render :partial => "welcome/feedback"
         #logo
           %a{:href => root_path}
             =image_tag "logo.png", :height => "45", :alt => "Shapado"

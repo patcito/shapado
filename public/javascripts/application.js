@@ -1,5 +1,23 @@
 $(document).ready(function() {
   setupEditor();
+  if((navigator.userAgent.indexOf('Gecko')!=-1
+    && navigator.userAgent.indexOf('like Gecko')==-1) ||
+    navigator.userAgent.indexOf('WebKit')!=-1){
+  $(".feedback").removeClass("feedback").addClass("feedbackjs");}
+  $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
+  $('.cancel-feedback').click(function(){
+    $(".feedbackform").dialog('close');
+    return false;
+  })
+  $('#feedback').click(function(){
+    var isOpen = $(".feedbackform").dialog('isOpen');
+    if (isOpen){
+      $(".feedbackform").dialog('close');
+    } else {
+      $(".feedbackform").dialog('open');
+    }
+    return false;
+  })
 })
 
 function showMessage(message, t) {

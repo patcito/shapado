@@ -6,6 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'
   map.ban '/moderate/ban', :controller => 'admin/moderate', :action => 'ban'
   map.facts '/facts', :controller => 'welcome', :action => 'facts'
+  map.feedback '/feedback', :controller => 'welcome', :action => 'feedback'
+  map.send_feedback '/send_feedback', :controller => 'welcome', :action => 'send_feedback'
   map.settings '/settings', :controller => 'users', :action => 'edit'
 
   map.resources :users
