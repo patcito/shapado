@@ -4,7 +4,7 @@ $(document).ready(function() {
     && navigator.userAgent.indexOf('like Gecko')==-1) ||
     navigator.userAgent.indexOf('WebKit')!=-1){
   $(".feedback").removeClass("feedback").addClass("feedbackjs");}
-  $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"500px" })
+  $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
   $('.cancel-feedback').click(function(){
     $(".feedbackform").dialog('close');
     return false;

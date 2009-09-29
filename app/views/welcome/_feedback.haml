@@ -1,12 +1,13 @@
-
 -form_tag send_feedback_path, :class => "form", :method => "post" do
   .field-group
     .label-container
       %label.label Title:
     .field
       = text_field_tag "feedback[title]", "", :class=> "text-field"
+  .field-group
     .label-container
       %label.label Description:
+    %br
     .without-label
       = text_area_tag "feedback[description]", "", :class=> "text-area"
   .field-group.clear
