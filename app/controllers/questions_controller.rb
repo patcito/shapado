@@ -56,6 +56,9 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    raise PageNotFound  unless @question
     order = "created_at desc"
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
@@ -67,7 +70,6 @@ class QuestionsController < ApplicationController
         order = "votes_count desc"
     end
 
-    @question = Question.find_by_slug_or_id(params[:id])
     @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
                                           :order => order,
                                           :conditions => {:banned => false})
