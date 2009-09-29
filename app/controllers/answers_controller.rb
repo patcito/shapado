@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_filter :login_required
+  before_filter :login_required, :except => :show
   before_filter :check_permissions, :only => [:edit, :update, :destroy]
 
   helper :votes
