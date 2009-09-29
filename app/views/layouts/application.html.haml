@@ -26,8 +26,9 @@
     = yield :css
 
   %body
-    .feedback
-      =link_to "Feedback", feedback_path, :id => "feedback"
+    - if logged_in?
+      .feedback
+        =link_to "Feedback", feedback_path, :id => "feedback"
     .two-column
       -if !AppConfig.system_notice.blank?
         #system-msg
