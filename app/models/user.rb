@@ -41,10 +41,11 @@ class User
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
 
+  timestamps!
+
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
   validates_inclusion_of :role,  :within => ROLES
-
-  timestamps!
+  validates_length_of    :categories, :within => 1..20, :message => I18n.t("views.application.not_categories_warn") 
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
