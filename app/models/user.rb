@@ -16,8 +16,6 @@ class User
   key :identity_url,              String
   key :crypted_password,          String, :limit => 40
   key :salt,                      String, :limit => 40
-  key :created_at,                Time
-  key :updated_at,                Time
   key :remember_token,            String, :limit => 40
   key :remember_token_expires_at, Time
   key :role,                      String, :default => "user"
