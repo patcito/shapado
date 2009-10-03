@@ -2,7 +2,7 @@ module OpenIdAuthentication
   class Nonce
     include MongoMapper::Document
 
-    key :timestamp, Time
+    key :timestamp, Integer
     key :server_url, String
     key :salt, String
 
