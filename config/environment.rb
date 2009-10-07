@@ -20,7 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "maruku"
-  config.gem "mongomapper"
+  config.gem "mongo_mapper"
   config.gem "chriseppstein-compass", :lib => "compass"
   config.gem "chriseppstein-compass-960-plugin", :lib => "ninesixty"
   config.gem "mm-search", :lib => "mm-search"
