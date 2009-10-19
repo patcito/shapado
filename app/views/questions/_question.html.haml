@@ -3,27 +3,29 @@
     .right.buttons
       = link_to I18n.t('scaffold.edit'), edit_question_path(question), :class => "button"
       = link_to I18n.t('scaffold.destroy'), question, :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
-  %span
-    .item.count_answers
-      %span.counter
-        &= question.answers_count
-      %br
-      = truncate(t(:answers, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
-    .item.count_votes
-      %span.counter
-        &= question.votes_average
-      %br
-      = truncate(t(:votes, :scope => "activerecord.attributes.question"), :length => 6, :omission => ".")
-    .item.count_views
-      %span.counter
-        &= question.views_count
-      %br
+  %span.left
+    .box
+      .item
+        %span.counter
+          &= question.votes_average
+        %br
+        = truncate(t(:votes, :scope => "activerecord.attributes.question"), :length => 6, :omission => ".")
+      .item.count_answers.clear
+        %span.counter
+          &= question.answers_count
+        %br
+        = truncate(t(:answers, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
+      .clear
+    .item.clear{:style => "height: 10px"}
+      &= question.views_count
       = truncate(t(:views, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
-  %span
+  %span.left{:style => "width: 90%"}
     .question_header
       .gravatar.item
         = gravatar(question.user.email.to_s, :size => 48)
       = link_to h(question.title), question_path(question), :title => truncate(question.body, :length => 200)
+      .question_summary
+        = truncate(question.body, :length => 150)
 
     .tags-list.left
       -question.tags.each do |tag|

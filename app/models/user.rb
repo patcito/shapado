@@ -23,7 +23,7 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
-  key :categories,                Array
+  key :categories,                Array, :default => Shapado::CATEGORIES
 
   key :notification_opts,         Hash, :default => {"new_answer"=>"1"}
 
