@@ -31,14 +31,5 @@ class Admin::ModerateController < ApplicationController
     end
   end
 
-  protected
-  def moderator_required
-    unless current_user.moderator?
-      access_denied
-#       flash[:error] = t("views.layout.permission_denied")
-#       redirect_to root_path
-    end
-  end
-
 end
 

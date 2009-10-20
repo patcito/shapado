@@ -1,0 +1,28 @@
+
+%h2
+  Groups
+
+%table.list
+  %tr
+    %th
+      name
+    %th
+      description
+    %th{:colspan => 3}
+      actions
+  -@groups.each do |group|
+    %tr
+      %td
+        &= group.name
+      %td
+        &= group.description
+      %td
+        = link_to 'Show', group
+      %td
+        = link_to 'Edit', edit_group_path(group)
+      %td
+        = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
+
+.buttons
+  = link_to 'Request a new group', new_group_path, :class => "button"
+

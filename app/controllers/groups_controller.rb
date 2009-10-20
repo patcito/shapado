@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
+  before_filter :check_permissions, :only => [:edit, :update, :close]
+  before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups
   # GET /groups.xml
   def index
@@ -34,13 +37,14 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
-    @group = Group.find(params[:id])
   end
 
   # POST /groups
   # POST /groups.xml
   def create
-    @group = Group.new(params[:group])
+    @group = Group.new
+    @group.safe_update(%w[name description categories logo], params[:group])
+    @group.owner = current_user
 
     respond_to do |format|
       if @group.save
@@ -57,10 +61,10 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group = Group.find(params[:id])
+    @group.safe_update(%w[name description categories logo], params[:group])
 
     respond_to do |format|
-      if @group.update_attributes(params[:group])
+      if @group.save
         flash[:notice] = 'Group was successfully updated.'
         format.html { redirect_to(@group) }
         format.xml  { head :ok }
@@ -80,6 +84,31 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(groups_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def accept
+    @group = Group.find(params[:id])
+    @group.state = "accepted"
+    @group.save
+    redirect_to group_path(@group)
+  end
+
+  def close
+    @group.state = "closed"
+    @group.save
+    redirect_to group_path(@group)
+  end
+
+  protected
+    def check_permissions
+    @group = Group.find(params[:id])
+
+    if @group.nil?
+      redirect_to groups_path
+    elsif !current_user.can_modify?(@group)
+      flash[:error] = t("views.layout.permission_denied")
+      redirect_to group_path(@group)
     end
   end
 end

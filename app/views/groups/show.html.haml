@@ -1,0 +1,33 @@
+
+%h2
+  &= @group.name
+  Group
+
+%p
+  &= @group.description
+  %br
+  %b the categories for this group are:
+  &= @group.categories.join(", ")
+  %br
+  %b this group was created by
+  = link_to h(@group.owner.login), user_path(@group.owner)
+
+  %br
+  -case @group.state
+    -when "pending"
+      .message.warn
+        .internal
+          This group is awaiting for the acceptance of a moderator.
+    -when "close"
+      .message.warn
+        .internal
+          This group was closed.
+
+.buttons
+  = link_to 'Edit', edit_group_path(@group), :class => "button"
+  = link_to 'Back', groups_path, :class => "cancel button"
+  -if current_user.moderator? && @group.state == "pending"
+    = link_to 'Accept this group', accept_group_path(@group), :class => "button"
+  -if (@group.owner ==  current_user || current_user.admin?) && @group.state == "active"
+    = link_to 'Close this group', close_group_path(@group), :class => "cancel button"
+
