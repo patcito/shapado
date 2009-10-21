@@ -5,7 +5,18 @@
   .field
     = form.text_field :name, :class => "text-field"
 
+
 .field-group
+  .label-container
+    = form.label :subdomain, "URL"
+  .field.without-label
+    %span.tip
+      ="#{request.protocol}"
+    = form.text_field :subdomain, :class=>"text-field"
+    %span.tip
+      = ".#{request.domain}"
+
+.field-group.clear
   .label-container
     = form.label :description
   .field

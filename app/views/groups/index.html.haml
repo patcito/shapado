@@ -13,7 +13,7 @@
   -@groups.each do |group|
     %tr
       %td
-        &= group.name
+        = link_to h(group.name), subdomain_url(group.subdomain)
       %td
         &= group.description
       %td

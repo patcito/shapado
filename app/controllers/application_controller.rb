@@ -21,6 +21,13 @@ class ApplicationController < ActionController::Base
     raise AccessDenied
   end
 
+
+  def current_group
+    if request.subdomains.empty?
+      @group ||= Group.find_by_subdomain(request.subdomains.first)
+    end
+  end
+
   def find_current_tags
     @current_tags ||= begin
       metatags = Set.new

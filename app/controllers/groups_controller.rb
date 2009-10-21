@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.xml
   def show
-    @group = Group.find(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,7 +43,7 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name description categories logo], params[:group])
+    @group.safe_update(%w[name description categories logo subdomain], params[:group])
     @group.owner = current_user
 
     respond_to do |format|
@@ -78,7 +78,7 @@ class GroupsController < ApplicationController
   # DELETE /groups/1
   # DELETE /groups/1.xml
   def destroy
-    @group = Group.find(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id])
     @group.destroy
 
     respond_to do |format|
@@ -88,7 +88,7 @@ class GroupsController < ApplicationController
   end
 
   def accept
-    @group = Group.find(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id])
     @group.state = "accepted"
     @group.save
     redirect_to group_path(@group)
@@ -102,7 +102,7 @@ class GroupsController < ApplicationController
 
   protected
     def check_permissions
-    @group = Group.find(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id])
 
     if @group.nil?
       redirect_to groups_path

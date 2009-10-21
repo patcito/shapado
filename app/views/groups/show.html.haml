@@ -1,6 +1,6 @@
 
 %h2
-  &= @group.name
+  = link_to h(@group.name), subdomain_url(@group.subdomain)
   Group
 
 %p
