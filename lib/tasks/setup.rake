@@ -16,7 +16,8 @@ namespace :setup do
                            :subdomain => AppConfig.application_name,
                            :description => "question-and-answer website",
                            :categories => categories,
-                           :state => "active")
+                           :state => "active",
+                           :logo => File.read(RAILS_ROOT+"/public/images/logo.png"))
     default_group.save!
   end
 

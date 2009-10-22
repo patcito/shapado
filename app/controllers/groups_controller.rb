@@ -43,7 +43,8 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name description categories logo subdomain], params[:group])
+    @group.safe_update(%w[name description categories subdomain], params[:group])
+    @group.logo = params[:group][:logo].read if params[:group][:logo]
     @group.owner = current_user
 
     respond_to do |format|
@@ -61,7 +62,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name description categories logo], params[:group])
+    @group.safe_update(%w[name description categories], params[:group])
+    @group.logo = params[:group][:logo].read if params[:group][:logo]
 
     respond_to do |format|
       if @group.save
@@ -98,6 +100,11 @@ class GroupsController < ApplicationController
     @group.state = "closed"
     @group.save
     redirect_to group_path(@group)
+  end
+
+  def logo
+    @group = Group.find_by_slug_or_id(params[:id])
+    send_data(@group.raw_logo)
   end
 
   protected

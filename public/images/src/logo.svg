@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="217"
+   height="61"
+   id="svg2898"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/kuadrosx/Projects/ricodigo/shapado/public/images/src/logo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2900">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2906" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="235.70629"
+     inkscape:cy="-27.821529"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1358"
+     inkscape:window-height="672"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="0,1"
+       position="245.46707,-60.104076"
+       id="guide2924" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2903">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-67.828476,-270.32233)">
+    <text
+       xml:space="preserve"
+       style="font-size:57.79555893px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:TlwgTypewriter;-inkscape-font-specification:TlwgTypewriter Medium"
+       x="74.336143"
+       y="296.17316"
+       id="text2912"
+       transform="scale(0.93384197,1.070845)"><tspan
+         sodipodi:role="line"
+         id="tspan2914"
+         x="74.336143"
+         y="296.17316">Sha</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:62.01435471px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff6600;fill-opacity:1;stroke:none;font-family:TlwgTypewriter;-inkscape-font-specification:TlwgTypewriter Medium"
+       x="182.6898"
+       y="131.23318"
+       id="text2916"
+       transform="scale(0.8703133,1.1490115)"><tspan
+         sodipodi:role="line"
+         id="tspan2918"
+         x="182.6898"
+         y="131.23318"></tspan><tspan
+         sodipodi:role="line"
+         x="182.6898"
+         y="208.75114"
+         id="tspan2957"></tspan><tspan
+         sodipodi:role="line"
+         x="182.6898"
+         y="286.26907"
+         id="tspan2959">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:57.79555893px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:TlwgTypewriter;-inkscape-font-specification:TlwgTypewriter Medium"
+       x="200.67195"
+       y="296.17316"
+       id="text2920"
+       transform="scale(0.93384197,1.070845)"><tspan
+         sodipodi:role="line"
+         id="tspan2922"
+         x="200.67195"
+         y="296.17316">ado</tspan></text>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 %h2
   Request your group
 
--form_for(@group, :html => {:class => "form"}) do |f|
+-form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
   = render :partial => "form", :object => f
   .buttons

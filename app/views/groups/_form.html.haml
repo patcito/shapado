@@ -36,6 +36,8 @@
   .label-container
     = form.label :logo
   .field
+    = image_tag(logo_group_path(@group))
+    %br
     = form.file_field :logo
     .tip
       You can upload the group logo. The maximum file size is 2Mb.

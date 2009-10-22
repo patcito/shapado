@@ -3,14 +3,17 @@
   = link_to h(@group.name), subdomain_url(@group.subdomain)
   Group
 
+= image_tag(logo_group_path(@group))
+
 %p
   &= @group.description
   %br
   %b the categories for this group are:
   &= @group.categories.join(", ")
   %br
-  %b this group was created by
-  = link_to h(@group.owner.login), user_path(@group.owner)
+  -if @group.owner.login
+    %b this group was created by
+    = link_to h(@group.owner.login), user_path(@group.owner)
 
   %br
   -case @group.state

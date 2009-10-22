@@ -18,6 +18,8 @@ class Group
   validates_length_of       :description,    :within => 3..200
   validates_uniqueness_of   :name
   validates_uniqueness_of   :subdomain
+  validates_length_of       :raw_logo,       :maximum => 2000000,
+                                             :message => "The maximum file size is 2Mb."
 
   def categories=(c)
     if c.kind_of?(String)
@@ -31,4 +33,15 @@ class Group
     self[:subdomain] = domain.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].
                                                 strip.gsub(/\s+/, "-").downcase
   end
+
+  def raw_logo
+    logo = ""
+    if self.logo
+      logo = self.logo.to_s
+    else
+      logo = File.read(RAILS_ROOT+"/public/images/default_logo.png")
+    end
+    logo
+  end
 end
+

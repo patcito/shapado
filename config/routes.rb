@@ -23,7 +23,9 @@ ActionController::Routing::Routes.draw do |map|
   end
 
 
-  map.resources :groups, :member => {:accept => :get, :close => :get}
+  map.resources :groups, :member => {:accept => :get,
+                                     :close => :get,
+                                     :logo => :get}
 
   map.resources :votes
   map.resources :flags
