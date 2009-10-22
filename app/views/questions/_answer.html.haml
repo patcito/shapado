@@ -12,7 +12,7 @@
     = country_flag(answer.user.country_code, answer.user.country_name)
     .clear
   .answer_body
-    = vote_box(answer, question_path(question))
+    = vote_box(answer, question_path(current_category, question))
     %span.markdown
       = markdown(answer.body)
     .clear
@@ -34,10 +34,10 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(@question, answer, :anchor => answer.id)
+        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(current_category, @question, answer, :anchor => answer.id)
         -if current_user != answer.user
           |
-          = link_to t("views.questions.show.flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
+          = link_to t("views.questions.show.flag"), flag_question_answer_path(current_category,@question,answer), :class => "flag-link"
       .right
         = link_to t("views.questions.show.add_comment"), "#", :class => "addNestedAnswer"
       .clear
@@ -48,18 +48,18 @@
         .flag_form.hidden
           -flag = Flag.new
           -flag.flaggeable = answer
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(@question) }
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category,@question) }
     / Buttons
     -if logged_in?
       .buttons
         -if current_user.can_modify?(answer)
-          = link_to I18n.t("scaffold.edit"), edit_question_answer_path(@question, answer), :class =>"button"
-          = link_to I18n.t("scaffold.destroy"), question_answer_path(@question, answer), :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
+          = link_to I18n.t("scaffold.edit"), edit_question_answer_path(current_category, @question, answer), :class =>"button"
+          = link_to I18n.t("scaffold.destroy"), question_answer_path(current_category, @question, answer), :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
         -if current_user.can_modify?(@question)
           -unless @question.answered
-            = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(@question, :answer_id => answer), :class =>"button"
+            = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(current_category, @question, :answer_id => answer), :class =>"button"
           -if solution
-            = link_to t("unset_answer", :scope => "views.questions.show"),  unsolve_question_path(@question), :class =>"button"
+            = link_to t("unset_answer", :scope => "views.questions.show"),  unsolve_question_path(current_category, @question), :class =>"button"
         -if current_user.moderator?
           = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
 

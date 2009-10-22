@@ -28,7 +28,7 @@
   .label-container
     = f.label :category, t(:category, :scope => "activerecord.attributes.question")
   .field
-    = f.select :category, category_options, {:selected => @category}
+    = f.select :category, category_options, {:selected => current_category}
     .tip
       = t(:category_tip, :scope => "views.questions.form")
 .field-group

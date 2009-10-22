@@ -6,7 +6,7 @@
     -@questions.each do |question|
       .question
         %strong
-          = link_to h(question.title), question_path(question)
+          = link_to h(question.title), question_path(current_category, question)
         %br
         = truncate(question.body, :length => 400)
 
@@ -18,6 +18,6 @@
       -if answer.question.id
         .question
           %strong
-            = link_to h(answer.question.title), question_answer_path(answer.question.id, answer.id, :anchor => answer.id)
+            = link_to h(answer.question.title), question_answer_path(current_category, answer.question.id, answer.id, :anchor => answer.id)
           %br
           = truncate(answer.body, :length => 400)

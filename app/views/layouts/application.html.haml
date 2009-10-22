@@ -42,16 +42,16 @@
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
           %ul#menu_logo
             %li
-              = link_to "FAQ", questions_path(:tags => "faq")
+              = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
             %li
-              -if @category
-                = link_to category_desc(@category), ""
+              -if current_category != "all"
+                = link_to category_desc(current_category), ""
               -else
                 = link_to t("views.layout.categories"), "/"
               %ul
                 -category_options.each do |desc, value|
                   %li
-                    = link_to(desc, subdomain_url(value))
+                    = link_to(desc, questions_path(:category => value))
             %li
               -if @languages && !@languages.empty?
                 = link_to language_desc(@languages.first), ""
@@ -94,22 +94,22 @@
         #menu_primary
           %ul
             %li.questions
-              =link_to I18n.t("views.layout.questions"), questions_path
+              =link_to I18n.t("views.layout.questions"), questions_path(:category => current_category)
             %li.tags
-              =link_to I18n.t("views.layout.tags"), tags_questions_path
+              =link_to I18n.t("views.layout.tags"), tags_questions_path(:category => current_category)
             %li.users
               =link_to I18n.t("views.layout.users"), users_path
             %li.unanswered
-              =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path
+              =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path(:category => current_category)
             -if logged_in?
               -if current_user.moderator?
                 %li.moderate
                   =link_to I18n.t("views.layout.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
               -current_user.preferred_tags.each do |tag|
                 %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
-                  =link_to h(tag), questions_path(:tags => tag)
+                  =link_to h(tag), questions_path(:category => current_category, :tags => tag)
             %li.ask_question
-              =link_to I18n.t("views.layout.ask_question"), new_question_path, :rel => 'nofollow'
+              =link_to I18n.t("views.layout.ask_question"), new_question_path(:category => current_category), :rel => 'nofollow'
       #main-content
         #messages
           -flash.each do |k,v|

@@ -12,13 +12,16 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
   map.resource :session
-  map.resources :questions, :collection => {:tags => :get,
+
+  map.resources :questions, :path_prefix => '/:category',
+                            :collection => {:tags => :get,
                                             :unanswered => :get},
                             :member => {:solve => :get,
                                         :unsolve => :get,
                                         :flag => :get} do |questions|
     questions.resources :answers, :member => {:flag => :get}
   end
+
 
   map.resources :groups, :member => {:accept => :get, :close => :get}
 

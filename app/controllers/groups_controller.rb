@@ -89,7 +89,7 @@ class GroupsController < ApplicationController
 
   def accept
     @group = Group.find_by_slug_or_id(params[:id])
-    @group.state = "accepted"
+    @group.state = "active"
     @group.save
     redirect_to group_path(@group)
   end

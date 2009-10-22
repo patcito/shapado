@@ -4,7 +4,7 @@
 #question
   #question-title
     %h2
-      = link_to h(@question.title), question_path(@question)
+      = link_to h(@question.title), question_path(current_category, @question)
   #question-body.markdown
     = markdown(@question.body)
 

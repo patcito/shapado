@@ -5,6 +5,7 @@ namespace :populator do
   task :questions => :environment do
     users = User.find(:all, :limit => 20)
     raise "There are no users!" if users.empty?
+    default_group = Group.find_by_name(AppConfig.application_name)
 
     10.times do
       q = Question.new(:title =>  Faker::Lorem.words(rand(6)+6).join(" "),
@@ -13,6 +14,7 @@ namespace :populator do
                        :tags => Faker::Lorem.words(rand(6)+1),
                        :category => Shapado::CATEGORIES.rand,
                        :banned => false)
+      q.group = default_group
       q.user = users.rand
       q.save!
 
