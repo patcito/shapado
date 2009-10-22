@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  before_filter :find_current_tags
+  before_filter :find_conditions
   before_filter :set_locale
 
   protected
@@ -21,36 +21,42 @@ class ApplicationController < ActionController::Base
     raise AccessDenied
   end
 
-  def find_current_tags
-    @current_tags ||= begin
-      metatags = Set.new
-      metatags += request.subdomains
-      metatags.delete("www")
 
-      @languages ||=  begin
-                        languages = []
-                        metatags.each do |tag|
-                          if AVAILABLE_LANGUAGES.include?(tag)
-                            languages << tag
-                            metatags.delete(tag)
-                          end
-                          @category ||= Shapado::CATEGORIES.detect {|e| e == tag}
-                        end
-                        languages
-                      end
-
-      if params[:tags]
-        metatags += params[:tags].kind_of?(Array) ? params[:tags] : [params[:tags]]
+  def current_group
+    #FIXME ensure that the current group exists
+    subdomains = request.subdomains
+    subdomains.delete("www")
+    unless subdomains.empty?
+      @current_group ||= begin
+        group = Group.find(:first, :limit => 1, :conditions => {:state => "active",
+                                             :subdomain => subdomains.last})
+        group
       end
-      metatags
+    end
+    @current_group ||= Group.find_by_name(AppConfig.application_name)
+    @current_group
+  end
+  helper_method :current_group
+
+  def current_category
+    params.fetch(:category, "all")
+  end
+  helper_method :current_category
+
+  def find_conditions
+    @languages ||= begin
+      subdomains = request.subdomains
+      subdomains.delete("www")
+      subdomains.select{ |subdomain| AVAILABLE_LANGUAGES.include?(subdomain) }
     end
   end
-  alias :current_tags :find_current_tags
 
   def scoped_conditions(conditions = {})
-    unless current_tags.empty?
-      conditions.deep_merge!({:_metatags => current_tags.to_a})
+    if tags = params[:tags]
+      tags = [params[:tags]] if !tags.kind_of? Array
+      conditions.deep_merge!({:tags => {:$in => tags}})
     end
+    conditions.deep_merge!({:group_id => current_group.id})
     conditions.deep_merge!(language_conditions)
     conditions.deep_merge!(categories_conditions)
   end
@@ -74,8 +80,8 @@ class ApplicationController < ActionController::Base
 
   def categories_conditions
     conditions = {}
-    if logged_in? && !current_user.categories.blank?
-      conditions[:category] = {:$in => current_user.categories}
+    if current_category != "all"
+      conditions.deep_merge!({:category => current_category})
     end
     conditions
   end
@@ -133,5 +139,13 @@ class ApplicationController < ActionController::Base
   def add_feeds_url(url, title="atom")
     @feed_urls = [] unless @feed_urls
     @feed_urls << [title, url]
+  end
+
+  def moderator_required
+    unless current_user.moderator?
+      access_denied
+#       flash[:error] = t("views.layout.permission_denied")
+#       redirect_to root_path
+    end
   end
 end

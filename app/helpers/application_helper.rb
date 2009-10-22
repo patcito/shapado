@@ -6,7 +6,7 @@ module ApplicationHelper
 
   def category_options
     categories = Shapado::CATEGORIES
-    categories = current_user.categories if logged_in?
+    categories = current_group.categories if current_group
     categories.collect do |category|
       [category_desc(category), category]
     end
@@ -50,7 +50,7 @@ module ApplicationHelper
     cloud = '<div class="tag_cloud">'
     tags.each do |tag|
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
-      url = questions_path(:tags => tag["name"])
+      url = questions_path(:category => current_category, :tags => tag["name"])
       cloud << "<span>#{link_to(tag["name"], url,
           :style => "font-size:#{size}px", :class => "#{tag_class}")}</span> "
     end

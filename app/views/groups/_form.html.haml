@@ -1,0 +1,43 @@
+
+.field-group
+  .label-container
+    = form.label :name
+  .field
+    = form.text_field :name, :class => "text-field"
+
+
+.field-group
+  .label-container
+    = form.label :subdomain, "URL"
+  .field.without-label
+    %span.tip
+      ="#{request.protocol}"
+    = form.text_field :subdomain, :class=>"text-field"
+    %span.tip
+      = ".#{request.domain}"
+
+.field-group.clear
+  .label-container
+    = form.label :description
+  .field
+    = form.text_area :description, :class => "text-area"
+    .tip
+      You have 200 characters to describe the group.
+
+.field-group
+  .label-container
+    = form.label :categories
+  .field
+    = form.text_field :categories, :value => @group.categories.join(", "), :class => "text-field"
+    .tip
+      Separate categories by commas.
+
+.field-group
+  .label-container
+    = form.label :logo
+  .field
+    = image_tag(logo_group_path(@group))
+    %br
+    = form.file_field :logo
+    .tip
+      You can upload the group logo. The maximum file size is 2Mb.

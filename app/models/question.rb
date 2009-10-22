@@ -31,6 +31,10 @@ class Question
 
   key :answer_id, String
   belongs_to :answer
+
+  key :group_id, String
+  belongs_to :group
+
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
@@ -48,7 +52,7 @@ class Question
   before_validation_on_create :sluggize, :update_language
 #   before_validation_on_update :update_answer_count
 
-  validates_inclusion_of :category, :within => Shapado::CATEGORIES
+#   validates_inclusion_of :category, :within => lambda{current_group.categories} #FIXME
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
   timestamps!
 

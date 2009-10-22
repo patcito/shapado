@@ -16,7 +16,6 @@ end
 
 AppConfig = OpenStruct.new(options[RAILS_ENV])
 
-
 reputation_config_file = "/etc/shapado.reputation.yml"
 if !File.exist?(reputation_config_file)
   reputation_config_file = RAILS_ROOT+"/config/reputation.yml"
@@ -25,6 +24,7 @@ end
 if !File.exist?(reputation_config_file)
   raise StandardError,  "Reputation Config file was not found"
 end
+
 
 REPUTATION_CONF = YAML.load_file(reputation_config_file)
 

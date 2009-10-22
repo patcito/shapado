@@ -107,6 +107,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new
     @question.safe_update(%w[title body language category tags], params[:question])
+    @question.group = current_group
     @question.user = current_user
 
     respond_to do |format|
@@ -114,7 +115,7 @@ class QuestionsController < ApplicationController
         current_user.update_reputation(:ask_question)
         flash[:notice] = t(:flash_notice, :scope => "views.questions.create")
 
-        format.html { redirect_to(@question) }
+        format.html { redirect_to(question_path(current_category, @question)) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
@@ -130,7 +131,7 @@ class QuestionsController < ApplicationController
       @question.safe_update(%w[title body language category tags], params[:question])
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "views.questions.update")
-        format.html { redirect_to(@question) }
+        format.html { redirect_to(question_path(current_category,@question)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -162,7 +163,7 @@ class QuestionsController < ApplicationController
           @answer.user.update_reputation(:answer_picked_as_solution)
         end
         flash[:notice] = t(:flash_notice, :scope => "views.questions.solve")
-        format.html { redirect_to question_path(@question) }
+        format.html { redirect_to question_path(current_category, @question) }
       else
         format.html { render :action => "show" }
       end
@@ -181,7 +182,7 @@ class QuestionsController < ApplicationController
         if current_user != answer_owner
           answer_owner.update_reputation(:answer_unpicked_as_solution)
         end
-        format.html { redirect_to question_path(@question) }
+        format.html { redirect_to question_path(current_category, @question) }
       else
         format.html { render :action => "show" }
       end
@@ -206,7 +207,7 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
       flash[:error] = t("views.layout.permission_denied")
-      redirect_to question_path(@question)
+      redirect_to question_path(current_category, @question)
     end
   end
 

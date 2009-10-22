@@ -1,0 +1,10 @@
+%h2
+  Editing group
+
+-form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
+  = f.error_messages
+  = render :partial => "form", :object => f
+  .buttons
+    = f.submit 'Update'
+    = link_to 'Show', group_path(@group), :class => "button"
+    = link_to 'Back', groups_path, :class => "cancel button"
