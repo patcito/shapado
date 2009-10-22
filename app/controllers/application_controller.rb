@@ -29,13 +29,12 @@ class ApplicationController < ActionController::Base
     unless subdomains.empty?
       @group ||= begin
         group = Group.find(:first, :limit => 1, :conditions => {:state => "active",
-                                             :subdomain => subdomains.first})
+                                             :subdomain => subdomains.last})
         group
       end
-      @group
-    else
-      @group ||= Group.find_by_name(AppConfig.application_name)
     end
+    @group ||= Group.find_by_name(AppConfig.application_name)
+    @group
   end
   helper_method :current_group
 
