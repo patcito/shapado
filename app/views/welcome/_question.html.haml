@@ -1,0 +1,37 @@
+.question
+  -if logged_in? && current_user.can_modify?(question)
+    .right.buttons
+      = link_to I18n.t('scaffold.edit'), edit_question_path(question), :class => "button"
+      = link_to I18n.t('scaffold.destroy'), question, :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
+  %span
+    .item.count_votes
+      %span.counter
+        &= question.votes_average
+      %br
+      = truncate(t(:votes, :scope => "activerecord.attributes.question"), :length => 6, :omission => ".")
+    .item.count_answers
+      %span.counter
+        &= question.answers_count
+      %br
+      = truncate(t(:answers, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
+    .item.count_views
+      %span.counter
+        &= question.views_count
+      %br
+      = truncate(t(:views, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
+  %span
+    .question_header
+      .gravatar.item
+        = gravatar(question.user.email.to_s, :size => 48)
+      = link_to h(question.title), question_path(question), :title => truncate(question.body, :length => 200)
+
+    .tags-list.left
+      -question.tags.each do |tag|
+        %span.tag
+          = link_to h(tag), questions_path(:tags => tag)
+    .right
+      = t(:asked_by, :scope => "activerecord.attributes.question")
+      = link_to h(question.user.login), user_path(question.user)
+      %b
+        = time_ago_in_words(question.created_at)
+  .clear
