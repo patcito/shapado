@@ -1,0 +1,12 @@
+
+%ul#groups
+  -groups = Group.find(:all, :limit => 5, :conditions => {:state => "active"})
+  -groups.delete(current_group)
+  %li
+    %b
+      &= current_group.name
+  -groups.each do |g|
+    %li
+      = link_to h(g.name), subdomain_url(g.subdomain)
+  %li
+    = link_to "more...", groups_path

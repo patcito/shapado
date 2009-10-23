@@ -26,6 +26,8 @@
     = yield :css
 
   %body
+    #top_bar
+      = render :partial => "shared/topbar"
     - if logged_in?
       .feedback
         =link_to "Feedback", feedback_path, :id => "feedback"
@@ -42,6 +44,8 @@
             =link_to image_tag(logo_group_path(current_group)), subdomain_url(current_group.subdomain)
             %span#legend
               &= current_group.legend
+            -if logged_in? && current_user.can_modify?(current_group)
+              = link_to "mange...", group_path(current_group)
           %ul#menu_logo
             %li
               = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
