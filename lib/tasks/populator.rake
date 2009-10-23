@@ -22,6 +22,7 @@ namespace :populator do
         a = Answer.new( :user => users.rand,
                         :body => Faker::Lorem.paragraphs(rand(10)+1),
                         :language => (rand(100) % 2 == 0) ? 'en' : 'es')
+        a.group_id = q.group_id
         q.answers << a
         q.answer_added!
         rand(10).times do |i|

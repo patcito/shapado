@@ -36,8 +36,13 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_login_or_id(params[:id])
     raise SuperExceptionNotifier::CustomExceptionClasses::PageNotFound unless @user
-    @questions = @user.questions.paginate(:page=>params[:questions_page], :per_page => 10)
-    @answers = @user.answers.paginate(:page=>params[:answers_page], :conditions => {:parent_id => nil}, :per_page => 10)
+    @questions = @user.questions.paginate(:page=>params[:questions_page],
+                                          :per_page => 10,
+                                          :conditions => {:group_id => current_group.id})
+    @answers = @user.answers.paginate(:page=>params[:answers_page],
+                                      :conditions => {:parent_id => nil,
+                                                      :group_id => current_group.id},
+                                      :per_page => 10)
 
     add_feeds_url(url_for(:format => "atom"), t("views.feeds.user"))
   end

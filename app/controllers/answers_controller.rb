@@ -17,7 +17,9 @@ class AnswersController < ApplicationController
 
     if @answer.parent_id.blank?
       @answer.question = @question
+      @answer.group_id = @question.group_id
     end
+
     if @question && @answer.save
       unless @answer.comment?
         @question.answer_added!

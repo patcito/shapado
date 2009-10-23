@@ -14,6 +14,9 @@ class Answer
   key :user_id, String
   belongs_to :user
 
+  key :group_id, String
+  belongs_to :group
+
   key :parent_id, String
   belongs_to :parent, :class_name => "Answer"
 
