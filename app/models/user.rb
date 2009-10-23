@@ -23,7 +23,6 @@ class User
 
   key :preferred_tags,            Array, :default => []
   key :preferred_languages,       Array
-  key :categories,                Array
 
   key :notification_opts,         Hash, :default => {"new_answer"=>"1"}
 
@@ -43,7 +42,6 @@ class User
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
   validates_inclusion_of :role,  :within => ROLES
-#  validates_length_of    :categories, :within => 1..20, :message => I18n.t("views.application.not_categories_warn") 
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
