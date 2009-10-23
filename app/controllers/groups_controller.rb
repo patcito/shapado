@@ -5,7 +5,16 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.xml
   def index
-    @groups = Group.all
+
+    case params.fetch(:tab, "actives")
+      when "actives"
+        @state = "active"
+      when "pendings"
+        @state = "pending"
+    end
+
+    @groups = Group.paginate(:page => params[:page],
+                             :conditions => {:state => @state})
 
     respond_to do |format|
       format.html # index.html.erb

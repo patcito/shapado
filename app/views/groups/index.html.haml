@@ -1,28 +1,35 @@
 
-%h2
+#groups.subtitle{:class => @state}
   Groups
+  .right.tabs
+    .tab.active
+      = link_to "actives", groups_path(:tab=>"actives")
+    .tab.pending
+      = link_to "pendings", groups_path(:tab=>"pendings")
 
-%table.list
-  %tr
-    %th
-      name
-    %th
-      description
-    %th{:colspan => 3}
-      actions
+
+%ul
   -@groups.each do |group|
-    %tr
-      %td
-        = link_to h(group.name), subdomain_url(group.subdomain)
-      %td
+    %li.list-item
+      %span
+        -if group.state == "active"
+          = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), subdomain_url(group.subdomain)
+        -else
+          = image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top")
+      %span
+        -if group.state == "active"
+          = link_to h(group.name), subdomain_url(group.subdomain)
+        -else
+          &= group.name
         &= group.description
-      %td
-        = link_to 'Show', group
-      %td
-        = link_to 'Edit', edit_group_path(group)
-      %td
-        = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete
-
+      %span.buttons.right
+        = link_to 'About', group, :class => "button"
+        -if logged_in?
+          -if current_user.can_modify?(group)
+            = link_to 'Edit', edit_group_path(group), :class => "button"
+          -if current_user.admin?
+            = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
+      .clear
 .buttons
   = link_to 'Request a new group', new_group_path, :class => "button"
 
