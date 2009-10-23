@@ -1,9 +1,12 @@
 
-%h2
-  = link_to h(@group.name), subdomain_url(@group.subdomain)
+%h1
+  &= @group.name
   Group
 
+= link_to "visit this group", subdomain_url(@group.subdomain)
+%br
 = image_tag(logo_group_path(@group))
+
 
 %p
   &= @group.description

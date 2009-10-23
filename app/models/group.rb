@@ -5,9 +5,9 @@ class Group
   slug_key :name
   key :name, String, :required => true
   key :subdomain, String
+  key :legend, String
   key :description, String
   key :categories, Array
-  key :logo, Binary
 
   key :state, String, :default => "pending" #pending, active, closed
 
@@ -15,11 +15,10 @@ class Group
   belongs_to :owner, :class_name => "User"
 
   validates_length_of       :name,           :within => 3..40
-  validates_length_of       :description,    :within => 3..200
+  validates_length_of       :description,    :within => 3..400
+  validates_length_of       :legend,         :maximum => 40
   validates_uniqueness_of   :name
   validates_uniqueness_of   :subdomain
-  validates_length_of       :raw_logo,       :maximum => 2000000,
-                                             :message => "The maximum file size is 2Mb."
 
   def categories=(c)
     if c.kind_of?(String)
@@ -34,14 +33,20 @@ class Group
                                                 strip.gsub(/\s+/, "-").downcase
   end
 
-  def raw_logo
-    logo = ""
-    if self.logo
-      logo = self.logo.to_s
-    else
-      logo = File.read(RAILS_ROOT+"/public/images/default_logo.png")
+  def logo_data=(data)
+    logo = self.logo
+    if data.respond_to?(:read)
+      logo.image = data.read
+    elsif data.kind_of?(String)
+      logo.image = File.read(data)
     end
-    logo
+    logo.group = self
+
+    logo.save
+  end
+
+  def logo
+    @logo ||= (Logo.find(:first, :conditions => {:group_id => self.id}) || Logo.new)
   end
 end
 
