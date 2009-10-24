@@ -57,5 +57,21 @@ namespace :populator do
                          :password => "test123", :password_confirmation => "test123")
     end
   end
+
+  desc "Creates 10 random groups"
+  task :groups => :environment do
+    states = ["active", "pending"]
+    users = User.find(:all, :limit => 20)
+    raise "There are no users!" if users.empty?
+    10.times do
+      name = Faker::Name.name
+      group = Group.new(:name => Faker::Name.name,
+                        :subdomain => name,
+                        :description => Faker::Lorem.paragraphs(1),
+                        :state => states.rand)
+      group.owner = users.rand
+      group.save!
+    end
+  end
 end
 

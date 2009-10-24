@@ -19,6 +19,7 @@ class Group
   validates_length_of       :legend,         :maximum => 40
   validates_uniqueness_of   :name
   validates_uniqueness_of   :subdomain
+  validates_presence_of     :subdomain
 
   def categories=(c)
     if c.kind_of?(String)

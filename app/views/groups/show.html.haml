@@ -34,6 +34,5 @@
   = link_to 'Back', groups_path, :class => "cancel button"
   -if current_user.moderator? && @group.state == "pending"
     = link_to 'Accept this group', accept_group_path(@group), :class => "button"
-  -if (@group.owner ==  current_user || current_user.admin?) && @group.state == "active"
+  -if current_user.can_modify?(@group) && @group.state == "active"
     = link_to 'Close this group', close_group_path(@group), :class => "cancel button"
-

@@ -27,9 +27,15 @@
         -if logged_in?
           -if current_user.can_modify?(group)
             = link_to 'Edit', edit_group_path(group), :class => "button"
+            -if group.state == "active"
+              = link_to 'Close', close_group_path(group), :class => "cancel button"
           -if current_user.admin?
             = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
+          -if current_user.moderator? && group.state == "pending"
+            = link_to 'Accept this group', accept_group_path(group), :class => "button"
       .clear
+=will_paginate @groups
+
 .buttons
   = link_to 'Request a new group', new_group_path, :class => "button"
 

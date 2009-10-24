@@ -13,7 +13,8 @@ class GroupsController < ApplicationController
         @state = "pending"
     end
 
-    @groups = Group.paginate(:page => params[:page],
+    @groups = Group.paginate(:per_page => 15,
+                             :page => params[:page],
                              :conditions => {:state => @state})
 
     respond_to do |format|
