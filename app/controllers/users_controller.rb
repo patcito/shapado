@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   def index
     set_page_title(t("views.users.index.title"))
     @users = User.paginate(:per_page => params[:per_page]||24,
-                           :order => "reputation desc",
+                           :order => "reputation.#{current_group.id} desc",
+                           :conditions => {"reputation.#{current_group.id}" => {:$exists => true}},
                            :page => params[:page] || 1)
   end
 

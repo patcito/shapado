@@ -52,10 +52,10 @@ class Answer
     self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
                                                          :upsert => true)
     if v > 0
-      self.user.update_reputation(:answer_receives_up_vote)
+      self.user.update_reputation(:answer_receives_up_vote, self.group)
       voter.update_reputation(:vote_up_answer)
     else
-      self.user.update_reputation(:answer_receives_down_vote)
+      self.user.update_reputation(:answer_receives_down_vote, self.group)
       voter.update_reputation(:vote_down_answer)
     end
   end

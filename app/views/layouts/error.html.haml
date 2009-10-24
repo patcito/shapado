@@ -72,7 +72,7 @@
                 .row1
                   = link_to h(current_user.login), user_path(current_user)
                   %span{:style => "font-size: 12px; font-weight: bold"}
-                    == (#{current_user.reputation.to_i})
+                    == (#{current_user.reputation_on(current_group)})
                   .right
                     =link_to I18n.t('views.layout.settings'), settings_path
                     |

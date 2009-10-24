@@ -28,7 +28,7 @@ class User
 
   key :language,                  String, :default => "en"
   key :timezone,                  String
-  key :reputation,                Float, :default => 1.0
+  key :reputation,                Hash, :default => {}
 
   key :ip,                        String
   key :country_code,              String
@@ -141,13 +141,15 @@ class User
     end
   end
 
-  def update_reputation(key)
+  def update_reputation(key, group)
     value = REPUTATION_CONF[key.to_s]
-    Rails.logger.info "#{self.login} receive #{value} points of karma by #{key}"
+    Rails.logger.info "#{self.login} receive #{value} points of karma by #{key} on #{group.name}"
     value = key if value.nil? && key.kind_of?(Integer)
     if value
-      self.collection.update({:_id => self.id}, {:$inc => {:reputation => value}},
-                                                 :upsert => true)
+      User.collection.update({:_id => self.id},
+                             {:$inc => {"reputation.#{group.id}" => value}},
+                             :upsert => true,
+                             :safe => true)
     end
   end
 
@@ -157,6 +159,10 @@ class User
     self.country_code = l[2]
     self.country_name = l[4]
     save
+  end
+
+  def reputation_on(group)
+    self.reputation.fetch(group.id, 1.0 ).to_i
   end
 
   protected

@@ -15,7 +15,7 @@
             %table{:style=> "border-bottom: 4px solid #F6F6F6; padding-top: 3px; width: 50%"}
               %tr
                 %td.users_info_item.first_col.reputation
-                  &= user.reputation
+                  &= user.reputation_on(current_group)
                 %td.users_info_item.sec_col{:title => t(:reputation, :scope => "activerecord.attributes.user")}
                   = t(:reputation, :scope => "activerecord.attributes.user")
               %tr
