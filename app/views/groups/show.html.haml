@@ -32,7 +32,8 @@
 .buttons
   = link_to 'Edit', edit_group_path(@group), :class => "button"
   = link_to 'Back', groups_path, :class => "cancel button"
-  -if current_user.moderator? && @group.state == "pending"
-    = link_to 'Accept this group', accept_group_path(@group), :class => "button"
-  -if current_user.can_modify?(@group) && @group.state == "active"
-    = link_to 'Close this group', close_group_path(@group), :class => "cancel button"
+  -if logged_in?
+    -if current_user.moderator? && @group.state == "pending"
+      = link_to 'Accept this group', accept_group_path(@group), :class => "button"
+    -if current_user.can_modify?(@group) && @group.state == "active"
+      = link_to 'Close this group', close_group_path(@group), :class => "cancel button"
