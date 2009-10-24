@@ -87,13 +87,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :categories_conditions
 
-  def categories_required
-    if logged_in? && current_user.categories.blank?
-      flash[:error] = t("not_categories_warn", :scope => "views.application")
-      redirect_to :controller => "users", :action => "edit"
-    end
-  end
-
   def available_locales; AVAILABLE_LOCALES; end
 
   def set_locale
