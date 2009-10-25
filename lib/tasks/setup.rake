@@ -13,12 +13,14 @@ namespace :setup do
   task :default_group => [:environment] do
     categories = %w[technology programming business science politics religion
                                   sports entertainment gaming lifestyle offbeat]
+
+    subdomain = AppConfig.application_name.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
     default_group = Group.new(:name => AppConfig.application_name,
-                           :subdomain => AppConfig.application_name,
-                           :description => "question-and-answer website",
-                           :legend => "question and answer website",
-                           :categories => categories,
-                           :state => "active")
+                              :subdomain => subdomain,
+                              :description => "question-and-answer website",
+                              :legend => "question and answer website",
+                              :categories => categories,
+                              :state => "active")
     default_group.save!
     default_group.logo_data = RAILS_ROOT+"/public/images/logo.png"
     default_group.save

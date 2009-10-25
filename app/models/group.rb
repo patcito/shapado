@@ -20,6 +20,8 @@ class Group
   validates_uniqueness_of   :name
   validates_uniqueness_of   :subdomain
   validates_presence_of     :subdomain
+  validates_format_of       :subdomain, :with => /^[a-z0-9\-]+$/i
+  validates_length_of       :subdomain, :within => 3..32
 
   def categories=(c)
     if c.kind_of?(String)
@@ -28,11 +30,6 @@ class Group
     self[:categories] = c
   end
   alias :user :owner
-
-  def subdomain=(domain)
-    self[:subdomain] = domain.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].
-                                                strip.gsub(/\s+/, "-").downcase
-  end
 
   def logo_data=(data)
     logo = self.logo
