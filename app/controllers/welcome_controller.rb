@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-  before_filter :categories_required
   before_filter :login_required, :only => [:feedback, :send_feedback]
   def index
     @active_subtab = params.fetch(:tab, "active")

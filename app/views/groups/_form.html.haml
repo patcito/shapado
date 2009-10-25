@@ -22,7 +22,15 @@
   .field
     = form.text_area :description, :class => "text-area"
     .tip
-      You have 200 characters to describe the group.
+      You have 400 characters to describe the group.
+
+.field-group.clear
+  .label-container
+    = form.label :legend
+  .field
+    = form.text_field :legend, :class => "text-field"
+    .tip
+      It will be used in the header, you have 40 characters
 
 .field-group
   .label-container
@@ -34,10 +42,11 @@
 
 .field-group
   .label-container
-    = form.label :logo
+    = form.label :logo_data, "Logo"
   .field
-    = image_tag(logo_group_path(@group))
+    -unless @group.new?
+      = image_tag(logo_group_path(@group))
     %br
-    = form.file_field :logo
+    = form.file_field :logo_data
     .tip
       You can upload the group logo. The maximum file size is 2Mb.

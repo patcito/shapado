@@ -37,4 +37,4 @@
   %br
   %b
     = t(:reputation, :scope => "activerecord.attributes.user")
-  = @user.reputation.to_i
+  = @user.reputation_on(current_group)

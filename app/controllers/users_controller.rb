@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   def index
     set_page_title(t("views.users.index.title"))
     @users = User.paginate(:per_page => params[:per_page]||24,
-                           :order => "reputation desc",
+                           :order => "reputation.#{current_group.id} desc",
+                           :conditions => {"reputation.#{current_group.id}" => {:$exists => true}},
                            :page => params[:page] || 1)
   end
 
@@ -36,8 +37,13 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_login_or_id(params[:id])
     raise SuperExceptionNotifier::CustomExceptionClasses::PageNotFound unless @user
-    @questions = @user.questions.paginate(:page=>params[:questions_page], :per_page => 10)
-    @answers = @user.answers.paginate(:page=>params[:answers_page], :conditions => {:parent_id => nil}, :per_page => 10)
+    @questions = @user.questions.paginate(:page=>params[:questions_page],
+                                          :per_page => 10,
+                                          :conditions => {:group_id => current_group.id})
+    @answers = @user.answers.paginate(:page=>params[:answers_page],
+                                      :conditions => {:parent_id => nil,
+                                                      :group_id => current_group.id},
+                                      :per_page => 10)
 
     add_feeds_url(url_for(:format => "atom"), t("views.feeds.user"))
   end

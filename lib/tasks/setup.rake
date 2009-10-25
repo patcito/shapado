@@ -1,5 +1,6 @@
 desc "Setup application"
-  task :bootstrap => [:environment, "setup:reset", "setup:default_group"] do
+  task :bootstrap => [:environment, "setup:reset", "setup:create_admin",
+                                                   "setup:default_group"] do
 end
 
 namespace :setup do
@@ -15,10 +16,21 @@ namespace :setup do
     default_group = Group.new(:name => AppConfig.application_name,
                            :subdomain => AppConfig.application_name,
                            :description => "question-and-answer website",
+                           :legend => "question and answer website",
                            :categories => categories,
-                           :state => "active",
-                           :logo => File.read(RAILS_ROOT+"/public/images/logo.png"))
+                           :state => "active")
     default_group.save!
+    default_group.logo_data = RAILS_ROOT+"/public/images/logo.png"
+    default_group.save
+  end
+
+  desc "Create admin user"
+  task :create_admin => [:environment] do
+    admin = User.new(:login => "admin", :password => "admins",
+                                        :password_confirmation => "admins",
+                                        :email => "shapado@shapado.com",
+                                        :role => "admin")
+    admin.save!
   end
 
 end

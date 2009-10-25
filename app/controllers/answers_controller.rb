@@ -17,7 +17,9 @@ class AnswersController < ApplicationController
 
     if @answer.parent_id.blank?
       @answer.question = @question
+      @answer.group_id = @question.group_id
     end
+
     if @question && @answer.save
       unless @answer.comment?
         @question.answer_added!
@@ -25,9 +27,9 @@ class AnswersController < ApplicationController
         if !email.blank? && @question.user.notification_opts["new_answer"] == "1"
           Notifier.deliver_new_answer(@question.user, @answer)
         end
-        current_user.update_reputation(:answer_question)
+        current_user.update_reputation(:answer_question, current_group)
       else
-        current_user.update_reputation(:comment_question)
+        current_user.update_reputation(:comment_question, current_group)
       end
 
       flash[:notice] = t(:flash_notice, :scope => "views.answers.create")

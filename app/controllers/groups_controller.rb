@@ -1,11 +1,21 @@
 class GroupsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :logo]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups
   # GET /groups.xml
   def index
-    @groups = Group.all
+
+    case params.fetch(:tab, "actives")
+      when "actives"
+        @state = "active"
+      when "pendings"
+        @state = "pending"
+    end
+
+    @groups = Group.paginate(:per_page => 15,
+                             :page => params[:page],
+                             :conditions => {:state => @state})
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,12 +53,14 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name description categories subdomain], params[:group])
-    @group.logo = params[:group][:logo].read if params[:group][:logo]
+    @group.safe_update(%w[name description legend categories subdomain], params[:group])
     @group.owner = current_user
 
     respond_to do |format|
       if @group.save
+        if data = params[:group][:logo_data]
+          @group.logo_data = data
+        end
         flash[:notice] = 'Group was successfully created.'
         format.html { redirect_to(@group) }
         format.xml  { render :xml => @group, :status => :created, :location => @group }
@@ -62,8 +74,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name description categories], params[:group])
-    @group.logo = params[:group][:logo].read if params[:group][:logo]
+    @group.safe_update(%w[name legend description categories logo_data], params[:group])
 
     respond_to do |format|
       if @group.save
@@ -104,7 +115,7 @@ class GroupsController < ApplicationController
 
   def logo
     @group = Group.find_by_slug_or_id(params[:id])
-    send_data(@group.raw_logo)
+    send_data(@group.logo.raw, :type => "image/png",  :disposition => 'inline')
   end
 
   protected

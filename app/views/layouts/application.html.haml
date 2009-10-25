@@ -26,6 +26,8 @@
     = yield :css
 
   %body
+    #top_bar
+      = render :partial => "shared/topbar"
     - if logged_in?
       .feedback
         =link_to "Feedback", feedback_path, :id => "feedback"
@@ -38,7 +40,12 @@
         .feedbackform.hide
           = render :partial => "welcome/feedback"
         #logo
-          =link_to image_tag(logo_group_path(current_group)), root_path
+          #group
+            =link_to image_tag(logo_group_path(current_group)), subdomain_url(current_group.subdomain)
+            %span#legend
+              &= current_group.legend
+            -if logged_in? && current_user.can_modify?(current_group)
+              = link_to "mange...", group_path(current_group)
           %ul#menu_logo
             %li
               = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
@@ -77,7 +84,7 @@
                 .row1
                   = link_to h(current_user.login), user_path(current_user)
                   %span{:style => "font-size: 12px; font-weight: bold"}
-                    == (#{current_user.reputation.to_i})
+                    == (#{current_user.reputation_on(current_group)})
                   .right
                     =link_to I18n.t('views.layout.settings'), settings_path
                     |

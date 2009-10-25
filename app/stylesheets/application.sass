@@ -53,21 +53,23 @@ abbr
   display: none
 
 
+#top_bar
+  background-color: #b9b9bf
+  ul#groups
+    +horizontal-list(10px)
+    padding: 4px
+
 #header
-  display: block
-
+  h3
+    color: #004281
   #logo
-    width: 320px
-    height: 61px
-
+    width: 50%
     a
       border: 0
-      display: block
 
       img
-        display: block
-        width: 217px
-        height: 61px
+        height: 45px
+        vertical-align: middle
 
 
   #user-actions
@@ -445,7 +447,10 @@ blockquote
 
 .subtitle#moderate.all .tabs .tab.all a,
 .subtitle#moderate.questions .tabs .tab.questions a,
-.subtitle#moderate.answers .tabs .tab.answers a
+.subtitle#moderate.answers .tabs .tab.answers a,
+
+.subtitle#groups.active .tabs .tab.active a,
+.subtitle#groups.pending .tabs .tab.pending a
   +active_subtab
 
 #system-msg
@@ -562,6 +567,15 @@ table.list
     text-decoration: none
     line-height: 26px
 
+=list_item
+  padding: 10px 4px
+  border-bottom: 1px solid #d4d4d4
+  &:hover
+    background: #ededff
+    border-bottom: 1px solid #a4a4d4
+
+.list-item
+  +list_item
 
 //TODO: move it
 #questions
@@ -574,10 +588,8 @@ table.list
   text-align: left
 
 .question
+  +list_item
   padding: 10px 4px
-  border-bottom: 1px solid #d4d4d4
-  &:hover
-    background: #fafaff
   .item
     font-size: 10px
     color: #999999
