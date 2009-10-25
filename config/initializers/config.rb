@@ -16,6 +16,16 @@ end
 
 AppConfig = OpenStruct.new(options[RAILS_ENV])
 
+# check config
+begin
+  known_options = YAML.load_file(RAILS_ROOT+"/config/shapado.sample.yml")[RAILS_ENV]
+  known_options.each do |k, v|
+    if AppConfig.send(k).nil?
+      $stderr.puts "Warning: missing config option: '#{k}'"
+    end
+  end
+end
+
 reputation_config_file = "/etc/shapado.reputation.yml"
 if !File.exist?(reputation_config_file)
   reputation_config_file = RAILS_ROOT+"/config/reputation.yml"
