@@ -45,7 +45,7 @@
             %span#legend
               &= current_group.legend
             -if logged_in? && current_user.can_modify?(current_group)
-              = link_to "mange...", group_path(current_group)
+              = link_to t("views.groups.manage"), group_path(current_group)
           %ul#menu_logo
             %li
               = link_to "FAQ", questions_path(:category => "all", :tags => "faq")

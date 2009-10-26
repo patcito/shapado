@@ -3,7 +3,7 @@
   &= @group.name
   Group
 
-= link_to "visit this group", subdomain_url(@group.subdomain)
+= link_to t("views.groups.visit_group"), subdomain_url(@group.subdomain)
 %br
 = image_tag(logo_group_path(@group))
 
@@ -11,11 +11,11 @@
 %p
   &= @group.description
   %br
-  %b the categories for this group are:
+  %b= t("views.groups.group_categories")
   &= @group.categories.join(", ")
   %br
   -if @group.owner.login
-    %b this group was created by
+    %b= t("views.groups.group_created_by")
     = link_to h(@group.owner.login), user_path(@group.owner)
 
   %br
@@ -23,17 +23,17 @@
     -when "pending"
       .message.warn
         .internal
-          This group is awaiting for the acceptance of a moderator.
+          = t("views.groups.group_awaiting_acceptance")
     -when "close"
       .message.warn
         .internal
-          This group was closed.
+          = t("views.groups.group_closed")
 
 .buttons
-  = link_to 'Edit', edit_group_path(@group), :class => "button"
-  = link_to 'Back', groups_path, :class => "cancel button"
+  = link_to t("scaffold.edit"), edit_group_path(@group), :class => "button"
+  = link_to t("scaffold.back"), groups_path, :class => "cancel button"
   -if logged_in?
     -if current_user.moderator? && @group.state == "pending"
-      = link_to 'Accept this group', accept_group_path(@group), :class => "button"
+      = link_to t("views.groups.accept_group"), accept_group_path(@group), :class => "button"
     -if current_user.can_modify?(@group) && @group.state == "active"
-      = link_to 'Close this group', close_group_path(@group), :class => "cancel button"
+      = link_to t("views.groups.close_group"), close_group_path(@group), :class => "cancel button"

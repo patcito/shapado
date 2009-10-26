@@ -3,9 +3,9 @@
   Groups
   .right.tabs
     .tab.active
-      = link_to "actives", groups_path(:tab=>"actives")
+      = link_to t("views.groups.actives"), groups_path(:tab=>"actives")
     .tab.pending
-      = link_to "pendings", groups_path(:tab=>"pendings")
+      = link_to t("views.groups.pendings"), groups_path(:tab=>"pendings")
 
 
 %ul
@@ -23,16 +23,16 @@
           &= group.name
         &= group.description
       %span.buttons.right
-        = link_to 'About', group, :class => "button"
+        = link_to t("views.groups.about"), group, :class => "button"
         -if logged_in?
           -if current_user.can_modify?(group)
-            = link_to 'Edit', edit_group_path(group), :class => "button"
+            = link_to t("scaffold.edit"), edit_group_path(group), :class => "button"
             -if group.state == "active"
-              = link_to 'Close', close_group_path(group), :class => "cancel button"
+              = link_to t("views.groups.close"), close_group_path(group), :class => "cancel button"
           -if current_user.admin?
-            = link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
+            = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
           -if current_user.moderator? && group.state == "pending"
-            = link_to 'Accept this group', accept_group_path(group), :class => "button"
+            = link_to t("views.groups.accept_group"), accept_group_path(group), :class => "button"
       .clear
 =will_paginate @groups
 
