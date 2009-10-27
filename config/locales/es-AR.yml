@@ -411,9 +411,9 @@
       visit_group: visitar este group
       group_categories: "las categorias de este grupo son:"
       group_created_by: este grupo ha sido creado por
-      group_awaiting_acceptance: "Este grupo esta pendiente de la acceptacion de un moderoator."
+      group_awaiting_acceptance: "Este grupo esta pendiente de la acceptacion de un moderador."
       group_closed: Este grupo ha sido cerrado.
-      accept_group: Acceptat este grupo
+      accept_group: Aceptar este grupo
       close_group: Cerrar este grupo
       actives: activos
       pendings: pendientes
