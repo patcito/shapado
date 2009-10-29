@@ -1,6 +1,7 @@
 class ImageUpload
   include MongoMapper::Document
   key :image, Binary
+  key :ext, String
   key :_type, String
 
   validates_length_of       :raw,       :maximum => 2000000,
@@ -20,6 +21,16 @@ class ImageUpload
 
   def default_path
     @default_path ||= RAILS_ROOT+"/public/images/avatar.png"
+  end
+
+  def filename
+    @filename ||= begin
+      if self.new?
+        "default.#{self.ext || self.default_path.split(".").last}"
+      else
+        "#{self.id}.#{self.ext}"
+      end
+    end
   end
 
   protected

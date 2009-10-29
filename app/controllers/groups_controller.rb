@@ -115,7 +115,7 @@ class GroupsController < ApplicationController
 
   def logo
     @group = Group.find_by_slug_or_id(params[:id])
-    send_data(@group.logo.raw, :type => "image/png",  :disposition => 'inline')
+    send_data(@group.logo.raw, :filename => @group.logo.filename,  :disposition => 'inline')
   end
 
   protected

@@ -35,8 +35,12 @@ class Group
     logo = self.logo
     if data.respond_to?(:read)
       logo.image = data.read
+      ext = data.original_filename.split(".").last
+      logo.ext = ext if ext
     elsif data.kind_of?(String)
       logo.image = File.read(data)
+      ext = data.split(".").last
+      logo.ext = ext if ext
     end
     logo.group = self
 
@@ -46,5 +50,6 @@ class Group
   def logo
     @logo ||= (Logo.find(:first, :conditions => {:group_id => self.id}) || Logo.new)
   end
+
 end
 
