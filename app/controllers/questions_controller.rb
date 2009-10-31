@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    set_page_title(t("views.questions.index.title"))
+    set_page_title(t("questions.index.title"))
     order = "created_at desc"
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
@@ -29,10 +29,10 @@ class QuestionsController < ApplicationController
 
     @langs_conds = scoped_conditions[:language][:$in]
 
-    add_feeds_url(url_for(:format => "atom", :language=>@langs_conds), t("views.feeds.questions"))
+    add_feeds_url(url_for(:format => "atom", :language=>@langs_conds), t("feeds.questions"))
     if params[:tags]
       add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>@langs_conds),
-                    "#{t("views.feeds.tag")} #{params[:tags].inspect}")
+                    "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
 
     respond_to do |format|
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
   end
 
   def tags
-    set_page_title(t("views.layout.tags"))
+    set_page_title(t("layouts.application.tags"))
     @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions))
   end
 
@@ -77,7 +77,7 @@ class QuestionsController < ApplicationController
     @question.viewed!
 
     set_page_title(@question.title)
-    add_feeds_url(url_for(:format => "atom"), t("views.feeds.question"))
+    add_feeds_url(url_for(:format => "atom"), t("feeds.question"))
 
     respond_to do |format|
       format.html # show.html.erb
@@ -161,7 +161,7 @@ class QuestionsController < ApplicationController
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
-        flash[:notice] = t(:flash_notice, :scope => "views.questions.solve")
+        flash[:notice] = t(:flash_notice, :scope => "questions.solve")
         format.html { redirect_to question_path(current_category, @question) }
       else
         format.html { render :action => "show" }
@@ -176,7 +176,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        flash[:notice] = t(:flash_notice, :scope => "views.questions.unsolve")
+        flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
         current_user.update_reputation(:reopen_question, current_group)
         if current_user != answer_owner
           answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
@@ -205,7 +205,7 @@ class QuestionsController < ApplicationController
     if @question.nil?
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
-      flash[:error] = t("views.layout.permission_denied")
+      flash[:error] = t("global.permission_denied")
       redirect_to question_path(current_category, @question)
     end
   end

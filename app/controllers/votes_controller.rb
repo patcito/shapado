@@ -16,12 +16,12 @@ class VotesController < ApplicationController
       if vote.save
         vote.voteable.add_vote!(vote.value, current_user)
         voted = true
-        flash[:notice] = t(:flash_notice, :scope => "views.votes.create")
+        flash[:notice] = t("votes.create.flash_notice")
       else
         flash[:error] = vote.errors.full_messages.join(", ")
       end
     else
-      flash[:error] = "#{t(:flash_error, :scope => "views.votes.create")} "
+      flash[:error] = "#{t(:flash_error, :scope => "votes.create")} "
       flash[:error] += t(params[:voteable_type].downcase, :scope => "activerecord.models").downcase
     end
 
@@ -46,8 +46,8 @@ class VotesController < ApplicationController
   protected
   def check_permissions
     unless logged_in?
-      flash[:error] = t(:unauthenticated, :scope => "views.votes.create")
-      flash[:error] += ", #{t(:please_login, :scope => "views.layout")}"
+      flash[:error] = t(:unauthenticated, :scope => "votes.create")
+      flash[:error] += ", #{t("global.please_login")}"
       respond_to do |format|
         format.html{redirect_to params[:source]}
         format.json{render(:json => {:status => :error, :message => flash[:error] }.to_json)}

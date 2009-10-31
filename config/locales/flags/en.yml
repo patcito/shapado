@@ -1,0 +1,18 @@
+en:
+  flags:
+    form:
+      spam: spam
+      offensive: offensive, abusive or Hate speech
+      attention: Requires Moderator attention
+      label: Please flag with care
+    create:
+      flash_notice: thanks for your report
+      flash_error: You cannot flag this
+
+  activerecord:
+    models:
+      flags: flags
+      flag: flag
+    attributes:
+      flag:
+        type: Reason

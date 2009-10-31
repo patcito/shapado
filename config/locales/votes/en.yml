@@ -1,0 +1,11 @@
+en:
+  votes:
+    create:
+      flash_notice: "Thanks for your vote!"
+      flash_error:  "You cannot vote this"
+      unauthenticated: "anonymous users can't vote"
+
+  activerecord:
+    models:
+      votes: Votes
+      vote: vote

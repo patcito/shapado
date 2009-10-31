@@ -1,11 +1,11 @@
 
 #welcome.subtitle{:class => @active_subtab}
-  = t("views.layout.recent_questions", :default => "Recent Questions")
+  = t(".recent_questions", :default => "Recent Questions")
   .right.tabs
     .tab.active
-      = link_to t("active", :scope => "views.welcome.index"), root_path(:tab=>"active")
+      = link_to t(".active"), root_path(:tab=>"active")
     .tab.hot
-      = link_to t("hot", :scope => "views.welcome.index"), root_path(:tab=>"hot")
+      = link_to t(".hot"), root_path(:tab=>"hot")
 
 #questions
   -@questions.each do |question|
@@ -15,5 +15,5 @@
 
 -content_for :sidebar do
   %h1
-    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
   = tag_cloud

@@ -32,11 +32,11 @@ class AnswersController < ApplicationController
         current_user.update_reputation(:comment_question, current_group)
       end
 
-      flash[:notice] = t(:flash_notice, :scope => "views.answers.create")
+      flash[:notice] = t(:flash_notice, :scope => "answers.create")
 
       redirect_to question_path(current_category, @question)
     else
-      flash[:error] = t(:flash_error, :scope => "views.answers.create")
+      flash[:error] = t(:flash_error, :scope => "answers.create")
       redirect_to question_path(current_category, @question)
     end
   end
@@ -49,7 +49,7 @@ class AnswersController < ApplicationController
     respond_to do |format|
       @answer.safe_update(%w[parent_id body], params[:answer])
       if @answer.valid? && @answer.save
-        flash[:notice] = t(:flash_notice, :scope => "views.answers.update")
+        flash[:notice] = t(:flash_notice, :scope => "answers.update")
         format.html { redirect_to(question_path(current_category, @answer.question)) }
         format.xml  { head :ok }
       else
@@ -84,7 +84,7 @@ class AnswersController < ApplicationController
   def check_permissions
     @answer = Answer.find(params[:id])
     if @answer.nil? || !current_user.can_modify?(@answer)
-      flash[:error] = t("views.layout.permission_denied")
+      flash[:error] = t("global.permission_denied")
       redirect_to questions_path(current_category)
     end
   end

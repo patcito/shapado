@@ -1,9 +1,9 @@
 %h1
-  =t(:title, :scope => "views.users.edit")
+  =t(".title")
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user
 - form_for @user, :html => {:class => "form"} do |f|
   =render :partial => "form", :locals => {:f => f}
   .field-group
     .buttons
-      = submit_tag t('submit', :scope => "views.users.edit")
+      = submit_tag t('.submit')

@@ -45,7 +45,7 @@
             %span#legend
               &= current_group.legend
             -if logged_in? && current_user.can_modify?(current_group)
-              = link_to t("views.groups.manage"), group_path(current_group)
+              = link_to t("groups.manage"), group_path(current_group)
           %ul#menu_logo
             %li
               = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
@@ -53,7 +53,7 @@
               -if current_category != "all"
                 = link_to category_desc(current_category), ""
               -else
-                = link_to t("views.layout.categories"), "/"
+                = link_to t(".categories"), "/"
               %ul
                 -category_options.each do |desc, value|
                   %li
@@ -62,7 +62,7 @@
               -if @languages && !@languages.empty?
                 = link_to language_desc(@languages.first), ""
               -else
-                = link_to t("views.layout.languages"), "/"
+                = link_to t(".languages"), "/"
               %ul
                 -if logged_in?
                   -languages_options(current_user.preferred_languages).each do |desc, value|
@@ -86,36 +86,36 @@
                   %span{:style => "font-size: 12px; font-weight: bold"}
                     == (#{current_user.reputation_on(current_group)})
                   .right
-                    =link_to I18n.t('views.layout.settings'), settings_path
+                    =link_to t(".settings"), settings_path
                     |
-                    =link_to I18n.t('views.layout.logout'), logout_path
+                    =link_to t(".logout"), logout_path
                 .row2{:style => "padding: 7px"}
                   -form_tag search_path, :class => "form", :method => :get do
                     = text_field_tag 'q', params[:q], :class => "text-field", :style => "width: 55%"
                     %button{:type => "submit"}
-                      = I18n.t('views.layout.search', :default => "Go")
+                      = t('.search', :default => "Go")
       .clear
       %br
       #navigation{:class => "#{@active_tab}"}
         #menu_primary
           %ul
             %li.questions
-              =link_to I18n.t("views.layout.questions"), questions_path(:category => current_category)
+              =link_to t(".questions"), questions_path(:category => current_category)
             %li.tags
-              =link_to I18n.t("views.layout.tags"), tags_questions_path(:category => current_category)
+              =link_to t(".tags"), tags_questions_path(:category => current_category)
             %li.users
-              =link_to I18n.t("views.layout.users"), users_path
+              =link_to t(".users"), users_path
             %li.unanswered
-              =link_to I18n.t("views.layout.unanswered"), unanswered_questions_path(:category => current_category)
+              =link_to t(".unanswered"), unanswered_questions_path(:category => current_category)
             -if logged_in?
               -if current_user.moderator?
                 %li.moderate
-                  =link_to I18n.t("views.layout.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
+                  =link_to t(".moderate"), moderate_path, :style => "background: #E55353; color: #fff"
               -current_user.preferred_tags.each do |tag|
                 %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
                   =link_to h(tag), questions_path(:category => current_category, :tags => tag)
             %li.ask_question
-              =link_to I18n.t("views.layout.ask_question"), new_question_path(:category => current_category), :rel => 'nofollow'
+              =link_to t(".ask_question"), new_question_path(:category => current_category), :rel => 'nofollow'
       #main-content
         #messages
           -flash.each do |k,v|
@@ -127,12 +127,12 @@
             .internal
               -if !logged_in?
                 .box.highlight
-                  = t("views.layout.openid.explaination")
+                  = t(".openid.explaination")
 
                   -form_tag session_path, :id => 'openid' do
                     #nojsopenid
                       = text_field_tag "openid_identifier", "", :id => "openid_username"
-                      = submit_tag t("views.layout.log_in")
+                      = submit_tag t(".log_in")
               %br
               = yield
           #sidebar
@@ -146,7 +146,7 @@
                 -else
                   = number_with_delimiter(Question.count(language_conditions))
               %p
-                = t "views.layout.questions"
+                = t ".questions"
               = yield :sidebar
               = render :partial => "shared/adbard"
 

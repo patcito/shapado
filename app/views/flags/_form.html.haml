@@ -5,14 +5,14 @@
   =f.hidden_field "return_to", :value => source
   .field-group
     %label
-      =t(:label, :scope=>"views.flags.form")
+      =t(".label")
 
   .field-group
     .label-container
       %label
         =t(:type, :scope=>"activerecord.attributes.flag")
     .field
-      = f.select :type, Flag::TYPES.collect{|type| [t(type, :scope=>"views.flags.form"), type]}
+      = f.select :type, Flag::TYPES.collect{|type| [t(type, :scope=>"flags.form"), type]}
 
   .field-group
     .field

@@ -38,21 +38,21 @@
             =image_tag "logo.png", :height => "45", :alt => "Shapado"
           %ul#menu_logo
             %li
-              = link_to "FAQ", questions_path(:tags => "faq")
+              = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
             %li
-              -if @category
-                = link_to category_desc(@category), ""
+              -if current_category != "all"
+                = link_to category_desc(current_category), ""
               -else
-                = link_to t("views.layout.categories"), "/"
+                = link_to t("layouts.application.categories"), "/"
               %ul
                 -category_options.each do |desc, value|
                   %li
-                    = link_to(desc, subdomain_url(value))
+                    = link_to(desc, questions_path(:category => value))
             %li
               -if @languages && !@languages.empty?
                 = link_to language_desc(@languages.first), ""
               -else
-                = link_to t("views.layout.languages"), "/"
+                = link_to t("layouts.application.languages"), "/"
               %ul
                 -if logged_in?
                   -languages_options(current_user.preferred_languages).each do |desc, value|
@@ -62,6 +62,9 @@
                   -languages_options.each do |desc, value|
                     %li
                       = link_to desc, tag_url(value)
+            %li
+              -if !logged_in?
+                = link_to 'Get the facts!', "/facts#facts"
 
         #user-actions
           #user-nav
@@ -74,14 +77,14 @@
                   %span{:style => "font-size: 12px; font-weight: bold"}
                     == (#{current_user.reputation_on(current_group)})
                   .right
-                    =link_to I18n.t('views.layout.settings'), settings_path
+                    =link_to I18n.t('layouts.application.settings'), settings_path
                     |
-                    =link_to I18n.t('views.layout.logout'), logout_path
+                    =link_to I18n.t('layouts.application.logout'), logout_path
                 .row2{:style => "padding: 7px"}
                   -form_tag search_path, :class => "form", :method => :get do
                     = text_field_tag 'q', params[:q], :class => "text-field", :style => "width: 55%"
                     %button{:type => "submit"}
-                      = I18n.t('views.layout.search', :default => "Go")
+                      = I18n.t('layouts.application.search', :default => "Go")
       .clear
       %br
       #main-content
@@ -90,7 +93,7 @@
             .internal
               -if !logged_in?
                 .box.highlight
-                  = t("views.layout.openid.explaination")
+                  = t("layouts.application.openid.explaination")
 
                   -form_tag session_path, :id => 'openid' do
                     &nbsp;

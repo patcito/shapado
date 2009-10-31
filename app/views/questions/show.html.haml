@@ -15,20 +15,20 @@
   .buttons
     -if logged_in?
       -if current_user.can_modify?(@question)
-        = link_to I18n.t('scaffold.edit'), edit_question_path(current_category, @question), :class => "button"
+        = link_to t('scaffold.edit'), edit_question_path(current_category, @question), :class => "button"
         or
-        = link_to I18n.t('scaffold.back'), question_path(current_category), :class => "button cancel"
+        = link_to t('scaffold.back'), question_path(current_category), :class => "button cancel"
       -if current_user.moderator?
         = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
 
   .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
     -if current_user != @question.user
       .left.internal
-        = link_to t("views.questions.show.flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
+        = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
     -if AppConfig.enable_sharing
       .right
         %h2
-          = t("views.questions.show.share")
+          = t(".share")
         .buttons{:style => "padding: 2px"}
           = render :partial => "twitter"
           = render :partial => "identica"
@@ -44,31 +44,31 @@
 #answers
   -if @question.answered
     %h2
-      = t("solution", :scope => "views.questions.show")
+      = t("solution", :scope => "")
     =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true, :comment => @answer}
     -@answers.delete(@question.answer)
     %hr
     .subtitle#question_answers{:class => @active_subtab}
-      = I18n.t('views.questions.show.another_answers')
+      = t('.another_answers')
       .right.tabs
         .tab.votes
-          = link_to(t('votes', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
+          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
         .tab.newest
-          = link_to(t('newest', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
+          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
         .tab.oldest
-          = link_to(t('oldest', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
+          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   -else
     .subtitle#question_answers{:class => @active_subtab}
-      = h(I18n.t('views.questions.show.answers'))
+      = h(t('.answers'))
       .right.tabs
         .tab.votes
-          = link_to(t('votes', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
+          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
         .tab.newest
-          = link_to(t('newest', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
+          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
         .tab.oldest
-          = link_to(t('oldest', :scope => "views.questions.index"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
+          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   =will_paginate(@answers)
@@ -77,25 +77,25 @@
 -unless @question.answered
   -form_for @answer, :url => question_answers_path(current_category, @question.id, @answer.id), :html => {:class => "form mainAnswerForm"} do |f|
     = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
-    = submit_tag I18n.t('views.answers.form.submit')
+    = submit_tag t('answers.form.submit')
   %hr
 
 -content_for :sidebar do
   %b
-    = I18n.t('activerecord.attributes.question.asked_by')
+    = t('activerecord.attributes.question.asked_by')
   = link_to h(@question.user.login), user_path(@question.user)
   %b
     = time_ago_in_words(@question.created_at)
-  = t("views.layout.from", :site => "<b>#{@question.user.country_name}</b>")
+  = t("global.from", :site => "<b>#{@question.user.country_name}</b>")
   = country_flag(@question.user.country_code, @question.user.country_name)
   %br
   %b
-    = I18n.t('activerecord.attributes.question.category')
+    = t('activerecord.attributes.question.category')
   = category_desc h(@question.category)
   %br
   %br
   %h1
-    = h(I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+    = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
   .tags-list
     -@question.tags.each do |tag|
       %span.tag
@@ -103,5 +103,5 @@
   .clear
   %br
   -if @question.flags_count > 0
-    %h1= t("views.questions.show.flags")
+    %h1= t(".flags")
     = render :partial => "flags/list", :locals => {:flaggeable => @question}

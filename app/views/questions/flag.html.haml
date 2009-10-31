@@ -1,5 +1,6 @@
 
 %h2
-  Flag question
+  = t(".title")
+
 
 = render :partial => "flags/form", :locals => {:flag => @flag, :source => question_path(current_category, @question)}

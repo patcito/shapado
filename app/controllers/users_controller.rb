@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update]
   tabs :default => :users
   def index
-    set_page_title(t("views.users.index.title"))
+    set_page_title(t("users.index.title"))
     @users = User.paginate(:per_page => params[:per_page]||24,
                            :order => "reputation.#{current_group.id} desc",
                            :conditions => {"reputation.#{current_group.id}" => {:$exists => true}},
@@ -27,9 +27,9 @@ class UsersController < ApplicationController
       # reset session
       self.current_user = @user # !! now logged in
       redirect_back_or_default('/')
-      flash[:notice] = t("flash_notice", :scope => "views.users.create")
+      flash[:notice] = t("flash_notice", :scope => "users.create")
     else
-      flash[:error]  = t("flash_error", :scope => "views.users.create")
+      flash[:error]  = t("flash_error", :scope => "create")
       render :action => 'new'
     end
   end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
                                                       :group_id => current_group.id},
                                       :per_page => 10)
 
-    add_feeds_url(url_for(:format => "atom"), t("views.feeds.user"))
+    add_feeds_url(url_for(:format => "atom"), t("feeds.user"))
   end
 
   def edit

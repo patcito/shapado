@@ -1,0 +1,23 @@
+en:
+  layouts:
+    application:
+      title: "Questions & Answers"
+      questions: questions
+      ask_question: ask question
+      tags: tags
+      users: users
+      unanswered: unanswered
+      logout: logout
+      logged: Logged in as {{login}}
+      search: Go
+      forgot: forgot?
+      log_in: Log in
+      signup: Signup
+      settings: settings
+      categories: Categories
+      languages: Languages
+      moderate: Moderate
+      home: home
+      from: from {{site}}
+      openid:
+        explaination: "If you'd like to register or just log in, please select your OpenID provider:"

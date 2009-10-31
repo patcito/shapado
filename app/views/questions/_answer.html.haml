@@ -8,7 +8,7 @@
       = gravatar(answer.user.email.to_s, :size => 14)
     = link_to h(answer.user.login), user_path(answer.user)
     = time_ago_in_words(answer.created_at)
-    = t("views.layout.from", :site => answer.user.country_name)
+    = t("from", :site => answer.user.country_name)
     = country_flag(answer.user.country_code, answer.user.country_name)
     .clear
   .answer_body
@@ -17,7 +17,7 @@
       = markdown(answer.body)
     .clear
     -if answer.flags_count > 0
-      %h3= t("views.questions.show.flags")
+      %h3= t(".flags", :default => :"questions.shared.flag")
       = render :partial => "flags/list", :locals => {:flaggeable => answer}
     %br
     %hr
@@ -27,7 +27,7 @@
         .child{:style => "padding-top: 10px"}
           =link_to child.user.login, user_path(child.user)
           =time_ago_in_words(child.created_at)
-          = t("views.layout.from", :site => child.user.country_name)
+          = t("global.from", :site => child.user.country_name)
           = country_flag(child.user.country_code, child.user.country_name)
           %br
 
@@ -37,13 +37,13 @@
         = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(current_category, @question, answer, :anchor => answer.id)
         -if current_user != answer.user
           |
-          = link_to t("views.questions.show.flag"), flag_question_answer_path(current_category,@question,answer), :class => "flag-link"
+          = link_to t(".flag"), flag_question_answer_path(current_category,@question,answer), :class => "flag-link"
       .right
-        = link_to t("views.questions.show.add_comment"), "#", :class => "addNestedAnswer"
+        = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
       .clear
       -form_for comment, :url => question_answers_path(@question.id, comment), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
-        = submit_tag I18n.t('views.answers.form.comment_submit')
+        = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit")
       -if current_user != answer.user
         .flag_form.hidden
           -flag = Flag.new
@@ -53,13 +53,13 @@
     -if logged_in?
       .buttons
         -if current_user.can_modify?(answer)
-          = link_to I18n.t("scaffold.edit"), edit_question_answer_path(current_category, @question, answer), :class =>"button"
-          = link_to I18n.t("scaffold.destroy"), question_answer_path(current_category, @question, answer), :confirm => I18n.t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
+          = link_to t("scaffold.edit"), edit_question_answer_path(current_category, @question, answer), :class =>"button"
+          = link_to t("scaffold.destroy"), question_answer_path(current_category, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
         -if current_user.can_modify?(@question)
           -unless @question.answered
-            = link_to t("pick_answer", :scope => "views.questions.show"), solve_question_path(current_category, @question, :answer_id => answer), :class =>"button"
+            = link_to t(".pick_answer"), solve_question_path(current_category, @question, :answer_id => answer), :class =>"button"
           -if solution
-            = link_to t("unset_answer", :scope => "views.questions.show"),  unsolve_question_path(current_category, @question), :class =>"button"
+            = link_to t(".unset_answer"),  unsolve_question_path(current_category, @question), :class =>"button"
         -if current_user.moderator?
           = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
 

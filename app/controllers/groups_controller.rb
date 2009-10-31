@@ -119,13 +119,13 @@ class GroupsController < ApplicationController
   end
 
   protected
-    def check_permissions
+  def check_permissions
     @group = Group.find_by_slug_or_id(params[:id])
 
     if @group.nil?
       redirect_to groups_path
     elsif !current_user.can_modify?(@group)
-      flash[:error] = t("views.layout.permission_denied")
+      flash[:error] = t("global.permission_denied")
       redirect_to group_path(@group)
     end
   end

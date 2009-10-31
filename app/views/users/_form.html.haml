@@ -1,6 +1,6 @@
 
 .subtitle
-  = t("information", :scope => "views.users.form")
+  = t(".information")
 
 .field-group
   .label-container
@@ -69,8 +69,8 @@
     .field
       = f.text_field :preferred_tags, :value => @user.preferred_tags.join(", "), :class => "text-field"
   .subtitle
-    = t("notifications", :scope => "views.users.form")
+    = t(".notifications")
 
   .field-group
     = f.check_box "notification_opts[new_answer]", :checked => @user.notification_opts["new_answer"] == "1"
-    = t("new_answer_notification", :scope => "views.users.form")
+    = t(".new_answer_notification")

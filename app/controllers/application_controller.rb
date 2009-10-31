@@ -122,9 +122,9 @@ class ApplicationController < ActionController::Base
 
   def page_title
     if @page_title
-      "#{@page_title} - #{AppConfig.application_name}: #{t("views.layout.title")}"
+      "#{@page_title} - #{AppConfig.application_name}: #{t("layouts.application.title")}"
     else
-      "#{AppConfig.application_name} - #{t("views.layout.title")}"
+      "#{AppConfig.application_name} - #{t("layouts.application.title")}"
     end
   end
   helper_method :page_title
@@ -137,7 +137,7 @@ class ApplicationController < ActionController::Base
   def moderator_required
     unless current_user.moderator?
       access_denied
-#       flash[:error] = t("views.layout.permission_denied")
+#       flash[:error] = t("global.permission_denied")
 #       redirect_to root_path
     end
   end

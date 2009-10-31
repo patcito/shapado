@@ -4,13 +4,13 @@
   .label-container
     %label
       -if local_assigns[:parent]
-        = I18n.t('views.answers.form.comment_label')
+        = t('.comment_label')
       -else
-        = I18n.t('views.answers.form.answer_label')
+        = t('.answer_label')
   -opts = {:class => "text-area huge"}
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]
   = f.text_area :body, opts
   -if local_assigns[:markdown]
     %h3
-      = t("views.answers.form.preview")
+      = t(".preview")
     #markdown_preview.markdown

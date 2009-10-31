@@ -1,0 +1,59 @@
+en:
+  questions:
+    index:
+      title: All questions
+      hot:     hot
+      active:  active
+      votes:   votes
+      newest:  newest
+      oldest:  oldest
+      ask_question: ask question
+    show:
+      answers: Answers
+      another_answers: Other answers
+      solution: Solution
+      share: "Share this question in"
+      flags: reported as
+      flag: flag
+    answer:
+      pick_answer: Pick as solution
+      unset_answer: Unset as solution?
+      flag: flag
+      add_comment: Add comment...
+    form:
+      body_tip: What's your question? Be descriptive.
+      language_tip: Select the language's question.
+      category_tip: Select the category that fits best your question.
+      tags_tip:  Use tags to add more information about your question.
+    flag:
+      title:   Flag question
+    edit:
+      title: Editing question
+    new:
+      title: Ask question
+    create:
+      flash_notice: "Question was successfully created."
+    update:
+      flash_notice: "Question was successfully updated."
+    solve:
+      flash_notice: "Question was solved."
+    unsolve:
+      flash_notice: "Question now is not solved."
+    shared:
+      flag: flag
+
+  activerecord:
+    models:
+      questions: Questions
+      question: question
+    attributes:
+      question:
+        title: Title
+        body: Body
+        tags: Tags
+        asked_by: Asked by
+        answers: Answers
+        views: Views
+        votes: Votes
+        language: Language
+        category: Category

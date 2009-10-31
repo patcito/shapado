@@ -1,8 +1,8 @@
 .question
   -if logged_in? && current_user.can_modify?(question)
     .right.buttons
-      = link_to I18n.t('scaffold.edit'), edit_question_path(current_category, question), :class => "button"
-      = link_to I18n.t('scaffold.destroy'), question_path(current_category, question), :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
+      = link_to t('scaffold.edit'), edit_question_path(current_category, question), :class => "button"
+      = link_to t('scaffold.destroy'), question_path(current_category, question), :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
   %span
     .item.count_votes
       %span.counter
@@ -33,5 +33,5 @@
       = t(:asked_by, :scope => "activerecord.attributes.question")
       = link_to h(question.user.login), user_path(question.user)
       %b
-        = time_ago_in_words(question.created_at)
+        = t("time.ago", :time => time_ago_in_words(question.created_at))
   .clear

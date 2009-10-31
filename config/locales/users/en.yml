@@ -1,0 +1,44 @@
+en:
+  users:
+    index:
+      title: All users
+    new:
+      title: Sign up as a new user
+      submit: Sign up
+    edit:
+      title: Settings
+      submit: Save
+    form:
+      information: Information
+      notifications: Notifications
+      new_answer_notification: Get mail notifications for new answers
+      categories_tip: only questions belonging to these categories will show
+    create:
+      flash_notice: "Thanks for signing up!"
+      flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+
+  activerecord:
+    models:
+      users: Users
+      user: user
+    attributes:
+      user:
+        login: Login
+        email: Email
+        name: Real name
+        current_password: Current Password
+        password: Password
+        password_confirmation: Password Confirmation
+        created_at: Created At
+        updated_at: Updated At
+        activation_code: Activation Code
+        activated_at: Activated At
+        fullname: Full name
+        language: Language
+        asked_by: asked by
+        timezone: Time zone
+        preferred_tags: Preferred tags
+        preferred_languages: Select the languages you know
+        last_logged_at: seen
+        created_at: joined
+        reputation: Reputation

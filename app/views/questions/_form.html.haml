@@ -5,7 +5,7 @@
   .field
     = f.text_field :title, :class => "text-field"
   .tip
-    = t(:body_tip, :scope => "views.questions.form")
+    = t(".body_tip")
 
 
 .field-group
@@ -22,11 +22,11 @@
     -lang = @question.new? ? current_user.main_language : @question.language
     = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
     .tip
-      = t(:language_tip, :scope => "views.questions.form")
+      = t(".language_tip")
 
 .field-group
   .label-container
-    = f.label :categories, t(:category, :scope => "activerecord.attributes.question")
+    = f.label :categories, t("category", :scope => "activerecord.attributes.question")
   .field
     %table
       -category_options.each_slice(3) do |categories|
@@ -37,7 +37,7 @@
               = f.radio_button :category, cat, :checked => selected
               = desc
     .tip
-      = t(:category_tip, :scope => "views.questions.form")
+      = t(".category_tip")
 
 .field-group
   .label-container
@@ -45,4 +45,4 @@
   .field
     = f.text_field :tags, :value => @question.tags.join(", "),:class => "text-field"
     .tip
-      = t(:tags_tip, :scope => "views.questions.form")
+      = t(".tags_tip")

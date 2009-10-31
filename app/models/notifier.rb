@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
     self.class.layout "notification_#{user.language.downcase}"
 
     I18n.locale = user.language
-    scope = "views.mailers.notifications.new_answer"
+    scope = "mailers.notifications.new_answer"
     if user == answer.question.user
       @subject = I18n.t("subject_owner", :scope => scope,
                                          :title => answer.question.title,

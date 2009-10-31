@@ -5,19 +5,19 @@
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
 
 #questions_index.subtitle{:class => @active_subtab}
-  = t("views.questions.index.title")
+  = t(".title")
   .right.tabs
     .tab.newest
-      = link_to t("newest", :scope => "views.questions.index"), questions_path(:sort=>"newest")
+      = link_to t(".newest"), questions_path(:sort=>"newest")
     .tab.hot
-      = link_to t("hot", :scope => "views.questions.index"), questions_path(:sort=>"hot")
+      = link_to t(".hot"), questions_path(:sort=>"hot")
     .tab.votes
-      = link_to t("votes", :scope => "views.questions.index"), questions_path(:sort=>"votes")
+      = link_to t(".votes"), questions_path(:sort=>"votes")
     .tab.active
-      = link_to t("active", :scope => "views.questions.index"), questions_path(:sort=>"active")
+      = link_to t(".active"), questions_path(:sort=>"active")
 
 .buttons
-  = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
+  = link_to t(".ask_question"), new_question_path, :class => "button"
 %br.clear
 
 #questions
@@ -27,9 +27,9 @@
 =will_paginate @questions
 
 .buttons
-  = link_to I18n.t("views.layout.ask_question"), new_question_path, :class => "button"
+  = link_to t(".ask_question"), new_question_path, :class => "button"
 
 -content_for :sidebar do
   %h1
-    = I18n.t('views.questions.sidebar.tags', :default => [:"views.layout.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
   = tag_cloud

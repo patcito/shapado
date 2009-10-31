@@ -1,6 +1,6 @@
 <%- if logged_in? %>
-  <%= render :partial=>"shared/error", :locals => {:title=> t("title.views.errors.forbidden", :default => :"views.layout.permission_denied"),
-                    :explanation => t("explanation", :scope => "views.errors.forbidden"),
+  <%= render :partial=>"shared/error", :locals => {:title=> t("title.errors.forbidden", :default => :"views.layout.permission_denied"),
+                    :explanation => t("explanation", :scope => "errors.forbidden"),
                     :error_image => "application-pgp-keys.png"} %>
 <%-end %>
 

@@ -2,7 +2,7 @@
 %ul
   -flaggeable.flags.group_by{|f| f.type}.each do |type, flags|
     %li
-      = t(type, :scope=>"views.flags.form")
+      = t(type, :scope=>"flags.form")
       by
       -last = flags.pop
       -flags.each do |flag|
