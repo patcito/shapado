@@ -16,7 +16,6 @@ en:
   messages:
     success: "{{model}} was successfully {{action}}."
   models:
-    report:     the report
     question:   the question
   actions:
     created:     created
@@ -24,7 +23,7 @@ en:
     updated:     updated
     closed:      closed
   global:
-    from: from
+    from: "from {{site}}"
     permission_denied: Permission denied
     please_login: please log in
   feeds:

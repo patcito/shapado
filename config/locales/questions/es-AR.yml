@@ -1,0 +1,59 @@
+"es-AR":
+  questions:
+    index:
+      title: Todas las preguntas
+      hot:     calientes
+      active:  activas
+      votes:   votos
+      newest:  recientes
+      oldest:  antiguas
+      ask_question: pregunte
+    show:
+      answers: Respuestas
+      another_answers: Otras respuestas
+      solution: Solución
+      share: "Compartir esta pregunta en"
+      flags: Reportado como
+      flag: "Reportar abuso"
+    answer:
+      pick_answer: Escoger como solución
+      unset_answer: Quitar como solución?
+      flag: flag
+      add_comment: Añadir comentario...
+    form:
+      body_tip: ¿Cual es tu pregunta? por favor se descriptivo.
+      language_tip: Selecciona el idioma de tu pregunta.
+      category_tip: Selecciona la categoria que mejor se ajusta a la pregunta.
+      tags_tip:  Usa etiquetas para añadir más información sobre tu pregunta.
+    flag:
+      title:   Reportar abuso en esta pregunta
+    edit:
+      title: Editar pregunta
+    new:
+      title: Pregunte
+    create:
+      flash_notice: "La pregunta fue creada exitosamente."
+    update:
+      flash_notice: "La pregunta fue actualizada exitosamente."
+    solve:
+      flash_notice: "La pregunta ha sido resuelta"
+    unsolve:
+      flash_notice: "La pregunta ahora no esta resuelta."
+    shared:
+      flag: Reportar abuso
+
+  activerecord:
+    models:
+      questions: Preguntas
+      question: pregunta
+    attributes:
+      question:
+        title: Titulo
+        body: Contenido
+        tags: Etiquetas
+        asked_by: Preguntado por
+        answers: Respuestas
+        views: Visitas
+        votes: Votos
+        language: Idioma
+        category: Categoria

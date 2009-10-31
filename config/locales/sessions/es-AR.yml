@@ -1,0 +1,10 @@
+"es-AR":
+  sessions:
+    create:
+      flash_notice: "Ingreso exitoso"
+      flash_error:  "No pudo ingresar como '{{login}}'"
+    destroy:
+      flash_notice: "Usted ha cerrado la sesión."
+    new:
+      log_in: Log in
+      register: Register

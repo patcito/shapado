@@ -1,0 +1,17 @@
+es:
+  errors:
+    options_label: "otras cosas que puedes hacer:"
+    go_to: "ir a la {{link}}"
+    help_us_answer: ayudanos a responder {{link}}
+    search: "buscar"
+    forbidden:
+      explanation: "No tienes los derechos de acceso requeridos para esta página."
+    not_found:
+      title: "Pagina no encontrada."
+      explanation: "Has digitado mal la direccion o esta página ha sido movida."
+    unprocessable_entity:
+      title: "El cambio que querías ha sido rechazado."
+      explanation: "Quizás no tenías acceso a lo que intentaste cambiar."
+    internal_error:
+      title: "Lo sentimos pero algo salió mal."
+      explanation: "Ya se nos ha informado de este problema y lo resolveremos a la brevedad."

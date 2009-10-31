@@ -1,0 +1,21 @@
+"es-AR":
+  groups:
+    manage: "manage..."
+    index:
+      title: Grupos
+      actives: activos
+      pendings: pendientes
+      about: Acerca de
+      close: Cerrar
+      accept_group: Aceptar este grupo
+      close_group: Cerrar este grupo
+      request_group: Pedir un nuevo grupo
+    show:
+      title: "Grupo {{name}}"
+      visit_group: visitar este grupo
+      group_categories: "las categorias de este grupo son:"
+      group_created_by: este grupo ha sido creado por
+      group_awaiting_acceptance: "Este grupo esta pendiente de la acceptacion de un moderador."
+      group_closed: Este grupo ha sido cerrado.
+      accept_group: Aceptar este grupo
+      close_group: Cerrar este grupo

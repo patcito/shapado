@@ -2,7 +2,7 @@
   -if logged_in? && current_user.can_modify?(question)
     .right.buttons
       = link_to t('scaffold.edit'), edit_question_path(current_category, question), :class => "button"
-      = link_to t('scaffold.destroy'), question_path(current_category, question), :confirm => I18n.t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
+      = link_to t('scaffold.destroy'), question_path(current_category, question), :confirm => t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
   %span
     .item.count_votes
       %span.counter

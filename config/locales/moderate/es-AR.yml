@@ -1,0 +1,9 @@
+"es-AR":
+  admin:
+    moderate:
+      index:
+        title: Moderar
+        ban: ban
+        content: contenido
+        item_title: titulo
+        all: todas

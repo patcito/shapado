@@ -6,5 +6,5 @@ en:
     destroy:
       flash_notice: "You have been logged out."
     new:
-      log_in: Log in
-      register: Register
+      log_in: acceder
+      signup: Registrarse

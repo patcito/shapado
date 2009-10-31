@@ -1,0 +1,22 @@
+"es-AR":
+  layouts:
+    application:
+      title: "Preguntas & Respuestas"
+      questions: Preguntas
+      ask_question: Pregunte
+      tags: Etiquetas
+      users: Usuarios
+      unanswered: Aún no contestadas
+      logout: salir
+      logged: conectado como {{login}}
+      search: Ir
+      forgot: la olvido?
+      log_in: acceder
+      signup: Registrarse
+      settings: configuración
+      categories: Categorias
+      languages: Idiomas
+      moderate: Moderar
+      home: pagina principal
+      openid:
+        explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor OpenID:"

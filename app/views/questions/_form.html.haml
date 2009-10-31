@@ -33,7 +33,7 @@
         %tr
           -categories.each do |desc, cat|
             %td
-              -selected = current_category == cat
+              -selected = @question.category == cat || current_category == cat
               = f.radio_button :category, cat, :checked => selected
               = desc
     .tip

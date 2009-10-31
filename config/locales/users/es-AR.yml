@@ -1,0 +1,44 @@
+"es-AR":
+  users:
+    index:
+      title: Todos los usuarios
+    new:
+      title: Registrar un nuevo usuario
+      submit: Registrar
+    edit:
+      title: Configuración
+      submit: Guardar
+    form:
+      information: Información
+      notifications: Notificaciones
+      new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+      categories_tip: solo las preguntas pertenecientes a estas categorías serán mostradas
+    create:
+      flash_notice: "Gracias por registrarse!"
+      flash_error:  "No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
+
+  activerecord:
+    models:
+      users: Usuarios
+      user: usuario
+    attributes:
+      user:
+        login: Nombre de usuario
+        email: Correo electrónico
+        name: Nombre real
+        current_password: Contraseña actual
+        password: Contraseña
+        password_confirmation: Confirmación de contraseña
+        created_at: creado en
+        updated_at: actualizado en
+        activation_code: código de activación
+        activated_at: activado en
+        fullname: Nombre completo
+        language: Idioma
+        asked_by: asked by
+        timezone: Zona horaria
+        preferred_tags: Etiquetas preferidas
+        preferred_languages: Escoja los idiomas que conozca
+        last_logged_at: visto
+        created_at: registrado
+        reputation: Reputación

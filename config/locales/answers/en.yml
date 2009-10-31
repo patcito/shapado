@@ -4,8 +4,8 @@ en:
       comment_label: Comment on this answer
       answer_label: Answer the question
       comment_submit: Comment
-      submit: Answer
       preview: Preview
+      submit: Answer
     edit:
       title: Editing answer
     create:
@@ -24,4 +24,4 @@ en:
       answer: answer
     attributes:
       answer:
-        link: link
+        link: enlace

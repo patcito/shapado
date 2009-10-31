@@ -11,7 +11,7 @@ en:
       close_group: Close this group
       request_group: Request a new group
     show:
-      title: "Group {{name}}"
+      title: "{{name}} Group"
       visit_group: visit this group
       group_categories: "the categories for this group are:"
       group_created_by: this group was created by

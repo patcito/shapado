@@ -1,0 +1,6 @@
+"es-AR":
+  mailers:
+    notifications:
+      new_answer:
+        subject_owner: "{{login}} respondio su pregunta {{title}}"
+        subject_other: "{{login}} respondio la pregunta {{title}}"
