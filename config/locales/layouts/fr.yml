@@ -1,0 +1,22 @@
+fr:
+  layouts:
+    application:
+      title: "Questions & Réponses"
+      questions: questions
+      ask_question: poser une question
+      tags: tags
+      users: utilisateurs
+      unanswered: sans réponses
+      logout: se déconnecter
+      logged: Connecté {{login}}
+      search: Chercher
+      forgot: oublié?
+      log_in: Se connecter
+      signup: Créer un compte
+      settings: Configuration
+      categories: Catégories
+      languages: Langues
+      moderate: Modérer
+      home: page principale
+      openid:
+        explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"

@@ -1,0 +1,9 @@
+fr:
+  admin:
+    moderate:
+      index:
+        title: Modérer
+        ban: ban
+        content: contenu
+        item_title: titre
+        all: tous

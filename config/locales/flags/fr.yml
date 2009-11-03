@@ -1,0 +1,18 @@
+fr:
+  flags:
+    form:
+      spam: spam
+      offensive: injurieux, abusif ou discours de haine
+      attention: Nécesite l'attention des modérateurs
+      label: S'il vous plait, raporter avec attention
+    create:
+      flash_notice: merci pour votre rapport
+      flash_error: Vous ne pouvez rapporter ceci
+
+  activerecord:
+    models:
+      flags: Rapports
+      flag: Rapport
+    attributes:
+      flag:
+        type: Raison

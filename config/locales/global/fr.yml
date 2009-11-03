@@ -1,0 +1,51 @@
+fr:
+  scaffold:
+    sure: Êtes-vous sûr de vouloir effacer ce {{model}} ?
+    show: Monter
+    edit: Éditer
+    destroy: Effacer
+    back: Retour
+    update: Actualiser
+    cancel: Annuler
+    create: Créer
+    more: more...
+  time:
+    today: Today
+    ago: "{{time}} ago"
+  messages:
+    success: "{{model}} was successfully {{action}}."
+  models:
+    question:   the question
+  actions:
+    created:     created
+    deleted:     deleted
+    updated:     updated
+    closed:      closed
+  global:
+    from: depuis {{site}}
+    permission_denied: Permission refusée
+    please_login: ouvrez une session s'il vous plait
+  feeds:
+    question: Souscrire à cette question
+    questions: Souscrire à toutes les questions
+    tag: Souscrite au tag
+    user:  Inscrivez-vous aux questions de l'utilisateur
+  languages:
+    en:      Anglais
+    es:      Espagnol
+    es-AR:   Espagnol d'Amérique Latine
+    fr:      Français
+    pt:      Portugais
+  categories:
+    technology:    Technologie
+    programming:   Programmation
+    science:       Science
+    politics:      Politique
+    religion:      Religion
+    sports:        Sports
+    music:         Musique
+    gaming:        Jeux vidéos
+    lifestyle:     Style de vie
+    business:      Business
+    entertainment: Divertissement
+    offbeat:       Peu conventionnel

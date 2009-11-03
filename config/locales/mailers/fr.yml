@@ -1,0 +1,6 @@
+fr:
+  mailers:
+    notifications:
+      new_answer:
+        subject_owner: "{{login}} a répondu à votre question {{title}}"
+        subject_other: "{{login}} a répondu à la question {{title}}"

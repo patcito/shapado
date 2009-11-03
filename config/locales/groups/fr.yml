@@ -1,0 +1,21 @@
+en:
+  groups:
+    manage: administrer...
+    index:
+      title: Groups
+      actives: actifs
+      pendings: en attente
+      about: À propos
+      close: Fermer
+      accept_group: Accepter ce groupe
+      close_group: Fermer ce groupe
+      request_group: Demander un nouveau groupe
+    show:
+      title: "{{name}} Group"
+      visit_group: visiter ce groupe
+      group_categories: "les catégories de ce groupe sont:"
+      group_created_by: ce groupe a été crée par
+      group_awaiting_acceptance: "Ce groupe est dans l'attente de l'acceptation d'un modérateur."
+      group_closed: Ce groupe a été fermé.
+      accept_group: Accepter ce groupe
+      close_group: Fermer ce groupe

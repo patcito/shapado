@@ -1,0 +1,59 @@
+fr:
+  questions:
+    index:
+      title: Toutes les questions
+      hot:     hot
+      active:  active
+      votes:   votes
+      newest:  newest
+      oldest:  oldest
+      ask_question: poser une question
+    show:
+      answers: Réponses
+      another_answers: Autres réponses
+      solution: Solution
+      share: "Partager cette question"
+      flag: reporter un abus
+      flags: reporter en tant que
+    answer:
+      pick_answer: Choisir comme solution
+      unset_answer: Annuler solution?
+      flag: reporter un abus
+      add_comment: Ajouter un commentaire...
+    form:
+      body_tip: What's your question? Be descriptive.
+      language_tip: Select the language's question.
+      category_tip: Select the category that fits best your question.
+      tags_tip:  Use tags to add more information about your question.
+    flag:
+      title: reporter un abus
+    edit:
+      title: Éditer la question
+    new:
+      title: Poser une question
+    create:
+      flash_notice: "La question a été créée avec succès."
+    update:
+      flash_notice: "La question a été actualisée avec succès."
+    solve:
+      flash_notice: "La question a été résolue."
+    unsolve:
+      flash_notice: "La question n'est pas résolue."
+    shared:
+      title: reporter un abus
+
+  activerecord:
+    models:
+      questions: Questions
+      question: question
+    attributes:
+      question:
+        title: Titre
+        body: Corps
+        tags: Tags
+        asked_by: Posée par
+        answers: Réponses
+        views: Vues
+        votes: Votes
+        language: Langue
+        category: Catégorie

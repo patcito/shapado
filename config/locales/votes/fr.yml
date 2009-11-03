@@ -1,0 +1,11 @@
+fr:
+  votes:
+    create:
+      flash_notice: "Merci d'avoir voté!"
+      flash_error:  "Vous ne pouvez pas voter"
+      unauthenticated: "les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait"
+
+  activerecord:
+    models:
+      votes: Votes
+      user: vote

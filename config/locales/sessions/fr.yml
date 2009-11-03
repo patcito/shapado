@@ -1,0 +1,10 @@
+fr:
+  sessions:
+    create:
+      flash_notice: "Connexion réussie"
+      flash_error: "Nous n'avons pas pu vous connecter en tant que '{{login}}'"
+    destroy:
+      flash_notice: "Vous avez été déconnecté."
+    new:
+      log_in: Se connecter
+      signup: Créer un compte

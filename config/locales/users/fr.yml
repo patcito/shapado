@@ -1,0 +1,44 @@
+fr:
+  users:
+    index:
+      title: Tous les utilisateurs
+    new:
+      title: Se connecter en tant que nouvel utilisateur
+      submit: Ouvrir un compte
+    edit:
+      title: Configuration
+      submit: Sauver
+    form:
+      information: Information
+      notifications: Notifications
+      new_answer_notification: Obtenir des notifications via email de nouvelles réponses
+      categories_tip: seules les questions appartenant à ces catégories seront visible
+    create:
+      flash_notice: "Merci pour vous avoir enregistrer!"
+      flash_error:  "Désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
+
+  activerecord:
+    models:
+      users: Utilisateurs
+      user: Utilisateur
+    attributes:
+      user:
+        login: Login
+        email: Email
+        name: Nom entier
+        current_password: Mot de passe actuel
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        created_at: Crée le
+        updated_at: Crée le
+        activation_code: Code d'activation
+        activated_at: Activé le
+        fullname: Nom entier
+        language: Langue
+        asked_by: posée par
+        timezone: Fuseau horaire
+        preferred_tags: Tags préférés
+        preferred_languages: Choisir les langues que vous connaissez
+        last_logged_at: vu
+        created_at: membre
+        reputation: Reputation
