@@ -33,8 +33,8 @@
           multilanguage: si!
           foss: si!
           joel: "no :/"
-  index:
-    hot:     calientes
-    active:  activas
-    recent_questions: Preguntas recientes
+    index:
+      hot:     calientes
+      active:  activas
+      recent_questions: Preguntas recientes
 

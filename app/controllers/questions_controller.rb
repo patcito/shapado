@@ -112,7 +112,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         current_user.update_reputation(:ask_question, current_group)
-        flash[:notice] = t(:flash_notice, :scope => "views.questions.create")
+        flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_category, @question)) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
@@ -129,7 +129,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       @question.safe_update(%w[title body language category tags], params[:question])
       if @question.valid? && @question.save
-        flash[:notice] = t(:flash_notice, :scope => "views.questions.update")
+        flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(current_category,@question)) }
         format.xml  { head :ok }
       else
