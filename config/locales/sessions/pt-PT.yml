@@ -1,0 +1,10 @@
+"pt-PT":
+  sessions:
+    create:
+      flash_notice: "Logged in successfully"
+      flash_error: "Couldn't log you in as '{{login}}'"
+    destroy:
+      flash_notice: "You have been logged out."
+    new:
+      log_in: acceder
+      signup: Registrarse

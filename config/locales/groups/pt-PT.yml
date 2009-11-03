@@ -1,0 +1,21 @@
+"pt-PT":
+  groups:
+    manage: "manage..."
+    index:
+      title: Groups
+      actives: actives
+      pendings: pendings
+      about: About
+      close: Close
+      accept_group: Accept this group
+      close_group: Close this group
+      request_group: Request a new group
+    show:
+      title: "{{name}} Group"
+      visit_group: visit this group
+      group_categories: "the categories for this group are:"
+      group_created_by: this group was created by
+      group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
+      group_closed: This group was closed.
+      accept_group: Accept this group
+      close_group: Close this group

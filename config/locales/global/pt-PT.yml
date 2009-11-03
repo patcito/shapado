@@ -1,4 +1,4 @@
-en:
+"pt-PT":
   scaffold:
     sure: Are you sure you want to delete this {{model}} ?
     show: Show
@@ -10,7 +10,6 @@ en:
     create: Create
     new: Add new {{model}}
     more: "more ..."
-    add: add
   time:
     today: Today
     ago: "{{time}} ago"
@@ -38,10 +37,4 @@ en:
     es-AR:   Latin American Spanish
     fr:      French
     pt:      Portuguese
-    pt-PT:      Portuguese
-
-  number:
-    x_time:
-      zero: "never"
-      one: "{{count}} time"
-      other: "{{count}} times"
+    pt-PT:   Portuguese

@@ -1,0 +1,28 @@
+"pt-PT":
+  answers:
+    form:
+      comment_label: Comment on this answer
+      answer_label: Answer the question
+      comment_submit: Comment
+      preview: Preview
+      submit: Answer
+    edit:
+      title: Editing answer
+    create:
+      flash_notice: "Thanks!"
+      flash_error:  "Something went wrong adding your answer.
+  \n  remember that:
+  \n - empty and repeated answers are not allowed
+  \n - you need to wait 20 senconds before posting another answer.
+  \n - you can only post one answer by question."
+    update:
+      flash_notice: "Answer was successfully updated."
+
+  activerecord:
+    models:
+      answers: Answers
+      answer: answer
+    attributes:
+      answer:
+        link: link
+
