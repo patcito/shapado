@@ -3,22 +3,27 @@
 
 .answer{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
-  .answer_title
-    .gravatar.left{:style => "padding: 2px"}
-      = gravatar(answer.user.email.to_s, :size => 14)
-    = link_to h(answer.user.login), user_path(answer.user)
-    = time_ago_in_words(answer.created_at)
-    = t("global.from", :site => answer.user.country_name)
-    = country_flag(answer.user.country_code, answer.user.country_name)
-    .clear
   .answer_body
     = vote_box(answer, question_path(current_category, question))
-    %span.markdown
+    .markdown{:style => "width: 92%"}
       = markdown(answer.body)
-    .clear
-    -if answer.flags_count > 0
-      %h3= t(".flags", :default => :"questions.shared.flag")
-      = render :partial => "flags/list", :locals => {:flaggeable => answer}
+    %br.clear
+    %span{:style => "width: 92%"}
+      .answer_info.right{:style => "width: 25%"}
+        answered by
+        .gravatar.left{:style => "padding: 2px"}
+          = gravatar(answer.user.email.to_s, :size => 32)
+        = link_to h(answer.user.login), user_path(answer.user)
+        %br
+        = t("time.ago", :time => time_ago_in_words(answer.created_at))
+        = t("global.from", :site => answer.user.country_name)
+        = country_flag(answer.user.country_code, answer.user.country_name)
+      %span.answer_flags{:style => "width: 25%"}
+        -if answer.flags_count > 0
+          %h3= t("activerecord.models.flags")
+          = render :partial => "flags/list", :locals => {:flaggeable => answer}
+      .clear
+
     %br
     %hr
     / Nested Answers
@@ -41,7 +46,7 @@
       .right
         = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
       .clear
-      -form_for comment, :url => question_answers_path(@question.id, comment), :html => {:class => "form nestedAnswerForm"} do |f|
+      -form_for comment, :url => question_answers_path(current_category, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit")
       -if current_user != answer.user
@@ -62,5 +67,4 @@
             = link_to t(".unset_answer"),  unsolve_question_path(current_category, @question), :class =>"button"
         -if current_user.moderator?
           = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
-
   .clear

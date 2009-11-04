@@ -6,22 +6,27 @@
 -flag = Flag.new
 
 #question
-  =vote_box(@question, question_path(current_category,@question))
-  #question-title
+  .subtitle
     %h2
       = h @question.title
-  #question-body.markdown
-    = markdown(@question.body)
-  .buttons
-    -if logged_in?
-      -if current_user.can_modify?(@question)
-        = link_to t('scaffold.edit'), edit_question_path(current_category, @question), :class => "button"
-        or
-        = link_to t('scaffold.back'), question_path(current_category), :class => "button cancel"
-      -if current_user.moderator?
-        = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+  #question-body
+    #question_actions.right
+      =vote_box(@question, question_path(current_category,@question))
+      .buttons
+        -if logged_in?
+          -if current_user.can_modify?(@question)
+            = link_to t('scaffold.edit'), edit_question_path(current_category, @question), :class => "button"
+          -if current_user.moderator?
+            %br
+            = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+    .markdown{:style => "width: 92%"}
+      = markdown(@question.body)
+    .tags-list
+      -@question.tags.each do |tag|
+        %span.tag
+          = link_to h(tag), questions_path(:tags => tag)
 
-  .internal.actions{:style => "background: #DFDFDF; margin: 2px"}
+  .internal.actions{:style => "background: #efefef; margin: 2px"}
     -if current_user != @question.user
       .left.internal
         = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'

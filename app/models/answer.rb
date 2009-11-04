@@ -33,7 +33,7 @@ class Answer
 
   searchable_keys :body
 
-  validate :disallow_span
+  validate :disallow_spam
   validate :check_unique_answer
 
   def check_unique_answer
@@ -86,14 +86,14 @@ class Answer
     Maruku.new(self.body).to_html
   end
 
-  def disallow_span
+  def disallow_spam
     eq_answer = Answer.find(:first, {:limit => 1,
                               :conditions => {
                                 :body => self.body,
                                 :question_id => self.question_id
                                }})
 
-    last_answer  = Answer.find(:first, {:limit => 1,
+    last_answer  = Answer.find!(:first, {:limit => 1,
                                :conditions => {
                                  :user_id => self.id,
                                  :question_id => question.id
@@ -101,7 +101,7 @@ class Answer
                                :order => "created_at desc"})
 
     valid = (eq_answer.nil? || eq_answer.id == self.id) &&
-            (last_answer.nil? || (Time.now - last_answer.created_at) > 20)
+            ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
     if !valid
       self.errors.add(:body, "Your answer looks like spam.")
     end
