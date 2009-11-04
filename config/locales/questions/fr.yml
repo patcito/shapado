@@ -29,6 +29,8 @@ fr:
       title: reporter un abus
     edit:
       title: Éditer la question
+    unanswered:
+      title: Unanswered Questions
     new:
       title: Poser une question
     create:

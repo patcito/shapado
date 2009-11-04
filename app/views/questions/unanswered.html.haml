@@ -1,0 +1,27 @@
+-feed_url = url_for(:format => "atom", :tags => params[:tags])
+
+-content_for :rss do
+  %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom", :tags => params[:tags])}
+  %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
+
+#questions_index.subtitle{:class => @active_subtab}
+  = t(".title")
+  .right.tabs
+    .tab.newest
+      = link_to t(".newest", :default => :"questions.index.newest"), questions_path(:sort=>"newest")
+    .tab.votes
+      = link_to t(".votes", :default => :"questions.index.votes"), questions_path(:sort=>"votes")
+
+%br.clear
+
+#questions
+  -@questions.each do |question|
+    = render :partial => "question", :object => question
+
+=will_paginate @questions
+
+-content_for :sidebar do
+  %h1
+    = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+  = render :partial => "shared/tag_list", :object => @tag_cloud
+

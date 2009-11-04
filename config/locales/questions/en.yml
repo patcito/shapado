@@ -29,6 +29,9 @@ en:
       title:   Flag question
     edit:
       title: Editing question
+    unanswered:
+      title: Unanswered Questions
+      tags: Unanswered Tags
     new:
       title: Ask question
     create:

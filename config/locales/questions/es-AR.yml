@@ -29,6 +29,8 @@
       title:   Reportar abuso en esta pregunta
     edit:
       title: Editar pregunta
+    unanswered:
+      title: Preguntas no contestadas
     new:
       title: Pregunte
     create:

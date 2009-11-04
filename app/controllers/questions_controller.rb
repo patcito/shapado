@@ -44,8 +44,10 @@ class QuestionsController < ApplicationController
   end
 
   def unanswered
+    set_page_title(t("questions.unanswered.title"))
     @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :conditions => scoped_conditions({:answered => false}))
-    render :action => "index"
+    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions), 25)
+    render
   end
 
   def tags
