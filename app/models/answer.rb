@@ -90,13 +90,15 @@ class Answer
     eq_answer = Answer.find(:first, {:limit => 1,
                               :conditions => {
                                 :body => self.body,
-                                :question_id => self.question_id
+                                :question_id => self.question_id,
+                                :group_id => self.group_id
                                }})
 
-    last_answer  = Answer.find!(:first, {:limit => 1,
+    last_answer  = Answer.find(:first, {:limit => 1,
                                :conditions => {
                                  :user_id => self.id,
-                                 :question_id => question.id
+                                 :question_id => question.id,
+                                 :group_id => self.group_id
                                },
                                :order => "created_at desc"})
 

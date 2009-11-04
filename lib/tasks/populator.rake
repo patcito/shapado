@@ -24,15 +24,17 @@ namespace :populator do
                         :language => (rand(100) % 2 == 0) ? 'en' : 'es')
         a.group_id = q.group_id
         q.answers << a
-        q.answer_added!
-        rand(10).times do |i|
-          f = Flag.new(:flaggeable_id => a.id,
-                       :flaggeable_type => a.class.name,
-                       :user => users.rand,
-                       :type => Flag::TYPES[rand(Flag::TYPES.size)],
-                       :banned => false)
-          f.save
-          a.flagged!
+        if a.valid?
+          q.answer_added!
+          rand(10).times do |i|
+            f = Flag.new(:flaggeable_id => a.id,
+                         :flaggeable_type => a.class.name,
+                         :user => users.rand,
+                         :type => Flag::TYPES[rand(Flag::TYPES.size)],
+                         :banned => false)
+            f.save
+            a.flagged!
+          end
         end
       end
 
