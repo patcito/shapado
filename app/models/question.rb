@@ -74,9 +74,9 @@ class Question
     self[:tags] = t
   end
 
-  def self.tag_cloud(conditions = {})
+  def self.tag_cloud(conditions = {}, limit = 30)
     @tag_cloud_code ||= RAILS_ROOT + "/app/javascripts/tag_cloud.js"
-    self.database.eval(File.read(@tag_cloud_code), conditions)
+    self.database.eval(File.read(@tag_cloud_code), conditions, limit)
   end
 
   def viewed!

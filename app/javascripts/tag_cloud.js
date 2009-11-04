@@ -1,8 +1,8 @@
-function tagCloud(q) {
+function tagCloud(q, limit) {
   var counts = db.eval(
     function(q){
       var counts = {};
-      db.questions.find(q).forEach(
+      db.questions.find(q).limit(500).forEach(
         function(p){
           if ( p.tags ){
             for ( var i=0; i<p.tags.length; i++ ){
@@ -27,5 +27,5 @@ function tagCloud(q) {
     function(l,r){
       return r.count - l.count;
     }
-  );
+  ).slice(0,limit||30);
 }

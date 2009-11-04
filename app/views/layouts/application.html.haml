@@ -143,8 +143,6 @@
                     = number_with_delimiter(@questions.total_entries)
                   -else
                     = number_with_delimiter(@questions.size)
-                -else
-                  = number_with_delimiter(Question.count(language_conditions))
               %p
                 = t ".questions"
               = yield :sidebar

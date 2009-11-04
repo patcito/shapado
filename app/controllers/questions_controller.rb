@@ -34,6 +34,7 @@ class QuestionsController < ApplicationController
       add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>@langs_conds),
                     "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
+    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions), 25)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -68,6 +69,8 @@ class QuestionsController < ApplicationController
       when "votes"
         order = "votes_count desc"
     end
+
+    @tag_cloud = Question.tag_cloud(:_id => @question.id)
 
     @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
                                           :order => order,

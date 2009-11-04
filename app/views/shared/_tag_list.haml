@@ -1,0 +1,11 @@
+.tags-list
+  -tag_list.each do |tag|
+    %ul
+      %li{:style => "line-height: 14px"}
+        %span.tag
+          =link_to h(tag["name"]), questions_path(:tags => tag["name"])
+        %span{:style => "padding-left: 4px; clear:both"}
+          %b
+            x
+            = h(tag["count"])
+        .clear

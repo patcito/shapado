@@ -32,4 +32,5 @@
 -content_for :sidebar do
   %h1
     = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  = tag_cloud
+  = render :partial => "shared/tag_list", :object => @tag_cloud
+

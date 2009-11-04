@@ -101,10 +101,7 @@
   %br
   %h1
     = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
-  .tags-list
-    -@question.tags.each do |tag|
-      %span.tag
-        = link_to h(truncate(tag, :length => 15)), questions_path(:tags => tag)
+  = render :partial => "shared/tag_list", :object => @tag_cloud
   .clear
   %br
   -if @question.flags_count > 0
