@@ -8,7 +8,7 @@
       = gravatar(answer.user.email.to_s, :size => 14)
     = link_to h(answer.user.login), user_path(answer.user)
     = time_ago_in_words(answer.created_at)
-    = t("from", :site => answer.user.country_name)
+    = t("global.from", :site => answer.user.country_name)
     = country_flag(answer.user.country_code, answer.user.country_name)
     .clear
   .answer_body
