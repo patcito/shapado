@@ -15,6 +15,7 @@
       share: "Share this question in"
       flags: reported as
       flag: flag
+      viewed: viewed
     answer:
       pick_answer: Pick as solution
       unset_answer: Unset as solution?
@@ -29,6 +30,9 @@
       title:   Flag question
     edit:
       title: Editing question
+    unanswered:
+      title: Unanswered Questions
+      tags: Unanswered Tags
     new:
       title: Ask question
     create:

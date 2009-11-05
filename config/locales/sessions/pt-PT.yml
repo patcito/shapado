@@ -6,5 +6,10 @@
     destroy:
       flash_notice: "You have been logged out."
     new:
-      log_in: acceder
-      signup: Registrarse
+      with_openid: Log in with OpenID
+      with_authentication: Log in with our authentication system
+      registered: "Already registered?"
+      not_registered: "Not registered yet?"
+      log_in: login
+      signup: signup
+
