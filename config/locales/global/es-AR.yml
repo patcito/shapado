@@ -50,3 +50,8 @@
     business:      Negocios
     entertainment: Entretenimiento
     offbeat:       Poco convencional
+  number:
+    x_time:
+      zero: "nunca"
+      one: "{{count}} vez"
+      other: "{{count}} veces"

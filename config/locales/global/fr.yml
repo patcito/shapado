@@ -49,3 +49,8 @@ fr:
     business:      Business
     entertainment: Divertissement
     offbeat:       Peu conventionnel
+  number:
+    x_time:
+      zero: "jamais"
+      one: "{{count}} fois"
+      other: "{{count}} fois"

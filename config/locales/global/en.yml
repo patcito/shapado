@@ -37,3 +37,9 @@ en:
     es-AR:   Latin American Spanish
     fr:      French
     pt:      Portuguese
+
+  number:
+    x_time:
+      zero: "never"
+      one: "{{count}} time"
+      other: "{{count}} times"

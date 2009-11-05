@@ -25,26 +25,28 @@
       -@question.tags.each do |tag|
         %span.tag
           = link_to h(tag), questions_path(:tags => tag)
-
-  .internal.actions{:style => "background: #efefef; margin: 2px"}
-    -if current_user != @question.user
-      .left.internal
-        = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
-    -if AppConfig.enable_sharing
-      .right
-        %h2
-          = t(".share")
-        .buttons{:style => "padding: 2px"}
-          = render :partial => "twitter"
-          = render :partial => "identica"
-          = render :partial => "facebook"
+    %br.clear
+    %span{:style => "width: 92%"}
+      .answer_info.box.right{:style => "width: 25%"}
+        = t('activerecord.attributes.question.asked_by')
+        .gravatar.left{:style => "padding: 2px"}
+          = gravatar(@question.user.email.to_s, :size => 32)
+        = link_to h(@question.user.login), user_path(@question.user)
+        %br
+        = t("time.ago", :time => time_ago_in_words(@question.created_at))
+        = t("global.from", :site => @question.user.country_name)
+        = country_flag(@question.user.country_code, @question.user.country_name)
+      .flag_question
+        .actions
+          -if current_user != @question.user
+            .left.internal
+              = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
+        .clear
+        .flag_form.hidden
+          -flag.flaggeable = @question
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category, @question) }
     .clear
-  -if current_user != @question.user
-    .flag_form.hidden
-      -flag.flaggeable = @question
-      = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category, @question) }
 
-%hr
 %a{:name=>"answers"}
 #answers
   -if @question.answered
@@ -86,23 +88,31 @@
   %hr
 
 -content_for :sidebar do
-  %b
-    = t('activerecord.attributes.question.asked_by')
-  = link_to h(@question.user.login), user_path(@question.user)
-  %b
-    = time_ago_in_words(@question.created_at)
-  = t("global.from", :site => "<b>#{@question.user.country_name}</b>")
-  = country_flag(@question.user.country_code, @question.user.country_name)
-  %br
-  %b
-    = t('activerecord.attributes.question.category')
-  = category_desc h(@question.category)
-  %br
-  %br
-  %h1
+  %h3
     = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
   = render :partial => "shared/tag_list", :object => @tag_cloud
   .clear
+
+  %span
+    %b
+      = t('activerecord.attributes.question.category')
+    %br
+    %h3
+      = category_desc h(@question.category)
+  %span
+    %b
+      = t('.viewed')
+    %br
+    %h3
+      = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+
+  -if AppConfig.enable_sharing
+    %h2
+      = t(".share")
+    .buttons{:style => "padding: 2px"}
+      = render :partial => "twitter"
+      = render :partial => "identica"
+      = render :partial => "facebook"
   %br
   -if @question.flags_count > 0
     %h1= t(".flags")

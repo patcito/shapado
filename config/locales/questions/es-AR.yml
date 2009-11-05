@@ -15,6 +15,7 @@
       share: "Compartir esta pregunta en"
       flags: Reportado como
       flag: "Reportar abuso"
+      viewed: Visto
     answer:
       pick_answer: Escoger como solución
       unset_answer: Quitar como solución?

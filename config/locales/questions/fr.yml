@@ -15,6 +15,7 @@ fr:
       share: "Partager cette question"
       flag: reporter un abus
       flags: reporter en tant que
+      viewed: lues
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
@@ -30,7 +31,7 @@ fr:
     edit:
       title: Éditer la question
     unanswered:
-      title: Unanswered Questions
+      title: Sans Réponses
     new:
       title: Poser une question
     create:

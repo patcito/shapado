@@ -143,8 +143,8 @@
                     = number_with_delimiter(@questions.total_entries)
                   -else
                     = number_with_delimiter(@questions.size)
-              %p
-                = t ".questions"
+                  %p
+                    = t ".questions"
               = yield :sidebar
               = render :partial => "shared/adbard"
 

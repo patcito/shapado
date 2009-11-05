@@ -15,6 +15,7 @@ en:
       share: "Share this question in"
       flags: reported as
       flag: flag
+      viewed: viewed
     answer:
       pick_answer: Pick as solution
       unset_answer: Unset as solution?

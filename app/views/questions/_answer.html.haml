@@ -9,7 +9,7 @@
       = markdown(answer.body)
     %br.clear
     %span{:style => "width: 92%"}
-      .answer_info.right{:style => "width: 25%"}
+      .answer_info.box.right{:style => "width: 25%"}
         answered by
         .gravatar.left{:style => "padding: 2px"}
           = gravatar(answer.user.email.to_s, :size => 32)
