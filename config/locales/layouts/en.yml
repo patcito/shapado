@@ -11,7 +11,7 @@ en:
       logged: Logged in as {{login}}
       search: Go
       forgot: forgot?
-      log_in: Log in
+      log_in: login
       signup: Signup
       settings: settings
       categories: Categories

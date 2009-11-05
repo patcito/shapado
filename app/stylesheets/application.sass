@@ -126,6 +126,22 @@ x
   margin: 0 10px
   position: relative
 
+#action_menu
+  +horizontal-list(3px)
+  li
+    border-right: 1px solid #ddd
+    line-height: 24px
+    &.last
+      border: 0px
+    a
+      text-transform: lowercase
+  form
+    margin: 0px
+    padding: 0px
+
+img.gravatar
+  vertical-align: middle
+
 h1, h2
   letter-spacing: -.05em
   line-height: 40px

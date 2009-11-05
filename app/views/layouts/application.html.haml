@@ -77,21 +77,28 @@
                 = link_to 'Get the facts!', "/facts#facts"
         #user-actions
           #user-nav
-            -if logged_in?
-              .box
-                .gravatar.left{:style => "margin: 2px;"}
-                  = gravatar current_user.email.to_s
-                .row1
-                  = link_to h(current_user.login), user_path(current_user)
-                  %span{:style => "font-size: 12px; font-weight: bold"}
-                    == (#{current_user.reputation_on(current_group)})
-                  .right
+            .box
+              %ul#action_menu
+                -if logged_in?
+                  %li
+                    %span
+                      %span.gravatar
+                        = gravatar current_user.email.to_s, :size => 22
+                        = link_to h(current_user.login), user_path(current_user)
+                        %span{:style => "font-size: 12px; font-weight: bold"}
+                          == (#{current_user.reputation_on(current_group)})
+                  %li
                     =link_to t(".settings"), settings_path
-                    |
+                  %li
                     =link_to t(".logout"), logout_path
-                .row2{:style => "padding: 7px"}
+                -else
+                  %li
+                    =link_to t(".log_in"), login_path
+                %li
+                  =link_to t(".about", :default => :"groups.index.about"), group_path(current_group)
+                %li.last
                   -form_tag search_path, :class => "form", :method => :get do
-                    = text_field_tag 'q', params[:q], :class => "text-field", :style => "width: 55%"
+                    = text_field_tag 'q', params[:q], :class => "text-field"
                     %button{:type => "submit"}
                       = t('.search', :default => "Go")
       .clear
@@ -125,15 +132,6 @@
         #layout
           #content
             .internal
-              -if !logged_in?
-                .box.highlight
-                  = t(".openid.explaination")
-
-                  -form_tag session_path, :id => 'openid' do
-                    #nojsopenid
-                      = text_field_tag "openid_identifier", "", :id => "openid_username"
-                      = submit_tag t(".log_in")
-              %br
               = yield
           #sidebar
             .internal
@@ -143,8 +141,8 @@
                     = number_with_delimiter(@questions.total_entries)
                   -else
                     = number_with_delimiter(@questions.size)
-                  %p
-                    = t ".questions"
+              %p
+                = t ".questions"
               = yield :sidebar
               = render :partial => "shared/adbard"
 

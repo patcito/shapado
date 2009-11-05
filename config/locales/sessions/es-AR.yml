@@ -6,5 +6,9 @@
     destroy:
       flash_notice: "Usted ha cerrado la sesión."
     new:
-      log_in: Log in
-      register: Register
+      with_openid: Acceda usando OpenID
+      with_authentication: Acceda con nuestro propio sistema de usuarios
+      registered: "¿Ya esta registrado?"
+      not_registered: "todavía no esta registrado?"
+      log_in: acceder
+      signup: registrarse

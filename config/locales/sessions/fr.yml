@@ -6,5 +6,9 @@ fr:
     destroy:
       flash_notice: "Vous avez été déconnecté."
     new:
+      with_openid: Se connecter avec OpenID
+      with_authentication: "Se connecer avec notre système d'identification"
+      registered: "Déjà enregistré?"
+      not_registered: "Pas encore enregistré?"
       log_in: Se connecter
       signup: Créer un compte

@@ -3,6 +3,8 @@
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user
 - form_for @user, :html => {:class => "form"} do |f|
+  .subtitle
+    = t("users.form.information")
   =render :partial => "form", :locals => {:f => f}
   .field-group
     .buttons
