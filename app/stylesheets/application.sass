@@ -124,14 +124,20 @@ abbr
   #group_menu li ul
     position: absolute
     left: -999em
-    background: #F0F0F0
-    border: 0px
+    background: #FFFFFF
+    border: 1px
 
   #group_menu li ul li
     clear: both
     border: 0px
+    border-bottom: 1px solid #ddd
+    width: 100%
+    min-width: 80px
+    &.last
+      border: 0px
     a
-      width: 100%
+      display: block
+      padding: 5px
 
   #group_menu li:hover ul
     left: auto

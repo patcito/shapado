@@ -11,15 +11,17 @@
       = link_to category_desc(current_category), ""
     -else
       = link_to t("layouts.application.categories"), "/"
+    ▼
     %ul
       -category_options.each do |desc, value|
         %li
           = link_to(desc, questions_path(:category => value))
-  %li
+  %li.menu
     -if @languages && !@languages.empty?
       = link_to language_desc(@languages.first), ""
     -else
       = link_to t("layouts.application.languages"), "/"
+    ▼
     %ul
       -if logged_in?
         -languages_options(current_user.preferred_languages).each do |desc, value|
@@ -37,7 +39,8 @@
   -groups = Group.find(:all, :limit => 5, :conditions => {:state => "active"})
   -groups.delete(current_group)
   %li.last
-    = link_to "groups", groups_url
+    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), groups_url
+    ▼
     %ul
       -groups.each do |g|
         %li
