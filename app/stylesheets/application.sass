@@ -7,28 +7,33 @@
 @import compass/utilities/tables/scaffolding
 @import compass/utilities/general/tag_cloud.sass
 @import compass/utilities/lists/horizontal_list.sass
+@import compass/utilities/links/unstyled_link.sass
 
 body
   background: #fafafa
   color: #666
   font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif
 
+
 .two-column
   padding: 5px
+
+a, strong, b
+  line-height: 17px
 
 a:link, a:visited
   font-weight: bold
   color: #669933
 
-.horizontal_list
-  +horizontal-list(10px)
-
 a:hover, a:active
   color: #96a51e
 
-a, strong, b
-  line-height: 17px
+.horizontal_list
+  +horizontal-list(10px)
 
+#adbar_container
+  margin: auto
+  text-align: center
 
 .clear
   clear: both
@@ -53,27 +58,13 @@ abbr
 
 
 #top_bar
-  background-color: #d9d9df
-  ul#groups
-    +horizontal-list(10px)
-    padding: 4px
+  background: #F0F0F0
+  line-height: 32px
+  padding: 5px
+  width: 100%
 
-#header
-  h3
-    color: #004281
-  #logo
-    width: 50%
-    a
-      border: 0
-
-      img
-        height: 45px
-        vertical-align: middle
-
-  #user-nav
-    +rounded(0px, 0px, 5px, 5px)
-    padding: 5px
-    background: #F0F0F0
+  a
+    text-decoration: none
 
   #user-actions
     em.label
@@ -100,6 +91,58 @@ abbr
     button
       float: none
       margin-left: 5px
+
+  #action_menu
+    +horizontal-list(4px)
+    li
+      border-right: 1px solid #ddd
+      &.last
+        border: 0px
+      a
+        text-transform: lowercase
+    form
+      padding: 3px
+
+  #group
+    img
+      height: 32px
+      vertical-align: middle
+
+  #group_menu, #group_menu ul
+    padding: 5px
+    +horizontal-list(4px)
+    li
+      border-right: 1px solid #ddd
+      &.last
+        border: 0px
+      a
+        text-transform: lowercase
+
+  #group_menu a
+    text-decoration: none
+
+  #group_menu li ul
+    position: absolute
+    left: -999em
+    background: #F0F0F0
+    border: 0px
+
+  #group_menu li ul li
+    clear: both
+    border: 0px
+    a
+      width: 100%
+
+  #group_menu li:hover ul
+    left: auto
+
+  #group_menu li:hover ul, #menu_logo li.sfhover ul
+    left: auto
+
+#header
+  h3
+    color: #004281
+
 
 input
   float: none
@@ -129,18 +172,7 @@ x
   margin: 0 10px
   position: relative
 
-#action_menu
-  +horizontal-list(3px)
-  li
-    border-right: 1px solid #ddd
-    line-height: 24px
-    &.last
-      border: 0px
-    a
-      text-transform: lowercase
-  form
-    margin: 0px
-    padding: 0px
+
 
 img.gravatar
   vertical-align: middle
@@ -730,43 +762,6 @@ table#pricing
 
 #facts
   text-align: center
-
-#menu_logo, #menu_logo ul
-  padding: 0
-  margin: 0
-  list-style: none
-  list-style-image: none
-  list-style-position: outside
-  list-style-type: none
-
-#menu_logo a
-  display: block
-  border-right: 1px solid white
-  color: #666666
-  font-size: 12px
-  line-height: 1
-  padding: 6px
-  text-decoration: none
-
-#menu_logo li
-  float: left
-  margin-right: 0.7em
-
-#menu_logo li ul
-  position: absolute
-  width: 7.2em
-  left: -999em
-  background: #DFDFDF
-
-#menu_logo li ul li
-  margin-left: 0
-
-#menu_logo li:hover ul
-  left: auto
-
-
-#menu_logo li:hover ul, #menu_logo li.sfhover ul
-  left: auto
 
 .feedback
   font-size: 15px

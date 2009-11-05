@@ -1,9 +1,10 @@
 -unless AppConfig.adbard_host_id.blank?
-  :erb
-    <!--Ad Bard advertisement snippet, begin -->
-    <script type='text/javascript'>
-    var ab_h = '<%= AppConfig.adbard_host_id %>';
-    var ab_s = '<%= AppConfig.adbard_site_key %>';
-    </script>
-    <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
-    <!--Ad Bard, end -->
+  #adbar_container
+    :erb
+      <!--Ad Bard advertisement snippet, begin -->
+      <script type='text/javascript'>
+      var ab_h = '<%= AppConfig.adbard_host_id %>';
+      var ab_s = '<%= AppConfig.adbard_site_key %>';
+      </script>
+      <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
+      <!--Ad Bard, end -->

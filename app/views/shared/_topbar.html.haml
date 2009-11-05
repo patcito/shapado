@@ -1,12 +1,76 @@
 
-%ul#groups
+%ul#group_menu.left
+  %li
+    %span#group
+      =link_to image_tag(logo_group_path(current_group)), subdomain_url(current_group.subdomain)
+      -if logged_in? && current_user.can_modify?(current_group)
+        = link_to t("groups.manage"), group_path(current_group)
+
+  %li
+    -if current_category != "all"
+      = link_to category_desc(current_category), ""
+    -else
+      = link_to t("layouts.application.categories"), "/"
+    %ul
+      -category_options.each do |desc, value|
+        %li
+          = link_to(desc, questions_path(:category => value))
+  %li
+    -if @languages && !@languages.empty?
+      = link_to language_desc(@languages.first), ""
+    -else
+      = link_to t("layouts.application.languages"), "/"
+    %ul
+      -if logged_in?
+        -languages_options(current_user.preferred_languages).each do |desc, value|
+          %li
+            = link_to desc, subdomain_url(value)
+      -else
+        -languages_options.each do |desc, value|
+          %li
+            = link_to desc, tag_url(value)
+
+  -if !logged_in?
+    %li
+      = link_to 'Get the facts!', "/facts#facts"
+
   -groups = Group.find(:all, :limit => 5, :conditions => {:state => "active"})
   -groups.delete(current_group)
-  %li
-    %b
-      &= current_group.name
-  -groups.each do |g|
-    %li
-      = link_to h(g.name), subdomain_url(g.subdomain)
-  %li
-    = link_to t("scaffold.more"), groups_url
+  %li.last
+    = link_to "groups", groups_url
+    %ul
+      -groups.each do |g|
+        %li
+          = link_to h(g.name), subdomain_url(g.subdomain)
+      %li
+        = link_to t("groups.index.request_group"), groups_url
+
+
+%span#user-actions.right
+  #user-nav
+    %ul#action_menu
+      -if logged_in?
+        %li
+          %span
+            %span.gravatar
+              = gravatar current_user.email.to_s, :size => 22
+              = link_to h(current_user.login), user_path(current_user)
+              %span{:style => "font-size: 12px; font-weight: bold"}
+                == (#{current_user.reputation_on(current_group)})
+        %li
+          =link_to t("layouts.application.settings"), settings_path
+        %li
+          =link_to t("layouts.application.logout"), logout_path
+      -else
+        %li
+          =link_to t("layouts.application.log_in"), login_path
+      %li
+        =link_to t(".about", :default => :"groups.index.about"), group_path(current_group)
+      %li.last
+        -form_tag search_path, :class => "form", :method => :get do
+          = text_field_tag 'q', params[:q], :class => "text-field"
+          %button{:type => "submit"}
+            = t('.search', :default => "Go")
+
+
+.clear
