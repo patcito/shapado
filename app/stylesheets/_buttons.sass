@@ -1,13 +1,4 @@
-
-.subtle_button
-  background-color: #efefef
-  border-top: 1px solid #ddd
-  padding: 10px 0
-
-  a.button
-    &:link, &:visited
-      background-color: transparent
-      border-color: transparent
+@import css3
 
 .buttons.message
   padding: 10px 20px
@@ -16,11 +7,13 @@
   clear: both
   font-size: .785em
   overflow: hidden
-  line-height: 30px
+  line-height: 25px
+  margin-top: 2px
 
   button, a.button
-    background: #eee
-    border: 1px solid #999
+    background: #eee url(/images/button-mask.png) 0 0 repeat-x
+    border: 1px solid #666
+    border-color: #aaa #999 #666 #999
     color: #646464
     cursor: pointer
     display: block
@@ -28,76 +21,62 @@
     font-size: 100%
     font-weight: bold
     margin-bottom: 0
-    padding: 4px 10px 5px 10px
+    padding: 4px
     text-align: center
     text-decoration: none
     text-transform: uppercase
     white-space: nowrap
+    &:hover, &:active
+      border-color: #7799FF #7788FF #7777FF #7788FF
+      color: #333
     &.cancel
-      background: #A40500
+      background: #FF0500 url(/images/button-mask.png) 0 45% repeat-x
       border: 1px solid #FF0500
       color: #ddd
+
+
+  a.button
+    +rounded(3px, 3px, 3px, 3px)
+    display: inline
+    &.elegance
+      +rounded(2px, 2px, 2px, 2px)
 
   button
     white-space: nowrap
     line-height: 16px
     overflow: visible
     padding: 6px 10px 6px 10px
+    +rounded(4px, 4px, 4px, 4px)
     width: auto
 
     &[type]
       line-height: 20px
       padding: 5px 10px 5px 7px
 
-
-*:first-child+html button[type]
-  padding: 4px 10px 3px 7px
-
-
-.buttons
   button img, a img
     border: none
     margin: 0 3px -3px 0 !important
     padding: 0
 
-  button
-    -webkit-border-radius: 12px
+  button.cancel, a.button.cancel
+    &:hover, &:active
+      background: #FF6666 url(/images/button-mask.png) 0 0 repeat-x
+      border: 1px solid #FF6666
+      color: #ddd
 
-  a.button
-    -webkit-border-radius: 12px
-    -moz-border-radius: 12px
-    display: inline
-    &.elegance
-      -webkit-border-radius: 4px
-      -moz-border-radius: 4px
 
-  button
-    -moz-border-radius: 14px
-
+*:first-child+html button[type]
+  padding: 4px 10px 3px 7px
 
 x
   &:-moz-any-link, &:default
     -moz-border-radius: 14px
-
-.buttons
-  button, a.button
-    &:hover, &:active
-      background: #eee
-      :border 1px solid #77B7FF
-      color: #333
-
-  button.cancel,a.button.cancel
-    &:hover, &:active
-      background: #C00500
-      border: 1px solid #FF6666
-      color: #ddd
 
 
 button.reverse
   background: #507526
   border: 1px solid #507526
   color: #fff
-
 
 .buttons a.reverse
   background: #507526
