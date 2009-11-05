@@ -9,12 +9,11 @@
 @import compass/utilities/lists/horizontal_list.sass
 
 body
-  background: #4A7499
+  background: #fafafa
   color: #666
   font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 .two-column
-  background: #eee
   padding: 5px
 
 a:link, a:visited
@@ -54,7 +53,7 @@ abbr
 
 
 #top_bar
-  background-color: #b9b9bf
+  background-color: #d9d9df
   ul#groups
     +horizontal-list(10px)
     padding: 4px
@@ -71,6 +70,10 @@ abbr
         height: 45px
         vertical-align: middle
 
+  #user-nav
+    +rounded(0px, 0px, 5px, 5px)
+    padding: 5px
+    background: #F0F0F0
 
   #user-actions
     em.label
@@ -497,9 +500,7 @@ blockquote
 
 #main-content
   background: #dfdfdf
-  border-left: 1px solid #d4d4d4
   border-bottom: 1px solid #b4b4b4
-  border-right: 1px solid #b4b4b4
   clear: both
   overflow: hidden
   padding: 9px
@@ -512,11 +513,11 @@ blockquote
     background: #E8E5B7
 
 #layout
-  background: #F6F6F6
-  border: 1px solid #E6E6E6
+  background: #FFF
 
 #content
   background: #FFF
+  border-right: 1px solid #E6E6E6
 
 #sidebar
   h1
@@ -574,9 +575,7 @@ table.list
 
 .vote_box
   border: 1px solid #d4d4d4
-  border-radius: 4px
-  -webkit-border-radius: 4px
-  -moz-border-radius: 4px
+  +rounded(4px, 4px, 4px, 4px)
   font-size: 24px
   text-align: center
   vertical-align: middle
@@ -661,11 +660,8 @@ table.list
     overflow: hidden
     float: left
     a
-      -webkit-border-radius: 2px
-      -moz-border-radius-bottomleft: 0
-      -moz-border-radius-bottomright: 4px
-      -moz-border-radius-topleft: 4px
-      -moz-border-radius-topright: 0
+
+      +rounded(4px, 0px, 4px, 0px)
       color: #666
       background: #DDDDEC
       cursor: pointer
