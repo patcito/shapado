@@ -38,8 +38,9 @@ class Answer
 
   def check_unique_answer
     check_answer = Answer.find(:first,
-                               :conditions => {:question_id => self.question_id,
-                               :user_id => self.user_id, :parent_id => nil})
+                               :question_id => self.question_id,
+                               :user_id => self.user_id,
+                               :parent_id => nil)
 
     if !check_answer.nil? && check_answer.id != self.id
       self.errors.add(:limitation, "Your can only post one answer by question.")
@@ -87,20 +88,17 @@ class Answer
   end
 
   def disallow_spam
-    eq_answer = Answer.find(:first, {:limit => 1,
-                              :conditions => {
-                                :body => self.body,
-                                :question_id => self.question_id,
-                                :group_id => self.group_id
-                               }})
+    eq_answer = Answer.find(:first, { :limit => 1,
+                                      :body => self.body,
+                                      :question_id => self.question_id,
+                                      :group_id => self.group_id
+                                    })
 
-    last_answer  = Answer.find(:first, {:limit => 1,
-                               :conditions => {
-                                 :user_id => self.id,
-                                 :question_id => question.id,
-                                 :group_id => self.group_id
-                               },
-                               :order => "created_at desc"})
+    last_answer  = Answer.find(:first, :limit => 1,
+                                       :user_id => self.id,
+                                       :question_id => question.id,
+                                       :group_id => self.group_id,
+                                       :order => "created_at desc")
 
     valid = (eq_answer.nil? || eq_answer.id == self.id) &&
             ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)

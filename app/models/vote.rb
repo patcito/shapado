@@ -18,10 +18,9 @@ class Vote
   protected
   def should_be_unique
     vote = Vote.find(:first, {:limit => 1,
-                              :conditions => {
-                                :voteable_type => self.voteable_type,
-                                :voteable_id => self.voteable_id,
-                                :user_id     => self.user_id}
+                              :voteable_type => self.voteable_type,
+                              :voteable_id => self.voteable_id,
+                              :user_id     => self.user_id
                              })
 
     puts vote.inspect

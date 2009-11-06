@@ -23,9 +23,8 @@ class QuestionsController < ApplicationController
         order = "hotness desc"
     end
 
-    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1,
-                                   :order => order,
-                                   :conditions => scoped_conditions(:banned => false))
+    @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
+                                   :order => order}.merge( scoped_conditions(:banned => false)))
 
     @langs_conds = scoped_conditions[:language][:$in]
 
@@ -45,7 +44,8 @@ class QuestionsController < ApplicationController
 
   def unanswered
     set_page_title(t("questions.unanswered.title"))
-    @questions = Question.paginate(:per_page => 25, :page => params[:page] || 1, :conditions => scoped_conditions({:answered => false}))
+    @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1}.
+                                   merge(scoped_conditions({:answered => false})))
     @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions), 25)
     render
   end
@@ -76,7 +76,7 @@ class QuestionsController < ApplicationController
 
     @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
                                           :order => order,
-                                          :conditions => {:banned => false})
+                                          :banned => false)
 
     @answer = Answer.new
     @question.viewed!

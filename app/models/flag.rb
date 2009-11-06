@@ -18,10 +18,9 @@ class Flag
   protected
   def should_be_unique
     flag = Flag.find(:first, {:limit => 1,
-                              :conditions => {
-                                :flaggeable_type => self.flaggeable_type,
-                                :flaggeable_id => self.flaggeable_id,
-                                :user_id     => self.user_id}
+                              :flaggeable_type => self.flaggeable_type,
+                              :flaggeable_id => self.flaggeable_id,
+                              :user_id     => self.user_id
                              })
 
     valid = (flag.nil? || flag.id == self.id)

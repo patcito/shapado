@@ -69,7 +69,7 @@ class User
   #
   def self.authenticate(login, password)
     return nil if login.blank? || password.blank?
-    u = find(:first, :conditions => {:login => login.downcase}) # need to get the salt
+    u = find(:first, :login => login.downcase) # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
 
@@ -123,10 +123,9 @@ class User
 
   def has_voted?(voteable)
     vote = Vote.find(:first, {:limit => 1,
-                              :conditions => {
-                                :voteable_type => voteable.class.to_s,
-                                :voteable_id => voteable.id,
-                                :user_id     => self.id}
+                              :voteable_type => voteable.class.to_s,
+                              :voteable_id => voteable.id,
+                              :user_id     => self.id
                              })
     !vote.nil?
   end
@@ -168,7 +167,7 @@ class User
   protected
   def add_email_validation
     if !self.email.blank?
-      doc = User.find(:first, :conditions => {:email => self.email}, :limit => 1)
+      doc = User.find(:first, :email => self.email, :limit => 1)
       valid = doc.nil? || self.id == doc.id
       if !valid
         self.errors.add(:email, 'Email has already been taken')

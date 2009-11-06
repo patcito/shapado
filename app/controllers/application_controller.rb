@@ -28,8 +28,8 @@ class ApplicationController < ActionController::Base
     subdomains.delete("www")
     unless subdomains.empty?
       @current_group ||= begin
-        group = Group.find(:first, :limit => 1, :conditions => {:state => "active",
-                                             :subdomain => subdomains.last})
+        group = Group.find(:first, :limit => 1, :state => "active",
+                                                :subdomain => subdomains.last)
         group
       end
     end

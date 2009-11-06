@@ -48,7 +48,7 @@ class Group
   end
 
   def logo
-    @logo ||= (Logo.find(:first, :conditions => {:group_id => self.id}) || Logo.new)
+    @logo ||= (Logo.find(:first, :group_id => self.id) || Logo.new)
   end
 
 end

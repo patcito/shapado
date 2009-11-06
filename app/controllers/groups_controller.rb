@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
 
     @groups = Group.paginate(:per_page => 15,
                              :page => params[:page],
-                             :conditions => {:state => @state})
+                             :state => @state)
 
     respond_to do |format|
       format.html # index.html.erb
