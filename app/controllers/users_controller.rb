@@ -63,11 +63,30 @@ class UsersController < ApplicationController
 
     @user.safe_update(%w[login email name password_confirmation password
                          language timezone preferred_languages categories
-                         preferred_tags notification_opts], params[:user])
+                         notification_opts], params[:user])
+    preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
+      @user.set_preferred_tags(preferred_tags, current_group) if preferred_tags
       redirect_to root_path
     else
       render :action => "edit"
     end
   end
+
+  def change_preferred_tags
+    @user = current_user
+    if params[:tags]
+      if params[:opt] == "add"
+        @user.add_preferred_tags(params[:tags], current_group) if params[:tags]
+      elsif params[:opt] == "remove"
+        @user.remove_preferred_tags(params[:tags], current_group)
+      end
+    end
+
+    respond_to do |format|
+      format.html {redirect_to questions_path(current_category)}
+    end
+  end
 end
+
+

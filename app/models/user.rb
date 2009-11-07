@@ -21,7 +21,7 @@ class User
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
-  key :preferred_tags,            Array, :default => []
+  key :preferred_tags,            Hash, :default => {} #by group
   key :preferred_languages,       Array
 
   key :notification_opts,         Hash, :default => {"new_answer"=>"1"}
@@ -93,11 +93,29 @@ class User
     end
   end
 
-  def preferred_tags=(t)
+  def set_preferred_tags(t, group)
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-    self[:preferred_tags] = t
+    self.collection.update({:_id => self.id}, {:$set => {"preferred_tags.#{group.id}" => t}},
+                           :upsert => true)
+  end
+
+  def add_preferred_tags(t, group)
+    if t.kind_of?(String)
+      t = t.split(",").join(" ").split(" ")
+    end
+
+    self.collection.update({:_id => self.id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
+                           :upsert => true)
+  end
+
+  def remove_preferred_tags(t, group)
+    if t.kind_of?(String)
+      t = t.split(",").join(" ").split(" ")
+    end
+    self.collection.update({:_id => self.id}, {:$pullAll => {"preferred_tags.#{group.id}" => t}},
+                           :upsert => true)
   end
 
   def admin?
@@ -158,6 +176,10 @@ class User
     self.country_code = l[2]
     self.country_name = l[4]
     save
+  end
+
+  def preferred_tags_on(group)
+    @group_preferred_tags ||= (self.preferred_tags[group.id] || []).to_a
   end
 
   def reputation_on(group)

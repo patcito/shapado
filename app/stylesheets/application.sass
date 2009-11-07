@@ -650,11 +650,15 @@ table.list
   &:hover
     background: #ededff
     border-bottom: 1px solid #a4a4d4
+  &.highlight
+    background: #FFFFaa
+    &:hover
+      background: #ffffed
+      border-bottom: 1px solid #a4a4d4
 
 .list-item
   +list_item
 
-//TODO: move it
 #questions
   min-height: 10em
 
@@ -698,12 +702,10 @@ table.list
     overflow: hidden
     float: left
     a
-
       +rounded(4px, 0px, 4px, 0px)
       color: #666
       background: #DDDDEC
       cursor: pointer
-      display: block
       font-size: 100%
       font-weight: bold
       margin-bottom: 5px
@@ -716,6 +718,12 @@ table.list
       &:hover
         color: #dedede
         background: #004181
+      &.remove_tag
+        background: #FFDDEC
+        +rounded(4px, 4px, 4px, 4px)
+        &:hover
+          color: #ffdede
+          background: #810000
 
 a.feed_url
   background: #DEDEFE

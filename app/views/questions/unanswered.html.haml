@@ -24,4 +24,5 @@
   %h1
     = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
   = render :partial => "shared/tag_list", :object => @tag_cloud
-
+  -if logged_in?
+    = render :partial => "shared/preferred_tags"

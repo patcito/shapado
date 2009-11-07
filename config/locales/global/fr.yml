@@ -8,7 +8,9 @@ fr:
     update: Actualiser
     cancel: Annuler
     create: Créer
+    new: Add new {{model}}
     more: more...
+    add: ajouter
   time:
     today: Today
     ago: "{{time}} ago"

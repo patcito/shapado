@@ -56,9 +56,6 @@
               -if current_user.moderator?
                 %li.moderate
                   =link_to t(".moderate"), moderate_path, :style => "background: #E55353; color: #fff"
-              -current_user.preferred_tags.each do |tag|
-                %li{:class => (@active_tag == "tag_#{tag}" ? 'selected' : '' ) }
-                  =link_to h(tag), questions_path(:category => current_category, :tags => tag)
             %li.ask_question
               =link_to t(".ask_question"), new_question_path(:category => current_category), :rel => 'nofollow'
       #main-content
