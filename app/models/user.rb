@@ -105,9 +105,12 @@ class User
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-
-    self.collection.update({:_id => self.id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
-                           :upsert => true)
+    if preferred_tags[group.id]
+      self.collection.update({:_id => self.id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
+                             :upsert => true, :safe => true)
+    else
+      set_preferred_tags(t, group)
+    end
   end
 
   def remove_preferred_tags(t, group)
