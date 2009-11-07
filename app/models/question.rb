@@ -21,7 +21,6 @@ class Question
   key :language, String, :default => "en"
 
   key :tags, Array, :default => []
-  key :_metatags, Array, :default => []
   key :category, String
 
   key :activity_at, Time
@@ -47,7 +46,6 @@ class Question
   validates_true_for :tags, :logic => lambda { !tags.empty? }
   searchable_keys :title, :body
 
-  before_save :update_metatags
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
 #   before_validation_on_update :update_answer_count
@@ -144,12 +142,6 @@ class Question
   end
 
   protected
-  def update_metatags
-    self._metatags = []
-    self._metatags << self.language
-    self._metatags << self.category
-    self._metatags += self.tags
-  end
 
   def sluggize
     if self.slug.blank?
