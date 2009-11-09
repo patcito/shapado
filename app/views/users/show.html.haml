@@ -9,7 +9,7 @@
 
 #questions
   -@questions.each do |question|
-    = render :partial => "shared/question", :locals => {:question => question}
+    = render :partial => "welcome/question", :locals => {:question => question}
   = will_paginate @questions, :param_name => "questions_page"
 #answers
   %h2

@@ -51,7 +51,7 @@
 #answers
   -if @question.answered
     %h2
-      = t("solution", :scope => "")
+      = t(".solution", :scope => "")
     =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true, :comment => @answer}
     -@answers.delete(@question.answer)
     %hr
