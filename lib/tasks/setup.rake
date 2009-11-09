@@ -35,5 +35,11 @@ namespace :setup do
     admin.save!
   end
 
+  task "Upgrade"
+  task :upgrade => [:environment,
+                    "setup:default_group",
+                    "fixdb:groups_support",
+                    "fixdb:cleanup_documents"] do
+  end
 end
 
