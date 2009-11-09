@@ -22,6 +22,10 @@ ActionController::Routing::Routes.draw do |map|
     questions.resources :answers, :member => {:flag => :get}
   end
 
+  map.resources :questions do |questions|
+    questions.resources :answers
+  end
+
 
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,

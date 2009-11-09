@@ -8,16 +8,16 @@
   = t(".title")
   .right.tabs
     .tab.newest
-      = link_to t(".newest"), questions_path(:sort=>"newest")
+      = link_to t(".newest"), questions_path(:category => current_category, :sort=>"newest")
     .tab.hot
-      = link_to t(".hot"), questions_path(:sort=>"hot")
+      = link_to t(".hot"), questions_path(:category => current_category, :sort=>"hot")
     .tab.votes
-      = link_to t(".votes"), questions_path(:sort=>"votes")
+      = link_to t(".votes"), questions_path(:category => current_category, :sort=>"votes")
     .tab.active
-      = link_to t(".active"), questions_path(:sort=>"active")
+      = link_to t(".active"), questions_path(:category => current_category, :sort=>"active")
 
 .buttons
-  = link_to t(".ask_question"), new_question_path, :class => "button"
+  = link_to t(".ask_question"), new_question_path(:category => current_category), :class => "button"
 %br.clear
 
 #questions
@@ -27,7 +27,7 @@
 =will_paginate @questions
 
 .buttons
-  = link_to t(".ask_question"), new_question_path, :class => "button"
+  = link_to t(".ask_question"), new_question_path(:category => current_category), :class => "button"
 
 -content_for :sidebar do
   -if logged_in?

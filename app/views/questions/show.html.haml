@@ -24,7 +24,7 @@
     .tags-list
       -@question.tags.each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(:tags => tag)
+          = link_to h(tag), questions_path(:category => current_category, :tags => tag)
     %br.clear
     %span{:style => "width: 92%"}
       .answer_info.box.right{:style => "width: 25%"}
