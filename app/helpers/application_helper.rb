@@ -31,7 +31,8 @@ module ApplicationHelper
 
   def tag_cloud(tags = [], options = {})
     if tags.empty?
-      tags = Question.tag_cloud(language_conditions.merge(categories_conditions))
+      tags = Question.tag_cloud({:group_id => current_group.id}.
+                        merge(language_conditions.merge(categories_conditions)))
     end
 
     return '' if tags.size <= 2

@@ -22,7 +22,8 @@ ActionController::Routing::Routes.draw do |map|
     questions.resources :answers, :member => {:flag => :get}
   end
 
-  map.resources :questions do |questions|
+  map.resources :questions, :collection => {:tags => :get,
+                                            :unanswered => :get} do |questions|
     questions.resources :answers
   end
 

@@ -33,7 +33,8 @@ class QuestionsController < ApplicationController
       add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>@langs_conds),
                     "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
-    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions), 25)
+    @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
+                    merge(language_conditions.merge(categories_conditions)), 25)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,13 +47,15 @@ class QuestionsController < ApplicationController
     set_page_title(t("questions.unanswered.title"))
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1}.
                                    merge(scoped_conditions({:answered => false})))
-    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions), 25)
+    @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
+                    merge(language_conditions.merge(categories_conditions)), 25)
     render
   end
 
   def tags
     set_page_title(t("layouts.application.tags"))
-    @tag_cloud = Question.tag_cloud(language_conditions.merge(categories_conditions))
+    @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
+                    merge(language_conditions.merge(categories_conditions)))
   end
 
   # GET /questions/1
