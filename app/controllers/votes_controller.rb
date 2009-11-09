@@ -47,10 +47,15 @@ class VotesController < ApplicationController
   def check_permissions
     unless logged_in?
       flash[:error] = t(:unauthenticated, :scope => "votes.create")
-      flash[:error] += ", #{t("global.please_login")}"
       respond_to do |format|
-        format.html{redirect_to params[:source]}
-        format.json{render(:json => {:status => :error, :message => flash[:error] }.to_json)}
+        format.html do
+          flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
+          redirect_to params[:source]
+        end
+        format.json do
+          flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
+          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+        end
       end
     end
   end

@@ -8,9 +8,9 @@
         %b= t("errors.options_label")
         %ul
           %li
-            = t("errors.go_to", :link =>link_to(t("layouts.applications.home"), root_path))
+            = t("errors.go_to", :link =>link_to(t("layouts.application.home"), root_path))
           %li
-            = t("errors.help_us_answer", :link => link_to(t("layouts.applications.questions"), questions_path(current_category)))
+            = t("errors.help_us_answer", :link => link_to(t("layouts.application.questions"), questions_path(current_category)))
           %li
             -form_tag search_path, :class => "form", :method => :get do
               =t("errors.search")

@@ -1,6 +1,20 @@
+
 <%- if logged_in? %>
   <%= render :partial=>"shared/error", :locals => {:title=> t("title.errors.forbidden", :default => :"views.layout.permission_denied"),
                     :explanation => t("explanation", :scope => "errors.forbidden"),
                     :error_image => "application-pgp-keys.png"} %>
+<% else %>
+  <div class="internal">
+    <%-if !logged_in?%>
+      <div class="box highlight">
+        <%= t("layouts.application.openid.explaination") %>
+        <%- form_tag(session_path, :id => 'openid') do %>
+          &nbsp;
+        <%-end%>
+      </div>
+    <%-end%>
+  </div>
+  <br/>
 <%-end %>
 
+<%= render :partial => "sessions/login" %>

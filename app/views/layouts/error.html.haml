@@ -27,89 +27,42 @@
     = yield :css
 
   %body
+    #top_bar
+      = render :partial => "shared/topbar"
+    - if logged_in?
+      .feedback
+        =link_to "Feedback", feedback_path, :id => "feedback"
     .two-column
       -if !AppConfig.system_notice.blank?
         #system-msg
           .internal
             = AppConfig.system_notice
       #header
-        #logo
-          %a{:href => root_path}
-            =image_tag "logo.png", :height => "45", :alt => "Shapado"
-          %ul#menu_logo
-            %li
-              = link_to "FAQ", questions_path(:category => "all", :tags => "faq")
-            %li
-              -if current_category != "all"
-                = link_to category_desc(current_category), ""
-              -else
-                = link_to t("layouts.application.categories"), "/"
-              %ul
-                -category_options.each do |desc, value|
-                  %li
-                    = link_to(desc, questions_path(:category => value))
-            %li
-              -if @languages && !@languages.empty?
-                = link_to language_desc(@languages.first), ""
-              -else
-                = link_to t("layouts.application.languages"), "/"
-              %ul
-                -if logged_in?
-                  -languages_options(current_user.preferred_languages).each do |desc, value|
-                    %li
-                      = link_to desc, subdomain_url(value)
-                -else
-                  -languages_options.each do |desc, value|
-                    %li
-                      = link_to desc, tag_url(value)
-            %li
-              -if !logged_in?
-                = link_to 'Get the facts!', "/facts#facts"
-
-        #user-actions
-          #user-nav
-            -if logged_in?
-              .box.right{:style => "width: 50%;"}
-                .gravatar.left{:style => "margin: 2px;"}
-                  = gravatar current_user.email.to_s
-                .row1
-                  = link_to h(current_user.login), user_path(current_user)
-                  %span{:style => "font-size: 12px; font-weight: bold"}
-                    == (#{current_user.reputation_on(current_group)})
-                  .right
-                    =link_to I18n.t('layouts.application.settings'), settings_path
-                    |
-                    =link_to I18n.t('layouts.application.logout'), logout_path
-                .row2{:style => "padding: 7px"}
-                  -form_tag search_path, :class => "form", :method => :get do
-                    = text_field_tag 'q', params[:q], :class => "text-field", :style => "width: 55%"
-                    %button{:type => "submit"}
-                      = I18n.t('layouts.application.search', :default => "Go")
+        .feedbackform.hide
+          = render :partial => "welcome/feedback"
       .clear
-      %br
       #main-content
         #layout
           #content{:style=>"width: 100%"}
-            .internal
-              -if !logged_in?
-                .box.highlight
-                  = t("layouts.application.openid.explaination")
-
-                  -form_tag session_path, :id => 'openid' do
-                    &nbsp;
-              %br
-              = yield
+            = yield
       #footer
         %hr
         %div
           %p
             = link_to AppConfig.site, AppConfig.site
             is a multi-topic and multi-language question-and-answer website service brought to you by #{link_to "Ricodigo.com", "http://ricodigo.com"}. It runs the #{link_to 'Shapado', 'http://gitorious.org/shapado'} question-and-answer software, version 0.1, available under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}.
-        #cc
-          %center
-            = image_tag('/images/ccby.png')
-            == All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}.
-
+        #cc.center
+          = image_tag('/images/ccby.png')
+          == All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}
+        #blog.center
+          = link_to 'blog', 'http://blog.ricodigo.com/shapado'
+          |
+          = link_to 'twitter', 'http://twitter.com/shapado'
+          |
+          = link_to 'identi.ca', 'http://identi.ca/shapado'
+          |
+          %a{:href => 'irc://irc.freenode.org/shapado'}
+            irc
       = render :partial => "shared/googlean"
       .clear
 
