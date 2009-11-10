@@ -2,6 +2,7 @@ en:
   users:
     index:
       title: All users
+      empty: "this group doesn't have any members, participate to join this group."
     new:
       title: Sign up as a new user
       submit: Sign up

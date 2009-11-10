@@ -8,6 +8,7 @@
       newest:  recientes
       oldest:  antiguas
       ask_question: pregunte
+      empty: "Nadie a preguntado aun, ¡se el primero!"
     show:
       answers: Respuestas
       another_answers: Otras respuestas
@@ -18,7 +19,7 @@
       viewed: Visto
     answer:
       pick_answer: Escoger como solución
-      unset_answer: Quitar como solución?
+      unset_answer: "¿Quitar como solución?"
       flag: flag
       add_comment: Añadir comentario...
     form:
@@ -32,6 +33,7 @@
       title: Editar pregunta
     unanswered:
       title: Preguntas no contestadas
+      empty: "Este grupo no tiene preguntas no contestadas."
     new:
       title: Pregunte
     create:

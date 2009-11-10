@@ -8,6 +8,7 @@ en:
       newest:  newest
       oldest:  oldest
       ask_question: ask question
+      empty: "No one has asked any questions yet, be the first!"
     show:
       answers: Answers
       another_answers: Other answers
@@ -33,6 +34,7 @@ en:
     unanswered:
       title: Unanswered Questions
       tags: Unanswered Tags
+      empty: "this group doesn't have any unanswered questions."
     new:
       title: Ask question
     create:

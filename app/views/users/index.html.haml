@@ -3,6 +3,9 @@
 
 
 %table.list#users
+  -if @users.empty?
+    .box.highlight
+      = t(".empty")
   -@users.each_slice(3) do |line|
     %tr
       -line.each do |user|

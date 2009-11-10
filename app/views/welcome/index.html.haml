@@ -8,6 +8,9 @@
       = link_to t(".hot"), root_path(:tab=>"hot")
 
 #questions
+  -if @questions.empty?
+    .box.highlight
+      = t(".empty", :default => :"questions.index.empty")
   -@questions.each do |question|
     = render :partial => "question", :object => question
 

@@ -13,6 +13,8 @@ class QuestionsController < ApplicationController
   def index
     set_page_title(t("questions.index.title"))
     order = "created_at desc"
+
+
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
       when "active"

@@ -2,6 +2,7 @@ fr:
   users:
     index:
       title: Tous les utilisateurs
+      empty: "Ce groupe n'a pas de membres pour l'instant, participer pour en devenir un."
     new:
       title: Se connecter en tant que nouvel utilisateur
       submit: Ouvrir un compte

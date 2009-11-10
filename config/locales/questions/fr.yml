@@ -8,6 +8,7 @@ fr:
       newest:  newest
       oldest:  oldest
       ask_question: poser une question
+      empty: "Aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
     show:
       answers: Réponses
       another_answers: Autres réponses
@@ -32,6 +33,7 @@ fr:
       title: Éditer la question
     unanswered:
       title: Sans Réponses
+      empty: "Ce groupe n'a aucune question sans réponses"
     new:
       title: Poser une question
     create:

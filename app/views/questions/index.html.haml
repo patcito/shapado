@@ -21,6 +21,9 @@
 %br.clear
 
 #questions
+  -if @questions.empty?
+    .box.highlight
+      = t(".empty")
   -@questions.each do |question|
     = render :partial => "question", :object => question
 
