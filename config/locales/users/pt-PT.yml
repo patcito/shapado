@@ -2,6 +2,7 @@
   users:
     index:
       title: Todos os utilizadores
+      empty: "this group doesn't have any members, participate to join this group."
     new:
       title: Registar-se como novo utlizador
       submit: Registar

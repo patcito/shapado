@@ -8,6 +8,7 @@
       newest:  mais recentes
       oldest:  mais antigas
       ask_question: fazer pergunta
+      empty: "No one has asked any questions yet, be the first!"
     show:
       answers: Respostas
       another_answers: Outras respostas
@@ -33,6 +34,7 @@
     unanswered:
       title: Perguntas Sem Resposta
       tags: Etiquetas Sem Resposta
+      empty: "this group doesn't have any unanswered questions."
     new:
       title: Fazer Pergunta
     create:

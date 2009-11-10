@@ -10,6 +10,7 @@
     create: Criar
     new: Adicionar novo {{model}}
     more: "mais ..."
+    add: adicionar
   time:
     today: Hoje
     ago: "{{time}} atrás"
