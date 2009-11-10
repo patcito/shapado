@@ -1,63 +1,63 @@
 "pt-PT":
   questions:
     index:
-      title: All questions
-      hot:     hot
-      active:  active
-      votes:   votes
-      newest:  newest
-      oldest:  oldest
-      ask_question: ask question
+      title: Todas as perguntas
+      hot:     populares
+      active:  activas
+      votes:   votos
+      newest:  mais recentes
+      oldest:  mais antigas
+      ask_question: fazer pergunta
     show:
-      answers: Answers
-      another_answers: Other answers
-      solution: Solution
-      share: "Share this question in"
-      flags: reported as
-      flag: flag
-      viewed: viewed
+      answers: Respostas
+      another_answers: Outras respostas
+      solution: Solução
+      share: "Partilhar esta pergunta em"
+      flags: reportado como
+      flag: reportar
+      viewed: visto
     answer:
-      pick_answer: Pick as solution
-      unset_answer: Unset as solution?
-      flag: flag
-      add_comment: Add comment...
+      pick_answer: Escolher como solução
+      unset_answer: Retirar como solução?
+      flag: reporte
+      add_comment: Adicionar comentário...
     form:
-      body_tip: What's your question? Be descriptive.
-      language_tip: Select the language's question.
-      category_tip: Select the category that fits best your question.
-      tags_tip:  Use tags to add more information about your question.
+      body_tip: Qual é a sua pergunta? Seja descritivo.
+      language_tip: Seleccione o idioma da questão.
+      category_tip: Selecciona a categoria que encaixa melhor a sua questão.
+      tags_tip:  Usar etiquetas para dar mais informação sobre a sua questão.
     flag:
-      title:   Flag question
+      title:   Reportar pergunta
     edit:
-      title: Editing question
+      title: Editar pergunta
     unanswered:
-      title: Unanswered Questions
-      tags: Unanswered Tags
+      title: Perguntas Sem Resposta
+      tags: Etiquetas Sem Resposta
     new:
-      title: Ask question
+      title: Fazer Pergunta
     create:
-      flash_notice: "Question was successfully created."
+      flash_notice: "Pergunta foi criada com sucesso."
     update:
-      flash_notice: "Question was successfully updated."
+      flash_notice: "Pergunta foi actualizada com sucesso."
     solve:
-      flash_notice: "Question was solved."
+      flash_notice: "Pergunta foi resolvida."
     unsolve:
-      flash_notice: "Question now is not solved."
+      flash_notice: "Pergunta agora não está resolvida."
     shared:
-      flag: flag
+      flag: reportar
 
   activerecord:
     models:
-      questions: Questions
-      question: question
+      questions: Perguntas
+      question: pergunta
     attributes:
       question:
-        title: Title
-        body: Body
-        tags: Tags
-        asked_by: Asked by
-        answers: Answers
-        views: Views
-        votes: Votes
-        language: Language
-        category: Category
+        title: Título
+        body: Conteúdo
+        tags: Etiquetas
+        asked_by: Perguntado por
+        answers: Respostas
+        views: Visitas
+        votes: Votos
+        language: Idioma
+        category: Categoria

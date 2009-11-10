@@ -1,17 +1,17 @@
 "pt-PT":
   errors:
-    options_label: "Other things to try:"
-    go_to: "go to {{link}} page"
-    help_us_answer: Help us to answer {{link}}
-    search: "search"
+    options_label: "Outras coisas que podes tentar:"
+    go_to: "ir para {{link}} página"
+    help_us_answer: Ajuda-nos a responder a {{link}}
+    search: "pesquisar"
     forbidden:
-      explanation: "You don't have the required rights to access this page."
+      explanation: "Não tem as permissões necessárias para aceder a esta página."
     not_found:
-      title: "Page not found."
-      explanation: "You may have mistyped the address or the page may have moved."
+      title: "Página não encontrada."
+      explanation: "Pode ter escrito mal o endereço ou a página pode ter sido movida."
     unprocessable_entity:
-      title: "The change you wanted was rejected."
-      explanation: "Maybe you tried to change something you didn't have access to."
+      title: "A alteração que pretendeu foi rejeitada"
+      explanation: "Se calhar tentou modificar algo para o qual não tinha permissões."
     internal_error:
-      title: "We're sorry, but something went wrong."
-      explanation: "We've been notified about this issue and we'll take a look at it shortly."
+      title: "Pedimos desculpa, mas ocorreu um erro."
+      explanation: "Fomos notificados sobre este problema e vamos averiguá-lo em breve."

@@ -3,38 +3,38 @@
     facts:
       prices:
         cols:
-          onsite: On site
+          onsite: No seu sítio web
         stackexchange:
-          small: $129/month
-          medium: $999/month
-          large: $1299/month
-          onsite: $2500/month
+          small: $129/mês
+          medium: $999/mês
+          large: $1299/mês
+          onsite: $2500/mês
         shapado:
-          small: prolly like $50 to $100/month on most hosting providers
-          medium: <=== ditto
-          large: prolly like $500
-          onsite: prolly $0 on your own server duh
+          small: aproximadamente $50 to $100/mês na maioria dos provedores de alojamento
+          medium: <=== igual
+          large: aproximadamente $500
+          onsite: $0 no seu servidor duh
       features:
         cols:
-          adaptable: Adaptable
-          multitopic: Multi-topic
-          multilanguage: Multi-language
-          foss: Free/Open Source
-          joel: Will I make Joel richer?
+          adaptable: Adaptável
+          multitopic: Multi-tópicos
+          multilanguage: Multi-idioma
+          foss: Livre/Código Aberto
+          joel: Farei Joel mais rico?
         stackexchange:
-          adaptable: no
-          multitopic: no
-          multilanguage: no
-          foss: no
-          joel: yes!
+          adaptable: não
+          multitopic: não
+          multilanguage: não
+          foss: não
+          joel: sim!
         shapado:
-          adaptable: yes!
-          multitopic: yes!
-          multilanguage: yes!
-          foss: yes!
-          joel: "no :/"
+          adaptable: sim!
+          multitopic: sim!
+          multilanguage: sim!
+          foss: sim!
+          joel: "não :/"
     index:
-      hot:     hot
-      active:  active
-      recent_questions: Recent questions
+      hot:     popular
+      active:  activo
+      recent_questions: Perguntas recentes
 

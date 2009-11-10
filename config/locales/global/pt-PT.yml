@@ -1,46 +1,46 @@
 "pt-PT":
   scaffold:
-    sure: Are you sure you want to delete this {{model}} ?
-    show: Show
-    edit: Edit
-    destroy: Delete
-    back: Back
-    update: Update
-    cancel: Cancel
-    create: Create
-    new: Add new {{model}}
-    more: "more ..."
+    sure: Tem a certeza que pretende apagar este {{model}} ?
+    show: Mostrar
+    edit: Editar
+    destroy: Apagar
+    back: Voltar
+    update: Actualizar
+    cancel: Cancelar
+    create: Criar
+    new: Adicionar novo {{model}}
+    more: "mais ..."
   time:
-    today: Today
-    ago: "{{time}} ago"
+    today: Hoje
+    ago: "{{time}} atrás"
   messages:
-    success: "{{model}} was successfully {{action}}."
+    success: "{{model}} foi {{action}} com sucesso."
   models:
-    question:   the question
+    question:   a questão
   actions:
-    created:     created
-    deleted:     deleted
-    updated:     updated
-    closed:      closed
+    created:     criado
+    deleted:     apagado
+    updated:     actualizado
+    closed:      fechado
   global:
-    from: "from {{site}}"
-    permission_denied: Permission denied
-    please_login: please log in
+    from: "de {{site}}"
+    permission_denied: Permissão negada
+    please_login: por favor inicie sessão
   feeds:
-    question: Subscribe To This Question
-    questions: Subscribe To All Questions
-    tag: Subscribe To Tag
-    user: Subscribe To User Questions
+    question: Subscrever A Esta Pergunta
+    questions: Subscrever A Todas As Perguntas
+    tag: Subscrever À Tag
+    user: Subscrever Às Perguntas Do Utilizador
   languages:
-    en:      English
-    es:      Spanish
-    es-AR:   Latin American Spanish
-    fr:      French
-    pt:      Portuguese
-    pt-PT:      Portuguese
+    en:      Inglês
+    es:      Espanhol
+    es-AR:   Epanhol Latino-Americano
+    fr:      Francês
+    pt:      Português
+    pt-PT:      Português de Portugal
 
   number:
     x_time:
-      zero: "never"
-      one: "{{count}} time"
-      other: "{{count}} times"
+      zero: "nunca"
+      one: "{{count}} vez"
+      other: "{{count}} vezes"

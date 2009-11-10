@@ -1,21 +1,21 @@
 "pt-PT":
   groups:
-    manage: "manage..."
+    manage: "gerir..."
     index:
-      title: Groups
-      actives: actives
-      pendings: pendings
-      about: About
-      close: Close
-      accept_group: Accept this group
-      close_group: Close this group
-      request_group: Request a new group
+      title: Grupos
+      actives: activos
+      pendings: pendentes
+      about: Sobre
+      close: Fechar
+      accept_group: Aceitar este grupo
+      close_group: Fechar este grupo
+      request_group: Pedir um novo grupo
     show:
-      title: "{{name}} Group"
-      visit_group: visit this group
-      group_categories: "the categories for this group are:"
-      group_created_by: this group was created by
-      group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
-      group_closed: This group was closed.
-      accept_group: Accept this group
-      close_group: Close this group
+      title: "Grupo {{name}}"
+      visit_group: visitar este grupo
+      group_categories: "as categorias para este grupo são:"
+      group_created_by: este grupo foi criado por
+      group_awaiting_acceptance: "Este grupo está à espera da permissão de um moderador."
+      group_closed: Este grupo foi fechado.
+      accept_group: Aceitar este grupo
+      close_group: Fechar este grupo

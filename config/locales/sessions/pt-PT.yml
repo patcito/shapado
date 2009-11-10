@@ -1,15 +1,15 @@
 "pt-PT":
   sessions:
     create:
-      flash_notice: "Logged in successfully"
-      flash_error: "Couldn't log you in as '{{login}}'"
+      flash_notice: "Inicio de sessão efectuado com sucesso"
+      flash_error: "Não foi possível entrar com '{{login}}'"
     destroy:
-      flash_notice: "You have been logged out."
+      flash_notice: "A sua sessão foi terminada."
     new:
-      with_openid: Log in with OpenID
-      with_authentication: Log in with our authentication system
-      registered: "Already registered?"
-      not_registered: "Not registered yet?"
-      log_in: login
-      signup: signup
+      with_openid: Entrar com OpenID
+      with_authentication: Entrar com o nosso sistema de autenticação
+      registered: "Já registado?"
+      not_registered: "Ainda não se registou?"
+      log_in: entrar
+      signup: registar
 

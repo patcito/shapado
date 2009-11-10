@@ -1,28 +1,28 @@
 "pt-PT":
   answers:
     form:
-      comment_label: Comment on this answer
-      answer_label: Answer the question
-      comment_submit: Comment
-      preview: Preview
-      submit: Answer
+      comment_label: Comenta sobre esta resposta
+      answer_label: Responde à pergunta
+      comment_submit: Comentar
+      preview: Pré-visualizar
+      submit: Submeter
     edit:
-      title: Editing answer
+      title: Editar resposta
     create:
-      flash_notice: "Thanks!"
-      flash_error:  "Something went wrong adding your answer.
-  \n  remember that:
-  \n - empty and repeated answers are not allowed
-  \n - you need to wait 20 senconds before posting another answer.
-  \n - you can only post one answer by question."
+      flash_notice: "Obrigado!"
+      flash_error:  "Algo correu mal ao adicionar a sua resposta.
+  \n  lembre-se que:
+  \n - respostas vazias e repetidas não são permitidas
+  \n - tem que esperar 20 segundos para colocar uma nova resposta.
+  \n - só pode colocar uma resposta por pergunta."
     update:
-      flash_notice: "Answer was successfully updated."
+      flash_notice: "Resposta foi actualizada com sucesso."
 
   activerecord:
     models:
-      answers: Answers
-      answer: answer
+      answers: Respostas
+      answer: resposta
     attributes:
       answer:
-        link: link
+        link: ligação
 

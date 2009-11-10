@@ -1,44 +1,44 @@
 "pt-PT":
   users:
     index:
-      title: All users
+      title: Todos os utilizadores
     new:
-      title: Sign up as a new user
-      submit: Sign up
+      title: Registar-se como novo utlizador
+      submit: Registar
     edit:
-      title: Settings
-      submit: Save
+      title: Preferências
+      submit: Gravar
     form:
-      information: Information
-      notifications: Notifications
-      new_answer_notification: Get mail notifications for new answers
-      categories_tip: only questions belonging to these categories will show
+      information: Informação
+      notifications: Notificações
+      new_answer_notification: Receber notificações via email de novas respostas
+      categories_tip: só perguntas pertencentes a estas categorias serão mostradas
     create:
-      flash_notice: "Thanks for signing up!"
-      flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+      flash_notice: "Obrigado por registar-se!"
+      flash_error:  "Pedimos desculpa mas não pudemos criar essa conta. Por favor tente novamente ou contacte um administrador (a ligação está acima)."
 
   activerecord:
     models:
-      users: Users
-      user: user
+      users: utilizadores
+      user: utilizador
     attributes:
       user:
-        login: Login
+        login: Nome de Utilizador
         email: Email
-        name: Real name
-        current_password: Current Password
-        password: Password
-        password_confirmation: Password Confirmation
-        created_at: Created At
-        updated_at: Updated At
-        activation_code: Activation Code
-        activated_at: Activated At
-        fullname: Full name
-        language: Language
-        asked_by: asked by
-        timezone: Time zone
-        preferred_tags: Preferred tags
-        preferred_languages: Select the languages you know
-        last_logged_at: seen
-        created_at: joined
-        reputation: Reputation
+        name: Nome real
+        current_password: Palavra-passe actual
+        password: Palavra-passe
+        password_confirmation: Confirmação da Palavra-passe
+        created_at: Criado em
+        updated_at: Actualizado em
+        activation_code: Código de Activação
+        activated_at: Activado em
+        fullname: Nome completo
+        language: Idioma
+        asked_by: perguntado por
+        timezone: Localização
+        preferred_tags: Etiquetas preferidas
+        preferred_languages: Seleccione os idiomas que conhece
+        last_logged_at: visto
+        created_at: registado
+        reputation: Reputação

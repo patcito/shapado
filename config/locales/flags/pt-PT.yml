@@ -2,17 +2,17 @@
   flags:
     form:
       spam: spam
-      offensive: offensive, abusive or Hate speech
-      attention: Requires Moderator attention
-      label: Please flag with care
+      offensive: ofensivo, abusivo ou insultuoso
+      attention: Requer atenção do Moderador
+      label: Por favor reporte com cuidado
     create:
-      flash_notice: thanks for your report
-      flash_error: You cannot flag this
+      flash_notice: obrigado por ter reportado
+      flash_error: Não pode reportar isto
 
   activerecord:
     models:
-      flags: flags
-      flag: flag
+      flags: reportes
+      flag: reporte
     attributes:
       flag:
-        type: Reason
+        type: Motivo

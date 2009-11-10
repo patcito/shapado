@@ -2,8 +2,8 @@
   admin:
     moderate:
       index:
-        title: Moderate
-        ban: ban
-        content: content
-        item_title: title
-        all: all
+        title: Moderar
+        ban: banir
+        content: conteúdo
+        item_title: título
+        all: todas

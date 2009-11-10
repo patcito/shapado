@@ -1,22 +1,22 @@
 "pt-PT":
   layouts:
     application:
-      title: "Questions & Answers"
-      questions: questions
-      ask_question: ask question
+      title: "Perguntas & Respostas"
+      questions: perguntas
+      ask_question: fazer pergunta
       tags: tags
-      users: users
-      unanswered: unanswered
-      logout: logout
-      logged: Logged in as {{login}}
-      search: Go
-      forgot: forgot?
-      log_in: login
-      signup: Signup
-      settings: settings
-      categories: Categories
-      languages: Languages
-      moderate: Moderate
-      home: home
+      users: utilizadores
+      unanswered: sem resposta
+      logout: desligar sessão
+      logged: Ligado como {{login}}
+      search: Ir
+      forgot: Esqueceu-se?
+      log_in: ligar
+      signup: Registar-se
+      settings: preferências
+      categories: Categorias
+      languages: Idiomas
+      moderate: Moderar
+      home: início
       openid:
-        explaination: "If you'd like to register or just log in, please select your OpenID provider:"
+        explaination: "Se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de OpenID:"
