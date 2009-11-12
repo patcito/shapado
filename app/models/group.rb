@@ -14,7 +14,7 @@ class Group
   key :owner_id, String
   belongs_to :owner, :class_name => "User"
 
-  has_many :memberships, :class_name => "GroupMember",
+  has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
 
@@ -60,7 +60,7 @@ class Group
   end
 
   def add_member(user, role)
-    GroupMember.new( :group_id => self.id,
+    Member.new( :group_id => self.id,
                      :user_id => user.id,
                      :role => role).save
   end

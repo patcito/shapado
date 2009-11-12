@@ -38,7 +38,7 @@ class User
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
 
-  has_many :memberships, :class_name => "GroupMember", :foreign_key => "user_id"
+  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
 
   timestamps!
 

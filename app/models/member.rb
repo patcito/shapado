@@ -1,5 +1,5 @@
 
-class GroupMember
+class Member
   include MongoMapper::Document
   timestamps!
   key :group_id, String

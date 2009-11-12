@@ -4,7 +4,7 @@
     .tab.about
       = link_to "about", group_path(@group)
     .tab.members
-      = link_to "members", group_group_members_path(@group)
+      = link_to "members", group_members_path(@group)
 
 %table.list#members
   -if @members.empty?

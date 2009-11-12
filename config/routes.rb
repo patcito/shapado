@@ -31,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,
                                      :logo => :get} do |groups|
-    groups.resources :group_members
+    groups.resources :members
   end
 
   map.resources :votes
