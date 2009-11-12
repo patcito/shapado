@@ -1,0 +1,46 @@
+#show_groups.subtitle.members
+  = t(".title", :name => h(@group.name))
+  .right.tabs
+    .tab.about
+      = link_to "about", group_path(@group)
+    .tab.members
+      = link_to "members", group_group_members_path(@group)
+
+%table.list#members
+  -if @members.empty?
+    .box.highlight
+      = t(".empty")
+  -else
+    -@members.each_slice(3) do |line|
+      %tr
+        -line.each do |member|
+          -user = member.user
+          %td.users_info{:style => "padding: 4px"}
+            .gravatar.left{:style => "padding: 5px"}
+              = gravatar user.email.to_s, :size => 64
+            .user_box
+              %span.login{:style => "padding: 5px; font-size: 14px"}
+                = link_to h(user.login), user_path(user), :style => "color: #ACACAC"
+            %table{:style=> "border-bottom: 4px solid #F6F6F6; padding-top: 3px; width: 25%"}
+              %tr
+                %td.users_info_item.first_col.reputation
+                  &= user.reputation_on(current_group)
+                %td.users_info_item.sec_col{:title => t(:reputation, :scope => "activerecord.attributes.user")}
+                  = t(:reputation, :scope => "activerecord.attributes.user")
+              %tr
+                %td.users_info_item.first_col.questions_count
+                  &= user.questions.count
+                %td.users_info_item.sec_col{:title => t(:questions, :scope => "activerecord.models")}
+                  = t(:questions, :scope => "activerecord.models")
+              %tr
+                %td.users_info_item.first_col.answers_count
+                  &= user.answers.count
+                %td.users_info_item.sec_col{:title => t(:answers, :scope => "activerecord.models")}
+                  = t(:answers, :scope => "activerecord.models")
+              %tr
+                %td.users_info_item.first_col.role
+                  &= member.role
+                %td.users_info_item.sec_col{:title => "Role"}
+                  = "Role"
+          .clear
+

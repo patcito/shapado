@@ -23,8 +23,7 @@ module Support
     protected
     def generate_slug
       if self.slug.blank?
-        key = UUIDTools::UUID.random_create.hexdigest[0,4] #optimize
-        self.slug = key+"-"+self[self.class.slug_key].to_s.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
+        self.slug = self[self.class.slug_key].to_s.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
       end
     end
 

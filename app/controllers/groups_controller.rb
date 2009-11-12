@@ -5,7 +5,6 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.xml
   def index
-
     case params.fetch(:tab, "actives")
       when "actives"
         @state = "active"
@@ -26,6 +25,7 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.xml
   def show
+    @active_subtab = "about"
     @group = Group.find_by_slug_or_id(params[:id])
 
     respond_to do |format|
@@ -55,6 +55,7 @@ class GroupsController < ApplicationController
     @group = Group.new
     @group.safe_update(%w[name description legend categories subdomain], params[:group])
     @group.owner = current_user
+    @group.add_member(current_user, "owner")
 
     respond_to do |format|
       if @group.save

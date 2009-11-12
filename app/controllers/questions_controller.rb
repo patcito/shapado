@@ -121,7 +121,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        current_user.update_reputation(:ask_question, current_group)
+        current_user.on_activity(:ask_question, current_group)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_category, @question)) }
@@ -167,7 +168,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        current_user.update_reputation(:close_question, current_group)
+        current_user.on_activity(:close_question, current_group)
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
@@ -187,7 +188,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
-        current_user.update_reputation(:reopen_question, current_group)
+        current_user.on_activity(:reopen_question, current_group)
         if current_user != answer_owner
           answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end

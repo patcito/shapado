@@ -1,0 +1,4 @@
+en:
+  group_members:
+    index:
+      title: "Members of {{name}} Group"

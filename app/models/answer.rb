@@ -54,10 +54,10 @@ class Answer
                                                          :upsert => true)
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
-      voter.update_reputation(:vote_up_answer, self.group)
+      voter.on_activity(:vote_up_answer, self.group)
     else
       self.user.update_reputation(:answer_receives_down_vote, self.group)
-      voter.update_reputation(:vote_down_answer, self.group)
+      voter.on_activity(:vote_down_answer, self.group)
     end
   end
 

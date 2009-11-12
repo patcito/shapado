@@ -38,6 +38,8 @@ class User
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
 
+  has_many :memberships, :class_name => "GroupMember", :foreign_key => "user_id"
+
   timestamps!
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
@@ -134,6 +136,33 @@ class User
     self.admin? || self == model.user
   end
 
+  def groups(options = {})
+    groups_ids = memberships(:fields => "id" ).map do |member|
+      member.group_id
+    end
+
+    if groups_ids.empty?
+      page = MongoMapper::Pagination::PaginationProxy.new(0, 1, 25);
+      page.subject = []
+      return page
+    end
+
+    default_opts = {:conditions => {:_id => {:$in => spaces_ids}}}
+    Group.paginate(options.merge(default_opts))
+  end
+
+  def member_of?(group)
+    if group.kind_of?(Group)
+      group.is_member?(self)
+    else
+      false
+    end
+  end
+
+  def role_on(group)
+    memberships.find(:group_id => group.id).role
+  end
+
   def main_language
     @main_language ||= self.language.split("-").first
   end
@@ -159,6 +188,12 @@ class User
       self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
     end
+  end
+
+  def on_activity(activity, group)
+    self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => Time.now}},
+                                               :upsert => true)
+    self.update_reputation(activity, group)
   end
 
   def update_reputation(key, group)

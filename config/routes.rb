@@ -30,7 +30,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,
-                                     :logo => :get}
+                                     :logo => :get} do |groups|
+    groups.resources :group_members
+  end
 
   map.resources :votes
   map.resources :flags

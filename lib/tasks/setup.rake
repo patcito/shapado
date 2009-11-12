@@ -21,7 +21,12 @@ namespace :setup do
                               :legend => "question and answer website",
                               :categories => categories,
                               :state => "active")
+
     default_group.save!
+    if admin = User.find_by_login("admin")
+      default_group.owner = admin
+      default_group.add_member(admin, "owner")
+    end
     default_group.logo_data = RAILS_ROOT+"/public/images/logo.png"
     default_group.save
   end

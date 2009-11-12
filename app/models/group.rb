@@ -14,6 +14,11 @@ class Group
   key :owner_id, String
   belongs_to :owner, :class_name => "User"
 
+  has_many :memberships, :class_name => "GroupMember",
+                         :foreign_key => "group_id",
+                         :dependent => :destroy
+
+
   validates_length_of       :name,           :within => 3..40
   validates_length_of       :description,    :within => 3..400
   validates_length_of       :legend,         :maximum => 40
@@ -30,6 +35,35 @@ class Group
     self[:categories] = c
   end
   alias :user :owner
+
+  def members(opts={})
+    members_ids = memberships.paginate(opts.merge({:fields => "user_id"})).map do |member|
+      member.user_id
+    end
+
+    if members_ids.empty?
+      page = MongoMapper::Pagination::PaginationProxy.new(0, 1, 25);
+      page.subject = []
+      return page
+    end
+
+    default_opts = {:conditions => {:_id => {:$in => members_ids}}}
+    User.paginate(opts.merge(default_opts))
+  end
+
+  def is_member?(user)
+    if user.kind_of?(User)
+      !memberships.first(:user_id => user.id).nil?
+    else
+      false
+    end
+  end
+
+  def add_member(user, role)
+    GroupMember.new( :group_id => self.id,
+                     :user_id => user.id,
+                     :role => role).save
+  end
 
   def logo_data=(data)
     logo = self.logo
