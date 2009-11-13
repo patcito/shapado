@@ -5,20 +5,18 @@ class Admin::ModerateController < ApplicationController
   def index
     @subtab = params.fetch(:tab, "all")
 
+    options = {:order => "flags_count desc",
+                      :conditions => {"flags_count" => {:$gt => 0}},
+                      "banned" => false,
+                      :group_id => current_group.id}
     if @subtab == "all" || @subtab == "questions"
-      @questions = Question.paginate(:per_page => 25,
-                                     :order => "flags_count desc",
-                                     "flags_count.gt" => 0,
-                                     "banned" => false,
-                                     :page => params[:questions_page] || 1)
+      @questions = Question.paginate(options.merge({:per_page => params[:per_page] || 25,
+                                     :page => params[:questions_page] || 1}))
     end
 
     if @subtab == "all" || @subtab == "answers"
-      @answers = Answer.paginate(:per_page => 25,
-                                 :order => "flags_count desc",
-                                 "flags_count.gt" => 0,
-                                 "banned" => false,
-                                 :page => params[:answers_page] || 1 )
+      @answers = Answer.paginate(options.merge({:per_page => params[:per_page] || 25,
+                                     :page => params[:answers_page] || 1}))
     end
   end
 
