@@ -25,17 +25,17 @@ module Subdomains
   end
 
   protected
-  def subdomain_url(subdomain, params = {})
-    params = {:controller=>"welcome",:action=>"index"}.merge(params)
+  def subdomain_url(subdomain, options = {})
+    options = {:controller=>"/welcome",:action=>"index"}.merge(options)
     host = request.host.split("\.").last(2).join(".")
     request.protocol + "#{subdomain}." + host + request.port_string +
-                                          url_for({:only_path =>true}.merge(params))
+                                          url_for({:only_path =>true}.merge(options))
   end
 
-  def domain_url(params = {})
+  def domain_url(options = {})
     host = request.host.split("\.").last(2).join(".")
     request.protocol + "://#{host}" + request.port_string+
-                                          url_for({:only_path =>true}.merge(params))
+                                          url_for({:only_path =>true}.merge(options))
   end
 
   def tag_url(tag, use_ssl = request.ssl?)

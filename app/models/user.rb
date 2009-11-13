@@ -227,8 +227,10 @@ class User
   def localize(ip)
     l = Localize.country(ip)
     self.ip = ip
-    self.country_code = l[2]
-    self.country_name = l[4]
+    if l
+      self.country_code = l[2]
+      self.country_name = l[4]
+    end
     save
   end
 
