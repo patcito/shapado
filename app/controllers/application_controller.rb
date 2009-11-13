@@ -95,6 +95,7 @@ class ApplicationController < ActionController::Base
       locale = current_user.language
     elsif params[:lang] =~ /^(\w\w)/
       locale = find_valid_locale($1)
+      puts locale
     else
       if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
         locale = find_valid_locale($1)
@@ -108,6 +109,8 @@ class ApplicationController < ActionController::Base
     case lang
       when /^es/
         'es-AR'
+      when /^pt/
+        'pt-PT'
       when "fr"
         'fr'
       else
