@@ -60,9 +60,11 @@ class Group
   end
 
   def add_member(user, role)
-    Member.new( :group_id => self.id,
-                     :user_id => user.id,
-                     :role => role).save
+    member = Member.new( :group_id => self.id,
+                         :user_id => user.id,
+                         :role => role)
+    member.save
+    member
   end
 
   def logo_data=(data)

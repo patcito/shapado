@@ -1,0 +1,11 @@
+"es-AR":
+  activerecord:
+    attributes:
+      member:
+        role: Rol
+  members:
+    index:
+      title: "Miembros del group {{name}}"
+      manage_members_title: "Administrar membresías"
+    form:
+      login_tip: "busca cuando usted digita"

@@ -60,7 +60,7 @@ class User
   before_save :update_languages
   before_create :logged!
 
-  attr_accessor :password, :password_confirmation
+  attr_accessor :password, :password_confirmation, :roles
   before_validation :add_email_validation
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
@@ -160,7 +160,27 @@ class User
   end
 
   def role_on(group)
-    memberships.find(:group_id => group.id).role
+    @roles ||= {}
+
+    return @roles[group.id] if @roles[group.id]
+
+    if membership = Member.find(:first, :limit => 1, :group_id => group.id,
+                                :user_id => self.id)
+      return @roles[group.id] = membership.role
+    end
+    "none"
+  end
+
+  def owner_of?(group)
+    admin? || role_on(group) == "owner"
+  end
+
+  def mod_of?(group)
+    owner_on?(group) || role_on(group) == "moderator"
+  end
+
+  def user_of?(group)
+    mod_on?(group) || role_on(group) == "user"
   end
 
   def main_language

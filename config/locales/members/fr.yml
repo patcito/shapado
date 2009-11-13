@@ -1,0 +1,11 @@
+fr:
+  activerecord:
+    attributes:
+      member:
+        role: Role
+  members:
+    index:
+      title: "Members of {{name}}'s Group"
+      manage_members_title: Manage members
+    form:
+      login_tip: "search as you type"

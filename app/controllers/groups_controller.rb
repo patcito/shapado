@@ -55,10 +55,10 @@ class GroupsController < ApplicationController
     @group = Group.new
     @group.safe_update(%w[name description legend categories subdomain], params[:group])
     @group.owner = current_user
-    @group.add_member(current_user, "owner")
 
     respond_to do |format|
       if @group.save
+        @group.add_member(current_user, "owner")
         if data = params[:group][:logo_data]
           @group.logo_data = data
         end

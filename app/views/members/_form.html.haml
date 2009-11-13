@@ -1,0 +1,14 @@
+= f.error_messages
+.field-group
+  .label-container
+    = f.label :user_id, t(:login, :scope => "activerecord.attributes.user")
+  .field
+    = f.text_field :user_id, :value => @member.user.login, :class => "text-field"
+    .tip
+      = t(".login_tip")
+
+.field-group
+  .label-container
+    = f.label :role, t(:role, :scope => "activerecord.attributes.member")
+  .field
+    = f.select :role, Member::ROLES, :selected => @member.role
