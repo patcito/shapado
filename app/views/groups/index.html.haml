@@ -30,8 +30,8 @@
               = link_to t(".close"), close_group_path(group), :class => "cancel button"
           -if current_user.admin?
             = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
-          -if current_user.moderator? && group.state == "pending"
-            = link_to t(".accept_group"), accept_group_path(group), :class => "button"
+            -if group.state == "pending"
+              = link_to t(".accept_group"), accept_group_path(group), :class => "button"
       .clear
 =will_paginate @groups
 

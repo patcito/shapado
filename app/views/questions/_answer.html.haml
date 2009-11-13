@@ -65,6 +65,6 @@
             = link_to t(".pick_answer"), solve_question_path(current_category, @question, :answer_id => answer), :class =>"button"
           -if solution
             = link_to t(".unset_answer"),  unsolve_question_path(current_category, @question), :class =>"button"
-        -if current_user.moderator?
+        -if current_user.mod_of?(current_group)
           = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
   .clear

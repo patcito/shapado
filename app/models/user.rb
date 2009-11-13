@@ -8,7 +8,7 @@ class User
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
-  ROLES = %w[user moderator admin]
+  ROLES = %w[user admin]
 
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
@@ -127,10 +127,6 @@ class User
     self.role == "admin"
   end
 
-  def moderator?
-    admin? || self.role == "moderator"
-  end
-
   def can_modify?(model)
     return false unless model.respond_to?(:user)
     self.admin? || self == model.user
@@ -176,11 +172,11 @@ class User
   end
 
   def mod_of?(group)
-    owner_on?(group) || role_on(group) == "moderator"
+    owner_of?(group) || role_on(group) == "moderator"
   end
 
   def user_of?(group)
-    mod_on?(group) || role_on(group) == "user"
+    mod_of?(group) || role_on(group) == "user"
   end
 
   def main_language

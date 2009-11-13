@@ -125,7 +125,7 @@ class GroupsController < ApplicationController
 
     if @group.nil?
       redirect_to groups_path
-    elsif !current_user.can_modify?(@group)
+    elsif !current_user.owner_of?(@group)
       flash[:error] = t("global.permission_denied")
       redirect_to group_path(@group)
     end

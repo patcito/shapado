@@ -53,7 +53,7 @@
             %li.unanswered
               =link_to t(".unanswered"), unanswered_questions_path(:category => current_category)
             -if logged_in?
-              -if current_user.moderator?
+              -if current_user.mod_of?(current_group)
                 %li.moderate
                   =link_to t(".moderate"), moderate_path, :style => "background: #E55353; color: #fff"
             %li.ask_question

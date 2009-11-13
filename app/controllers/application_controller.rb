@@ -138,10 +138,8 @@ class ApplicationController < ActionController::Base
   end
 
   def moderator_required
-    unless current_user.moderator?
+    unless current_user.mod_of?(current_group)
       access_denied
-#       flash[:error] = t("global.permission_denied")
-#       redirect_to root_path
     end
   end
 end
