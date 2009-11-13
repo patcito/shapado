@@ -47,10 +47,30 @@ class QuestionsController < ApplicationController
 
   def unanswered
     set_page_title(t("questions.unanswered.title"))
-    @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1}.
-                                   merge(scoped_conditions({:answered => false})))
+    @active_subtab = params.fetch(:sort, "newest")
+    case @active_subtab
+      when "newest"
+        order = "activity_at desc"
+      when "votes"
+        order = "votes_count desc"
+    end
+
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
                     merge(language_conditions.merge(categories_conditions)), 25)
+
+    if @active_subtab != "mytags"
+      @questions = Question.paginate({:order => order,
+                                      :per_page => 25,
+                                      :page => params[:page] || 1
+                                     }.merge(scoped_conditions({:answered => false})))
+    else
+      conditions = scoped_conditions({:answered => false,
+                                      :tags => {:$in => current_user.preferred_tags_on(current_group)}})
+      @questions = Question.paginate({
+                                      :per_page => 25,
+                                      :page => params[:page] || 1
+                                     }.merge(conditions))
+    end
     render
   end
 

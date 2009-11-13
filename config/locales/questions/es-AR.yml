@@ -33,7 +33,9 @@
       title: Editar pregunta
     unanswered:
       title: Preguntas no contestadas
+      tags: etiquetas sin respuesta
       empty: "Este grupo no tiene preguntas no contestadas."
+      my_tags: mis etiquetas
     new:
       title: Pregunte
     create:

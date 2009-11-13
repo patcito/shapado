@@ -33,7 +33,9 @@ fr:
       title: Éditer la question
     unanswered:
       title: Sans Réponses
+      tags: Unanswered Tags
       empty: "Ce groupe n'a aucune question sans réponses"
+      my_tags: "my tags"
     new:
       title: Poser une question
     create:

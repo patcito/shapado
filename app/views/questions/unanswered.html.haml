@@ -7,18 +7,22 @@
 #questions_index.subtitle{:class => @active_subtab}
   = t(".title")
   .right.tabs
+    .tab.mytags
+      = link_to t(".my_tags"), unanswered_questions_path(:sort=>"mytags")
     .tab.newest
-      = link_to t(".newest", :default => :"questions.index.newest"), questions_path(:sort=>"newest")
+      = link_to t(".newest", :default => :"questions.index.newest"), unanswered_questions_path(:sort=>"newest")
     .tab.votes
-      = link_to t(".votes", :default => :"questions.index.votes"), questions_path(:sort=>"votes")
+      = link_to t(".votes", :default => :"questions.index.votes"), unanswered_questions_path(:sort=>"votes")
 
 %br.clear
 
 #questions
-  .box.highlight
-    = t(".empty", :default => :"questions.index.empty")
-  -@questions.each do |question|
-    = render :partial => "question", :object => question
+  -if @questions.empty?
+    .box.highlight
+      = t(".empty", :default => :"questions.index.empty")
+  -else
+    -@questions.each do |question|
+      = render :partial => "question", :object => question
 
 =will_paginate @questions
 
