@@ -2,7 +2,7 @@
   users:
     index:
       title: Todos os utilizadores
-      empty: "this group doesn't have any members, participate to join this group."
+      empty: "Este grupo não tem nenhum membro, participa para te juntares a este grupo."
     new:
       title: Registar-se como novo utlizador
       submit: Registar
@@ -25,7 +25,7 @@
     attributes:
       user:
         login: Nome de Utilizador
-        email: Email
+        email: Endereço de E-mail
         name: Nome real
         current_password: Palavra-passe actual
         password: Palavra-passe

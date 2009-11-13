@@ -8,7 +8,7 @@
       newest:  mais recentes
       oldest:  mais antigas
       ask_question: fazer pergunta
-      empty: "No one has asked any questions yet, be the first!"
+      empty: "Ainda ninguém fez nenhuma pergunta, seja o primeiro!"
     show:
       answers: Respostas
       another_answers: Outras respostas
