@@ -1,6 +1,5 @@
 .tags-list
-  %ul
-    -current_tags.each do |tag|
-      %li{:style => "line-height: 14px;"}
-        %span.tag
-          =link_to h(tag), questions_path(:category => current_category, :tags => tag)
+  -current_tags.each do |tag|
+    %span.tag
+      = link_to h(tag), url_for(:category => current_category, :tags => tag)
+      = link_to "x", url_for(:category => current_category, :tags => (current_tags - tag.to_a).join("+")), :class => "remove_tag"
