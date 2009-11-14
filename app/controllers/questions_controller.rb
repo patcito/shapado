@@ -35,8 +35,7 @@ class QuestionsController < ApplicationController
       add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>@langs_conds),
                     "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
-    @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
-                    merge(language_conditions.merge(categories_conditions)), 25)
+    @tag_cloud = Question.tag_cloud(scoped_conditions, 25)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -64,8 +63,10 @@ class QuestionsController < ApplicationController
                                       :page => params[:page] || 1
                                      }.merge(scoped_conditions({:answered => false})))
     else
-      conditions = scoped_conditions({:answered => false,
-                                      :tags => {:$in => current_user.preferred_tags_on(current_group)}})
+      login_required
+      @current_tags = current_user.preferred_tags_on(current_group)
+
+      conditions = scoped_conditions({:answered => false})
       @questions = Question.paginate({
                                       :per_page => 25,
                                       :page => params[:page] || 1

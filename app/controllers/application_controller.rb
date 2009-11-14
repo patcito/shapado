@@ -43,6 +43,17 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_category
 
+  def current_tags
+    if params[:tags].kind_of?(String)
+      @current_tags ||= params[:tags].split("+")
+    elsif params[:tags].kind_of?(Array)
+      @current_tags ||= params[:tags]
+    else
+      @current_tags || []
+    end
+  end
+  helper_method :current_tags
+
   def find_conditions
     @languages ||= begin
       subdomains = request.subdomains
@@ -52,9 +63,8 @@ class ApplicationController < ActionController::Base
   end
 
   def scoped_conditions(conditions = {})
-    if tags = params[:tags]
-      tags = [params[:tags]] if !tags.kind_of? Array
-      conditions.deep_merge!({:tags => {:$in => tags}})
+    unless current_tags.empty?
+      conditions.deep_merge!({:tags => {:$all => current_tags}})
     end
     conditions.deep_merge!({:group_id => current_group.id})
     conditions.deep_merge!(language_conditions)

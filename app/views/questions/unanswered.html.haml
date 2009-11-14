@@ -7,8 +7,9 @@
 #questions_index.subtitle{:class => @active_subtab}
   = t(".title")
   .right.tabs
-    .tab.mytags
-      = link_to t(".my_tags"), unanswered_questions_path(:sort=>"mytags")
+    -if logged_in?
+      .tab.mytags
+        = link_to t(".my_tags"), unanswered_questions_path(:sort=>"mytags")
     .tab.newest
       = link_to t(".newest", :default => :"questions.index.newest"), unanswered_questions_path(:sort=>"newest")
     .tab.votes

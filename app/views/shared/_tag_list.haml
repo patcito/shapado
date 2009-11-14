@@ -1,11 +1,12 @@
 .tags-list
-  -tag_list.each do |tag|
-    %ul
-      %li{:style => "line-height: 14px"}
-        %span.tag
-          =link_to h(tag["name"]), questions_path(:category => current_category, :tags => tag["name"])
-        %span{:style => "padding-left: 4px; clear:both"}
-          %b
-            x
-            = h(tag["count"])
-        .clear
+  -(tag_list).each do |tag|
+    -unless current_tags.include? tag["name"]
+      %ul
+        %li{:style => "line-height: 14px"}
+          %span.tag
+            =link_to h(tag["name"]), url_for(:category => current_category, :tags => (current_tags + tag["name"].to_a).join("+"))
+          %span{:style => "padding-left: 4px; clear:both"}
+            %b
+              x
+              = h(tag["count"])
+          .clear

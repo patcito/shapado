@@ -1,0 +1,6 @@
+.tags-list
+  %ul
+    -current_tags.each do |tag|
+      %li{:style => "line-height: 14px;"}
+        %span.tag
+          =link_to h(tag), questions_path(:category => current_category, :tags => tag)

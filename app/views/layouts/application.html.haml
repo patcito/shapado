@@ -76,8 +76,15 @@
                     = number_with_delimiter(@questions.total_entries)
                   -else
                     = number_with_delimiter(@questions.size)
-                %p
-                  = t ".questions"
+
+                -if current_tags.empty?
+                  %p
+                    = t ".questions"
+                -else
+                  %p
+                    = t ".questions_tagged"
+                  = render :partial => "shared/current_tags", :object => current_tags
+
               = yield :sidebar
               = render :partial => "shared/adbard"
 
