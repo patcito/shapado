@@ -3,10 +3,23 @@ class UsersController < ApplicationController
   tabs :default => :users
   def index
     set_page_title(t("users.index.title"))
-    @users = User.paginate(:per_page => params[:per_page]||24,
-                           :order => "reputation.#{current_group.id} desc",
-                           :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
-                           :page => params[:page] || 1)
+    if params[:q]
+      @users = User.paginate(:fields=> 'login',:per_page => params[:per_page]||24,
+                            :login =>  /^#{params[:q].to_s}.*/,
+                            :order => "reputation.#{current_group.id} desc",
+                            :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
+                            :page => params[:page] || 1)
+    else
+      @users = User.paginate(:per_page => params[:per_page]||24,
+                            :order => "reputation.#{current_group.id} desc",
+                            :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
+                            :page => params[:page] || 1)
+    end
+      respond_to do |format|
+      format.html
+      format.json {render :json=>@users}
+    end
+
   end
 
   # render new.rhtml
