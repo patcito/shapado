@@ -1,0 +1,6 @@
+-form_tag comments_path, :class => "form" do
+  = hidden_field_tag "commentable_type", commentable.class.name
+  = hidden_field_tag "commentable_id", commentable.id
+  = hidden_field_tag "source", source
+  = text_area_tag "body", "", :class => "text-area huge"
+  = submit_tag t("scaffold.create")

@@ -47,6 +47,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :members
 
+  map.resources :comments
   map.resources :votes
   map.resources :flags
 

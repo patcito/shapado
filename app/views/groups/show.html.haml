@@ -33,3 +33,11 @@
         = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true), :class => "button"
       -if current_user.can_modify?(@group) && @group.state == "active"
         = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
+
+%h3 Comments
+#comments
+  -@comments.each do |comment|
+    = render :partial => "comments/comment", :object => comment
+  = will_paginate @comments
+  = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
+

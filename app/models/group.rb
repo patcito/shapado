@@ -36,6 +36,8 @@ class Group
   has_many :answers, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
+  has_many :comments, :as => "commentable", :dependent => :destroy
+
   validates_length_of       :name,           :within => 3..40
   validates_length_of       :description,    :within => 3..400
   validates_length_of       :legend,         :maximum => 40
