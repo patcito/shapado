@@ -117,7 +117,7 @@ protected
   end
 
   def successful_login(new_user = false)
-    new_cookie_flag = (params[:remember_me] == "1")
+    new_cookie_flag = true
     handle_remember_cookie! new_cookie_flag
 
     if new_user
