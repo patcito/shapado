@@ -17,6 +17,7 @@ en:
       flags: reported as
       flag: flag
       viewed: viewed
+      to_answer_question: to answer this question
     answer:
       pick_answer: Pick as solution
       unset_answer: Unset as solution?

@@ -17,6 +17,7 @@
       flags: reportado como
       flag: reportar
       viewed: visto
+      to_answer_question: to answer this question
     answer:
       pick_answer: Escolher como solução
       unset_answer: Retirar como solução?
@@ -64,3 +65,4 @@
         votes: Votos
         language: Idioma
         category: Categoria
+

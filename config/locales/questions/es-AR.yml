@@ -17,6 +17,7 @@
       flags: Reportado como
       flag: "Reportar abuso"
       viewed: Visto
+      to_answer_question: para responder esta pregunta
     answer:
       pick_answer: Escoger como solución
       unset_answer: "¿Quitar como solución?"

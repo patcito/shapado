@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def access_denied
+    store_location
     raise AccessDenied
   end
 

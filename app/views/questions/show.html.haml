@@ -81,11 +81,17 @@
   =will_paginate(@answers)
 
 %hr
--unless @question.answered
-  -form_for @answer, :url => question_answers_path(current_category, @question.id, @answer.id), :html => {:class => "form mainAnswerForm"} do |f|
-    = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
-    = submit_tag t('answers.form.submit')
-  %hr
+
+
+-if logged_in?
+  -unless @question.answered
+    -form_for @answer, :url => question_answers_path(current_category, @question.id, @answer.id), :html => {:class => "form mainAnswerForm"} do |f|
+      = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
+      = submit_tag t('answers.form.submit')
+    %hr
+-else
+  .box.highlight{:style => "text-align: center"}
+    == #{link_to t("global.please_login"), login_path} #{t(".to_answer_question")}.
 
 -content_for :sidebar do
   %h3

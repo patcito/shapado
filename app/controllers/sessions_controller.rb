@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
 
   # render new.rhtml
   def new
+    session[:return_to] = request.referrer if !request.referrer.blank?
   end
 
   def create
