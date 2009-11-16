@@ -136,9 +136,17 @@ class ApplicationController < ActionController::Base
 
   def page_title
     if @page_title
-      "#{@page_title} - #{AppConfig.application_name}: #{t("layouts.application.title")}"
+      if current_group.name == AppConfig.application_name
+        "#{@page_title} - #{AppConfig.application_name}: #{t("layouts.application.title")}"
+      else
+        "#{@page_title} - #{current_group.name}@#{AppConfig.application_name}: #{current_group.legend}"
+      end
     else
-      "#{AppConfig.application_name} - #{t("layouts.application.title")}"
+      if current_group.name == AppConfig.application_name
+        "#{AppConfig.application_name} - #{t("layouts.application.title")}"
+      else
+        "#{current_group.name}@#{AppConfig.application_name} - #{current_group.legend}"
+      end
     end
   end
   helper_method :page_title
