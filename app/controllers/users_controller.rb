@@ -3,21 +3,13 @@ class UsersController < ApplicationController
   tabs :default => :users
   def index
     set_page_title(t("users.index.title"))
-    if params[:q]
-      @users = User.paginate(:fields=> 'login',:per_page => params[:per_page]||24,
-                            :login =>  /^#{params[:q].to_s}.*/,
-                            :order => "reputation.#{current_group.id} desc",
-                            :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
-                            :page => params[:page] || 1)
-    else
-      @users = User.paginate(:per_page => params[:per_page]||24,
-                            :order => "reputation.#{current_group.id} desc",
-                            :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
-                            :page => params[:page] || 1)
-    end
-      respond_to do |format|
+    @users = User.paginate(:per_page => params[:per_page]||24,
+                          :order => "reputation.#{current_group.id} desc",
+                          :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
+                          :page => params[:page] || 1)
+
+    respond_to do |format|
       format.html
-      format.json {render :json=>@users}
     end
 
   end
@@ -98,6 +90,16 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html {redirect_to questions_path(current_category)}
+    end
+  end
+
+  def autocomplete_for_user_login
+    @users = User.find(:all, :limit => params[:limit] || 20,
+                             :fields=> 'login',
+                             :login =>  /^#{params[:prefix].downcase.to_s}.*/,
+                             :order => "login desc")
+    respond_to do |format|
+      format.json {render :json=>@users}
     end
   end
 end
