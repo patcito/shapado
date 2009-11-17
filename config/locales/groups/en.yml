@@ -3,8 +3,8 @@ en:
     manage: "manage..."
     index:
       title: Groups
-      actives: actives
-      pendings: pendings
+      actives: active
+      pendings: pending
       about: About
       close: Close
       accept_group: Accept this group
