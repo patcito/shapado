@@ -1,6 +1,6 @@
 class Answer
   include MongoMapper::Document
-  include MongoMapper::Search
+  include MongoMapperExt::Filter
 
   key :body, String, :required => true
   key :language, String, :default => "en"
@@ -31,7 +31,7 @@ class Answer
   validates_presence_of :question_id, :if => lambda { |e| e.parent_id.blank? }
   validates_presence_of :parent_id, :if => lambda { |e| e.question_id.blank? }
 
-  searchable_keys :body
+  filterable_keys :body
 
   validate :disallow_spam
   validate :check_unique_answer

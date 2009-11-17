@@ -1,6 +1,6 @@
 class Question
   include MongoMapper::Document
-  include MongoMapper::Search
+  include MongoMapperExt::Filter
 
   ensure_index :slug
   ensure_index :tags
@@ -44,7 +44,7 @@ class Question
   validates_length_of       :title,    :within => 6..100
   validates_length_of       :body,     :minimum => 6
   validates_true_for :tags, :logic => lambda { !tags.empty? }
-  searchable_keys :title, :body
+  filterable_keys :title, :body
 
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language

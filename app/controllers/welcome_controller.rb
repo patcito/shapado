@@ -23,8 +23,8 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    @questions = Question.search(params[:q], :per_page => 25, :page => params[:page] || 1)
-    @answers = Answer.search(params[:q], :per_page => 25, :page => params[:page] || 1)
+    @questions = Question.filter(params[:q], :per_page => 25, :page => params[:page] || 1)
+    @answers = Answer.filter(params[:q], :per_page => 25, :page => params[:page] || 1)
   end
 
   def feedback

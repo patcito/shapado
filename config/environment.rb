@@ -25,8 +25,7 @@ Rails::Initializer.run do |config|
   config.gem "compass", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "compass-960-plugin", :lib => "ninesixty", :source => "http://gemcutter.org"
   config.gem "ruby-stemmer", :version => "0.5.3", :lib => "lingua/stemmer"
-  config.gem "mm-search", :lib => "mm-search", :source => "http://gemcutter.org"
-  config.gem "mm-files", :lib => "mm-files", :source => "http://gemcutter.org"
+  config.gem "mongomapper_ext", :source => "http://gemcutter.org"
   config.gem "geoip"
   config.gem "uuidtools", :version => "2.1.1"
   # Only load the plugins named here, in the order given (default is alphabetical).
