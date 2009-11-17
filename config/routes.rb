@@ -10,7 +10,8 @@ ActionController::Routing::Routes.draw do |map|
   map.send_feedback '/send_feedback', :controller => 'welcome', :action => 'send_feedback'
   map.settings '/settings', :controller => 'users', :action => 'edit'
 
-  map.resources :users, :member => { :change_preferred_tags => :any }
+  map.resources :users, :member => { :change_preferred_tags => :any},
+                        :collection => {:autocomplete_for_user_login => :get}
   map.resource :session
 
   map.resources :questions, :path_prefix => '/:category',
