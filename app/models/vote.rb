@@ -3,10 +3,10 @@ class Vote
 
   key :value, Integer, :required => true
 
-  key :user_id, String
+  key :user_id, ObjectId
   belongs_to :user
 
-  key :voteable_id, String
+  key :voteable_id, ObjectId
   key :voteable_type, String
   belongs_to :voteable, :polymorphic => true
 

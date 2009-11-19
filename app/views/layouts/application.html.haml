@@ -72,10 +72,7 @@
             .internal
               -if @questions
                 .questions_count
-                  -if @questions.respond_to?(:total_entries)
-                    = number_with_delimiter(@questions.total_entries)
-                  -else
-                    = number_with_delimiter(@questions.size)
+                  = number_with_delimiter(@questions.total_entries)
 
                 -if current_tags.empty?
                   %p

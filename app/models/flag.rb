@@ -3,10 +3,10 @@ class Flag
   TYPES = ["spam", "offensive", "attention"]
   key :type, String, :required => true
 
-  key :user_id, String
+  key :user_id, ObjectId
   belongs_to :user
 
-  key :flaggeable_id, String
+  key :flaggeable_id, ObjectId
   key :flaggeable_type, String
   belongs_to :flaggeable, :polymorphic => true
 

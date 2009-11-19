@@ -11,7 +11,7 @@ class Group
 
   key :state, String, :default => "pending" #pending, active, closed
 
-  key :owner_id, String
+  key :owner_id, ObjectId
   belongs_to :owner, :class_name => "User"
 
   has_many :memberships, :class_name => "Member",
@@ -60,8 +60,8 @@ class Group
   end
 
   def add_member(user, role)
-    member = Member.new( :group_id => self.id,
-                         :user_id => user.id,
+    member = Member.new( :group_id => self._id,
+                         :user_id => user._id,
                          :role => role)
     member.save
     member
@@ -84,7 +84,7 @@ class Group
   end
 
   def logo
-    @logo ||= (Logo.find(:first, :group_id => self.id) || Logo.new)
+    @logo ||= (Logo.find(:first, :group_id => self._id) || Logo.new)
   end
 
 end

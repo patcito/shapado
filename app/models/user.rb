@@ -99,7 +99,7 @@ class User
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-    self.collection.update({:_id => self.id}, {:$set => {"preferred_tags.#{group.id}" => t}},
+    self.collection.update({:_id => self._id}, {:$set => {"preferred_tags.#{group.id}" => t}},
                            :upsert => true)
   end
 
@@ -108,7 +108,7 @@ class User
       t = t.split(",").join(" ").split(" ")
     end
     if preferred_tags[group.id]
-      self.collection.update({:_id => self.id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
+      self.collection.update({:_id => self._id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
                              :upsert => true, :safe => true)
     else
       set_preferred_tags(t, group)
@@ -119,7 +119,7 @@ class User
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-    self.collection.update({:_id => self.id}, {:$pullAll => {"preferred_tags.#{group.id}" => t}},
+    self.collection.update({:_id => self._id}, {:$pullAll => {"preferred_tags.#{group.id}" => t}},
                            :upsert => true)
   end
 
@@ -188,12 +188,15 @@ class User
   end
 
   def has_voted?(voteable)
-    vote = Vote.find(:first, {:limit => 1,
-                              :voteable_type => voteable.class.to_s,
-                              :voteable_id => voteable.id,
-                              :user_id     => self.id
-                             })
-    !vote.nil?
+    !vote_on(voteable).nil?
+  end
+
+  def vote_on(voteable)
+    Vote.find(:first, {:limit => 1,
+                          :voteable_type => voteable.class.to_s,
+                          :voteable_id => voteable._id,
+                          :user_id     => self._id
+                         })
   end
 
   def logged!
@@ -201,13 +204,13 @@ class User
     if new?
       self.last_logged_at = now
     else
-      self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => now}},
+      self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
     end
   end
 
   def on_activity(activity, group)
-    self.collection.update({:_id => self.id}, {:$set => {:last_logged_at => Time.now}},
+    self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
                                                :upsert => true)
     self.update_reputation(activity, group)
   end
@@ -217,7 +220,7 @@ class User
     Rails.logger.info "#{self.login} receive #{value} points of karma by #{key} on #{group.name}"
     value = key if value.nil? && key.kind_of?(Integer)
     if value
-      User.collection.update({:_id => self.id},
+      User.collection.update({:_id => self._id},
                              {:$inc => {"reputation.#{group.id}" => value}},
                              :upsert => true,
                              :safe => true)

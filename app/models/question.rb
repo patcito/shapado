@@ -27,13 +27,13 @@ class Question
 
   key :activity_at, Time
 
-  key :user_id, String
+  key :user_id, ObjectId
   belongs_to :user
 
-  key :answer_id, String
+  key :answer_id, ObjectId
   belongs_to :answer
 
-  key :group_id, String
+  key :group_id, ObjectId
   belongs_to :group
 
   has_many :answers, :dependent => :destroy
@@ -80,30 +80,30 @@ class Question
   end
 
   def viewed!
-    self.collection.update({:_id => self.id}, {:$inc => {:views_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:views_count => 1}},
                                               :upsert => true)
   end
 
   def answer_added!
-    self.collection.update({:_id => self.id}, {:$inc => {:answers_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:answers_count => 1}},
                                               :upsert => true)
     on_activity
   end
 
   def answer_removed!
-    self.collection.update({:_id => self.id}, {:$inc => {:answers_count => -1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:answers_count => -1}},
                                                :upsert => true)
   end
 
   def flagged!
-    self.collection.update({:_id => self.id}, {:$inc => {:flags_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:flags_count => 1}},
                                                :upsert => true)
   end
 
   def add_vote!(v, voter)
-    self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1}},
                                                          :upsert => true)
-    self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => v}},
                                                          :upsert => true)
     if v > 0
       self.user.update_reputation(:question_receives_up_vote, self.group)
@@ -117,7 +117,7 @@ class Question
 
   def on_activity
     update_activity_at
-    self.collection.update({:_id => self.id}, {:$inc => {:hotness => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},
                                                          :upsert => true)
   end
 
@@ -126,21 +126,22 @@ class Question
     if new?
       self.activity_at = now
     else
-      self.collection.update({:_id => self.id}, {:$set => {:activity_at => now}},
+      self.collection.update({:_id => self._id}, {:$set => {:activity_at => now}},
                                                  :upsert => true)
     end
   end
 
   def ban
-    self.collection.update({:_id => self.id}, {:$set => {:banned => true}},
+    self.collection.update({:_id => self._id}, {:$set => {:banned => true}},
                                                :upsert => true)
   end
 
   def self.ban(ids)
-    ids.each do |id|
-      self.collection.update({:_id => id}, {:$set => {:banned => true}},
-                                                       :upsert => true)
-    end
+    ids = ids.map do |id| Mongo::ObjectID.from_string(id) end
+
+    self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
+                                                     :multi => true,
+                                                     :upsert => true)
   end
 
   protected

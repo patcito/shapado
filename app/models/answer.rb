@@ -11,19 +11,21 @@ class Answer
 
   timestamps!
 
-  key :user_id, String
+  key :user_id, ObjectId
   belongs_to :user
 
-  key :group_id, String
+  key :question_id, ObjectId
+  belongs_to :question
+
+  key :group_id, ObjectId
   belongs_to :group
 
-  key :parent_id, String
+  key :parent_id, ObjectId
   belongs_to :parent, :class_name => "Answer"
 
   has_many :children, :foreign_key => "parent_id", :class_name => "Answer", :dependent => :destroy
 
-  key :question_id, String
-  belongs_to :question
+
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 
@@ -44,13 +46,14 @@ class Answer
 
     if !check_answer.nil? && check_answer.id != self.id
       self.errors.add(:limitation, "Your can only post one answer by question.")
+      return false
     end
   end
 
   def add_vote!(v, voter)
-    self.collection.update({:_id => self.id}, {:$inc => {:votes_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1}},
                                                          :upsert => true)
-    self.collection.update({:_id => self.id}, {:$inc => {:votes_average => v}},
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => v}},
                                                          :upsert => true)
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
@@ -62,21 +65,22 @@ class Answer
   end
 
   def flagged!
-    self.collection.update({:_id => self.id}, {:$inc => {:flags_count => 1}},
+    self.collection.update({:_id => self._id}, {:$inc => {:flags_count => 1}},
                                                :upsert => true)
   end
 
 
   def ban
-    self.collection.update({:_id => self.id}, {:$set => {:banned => true}},
+    self.collection.update({:_id => self._id}, {:$set => {:banned => true}},
                                                :upsert => true)
   end
 
   def self.ban(ids)
-    ids.each do |id|
-      self.collection.update({:_id => id}, {:$set => {:banned => true}},
-                                                       :upsert => true)
-    end
+    ids = ids.map do |id| Mongo::ObjectID.from_string(id) end
+
+    self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
+                                                     :multi => true,
+                                                     :upsert => true)
   end
 
   def comment?
@@ -95,12 +99,12 @@ class Answer
                                     })
 
     last_answer  = Answer.find(:first, :limit => 1,
-                                       :user_id => self.id,
-                                       :question_id => question.id,
+                                       :user_id => self._id,
+                                       :question_id => self.question_id,
                                        :group_id => self.group_id,
                                        :order => "created_at desc")
 
-    valid = (eq_answer.nil? || eq_answer.id == self.id) &&
+    valid = (eq_answer.nil? || eq_answer.id == self.id) #&&
             ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
     if !valid
       self.errors.add(:body, "Your answer looks like spam.")
