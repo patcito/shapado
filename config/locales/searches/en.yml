@@ -1,0 +1,4 @@
+en:
+  searches:
+    index:
+      empty: "Your search did not match any questions."

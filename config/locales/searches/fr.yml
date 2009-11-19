@@ -1,0 +1,4 @@
+fr:
+  searches:
+    index:
+      empty: "Aucune question ne correspond aux termes de recherche spécifiés."
