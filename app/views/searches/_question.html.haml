@@ -2,8 +2,6 @@
 -if logged_in? && question.tags.detect { |tag| current_user.preferred_tags_on(current_group).include?(tag) }
   - klass = "highlight"
 
--query_regexp = local_assigns[:query_regexp]
-
 .question{:class => klass}
   -if logged_in? && current_user.can_modify?(question)
     .right.buttons
@@ -29,19 +27,9 @@
     .question_header
       .gravatar.item
         = gravatar(question.user.email.to_s, :size => 48)
-      -title = h(question.title)
-      -if query_regexp
-        -title = title.gsub(query_regexp, '<span class="search-highlight">\1</span>')
-      = link_to title, question_path(current_category, question), :title => truncate(question.body, :length => 200)
+      = link_to h(question.title), question_path(current_category, question), :title => truncate(question.body, :length => 200)
       .question_summary
-        -if query_regexp
-          -body = excerpt_with_regexp(h(question.body), query_regexp, :radius => 50)
-          -if body
-            = body.gsub(query_regexp, '<span class="search-highlight">\1</span>')
-          -else
-            = truncate(h(question.body), :length => 150)
-        -else
-          = truncate(h(question.body), :length => 150)
+        = truncate(question.body, :length => 150)
 
     .tags-list.left
       -question.tags.each do |tag|
@@ -49,7 +37,7 @@
           = link_to h(tag), questions_path(current_category, :tags => tag)
     .right
       = t(:asked_by, :scope => "activerecord.attributes.question")
-      = link_to h(question.user.login|| question.user_id), user_path(question.user)
+      = link_to h(question.user.login), user_path(question.user)
       %b
         = t("time.ago", :time => time_ago_in_words(question.created_at))
   .clear

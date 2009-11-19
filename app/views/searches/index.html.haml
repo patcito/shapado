@@ -1,0 +1,12 @@
+#search.subtitle
+  = t(".title", :default => "Search result")
+
+#questions
+  -if @questions.empty?
+    .box.highlight
+      = t(".empty")
+  -else
+    -@questions.each do |question|
+      = render :partial => "questions/question", :object => question, :locals => {:query_regexp => @query_regexp}
+
+= will_paginate @questions

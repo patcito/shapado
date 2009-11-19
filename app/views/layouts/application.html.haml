@@ -72,7 +72,7 @@
             .internal
               -if @questions
                 .questions_count
-                  -if @question.respond_to?(:total_entries)
+                  -if @questions.respond_to?(:total_entries)
                     = number_with_delimiter(@questions.total_entries)
                   -else
                     = number_with_delimiter(@questions.size)
