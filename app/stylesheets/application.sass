@@ -4,6 +4,7 @@
 @import users_index
 @import pagination
 @import css3
+@import navigation
 @import compass/utilities/tables/scaffolding
 @import compass/utilities/general/tag_cloud.sass
 @import compass/utilities/lists/horizontal_list.sass
@@ -21,12 +22,19 @@ body
 a, strong, b
   line-height: 17px
 
-a:link, a:visited
-  font-weight: bold
-  color: #669933
+a
+  text-decoration: none
+  &:link
+    font-weight: bold
+    color: #6A6
 
-a:hover, a:active
-  color: #96a51e
+  &:visited
+    font-weight: bold
+    color: #88B540
+
+  &:hover, &:active
+    color: #88B540
+    text-decoration: underline
 
 .horizontal_list
   +horizontal-list(10px)
@@ -67,9 +75,6 @@ img.group_logo
   line-height: 32px
   padding: 5px
   width: 100%
-
-  a
-    text-decoration: none
 
   #user-actions
     em.label
@@ -165,20 +170,9 @@ x
 #wrapper
   background: #fff url("/images/bg.png") top center repeat-x
 
-
-.home #wrapper
-  padding-top: 20px
-
-
-.tour #wrapper
-  background: #000
-
-
 #header
   margin: 0 10px
   position: relative
-
-
 
 img.gravatar
   vertical-align: middle
@@ -212,17 +206,6 @@ h3
     padding: 9px 0 10px 0
     text-transform: uppercase
 
-
-.blog_post .copy h4
-  border-top: 1px solid #eee
-  clear: both
-  color: #888
-  font-size: .75em
-  margin: 0 0 20px 0
-  padding: 9px 0 10px 0
-  text-transform: uppercase
-
-
 h4
   color: #3f5c26
   font-size: 1em
@@ -235,7 +218,6 @@ h4
     margin: 0 0 20px 0
     padding: 9px 0 10px 0
     text-transform: uppercase
-
 
 h5
   color: #3f5c26
@@ -317,18 +299,6 @@ cite
   margin-left: 20px
 
 
-.download
-  background: transparent url("/images/icons/download_16x16.png") left center no-repeat
-  padding-left: 20px
-
-
-a.download
-  &:hover, &:active
-    background-image: url("/images/icons/download_16x16.png")
-    background-position: left center
-    background-repeat: no-repeat
-
-
 .info
   background-color: #ecf8fa
 
@@ -365,51 +335,6 @@ a.download
       margin-bottom: 0
       padding: 0
 
-
-#post_form .fieldWithErrors
-  input, textarea
-    border-color: #fbc2c4
-
-
-#contact_form .fieldWithErrors
-  input, textarea
-    border-color: #fbc2c4
-
-  #runner
-    border-top: 1px solid #444
-    clear: both
-    color: #444
-    margin-top: 20px
-    padding-top: 19px
-
-    .sitemap_primary, .sitemap_secondary, p
-      text-align: right
-
-    .sitemap_primary li, .sitemap_secondary li
-      display: inline
-      margin-left: 20px
-
-    .sitemap_primary li a
-      font-weight: normal
-
-    #watermark
-      padding: 7px 0
-
-    .omega
-      float: right
-
-    #watermark img
-      display: block
-
-  #pitch a
-    &:link, &:visited
-      color: #666
-      font-weight: normal
-
-    &:hover, &:active
-      color: #fff
-
-
 blockquote
   cite
     margin-bottom: 20px
@@ -418,50 +343,6 @@ blockquote
     color: #b4b4b4
     font-style: normal
     font-weight: normal
-
-#navigation
-  #menu_primary
-    ul
-      list-style-type: none
-      overflow: hidden
-      margin: 0px
-      li
-        float: left
-        margin-right: 10px
-        margin-left: 0px
-        a
-          border-top: 1px solid #d4d4d4
-          border-left: 1px solid #d4d4d4
-          border-right: 1px solid #d4d4d4
-          display: block
-          font-size: .75em
-          padding: 6px 20px
-          text-align: center
-          background: #FFF
-          color: #999
-          text-transform: uppercase
-          text-decoration: none
-        a:hover, a:focus, a:active
-          color: #828282
-          outline: none
-        &.ask_question
-          float: right
-          a
-            background: #004181
-            color: #dedede
-
-=active_tab
-  background-color: #ddd
-  color: #000
-
-
-#navigation.questions #menu_primary ul li.selected a,
-#navigation.questions #menu_primary ul li.questions a,
-#navigation.ask_question #menu_primary ul li.ask_question a,
-#navigation.tags #menu_primary ul li.tags a,
-#navigation.unanswered #menu_primary ul li.unanswered a,
-#navigation.users #menu_primary ul li.users a
-  +active_tab
 
 .subtitle
   color: #000
@@ -486,33 +367,7 @@ blockquote
         color: #121314
         outline: none
 
-=active_subtab
-  color: #121314
-  background-color: #fff
-  border-bottom: 1px solid #fff
 
-.subtitle#welcome.active .tabs .tab.active a,
-.subtitle#welcome.hot .tabs .tab.hot a,
-.subtitle#questions_index.active .tabs .tab.active a,
-.subtitle#questions_index.newest .tabs .tab.newest a,
-.subtitle#questions_index.hot .tabs .tab.hot a,
-.subtitle#questions_index.votes .tabs .tab.votes a,
-.subtitle#questions_index.mytags .tabs .tab.mytags a,
-
-.subtitle#question_answers.newest .tabs .tab.newest a,
-.subtitle#question_answers.oldest .tabs .tab.oldest a,
-.subtitle#question_answers.votes .tabs .tab.votes a,
-
-.subtitle#moderate.all .tabs .tab.all a,
-.subtitle#moderate.questions .tabs .tab.questions a,
-.subtitle#moderate.answers .tabs .tab.answers a,
-
-.subtitle#groups.active .tabs .tab.active a,
-.subtitle#groups.pending .tabs .tab.pending a,
-
-.subtitle#show_groups.about .tabs .tab.about a,
-.subtitle#show_groups.members .tabs .tab.members a
-  +active_subtab
 
 #system-msg
   background: #FFFCDE
@@ -830,3 +685,9 @@ table#pricing
   background-color: #FFB
   color: #666
   font-weight: bold
+
+.group_box
+  padding: 5px
+  border: 1px solid #b4b4b4
+  background: #F0F0F0
+  +rounded(4px, 4px, 4px, 4px)

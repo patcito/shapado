@@ -20,9 +20,10 @@
   .label-container
     = form.label :description
   .field
-    = form.text_area :description, :class => "text-area"
+    = form.text_area :description, :class => "text-area huge", :id => "markdown_editor"
     .tip
       You have 400 characters to describe the group.
+  #markdown_preview.markdown
 
 .field-group.clear
   .label-container

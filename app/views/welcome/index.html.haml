@@ -19,6 +19,14 @@
 -content_for :sidebar do
   -if logged_in?
     = render :partial => "shared/preferred_tags"
+  -else
+    .group_box
+      %h3
+        &= current_group.name
+      .markdown
+        = markdown(truncate(current_group.description, 300))
+        =link_to t("scaffold.more", :default => :"groups.index.about"), group_path(current_group)
+
   %h1
     = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
   = tag_cloud
