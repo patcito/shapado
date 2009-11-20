@@ -5,8 +5,15 @@ $(document).ready(function() {
     var form = $(this).parents("form");
     $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.status == "ok"){
-        form.find("button").remove()
-        form.find(".votes_average").text(data.content)
+        form.find(".votes_average").text(data.average)
+        if(data.vote_type == "vote_down") {
+          form.find("button[name=vote_down] img").attr("src", "/images/vote_down.png")
+          form.find("button[name=vote_up] img").attr("src", "/images/to_vote_up.png")
+        } else {
+          form.find("button[name=vote_up] img").attr("src", "/images/vote_up.png")
+          form.find("button[name=vote_down] img").attr("src", "/images/to_vote_down.png")
+        }
+
         showMessage(data.message, "notice")
       } else {
         showMessage(data.message, "error")

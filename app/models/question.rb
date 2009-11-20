@@ -115,6 +115,22 @@ class Question
     on_activity
   end
 
+  def remove_vote!(v, voter)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1}},
+                                                         :upsert => true)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => -v}},
+                                                         :upsert => true)
+
+    if v < 0
+      self.user.update_reputation(:question_undo_up_vote, self.group)
+      voter.on_activity(:undo_vote_up_question, self.group)
+    else
+      self.user.update_reputation(:question_undo_down_vote, self.group)
+      voter.on_activity(:undo_vote_down_question, self.group)
+    end
+    on_activity
+  end
+
   def on_activity
     update_activity_at
     self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},

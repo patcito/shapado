@@ -3,22 +3,38 @@ class VotesController < ApplicationController
 
   def create
     vote = Vote.new
+    vote_type = ""
     if params[:vote_up]
+      vote_type = "vote_up"
       vote.value = 1
     elsif params[:vote_down]
+      vote_type = "vote_down"
       vote.value = -1
     end
+
+
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
+
     voted = false
     if vote.voteable.user != current_user
-      vote.user = current_user
-      if vote.save
-        vote.voteable.add_vote!(vote.value, current_user)
+      user_vote = current_user.vote_on(vote.voteable)
+      if user_vote && user_vote.value != vote.value
+        vote.voteable.remove_vote!(vote.value, current_user)
+        user_vote.value = vote.value
         voted = true
+        user_vote.save
+        vote.voteable.add_vote!(vote.value, current_user)
         flash[:notice] = t("votes.create.flash_notice")
       else
-        flash[:error] = vote.errors.full_messages.join(", ")
+        vote.user = current_user
+        if vote.save
+          vote.voteable.add_vote!(vote.value, current_user)
+          voted = true
+          flash[:notice] = t("votes.create.flash_notice")
+        else
+          flash[:error] = vote.errors.full_messages.join(", ")
+        end
       end
     else
       flash[:error] = "#{t(:flash_error, :scope => "votes.create")} "
@@ -31,15 +47,28 @@ class VotesController < ApplicationController
 
       format.json do
         if voted
-          average = vote.voteable.votes_average+(vote.value)
-          content = "#{average} #{t(:votes, :scope => "activerecord.models")}"
+          average = vote.voteable.reload.votes_average
           render(:json => {:status => :ok,
                            :message => flash[:notice],
-                           :content => content}.to_json)
+                           :vote_type => vote_type,
+                           :average => average}.to_json)
         else
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
         end
       end
+    end
+  end
+
+  def destroy
+    @vote = Vote.find(params[:id])
+    voteable = @vote.voteable
+    value = @vote.value
+    if  @vote && current_user == @vote.user
+      @vote.destroy
+      voteable.remove_vote!(value, current_user)
+    end
+    respond_to do |format|
+      format.html { redirect_to params[:source] }
     end
   end
 

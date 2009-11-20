@@ -64,6 +64,20 @@ class Answer
     end
   end
 
+    def remove_vote!(v, voter)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1}},
+                                                         :upsert => true)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => -v}},
+                                                         :upsert => true)
+    if v < 0
+      self.user.update_reputation(:answer_undo_up_vote, self.group)
+      voter.on_activity(:undo_vote_up_answer, self.group)
+    else
+      self.user.update_reputation(:answer_undo_down_vote, self.group)
+      voter.on_activity(:undo_vote_down_answer, self.group)
+    end
+  end
+
   def flagged!
     self.collection.update({:_id => self._id}, {:$inc => {:flags_count => 1}},
                                                :upsert => true)

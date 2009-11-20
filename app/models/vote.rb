@@ -23,8 +23,6 @@ class Vote
                               :user_id     => self.user_id
                              })
 
-    puts vote.inspect
-    puts self.inspect
     valid = (vote.nil? || vote.id == self.id)
     if !valid
       self.errors.add(:voteable, "You already voted this #{self.voteable_type}")

@@ -242,7 +242,7 @@ class User
   end
 
   def reputation_on(group)
-    self.reputation.fetch(group.id, 1.0 ).to_i
+    self.reputation.fetch(group.id, 0.0 ).to_i
   end
 
   protected
