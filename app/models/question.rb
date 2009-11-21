@@ -31,6 +31,7 @@ class Question
   key :user_id, ObjectId
   belongs_to :user
 
+  # FIXME: WTF?
   key :answer_id, ObjectId
   belongs_to :answer
 
