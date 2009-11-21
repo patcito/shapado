@@ -39,6 +39,7 @@ class User
   has_many :votes, :dependent => :destroy
 
   has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
+  has_many :favorites, :class_name => "Favorite", :foreign_key => "user_id"
 
   timestamps!
 
@@ -197,6 +198,14 @@ class User
                           :voteable_id => voteable._id,
                           :user_id     => self._id
                          })
+  end
+
+  def favorite?(question)
+    !favorite(question).nil?
+  end
+
+  def favorite(question)
+    self.favorites.find(:first, :question_id => question._id, :user_id => self._id )
   end
 
   def logged!

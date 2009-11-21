@@ -17,6 +17,7 @@ class Question
   key :votes_average, Integer, :default => 0
   key :hotness, Integer, :default => 0
   key :flags_count, Integer, :default => 0
+  key :favorites_count, Integer, :default => 0
 
   key :banned, Boolean, :default => false
   key :answered, Boolean, :default => false
@@ -131,6 +132,19 @@ class Question
     on_activity
   end
 
+  def add_favorite!(fav, user)
+    self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
+                                                         :upsert => true)
+    on_activity
+  end
+
+
+  def remove_favorite!(fav, user)
+    self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
+                                                         :upsert => true)
+    on_activity
+  end
+
   def on_activity
     update_activity_at
     self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},
@@ -158,6 +172,10 @@ class Question
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
                                                      :multi => true,
                                                      :upsert => true)
+  end
+
+  def favorite_for?(user)
+    user.favorite(self)
   end
 
   protected

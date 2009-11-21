@@ -21,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
                                         :unsolve => :get,
                                         :flag => :get} do |questions|
     questions.resources :answers, :member => {:flag => :get}
+    questions.resources :favorites
   end
 
   map.resources :questions, :collection => {:tags => :get,
