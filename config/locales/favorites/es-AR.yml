@@ -1,0 +1,5 @@
+"es-AR":
+  favorites:
+    create:
+      unauthenticated: "necesitas tener una cuenta para agregar favoritos"
+      success:         "La pregunta ha sido añadida a tus favoritas"

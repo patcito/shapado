@@ -1,21 +1,22 @@
 class FavoritesController < ApplicationController
+  before_filter :check_permissions, :only => :create
   # POST /favorites
   # POST /favorites.xml
   def create
-    @question = Question.find_by_slug_or_id(params[:question_id])
     @favorite = Favorite.new
     @favorite.question_id = @question.id
     @favorite.user = current_user
     @favorite.group = @question.group
 
     respond_to do |format|
-      if @favorite.save!
+      if @favorite.save
         @question.add_favorite!(@favorite, current_user)
-        flash[:notice] = 'Favorite was successfully created.'
+        flash[:notice] = t("favorites.create.success")
         format.html { redirect_to(question_path(current_category, @question)) }
         format.xml  { render :xml => @favorite, :status => :created, :location => @favorite }
       else
-        format.html { render :action => "show", :controller => "Questions", :id => question.id }
+        flash[:error] = @favorite.errors.full_messages.join("**")
+        format.html { redirect_to(question_path(current_category, @question)) }
         format.xml  { render :xml => @favorite.errors, :status => :unprocessable_entity }
       end
     end
@@ -33,6 +34,24 @@ class FavoritesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(question_path(current_category, @question)) }
       format.xml  { head :ok }
+    end
+  end
+
+  protected
+  def check_permissions
+    @question = Question.find_by_slug_or_id(params[:question_id])
+    unless logged_in?
+      flash[:error] = t(:unauthenticated, :scope => "favorites.create")
+      respond_to do |format|
+        format.html do
+          flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
+          redirect_to question_path(current_category, @question)
+        end
+        format.json do
+          flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
+          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+        end
+      end
     end
   end
 end

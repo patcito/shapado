@@ -12,15 +12,14 @@
   #question-body
     #question_actions.right
       =vote_box(@question, question_path(current_category,@question))
-      -if logged_in?
-        %div{:style => "text-align: center"}
-          -if favorite = current_user.favorite(@question)
-            -form_tag question_favorite_path(current_category, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
-              = image_submit_tag("favorites.png")
-          -else
-            - form_tag question_favorites_path(current_category, @question.id), :id => "favorite_form" do |f|
-              = image_submit_tag("unfavorites.png")
-          &= @question.favorites_count
+      %div{:style => "text-align: center"}
+        -if logged_in? && favorite = current_user.favorite(@question)
+          -form_tag question_favorite_path(current_category, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
+            = image_submit_tag("favorites.png")
+        -else
+          - form_tag question_favorites_path(current_category, @question.id), :id => "favorite_form" do |f|
+            = image_submit_tag("unfavorites.png")
+        &= @question.favorites_count
 
       .buttons
         -if logged_in?
