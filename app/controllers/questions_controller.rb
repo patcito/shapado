@@ -26,7 +26,9 @@ class QuestionsController < ApplicationController
     end
 
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
-                                   :order => order}.merge( scoped_conditions(:banned => false)))
+                                   :order => order,
+                                   :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
+                                  merge( scoped_conditions(:banned => false)))
 
     @langs_conds = scoped_conditions[:language][:$in]
 
@@ -60,7 +62,8 @@ class QuestionsController < ApplicationController
     if @active_subtab != "mytags"
       @questions = Question.paginate({:order => order,
                                       :per_page => 25,
-                                      :page => params[:page] || 1
+                                      :page => params[:page] || 1,
+                                      :fields => (Question.keys.keys - ["_keywords", "watchers"])
                                      }.merge(scoped_conditions({:answered => false})))
     else
       login_required
@@ -69,7 +72,8 @@ class QuestionsController < ApplicationController
       conditions = scoped_conditions({:answered => false})
       @questions = Question.paginate({
                                       :per_page => 25,
-                                      :page => params[:page] || 1
+                                      :page => params[:page] || 1,
+                                      :fields => (Question.keys.keys - ["_keywords", "watchers"])
                                      }.merge(conditions))
     end
     render
@@ -228,6 +232,21 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html
     end
+  end
+
+
+  def watch
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.add_watcher(current_user)
+    flash[:notice] = t("questions.watch.success")
+
+    redirect_to question_path(current_category, @question)
+  end
+
+  def unwatch
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.remove_watcher(current_user)
+    redirect_to question_path(current_category, @question)
   end
 
   protected

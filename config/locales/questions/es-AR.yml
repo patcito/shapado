@@ -18,6 +18,7 @@
       flag: "Reportar abuso"
       viewed: Visto
       to_answer_question: para responder esta pregunta
+      watch_tooltip: "seguir esta pregunta"
     answer:
       pick_answer: Escoger como solución
       unset_answer: "¿Quitar como solución?"
@@ -47,6 +48,8 @@
       flash_notice: "La pregunta ha sido resuelta"
     unsolve:
       flash_notice: "La pregunta ahora no esta resuelta."
+    watch:
+      success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
     shared:
       flag: Reportar abuso
 

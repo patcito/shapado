@@ -38,6 +38,8 @@ class Question
   key :group_id, String
   belongs_to :group
 
+  key :watchers, Array
+
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
@@ -177,6 +179,27 @@ class Question
 
   def favorite_for?(user)
     user.favorite(self)
+  end
+
+
+  def add_watcher(user)
+    if !watch_for?(user)
+      self.collection.update({:_id => self.id},
+                             {:$push => {:watchers => user.id}},
+                             :upsert => true);
+    end
+  end
+
+  def remove_watcher(user)
+    if watch_for?(user)
+      self.collection.update({:_id => self.id},
+                             {:$pull => {:watchers => user._id}},
+                             :upsert => true)
+    end
+  end
+
+  def watch_for?(user)
+    watchers.include?(user._id)
   end
 
   protected

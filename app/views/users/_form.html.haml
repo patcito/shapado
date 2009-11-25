@@ -5,7 +5,7 @@
   .field
     = f.text_field :login, :class => "text-field"
 
--if @user.new? || @user.openid_login?
+-if @user.new? || !@user.openid_login?
   .field-group
     .label-container
       = f.label :email, t(:email, :scope => "activerecord.attributes.user")

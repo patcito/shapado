@@ -3,6 +3,7 @@ fr:
     application:
       title: "Questions & Réponses"
       questions: questions
+      questions_tagged: questions taguées
       ask_question: poser une question
       tags: tags
       users: utilisateurs

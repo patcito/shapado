@@ -18,6 +18,7 @@ en:
       flag: flag
       viewed: viewed
       to_answer_question: to answer this question
+      watch_tooltip: "watch this question"
     answer:
       pick_answer: Pick as solution
       unset_answer: Unset as solution?
@@ -47,6 +48,8 @@ en:
       flash_notice: "Question was solved."
     unsolve:
       flash_notice: "Question now is not solved."
+    watch:
+      success:      "You will now receive notifications by mail for every new answer to this question"
     shared:
       flag: flag
 

@@ -18,6 +18,7 @@ fr:
       flags: reporter en tant que
       viewed: lues
       to_answer_question: to answer this question
+      watch_tooltip: "suivre cette question"
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
@@ -47,6 +48,8 @@ fr:
       flash_notice: "La question a été résolue."
     unsolve:
       flash_notice: "La question n'est pas résolue."
+    watch:
+      success:      "Vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
     shared:
       title: reporter un abus
 

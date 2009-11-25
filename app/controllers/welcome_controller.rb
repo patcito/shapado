@@ -18,6 +18,7 @@ class WelcomeController < ApplicationController
     @questions = Question.paginate({:per_page => 25,
                                    :page => params[:page] || 1,
                                    :limit => 20,
+                                   :fields => (Question.keys.keys - ["_keywords", "watchers"]),
                                    :order => order}.merge(
                                    scoped_conditions({:answered => false, :banned => false})))
   end

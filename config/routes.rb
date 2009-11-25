@@ -19,7 +19,9 @@ ActionController::Routing::Routes.draw do |map|
                                             :unanswered => :get},
                             :member => {:solve => :get,
                                         :unsolve => :get,
-                                        :flag => :get} do |questions|
+                                        :flag => :get,
+                                        :watch => :any,
+                                        :unwatch => :any} do |questions|
     questions.resources :answers, :member => {:flag => :get}
     questions.resources :favorites
   end

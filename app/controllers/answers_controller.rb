@@ -23,9 +23,14 @@ class AnswersController < ApplicationController
     if @question && @answer.save
       unless @answer.comment?
         @question.answer_added!
-        email = @question.user.email
-        if !email.blank? && @question.user.notification_opts["new_answer"] == "1"
-          Notifier.deliver_new_answer(@question.user, @answer)
+        # TODO: use mangent to do it
+        users = User.find(@question.watchers, :fields => ["email", "notification_opts"]) || []
+        users.push(@question.user)
+        users.each do |u|
+          email = u.email
+          if !email.blank? && u.notification_opts["new_answer"] == "1"
+            Notifier.deliver_new_answer(u, @answer)
+          end
         end
         current_user.on_activity(:answer_question, current_group)
       else

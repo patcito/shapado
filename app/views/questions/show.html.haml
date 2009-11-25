@@ -11,6 +11,12 @@
       = h @question.title
   #question-body
     #question_actions.right
+      %div{:style => "text-align: center"}
+        -if logged_in?
+          -if @question.watch_for?(current_user)
+            = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_category, @question)
+          -else
+            = link_to image_tag("layer-visible-off.png"), watch_question_path(current_category, @question), :title => t(".watch_tooltip")
       =vote_box(@question, question_path(current_category,@question))
       %div{:style => "text-align: center"}
         -if logged_in? && favorite = current_user.favorite(@question)
