@@ -11,16 +11,17 @@ class Answer
 
   timestamps!
 
-  key :user_id, ObjectId
+  key :_id, String
+  key :user_id, String
   belongs_to :user
 
-  key :question_id, ObjectId
+  key :question_id, String
   belongs_to :question
 
-  key :group_id, ObjectId
+  key :group_id, String
   belongs_to :group
 
-  key :parent_id, ObjectId
+  key :parent_id, String
   belongs_to :parent, :class_name => "Answer"
 
   has_many :children, :foreign_key => "parent_id", :class_name => "Answer", :dependent => :destroy
@@ -90,7 +91,7 @@ class Answer
   end
 
   def self.ban(ids)
-    ids = ids.map do |id| Mongo::ObjectID.from_string(id) end
+    ids = ids.map do |id| id end
 
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
                                                      :multi => true,

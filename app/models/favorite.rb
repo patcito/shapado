@@ -1,13 +1,14 @@
 class Favorite
   include MongoMapper::Document
 
-  key :group_id, ObjectId
+  key :_id, String
+  key :group_id, String
   belongs_to :group
 
-  key :user_id, ObjectId
+  key :user_id, String
   belongs_to :user
 
-  key :question_id, ObjectId
+  key :question_id, String
 
   validate :should_be_unique
 

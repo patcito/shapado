@@ -10,6 +10,7 @@ class User
 
   ROLES = %w[user admin]
 
+  key :_id,                     String
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :email,                     String, :limit => 100

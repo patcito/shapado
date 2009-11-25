@@ -2,9 +2,10 @@
 class Member
   include MongoMapper::Document
   timestamps!
-  key :group_id, ObjectId
+  key :_id, String
+  key :group_id, String
   belongs_to :group, :class_name => "Group"
-  key :user_id, ObjectId
+  key :user_id, String
   belongs_to :user, :class_name => "User"
 
   ROLES = %w[user moderator owner]

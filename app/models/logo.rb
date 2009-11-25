@@ -1,5 +1,6 @@
 class Logo < ImageUpload
-  key :group_id, ObjectId
+  key :_id, String
+  key :group_id, String
   belongs_to :group
 
   def default_path

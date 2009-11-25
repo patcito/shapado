@@ -2,6 +2,7 @@ class Group
   include MongoMapper::Document
   include Support::Sluggizer
 
+  key :_id, String
   slug_key :name
   key :name, String, :required => true
   key :subdomain, String
@@ -11,7 +12,7 @@ class Group
 
   key :state, String, :default => "pending" #pending, active, closed
 
-  key :owner_id, ObjectId
+  key :owner_id, String
   belongs_to :owner, :class_name => "User"
 
   has_many :memberships, :class_name => "Member",

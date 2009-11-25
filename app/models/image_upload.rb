@@ -1,5 +1,6 @@
 class ImageUpload
   include MongoMapper::Document
+  key :_id, String
   key :image, Binary
   key :ext, String
   key :_type, String

@@ -46,7 +46,7 @@ namespace :fixdb do
     end
   end
 
-  task :foregin_keys => :environment do
+  task :foreign_keys => :environment do
     def fix_model(model, keys)
       model.collection.find.each do |doc|
         keys.each do |key|

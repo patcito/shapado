@@ -8,6 +8,7 @@ class Question
   ensure_index :title
   ensure_index :body
 
+  key :_id, String
   key :title, String, :required => true
   key :body, String, :required => true
   key :slug, String, :required => true
@@ -28,14 +29,13 @@ class Question
 
   key :activity_at, Time
 
-  key :user_id, ObjectId
+  key :user_id, String
   belongs_to :user
 
-  # FIXME: WTF?
-  key :answer_id, ObjectId
+  key :answer_id, String
   belongs_to :answer
 
-  key :group_id, ObjectId
+  key :group_id, String
   belongs_to :group
 
   has_many :answers, :dependent => :destroy
@@ -168,7 +168,7 @@ class Question
   end
 
   def self.ban(ids)
-    ids = ids.map do |id| Mongo::ObjectID.from_string(id) end
+    ids = ids.map do |id| id end
 
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
                                                      :multi => true,
