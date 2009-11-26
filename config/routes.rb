@@ -21,7 +21,9 @@ ActionController::Routing::Routes.draw do |map|
                                         :unsolve => :get,
                                         :flag => :get,
                                         :watch => :any,
-                                        :unwatch => :any} do |questions|
+                                        :unwatch => :any,
+                                        :move => :get,
+                                        :move_to => :put} do |questions|
     questions.resources :answers, :member => {:flag => :get}
     questions.resources :favorites
   end
@@ -34,7 +36,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,
-                                     :logo => :get} do |groups|
+                                     :logo => :get},
+                          :collection => { :autocomplete_for_group_slug => :get} do |groups|
     groups.resources :members
   end
 

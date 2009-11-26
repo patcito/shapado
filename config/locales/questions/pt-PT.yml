@@ -19,6 +19,7 @@
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
+      asked_on: "Asked on"
     answer:
       pick_answer: Escolher como solução
       unset_answer: Retirar como solução?
@@ -50,6 +51,13 @@
       flash_notice: "Pergunta agora não está resolvida."
     watch:
       success:      "You will now receive notifications by mail for every new answer to this question"
+    move:
+      title:        "Move question: {{title}}"
+      group_label:  "Move to the group with slug:"
+      submit:       "Move!"
+    move_to:
+      success:      "Question moved to {{group}}"
+      group_dont_exists: "The group {{group}} don't exists"
     shared:
       flag: reportar
 

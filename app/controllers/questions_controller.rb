@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
+  before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
   before_filter :set_active_tag
 
@@ -247,6 +248,26 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
     @question.remove_watcher(current_user)
     redirect_to question_path(current_category, @question)
+  end
+
+  def move
+    @question = Question.find_by_slug_or_id(params[:id])
+    render
+  end
+
+  def move_to
+    @group = Group.find_by_slug_or_id(params[:question][:group])
+    @question = Question.find_by_slug_or_id(params[:id])
+    if @group
+      @question.group = @group
+      @question.save
+      flash[:notice] = t("questions.move_to.success", :group => @group.name)
+      redirect_to question_path(current_category, @question)
+    else
+      flash[:error] = t("questions.move_to.group_dont_exists",
+                        :group => params[:question][:group])
+      render :move
+    end
   end
 
   protected
