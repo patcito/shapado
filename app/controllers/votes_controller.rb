@@ -20,10 +20,10 @@ class VotesController < ApplicationController
     if vote.voteable.user != current_user
       user_vote = current_user.vote_on(vote.voteable)
       if user_vote && user_vote.value != vote.value
-        vote.voteable.remove_vote!(vote.value, current_user)
+        vote.voteable.remove_vote!(user_vote.value, current_user)
         user_vote.value = vote.value
         voted = true
-        user_vote.save
+        user_vote.save!
         vote.voteable.add_vote!(vote.value, current_user)
         flash[:notice] = t("votes.create.flash_notice")
       else

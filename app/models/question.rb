@@ -105,10 +105,10 @@ class Question
   end
 
   def add_vote!(v, voter)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1}},
-                                                         :upsert => true)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => v}},
-                                                         :upsert => true)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1,
+                                                          :votes_average => v}},
+                                                         :upsert => true,
+                                                         :safe => true)
     if v > 0
       self.user.update_reputation(:question_receives_up_vote, self.group)
       voter.on_activity(:vote_up_question, self.group)
@@ -120,10 +120,10 @@ class Question
   end
 
   def remove_vote!(v, voter)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1}},
-                                                         :upsert => true)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_average => -v}},
-                                                         :upsert => true)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1,
+                                                          :votes_average => (-v)}},
+                                                         :upsert => true,
+                                                         :safe => true)
 
     if v < 0
       self.user.update_reputation(:question_undo_up_vote, self.group)
