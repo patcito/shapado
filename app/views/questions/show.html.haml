@@ -23,7 +23,7 @@
           -form_tag question_favorite_path(current_category, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
             = image_submit_tag("favorites.png")
         -else
-          - form_tag question_favorites_path(current_category, @question.id), :id => "favorite_form" do |f|
+          - form_tag question_favorites_path(current_category, @question.id), :id => "favorite_form" do
             = image_submit_tag("unfavorites.png")
         &= @question.favorites_count
 
