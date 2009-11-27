@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
+  before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
   before_filter :set_active_tag
 
@@ -26,7 +27,9 @@ class QuestionsController < ApplicationController
     end
 
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
-                                   :order => order}.merge( scoped_conditions(:banned => false)))
+                                   :order => order,
+                                   :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
+                                  merge( scoped_conditions(:banned => false)))
 
     @langs_conds = scoped_conditions[:language][:$in]
 
@@ -60,7 +63,8 @@ class QuestionsController < ApplicationController
     if @active_subtab != "mytags"
       @questions = Question.paginate({:order => order,
                                       :per_page => 25,
-                                      :page => params[:page] || 1
+                                      :page => params[:page] || 1,
+                                      :fields => (Question.keys.keys - ["_keywords", "watchers"])
                                      }.merge(scoped_conditions({:answered => false})))
     else
       login_required
@@ -69,7 +73,8 @@ class QuestionsController < ApplicationController
       conditions = scoped_conditions({:answered => false})
       @questions = Question.paginate({
                                       :per_page => 25,
-                                      :page => params[:page] || 1
+                                      :page => params[:page] || 1,
+                                      :fields => (Question.keys.keys - ["_keywords", "watchers"])
                                      }.merge(conditions))
     end
     render
@@ -227,6 +232,41 @@ class QuestionsController < ApplicationController
     @flag.flaggeable_id = @question.id
     respond_to do |format|
       format.html
+    end
+  end
+
+
+  def watch
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.add_watcher(current_user)
+    flash[:notice] = t("questions.watch.success")
+
+    redirect_to question_path(current_category, @question)
+  end
+
+  def unwatch
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.remove_watcher(current_user)
+    redirect_to question_path(current_category, @question)
+  end
+
+  def move
+    @question = Question.find_by_slug_or_id(params[:id])
+    render
+  end
+
+  def move_to
+    @group = Group.find_by_slug_or_id(params[:question][:group])
+    @question = Question.find_by_slug_or_id(params[:id])
+    if @group
+      @question.group = @group
+      @question.save
+      flash[:notice] = t("questions.move_to.success", :group => @group.name)
+      redirect_to question_path(current_category, @question)
+    else
+      flash[:error] = t("questions.move_to.group_dont_exists",
+                        :group => params[:question][:group])
+      render :move
     end
   end
 

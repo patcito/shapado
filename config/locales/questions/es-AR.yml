@@ -18,6 +18,8 @@
       flag: "Reportar abuso"
       viewed: Visto
       to_answer_question: para responder esta pregunta
+      watch_tooltip: "seguir esta pregunta"
+      asked_on: "preguntado en"
     answer:
       pick_answer: Escoger como solución
       unset_answer: "¿Quitar como solución?"
@@ -47,6 +49,15 @@
       flash_notice: "La pregunta ha sido resuelta"
     unsolve:
       flash_notice: "La pregunta ahora no esta resuelta."
+    watch:
+      success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
+    move:
+      title:        "Mover la pregunta: {{title}}"
+      group_label:  "Mover la pregunta a el group con slug:"
+      submit:       "Mover!"
+    move_to:
+      success:      "Pegunta movida a {{group}}"
+      group_dont_exists: "El group {{group}} no existe"
     shared:
       flag: Reportar abuso
 

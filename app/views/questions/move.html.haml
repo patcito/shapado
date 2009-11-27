@@ -1,0 +1,24 @@
+-content_for :js do
+  = javascript_include_tag 'modules/move_group.js'
+  = javascript_include_tag 'jquery.autocomplete.js'
+
+#move_question
+  .subtitle
+    %h2
+      = t(".title", :title => h(@question.title))
+  .markdown{:style => "width: 92%"}
+    = markdown(@question.body)
+
+  .tags-list
+    -@question.tags.each do |tag|
+      %span.tag
+        = link_to h(tag), questions_path(:category => current_category, :tags => tag)
+  %div
+    %b
+      = t("questions.show.asked_on")
+      = link_to h(@question.group.name), subdomain_url(@question.group.subdomain)
+
+  -form_for @question, :url => move_to_question_path(current_category, @question.id), :html => {:class => "form"} do |f|
+    = f.label :group, t(".group_label"), :class => "label"
+    = f.text_field :group, :value => "", :class => "text-field", :id => "groups_slug"
+    = submit_tag t(".submit")

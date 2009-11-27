@@ -18,6 +18,8 @@ fr:
       flags: reporter en tant que
       viewed: lues
       to_answer_question: to answer this question
+      watch_tooltip: "suivre cette question"
+      asked_on: "posée dans"
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
@@ -47,6 +49,15 @@ fr:
       flash_notice: "La question a été résolue."
     unsolve:
       flash_notice: "La question n'est pas résolue."
+    watch:
+      success:      "Vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
+    move:
+      title:        "Move question: {{title}}"
+      group_label:  "Move to the group with slug:"
+      submit:       "Move!"
+    move_to:
+      success:      "Question moved to {{group}}"
+      group_dont_exists: "The group {{group}} don't exists"
     shared:
       title: reporter un abus
 

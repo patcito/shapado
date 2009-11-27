@@ -11,6 +11,12 @@
       = h @question.title
   #question-body
     #question_actions.right
+      %div{:style => "text-align: center"}
+        -if logged_in?
+          -if @question.watch_for?(current_user)
+            = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_category, @question)
+          -else
+            = link_to image_tag("layer-visible-off.png"), watch_question_path(current_category, @question), :title => t(".watch_tooltip")
       =vote_box(@question, question_path(current_category,@question))
       %div{:style => "text-align: center"}
         -if logged_in? && favorite = current_user.favorite(@question)
@@ -50,6 +56,9 @@
           -if current_user != @question.user
             .left.internal
               = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
+          -if current_user.admin?
+            .left.internal
+              = link_to "move question", move_question_path(current_category, @question), :rel => 'nofollow'
         .clear
         .flag_form.hidden
           -flag.flaggeable = @question
@@ -107,6 +116,13 @@
     = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
   = render :partial => "shared/tag_list", :object => @tag_cloud
   .clear
+
+  -if @question.group_id != current_group.id
+    %span
+      %b
+        = t(".asked_on")
+      %h3
+        = @question.group.name
 
   %span
     %b

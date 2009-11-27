@@ -119,6 +119,18 @@ class GroupsController < ApplicationController
     send_data(@group.logo.raw, :filename => @group.logo.filename,  :disposition => 'inline')
   end
 
+  def autocomplete_for_group_slug
+    @groups = Group.find(:all, :limit => params[:limit] || 20,
+                             :fields=> 'slug',
+                             :slug =>  /.*#{params[:prefix].downcase.to_s}.*/,
+                             :order => "slug desc",
+                             :state => "active")
+
+    respond_to do |format|
+      format.json {render :json=>@groups}
+    end
+  end
+
   protected
   def check_permissions
     @group = Group.find_by_slug_or_id(params[:id])

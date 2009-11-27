@@ -156,6 +156,12 @@ class ApplicationController < ActionController::Base
     @feed_urls << [title, url]
   end
 
+  def admin_required
+    unless current_user.admin?
+      access_denied
+    end
+  end
+
   def moderator_required
     unless current_user.mod_of?(current_group)
       access_denied

@@ -8,6 +8,8 @@ class FavoritesController < ApplicationController
     @favorite.user = current_user
     @favorite.group = @question.group
 
+    @question.add_watcher(current_user)
+
     respond_to do |format|
       if @favorite.save
         @question.add_favorite!(@favorite, current_user)
@@ -30,6 +32,7 @@ class FavoritesController < ApplicationController
 
     @question.remove_favorite!(@favorite, current_user)
     @favorite.destroy
+    @question.remove_watcher(current_user)
 
     respond_to do |format|
       format.html { redirect_to(question_path(current_category, @question)) }
