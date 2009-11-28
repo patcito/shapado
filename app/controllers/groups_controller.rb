@@ -53,7 +53,7 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name description legend categories subdomain], params[:group])
+    @group.safe_update(%w[name description legend categories subdomain custom_domain], params[:group])
     @group.owner = current_user
 
     respond_to do |format|
@@ -75,7 +75,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description categories logo_data], params[:group])
+    @group.safe_update(%w[name legend description categories logo_data custom_domain], params[:group])
 
     respond_to do |format|
       if @group.save

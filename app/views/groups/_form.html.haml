@@ -16,6 +16,14 @@
     %span.tip
       = ".#{request.domain}"
 
+.field-group
+  .label-container
+    = form.label :custom_domain, "Custom domain"
+  .field.without-label
+    %span.tip
+      = "#{request.protocol}"
+    = form.text_field :custom_domain, :class=> "text-field"
+
 .field-group.clear
   .label-container
     = form.label :description
