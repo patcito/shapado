@@ -54,10 +54,22 @@ class ApplicationController < ActionController::Base
   helper_method :current_tags
 
   def find_languages
+    @current_languages = current_languages.join("+")
+  end
+  helper_method :current_languages
+
+  def current_languages
     @languages ||= begin
-      subdomains = request.subdomains
-      subdomains.delete("www") if request.host == 'www.'+AppConfig.domain
-      subdomains.select{ |subdomain| AVAILABLE_LANGUAGES.include?(subdomain) }
+      if params[:language] && !params[:language].empty?
+        languages =params[:language].split('+').select{ |lang| AVAILABLE_LANGUAGES.include?(lang) }
+      elsif current_user && !current_user.preferred_languages.empty?
+        languages = current_user.preferred_languages
+      elsif params[:language]
+        languages = params[:language].kind_of?(Array) ? params[:language] : [params[:language]]
+      else
+        languages = [I18n.locale.to_s.split("-").first]
+      end
+      languages
     end
   end
 
@@ -69,21 +81,6 @@ class ApplicationController < ActionController::Base
     conditions.deep_merge!(language_conditions)
   end
   helper_method :scoped_conditions
-
-  def current_languages
-    if @languages && !@languages.empty?
-      current_languages = @languages
-    elsif current_user && !current_user.preferred_languages.empty?
-      current_languages = current_user.preferred_languages
-    elsif params[:language]
-      langs = params[:language].kind_of?(Array) ? params[:language] : [params[:language]]
-      current_languages = langs
-    else
-      current_languages = I18n.locale.to_s.split("-").first.to_a
-    end
-    current_languages
-  end
-  helper_method :current_languages
 
   def language_conditions
     conditions = {}
