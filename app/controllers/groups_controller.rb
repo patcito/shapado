@@ -53,6 +53,9 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
+    if params[:group][:custom_domain].empty?
+      params[:group][:custom_domain] = params[:group][:subdomain]+'.'+AppConfig.domain
+    end
     @group.safe_update(%w[name description legend categories subdomain custom_domain], params[:group])
     @group.owner = current_user
 

@@ -74,10 +74,19 @@ namespace :fixdb do
     print "\nfixing Group"
     fix_model(Group, [:owner_id])
     print "\nfixing Member"
-    fix_model(Member, [:user_id, :group_id]) 
+    fix_model(Member, [:user_id, :group_id])
     print "\nfixing Favorite"
     fix_model(Favorite, [:user_id, :group_id, :question_id])
     print "\nfinish"
+  end
+
+  task :fix_subdomains => :environment do
+    Group.all.each do |g|
+      if g.custom_domain.nil?
+        g.custom_domain = g.subdomain+'.'+AppConfig.domain
+        g.save
+      end
+    end
   end
 end
 

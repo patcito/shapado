@@ -26,13 +26,11 @@ class ApplicationController < ActionController::Base
   def current_group
     #FIXME ensure that the current group exists
     subdomains = request.subdomains
-    subdomains.delete("www")
+    subdomains.delete("www") if request.host == 'www.'+AppConfig.domain
     unless subdomains.empty?
       @current_group ||= begin
         group = Group.find(:first, :limit => 1, :state => "active",
-                                                :custom_domain => request.host) ||
-                Group.find(:first, :limit => 1, :state => "active",
-                                                :subdomain => subdomains.last)
+                                                :custom_domain => request.host)
         group
       end
     end
@@ -60,7 +58,7 @@ class ApplicationController < ActionController::Base
   def find_conditions
     @languages ||= begin
       subdomains = request.subdomains
-      subdomains.delete("www")
+      subdomains.delete("www") if request.host == 'www.'+AppConfig.domain
       subdomains.select{ |subdomain| AVAILABLE_LANGUAGES.include?(subdomain) }
     end
   end
