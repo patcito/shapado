@@ -125,7 +125,7 @@ class Question
                                                          :upsert => true,
                                                          :safe => true)
 
-    if v < 0
+    if v > 0
       self.user.update_reputation(:question_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_question, self.group)
     else

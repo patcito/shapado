@@ -72,7 +72,7 @@ class Answer
                                                          :upsert => true,
                                                          :safe => true)
 
-    if v < 0
+    if v > 0
       self.user.update_reputation(:answer_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_answer, self.group)
     else
@@ -121,7 +121,7 @@ class Answer
                                        :group_id => self.group_id,
                                        :order => "created_at desc")
 
-    valid = (eq_answer.nil? || eq_answer.id == self.id) #&&
+    valid = (eq_answer.nil? || eq_answer.id == self.id) &&
             ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
     if !valid
       self.errors.add(:body, "Your answer looks like spam.")
