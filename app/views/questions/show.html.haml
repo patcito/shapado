@@ -51,18 +51,19 @@
         = t("time.ago", :time => time_ago_in_words(@question.created_at))
         = t("global.from", :site => @question.user.country_name)
         = country_flag(@question.user.country_code, @question.user.country_name)
-      .flag_question
-        .actions
-          -if current_user != @question.user
-            .left.internal
-              = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
-          -if current_user.admin?
-            .left.internal
-              = link_to "move question", move_question_path(current_category, @question), :rel => 'nofollow'
-        .clear
-        .flag_form.hidden
-          -flag.flaggeable = @question
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category, @question) }
+      -if logged_in?
+        .flag_question
+          .actions
+            -if current_user != @question.user
+              .left.internal
+                = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
+            -if current_user.admin?
+              .left.internal
+                = link_to "move question", move_question_path(current_category, @question), :rel => 'nofollow'
+          .clear
+          .flag_form.hidden
+            -flag.flaggeable = @question
+            = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category, @question) }
     .clear
 
 %a{:name=>"answers"}
