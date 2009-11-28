@@ -30,9 +30,9 @@ class ApplicationController < ActionController::Base
     unless subdomains.empty?
       @current_group ||= begin
         group = Group.find(:first, :limit => 1, :state => "active",
-                                                :subdomain => subdomains.last) ||
+                                                :custom_domain => request.host) ||
                 Group.find(:first, :limit => 1, :state => "active",
-                                                :custom_domain => request.host)
+                                                :subdomain => subdomains.last)
         group
       end
     end
