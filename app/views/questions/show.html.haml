@@ -127,14 +127,7 @@
 
   %span
     %b
-      = t('activerecord.attributes.question.category')
-    %br
-    %h3
-      = category_desc h(@question.category)
-  %span
-    %b
       = t('.viewed')
-    %br
     %h3
       = t('number.x_time', :count => number_with_delimiter(@question.views_count))
 
