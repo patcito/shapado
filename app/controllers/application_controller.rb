@@ -53,15 +53,15 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_tags
 
-  def find_languages
-    @current_languages = current_languages.join("+")
+  def current_languages
+    @current_languages = find_languages.join("+")
   end
   helper_method :current_languages
 
-  def current_languages
+  def find_languages
     @languages ||= begin
       if params[:language] && !params[:language].empty?
-        languages =params[:language].split('+').select{ |lang| AVAILABLE_LANGUAGES.include?(lang) }
+        languages = params[:language].split('+').select{ |lang| AVAILABLE_LANGUAGES.include?(lang) }
       elsif current_user && !current_user.preferred_languages.empty?
         languages = current_user.preferred_languages
       elsif params[:language]
@@ -73,6 +73,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def language_conditions
+    conditions = {}
+    conditions[:language] = { :$in => find_languages}
+    conditions
+  end
+  helper_method :language_conditions
+
   def scoped_conditions(conditions = {})
     unless current_tags.empty?
       conditions.deep_merge!({:tags => {:$all => current_tags}})
@@ -81,13 +88,6 @@ class ApplicationController < ActionController::Base
     conditions.deep_merge!(language_conditions)
   end
   helper_method :scoped_conditions
-
-  def language_conditions
-    conditions = {}
-    conditions[:language] = { :$in => current_languages}
-    conditions
-  end
-  helper_method :language_conditions
 
   def available_locales; AVAILABLE_LOCALES; end
 
