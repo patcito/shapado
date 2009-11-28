@@ -1,29 +1,7 @@
 !!! Strict
 %html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
-    %title
-      &= page_title
-    %meta{ :name => "description", :content => "" }
-    %meta{ :name => "keywords", :content => "" }
-    %link{:rel=>"icon", :type=>"image/png", :href=>"/favicon.ico"}
-    -if @feed_urls && !@feed_urls.empty?
-      -@feed_urls.each do |title, url|
-        %link{:rel=>"alternate", :type=>"application/atom+xml", :title => h(title), :href=> url}
-
-    = javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
-    = javascript_include_tag 'modules/sessions.js'
-    = javascript_include_tag 'modules/show_question.js'
-    = javascript_include_tag 'openid/js/jquery.openid.min.js'
-    = javascript_include_tag 'jquery.notifyBar.js'
-    = yield :js
-    = stylesheet_link_tag 'compoments/dialog.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'jquery-ui.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
-    = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
-    = yield :css
+    = render :partial => "layouts/head"
 
   %body
     #top_bar
@@ -43,21 +21,7 @@
       %br
       #navigation{:class => "#{@active_tab}"}
         #menu_primary
-          %ul
-            %li.questions
-              =link_to t(".questions"), questions_path(:category => current_category)
-            %li.tags
-              =link_to t(".tags"), tags_questions_path(:category => current_category)
-            %li.users
-              =link_to t(".users"), users_path
-            %li.unanswered
-              =link_to t(".unanswered"), unanswered_questions_path(:category => current_category)
-            -if logged_in?
-              -if current_user.mod_of?(current_group)
-                %li.moderate
-                  =link_to t(".moderate"), moderate_path, :style => "background: #E55353; color: #fff"
-            %li.ask_question
-              =link_to t(".ask_question"), new_question_path(:category => current_category), :rel => 'nofollow'
+          = render :partial => "shared/user_navigation"
       #main-content
         #messages
           -flash.each do |k,v|
@@ -70,49 +34,13 @@
               = yield
           #sidebar
             .internal
-              -if @questions
-                .questions_count
-                  = number_with_delimiter(@questions.total_entries)
-
-                -if current_tags.empty?
-                  %p
-                    = t ".questions"
-                -else
-                  %p
-                    = t ".questions_tagged"
-                  = render :partial => "shared/current_tags", :object => current_tags
-
+              =  render :partial => "layouts/question_counter"
               = yield :sidebar
               = render :partial => "shared/adbard"
-
-              %br
-              -if @feed_urls && !@feed_urls.empty?
-                -@feed_urls.each do |title, url|
-                  %a.feed_url{:href => url}
-                    %span.icon
-                      =image_tag "atom.png"
-                    %span.text
-                      = h(title)
-                  .clear
-                  %br
+              = render :partial => "layouts/feed_urls"
           .clear
       #footer
-        %hr
-        %div
-          %p
-            = link_to AppConfig.site, AppConfig.site
-            is a multi-topic and multi-language question-and-answer website service brought to you by #{link_to "Ricodigo.com", "http://ricodigo.com"}. It runs the #{link_to 'Shapado', 'http://gitorious.org/shapado'} question-and-answer software, version 0.1, available under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}.
-        #cc.center
-          = image_tag('/images/ccby.png')
-          == All Shapado.com content and data are available under the #{link_to 'Creative Commons Attribution 3.0 license', 'http://creativecommons.org/licenses/by/3.0/'}
-        #blog.center
-          = link_to 'blog', 'http://blog.ricodigo.com/shapado'
-          |
-          = link_to 'twitter', 'http://twitter.com/shapado'
-          |
-          = link_to 'identi.ca', 'http://identi.ca/shapado'
-          |
-          %a{:href => 'irc://irc.freenode.org/shapado'}
-            irc
+        = render :partial => "layouts/footer"
+
       = render :partial => "shared/googlean"
       .clear
