@@ -12,13 +12,13 @@
   .tags-list
     -@question.tags.each do |tag|
       %span.tag
-        = link_to h(tag), questions_path(:category => current_category, :tags => tag)
+        = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
   %div
     %b
       = t("questions.show.asked_on")
-      = link_to h(@question.group.name), subdomain_url(@question.group.subdomain)
+      = link_to h(@question.group.name), host_url(@question.group.custom_domain)
 
-  -form_for @question, :url => move_to_question_path(current_category, @question.id), :html => {:class => "form"} do |f|
+  -form_for @question, :url => move_to_question_path(current_languages, @question.id), :html => {:class => "form"} do |f|
     = f.label :group, t(".group_label"), :class => "label"
     = f.text_field :group, :value => "", :class => "text-field", :id => "groups_slug"
     = submit_tag t(".submit")

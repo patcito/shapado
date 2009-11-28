@@ -39,10 +39,10 @@ class AnswersController < ApplicationController
 
       flash[:notice] = t(:flash_notice, :scope => "answers.create")
 
-      redirect_to question_path(current_category, @question)
+      redirect_to question_path(current_languages, @question)
     else
       flash[:error] = t(:flash_error, :scope => "answers.create")
-      redirect_to question_path(current_category, @question)
+      redirect_to question_path(current_languages, @question)
     end
   end
 
@@ -55,7 +55,7 @@ class AnswersController < ApplicationController
       @answer.safe_update(%w[parent_id body], params[:answer])
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
-        format.html { redirect_to(question_path(current_category, @answer.question)) }
+        format.html { redirect_to(question_path(current_languages, @answer.question)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -70,7 +70,7 @@ class AnswersController < ApplicationController
     @question.answer_removed!
 
     respond_to do |format|
-      format.html { redirect_to(question_path(current_category, @question)) }
+      format.html { redirect_to(question_path(current_languages, @question)) }
       format.xml  { head :ok }
     end
   end
@@ -90,7 +90,7 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     if @answer.nil? || !current_user.can_modify?(@answer)
       flash[:error] = t("global.permission_denied")
-      redirect_to questions_path(current_category)
+      redirect_to questions_path(current_languages)
     end
   end
 end

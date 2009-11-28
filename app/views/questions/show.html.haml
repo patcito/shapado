@@ -14,23 +14,23 @@
       %div{:style => "text-align: center"}
         -if logged_in?
           -if @question.watch_for?(current_user)
-            = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_category, @question)
+            = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_languages, @question)
           -else
-            = link_to image_tag("layer-visible-off.png"), watch_question_path(current_category, @question), :title => t(".watch_tooltip")
-      =vote_box(@question, question_path(current_category,@question))
+            = link_to image_tag("layer-visible-off.png"), watch_question_path(current_languages, @question), :title => t(".watch_tooltip")
+      =vote_box(@question, question_path(current_languages,@question))
       %div{:style => "text-align: center"}
         -if logged_in? && favorite = current_user.favorite(@question)
-          -form_tag question_favorite_path(current_category, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
+          -form_tag question_favorite_path(current_languages, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
             = image_submit_tag("favorites.png")
         -else
-          - form_tag question_favorites_path(current_category, @question.id), :id => "favorite_form" do
+          - form_tag question_favorites_path(current_languages, @question.id), :id => "favorite_form" do
             = image_submit_tag("unfavorites.png")
         &= @question.favorites_count
 
       .buttons
         -if logged_in?
           -if current_user.can_modify?(@question)
-            = link_to t('scaffold.edit'), edit_question_path(current_category, @question), :class => "button"
+            = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
           -if current_user.mod_of?(@question.group)
             %br
             = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
@@ -39,7 +39,7 @@
     .tags-list
       -@question.tags.each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(:category => current_category, :tags => tag)
+          = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
     %br.clear
     %span{:style => "width: 92%"}
       .answer_info.box.right{:style => "width: 25%"}
@@ -56,14 +56,14 @@
           .actions
             -if current_user != @question.user
               .left.internal
-                = link_to t(".flag"), flag_question_path(current_category, @question), :class => "flag-link", :rel => 'nofollow'
+                = link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
             -if current_user.admin?
               .left.internal
-                = link_to "move question", move_question_path(current_category, @question), :rel => 'nofollow'
+                = link_to "move question", move_question_path(current_languages, @question), :rel => 'nofollow'
           .clear
           .flag_form.hidden
             -flag.flaggeable = @question
-            = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category, @question) }
+            = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages, @question) }
     .clear
 
 %a{:name=>"answers"}
@@ -78,11 +78,11 @@
       = t('.another_answers')
       .right.tabs
         .tab.votes
-          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
+          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers"))
         .tab.newest
-          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
+          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers"))
         .tab.oldest
-          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
+          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   -else
@@ -90,11 +90,11 @@
       = h(t('.answers'))
       .right.tabs
         .tab.votes
-          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_category, @question, :sort=>"votes", :anchor => "answers"))
+          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers"))
         .tab.newest
-          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_category, @question, :sort=>"newest", :anchor => "answers"))
+          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers"))
         .tab.oldest
-          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_category, @question, :sort=>"oldest", :anchor => "answers"))
+          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers"))
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
   =will_paginate(@answers)
@@ -104,7 +104,7 @@
 
 -if logged_in?
   -unless @question.answered
-    -form_for @answer, :url => question_answers_path(current_category, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
+    -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
       = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
       = submit_tag t('answers.form.submit')
     %hr

@@ -58,7 +58,7 @@ class QuestionsController < ApplicationController
     end
 
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
-                    merge(language_conditions.merge(categories_conditions)), 25)
+                    merge(language_conditions.merge(language_conditions)), 25)
 
     if @active_subtab != "mytags"
       @questions = Question.paginate({:order => order,
@@ -83,7 +83,7 @@ class QuestionsController < ApplicationController
   def tags
     set_page_title(t("layouts.application.tags"))
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
-                    merge(language_conditions.merge(categories_conditions)))
+                    merge(language_conditions.merge(language_conditions)))
   end
 
   # GET /questions/1
@@ -151,7 +151,7 @@ class QuestionsController < ApplicationController
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
-        format.html { redirect_to(question_path(current_category, @question)) }
+        format.html { redirect_to(question_path(current_languages, @question)) }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
@@ -167,7 +167,7 @@ class QuestionsController < ApplicationController
       @question.safe_update(%w[title body language category tags], params[:question])
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
-        format.html { redirect_to(question_path(current_category,@question)) }
+        format.html { redirect_to(question_path(current_languages,@question)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -199,7 +199,7 @@ class QuestionsController < ApplicationController
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
-        format.html { redirect_to question_path(current_category, @question) }
+        format.html { redirect_to question_path(current_languages, @question) }
       else
         format.html { render :action => "show" }
       end
@@ -218,7 +218,7 @@ class QuestionsController < ApplicationController
         if current_user != answer_owner
           answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
-        format.html { redirect_to question_path(current_category, @question) }
+        format.html { redirect_to question_path(current_languages, @question) }
       else
         format.html { render :action => "show" }
       end
@@ -241,13 +241,13 @@ class QuestionsController < ApplicationController
     @question.add_watcher(current_user)
     flash[:notice] = t("questions.watch.success")
 
-    redirect_to question_path(current_category, @question)
+    redirect_to question_path(current_languages, @question)
   end
 
   def unwatch
     @question = Question.find_by_slug_or_id(params[:id])
     @question.remove_watcher(current_user)
-    redirect_to question_path(current_category, @question)
+    redirect_to question_path(current_languages, @question)
   end
 
   def move
@@ -262,7 +262,7 @@ class QuestionsController < ApplicationController
       @question.group = @group
       @question.save
       flash[:notice] = t("questions.move_to.success", :group => @group.name)
-      redirect_to question_path(current_category, @question)
+      redirect_to question_path(current_languages, @question)
     else
       flash[:error] = t("questions.move_to.group_dont_exists",
                         :group => params[:question][:group])
@@ -278,7 +278,7 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
       flash[:error] = t("global.permission_denied")
-      redirect_to question_path(current_category, @question)
+      redirect_to question_path(current_languages, @question)
     end
   end
 

@@ -4,7 +4,7 @@
 .answer{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
   .answer_body
-    = vote_box(answer, question_path(current_category, question))
+    = vote_box(answer, question_path(current_languages, question))
     .markdown{:style => "width: 92%"}
       = markdown(answer.body)
     %br.clear
@@ -39,32 +39,32 @@
           = h(child.body)
           %hr
       %span.actions
-        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(current_category, @question, answer, :anchor => answer.id)
+        = link_to t("link", :scope => "activerecord.attributes.answer"), question_answer_path(current_languages, @question, answer, :anchor => answer.id)
         -if current_user != answer.user
           |
-          = link_to t(".flag"), flag_question_answer_path(current_category,@question,answer), :class => "flag-link"
+          = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
       .right
         = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
       .clear
-      -form_for comment, :url => question_answers_path(current_category, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
+      -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
         = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
         = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit")
       -if current_user != answer.user
         .flag_form.hidden
           -flag = Flag.new
           -flag.flaggeable = answer
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_category,@question) }
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages,@question) }
     / Buttons
     -if logged_in?
       .buttons
         -if current_user.can_modify?(answer)
-          = link_to t("scaffold.edit"), edit_question_answer_path(current_category, @question, answer), :class =>"button"
-          = link_to t("scaffold.destroy"), question_answer_path(current_category, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
+          = link_to t("scaffold.edit"), edit_question_answer_path(current_languages, @question, answer), :class =>"button"
+          = link_to t("scaffold.destroy"), question_answer_path(current_languages, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"button cancel"
         -if current_user.can_modify?(@question)
           -unless @question.answered
-            = link_to t(".pick_answer"), solve_question_path(current_category, @question, :answer_id => answer), :class =>"button"
+            = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer), :class =>"button"
           -if solution
-            = link_to t(".unset_answer"),  unsolve_question_path(current_category, @question), :class =>"button"
+            = link_to t(".unset_answer"),  unsolve_question_path(current_languages, @question), :class =>"button"
         -if current_user.mod_of?(answer.group)
           = link_to "ban", ban_path(:answer_ids => [answer.id]), :class => "button", :confirm => "are you sure?"
   .clear

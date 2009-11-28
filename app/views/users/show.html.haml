@@ -22,7 +22,7 @@
           &=answer.votes_average
           = t(:votes, :scope => "activerecord.attributes.question")
         %td.question
-          = link_to h(answer.question.title), question_path(current_category, answer.question, :anchor => answer.id)
+          = link_to h(answer.question.title), question_path(current_languages, answer.question, :anchor => answer.id)
   =will_paginate @answers, :param_name => "answers_page"
 
 -content_for :sidebar do

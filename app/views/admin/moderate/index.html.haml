@@ -29,7 +29,7 @@
           %td.numeric
             =question.flags_count
           %td
-            = link_to h(question.title), question_path(current_category, question)
+            = link_to h(question.title), question_path(current_languages, question)
           %td
             = truncate(question.body, :length => 100)
     = will_paginate @questions, :param_name => "questions_page"
@@ -52,7 +52,7 @@
           %td.numeric
             =answer.flags_count
           %td
-            = link_to h(answer.question.title), question_path(current_category, answer.question)
+            = link_to h(answer.question.title), question_path(current_languages, answer.question)
           %td
             = truncate(answer.body, :length => 100)
     = will_paginate @answers, :param_name => "answers_page"

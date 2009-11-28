@@ -42,11 +42,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_group
 
-  def current_category
-    params.fetch(:category, "all")
-  end
-  helper_method :current_category
-
   def current_tags
     if params[:tags].kind_of?(String)
       @current_tags ||= params[:tags].split("+")
@@ -72,34 +67,30 @@ class ApplicationController < ActionController::Base
     end
     conditions.deep_merge!({:group_id => current_group.id})
     conditions.deep_merge!(language_conditions)
-    conditions.deep_merge!(categories_conditions)
   end
   helper_method :scoped_conditions
 
-  def language_conditions
-    conditions = {}
+  def current_languages
     if @languages && !@languages.empty?
-      conditions[:language] = { :$in => @languages}
+      current_languages = @languages
     elsif current_user && !current_user.preferred_languages.empty?
-      conditions[:language] = { :$in => current_user.preferred_languages}
+      current_languages = current_user.preferred_languages
     elsif params[:language]
       langs = params[:language].kind_of?(Array) ? params[:language] : [params[:language]]
-      conditions[:language] = {:$in => langs}
+      current_languages = langs
     else
-      conditions[:language] = {:$in => [I18n.locale.to_s.split("-").first]}
+      current_languages = I18n.locale.to_s.split("-").first.to_a
     end
+    current_languages
+  end
+  helper_method :current_languages
+
+  def language_conditions
+    conditions = {}
+    conditions[:language] = { :$in => current_languages}
     conditions
   end
   helper_method :language_conditions
-
-  def categories_conditions
-    conditions = {}
-    if current_category != "all"
-      conditions.deep_merge!({:category => current_category})
-    end
-    conditions
-  end
-  helper_method :categories_conditions
 
   def available_locales; AVAILABLE_LOCALES; end
 

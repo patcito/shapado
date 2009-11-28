@@ -7,8 +7,8 @@
 .question{:class => klass}
   -if logged_in? && current_user.can_modify?(question)
     .right.buttons
-      = link_to t('scaffold.edit'), edit_question_path(current_category, question), :class => "button"
-      = link_to t('scaffold.destroy'), question_path(current_category, question), :confirm => t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
+      = link_to t('scaffold.edit'), edit_question_path(current_languages, question), :class => "button"
+      = link_to t('scaffold.destroy'), question_path(current_languages, question), :confirm => t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
   %span.left
     .box
       .item
@@ -32,7 +32,7 @@
       -title = h(question.title)
       -if query_regexp
         -title = title.gsub(query_regexp, '<span class="search-highlight">\1</span>')
-      = link_to title, question_path(current_category, question), :title => truncate(question.body, :length => 200)
+      = link_to title, question_path(current_languages, question), :title => truncate(question.body, :length => 200)
       .question_summary
         -if query_regexp
           -body = excerpt_with_regexp(h(question.body), query_regexp, :radius => 50)
@@ -46,7 +46,7 @@
     .tags-list.left
       -question.tags.each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(current_category, :tags => tag)
+          = link_to h(tag), questions_path(current_languages, :tags => tag)
     .right
       = t(:asked_by, :scope => "activerecord.attributes.question")
       = link_to h(question.user.login|| question.user_id), user_path(question.user)

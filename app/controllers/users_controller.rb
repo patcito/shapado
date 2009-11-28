@@ -89,7 +89,7 @@ class UsersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html {redirect_to questions_path(current_category)}
+      format.html {redirect_to questions_path(current_languages)}
     end
   end
 

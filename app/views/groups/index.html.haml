@@ -12,12 +12,12 @@
     %li.list-item
       %span
         -if group.state == "active"
-          = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), subdomain_url(group.subdomain)
+          = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), host_url(group.custom_domain)
         -else
           = image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top")
       %span
         -if group.state == "active"
-          = link_to h(group.name), subdomain_url(group.subdomain)
+          = link_to h(group.name), host_url(group.custom_domain)
         -else
           &= group.name
         &= group.description

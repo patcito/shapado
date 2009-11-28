@@ -21,7 +21,7 @@
   .tags-list
     -@group.categories.each do |cat|
       %span.tag
-        = link_to h(cat), subdomain_url(@group.subdomain, :controller => "questions", :action => "index", :category => cat)
+        = link_to h(cat), subdomain_url(@group.subdomain, :controller => "questions", :action => "index", :language => cat)
 
   %br
   -case @group.state

@@ -2,7 +2,7 @@ module QuestionsHelper
   def microblogging_message(question)
     message = "#{h(question.title)}"
     message += " "
-    message += question_path(current_category, question, :only_path =>false)
+    message += question_path(current_languages, question, :only_path =>false)
     message
   end
 
@@ -14,7 +14,7 @@ module QuestionsHelper
       when :identica
         url = "http://identi.ca/notice/new?status_textarea=#{microblogging_message(question)}"
       when :facebook
-        url = "http://www.facebook.com/sharer.php?u=#{question_path(current_category, question, :only_path =>false)}&t=TEXTO"
+        url = "http://www.facebook.com/sharer.php?u=#{question_path(current_languages, question, :only_path =>false)}&t=TEXTO"
     end
     URI.escape(url)
   end

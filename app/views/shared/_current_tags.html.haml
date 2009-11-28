@@ -1,5 +1,5 @@
 .tags-list
   -current_tags.each do |tag|
     %span.tag
-      = link_to h(tag), url_for(:category => current_category, :tags => tag)
-      = link_to "x", url_for(:category => current_category, :tags => (current_tags - tag.to_a).join("+")), :class => "remove_tag"
+      = link_to h(tag), url_for(:language => current_languages, :tags => tag)
+      = link_to "x", url_for(:language => current_languages, :tags => (current_tags - tag.to_a).join("+")), :class => "remove_tag"

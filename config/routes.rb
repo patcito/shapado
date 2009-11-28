@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
                         :collection => {:autocomplete_for_user_login => :get}
   map.resource :session
 
-  map.resources :questions, :path_prefix => '/:category',
+  map.resources :questions, :path_prefix => '/:language',
                             :collection => {:tags => :get,
                                             :unanswered => :get},
                             :member => {:solve => :get,

@@ -4,7 +4,7 @@
       %ul
         %li{:style => "line-height: 14px"}
           %span.tag
-            =link_to h(tag["name"]), url_for(:category => current_category, :tags => (current_tags + tag["name"].to_a).join("+"))
+            =link_to h(tag["name"]), url_for(:language => current_languages, :tags => (current_tags + tag["name"].to_a).join("+"))
           %span{:style => "padding-left: 4px; clear:both"}
             %b
               x

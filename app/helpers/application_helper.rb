@@ -32,7 +32,7 @@ module ApplicationHelper
   def tag_cloud(tags = [], options = {})
     if tags.empty?
       tags = Question.tag_cloud({:group_id => current_group.id}.
-                        merge(language_conditions.merge(categories_conditions)))
+                        merge(language_conditions.merge(language_conditions)))
     end
 
     return '' if tags.size <= 2
@@ -51,7 +51,7 @@ module ApplicationHelper
     cloud = '<div class="tag_cloud">'
     tags.each do |tag|
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
-      url = questions_path(:category => current_category, :tags => tag["name"])
+      url = questions_path(:language => current_languages, :tags => tag["name"])
       cloud << "<span>#{link_to(tag["name"], url,
           :style => "font-size:#{size}px", :class => "#{tag_class}")}</span> "
     end

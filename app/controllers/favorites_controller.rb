@@ -14,11 +14,11 @@ class FavoritesController < ApplicationController
       if @favorite.save
         @question.add_favorite!(@favorite, current_user)
         flash[:notice] = t("favorites.create.success")
-        format.html { redirect_to(question_path(current_category, @question)) }
+        format.html { redirect_to(question_path(current_languages, @question)) }
         format.xml  { render :xml => @favorite, :status => :created, :location => @favorite }
       else
         flash[:error] = @favorite.errors.full_messages.join("**")
-        format.html { redirect_to(question_path(current_category, @question)) }
+        format.html { redirect_to(question_path(current_languages, @question)) }
         format.xml  { render :xml => @favorite.errors, :status => :unprocessable_entity }
       end
     end
@@ -35,7 +35,7 @@ class FavoritesController < ApplicationController
     @question.remove_watcher(current_user)
 
     respond_to do |format|
-      format.html { redirect_to(question_path(current_category, @question)) }
+      format.html { redirect_to(question_path(current_languages, @question)) }
       format.xml  { head :ok }
     end
   end
@@ -48,7 +48,7 @@ class FavoritesController < ApplicationController
       respond_to do |format|
         format.html do
           flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
-          redirect_to question_path(current_category, @question)
+          redirect_to question_path(current_languages, @question)
         end
         format.json do
           flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
