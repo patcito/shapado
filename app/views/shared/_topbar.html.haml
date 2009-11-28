@@ -29,7 +29,7 @@
   -groups = Group.find(:all, :limit => 5, :state => "active", :isolate => false)
   -groups.delete(current_group)
   %li.last
-    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), groups_url
+    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), AppConfig.domain+'/groups'
     ▼
     %ul
       -groups.each do |g|
