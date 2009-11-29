@@ -51,11 +51,11 @@
 
 .field-group
   .label-container
-    = form.label :categories
+    = form.label :default_tags
   .field
-    = form.text_field :categories, :value => @group.categories.join(", "), :class => "text-field"
+    = form.text_field :default_tags, :value => @group.categories.join(", "), :class => "text-field"
     .tip
-      Separate categories by commas.
+      Separate default tags by commas.
 
 .field-group
   .label-container

@@ -10,6 +10,7 @@ class Group
   key :legend, String
   key :description, String
   key :categories, Array
+  key :default_tags, Array
 
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
@@ -31,11 +32,11 @@ class Group
   validates_format_of       :subdomain, :with => /^[a-z0-9\-]+$/i
   validates_length_of       :subdomain, :within => 3..32
 
-  def categories=(c)
+  def default_tags=(c)
     if c.kind_of?(String)
       c = c.downcase.split(",").join(" ").split(" ")
     end
-    self[:categories] = c
+    self[:default_tags] = c
   end
   alias :user :owner
 

@@ -5,6 +5,13 @@
       =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
       -if logged_in? && current_user.can_modify?(current_group)
         = link_to t("groups.manage"), group_path(current_group)
+  %li
+    = link_to "tags", ""
+    ▼
+    %ul
+      -current_group.default_tags.each do |tag|
+        %li
+          = link_to(tag, questions_url(:language => current_languages))
 
   %li.menu
     -if @languages && !@languages.empty?
@@ -29,7 +36,7 @@
   -groups = Group.find(:all, :limit => 5, :state => "active", :isolate => false)
   -groups.delete(current_group)
   %li.last
-    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), AppConfig.domain+'/groups'
+    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), groups_url
     ▼
     %ul
       -groups.each do |g|

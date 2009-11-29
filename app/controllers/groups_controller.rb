@@ -68,7 +68,7 @@ class GroupsController < ApplicationController
       params[:group][:domain] = "#{params[:group][:subdomain]}.#{AppConfig.domain}"
     end
 
-    @group.safe_update(%w[name legend description categories subdomain logo_data], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
     @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
     @group.owner = current_user
 

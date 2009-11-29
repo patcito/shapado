@@ -61,5 +61,26 @@ namespace :fixdb do
       end
     end
   end
+
+  task :categories_to_default_tags => :environment do
+    Group.all.each do |g|
+      unless g.categories.nil?
+        g.default_tags = g.categories
+        g.categories = nil
+        g.save
+      end
+    end
+  end
+
+
+  task :question_categories_to_default_tags => :environment do
+    Question.all.each do |q|
+      unless q.category.nil?
+        q.tags << q.category
+        q.category = nil
+        q.save
+      end
+    end
+  end
 end
 

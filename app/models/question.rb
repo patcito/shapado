@@ -39,6 +39,9 @@ class Question
 
   key :watchers, Array
 
+  # delete this line after running task fixdb:question_categories_to_default_tags
+  key :category, String
+
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
