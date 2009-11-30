@@ -53,7 +53,7 @@
   .label-container
     = form.label :default_tags
   .field
-    = form.text_field :default_tags, :value => @group.categories.join(", "), :class => "text-field"
+    = form.text_field :default_tags, :value => @group.default_tags.join(", "), :class => "text-field"
     .tip
       Separate default tags by commas.
 
