@@ -1,10 +1,6 @@
 atom_feed do |feed|
   title = "#{AppConfig.domain} - #{t("activerecord.models.questions")}"
 
-  if current_languages != "all"
-    title += " category: #{@category}"
-  end
-
   tags = params[:tags]
   if tags && !tags.empty?
     title += " tags: #{tags.kind_of?(String) ? tags : tags.join(", ")}"

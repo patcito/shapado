@@ -141,7 +141,7 @@ class QuestionsController < ApplicationController
   # POST /questions.xml
   def create
     @question = Question.new
-    @question.safe_update(%w[title body language category tags], params[:question])
+    @question.safe_update(%w[title body language tags], params[:question])
     @question.group = current_group
     @question.user = current_user
 
@@ -164,7 +164,7 @@ class QuestionsController < ApplicationController
   # PUT /questions/1.xml
   def update
     respond_to do |format|
-      @question.safe_update(%w[title body language category tags], params[:question])
+      @question.safe_update(%w[title body language tags], params[:question])
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(current_languages,@question)) }

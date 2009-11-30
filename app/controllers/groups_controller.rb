@@ -91,9 +91,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description categories subdomain logo_data], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
     @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
-
     respond_to do |format|
       if @group.save
         flash[:notice] = 'Group was successfully updated.'
