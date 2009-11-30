@@ -1,0 +1,11 @@
+
+%br
+-if @feed_urls && !@feed_urls.empty?
+  -@feed_urls.each do |title, url|
+    %a.feed_url{:href => url}
+      %span.icon
+        =image_tag "atom.png"
+      %span.text
+        = h(title)
+    .clear
+    %br

@@ -1,0 +1,12 @@
+
+-if @questions
+  .questions_count
+    = number_with_delimiter(@questions.total_entries)
+
+  -if current_tags.empty?
+    %p
+      = t "layouts.application.questions"
+  -else
+    %p
+      = t "layouts.application.questions_tagged"
+    = render :partial => "shared/current_tags", :object => current_tags
