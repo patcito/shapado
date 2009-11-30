@@ -53,10 +53,12 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    if params[:group][:custom_domain].empty?
-      params[:group][:custom_domain] = params[:group][:subdomain]+'.'+AppConfig.domain
+
+    if params[:group][:domain].empty?
+      params[:group][:domain] = "#{params[:group][:subdomain]}.#{AppConfig.domain}"
     end
-    @group.safe_update(%w[name description legend categories subdomain custom_domain], params[:group])
+
+    @group.safe_update(%w[name description legend categories subdomain domain], params[:group])
     @group.owner = current_user
 
     respond_to do |format|
@@ -78,7 +80,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description categories logo_data custom_domain], params[:group])
+    @group.safe_update(%w[name legend description categories logo_data domain], params[:group])
 
     respond_to do |format|
       if @group.save

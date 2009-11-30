@@ -41,49 +41,22 @@ namespace :fixdb do
     Question.collection.find.each do |q|
       if q["_metatags"]
         Question.collection.update({:_id => q["_id"]},
-                                {:$set => {"_metatags"=>nil}}, :safe => true)
+                                   {:$set => {"_metatags"=>nil}}, :safe => true)
       end
     end
-  end
-
-  task :foreign_keys => :environment do
-    def fix_model(model, keys)
-      model.collection.find.each do |doc|
-        keys.each do |key|
-          id = doc[key.to_s]
-          if id.kind_of? String
-            print "."
-            if obj_id = Mongo::ObjectID.from_string(id)
-              model.collection.update({:_id => doc["_id"]},
-                                {:$set => {key.to_s=>obj_id}}, :safe => true)
-            end
-          end
-        end
-      end
-    end
-    print "fixing Question"
-    fix_model(Question, [:user_id, :group_id])
-    print "\nfixing Answer"
-    fix_model(Answer, [:user_id, :question_id, :group_id, :parent_id])
-    print "\nfixing Logo"
-    fix_model(Logo, [:group_id])
-    print "\nfixing Vote"
-    fix_model(Vote, [:user_id, :voateable_id])
-    print "\nfixing Flag"
-    fix_model(Flag, [:user_id, :flaggeable_id])
-    print "\nfixing Group"
-    fix_model(Group, [:owner_id])
-    print "\nfixing Member"
-    fix_model(Member, [:user_id, :group_id])
-    print "\nfixing Favorite"
-    fix_model(Favorite, [:user_id, :group_id, :question_id])
-    print "\nfinish"
   end
 
   task :fix_subdomains => :environment do
     Group.all.each do |g|
-      if g.custom_domain.nil?
-        g.custom_domain = g.subdomain+'.'+AppConfig.domain
+      custom_domain = g["custom_domain"] rescue nil
+
+      if g.domain.blank?
+        if custom_domain.blank?
+          g.domain = "#{g.subdomain}.#{AppConfig.domain}"
+        else
+          g.domain = custom_domain
+          g["custom_domain"] = nil
+        end
         g.save
       end
     end

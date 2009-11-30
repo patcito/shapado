@@ -6,7 +6,7 @@ class Group
   slug_key :name
   key :name, String, :required => true
   key :subdomain, String
-  key :custom_domain, String
+  key :domain, String
   key :legend, String
   key :description, String
   key :categories, Array

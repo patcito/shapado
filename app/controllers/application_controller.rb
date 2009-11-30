@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  before_filter :find_conditions
+  before_filter :find_languages
   before_filter :set_locale
 
   protected
@@ -22,19 +22,13 @@ class ApplicationController < ActionController::Base
     raise AccessDenied
   end
 
-
   def current_group
-    #FIXME ensure that the current group exists
     subdomains = request.subdomains
-    subdomains.delete("www") if request.host == 'www.'+AppConfig.domain
-    unless subdomains.empty?
-      @current_group ||= begin
-        group = Group.find(:first, :limit => 1, :state => "active",
-                                                :custom_domain => request.host)
-        group
-      end
-    end
-    @current_group ||= Group.find_by_name(AppConfig.application_name)
+    subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
+
+    @current_group ||= Group.find(:first, :state => "active", :domain => request.host) ||
+                       Group.find_by_name(AppConfig.application_name)
+
     @current_group
   end
   helper_method :current_group
@@ -55,7 +49,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_tags
 
-  def find_conditions
+  def find_languages
     @languages ||= begin
       subdomains = request.subdomains
       subdomains.delete("www") if request.host == 'www.'+AppConfig.domain
