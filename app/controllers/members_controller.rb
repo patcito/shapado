@@ -4,7 +4,11 @@ class MembersController < ApplicationController
   before_filter :check_permissions, :only => [:create, :update, :edit, :destroy]
 
   def index
-    @group = Group.find_by_slug_or_id(params[:group_id])
+    if params[:group_id]
+      @group = Group.find_by_slug_or_id(params[:group_id])
+    else
+      @group = current_group
+    end
     @members = @group.memberships.paginate(:page => params[:page] || 1,
                                            :per_page => params[:per_page] || 25)
     @member = Member.new

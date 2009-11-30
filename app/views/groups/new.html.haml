@@ -1,10 +1,10 @@
 
 %h2
-  Request your group
+  = t(".title")
 
 -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
   = render :partial => "form", :object => f
   .buttons
-    = f.submit 'Create'
-    = link_to 'Back', groups_path, :class => "cancel button"
+    = f.submit  t("scaffold.create")
+    = link_to  t("scaffold.back"), groups_path, :class => "cancel button"

@@ -45,6 +45,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :flags
 
   map.search '/search', :controller => "searches", :action => "index"
+  map.about '/about', :controller => "groups", :action => "show"
+  map.members '/members', :controller => "members", :action => "index"
   map.root :controller => "welcome"
 
   map.connect ':controller/:action/:id'

@@ -36,18 +36,6 @@
     %li
       = link_to 'Get the facts!', "/facts#facts"
 
-  -groups = Group.find(:all, :limit => 5, :state => "active", :isolate => false)
-  -groups.delete(current_group)
-  %li.last
-    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), groups_url
-    ▼
-    %ul
-      -groups.each do |g|
-        %li
-          = link_to h(g.name), g.domain
-      %li
-        = link_to t("groups.index.request_group"), new_group_url
-
 
 %span#user-actions.right
   #user-nav

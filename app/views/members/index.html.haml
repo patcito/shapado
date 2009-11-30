@@ -3,12 +3,16 @@
   = javascript_include_tag 'jquery.autocomplete.js'
 
 #show_groups.subtitle.members
-  = t(".title", :name => h(@group.name))
+  -if @group.isolate
+    = t(".title_isolate", :name => h(@group.name))
+  -else
+    = t(".title", :name => h(@group.name))
+
   .right.tabs
     .tab.about
-      = link_to "about", group_path(@group)
+      = link_to t("groups.index.about"), about_path
     .tab.members
-      = link_to "members", group_members_path(@group)
+      = link_to "members", members_path
 
 -if logged_in? && current_user.owner_of?(@group)
   #manage_members.box
@@ -64,4 +68,3 @@
               %td.users_info_item.sec_col{:title => t(:role, :scope => "activerecord.attributes.user")}
                 = t(:role, :scope => "activerecord.attributes.member")
         .clear
-

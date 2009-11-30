@@ -14,8 +14,26 @@
       title: "Grupo {{name}}"
       visit_group: visitar este grupo
       group_categories: "as categorias para este grupo são:"
-      group_created_by: este grupo foi criado por
       group_awaiting_acceptance: "Este grupo está à espera da permissão de um moderador."
       group_closed: Este grupo foi fechado.
       accept_group: Aceitar este grupo
       close_group: Fechar este grupo
+    new:
+      title: Request your group
+    isolate:
+      title: "Sobre {{name}}"
+      group_categories: "categories:"
+  activerecord:
+    models:
+      groups: Grupos
+      group: grupo
+    attributes:
+      group:
+        name: name
+        subdomain: URL
+        domain: Domain
+        legend: Legend
+        description: description
+        state: State
+        categories: Categories
+        owner: "este grupo foi criado por {{login}}"

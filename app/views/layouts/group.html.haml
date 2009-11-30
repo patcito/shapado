@@ -1,0 +1,46 @@
+!!! Strict
+%html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    = render :partial => "layouts/head"
+
+  %body
+    #top_bar
+      = render :partial => "shared/isolate_topbar"
+    - if logged_in?
+      .feedback
+        =link_to "Feedback", feedback_path, :id => "feedback"
+    .two-column
+      -if !AppConfig.system_notice.blank?
+        #system-msg
+          .internal
+            = AppConfig.system_notice
+      #header
+        .feedbackform.hide
+          = render :partial => "welcome/feedback"
+      .clear
+      %br
+      #navigation{:class => "#{@active_tab}"}
+        #menu_primary
+          = render :partial => "shared/user_navigation"
+      #main-content
+        #messages
+          -flash.each do |k,v|
+            .message{:class => k.to_s}
+              .internal.markdown
+                = markdown(v)
+        #layout
+          #content
+            .internal
+              = yield
+          #sidebar
+            .internal
+              =  render :partial => "layouts/question_counter"
+              = yield :sidebar
+              = render :partial => "shared/adbard"
+              = render :partial => "layouts/feed_urls"
+          .clear
+      #footer
+        = render :partial => "layouts/footer"
+
+      = render :partial => "shared/googlean"
+      .clear

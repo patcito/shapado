@@ -15,11 +15,20 @@ class ApplicationController < ActionController::Base
 
   before_filter :find_languages
   before_filter :set_locale
+  layout :set_layout
 
   protected
   def access_denied
     store_location
     raise AccessDenied
+  end
+
+  def set_layout
+    if current_group.isolate
+      'group'
+    else
+      'application'
+    end
   end
 
   def current_group
@@ -133,13 +142,21 @@ class ApplicationController < ActionController::Base
       if current_group.name == AppConfig.application_name
         "#{@page_title} - #{AppConfig.application_name}: #{t("layouts.application.title")}"
       else
-        "#{@page_title} - #{current_group.name}@#{AppConfig.application_name}: #{current_group.legend}"
+        if current_group.isolate
+          "#{@page_title} - #{current_group.name} #{current_group.legend}"
+        else
+          "#{@page_title} - #{current_group.name}@#{AppConfig.application_name}: #{current_group.legend}"
+        end
       end
     else
       if current_group.name == AppConfig.application_name
         "#{AppConfig.application_name} - #{t("layouts.application.title")}"
       else
-        "#{current_group.name}@#{AppConfig.application_name} - #{current_group.legend}"
+        if current_group.isolate
+          "#{current_group.name} - #{current_group.legend}"
+        else
+          "#{current_group.name}@#{AppConfig.application_name} - #{current_group.legend}"
+        end
       end
     end
   end

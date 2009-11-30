@@ -26,10 +26,20 @@ class GroupsController < ApplicationController
   # GET /groups/1.xml
   def show
     @active_subtab = "about"
-    @group = Group.find_by_slug_or_id(params[:id])
+    if params[:id]
+      @group = Group.find_by_slug_or_id(params[:id])
+    else
+      @group = current_group
+    end
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html do
+        if @group.isolate
+          render :template => 'groups/isolate'
+        else
+          render
+        end
+      end# show.html.erb
       format.xml  { render :xml => @group }
     end
   end
