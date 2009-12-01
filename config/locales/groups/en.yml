@@ -27,6 +27,7 @@ en:
     models:
       groups: Groups
       group: group
+      default_tags_message: "You can't have more than 10 default tags"
     attributes:
       group:
         name: name

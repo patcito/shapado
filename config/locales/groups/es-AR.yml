@@ -27,6 +27,7 @@
     models:
       groups: Grupos
       group: grupo
+      default_tags_message: No se puede tener mas de 10 tags por defecto.
     attributes:
       group:
         name: Nombre
