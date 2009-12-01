@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
+  before_filter :check_group_access
   before_filter :find_languages
   before_filter :set_locale
   layout :set_layout
@@ -21,6 +22,12 @@ class ApplicationController < ActionController::Base
   def access_denied
     store_location
     raise AccessDenied
+  end
+
+  def check_group_access
+    if current_group.private && (!logged_in? || !current_user.user_of?(current_group))
+      access_denied
+    end
   end
 
   def set_layout

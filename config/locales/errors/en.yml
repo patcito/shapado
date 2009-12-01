@@ -5,6 +5,7 @@ en:
     help_us_answer: Help us to answer {{link}}
     search: "search"
     forbidden:
+      title: "access denied"
       explanation: "You don't have the required rights to access this page."
     not_found:
       title: "Page not found."
