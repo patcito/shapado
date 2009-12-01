@@ -6,6 +6,7 @@
   members:
     index:
       title: "Members of {{name}}'s Group"
+      title_isolate: "Members of {{name}}"
       manage_members_title: Manage members
     form:
       login_tip: "search as you type"

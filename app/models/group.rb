@@ -12,6 +12,7 @@ class Group
   key :categories, Array
 
   key :state, String, :default => "pending" #pending, active, closed
+  key :isolate, Boolean, :default => false
 
   key :owner_id, String
   belongs_to :owner, :class_name => "User"

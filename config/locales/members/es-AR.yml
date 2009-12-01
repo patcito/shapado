@@ -6,6 +6,7 @@
   members:
     index:
       title: "Miembros del group {{name}}"
+      title_isolate: "Miembros de {{name}}"
       manage_members_title: "Administrar membresías"
     form:
       login_tip: "busca cuando usted digita"

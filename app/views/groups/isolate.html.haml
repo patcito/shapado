@@ -1,21 +1,19 @@
 #show_groups.subtitle.about
-  = t(".title", :name => h(@group.name))
+  = link_to t(".title", :name => h(@group.name)), @group.domain
   .right.tabs
     .tab.about
-      = link_to t(".about", :default => :"groups.index.about"), group_path(@group)
+      = link_to t(".about", :default => :"groups.index.about"), about_path
     .tab.members
-      = link_to "members", group_members_path(@group)
+      = link_to "members", members_path
 
 
 = image_tag(logo_group_path(@group), :class => "group_logo")
-= link_to t(".visit_group"), subdomain_url(@group.subdomain)
+
 %br
 
 %p
-  &= @group.description
-  -if @group.owner.login
-    %b= t(".group_created_by")
-    = link_to h(@group.owner.login), user_path(@group.owner)
+  .markdown
+    =markdown( @group.description)
   %br
   %b= t(".group_categories")
   .tags-list
@@ -24,15 +22,16 @@
         = link_to h(cat), subdomain_url(@group.subdomain, :controller => "questions", :action => "index", :category => cat)
 
   %br
-  -case @group.state
-    -when "pending"
-      .message.warn
-        .internal
-          = t(".group_awaiting_acceptance")
-    -when "close"
-      .message.warn
-        .internal
-          = t(".group_closed")
+  -if logged_in? && current_user.owner_of?(@group)
+    -case @group.state
+      -when "pending"
+        .message.warn
+          .internal
+            = t("groups.show.group_awaiting_acceptance")
+      -when "close"
+        .message.warn
+          .internal
+            = t("groups.show.group_closed")
 
 .buttons
   -if logged_in?

@@ -2,7 +2,7 @@
 %ul#group_menu.left
   %li
     %span#group
-      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
+      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), subdomain_url(current_group.subdomain)
       -if logged_in? && current_user.can_modify?(current_group)
         = link_to t("groups.manage"), group_path(current_group)
 
@@ -35,18 +35,6 @@
   -if !logged_in?
     %li
       = link_to 'Get the facts!', "/facts#facts"
-
-  -groups = Group.find(:all, :limit => 5, :state => "active", :isolate => false)
-  -groups.delete(current_group)
-  %li.last
-    = link_to t("activerecord.models.groups", :default => :"groups.index.title"), groups_url
-    ▼
-    %ul
-      -groups.each do |g|
-        %li
-          = link_to h(g.name), g.domain
-      %li
-        = link_to t("groups.index.request_group"), new_group_url
 
 
 %span#user-actions.right

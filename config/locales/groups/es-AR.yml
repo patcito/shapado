@@ -1,6 +1,6 @@
 "es-AR":
   groups:
-    manage: "manage..."
+    manage: "administrar..."
     index:
       title: Grupos
       actives: activos
@@ -14,8 +14,26 @@
       title: "Grupo {{name}}"
       visit_group: visitar este grupo
       group_categories: "las categorias de este grupo son:"
-      group_created_by: este grupo ha sido creado por
       group_awaiting_acceptance: "Este grupo esta pendiente de la acceptacion de un moderador."
       group_closed: Este grupo ha sido cerrado.
       accept_group: Aceptar este grupo
       close_group: Cerrar este grupo
+    new:
+      title: Request your group
+    isolate:
+      title: "Sobre {{name}}"
+      group_categories: "categories:"
+  activerecord:
+    models:
+      groups: Grupos
+      group: grupo
+    attributes:
+      group:
+        name: Nombre
+        subdomain: URL
+        domain: Dominio
+        legend: Legenda
+        description: descripcion
+        state: Estado
+        categories: Categorias
+        owner: "Esta grupo fue creado por {{login}}"
