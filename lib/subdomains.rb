@@ -27,14 +27,18 @@ module Subdomains
   protected
   def subdomain_url(subdomain, options = {})
     options = {:controller=>"/welcome",:action=>"index"}.merge(options)
+    host = options.delete(:custom) unless host
     host = request.host.split("\.").last(2).join(".")
     request.protocol + "#{subdomain}." + host + request.port_string +
                                           url_for({:only_path =>true}.merge(options))
   end
 
   def domain_url(options = {})
-    host = request.host.split("\.").last(2).join(".")
-    request.protocol + "://#{host}" + request.port_string+
+    host = options.delete(:custom)
+
+    host = request.host.split("\.").last(2).join(".") unless host
+
+    request.protocol + "#{host}" + request.port_string+
                                           url_for({:only_path =>true}.merge(options))
   end
 
