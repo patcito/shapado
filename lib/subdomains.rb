@@ -27,8 +27,8 @@ module Subdomains
   protected
   def subdomain_url(subdomain, options = {})
     options = {:controller=>"/welcome",:action=>"index"}.merge(options)
-    host = options.delete(:custom) unless host
-    host = request.host.split("\.").last(2).join(".")
+    host = options.delete(:custom)
+    host = request.host.split("\.").last(2).join(".") unless host
     request.protocol + "#{subdomain}." + host + request.port_string +
                                           url_for({:only_path =>true}.merge(options))
   end

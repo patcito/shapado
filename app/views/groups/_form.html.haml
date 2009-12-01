@@ -24,6 +24,13 @@
       %span.tip
         =request.protocol
       = form.text_field :domain, :class=> "text-field"
+  .field-group
+    .label-container
+      = form.label :isolate, "Isolate"
+    .field
+      = form.check_box :isolate
+      .tip
+        isolate the group form other groups
 
 .field-group.clear
   .label-container

@@ -68,7 +68,8 @@ class GroupsController < ApplicationController
       params[:group][:domain] = "#{params[:group][:subdomain]}.#{AppConfig.domain}"
     end
 
-    @group.safe_update(%w[name description legend categories subdomain domain], params[:group])
+    @group.safe_update(%w[name legend description categories subdomain logo_data], params[:group])
+    @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
     @group.owner = current_user
 
     respond_to do |format|
@@ -90,7 +91,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description categories logo_data domain], params[:group])
+    @group.safe_update(%w[name legend description categories subdomain logo_data], params[:group])
+    @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
 
     respond_to do |format|
       if @group.save
