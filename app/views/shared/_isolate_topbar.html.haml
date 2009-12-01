@@ -6,16 +6,15 @@
       -if logged_in? && current_user.can_modify?(current_group)
         = link_to t("groups.manage"), group_path(current_group)
 
-  %li
-    -if current_category != "all"
-      = link_to category_desc(current_category), ""
-    -else
-      = link_to t("layouts.application.categories"), "/"
-    ▼
-    %ul
-      -category_options.each do |desc, value|
-        %li
-          = link_to(desc, questions_url(:category => value))
+  -unless current_group.default_tags.empty?
+    %li
+      = link_to "tags", questions_url(:language => current_languages)
+      ▼
+      %ul
+        -current_group.default_tags.each do |tag|
+          %li
+            = link_to(tag, questions_url(:language => current_languages, :tags => tag))
+
   %li.menu
     -if @languages && !@languages.empty?
       = link_to language_desc(@languages.first), ""
@@ -26,11 +25,11 @@
       -if logged_in?
         -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
           %li
-            = link_to desc, subdomain_url(value)
+            = link_to desc, domain_url(:language => value)
       -else
         -languages_options(nil, @languages).each do |desc, value|
           %li
-            = link_to desc, subdomain_url(value)
+            = link_to desc, domain_url(:language => value)
 
   -if !logged_in?
     %li
