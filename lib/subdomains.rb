@@ -34,10 +34,8 @@ module Subdomains
   end
 
   def domain_url(options = {})
+    options = {:controller=>"/welcome",:action=>"index"}.merge(options)
     host = options.delete(:custom)
-    options[:controller]= "/welcome" if params[:controller].nil?
-    options[:action]= "index" if params[:action].nil?
-
     host = request.host.split("\.").last(2).join(".") unless host
 
     request.protocol + "#{host}" + request.port_string+
