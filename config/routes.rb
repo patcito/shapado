@@ -13,6 +13,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :member => { :change_preferred_tags => :any},
                         :collection => {:autocomplete_for_user_login => :get}
   map.resource :session
+  map.resources :ads
+  map.resources :adsenses
+  map.resources :adbards
 
   map.resources :questions, :path_prefix => '/:language',
                             :collection => {:tags => :get,
@@ -36,6 +39,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,
+                                     :allow_custom_ads => :get,
+                                     :disallow_custom_ads => :get,
                                      :logo => :get},
                           :collection => { :autocomplete_for_group_slug => :get} do |groups|
     groups.resources :members

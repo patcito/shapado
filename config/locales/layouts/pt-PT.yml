@@ -18,6 +18,7 @@
       categories: Categorias
       languages: Idiomas
       moderate: Moderar
+      manage_ads: Gerir as propaganda
       home: início
       openid:
         explaination: "Se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de OpenID:"

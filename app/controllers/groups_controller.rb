@@ -114,6 +114,7 @@ class GroupsController < ApplicationController
 
   def accept
     @group = Group.find_by_slug_or_id(params[:id])
+    @group.has_custom_ads = true if params["has_custom_ads"] == "true"
     @group.state = "active"
     @group.save
     redirect_to group_path(@group)
@@ -140,6 +141,24 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.json {render :json=>@groups}
     end
+  end
+
+  def allow_custom_ads
+    if current_user.admin?
+      @group = Group.find_by_slug_or_id(params[:id])
+      @group.has_custom_ads = true
+      @group.save
+    end
+    redirect_to groups_path
+  end
+
+  def disallow_custom_ads
+    if current_user.admin?
+      @group = Group.find_by_slug_or_id(params[:id])
+      @group.has_custom_ads = false
+      @group.save
+    end
+    redirect_to groups_path
   end
 
   protected

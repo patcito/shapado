@@ -18,6 +18,7 @@
       categories: Categorias
       languages: Idiomas
       moderate: Moderar
+      manage_ads: Manejar las propagandas
       home: pagina principal
       openid:
         explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor OpenID:"

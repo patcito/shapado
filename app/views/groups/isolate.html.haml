@@ -1,5 +1,5 @@
 #show_groups.subtitle.about
-  = link_to t(".title", :name => h(@group.name)), @group.domain
+  = link_to t(".title", :name => h(@group.name)), host_url(@group.domain)
   .right.tabs
     .tab.about
       = link_to t(".about", :default => :"groups.index.about"), about_path
@@ -14,12 +14,6 @@
 %p
   .markdown
     =markdown( @group.description)
-  %br
-  %b= t(".group_categories")
-  .tags-list
-    -@group.categories.each do |cat|
-      %span.tag
-        = link_to h(cat), subdomain_url(@group.subdomain, :controller => "questions", :action => "index", :category => cat)
 
   %br
   -if logged_in? && current_user.owner_of?(@group)

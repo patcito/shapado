@@ -11,22 +11,21 @@ class Group
   key :description, String
   key :categories, Array
   key :default_tags, Array
-
+  key :has_custom_ads, Boolean, :default => false
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
-
   key :owner_id, String
-  belongs_to :owner, :class_name => "User"
 
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
+  has_many :ads
 
-
+  belongs_to :owner, :class_name => "User"
   validates_length_of       :name,           :within => 3..40
   validates_length_of       :description,    :within => 3..400
   validates_length_of       :legend,         :maximum => 40
-  validates_length_of       :default_tags,   :within => 0..10,
+  validates_length_of       :default_tags,   :within => 0..15,
       :message =>  I18n.t('activerecord.models.default_tags_message')
   validates_uniqueness_of   :name
   validates_uniqueness_of   :subdomain
@@ -39,6 +38,53 @@ class Group
   def check_domain
     if domain.blank?
       domain = "#{subdomain}.#{AppConfig.domain}"
+    end
+  end
+
+  def context_panel_ads
+    if has_custom_ads == true
+      ads = []
+      Ad.find_all_by_group_id_and_position(id,'context_panel').each do |ad|
+        ads << ad.code
+      end
+      return ads.join
+    end
+    "<!--Ad Bard advertisement snippet, begin -->
+      <script type='text/javascript'>
+      var ab_h = '#{AppConfig.adbard_host_id}';
+      var ab_s = '#{AppConfig.adbard_site_key}';
+      </script>
+      <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
+      <!--Ad Bard, end -->"
+  end
+
+  def header_ads
+    if has_custom_ads
+      ads = []
+      Ad.find_all_by_group_id_and_position(id,'header').each do |ad|
+        ads << ad.code
+      end
+      return ads.join
+    end
+  end
+
+  def content_ads
+    if has_custom_ads
+      ads = []
+      Ad.find_all_by_group_id_and_position(id,'content').each do |ad|
+        ads << ad.code
+      end
+      return ads.join
+    end
+  end
+
+  def footer_ads
+    if has_custom_ads
+      ads = []
+      Ad.find_all_by_group_id_and_position(id,'footer').each do |ad|
+        ads << ad.code
+      end
+      return ads.join
     end
   end
 
@@ -101,5 +147,8 @@ class Group
     @logo ||= (Logo.find(:first, :group_id => self._id) || Logo.new)
   end
 
+  def pending?
+    state == "pending"
+  end
 end
 

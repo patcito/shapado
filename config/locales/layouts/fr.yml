@@ -18,6 +18,7 @@ fr:
       categories: Catégories
       languages: Langues
       moderate: Modérer
+      manage_ads: Administrer les publicités
       home: page principale
       openid:
         explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"

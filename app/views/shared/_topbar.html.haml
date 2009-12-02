@@ -2,7 +2,7 @@
 %ul#group_menu.left
   %li
     %span#group
-      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
+      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), host_url(current_group.domain)
       -if logged_in? && current_user.can_modify?(current_group)
         = link_to t("groups.manage"), group_path(current_group)
   -unless current_group.default_tags.empty?
@@ -42,7 +42,7 @@
     %ul
       -groups.each do |g|
         %li
-          = link_to h(g.name), g.domain
+          = link_to h(g.name), host_url(g.domain)
       %li
         = link_to t("groups.index.request_group"), new_group_url
 

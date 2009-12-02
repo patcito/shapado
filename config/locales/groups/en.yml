@@ -10,6 +10,8 @@ en:
       accept_group: Accept this group
       close_group: Close this group
       request_group: Request a new group
+      allow_ads: Allow ads
+      disallow_ads: Disallow ads
     show:
       title: "{{name}} Group"
       visit_group: visit this group
@@ -18,11 +20,23 @@ en:
       group_closed: This group was closed.
       accept_group: Accept this group
       close_group: Close this group
+      accept_group_with_custom_ads: Accept group and allow custom ads
     new:
       title: Request your group
     isolate:
       title: "about {{name}}"
       group_categories: "categories:"
+    form:
+      name: Name
+      description: Description
+      legend: Legend
+      categories: Categories
+      description_legend: You have 400 characters to describe the group.
+      legend_legend: "It will be used in the header, you have 40 characters"
+      default_tags: "Default tags"
+      default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
+      logo: Logo
+      logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
   activerecord:
     models:
       groups: Groups
@@ -38,3 +52,4 @@ en:
         state: State
         categories: Categories
         owner: "this group was created by {{login}}"
+        group_created_by: created by

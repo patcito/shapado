@@ -19,9 +19,11 @@
           = render :partial => "welcome/feedback"
       .clear
       %br
+      = render :partial => "shared/header_ads"
       #navigation{:class => "#{@active_tab}"}
         #menu_primary
           = render :partial => "shared/user_navigation"
+
       #main-content
         #messages
           -flash.each do |k,v|
@@ -30,14 +32,17 @@
                 = markdown(v)
         #layout
           #content
+            = render :partial => "shared/content_ads"
             .internal
               = yield
+            = render :partial => "shared/footer_ads"
           #sidebar
             .internal
               =  render :partial => "layouts/question_counter"
               = yield :sidebar
-              = render :partial => "shared/adbard"
               = render :partial => "layouts/feed_urls"
+              = render :partial => "shared/context_panel_ads"
+
           .clear
       #footer
         = render :partial => "layouts/footer"

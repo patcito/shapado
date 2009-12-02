@@ -1,0 +1,12 @@
+"pt-PT":
+  ads:
+    ad_links: Ad a new {{type}} ad
+    title: Ad a new {{type}} ad
+    name: "Name:"
+    position: "Position:"
+    index:
+      title: Ads
+      add_adsense: Add a new Google Adsense ad
+      add_adbard: Add a new Adbard ad
+    create:
+      success: "Ad was successfully created."

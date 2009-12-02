@@ -1,7 +1,7 @@
 
 .field-group
   .label-container
-    = form.label :name
+    = form.label t('.name')
   .field
     = form.text_field :name, :class => "text-field"
 
@@ -34,36 +34,36 @@
 
 .field-group.clear
   .label-container
-    = form.label :description
+    = form.label t('.description')
   .field
     = form.text_area :description, :class => "text-area huge", :id => "markdown_editor"
     .tip
-      You have 400 characters to describe the group.
+      = t('.description_legend')
   #markdown_preview.markdown
 
 .field-group.clear
   .label-container
-    = form.label :legend
+    = form.label t('.legend')
   .field
     = form.text_field :legend, :class => "text-field"
     .tip
-      It will be used in the header, you have 40 characters
+      = t('.legend_legend')
 
 .field-group
   .label-container
-    = form.label :default_tags
+    = form.label t('.default_tags')
   .field
     = form.text_field :default_tags, :value => @group.default_tags.join(", "), :class => "text-field"
     .tip
-      Separate default tags by commas. You can only use 10 tags maximum.
+      = t('.default_tags_legend')
 
 .field-group
   .label-container
-    = form.label :logo_data, "Logo"
+    = form.label :logo_data, t(".logo")
   .field
     -unless @group.new?
       = image_tag(logo_group_path(@group))
     %br
     = form.file_field :logo_data
     .tip
-      You can upload the group logo. The maximum file size is 2Mb.
+      = t('.logo_legend')
