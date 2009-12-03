@@ -14,22 +14,6 @@
           %li
             = link_to(tag, questions_url(:language => current_languages, :tags => tag))
 
-  %li.menu
-    -if @languages && !@languages.empty?
-      = link_to language_desc(@languages.first), ""
-    -else
-      = link_to t("layouts.application.languages"), "/"
-    ▼
-    %ul
-      -if logged_in?
-        -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
-          %li
-            = link_to desc, domain_url(:custom => current_group.domain, :language => value)
-      -else
-        -languages_options(nil, @languages).each do |desc, value|
-          %li
-            = link_to desc, domain_url(:custom => current_group.domain, :language => value)
-
   -if !logged_in?
     %li
       = link_to 'Get the facts!', "/facts#facts"

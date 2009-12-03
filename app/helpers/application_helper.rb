@@ -12,12 +12,14 @@ module ApplicationHelper
     end
   end
 
-  def language_desc(lang)
-    I18n.t("languages.#{lang}", :default => lang)
+  def language_desc(langs)
+    langs.map do |lang|
+      I18n.t("languages.#{lang}", :default => lang)
+    end.join(', ')
   end
 
   def languages_options(languages=nil, current_languages = [])
-    languages = AVAILABLE_LANGUAGES-(current_languages||[]) if languages.blank?
+    languages = AVAILABLE_LANGUAGES-current_languages if languages.blank?
     locales_options(languages)
   end
 

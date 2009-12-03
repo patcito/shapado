@@ -1,12 +1,24 @@
 
 -if @questions
   .questions_count
-    = number_with_delimiter(@questions.total_entries)
-
-  -if current_tags.empty?
-    %p
-      = t "layouts.application.questions"
-  -else
-    %p
-      = t "layouts.application.questions_tagged"
-    = render :partial => "shared/current_tags", :object => current_tags
+    = @questions.total_entries
+  %ul#lang_menu
+    %li.menu
+      -if @languages && !@languages.empty?
+        -if current_tags.empty?
+          - tagged = ""
+        -else
+          - tagged = t "layouts.application.questions_tagged"
+        = "#{t 'layouts.application.questions_in'} #{link_to  language_desc(@languages), ''}▼ #{tagged}"
+      -else
+        = link_to t("layouts.application.languages"), "/"
+      %ul
+        -if logged_in?
+          -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
+            %li.langli
+              = link_to desc, domain_url(:language => value)
+        -else
+          -languages_options(nil, @languages).each do |desc, value|
+            %li.langli
+              = link_to desc, domain_url(:language => value)
+  = render :partial => "shared/current_tags", :object => current_tags

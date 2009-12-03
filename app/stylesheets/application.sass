@@ -692,3 +692,38 @@ table#pricing
   border: 1px solid #b4b4b4
   background: #F0F0F0
   +rounded(4px, 4px, 4px, 4px)
+
+#lang_menu, #lang_menu ul
+  padding: 5px
+  horizontal-list(4px)
+  li
+    a
+      text-transform: lowercase
+
+#lang_menu a
+  text-decoration: none
+
+#lang_menu li ul
+  position: absolute
+  left: -999em
+  background: #FFFFFF
+  border: 1px
+
+#lang_menu li ul li
+  clear: both
+  border: 0px
+  border-bottom: 1px solid #ddd
+  text-align: center
+  width: 100%
+  min-width: 200px
+  &.last
+    border: 0px
+  a
+    display: block
+    padding: 5px
+
+#lang_menu li:hover ul
+  left: auto
+
+#lang_menu li:hover ul, #menu_logo li.sfhover ul
+  left: auto
