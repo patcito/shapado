@@ -11,15 +11,15 @@ namespace :setup do
 
   desc "Create the default group"
   task :default_group => [:environment] do
-    categories = %w[technology programming business science politics religion
-                                  sports entertainment gaming lifestyle offbeat]
+    categories = %w[technology business science politics religion
+                               sports entertainment gaming lifestyle offbeat]
 
     subdomain = AppConfig.application_name.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
     default_group = Group.new(:name => AppConfig.application_name,
                               :subdomain => subdomain,
                               :description => "question-and-answer website",
                               :legend => "question and answer website",
-                              :categories => categories,
+                              :default_tags => categories,
                               :state => "active")
 
     default_group.save!
