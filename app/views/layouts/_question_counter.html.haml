@@ -16,9 +16,9 @@
         -if logged_in?
           -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
             %li.langli
-              = link_to desc, domain_url(:language => value)
+              = link_to desc, domain_url(:custom => current_group.domain, :language => value)
         -else
           -languages_options(nil, @languages).each do |desc, value|
             %li.langli
-              = link_to desc, domain_url(:language => value)
+              = link_to desc, domain_url(:custom => current_group.domain, :language => value)
   = render :partial => "shared/current_tags", :object => current_tags

@@ -15,7 +15,6 @@
           %li
             = link_to(tag, questions_url(:language => current_languages, :tags => tag))
 
-
   -if !logged_in?
     %li
       = link_to 'Get the facts!', "/facts#facts"
