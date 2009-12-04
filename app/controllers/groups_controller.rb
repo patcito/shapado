@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  skip_before_filter :check_group_access, :only => [:logo]
   before_filter :login_required, :except => [:index, :show, :logo]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
@@ -14,7 +15,8 @@ class GroupsController < ApplicationController
 
     @groups = Group.paginate(:per_page => 15,
                              :page => params[:page],
-                             :state => @state)
+                             :state => @state,
+                             :private => false)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -64,7 +66,8 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new
     @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
-    @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
+    @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
+
     @group.owner = current_user
 
     respond_to do |format|
@@ -87,7 +90,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1.xml
   def update
     @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
-    @group.safe_update(%w[isolate domain], params[:group]) if current_user.admin?
+    @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
+
     respond_to do |format|
       if @group.save
         flash[:notice] = 'Group was successfully updated.'

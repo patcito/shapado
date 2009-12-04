@@ -31,6 +31,13 @@
       = form.check_box :isolate
       .tip
         isolate the group form other groups
+  .field-group
+    .label-container
+      = form.label :private, "Private"
+    .field
+      = form.check_box :private
+      .tip
+        Only the group's members will be able to access this group
 
 .field-group.clear
   .label-container

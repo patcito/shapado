@@ -21,29 +21,27 @@
 module Subdomains
   def self.included(controller)
     controller.helper_method(:tag_domain, :current_tag, :tag_host, :tag_url,
-                                          :host_url, :subdomain_url,:domain_url)
+                                                     :subdomain_url,:domain_url)
   end
 
   protected
   def subdomain_url(subdomain, options = {})
     options = {:controller=>"/welcome",:action=>"index"}.merge(options)
-    host = options.delete(:custom) unless host
-    host = request.host.split("\.").last(2).join(".")
+    host = options.delete(:custom)
+    host = request.host.split("\.").last(2).join(".") unless host
     request.protocol + "#{subdomain}." + host + request.port_string +
                                           url_for({:only_path =>true}.merge(options))
   end
 
   def domain_url(options = {})
+    options = {:controller=>"/welcome",:action=>"index"}.merge(options)
     host = options.delete(:custom)
-
     host = request.host.split("\.").last(2).join(".") unless host
+
     request.protocol + "#{host}" + request.port_string+
                                           url_for({:only_path =>true}.merge(options))
   end
 
-  def host_url(host, options = {}, path = true)
-    request.protocol + "#{host}" + request.port_string
-  end
   def tag_url(tag, use_ssl = request.ssl?)
     (use_ssl ? "https://" : "http://") + tag_host(tag)
   end

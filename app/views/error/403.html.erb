@@ -1,20 +1,27 @@
+<%= stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'%>
 
 <%- if logged_in? %>
-  <%= render :partial=>"shared/error", :locals => {:title=> t("title.errors.forbidden", :default => :"views.layout.permission_denied"),
+  <%= render :partial=>"shared/error", :locals => {:title=> t("errors.forbidden.title", :default => :"global.permission_denied"),
                     :explanation => t("explanation", :scope => "errors.forbidden"),
                     :error_image => "application-pgp-keys.png"} %>
 <% else %>
-  <div class="internal">
-    <%-if !logged_in?%>
-      <div class="box highlight">
-        <%= t("layouts.application.openid.explaination") %>
-        <%- form_tag(session_path, :id => 'openid') do %>
-          &nbsp;
-        <%-end%>
-      </div>
-    <%-end%>
+  <div class="subtitle">
+    <%= t("sessions.new.with_openid") %>
   </div>
-  <br/>
-<%-end %>
+  <div class="box highlight">
+    <%= t("layouts.application.openid.explaination") %>
+    <%- form_tag session_path, :id => 'openid' do -%>
+      <div id="nojsopenid">
+        <%= text_field_tag "openid_identifier", "", :id => "openid_username" %>
+        <%= submit_tag t("sessions.new.log_in") %>
+      </div>
+    <%end-%>
+  </div>
 
-<%= render :partial => "sessions/login" %>
+
+  <div class="subtitle">
+    <%= t("sessions.new.with_authentication") %>
+  </div>
+  <h2> <%= t("sessions.new.registered") %> </h2>
+  <%= render :partial => "sessions/login" %>
+<%-end %>

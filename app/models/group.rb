@@ -14,6 +14,8 @@ class Group
   key :has_custom_ads, Boolean, :default => false
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
+  key :private, Boolean, :default => false
+
   key :owner_id, String
 
   has_many :memberships, :class_name => "Member",
