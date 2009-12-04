@@ -2,13 +2,13 @@
   = t(".title", :name => h(@group.name))
   .right.tabs
     .tab.about
-      = link_to t(".about", :default => :"groups.index.about"), host_url(@group)
+      = link_to t(".about", :default => :"groups.index.about"), domain_url(:custom => @group.domain)
     .tab.members
       = link_to "members", group_members_path(@group)
 
 
 = image_tag(logo_group_path(@group), :class => "group_logo")
-= link_to t(".visit_group"), host_url(@group.domain)
+= link_to t(".visit_group"), domain_url(:custom => @group.domain)
 
 %br
 

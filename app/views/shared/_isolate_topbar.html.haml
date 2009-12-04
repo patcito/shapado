@@ -2,7 +2,7 @@
 %ul#group_menu.left
   %li
     %span#group
-      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), host_url(current_group.domain)
+      =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
       -if logged_in? && current_user.can_modify?(current_group)
         = link_to t("groups.manage"), group_path(current_group)
 

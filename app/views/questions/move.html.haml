@@ -16,7 +16,7 @@
   %div
     %b
       = t("questions.show.asked_on")
-      = link_to h(@question.group.name), host_url(@question.group.custom_domain)
+      = link_to h(@question.group.name), domain_url(:custom => @question.group.domain)
 
   -form_for @question, :url => move_to_question_path(current_languages, @question.id), :html => {:class => "form"} do |f|
     = f.label :group, t(".group_label"), :class => "label"

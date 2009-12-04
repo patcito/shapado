@@ -1,5 +1,5 @@
 #show_groups.subtitle.about
-  = link_to t(".title", :name => h(@group.name)), host_url(@group.domain)
+  = link_to t(".title", :name => h(@group.name)), domain_url(:custom => @group.domain)
   .right.tabs
     .tab.about
       = link_to t(".about", :default => :"groups.index.about"), about_path
