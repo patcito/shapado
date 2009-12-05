@@ -33,7 +33,7 @@
       categories: Categories
       description_legend: You have 400 characters to describe the group.
       legend_legend: "It will be used in the header, you have 40 characters"
-      default_tags_legend: "Default tags"
+      default_tags: "Default tags"
       default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
       logo: Logo
       logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
