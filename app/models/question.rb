@@ -47,7 +47,7 @@ class Question
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 
   validates_presence_of :user_id
-  validates_uniqueness_of :slug
+  validates_uniqueness_of :slug, :scope => :group_id
 
   validates_length_of       :title,    :within => 6..100
   validates_length_of       :body,     :minimum => 6
@@ -57,8 +57,7 @@ class Question
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
 #   before_validation_on_update :update_answer_count
-#   validates_presence_of :category, :message => "please choose a category"
-#   validates_inclusion_of :category, :within => lambda{current_group.categories} #FIXME
+
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
   timestamps!
 
