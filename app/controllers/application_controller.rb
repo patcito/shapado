@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
     if current_group.isolate
       'group'
     else
-      'application'
+      'newlayout'
     end
   end
 
@@ -173,9 +173,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
+  def feed_urls
+    @feed_urls ||= Set.new
+  end
+  helper_method :feed_urls
+
   def add_feeds_url(url, title="atom")
-    @feed_urls = [] unless @feed_urls
-    @feed_urls << [title, url]
+    feed_urls << [title, url]
   end
 
   def admin_required

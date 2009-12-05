@@ -1,0 +1,10 @@
+= stylesheet_link_tag "jquery-ui", "components/dialog", "compiled/application"
+
+-if logged_in?
+  %link#current-theme{ :href => "/stylesheets/compiled/themes/#{current_user.theme}/style.css", :rel => "stylesheet", :media => "screen", :type => "text/css" }
+  %link#current-nav{ :href => "/stylesheets/compiled/navigation/#{current_user.theme}.css", :rel => "stylesheet", :media => "screen", :type => "text/css" }
+-else
+  %link#current-theme{ :href => "/stylesheets/compiled/themes/warehouse/style.css", :rel => "stylesheet", :media => "screen", :type => "text/css" }
+  %link#current-nav{ :href => "/stylesheets/compiled/navigation/warehouse.css", :rel => "stylesheet", :media => "screen", :type => "text/css" }
+
+= yield :css

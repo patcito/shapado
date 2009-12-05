@@ -1,77 +1,9 @@
-#navigation
-  #menu_primary
-    ul
-      list-style-type: none
-      overflow: hidden
-      margin: 0px
-      li
-        float: left
-        margin-right: 10px
-        margin-left: 0px
-        a
-          border-top: 1px solid #d4d4d4
-          border-left: 1px solid #d4d4d4
-          border-right: 1px solid #d4d4d4
-          display: block
-          font-size: .75em
-          padding: 6px 20px
-          text-align: center
-          background: #FFF
-          color: #999
-          text-transform: uppercase
-          text-decoration: none
-        a:hover, a:focus, a:active
-          color: #828282
-          outline: none
-        &.ask_question
-          float: right
-          a
-            background: #004181
-            color: #dedede
-
 =active_tab
-  background-color: #ddd
-  color: #000
-
-
-#navigation.questions #menu_primary ul li.selected a,
-#navigation.questions #menu_primary ul li.questions a,
-#navigation.ask_question #menu_primary ul li.ask_question a,
-#navigation.tags #menu_primary ul li.tags a,
-#navigation.unanswered #menu_primary ul li.unanswered a,
-#navigation.users #menu_primary ul li.users a,
-#navigation.dashboard #menu_primary ul li.dashboard a,
-#navigation.properties #menu_primary ul li.properties a,
-#navigation.actions #menu_primary ul li.actions a,
-#navigation.stats #menu_primary ul li.stats a,
-#navigation.ads #menu_primary ul li.ads a
-  +active_tab
-
+  background: #b0b0b0
+  color: #333
 
 =active_subtab
-  color: #121314
-  background-color: #fff
-  border-bottom: 1px solid #fff
+  background: #b0b0b0
+  color: #333
 
-.subtitle#welcome.active .tabs .tab.active a,
-.subtitle#welcome.hot .tabs .tab.hot a,
-.subtitle#questions_index.active .tabs .tab.active a,
-.subtitle#questions_index.newest .tabs .tab.newest a,
-.subtitle#questions_index.hot .tabs .tab.hot a,
-.subtitle#questions_index.votes .tabs .tab.votes a,
-.subtitle#questions_index.mytags .tabs .tab.mytags a,
-
-.subtitle#question_answers.newest .tabs .tab.newest a,
-.subtitle#question_answers.oldest .tabs .tab.oldest a,
-.subtitle#question_answers.votes .tabs .tab.votes a,
-
-.subtitle#moderate.all .tabs .tab.all a,
-.subtitle#moderate.questions .tabs .tab.questions a,
-.subtitle#moderate.answers .tabs .tab.answers a,
-
-.subtitle#groups.active .tabs .tab.active a,
-.subtitle#groups.pending .tabs .tab.pending a,
-
-.subtitle#show_groups.about .tabs .tab.about a,
-.subtitle#show_groups.members .tabs .tab.members a
-  +active_subtab
+@import navigation/navigation

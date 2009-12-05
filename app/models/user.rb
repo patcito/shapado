@@ -35,6 +35,8 @@ class User
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
+  key :theme,                     String, :default => "warehouse"
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
