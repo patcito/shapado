@@ -15,6 +15,7 @@ class Group
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
   key :private, Boolean, :default => false
+  key :theme, String, :default => "shapado"
   key :owner_id, String
   key :analytics_id, String
   key :analytics_vendor, String
