@@ -36,6 +36,7 @@ fr:
       default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
       logo: Logo
       logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
+      any_language: "n'importe qu'elle"
   activerecord:
     models:
       groups: Groups
@@ -52,3 +53,4 @@ fr:
         categories: catégories
         owner: "ce groupe a été crée par {{login}}"
         group_created_by: created by
+        language: Langue

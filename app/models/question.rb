@@ -60,6 +60,8 @@ class Question
 #   validates_presence_of :category, :message => "please choose a category"
 #   validates_inclusion_of :category, :within => lambda{current_group.categories} #FIXME
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
+  validates_true_for :language, :logic => lambda { |q| q.group.language == q.language },
+                                :if => lambda { |q| !q.group.language.nil? }
   timestamps!
 
   def to_param

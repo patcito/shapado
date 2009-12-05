@@ -65,7 +65,8 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data
+                          language], params[:group])
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
 
     @group.owner = current_user
@@ -89,7 +90,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data
+                          language], params[:group])
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
 
     respond_to do |format|
