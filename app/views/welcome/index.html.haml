@@ -17,16 +17,17 @@
 = will_paginate @questions
 
 -content_for :sidebar do
-  -if logged_in?
-    = render :partial => "shared/preferred_tags"
-  -else
-    .group_box
-      %h3
-        &= current_group.name
-      .markdown
-        = markdown(truncate(current_group.description, :length => 300))
-        =link_to t("scaffold.more", :default => :"groups.index.about"), about_path
-
-  %h1
-    = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  = tag_cloud
+  .block
+    -if logged_in?
+      = render :partial => "shared/preferred_tags"
+    -else
+      .group_box
+        %h3
+          &= current_group.name
+        .markdown
+          = markdown(truncate(current_group.description, :length => 300))
+          =link_to t("scaffold.more", :default => :"groups.index.about"), about_path
+  .block
+    %h3
+      = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = tag_cloud

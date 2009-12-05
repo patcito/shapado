@@ -9,23 +9,15 @@
 
   %body
     #container
+      = render :partial => "shared/topbar"
       #header
-        %h1
+        %h1{:style => "float: left"}
           =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
-          = link_to h(current_group.name), current_group.domain
-        #user-navigation
-          /TODO: User nav
-          .clear
-        #main-navigation{:class => @active_tab}
+        #main-bar{:class => @active_tab}
           %ul
-            %li.home
-              -if logged_in?
-                =link_to t(".dashboard"), dashboard_path
-              -else
-                =link_to t(".mainpage"), root_path
-            -if logged_in?
-              / TODO: tabs
+            = render :partial => "shared/user_navigation"
           .clear
+        .clear
       #wrapper
         #main
           #block-text.block
@@ -48,7 +40,7 @@
           -unless feed_urls.empty?
             .block
               %h3
-                = t(".subscribe")
+                = t(".subscribe", :default => "Subscribe")
               .sidebar-block
                 %ul.feeds
                   -feed_urls.each do |title, url|
@@ -57,5 +49,4 @@
         .clear
       #footer
         .block
-          %p
-            Copyright &copy; 2009.
+          = render :partial => "layouts/footer"

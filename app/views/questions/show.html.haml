@@ -113,32 +113,35 @@
     == #{link_to t("global.please_login"), login_path} #{t(".to_answer_question")}.
 
 -content_for :sidebar do
-  %h3
-    = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
-  = render :partial => "shared/tag_list", :object => @tag_cloud
-  .clear
-
-  -if @question.group_id != current_group.id
-    %span
-      %b
-        = t(".asked_on")
-      %h3
-        = @question.group.name
-
-  %span
-    %b
-      = t('.viewed')
+  .block
     %h3
-      = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+    = render :partial => "shared/tag_list", :object => @tag_cloud
+    .clear
 
-  -if AppConfig.enable_sharing
-    %h2
-      = t(".share")
-    .buttons{:style => "padding: 2px"}
-      = render :partial => "twitter"
-      = render :partial => "identica"
-      = render :partial => "facebook"
-  %br
-  -if @question.flags_count > 0
-    %h1= t(".flags")
-    = render :partial => "flags/list", :locals => {:flaggeable => @question}
+  .block
+    .sidebar-block
+      -if @question.group_id != current_group.id
+        %span
+          %b
+            = t(".asked_on")
+          %h3
+            = @question.group.name
+
+      %span
+        %b
+          = t('.viewed')
+        %h3
+          = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+
+      -if AppConfig.enable_sharing
+        %h2
+          = t(".share")
+        .buttons{:style => "padding: 2px"}
+          = render :partial => "twitter"
+          = render :partial => "identica"
+          = render :partial => "facebook"
+      %br
+      -if @question.flags_count > 0
+        %h1= t(".flags")
+        = render :partial => "flags/list", :locals => {:flaggeable => @question}

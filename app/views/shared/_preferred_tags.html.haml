@@ -1,7 +1,7 @@
-
 %h3
   = t(:preferred_tags, :scope => "activerecord.attributes.user").titleize
-.tags-list
+
+.tags-list{:style => "margin-bottom: 3px"}
   -current_user.preferred_tags_on(current_group).each do |tag|
     %span.tag
       = link_to h(tag), questions_path(:language => current_languages, :tags => tag)

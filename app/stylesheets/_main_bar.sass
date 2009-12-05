@@ -1,0 +1,47 @@
+#main-bar
+  width: 80%
+  float: left
+  padding: 20px 0 20px 25px
+
+#main-bar ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+#main-bar ul li
+  background: #456
+  border-top: 1px solid #5C738A
+  margin-right: 5px
+  color: #eee
+  float: left
+
+  &:hover
+    border-top-color: #7593B0
+    background-color: #576C82 !important
+    color: #fff
+
+  &.active
+    border-top: 1px solid #fff
+    background-color: #eee !important
+    color: #333
+    a
+      &:link, &:visited, &:hover, &:active
+        color: #364b69
+
+#main-bar ul li
+  a
+    display: block
+    font-size: 12pt
+    font-weight: bold
+    padding: 5px 15px
+
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: #FFF
+
+#top-bar
+  +horizontal-list(2px)
+  padding: 1px 10px
+  margin: 0
+
+  border-bottom: solid 4px gray
