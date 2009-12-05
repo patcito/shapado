@@ -23,3 +23,8 @@ fr:
       home: page principale
       openid:
         explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"
+    manage:
+      dashboard: Dashboard
+      properties: Properties
+      actions: Actions
+      stats: Stats

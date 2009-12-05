@@ -1,0 +1,8 @@
+%h2
+  Group properties
+
+-form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
+  = f.error_messages
+  = render :partial => "groups/form", :object => f
+  .buttons
+    = f.submit t('scaffold.update')
