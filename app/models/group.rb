@@ -39,7 +39,7 @@ class Group
 
   def check_domain
     if domain.blank?
-      domain = "#{subdomain}.#{AppConfig.domain}"
+      self[:domain] = "#{subdomain}.#{AppConfig.domain}"
     end
   end
 
