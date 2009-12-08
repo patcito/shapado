@@ -6,9 +6,9 @@
     =yield
     %br
     %p{:style=>"border-top: 1px solid #999"}
-      si ya no quieres recibir notificaciones automaticas de
+      si ya no quieres recibir notificaciones automáticas de
       = AppConfig.domain
-      , cambie sus configs en las opciones de noticificaciones.
+      , cambie sus preferencias en las opciones de notificaciones.
       (
       = url_for(:host => AppConfig.domain, :controller => "users", :action => "show", :id => @user)
       )
