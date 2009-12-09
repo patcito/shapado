@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   layout :set_layout
 
   protected
+
   def access_denied
     store_location
     raise AccessDenied
@@ -41,10 +42,8 @@ class ApplicationController < ActionController::Base
   def current_group
     subdomains = request.subdomains
     subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
-
-    @current_group ||= Group.find(:first, :state => "active", :domain => request.host) ||
-                       Group.find_by_name(AppConfig.application_name)
-
+    @current_group ||= Group.find(:first, :state => "active", :domain => request.host)
+    raise PageNotFound  unless @current_group
     @current_group
   end
   helper_method :current_group
