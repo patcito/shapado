@@ -49,6 +49,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :votes
   map.resources :flags
 
+  map.with_options :controller => 'admin/manage', :name_prefix => "manage_" do |manage|
+    manage.manage '/manage', :action => 'dashboard'
+    manage.properties '/properties', :action => 'properties'
+    manage.actions '/actions', :action => 'actions'
+    manage.stats'/stats', :action => 'stats'
+  end
+
   map.search '/search', :controller => "searches", :action => "index"
   map.about '/about', :controller => "groups", :action => "show"
   map.members '/members', :controller => "members", :action => "index"

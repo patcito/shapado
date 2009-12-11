@@ -11,8 +11,5 @@
     -if current_user.mod_of?(current_group) || current_user.admin?
       %li.moderate
         =link_to t("layouts.application.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
-      -if current_group.has_custom_ads
-        %li.moderate
-          =link_to t("layouts.application.manage_ads"), ads_path, :style => "background: #E55353; color: #fff"
   %li.ask_question
     =link_to t("layouts.application.ask_question"), new_question_path(:language => current_languages), :rel => 'nofollow'

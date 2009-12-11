@@ -1,7 +1,9 @@
 class AdsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show, :logo]
+  before_filter :login_required
   before_filter :check_permissions
   before_filter :check_has_custom_ads
+  layout "manage"
+  tabs :default => :ads
 
   def new
     @ad = params[:type].classify.constantize.new
@@ -16,8 +18,15 @@ class AdsController < ApplicationController
   def create
     if ['Adsense', 'Adbard'].include? params["ad"]["_type"]
       @ad = params["ad"]["_type"].camelize.constantize.new
-      @ad.safe_update(%w[adbard_host_id adbard_site_key name position _type google_ad_client google_ad_slot google_ad_width google_ad_height], params[:ad])
+      case @ad
+        when Adsense
+          @ad.safe_update(%w[name position google_ad_client google_ad_slot
+                                    google_ad_width google_ad_height], params[:ad])
+        when Adbard
+          @ad.safe_update(%w[name position adbard_host_id adbard_site_key], params[:ad])
+      end
       @ad.group = current_group
+
       respond_to do |format|
         if @ad.save
           flash[:notice] = t('ads.create.success')

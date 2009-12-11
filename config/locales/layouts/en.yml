@@ -23,3 +23,8 @@ en:
       home: home
       openid:
         explaination: "If you'd like to register or just log in, please select your OpenID provider:"
+    manage:
+      dashboard: Dashboard
+      properties: Properties
+      actions: Actions
+      stats: Stats

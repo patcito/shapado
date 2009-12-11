@@ -12,6 +12,8 @@ class Ad
   belongs_to :group
   before_save :set_code
 
+  before_create :set_type
+
   def set_code
      self[:code] = self.ad
   end
@@ -19,5 +21,10 @@ class Ad
 
   def ad
     return
+  end
+
+  protected
+  def set_type
+    self[:_type] = self.class.to_s
   end
 end

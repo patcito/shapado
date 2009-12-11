@@ -1,16 +1,7 @@
-%p
-  = link_to t("ads.ad_links", :type => "Adsense"), new_ad_path(:type=>Adsense)
-%p
-  = link_to t("ads.ad_links", :type => "Adbard"), new_ad_path(:type=>Adbard)
+.buttons
+  = link_to t("ads.ad_links", :type => "Adsense"), new_ad_path(:type=>Adsense), :class => "button"
+  = link_to t("ads.ad_links", :type => "Adbard"), new_ad_path(:type=>Adbard), :class => "button"
 
-%ul
-  - for ad in @ads
-    %li
-      %label
-        = t("ads.name")
-      = ad.slug
-    %li
-      %label
-        = t("ads.position")
-      = ad.position
-      = link_to t('scaffold.destroy'), ad_path(ad), :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
+#ads
+  -@ads.each do |ad|
+    = render :partial => "ad", :object => ad

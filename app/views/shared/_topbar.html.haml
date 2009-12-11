@@ -4,7 +4,7 @@
     %span#group
       =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
       -if logged_in? && current_user.can_modify?(current_group)
-        = link_to t("groups.manage"), group_path(current_group)
+        = link_to t("groups.manage"), manage_manage_path
   -unless current_group.default_tags.empty?
     %li
       = link_to "tags", questions_url(:language => current_languages)

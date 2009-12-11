@@ -23,3 +23,8 @@
       home: início
       openid:
         explaination: "Se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de OpenID:"
+    manage:
+      dashboard: Dashboard
+      properties: Properties
+      actions: Actions
+      stats: Stats

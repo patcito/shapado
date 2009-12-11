@@ -11,7 +11,7 @@
   .field
     = form.hidden_field "_type", :value=> params[:type], :class => "text-field"
 
--if params[:type] == "Adsense"
+-if (params[:type] || params["ad"]["_type"]) == "Adsense"
   .field-group
     .label-container
       = form.label :google_ad_client
@@ -33,7 +33,7 @@
     .field
       = form.text_field :google_ad_height, :class => "text-field"
 
--if params[:type] == "Adbard"
+-if (params[:type] || params["ad"]["_type"]) == "Adbard"
   .field-group
     .label-container
       = form.label :adbard_host_id
