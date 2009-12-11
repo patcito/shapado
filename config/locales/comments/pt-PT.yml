@@ -2,3 +2,7 @@ pt-PT:
   comments:
     create:
       flash_notice: Thanks for your comment
+    update:
+      flash_notice: "Comment was successfully updated."
+  models:
+    comments: Comments

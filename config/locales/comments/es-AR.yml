@@ -2,3 +2,7 @@ es-AR:
   comments:
     create:
       flash_notice: Gracias por tu comentario
+    update:
+      flash_notice: "El commentario ha sido actualizado con exito."
+  models:
+    comments: Comentarios

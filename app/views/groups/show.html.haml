@@ -34,10 +34,13 @@
       -if current_user.can_modify?(@group) && @group.state == "active"
         = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
 
-%h3 Comments
+%h3= t("models.comments")
 #comments
   -@comments.each do |comment|
-    = render :partial => "comments/comment", :object => comment
+    = render :partial => "comments/comment", :object => comment, :locals => {:source => group_path(@group)}
   = will_paginate @comments
-  = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
+  -if logged_in?
+    -form_tag comments_path, :class => "form" do
+      = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
+      = submit_tag t("scaffold.create")
 

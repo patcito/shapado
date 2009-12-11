@@ -37,6 +37,8 @@ class GroupsController < ApplicationController
     @comments = @group.comments.paginate(:page => params[:page].to_i,
                                          :per_page => params[:per_page] || 10 )
 
+    @comment = Comment.new
+
 
     respond_to do |format|
       format.html do
