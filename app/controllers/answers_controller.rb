@@ -66,6 +66,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @question = @answer.question
+    @answer.user.update_reputation(:delete_answer, current_group)
     @answer.destroy
     @question.answer_removed!
 

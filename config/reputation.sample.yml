@@ -1,5 +1,7 @@
 ask_question:                     2
+delete_question:                 -3
 answer_question:                  2
+delete_answer:                   -3
 close_question:                   1
 reopen_question:                 -1
 comment_question:                 0

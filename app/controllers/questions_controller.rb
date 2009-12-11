@@ -179,8 +179,8 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
+    @question.user.update_reputation(:delete_question, current_group)
     @question.destroy
-
     respond_to do |format|
       format.html { redirect_to(questions_url) }
       format.xml  { head :ok }
