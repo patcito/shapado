@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
+  before_filter :find_group
   before_filter :check_group_access
   before_filter :find_languages
   before_filter :set_locale
@@ -26,7 +27,8 @@ class ApplicationController < ActionController::Base
   end
 
   def check_group_access
-    if current_group.private && (!logged_in? || !current_user.user_of?(current_group))
+    if @current_group &&
+       (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
       access_denied
     end
   end
@@ -39,11 +41,22 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def find_group
+    @current_group ||= begin
+      subdomains = request.subdomains
+      subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
+      _current_group = Group.find(:first, :state => "active", :domain => request.host)
+      unless _current_group
+        flash[:warn] = t("global.group_not_found", :url => request.host)
+        redirect_to domain_url(:custom => AppConfig.domain)
+        return
+      end
+      _current_group
+    end
+    @current_group
+  end
+
   def current_group
-    subdomains = request.subdomains
-    subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
-    @current_group ||= Group.find(:first, :state => "active", :domain => request.host)
-    raise PageNotFound  unless @current_group
     @current_group
   end
   helper_method :current_group
