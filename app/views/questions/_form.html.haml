@@ -7,7 +7,6 @@
   .tip
     = t(".body_tip")
 
-
 .field-group
   .label-container
     = f.label :body, t(:body, :scope => "activerecord.attributes.question")
@@ -15,14 +14,17 @@
 
   #markdown_preview.markdown
 
-.field-group
-  .label-container
-    = f.label :language, t(:language, :scope => "activerecord.attributes.question")
-  .field
-    -lang = @question.new? ? current_user.main_language : @question.language
-    = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
-    .tip
-      = t(".language_tip")
+-if current_group.language.nil?
+  .field-group
+    .label-container
+      = f.label :language, t(:language, :scope => "activerecord.attributes.question")
+    .field
+      -lang = @question.new? ? current_user.main_language : @question.language
+      = f.select :language, languages_options(current_user.preferred_languages), :selected => lang
+      .tip
+        = t(".language_tip")
+-else
+  = f.hidden_field :language, :value => current_group.language
 
 .field-group
   .label-container

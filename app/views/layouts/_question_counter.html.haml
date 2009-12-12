@@ -2,23 +2,24 @@
 -if @questions
   .questions_count
     = @questions.total_entries
-  %ul#lang_menu
-    %li.menu
-      -if @languages && !@languages.empty?
-        -if current_tags.empty?
-          - tagged = ""
+  -if current_group.language.nil?
+    %ul#lang_menu
+      %li.menu
+        -if @languages && !@languages.empty?
+          -if current_tags.empty?
+            - tagged = ""
+          -else
+            - tagged = t "layouts.application.questions_tagged"
+          = "#{t 'layouts.application.questions_in'} #{link_to  language_desc(@languages), ''}▼ #{tagged}"
         -else
-          - tagged = t "layouts.application.questions_tagged"
-        = "#{t 'layouts.application.questions_in'} #{link_to  language_desc(@languages), ''}▼ #{tagged}"
-      -else
-        = link_to t("layouts.application.languages"), "/"
-      %ul
-        -if logged_in?
-          -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
-            %li.langli
-              = link_to desc, domain_url(:custom => current_group.domain, :language => value)
-        -else
-          -languages_options(nil, @languages).each do |desc, value|
-            %li.langli
-              = link_to desc, domain_url(:custom => current_group.domain, :language => value)
+          = link_to t("layouts.application.languages"), "/"
+        %ul
+          -if logged_in?
+            -languages_options(current_user.preferred_languages, @languages).each do |desc, value|
+              %li.langli
+                = link_to desc, domain_url(:custom => current_group.domain, :language => value)
+          -else
+            -languages_options(nil, @languages).each do |desc, value|
+              %li.langli
+                = link_to desc, domain_url(:custom => current_group.domain, :language => value)
   = render :partial => "shared/current_tags", :object => current_tags

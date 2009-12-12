@@ -59,6 +59,8 @@ class Question
 #   before_validation_on_update :update_answer_count
 
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
+  validates_true_for :language, :logic => lambda { |q| q.group.language == q.language },
+                                :if => lambda { |q| !q.group.language.nil? }
   timestamps!
 
   def to_param

@@ -66,6 +66,16 @@
 
 .field-group
   .label-container
+    = form.label :language, t(:language, :scope => "activerecord.attributes.group")
+  .field
+    -AVAILABLE_LANGUAGES.each do |lang|
+      = form.radio_button :language, lang, :checked => @group.language == lang
+      = language_desc(lang)
+    = form.radio_button :language, "none", :checked => @group.language.nil?
+    = t(".any_language")
+
+.field-group
+  .label-container
     = form.label :logo_data, t(".logo")
   .field
     -unless @group.new?

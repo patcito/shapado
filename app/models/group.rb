@@ -15,8 +15,9 @@ class Group
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
   key :private, Boolean, :default => false
-
   key :owner_id, String
+
+  key :language, String
 
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
@@ -34,6 +35,8 @@ class Group
   validates_presence_of     :subdomain
   validates_format_of       :subdomain, :with => /^[a-z0-9\-]+$/i
   validates_length_of       :subdomain, :within => 3..32
+
+  validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES, :allow_nil => true
 
   before_validation_on_create :check_domain
 
@@ -151,6 +154,14 @@ class Group
 
   def pending?
     state == "pending"
+  end
+
+  def language=(lang)
+    if lang != "none"
+      self[:language] = lang
+    else
+      self[:language] = nil
+    end
   end
 end
 
