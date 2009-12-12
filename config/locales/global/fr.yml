@@ -27,6 +27,7 @@ fr:
     from: depuis {{site}}
     permission_denied: Permission refusée
     please_login: ouvrez une session s'il vous plait
+    group_not_found: "la page {{url}} n'existe pas"
   feeds:
     question: Souscrire à cette question
     questions: Souscrire à toutes les questions
