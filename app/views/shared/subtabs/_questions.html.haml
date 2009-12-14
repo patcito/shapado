@@ -1,0 +1,12 @@
+.navtitle
+  = t("questions.index.title")
+
+%ul{:style => "display: inline"}
+  %li.newest
+    = link_to t("questions.index.newest"), questions_path(:language => current_languages, :sort=>"newest")
+  %li.hot
+    = link_to t("questions.index.hot"), questions_path(:language => current_languages, :sort=>"hot")
+  %li.votes
+    = link_to t("questions.index.votes"), questions_path(:language => current_languages, :sort=>"votes")
+  %li.active
+    = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"active")

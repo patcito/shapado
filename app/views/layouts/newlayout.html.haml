@@ -31,9 +31,10 @@
               .inner
                 = yield
         #sidebar
-          = yield :sidebar
           .block.notice
             = render :partial => "shared/layout/notice"
+
+          = yield :sidebar
           .block
             .sidebar-block
               = render :partial => "shared/layout/activities"

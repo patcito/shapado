@@ -51,8 +51,6 @@ input.checkbox
 
 
 #header
-  background: #F5F5F5
-
   h1 a
     &:link, &:active, &:hover, &:visited
       color: #eaeaea
@@ -183,13 +181,6 @@ input.checkbox
       text-decoration: none
       color: #F5F5F5
 
-
-.secondary-navigation ul li a
-  &:link, &:visited, &:hover, &:active
-    text-decoration: none
-    color: #F5F5F5
-
-
 #user-navigation ul li a
   &:link, &:visited, &:hover, &:active
     text-decoration: none
@@ -214,10 +205,18 @@ input.checkbox
     &:link, &:visited, &:hover, &:active
       color: #364b69
 
+.secondary-navigation ul li a
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+    color: #F5F5F5
 
 .secondary-navigation
   background: #eaeaea
   border-bottom: 0px
+
+  ul
+    padding-right: 20px
+    float: right
 
   ul li
     background: #456
