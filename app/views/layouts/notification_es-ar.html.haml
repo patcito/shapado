@@ -7,8 +7,8 @@
     %br
     %p{:style=>"border-top: 1px solid #999"}
       si ya no quieres recibir notificaciones automáticas de
-      = AppConfig.domain
+      = @domain
       , cambie sus preferencias en las opciones de notificaciones.
       (
-      = url_for(:host => AppConfig.domain, :controller => "users", :action => "show", :id => @user)
+      = url_for(:host => @domain, :controller => "users", :action => "show", :id => @user)
       )
