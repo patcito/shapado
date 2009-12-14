@@ -1,6 +1,7 @@
 base: &common
   site: http://www.shapado.com
-  googlean: UA-10385211-1
+  analytics_id: UA-10385211-1
+  analytics_vendor: googlean
   session_key: _shapado_session
   session_secret: 9ac4fd97a52153070a0bd47467c00eded1badf526f145827384ddfde45ac0bfd3f0230c961ddfb9ef84d490b3d889e0169de8eee3ef7b7ed114262824f8aa8aa
   rest_auth_key: b4d66d73a1ade79ce227fba01b33f2ab021888ef

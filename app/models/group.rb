@@ -16,7 +16,9 @@ class Group
   key :isolate, Boolean, :default => false
   key :private, Boolean, :default => false
   key :owner_id, String
-
+  key :analytics_id, String
+  key :analytics_vendor, String
+  key :has_custom_analytics, Boolean, :default => false
   key :language, String
 
   has_many :memberships, :class_name => "Member",

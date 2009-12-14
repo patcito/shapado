@@ -38,6 +38,26 @@
       = form.check_box :private
       .tip
         Only the group's members will be able to access this group
+  .field-group
+    .label-container
+      = form.label :private, "Allow Custom Analytics"
+    .field
+      = form.check_box :has_custom_analytics
+      .tip
+        The group will be able to use its own tracking code
+- if @group.has_custom_analytics
+  .field-group
+    .label-container
+      = form.label :analytics_engine, "Analytics Engine"
+    .field.without-label
+      =  select("group", "analytics_vendor", [['Google Analytics', 'googlean']])
+
+  .field-group
+    .label-container
+      = form.label :analytics_id, "Website Analytics ID"
+    .field.without-label
+      = form.text_field :analytics_id, :class=> "text-field"
+
 
 .field-group.clear
   .label-container
