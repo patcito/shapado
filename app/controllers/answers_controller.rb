@@ -29,7 +29,7 @@ class AnswersController < ApplicationController
         users.each do |u|
           email = u.email
           if !email.blank? && u.notification_opts["new_answer"] == "1"
-            Notifier.deliver_new_answer(u, @answer)
+            Notifier.deliver_new_answer(u, current_group, @answer)
           end
         end
         current_user.on_activity(:answer_question, current_group)
@@ -38,7 +38,6 @@ class AnswersController < ApplicationController
       end
 
       flash[:notice] = t(:flash_notice, :scope => "answers.create")
-
       redirect_to question_path(current_languages, @question)
     else
       flash[:error] = t(:flash_error, :scope => "answers.create")

@@ -6,4 +6,4 @@
   respondeu:
   = find_and_preserve("<pre style='font-size:20px'>"+ h(@answer.body)+"</pre>")
   à pergunta
-  = link_to h(@question.title), url_for(:host => AppConfig.domain, :controller => "questions", :action => "show", :id => @question.slug)
+  = link_to h(@question.title), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)

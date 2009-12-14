@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
 
-  def new_answer(user, answer)
+  def new_answer(user, group, answer)
     self.class.layout "notification_#{user.language.downcase}"
 
     I18n.locale = user.language
@@ -16,10 +16,12 @@ class Notifier < ActionMailer::Base
     end
 
     recipients user.email
-    from "Shapado <notifications@shapado.com>"
+    domain = group ? group.domain : AppConfig.domain
+    from "#{group ? group.name : AppConfig.application_name} <notifications@shapado.com>"
     subject @subject
     sent_on Time.now
-    body   :user => user, :answer => answer, :question => answer.question
+    body   :user => user, :answer => answer, :question => answer.question,
+           :group => group, :domain => domain
     template "new_answer_#{user.language.downcase}"
     content_type  "text/html"
   end
