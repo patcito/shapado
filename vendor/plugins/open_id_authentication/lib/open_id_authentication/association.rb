@@ -6,8 +6,8 @@ module OpenIdAuthentication
     key :lifetime, Integer
     key :handle, String
     key :assoc_type, String
-    key :server_url, String ## FIXME may needs binary?
-    key :secret, String ## FIXME may needs binary?
+    key :server_url, Binary ## FIXME may needs binary?
+    key :secret, Binary ## FIXME may needs binary?
 
 
     def from_record
