@@ -23,6 +23,9 @@ class Group
   key :language, String
   key :activity_rate, Float, :default => 0.0
 
+  key :has_reputation_constrains, Boolean, :default => true
+  key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
+
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
