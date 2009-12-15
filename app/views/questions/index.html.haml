@@ -4,24 +4,6 @@
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom", :tags => params[:tags])}
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
 
-
-
-.buttons
-  = link_to t(".ask_question"), new_question_path(:language => current_languages), :class => "button"
-%br.clear
-
-#questions
-  -if @questions.empty?
-    .box.highlight
-      = t(".empty")
-  -@questions.each do |question|
-    = render :partial => "question", :object => question
-
-=will_paginate @questions
-
-.buttons
-  = link_to t(".ask_question"), new_question_path(:language => current_languages), :class => "button"
-
 -content_for :sidebar do
   -if logged_in?
     = render :partial => "shared/preferred_tags"
@@ -30,3 +12,15 @@
     %h3
       = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
     = render :partial => "shared/tag_list", :object => @tag_cloud
+
+
+/Questions
+%ul#questions
+  -if @questions.empty?
+    %li.box.highlight
+      = t(".empty")
+  -@questions.each do |question|
+    = render :partial => "question", :object => question
+
+=will_paginate @questions
+
