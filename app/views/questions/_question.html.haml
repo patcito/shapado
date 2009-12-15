@@ -6,17 +6,17 @@
   .stats
     .box.votes
       .counter
-        =question.votes_average
+        =format_number(question.votes_average)
       .text
         =t(:votes, :scope => "activerecord.attributes.question")
     .box.answers
       .counter
-        =question.answers_count
+        =format_number(question.answers_count)
       .text
         =t(:answers, :scope => "activerecord.attributes.question")
     .box.views
       .counter
-        =question.views_count
+        =format_number(question.views_count)
       .text
         =t(:views, :scope => "activerecord.attributes.question")
   / Question Summary

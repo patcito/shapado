@@ -18,4 +18,14 @@ module QuestionsHelper
     end
     URI.escape(url)
   end
+
+  def format_number(number)
+    if number < 1000
+      number.to_s
+    elsif number >= 1000 && number < 1000000
+      "%.01fK" % (number/1000.0)
+    elsif number >= 1000000
+      "%.01fM" % (number/1000000.0)
+    end
+  end
 end
