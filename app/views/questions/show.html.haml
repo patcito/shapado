@@ -36,7 +36,7 @@
             = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
     .markdown{:style => "width: 92%"}
       = markdown(@question.body)
-    .tags-list
+    .tag-list
       -@question.tags.each do |tag|
         %span.tag
           = link_to h(tag), questions_path(:language => current_languages, :tags => tag)

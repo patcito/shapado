@@ -35,9 +35,7 @@
             = render :partial => "shared/layout/notice"
 
           = yield :sidebar
-          .block
-            .sidebar-block
-              = render :partial => "shared/layout/activities"
+
           -unless feed_urls.empty?
             .block
               %h3

@@ -43,7 +43,7 @@
         -else
           = truncate(h(question.body), :length => 150)
 
-    .tags-list.left
+    .tag-list.left
       -question.tags.each do |tag|
         %span.tag
           = link_to h(tag), questions_path(current_languages, :tags => tag)
