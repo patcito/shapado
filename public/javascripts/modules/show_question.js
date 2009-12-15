@@ -44,4 +44,18 @@ $(document).ready(function() {
     controls.find(".forms .flag_form").slideToggle();
     return false;
   });
+
+  $("#question_flag_link").click(function() {
+    $("#add_comment_form").slideUp();
+    $("#question_flag_form").slideToggle();
+    return false;
+  });
+
+  $("#add_comment_form").hide();
+  $("#add_comment_link").click(function() {
+    $("#question_flag_form").slideUp();
+    $("#add_comment_form").slideToggle();
+    return false;
+  });
 });
+

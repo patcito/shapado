@@ -53,6 +53,11 @@
       -flag = Flag.new
       - flag.flaggeable = @question
       = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages, @question) }
+
+      -form_tag comments_path, :class => "form", :id => "add_comment_form" do
+        -@comment = Comment.new
+        = render :partial => "comments/form", :locals => {:source => question_path(current_languages, @question), :commentable => @question}
+        = submit_tag t("comments.shared.comment_submit")
 .clear
 
 

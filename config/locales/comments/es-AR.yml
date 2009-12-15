@@ -4,5 +4,8 @@ es-AR:
       flash_notice: Gracias por tu comentario
     update:
       flash_notice: "El commentario ha sido actualizado con exito."
+    shared:
+      add_comment: "añadir comentario..."
+      comment_submit: "Comentar"
   models:
     comments: Comentarios
