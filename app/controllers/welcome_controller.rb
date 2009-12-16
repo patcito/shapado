@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   helper :questions
+  tabs :default => :welcome
 
   before_filter :login_required, :only => [:feedback, :send_feedback]
   def index

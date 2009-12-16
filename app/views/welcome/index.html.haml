@@ -1,12 +1,3 @@
-
-#welcome.subtitle{:class => @active_subtab}
-  = t(".recent_questions", :default => "Recent Questions")
-  .right.tabs
-    .tab.active
-      = link_to t(".active"), root_path(:tab=>"active")
-    .tab.hot
-      = link_to t(".hot"), root_path(:tab=>"hot")
-
 %ul#questions
   -if @questions.empty?
     .box.highlight

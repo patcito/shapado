@@ -1,0 +1,11 @@
+.navtitle
+  = t(".recent_questions", :default => "Recent Questions")
+  -if @questions
+    == (#{@questions.total_entries})
+
+%ul{:style => "display: inline"}
+  %li.active
+    = link_to t("questions.index.active"), root_path(:tab=>"active")
+  %li.active
+    = link_to t("questions.index.hot"), root_path(:tab=>"hot")
+
