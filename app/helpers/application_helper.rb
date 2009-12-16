@@ -76,6 +76,8 @@ module ApplicationHelper
       "medium_number"
     elsif number >= 10000
       "big_number"
+    elsif number < 0
+      "negative_number"
     end
   end
 end

@@ -5,7 +5,7 @@
   / Question Stats
   .stats
     .box.votes
-      .counter
+      .counter{:class => class_for_number(question.votes_average) }
         =format_number(question.votes_average)
       .text
         =t(:votes, :scope => "activerecord.attributes.question")
