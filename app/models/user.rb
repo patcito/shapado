@@ -260,8 +260,8 @@ class User
       key = $1
       group = args.first
       if group.reputation_constrains.include?(key)
-        if group.has_reputation_constrains
-          return self.reputation_on(group) >= group.reputation_constrains[key]
+        if group.has_reputation_constrains || self.admin_of?(group)
+          return self.reputation_on(group) >= group.reputation_constrains[key].to_i
         else
           return true
         end
