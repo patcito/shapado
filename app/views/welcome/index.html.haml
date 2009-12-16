@@ -7,26 +7,26 @@
     .tab.hot
       = link_to t(".hot"), root_path(:tab=>"hot")
 
-#questions
+%ul#questions
   -if @questions.empty?
     .box.highlight
-      = t(".empty", :default => :"questions.index.empty")
+      %li
+        = t(".empty", :default => :"questions.index.empty")
   -@questions.each do |question|
-    = render :partial => "question", :object => question
+    = render :partial => "questions/question", :object => question
 
-= will_paginate @questions
+#additional_info
+  =will_paginate @questions
+
+  #help_us
+    Help us to answer
+    =link_to "unanswered questions", unanswered_questions_path(:language => current_languages)
+
+  .clear
 
 -content_for :sidebar do
-  .block
-    -if logged_in?
-      = render :partial => "shared/preferred_tags"
-    -else
-      .group_box
-        %h3
-          &= current_group.name
-        .markdown
-          = markdown(truncate(current_group.description, :length => 300))
-          =link_to t("scaffold.more", :default => :"groups.index.about"), about_path
+  -if logged_in?
+    = render :partial => "shared/preferred_tags"
   .block
     %h3
       = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
