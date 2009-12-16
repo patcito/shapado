@@ -17,7 +17,13 @@
     create:
       flash_notice: "Obrigado por registar-se!"
       flash_error:  "Pedimos desculpa mas não pudemos criar essa conta. Por favor tente novamente ou contacte um administrador (a ligação está acima)."
-
+    messages:
+      errors:
+        reputation_needed: "you need a reputation of {{min_reputation}} to {{action}}"
+    actions:
+      vote_up: vote up
+      vote_down: vote down
+      flag: flag
   activerecord:
     models:
       users: utilizadores

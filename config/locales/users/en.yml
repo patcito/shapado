@@ -17,7 +17,13 @@ en:
     create:
       flash_notice: "Thanks for signing up!"
       flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-
+    messages:
+      errors:
+        reputation_needed: "you need a reputation of {{min_reputation}} to {{action}}"
+    actions:
+      vote_up: vote up
+      vote_down: vote down
+      flag: flag
   activerecord:
     models:
       users: Users

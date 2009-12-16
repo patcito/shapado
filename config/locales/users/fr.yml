@@ -17,7 +17,13 @@ fr:
     create:
       flash_notice: "Merci pour vous avoir enregistrer!"
       flash_error:  "Désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
-
+    messages:
+      errors:
+        reputation_needed: "vous avez besoin d'une réputation de {{min_reputation}} à fin de pouvoir {{action}}"
+    actions:
+      vote_up: voter positif
+      vote_down: voter négatif
+      flag: flag
   activerecord:
     models:
       users: Utilisateurs

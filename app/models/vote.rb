@@ -15,6 +15,7 @@ class Vote
   validates_inclusion_of :value, :within => [1,-1]
 
   validate :should_be_unique
+  validate :check_reputation
 
   protected
   def should_be_unique
@@ -28,5 +29,26 @@ class Vote
     if !valid
       self.errors.add(:voteable, "You already voted this #{self.voteable_type}")
     end
+  end
+
+  def check_reputation
+    if self.value > 0
+      unless user.can_vote_up_on?(self.voteable.group)
+        reputation = self.voteable.group.reputation_constrains["vote_up"]
+        self.errors.add(:reputation, I18n.t("users.messages.errors.reputation_needed",
+                                            :min_reputation => reputation,
+                                            :action => I18n.t("users.actions.vote_up")))
+        return false
+      end
+    else
+      unless user.can_vote_down_on?(self.voteable.group)
+        reputation = self.voteable.group.reputation_constrains["vote_down"]
+        self.errors.add(:reputation, I18n.t("users.messages.errors.reputation_needed",
+                                            :min_reputation => reputation,
+                                            :action => I18n.t("users.actions.vote_down")))
+        return false
+      end
+    end
+    return true
   end
 end
