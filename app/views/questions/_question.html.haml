@@ -23,7 +23,7 @@
   .summary
     %h3
       = check_box_tag "vote_up" # FIXME: use an image (arrow)
-      = link_to title, question_path(current_languages, question), :title => truncate(question.body, :length => 200)
+      = link_to title, question_path(current_languages, question), :title => truncate(h(question.body), :length => 200)
     .tag-list
       -question.tags.each do |tag|
         %span.tag

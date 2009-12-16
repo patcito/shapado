@@ -22,9 +22,11 @@
   -@questions.each do |question|
     = render :partial => "question", :object => question
 
-=will_paginate @questions
+#additional_info
+  =will_paginate @questions
 
-#help_us
-  Help us to answer
-  =link_to "unanswered questions", unanswered_questions_path
-.clear
+  #help_us
+    Help us to answer
+    =link_to "unanswered questions", unanswered_questions_path
+
+  .clear
