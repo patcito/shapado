@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => :show
-  before_filter :check_permissions, :only => [:edit, :update, :destroy]
+  before_filter :check_permissions, :only => [:destroy]
+  before_filter :check_update_permissions, :only => [:edit, :update]
 
   helper :votes
 
@@ -92,6 +93,21 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     if @answer.nil? || !current_user.can_modify?(@answer)
       flash[:error] = t("global.permission_denied")
+      redirect_to questions_path(current_languages)
+    end
+  end
+
+  def check_update_permissions
+    @answer = Answer.find(params[:id])
+
+    if @answer.nil?
+      redirect_to questions_path
+    elsif !(current_user.can_edit_others_posts_on?(@answer.group) ||
+          current_user.can_modify?(@answer))
+      reputation = @answer.group.reputation_constrains["edit_others_posts"]
+      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                    :min_reputation => reputation,
+                                    :action => I18n.t("users.actions.edit_others_posts"))
       redirect_to questions_path(current_languages)
     end
   end

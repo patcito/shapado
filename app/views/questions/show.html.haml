@@ -42,7 +42,7 @@
     .clear
   .actions
     -if logged_in?
-      -if current_user.can_modify?(@question)
+      -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
         = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
       -if current_user.mod_of?(@question.group)
         %br

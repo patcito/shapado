@@ -24,6 +24,7 @@ fr:
       vote_up: voter positif
       vote_down: voter négatif
       flag: flag
+      edit_others_posts: "edit other's posts"
   activerecord:
     models:
       users: Utilisateurs

@@ -24,6 +24,7 @@
       vote_up: votar positivo
       vote_down: votar negativo
       flag: reportar como abuso
+      edit_others_posts: "editar preguntas o respuestas de otros usuarios"
   activerecord:
     models:
       users: Usuarios
