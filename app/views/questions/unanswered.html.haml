@@ -4,32 +4,21 @@
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom", :tags => params[:tags])}
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
 
-#questions_index.subtitle{:class => @active_subtab}
-  = t(".title")
-  .right.tabs
-    -if logged_in?
-      .tab.mytags
-        = link_to t(".my_tags"), unanswered_questions_path(:sort=>"mytags")
-    .tab.newest
-      = link_to t(".newest", :default => :"questions.index.newest"), unanswered_questions_path(:sort=>"newest")
-    .tab.votes
-      = link_to t(".votes", :default => :"questions.index.votes"), unanswered_questions_path(:sort=>"votes")
-
-%br.clear
-
-#questions
+/Questions
+%ul#questions
   -if @questions.empty?
-    .box.highlight
-      = t(".empty", :default => :"questions.index.empty")
-  -else
-    -@questions.each do |question|
-      = render :partial => "question", :object => question
+    %li.box.highlight
+      = t(".empty")
+  -@questions.each do |question|
+    = render :partial => "question", :object => question
 
-=will_paginate @questions
+#additional_info
+  =will_paginate @questions
 
 -content_for :sidebar do
-  %h1
-    = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  = render :partial => "shared/tag_list", :object => @tag_cloud
+  .block
+    %h1
+      = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = render :partial => "shared/tag_list", :object => @tag_cloud
   -if logged_in?
     = render :partial => "shared/preferred_tags"
