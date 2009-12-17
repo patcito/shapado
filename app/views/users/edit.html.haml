@@ -6,6 +6,5 @@
   .subtitle
     = t("users.form.information")
   =render :partial => "form", :locals => {:f => f}
-  .field-group
-    .buttons
-      = submit_tag t('.submit')
+  .group.navform
+    = submit_tag t('.submit')
