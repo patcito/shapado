@@ -71,6 +71,16 @@ module ApplicationHelper
     Maruku.new(sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table pre code blockquote a], :attributes => %w[href src title alt])).to_html
   end
 
+  def format_number(number)
+    if number < 1000
+      number.to_s
+    elsif number >= 1000 && number < 1000000
+      "%.01fK" % (number/1000.0)
+    elsif number >= 1000000
+      "%.01fM" % (number/1000000.0)
+    end
+  end
+
   def class_for_number(number)
     if number >= 1000 && number < 10000
       "medium_number"

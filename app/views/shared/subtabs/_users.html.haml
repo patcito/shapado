@@ -1,0 +1,4 @@
+.navtitle
+  = t("users.index.title")
+  -if @users
+    == (#{format_number(@users.total_entries)})
