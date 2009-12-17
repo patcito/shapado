@@ -10,5 +10,5 @@
     = link_to t("questions.index.hot"), questions_path(:language => current_languages, :sort=>"hot")
   %li.votes
     = link_to t("questions.index.votes"), questions_path(:language => current_languages, :sort=>"votes")
-  %li.active
-    = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"active")
+  %li.activity
+    = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"activity")
