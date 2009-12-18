@@ -4,7 +4,6 @@ fr:
       comment_label: Commenter sur cette réponse
       answer_label: Répondre à la question
       comment_submit: Commenter
-      preview: Preview
       submit: Répondre
     edit:
       title: Éditer la réponse

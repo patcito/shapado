@@ -5,6 +5,7 @@
 -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
   = render :partial => "form", :object => f
-  .buttons
+  .group.navform
     = f.submit  t("scaffold.create")
+    = t("global.or")
     = link_to  t("scaffold.back"), groups_path, :class => "cancel button"
