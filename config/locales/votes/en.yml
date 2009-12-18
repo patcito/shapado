@@ -4,6 +4,9 @@ en:
       flash_notice: "Thanks for your vote!"
       flash_error:  "You cannot vote this"
       unauthenticated: "anonymous users can't vote"
+    control:
+      to_vote_up: "click to vote up"
+      to_vote_down: "click to vote down"
 
   activerecord:
     models:

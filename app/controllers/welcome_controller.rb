@@ -4,11 +4,11 @@ class WelcomeController < ApplicationController
 
   before_filter :login_required, :only => [:feedback, :send_feedback]
   def index
-    @active_subtab = params.fetch(:tab, "active")
+    @active_subtab = params.fetch(:tab, "activity")
 
     order = "activity_at desc"
     case @active_subtab
-      when "active"
+      when "activity"
         order = "activity_at desc"
       when "hot"
         order = "hotness desc"

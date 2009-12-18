@@ -4,8 +4,8 @@
     == (#{@questions.total_entries})
 
 %ul{:style => "display: inline"}
-  %li.active
-    = link_to t("questions.index.active"), root_path(:tab=>"active")
-  %li.active
+  %li.activity
+    = link_to t("questions.index.active"), root_path(:tab=>"activity")
+  %li.hot
     = link_to t("questions.index.hot"), root_path(:tab=>"hot")
 

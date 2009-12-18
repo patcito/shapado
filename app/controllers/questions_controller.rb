@@ -14,16 +14,17 @@ class QuestionsController < ApplicationController
   def index
     set_page_title(t("questions.index.title"))
     order = "created_at desc"
-
-
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
-      when "active"
+      when "activity"
         order = "activity_at desc"
       when "votes"
         order = "votes_count desc"
       when "hot"
         order = "hotness desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
 
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
@@ -49,13 +50,21 @@ class QuestionsController < ApplicationController
 
   def unanswered
     set_page_title(t("questions.unanswered.title"))
+
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
       when "newest"
         order = "activity_at desc"
       when "votes"
         order = "votes_count desc"
+      when "mytags"
+        order = "created_at desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
+
+    @active_subtab = "newest" if !logged_in? && @active_subtab == "mytags"
 
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
                     merge(language_conditions.merge(language_conditions)), 25)
@@ -93,7 +102,6 @@ class QuestionsController < ApplicationController
 
     raise PageNotFound  unless @question
     order = "created_at desc"
-    @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
       when "oldest"
         order = "created_at asc"
@@ -101,6 +109,9 @@ class QuestionsController < ApplicationController
         order = "created_at desc"
       when "votes"
         order = "votes_count desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
@@ -286,4 +297,5 @@ class QuestionsController < ApplicationController
     @active_tag = "tag_#{params[:tags]}" if params[:tags]
     @active_tag
   end
+
 end
