@@ -4,6 +4,23 @@
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom", :tags => params[:tags])}
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
 
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+    -if @questions
+      == (#{@questions.total_entries})
+
+  %ul{:style => "display: inline"}
+    %li.newest
+      = link_to t("questions.index.newest"), questions_path(:language => current_languages, :sort=>"newest")
+    %li.hot
+      = link_to t("questions.index.hot"), questions_path(:language => current_languages, :sort=>"hot")
+    %li.votes
+      = link_to t("questions.index.votes"), questions_path(:language => current_languages, :sort=>"votes")
+    %li.activity
+      = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"activity")
+
+
 -content_for :sidebar do
   -if logged_in?
     = render :partial => "shared/preferred_tags"
@@ -12,7 +29,6 @@
     %h3
       = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
     = render :partial => "shared/tag_list", :object => @tag_cloud
-
 
 /Questions
 %ul#questions

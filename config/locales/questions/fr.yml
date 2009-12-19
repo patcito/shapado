@@ -39,6 +39,8 @@ fr:
       tags: Unanswered Tags
       empty: "Ce groupe n'a aucune question sans réponses"
       my_tags: "my tags"
+    tags:
+      title: Tags
     new:
       title: Poser une question
     create:

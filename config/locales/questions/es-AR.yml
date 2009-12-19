@@ -39,6 +39,8 @@
       tags: etiquetas sin respuesta
       empty: "Este grupo no tiene preguntas no contestadas."
       my_tags: mis etiquetas
+    tags:
+      title: Etiquetas
     new:
       title: Pregunte
     create:

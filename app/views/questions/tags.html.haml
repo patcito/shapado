@@ -1,4 +1,9 @@
 
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+
+
 %table.tag-list{:style => "width: 100%"}
   -@tag_cloud.each_slice(4) do |tags|
     %tr

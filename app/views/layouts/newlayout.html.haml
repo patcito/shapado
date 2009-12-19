@@ -22,7 +22,7 @@
           #block-text.block
             -if @active_tab
               .secondary-navigation{:class => @active_subtab.to_s}
-                = render :partial => "/shared/subtabs/#{@active_tab}"
+                = yield :subtabs
                 .clear
             .content
               %p

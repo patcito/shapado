@@ -1,3 +1,10 @@
+
+-content_for :subtabs do
+  .navtitle
+    = t("users.index.title")
+    -if @users
+      == (#{format_number(@users.total_entries)})
+
 /Users
 %ul#questions
   -@users.each do |user|
