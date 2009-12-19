@@ -2,9 +2,12 @@
 
 %h2
   = t(".with_openid")
+
 -if !logged_in?
   .inner
     = t("layouts.application.openid.explaination")
+    %br
+    %br
     -form_tag session_path, :id => 'openid' do
       #nojsopenid
         = text_field_tag "openid_identifier", "", :id => "openid_username"
