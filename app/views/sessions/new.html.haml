@@ -1,30 +1,32 @@
 = stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
 
-.subtitle
+%h2
   = t(".with_openid")
 -if !logged_in?
-  .box.highlight
+  .inner
     = t("layouts.application.openid.explaination")
     -form_tag session_path, :id => 'openid' do
       #nojsopenid
         = text_field_tag "openid_identifier", "", :id => "openid_username"
         = submit_tag t(".log_in")
 
-.subtitle
+%h2
   = t(".with_authentication")
 
-%h2
+%h2.title
   =t(".registered")
-= render :partial => "login"
+.inner
+  = render :partial => "login"
 
 
-%h2
+%h2.title
   = t(".not_registered")
--@user = User.new
--@user.password = @user.password_confirmation = nil
-= error_messages_for :user
-- form_for @user, :url => users_path, :html => {:class => "form"} do |f|
-  =render :partial => "users/form", :locals => {:f => f}
-  %p
-    = submit_tag t('users.new.submit')
+.inner
+  -@user = User.new
+  -@user.password = @user.password_confirmation = nil
+  = error_messages_for :user
+  - form_for @user, :url => users_path, :html => {:class => "form"} do |f|
+    =render :partial => "users/form", :locals => {:f => f}
+    .group.navform
+      = submit_tag t('users.new.submit'), :class => "button"
 
