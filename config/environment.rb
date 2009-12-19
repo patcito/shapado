@@ -24,6 +24,8 @@ Rails::Initializer.run do |config|
   config.gem "mongo_mapper", :version => "0.6.5", :source => "http://gemcutter.org"
   config.gem "compass", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "compass-960-plugin", :lib => "ninesixty", :source => "http://gemcutter.org"
+  config.gem "fancy-buttons", :source => "http://gemcutter.org"
+  config.gem "compass-colors", :source => "http://gemcutter.org"
   config.gem "ruby-stemmer", :version => ">=0.5.3", :lib => "lingua/stemmer"
   config.gem "mongomapper_ext", :version => "0.0.4", :source => "http://gemcutter.org"
   config.gem "geoip"
