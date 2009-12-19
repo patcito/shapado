@@ -1,7 +1,9 @@
 
-%h1
-  = gravatar @user.email.to_s
-  &= @user.login
+-content_for :subtabs do
+  .navtitle
+    &= @user.login
+
+= gravatar @user.email.to_s
 
 %h2
   = number_with_delimiter(@questions.total_entries)

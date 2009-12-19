@@ -39,6 +39,8 @@
       tags: Etiquetas Sem Resposta
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
+    tags:
+      title: Etiquetas
     new:
       title: Fazer Pergunta
     create:
