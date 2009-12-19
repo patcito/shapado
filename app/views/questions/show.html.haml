@@ -106,8 +106,7 @@
   -unless @question.answered
     -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
       = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
-      = submit_tag t('answers.form.submit')
-    %hr
+      = submit_tag t('answers.form.submit'), :class => "button"
 -else
   .box.highlight{:style => "text-align: center"}
     == #{link_to t("global.please_login"), login_path} #{t(".to_answer_question")}.

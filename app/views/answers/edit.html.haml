@@ -3,7 +3,8 @@
 - form_for(:answer, :url => question_answer_path(current_languages,@question, @answer), :html => {:method => :put, :class => "form"}) do |f|
   = f.error_messages
   =render :partial => "form", :locals => {:f => f}
-  .field-group
-    .buttons
-      = f.submit t("scaffold.update")
+  .group
+    .group.navform
+      = f.submit t("scaffold.update"), :class => "buttton"
+      = t("global.or")
       = link_to t('scaffold.cancel'), question_path(current_languages, @question), :class => "button cancel"
