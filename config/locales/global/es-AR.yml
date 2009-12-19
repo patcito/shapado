@@ -28,6 +28,8 @@
     permission_denied: Permiso denegado
     please_login: por favor inicia sesión
     group_not_found: "la página {{url}} no existe"
+    preview: Vista previa
+    or: o
   feeds:
     question: Subscribirse A Esta Pregunta
     questions: Subscribirse A Todas Las Preguntas
