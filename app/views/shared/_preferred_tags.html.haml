@@ -11,5 +11,5 @@
   - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
     = hidden_field_tag :category, current_languages
     = hidden_field_tag :opt, "add"
-    = text_field :tags, "", :class => "text-field", :size => 22
-    = submit_tag "add"
+    = text_field :tags, "", :class => "text_field", :style => "width: 70%"
+    = submit_tag t("scaffold.add"), :class => "button"

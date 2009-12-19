@@ -1,15 +1,10 @@
 - form_tag session_path, :class => "form" do
-  .field-group
-    .label-container
-      = label_tag 'login', t(:login, :scope => "activerecord.attributes.user")
-    .field
-      = text_field_tag 'login', @login, :class => "text-field"
+  .group
+    = label_tag 'login', t(:login, :scope => "activerecord.attributes.user"), :class => "label"
+    = text_field_tag 'login', @login, :class => "text_field"
 
-  .field-group
-    .label-container
-      = label_tag t(:password, :scope => "activerecord.attributes.user")
-    .field
-      = password_field_tag 'password', nil, :class => "text-field"
-  .field-group
-    .field
-      = submit_tag t("sessions.new.log_in")
+  .group
+    = label_tag 'password', t(:password, :scope => "activerecord.attributes.user"), :class => "label"
+    = password_field_tag 'password', nil, :class => "text_field"
+  .group.navform
+    = submit_tag t("sessions.new.log_in"), :class => "button"
