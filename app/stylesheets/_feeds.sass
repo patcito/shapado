@@ -1,27 +1,7 @@
-ul.feeds
-  padding: 15px
-  line-height: 50px
-
-  li
+.feeds
+  .feed_entry
     display: block
-    list-style: none
-    padding: 3px 3px 3px 3px
-    background: #EBF3F5 url(/images/atom.png) no-repeat center left
-    border: 1px dotted #C8C8C8
-    -webkit-border-radius: 7px
-    -moz-border-radius: 7px
-
     a
-      display: block
-      color: #555
-      background: transparent !important
-      text-decoration: none !important
-      font-size: 14pt !important
-      font-family: Georgia, Times, serif
-      font-weight: bold
-      font-style: italic
-      line-height: 23px
-      height: 50px !important
-
-      padding: 3px 10px
-      margin-left: 50px !important
+      +fancy-button-structure
+      +fancy-button-colors-matte(#FEAB1C)
+      +fancy-button-size(18px, 10px, 4px)

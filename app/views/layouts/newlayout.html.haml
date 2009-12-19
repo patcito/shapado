@@ -16,7 +16,6 @@
         #main-bar{:class => @active_tab}
           = render :partial => "shared/user_navigation"
           .clear
-        .clear
       #wrapper
         #main
           #block-text.block
@@ -40,10 +39,11 @@
               %h3
                 = t(".subscribe", :default => "Subscribe")
               .sidebar-block
-                %ul.feeds
+                .feeds
                   -feed_urls.each do |title, url|
-                    %li
+                    .feed_entry
                       = link_to h(title), url
+                  .clear
         .clear
       #footer
         .block
