@@ -6,7 +6,7 @@
     =vote_box(answer, question_path(current_languages, question))
   #body-col
     .markdown
-      =markdown(auto_link(answer.body))
+      =auto_link(markdown(answer.body))
     .actions
       = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
     .user_data
@@ -37,5 +37,5 @@
           =link_to comment.user.login, user_path(comment.user)
           said:
           .markdown
-            =markdown(auto_link(comment.body))
+            =auto_link(markdown(comment.body))
   .clear

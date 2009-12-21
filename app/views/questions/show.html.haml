@@ -58,3 +58,42 @@
   = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
   .group.navform
     = submit_tag t('answers.form.submit'), :class => "button"
+
+-content_for :sidebar do
+  .block
+    %h3
+      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+    = render :partial => "shared/tag_list", :object => @tag_cloud
+    .clear
+
+  .block.stats
+    -if @question.group_id != current_group.id
+      = t(".asked_on")
+      = @question.group.name
+
+    .entry
+      .text.asked
+        asked
+      .data
+        = t("time.ago", :time => time_ago_in_words(@question.created_at))
+    .entry
+      .text.viewed
+        = t('.viewed')
+      .data
+        = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+    .entry
+      .text.last_activity
+        last activity
+      .data
+        = t("time.ago", :time => time_ago_in_words(@question.activity_at))
+  -if AppConfig.enable_sharing
+    .block
+      %h3
+        = t(".share")
+      %ul.navigation
+        %li
+          = render :partial => "twitter"
+        %li
+          = render :partial => "identica"
+        %li
+          = render :partial => "facebook"
