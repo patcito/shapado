@@ -6,7 +6,7 @@
     =vote_box(answer, question_path(current_languages, question))
   #body-col
     .markdown
-      =markdown(answer.body)
+      =markdown(auto_link(answer.body))
     .user_data
       .time_ago
         answered
@@ -29,5 +29,5 @@
           =link_to comment.user.login, user_path(comment.user)
           said:
           .markdown
-            =markdown(comment.body)
+            =markdown(auto_link(comment.body))
   .clear
