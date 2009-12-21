@@ -20,7 +20,8 @@
     &= @question.favorites_count
 
 #question-body-col.markdown
-  = markdown(@question.body)
+  #body
+    = markdown(@question.body)
 
   .tag-list
     -@question.tags.each do |tag|
