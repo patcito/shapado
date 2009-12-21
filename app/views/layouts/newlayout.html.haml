@@ -25,7 +25,7 @@
                 .clear
             .content
               %p
-                = show_flash_messages(:class => "flash")
+                = show_flash_messages(:class => "flash", :markdown => true)
               .inner
                 = yield
         #sidebar
