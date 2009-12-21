@@ -19,10 +19,9 @@
       #wrapper
         #main
           #block-text.block
-            -if @active_tab
-              .secondary-navigation{:class => @active_subtab.to_s}
-                = yield :subtabs
-                .clear
+            .secondary-navigation{:class => @active_subtab.to_s}
+              = yield :subtabs
+              .clear
             .content
               %p
                 = show_flash_messages(:class => "flash", :markdown => true)
