@@ -19,5 +19,15 @@
         == (#{answer.user.reputation_on(current_group)})
         = t("global.from", :site => answer.user.country_name)
         = country_flag(answer.user.country_code, answer.user.country_name)
-      .clear
+    .clear
+    / Nested Answers
+    .children
+      -answer.children.each do |comment|
+        .comment
+          %strong
+            = t("time.ago", :time => time_ago_in_words(comment.created_at))
+          =link_to comment.user.login, user_path(comment.user)
+          said:
+          .markdown
+            =markdown(comment.body)
   .clear
