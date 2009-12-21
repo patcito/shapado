@@ -160,6 +160,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         current_user.on_activity(:ask_question, current_group)
+        current_group.on_activity(:ask_question)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
