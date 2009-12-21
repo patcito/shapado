@@ -21,11 +21,12 @@ $(document).ready(function() {
 })
 
 function showMessage(message, t) {
+  $("#notifyBar").remove();
   $.notifyBar({
-    html: message,
+    html: "<div class='message "+t+"' style='width: 100%; height: 100%; padding: 5px'>"+message+"</div>",
     delay: 3000,
     animationSpeed: "normal",
-    barClass: "message "+ t
+    barClass: "flash"
   });
 }
 
