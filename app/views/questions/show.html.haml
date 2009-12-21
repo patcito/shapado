@@ -45,14 +45,25 @@
 .clear
 
 %a{:name=>"answers"}
-#answers
-  %h1
-    == #{@answers.total_entries} Answers
-  /TODO: tab bar
 
-  -@answers.each do |answer|
-    =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
-  =will_paginate(@answers)
+#answers
+  .secondary-navigation{:class => @active_subtab.to_s}
+    .navtitle
+      == #{@answers.total_entries} Answers
+
+    %ul
+      %li.newest
+        = link_to t("questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers")
+      %li.votes
+        = link_to t("questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers")
+      %li.oldest
+        = link_to t("questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers")
+    .clear
+  .block
+    .content
+      -@answers.each do |answer|
+        =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
+      =will_paginate(@answers)
 
 -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
   = render :partial => "answers/form", :locals => {:f => f, :markdown => true}

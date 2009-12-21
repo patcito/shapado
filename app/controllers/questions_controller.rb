@@ -102,6 +102,7 @@ class QuestionsController < ApplicationController
 
     raise PageNotFound  unless @question
     order = "created_at desc"
+    @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
       when "oldest"
         order = "created_at asc"
