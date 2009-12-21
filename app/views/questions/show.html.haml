@@ -46,6 +46,14 @@
 
 %a{:name=>"answers"}
 #answers
+  %h1
+    == #{@answers.total_entries} Answers
+  /TODO: tab bar
+
+  -@answers.each do |answer|
+    =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
+  =will_paginate(@answers)
+
   -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
     = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
     .group.navform
