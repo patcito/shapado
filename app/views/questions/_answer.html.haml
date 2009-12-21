@@ -7,6 +7,8 @@
   #body-col
     .markdown
       =markdown(auto_link(answer.body))
+    .actions
+      = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
     .user_data
       .time_ago
         answered
@@ -20,6 +22,12 @@
         = t("global.from", :site => answer.user.country_name)
         = country_flag(answer.user.country_code, answer.user.country_name)
     .clear
+
+    -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
+      = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
+      .group.navform
+        = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit"), :class => "button"
+
     / Nested Answers
     .children
       -answer.children.each do |comment|

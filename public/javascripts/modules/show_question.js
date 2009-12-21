@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   $("form.nestedAnswerForm").hide();
   $(".addNestedAnswer").click(function() {
-    $(this).parent().next().next("form.nestedAnswerForm").slideToggle();
+    $(this).parents(".answer").find("form.nestedAnswerForm").slideToggle();
     $(this).parents(".flag_form").slideUp();
     return false;
   });
