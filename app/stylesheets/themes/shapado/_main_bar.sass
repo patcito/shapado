@@ -1,14 +1,17 @@
 #main-bar
-  width: 80%
+  width: 100%
   float: left
-  padding: 20px 0 20px 25px
+  margin: 0 10px 10px  10px
+
+  #logo
+    float: left
+    margin-right: 10px
 
 #main-bar ul
-  margin: 0
-  padding: 0
   list-style-type: none
 
 #main-bar ul li
+  margin-top: 15px
   background: #456
   border-top: 1px solid #5C738A
   margin-right: 5px
@@ -33,19 +36,19 @@
     display: block
     font-size: 12pt
     font-weight: bold
-    padding: 5px 15px
+    padding: 5px 10px
 
     &:link, &:visited, &:hover, &:active
       text-decoration: none
       color: #FFF
 
   &.ask_question
-    float: right
     +fancy-button-structure
     +fancy-button-colors-matte(#528C54)
     +fancy-button-size(24px, 8px, 4px, 15px)
-    margin-top: -5px
-    margin-right: 12px
+    float: right
+    margin-top: 10px
+    margin-rigth: 2%
     a
       font-size: 23px
 

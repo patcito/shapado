@@ -5,14 +5,11 @@
     =link_to t("layouts.application.tags"), tags_questions_path(:language => current_languages)
   %li.users
     =link_to t("layouts.application.users"), users_path
-  %li.unanswered
+  %li.unanswered.last
     =link_to t("layouts.application.unanswered"), unanswered_questions_path(:language => current_languages)
   -if logged_in?
     -if current_user.mod_of?(current_group) || current_user.admin?
-      %li.moderate
+      %li.moderate.last
         =link_to t("layouts.application.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
-      -if current_group.has_custom_ads
-        %li.moderate
-          =link_to t("layouts.application.manage_ads"), ads_path, :style => "background: #E55353; color: #fff"
   %li.ask_question
     =link_to t("layouts.application.ask_question"), new_question_path(:language => current_languages), :rel => 'nofollow'
