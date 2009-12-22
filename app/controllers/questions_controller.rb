@@ -117,9 +117,10 @@ class QuestionsController < ApplicationController
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
 
-    @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
-                                          :order => order,
-                                          :banned => false)
+    options = {:per_page => 25, :page => params[:page] || 1,
+               :order => order, :banned => false}
+    options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
+    @answers = @question.answers.paginate(options)
 
     @answer = Answer.new
     @question.viewed!

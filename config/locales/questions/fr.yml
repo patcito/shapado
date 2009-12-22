@@ -23,6 +23,9 @@ fr:
       watch_tooltip: "suivre cette question"
       asked_on: "posée dans"
       last_activity: Last activity
+      answers_title:
+        one: "{{count}} Answer"
+        other: "{{count}} Answers"
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
