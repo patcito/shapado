@@ -21,6 +21,7 @@ class Group
   key :analytics_vendor, String
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
+  key :activity_rate, Float, :default => 0.0
 
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
@@ -157,6 +158,19 @@ class Group
 
   def pending?
     state == "pending"
+  end
+
+  def on_activity(action)
+    value = 0
+    case action
+      when :ask_question
+        value = 0.1
+      when :answer_question
+        value = 0.3
+    end
+
+    self.collection.update({:_id => self._id}, {:$inc => {:activity_rate => value}},
+                                                               :upsert => true)
   end
 
   def language=(lang)
