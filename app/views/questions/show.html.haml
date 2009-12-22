@@ -50,7 +50,7 @@
 #answers
   .secondary-navigation{:class => @active_subtab.to_s}
     .navtitle
-      == #{@answers.total_entries} Answers
+      = t(".answers_title", :count => @answers.total_entries + (@question.answered ? 1 : 0))
 
     %ul
       %li.newest
@@ -61,6 +61,9 @@
         = link_to t("questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers")
     .clear
   .block
+    -if @question.answered
+      -solution = @question.answer
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => solution, :comment => @answer} unless solution.nil?
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
     =will_paginate(@answers)

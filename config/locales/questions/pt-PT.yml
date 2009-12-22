@@ -23,6 +23,9 @@
       watch_tooltip: "watch this question"
       asked_on: "Asked on"
       last_activity: Last activity
+      answers_title:
+        one: "{{count}} Answer"
+        other: "{{count}} Answers"
     answer:
       pick_answer: Escolher como solução
       unset_answer: Retirar como solução?
