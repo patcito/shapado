@@ -9,6 +9,8 @@
       oldest:  mais antigas
       ask_question: fazer pergunta
       empty: "Ainda ninguém fez nenhuma pergunta, seja o primeiro!"
+      help_to_answer: Help us to answer
+      unanswered_questions: unanswered questions
     show:
       answers: Respostas
       another_answers: Outras respostas
@@ -20,6 +22,7 @@
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
       asked_on: "Asked on"
+      last_activity: Last activity
     answer:
       pick_answer: Escolher como solução
       unset_answer: Retirar como solução?
@@ -78,4 +81,5 @@
         votes: Votos
         language: Idioma
         category: Categoria
+        created_at: Asked
 

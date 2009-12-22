@@ -9,6 +9,8 @@ en:
       oldest:  oldest
       ask_question: ask question
       empty: "No one has asked any questions yet, be the first!"
+      help_to_answer: Help us to answer
+      unanswered_questions: unanswered questions
     show:
       answers: Answers
       another_answers: Other answers
@@ -20,6 +22,7 @@ en:
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
       asked_on: "Asked on"
+      last_activity: Last activity
     answer:
       pick_answer: Pick as solution
       unset_answer: Unset as solution?
@@ -78,3 +81,4 @@ en:
         votes: Votes
         language: Language
         category: Category
+        created_at: Asked

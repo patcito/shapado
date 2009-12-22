@@ -22,8 +22,8 @@
   =will_paginate @questions
 
   #help_us
-    Help us to answer
-    =link_to "unanswered questions", unanswered_questions_path(:language => current_languages)
+    = t("questions.index.help_to_answer")
+    = link_to t("questions.index.unanswered_questions"), unanswered_questions_path(:language => current_languages)
 
   .clear
 

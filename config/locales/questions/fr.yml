@@ -9,6 +9,8 @@ fr:
       oldest:  oldest
       ask_question: poser une question
       empty: "Aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
+      help_to_answer: Help us to answer
+      unanswered_questions: unanswered questions
     show:
       answers: Réponses
       another_answers: Autres réponses
@@ -20,6 +22,7 @@ fr:
       to_answer_question: to answer this question
       watch_tooltip: "suivre cette question"
       asked_on: "posée dans"
+      last_activity: Last activity
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
@@ -78,3 +81,4 @@ fr:
         votes: Votes
         language: Langue
         category: Catégorie
+        created_at: Asked
