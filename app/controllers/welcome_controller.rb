@@ -18,9 +18,8 @@ class WelcomeController < ApplicationController
     add_feeds_url(url_for(:format => "atom", :languages => @langs_conds),
                                                     t("feeds.questions"))
 
-    @questions = Question.paginate({:per_page => 25,
+    @questions = Question.paginate({:per_page => 10,
                                    :page => params[:page] || 1,
-                                   :limit => 20,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
                                    :order => order}.merge(
                                    scoped_conditions({:banned => false})))

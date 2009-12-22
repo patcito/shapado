@@ -35,8 +35,6 @@
       %span.asked_by
         = t('activerecord.attributes.question.asked_by')
       = link_to h(@question.user.login), user_path(@question.user)
-      %span.user_reputation
-        ==(#{@question.user.reputation_on(current_group)})
       %span.time_ago
         = t("time.ago", :time => time_ago_in_words(@question.created_at))
       = t("global.from", :site => @question.user.country_name)
