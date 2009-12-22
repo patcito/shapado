@@ -31,7 +31,7 @@
     = render :partial => "shared/tag_list", :object => @tag_cloud
 
 /Questions
-%ul#questions
+%ul.items#questions
   -if @questions.empty?
     %li.box.highlight
       = t(".empty")

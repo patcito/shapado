@@ -28,7 +28,7 @@
     = render :partial => "shared/preferred_tags"
 
 /Questions
-%ul#questions
+%ul.items#questions
   -if @questions.empty?
     %li.box.highlight
       = t(".empty")

@@ -10,7 +10,7 @@
     %li.hot
       = link_to t("questions.index.hot"), root_path(:tab=>"hot")
 
-%ul#questions
+%ul.items#questions
   -if @questions.empty?
     .box.highlight
       %li

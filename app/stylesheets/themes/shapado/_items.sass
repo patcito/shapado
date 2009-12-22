@@ -1,0 +1,73 @@
+ul.items
+  list-style-type: none
+
+  li.item
+    border-bottom: 4px dotted #ccc
+    padding-bottom: 10px
+    .logo
+      float: left
+      padding: 0px 10px
+      margin-right: 4px
+
+    .box
+      float: left
+      padding: 10px
+      margin-right: 4px
+      text-align: center
+      vertical-align: baseline
+      width: 42px
+      height: 42px
+      display: block
+      font-size: 10px
+      font-family: Helvetica, Arial, sans-serif
+      color: #666
+      +rounded(2px,2px,2px,2px)
+
+      .counter
+        padding: 4px
+        font-size: 25px
+        font-weight: bold
+        &.medium_number
+          font-size: 20px
+          color: orange
+        &.big_number
+          padding: 1px
+          font-size: 15px
+          color: red
+        &.negative_number
+          font-size: 23px
+          color: #EE3746
+
+    .votes
+      background: #EBEBEB
+    .answers
+      background: #445566
+      color: white
+      &.answered
+        background: #528C54
+    .views
+      background: #fbfbfb
+
+    .summary
+      .tag-list
+        float: left
+        margin-top: 0px
+      .owner-data
+        float: right
+        padding-top: 4px
+        .reputation
+          font-weight: bold
+          color: #666
+
+    .actions
+      padding: 5px
+      margin: 6px
+      background: #eee
+      a
+        margin: 2px 5px
+        font-size: 15px
+        font-weight: bold
+
+    .vote-up-form
+      display: inline
+      vertical-align: middle
