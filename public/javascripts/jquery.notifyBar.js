@@ -42,7 +42,7 @@ $.notifyBar = function(settings)
                   .css("font-size", "18px")
                   .css("text-align", "center")
                   .css("font-family", "Arial, Helvetica, serif")
-                  .css("padding", "15px 0px")
+                  .css("height", "30px")
                   .css("border-bottom", "1px solid #bbb");
     if(!settings.barClass){
       bar.css("background-color", "#dfdfdf")
@@ -50,7 +50,7 @@ $.notifyBar = function(settings)
     }
   }
 
-  bar.addClass( settings.barClass)
+  bar.addClass(settings.barClass)
 
   bar.html(this.html).hide();
   var id =  bar.attr("id");
