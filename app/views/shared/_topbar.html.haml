@@ -21,6 +21,9 @@
       =link_to 'Get the facts!', "/facts#facts"
       |
     %li
+      =link_to t("layouts.application.search"), search_path
+      |
+    %li
       =link_to t(".about", :default => :"groups.index.about"), about_path
 
 .clear
