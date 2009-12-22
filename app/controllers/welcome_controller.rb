@@ -23,7 +23,7 @@ class WelcomeController < ApplicationController
                                    :limit => 20,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
                                    :order => order}.merge(
-                                   scoped_conditions({:answered => false, :banned => false})))
+                                   scoped_conditions({:banned => false})))
   end
 
   def feedback
