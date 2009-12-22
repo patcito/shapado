@@ -10,7 +10,7 @@
     -if @questions
       == (#{@questions.total_entries})
 
-  %ul{:style => "display: inline"}
+  %ul
     %li.newest
       = link_to t("questions.index.newest"), questions_path(:language => current_languages, :sort=>"newest")
     %li.hot
