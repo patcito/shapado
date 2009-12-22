@@ -84,7 +84,7 @@
 
     .entry
       .text.asked
-        asked
+        = t('activerecord.attributes.question.created_at')
       .data
         = t("time.ago", :time => time_ago_in_words(@question.created_at))
     .entry
@@ -94,7 +94,7 @@
         = t('number.x_time', :count => number_with_delimiter(@question.views_count))
     .entry
       .text.last_activity
-        last activity
+        = t(".last_activity")
       .data
         = t("time.ago", :time => time_ago_in_words(@question.activity_at))
   -if AppConfig.enable_sharing
