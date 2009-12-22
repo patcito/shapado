@@ -23,7 +23,7 @@
               = yield :subtabs
               .clear
             .content
-              %p
+              %p.markdown
                 = show_flash_messages(:class => "flash", :markdown => true)
               .inner
                 = yield

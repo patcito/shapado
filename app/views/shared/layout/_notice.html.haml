@@ -1,4 +1,5 @@
 %h4
   &= current_group.name
 
-= markdown(current_group.description)
+.markdown
+  = auto_link(markdown(current_group.description))
