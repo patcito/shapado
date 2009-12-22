@@ -137,7 +137,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new
+    @question = Question.new(params[:question])
 
     respond_to do |format|
       format.html # new.html.erb

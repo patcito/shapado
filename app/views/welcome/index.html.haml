@@ -10,6 +10,28 @@
     %li.hot
       = link_to t("questions.index.hot"), root_path(:tab=>"hot")
 
+%h3.title
+  #quick_question
+    -form_for Question.new, :url => new_question_path(:language => current_languages), :html => {:class => "form", :method => :get} do |f|
+      = f.hidden_field :language, :value => logged_in? ? current_user.language : current_languages.first
+      %label.label
+        Ask a Question, we will find someone to answer
+      .columns
+        .column_info
+          -if logged_in?
+            .avatar
+              = gravatar(current_user.email.to_s, :size => 64)
+            .reputation
+              = format_number(current_user.reputation_on(current_group))
+          -else
+            .avatar
+              = gravatar("", :size => 64)
+        .column_form
+          .group
+            .pointer
+            =f.text_area :title, :class => "text_area"
+          =f.submit "Ask Question", :class => "ask_question"
+      .clear
 %ul.items#questions
   -if @questions.empty?
     .box.highlight
