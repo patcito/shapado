@@ -1,9 +1,11 @@
--solution = local_assigns[:solution]  || false
+-solution = question.answered && question.answer_id == answer.id
 
 .answer{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
   #vote-col
     =vote_box(answer, question_path(current_languages, question))
+    -if solution
+      =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
   #body-col
     .markdown
       =auto_link(markdown(answer.body))
