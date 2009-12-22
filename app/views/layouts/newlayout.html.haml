@@ -7,7 +7,7 @@
     = render :partial => "shared/layout/javascript"
     = render :partial => "shared/layout/css"
 
-  %body
+  %body{:onload=>"prettyPrint()"}
     #container
       = render :partial => "shared/topbar"
       #header
