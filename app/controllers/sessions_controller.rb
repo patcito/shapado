@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   def create
     logout_keeping_session!
     if using_open_id?
-      open_id_authentication(params[:openid_identifier])
+      open_id_authentication(params["openid.identity"])
     else
       password_authentication(params[:login], params[:password])
     end

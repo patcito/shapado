@@ -21,15 +21,15 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "maruku"
   config.gem "jnunemaker-validatable", :version => "1.8.1", :lib => "validatable"
-  config.gem "mongo_mapper", :version => "0.6.5", :source => "http://gemcutter.org"
+  config.gem "mongo_mapper", :version => "0.6.8", :source => "http://gemcutter.org"
   config.gem "compass", :version => "0.10.0.pre2", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.3.7", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
   config.gem "ruby-stemmer", :version => ">=0.5.3", :lib => "lingua/stemmer"
   config.gem "mongomapper_ext", :version => "0.0.4", :source => "http://gemcutter.org"
   config.gem "geoip"
+  config.gem "whatlanguage", :version => "1.0.0"
   config.gem "uuidtools", :version => "2.1.1"
-  config.gem "haml", :version => "2.2.15"
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => "exception_notifier"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
