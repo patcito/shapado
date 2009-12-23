@@ -21,6 +21,10 @@ $(document).ready(function() {
   $(".markdown code").addClass("prettyprint")
 })
 
+$(window).load(function() {
+  prettyPrint();
+});
+
 function showMessage(message, t) {
   $("#notifyBar").remove();
   $.notifyBar({
@@ -35,6 +39,8 @@ function setupEditor() {
   var converter = new Showdown.converter;
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
+    $('#markdown_preview.markdown p code').addClass("prettyprint");
+    prettyPrint();
   }
 
   var textarea = $("#markdown_editor").TextArea({
