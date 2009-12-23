@@ -1,7 +1,8 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
-  before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
+  before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
+  before_filter :check_update_permissions, :only => [:edit, :update]
   before_filter :set_active_tag
 
   tabs :default => :questions, :tags => :tags,
@@ -292,6 +293,21 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
       flash[:error] = t("global.permission_denied")
+      redirect_to question_path(current_languages, @question)
+    end
+  end
+
+  def check_update_permissions
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    if @question.nil?
+      redirect_to questions_path
+    elsif !(current_user.can_edit_others_posts_on?(@question.group) ||
+          current_user.can_modify?(@question))
+      reputation = @question.group.reputation_constrains["edit_others_posts"]
+      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                    :min_reputation => reputation,
+                                    :action => I18n.t("users.actions.edit_others_posts"))
       redirect_to question_path(current_languages, @question)
     end
   end

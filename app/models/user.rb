@@ -255,6 +255,21 @@ class User
     self.reputation.fetch(group.id, 0.0 ).to_i
   end
 
+  def method_missing(method, *args, &block)
+    if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
+      key = $1
+      group = args.first
+      if group.reputation_constrains.include?(key)
+        if group.has_reputation_constrains || self.admin_of?(group)
+          return self.reputation_on(group) >= group.reputation_constrains[key].to_i
+        else
+          return true
+        end
+      end
+    end
+    super(method, *args, &block)
+  end
+
   protected
   def add_email_validation
     if !self.email.blank?
