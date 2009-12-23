@@ -259,7 +259,7 @@ class User
     if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
       key = $1
       group = args.first
-      if group.reputation_constrains.include?(key)
+      if group.reputation_constrains.include?(key.to_s)
         if group.has_reputation_constrains || self.admin_of?(group)
           return self.reputation_on(group) >= group.reputation_constrains[key].to_i
         else
