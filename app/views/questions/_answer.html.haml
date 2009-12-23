@@ -10,13 +10,6 @@
   #body-col
     .markdown
       =find_and_preserve(auto_link(markdown(answer.body)))
-    .actions
-      -if logged_in?
-        -if current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
-          = link_to t("scaffold.edit"), edit_question_answer_path(current_languages, @question, answer)
-        -if current_user.can_modify?(answer)
-          = link_to t("scaffold.destroy"), question_answer_path(current_languages, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
-      = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
     .user_data
       .time_ago
         answered
@@ -29,12 +22,28 @@
         == (#{answer.user.reputation_on(current_group)})
         = t("global.from", :site => answer.user.country_name)
         = country_flag(answer.user.country_code, answer.user.country_name)
-    .clear
+    .controls
+      .actions
+        -if logged_in?
+          -if current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
+            = link_to t("scaffold.edit"), edit_question_answer_path(current_languages, @question, answer)
+          -if current_user.can_modify?(answer)
+            = link_to t("scaffold.destroy"), question_answer_path(current_languages, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
+        = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
+        -if current_user != answer.user
+          = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
+      .clear
+      .forms
+        -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
+          = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
+          .group.navform
+            = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit"), :class => "button"
 
-    -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
-      = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
-      .group.navform
-        = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit"), :class => "button"
+        -if current_user != answer.user
+          -flag = Flag.new
+          -flag.flaggeable = answer
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages,@question) }
+    .clear
 
     / Nested Answers
     .children

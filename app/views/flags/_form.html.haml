@@ -1,21 +1,17 @@
 
--form_for flag, :html => {:class=>"form"} do |f|
+-form_for flag, :html => {:class=>"form flag_form"} do |f|
   =f.hidden_field "flaggeable_type", :value => flag.flaggeable.class.name
   =f.hidden_field "flaggeable_id", :value => flag.flaggeable.id
   =f.hidden_field "return_to", :value => source
-  .field-group
-    %label
+  .group
+    %label.label
       =t(".label")
 
-  .field-group
-    .label-container
-      %label
-        =t(:type, :scope=>"activerecord.attributes.flag")
-    .field
-      = f.select :type, Flag::TYPES.collect{|type| [t(type, :scope=>"flags.form"), type]}
+  .group
+    = f.label :type,t(:type, :scope=>"activerecord.attributes.flag"), :class => "label"
+    = f.select :type, Flag::TYPES.collect{|type| [t(type, :scope=>"flags.form"), type]}
 
-  .field-group
-    .field
-      .buttons
-        = f.submit t("scaffold.create")
-        = link_to t("scaffold.cancel"), source, :class => "button cancel"
+  .group.navform
+    = f.submit t("scaffold.create")
+    = t("global.or")
+    = link_to t("scaffold.cancel"), source, :class => "button cancel"
