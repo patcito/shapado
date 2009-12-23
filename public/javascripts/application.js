@@ -21,6 +21,10 @@ $(document).ready(function() {
   $(".markdown p code").addClass("prettyprint")
 })
 
+$(window).load(function() {
+  prettyPrint();
+});
+
 function showMessage(message, t) {
   $("#notifyBar").remove();
   $.notifyBar({
