@@ -40,7 +40,13 @@
       = t("global.from", :site => @question.user.country_name)
       = country_flag(@question.user.country_code, @question.user.country_name)
     .clear
-
+  .actions
+    -if logged_in?
+      -if current_user.can_modify?(@question)
+        = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
+      -if current_user.mod_of?(@question.group)
+        %br
+        = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
 .clear
 
 %a{:name=>"answers"}
