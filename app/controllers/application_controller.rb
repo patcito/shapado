@@ -23,7 +23,14 @@ class ApplicationController < ActionController::Base
 
   def access_denied
     store_location
-    raise AccessDenied
+    if logged_in?
+      flash[:error] = t("global.permission_denied")
+    else
+      flash[:error] = t("global.please_login")
+    end
+    redirect_to login_path
+    return
+#     raise AccessDenied
   end
 
   def check_group_access
