@@ -23,6 +23,8 @@ namespace :setup do
                               :default_tags => categories,
                               :state => "active")
 
+    default_group.widgets << GroupsWidget.create(:position => 0)
+
     default_group.save!
     if admin = User.find_by_login("admin")
       default_group.owner = admin
