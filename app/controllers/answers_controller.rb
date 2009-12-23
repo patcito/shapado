@@ -58,10 +58,10 @@ class AnswersController < ApplicationController
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
-        format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @answer.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -74,7 +74,7 @@ class AnswersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(question_path(current_languages, @question)) }
-      format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 
@@ -85,6 +85,7 @@ class AnswersController < ApplicationController
     @flag.flaggeable_id = @answer.id
     respond_to do |format|
       format.html
+      format.json
     end
   end
 

@@ -131,7 +131,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @question }
+      format.json  { render :json => @question }
       format.atom
     end
   end
@@ -143,7 +143,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @question }
+      format.json  { render :json => @question }
     end
   end
 
@@ -167,10 +167,10 @@ class QuestionsController < ApplicationController
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.xml  { render :xml => @question, :status => :created, :location => @question }
+        format.json  { render :json => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -183,10 +183,10 @@ class QuestionsController < ApplicationController
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(current_languages,@question)) }
-        format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -198,7 +198,7 @@ class QuestionsController < ApplicationController
     @question.destroy
     respond_to do |format|
       format.html { redirect_to(questions_url) }
-      format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 
