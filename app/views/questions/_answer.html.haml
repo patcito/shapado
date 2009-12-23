@@ -9,7 +9,7 @@
       =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
   #body-col
     .markdown
-      =auto_link(markdown(answer.body))
+      =find_and_preserve(auto_link(markdown(answer.body)))
     .actions
       = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
     .user_data
@@ -40,5 +40,5 @@
           =link_to comment.user.login, user_path(comment.user)
           said:
           .markdown
-            =auto_link(markdown(comment.body))
+            = auto_link(markdown(comment.body))
   .clear

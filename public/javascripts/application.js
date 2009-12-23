@@ -18,6 +18,7 @@ $(document).ready(function() {
     }
     return false;
   })
+  $(".markdown p code").addClass("prettyprint")
 })
 
 function showMessage(message, t) {
