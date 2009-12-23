@@ -2,3 +2,7 @@
   searches:
     index:
       empty: "Your search returned no matches."
+      tags: within these tags
+      search_text: questions containing
+    form:
+      clear: clear

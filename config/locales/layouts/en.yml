@@ -11,7 +11,7 @@ en:
       unanswered: unanswered
       logout: logout
       logged: Logged in as {{login}}
-      search: Go
+      search: search
       forgot: forgot?
       log_in: login
       signup: Signup

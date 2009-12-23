@@ -1,12 +1,33 @@
-#search.subtitle
-  = t(".title", :default => "Search result")
+-content_for :subtabs do
+  .navtitle
+    = t(".title", :default => "Search")
 
-#questions
+= render :partial => "form"
+
+%ul.items#questions
   -if @questions.empty?
-    .box.highlight
+    %li.box.highlight
       = t(".empty")
   -else
     -@questions.each do |question|
       = render :partial => "questions/question", :object => question, :locals => {:query_regexp => @query_regexp}
 
-= will_paginate @questions
+= will_paginate @questions unless @questions.empty?
+
+-content_for :sidebar do
+  -if @search_text
+    .block
+      %h3
+        = t('.search_text')
+      .content
+        = @search_text
+  -if @search_tags
+    .block
+      %h3
+        = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+      .tag-list
+        %ul
+          -@search_tags.each do |tag|
+            %li
+              %span.tag
+                =link_to h(tag), url_for(:language => current_languages, :tags => tag)
