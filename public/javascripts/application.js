@@ -39,6 +39,8 @@ function setupEditor() {
   var converter = new Showdown.converter;
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
+    $('#markdown_preview.markdown p code').addClass("prettyprint");
+    prettyPrint();
   }
 
   var textarea = $("#markdown_editor").TextArea({
