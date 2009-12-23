@@ -33,6 +33,10 @@
 
           = yield :sidebar
 
+          -current_group.widgets.each do |widget|
+            .widget.block{:id => widget.name}
+              = render :partial => widget.partial_name, :locals => {:widget => widget}
+
           -unless feed_urls.empty?
             .block
               %h3

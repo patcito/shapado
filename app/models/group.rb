@@ -26,7 +26,8 @@ class Group
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
-  has_many :ads
+  has_many :ads, :dependent => :destroy
+  has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
 
   belongs_to :owner, :class_name => "User"
   validates_length_of       :name,           :within => 3..40
