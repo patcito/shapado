@@ -23,9 +23,12 @@ $(document).ready(function() {
   });
 
   $("form.nestedAnswerForm").hide();
+  $("form.flag_form").hide();
+
   $(".addNestedAnswer").click(function() {
-    $(this).parents(".answer").find("form.nestedAnswerForm").slideToggle();
-    $(this).parents(".flag_form").slideUp();
+    var controls = $(this).parents(".controls")
+    controls.find(".forms form.flag_form").slideUp();
+    controls.find("form.nestedAnswerForm").slideToggle();
     return false;
   });
 
@@ -36,9 +39,9 @@ $(document).ready(function() {
   });
 
   $(".flag-link").live("click", function() {
-    $(this).parent().next().next("form.nestedAnswerForm").slideUp();
-    var form = $(this).parents(".actions").nextAll(".flag_form")
-    form.slideToggle();
+    var controls = $(this).parents(".controls")
+    controls.find(".forms form.nestedAnswerForm").slideUp();
+    controls.find(".forms .flag_form").slideToggle();
     return false;
   });
 });
