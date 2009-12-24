@@ -1,19 +1,17 @@
 
-#moderate.subtitle{:class => @subtab}
-  = t(".title")
-  .right.tabs
-    .tab.all
-      = link_to t(".all"), moderate_path(:tab=>"all")
-    .tab.questions
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+  %ul
+    %li.questions
       = link_to t(".questions", :default => :"activerecord.models.questions"), moderate_path(:tab=>"questions")
-    .tab.answers
+    %li.answers
       = link_to t(".answers", :default => :"activerecord.models.answers"), moderate_path(:tab=>"answers")
 
 -form_tag ban_path do
-  =submit_tag "ban"
   -if @questions
-    %h2= t(:questions, :scope => "activerecord.models")
-    %table.list
+    %h2.title= t(:questions, :scope => "activerecord.models")
+    %table.table
       %tr
         %th
         %th
@@ -35,8 +33,8 @@
     = will_paginate @questions, :param_name => "questions_page"
 
   -if @answers
-    %h2= t(:answers, :scope => "activerecord.models")
-    %table.list
+    %h2.title= t(:answers, :scope => "activerecord.models")
+    %table.table
       %tr
         %th
         %th
