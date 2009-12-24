@@ -8,6 +8,10 @@ class AnswersController < ApplicationController
   def show
     @answer = Answer.find(params[:id])
     @question = @answer.question
+    respond_to do |format|
+      format.html
+      format.json  { render :json => @answer.to_json }
+    end
   end
 
   def create

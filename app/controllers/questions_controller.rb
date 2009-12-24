@@ -44,7 +44,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @questions }
+      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
       format.atom
     end
   end
@@ -131,7 +131,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json  { render :json => @question }
+      format.json  { render :json => @question.to_json(:except => %w[_keywords slug watchers]) }
       format.atom
     end
   end
@@ -143,7 +143,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json  { render :json => @question }
+      format.json  { render :json => @question.to_json }
     end
   end
 
@@ -167,7 +167,7 @@ class QuestionsController < ApplicationController
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.json  { render :json => @question, :status => :created, :location => @question }
+        format.json  { render :json => @question.to_json, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
         format.json  { render :json => @question.errors, :status => :unprocessable_entity }
@@ -215,8 +215,10 @@ class QuestionsController < ApplicationController
         end
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
         format.html { redirect_to question_path(current_languages, @question) }
+        format.json  { head :ok }
       else
         format.html { render :action => "show" }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -234,8 +236,10 @@ class QuestionsController < ApplicationController
           answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
         format.html { redirect_to question_path(current_languages, @question) }
+        format.json  { head :ok }
       else
         format.html { render :action => "show" }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -247,6 +251,7 @@ class QuestionsController < ApplicationController
     @flag.flaggeable_id = @question.id
     respond_to do |format|
       format.html
+      format.json
     end
   end
 
