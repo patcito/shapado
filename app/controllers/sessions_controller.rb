@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
     else
       password_authentication(params[:login], params[:password])
     end
+
     if current_user
       current_user.localize(request.remote_ip)
       current_user.logged!
@@ -120,6 +121,7 @@ protected
   def successful_login(new_user = false)
     new_cookie_flag = true
     handle_remember_cookie! new_cookie_flag
+    check_draft
 
     if new_user
       redirect_back_or_default(edit_user_path(self.current_user))
@@ -127,5 +129,28 @@ protected
       redirect_back_or_default('/')
     end
     flash[:notice] = t("sessions.create.flash_notice", :scope => "")
+  end
+
+  def check_draft
+    if draft_id = session[:draft]
+      session[:draft] = nil
+      draft = Draft.find(draft_id)
+      if !draft.nil?
+        if !draft.question.nil?
+          question = draft.question
+          question.user = current_user
+          session[:return_to] = new_question_path(current_languages,
+                          :question => {:body => question.body, :language => question.language,
+                                        :title => question.title, :tags => question.tags})
+        elsif !draft.answer.nil?
+          answer = draft.answer
+          answer.user = current_user
+          session[:return_to] = question_path(current_languages, answer.question,
+                                              :answer => {:body => answer.body},
+                                              :anchor => "to_answer")
+        end
+        draft.destroy
+      end
+    end
   end
 end

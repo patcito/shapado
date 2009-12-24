@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
+  before_filter :login_required, :except => [:new, :index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
   before_filter :check_update_permissions, :only => [:edit, :update]
@@ -123,7 +123,7 @@ class QuestionsController < ApplicationController
     options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
     @answers = @question.answers.paginate(options)
 
-    @answer = Answer.new
+    @answer = Answer.new(params[:answer])
     @question.viewed!
 
     set_page_title(@question.title)
@@ -141,9 +141,15 @@ class QuestionsController < ApplicationController
   def new
     @question = Question.new(params[:question])
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json  { render :json => @question.to_json }
+    if !logged_in?
+      draft = Draft.create(:question => @question)
+      session[:draft] = draft.id
+      login_required
+    else
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json  { render :json => @question.to_json }
+      end
     end
   end
 

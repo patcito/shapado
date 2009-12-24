@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_filter :login_required, :except => :show
+  before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
   before_filter :check_update_permissions, :only => [:edit, :update]
 
@@ -17,7 +17,6 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new
     @answer.safe_update(%w[parent_id body], params[:answer])
-    @answer.user = current_user
     @question = Question.find(params[:question_id])
 
     if @answer.parent_id.blank?
@@ -25,30 +24,38 @@ class AnswersController < ApplicationController
       @answer.group_id = @question.group_id
     end
 
-    if @question && @answer.save
-      unless @answer.comment?
-        @question.answer_added!
-
-        # TODO: use mangent to do it
-        users = User.find(@question.watchers, :fields => ["email", "notification_opts"]) || []
-        users.push(@question.user)
-        users.each do |u|
-          email = u.email
-          if !email.blank? && u.notification_opts["new_answer"] == "1"
-            Notifier.deliver_new_answer(u, current_group, @answer)
-          end
-        end
-        current_group.on_activity(:answer_question)
-        current_user.on_activity(:answer_question, current_group)
-      else
-        current_user.on_activity(:comment_question, current_group)
-      end
-
-      flash[:notice] = t(:flash_notice, :scope => "answers.create")
-      redirect_to question_path(current_languages, @question)
+    if !logged_in?
+      draft = Draft.create(:answer => @answer)
+      session[:draft] = draft.id
+      login_required
     else
-      flash[:error] = t(:flash_error, :scope => "answers.create")
-      redirect_to question_path(current_languages, @question)
+      @answer.user = current_user
+
+      if @question && @answer.save
+        unless @answer.comment?
+          @question.answer_added!
+
+          # TODO: use mangent to do it
+          users = User.find(@question.watchers, :fields => ["email", "notification_opts"]) || []
+          users.push(@question.user)
+          users.each do |u|
+            email = u.email
+            if !email.blank? && u.notification_opts["new_answer"] == "1"
+              Notifier.deliver_new_answer(u, current_group, @answer)
+            end
+          end
+          current_group.on_activity(:answer_question)
+          current_user.on_activity(:answer_question, current_group)
+        else
+          current_user.on_activity(:comment_question, current_group)
+        end
+
+        flash[:notice] = t(:flash_notice, :scope => "answers.create")
+        redirect_to question_path(current_languages, @question)
+      else
+        flash[:error] = t(:flash_error, :scope => "answers.create")
+        redirect_to question_path(current_languages, @question)
+      end
     end
   end
 
