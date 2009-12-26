@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('.auto-link').autoVideo();
   setupEditor();
   if((navigator.userAgent.indexOf('Gecko')!=-1
     && navigator.userAgent.indexOf('like Gecko')==-1) ||
