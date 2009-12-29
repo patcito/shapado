@@ -2,69 +2,31 @@
   = javascript_include_tag 'modules/members.js'
   = javascript_include_tag 'jquery.autocomplete.js'
 
-#show_groups.subtitle.members
-  -if @group.isolate
-    = t(".title_isolate", :name => h(@group.name))
-  -else
-    = t(".title", :name => h(@group.name))
 
-  .right.tabs
-    .tab.about
+-content_for :subtabs do
+  .navtitle
+    -if @group.isolate
+      = t(".title_isolate", :name => h(@group.name))
+    -else
+      = t(".title", :name => h(@group.name))
+
+  %ul
+    %li.about
       = link_to t("groups.index.about"), about_path
-    .tab.members
+    %li.members
       = link_to "members", members_path
 
 -if logged_in? && current_user.owner_of?(@group)
-  #manage_members.box
+  #manage_members
     %h2
       = t(".manage_members_title")
     - form_for([@group, @member], :html=>{:class => "form"}) do |f|
       =render :partial => "form", :locals => {:f => f}
-      .field-group
-        .field
-          .buttons
-            = f.submit t('scaffold.add', :model => "member")
-%br
-%table.list#members
-  -@members.each_slice(3) do |line|
-    %tr
-      -line.each do |member|
-        -user = member.user
-        -can_modify_member = logged_in? && (current_user.admin? || current_user != user ) && current_user.owner_of?(@group)
-        %td.users_info{:style => "padding: 4px"}
-          .gravatar.left{:style => "padding: 5px"}
-            = gravatar user.email.to_s, :size => 64
-            .buttons
-              -if can_modify_member
-                = link_to t("scaffold.destroy"), group_member_path(@group, member), :confirm => t("scaffold.sure", :model => "member"), :method => :delete, :class =>"button cancel"
-          .user_box
-            %span.login{:style => "padding: 5px; font-size: 14px"}
-              = link_to h(user.login), user_path(user), :style => "color: #ACACAC"
-          %table{:style=> "border-bottom: 4px solid #F6F6F6; padding-top: 3px; width: 25%"}
-            %tr
-              %td.users_info_item.first_col.reputation
-                &= user.reputation_on(current_group)
-              %td.users_info_item.sec_col{:title => t(:reputation, :scope => "activerecord.attributes.user")}
-                = t(:reputation, :scope => "activerecord.attributes.user")
-            %tr
-              %td.users_info_item.first_col.questions_count
-                &= user.questions.count
-              %td.users_info_item.sec_col{:title => t(:questions, :scope => "activerecord.models")}
-                = t(:questions, :scope => "activerecord.models")
-            %tr
-              %td.users_info_item.first_col.answers_count
-                &= user.answers.count
-              %td.users_info_item.sec_col{:title => t(:answers, :scope => "activerecord.models")}
-                = t(:answers, :scope => "activerecord.models")
-            %tr
-              %td.users_info_item.first_col.role
-                -if can_modify_member
-                  -form_for([@group, member], :html=>{:class => "form"}) do |f|
-                    = f.select :role, Member::ROLES, :selected => member.role
-                    .buttons
-                      = f.submit t("scaffold.update")
-                -else
-                  &= member.role
-              %td.users_info_item.sec_col{:title => t(:role, :scope => "activerecord.attributes.user")}
-                = t(:role, :scope => "activerecord.attributes.member")
-        .clear
+      .group.navform
+        = f.submit t('scaffold.add', :model => "member")
+
+%ul.items#members
+  -@members.each do |member|
+    = render :partial => "member", :object => member
+
+=will_paginate @members

@@ -6,8 +6,9 @@
 .general-info
   .avatar
     = gravatar @user.email.to_s, :size => 128
-  .user-info
-    = auto_link(@user.bio)
+  -if @user.bio.present?
+    .user-info
+      = auto_link(@user.bio)
 .clear
 
 %h2.title
