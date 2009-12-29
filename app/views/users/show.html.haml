@@ -3,40 +3,48 @@
   .navtitle
     &= @user.login
 
-= gravatar @user.email.to_s
+.general-info
+  .avatar
+    = gravatar @user.email.to_s, :size => 128
+  .user-info
+    = auto_link(@user.bio)
+.clear
 
-%h2
+%h2.title
   = number_with_delimiter(@questions.total_entries)
   =t(:questions, :scope => "activerecord.models")
 
-#questions
+%ul.items#questions
   -@questions.each do |question|
-    = render :partial => "welcome/question", :locals => {:question => question}
-  = will_paginate @questions, :param_name => "questions_page"
-#answers
-  %h2
-    = number_with_delimiter(@answers.total_entries)
-    = t(:answers, :scope => "activerecord.models")
-  %table.list
-    -@answers.each do |answer|
-      %tr
-        %td.votes{:style=>"text-align: center; width: 10%"}
-          &=answer.votes_average
-          = t(:votes, :scope => "activerecord.attributes.question")
-        %td.question
-          = link_to h(answer.question.title), question_path(current_languages, answer.question, :anchor => answer.id)
-  =will_paginate @answers, :param_name => "answers_page"
+    = render :partial => "questions/question", :object => question
+= will_paginate @questions, :param_name => "questions_page"
+.clear
+
+%h2.title
+  = number_with_delimiter(@answers.total_entries)
+  = t(:answers, :scope => "activerecord.models")
+
+%ul.items#answers
+  -@answers.each do |answer|
+    = render :partial => "answers/answer", :object => answer
+= will_paginate @answers, :param_name => "answers_page"
+.clear
 
 -content_for :sidebar do
-  %b
-    = t(:created_at, :scope => "activerecord.attributes.user")
-  = time_ago_in_words(@user.created_at)
-  %br
-  %b
-    = t(:last_logged_at, :scope => "activerecord.attributes.user")
-  -if @user.last_logged_at
-    = time_ago_in_words(@user.last_logged_at)
-  %br
-  %b
-    = t(:reputation, :scope => "activerecord.attributes.user")
-  = @user.reputation_on(current_group)
+  .block.stats
+    .entry
+      .text
+        = t(:created_at, :scope => "activerecord.attributes.user")
+      .data
+        = time_ago_in_words(@user.created_at)
+    .entry
+      .text
+        = t(:last_logged_at, :scope => "activerecord.attributes.user")
+      .data
+        -if @user.last_logged_at
+          = time_ago_in_words(@user.last_logged_at)
+    .entry
+      .text
+        = t(:reputation, :scope => "activerecord.attributes.user")
+      .data
+        = @user.reputation_on(current_group)

@@ -1,0 +1,17 @@
+-question = answer.question
+-title = h(question.title)
+-owner = answer.user
+
+%li.item
+  / Question Stats
+  .stats
+    .box.votes
+      .counter{:class => class_for_number(answer.votes_average) }
+        =format_number(answer.votes_average)
+      .text
+        =t(:votes, :scope => "activerecord.attributes.question")
+  / Question Summary
+  .summary
+    %h3
+      = link_to title, question_path(current_languages, question), :title => truncate(h(answer.body), :length => 200)
+  .clear
