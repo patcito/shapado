@@ -21,7 +21,7 @@
 
 #question-body-col.markdown
   #body
-    = find_and_preserve(auto_link(markdown(@question.body)))
+    = find_and_preserve(shapado_auto_link(markdown(@question.body)))
 
   .tag-list
     -@question.tags.each do |tag|

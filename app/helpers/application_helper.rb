@@ -92,5 +92,10 @@ module ApplicationHelper
       "negative_number"
     end
   end
+
+  def shapado_auto_link(text)
+    auto_link(text, :all,  { "rel" => 'nofollow', :class => 'auto-link' })
+  end
+
 end
 
