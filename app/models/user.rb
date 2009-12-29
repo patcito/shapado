@@ -36,6 +36,8 @@ class User
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
+  key :visits,                    Hash
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
@@ -212,11 +214,13 @@ class User
 
   def logged!
     now = Time.now
+
     if new?
       self.last_logged_at = now
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
+      self.stats.visited_on(now)
     end
   end
 
@@ -254,6 +258,13 @@ class User
 
   def reputation_on(group)
     self.reputation.fetch(group.id, 0.0 ).to_i
+  end
+
+  def stats(year = nil)
+    fields = [:_id, :user_id]
+    fields << "visits_#{year}" if year
+
+    UserStat.find_or_create_by_user_id(self._id, :select => fields)
   end
 
   def method_missing(method, *args, &block)
