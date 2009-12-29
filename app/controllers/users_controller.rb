@@ -51,6 +51,8 @@ class UsersController < ApplicationController
                                       :per_page => 10)
 
     add_feeds_url(url_for(:format => "atom"), t("feeds.user"))
+
+    @user.stats.viewed! if @user != current_user
   end
 
   def edit
