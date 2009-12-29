@@ -4,7 +4,8 @@
       = link_to(tag, questions_url(:language => current_languages, :tags => tag))
       ==-
   -if current_group.default_tags.size > 7
-    = link_to "more...", tags_questions_path(:language => current_languages)
+    %li
+      = link_to "more...", tags_questions_path(:language => current_languages)
   %ul.right
     -if logged_in?
       %li
