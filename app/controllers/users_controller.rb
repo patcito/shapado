@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     logout_keeping_session!
     @user = User.new
     @user.safe_update(%w[login email name password_confirmation password
-                         language timezone identity_url], params[:user])
+                         language timezone identity_url bio], params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
       # Protects against session fixation attacks, causes request forgery
@@ -68,7 +68,7 @@ class UsersController < ApplicationController
 
     @user.safe_update(%w[login email name password_confirmation password
                          language timezone preferred_languages
-                         notification_opts], params[:user])
+                         notification_opts bio], params[:user])
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
       @user.set_preferred_tags(preferred_tags, current_group) if preferred_tags

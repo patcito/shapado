@@ -13,6 +13,7 @@ class User
   key :_id,                     String
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
+  key :bio,                       String, :limit => 200
   key :email,                     String, :limit => 100
   key :identity_url,              String
   key :crypted_password,          String, :limit => 40

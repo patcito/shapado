@@ -20,6 +20,7 @@
   .summary
     %h3
       = link_to h(user.login), user_path(user)
+    =find_and_preserve(auto_link(user.bio))
     .tag-list
       -#badges
     .owner-data
