@@ -20,10 +20,11 @@
       .columns
         .column_info
           -if logged_in?
+            -reputation = current_user.reputation_on(current_group)
             .avatar
               = gravatar(current_user.email.to_s, :size => 64)
-            .reputation
-              = format_number(current_user.reputation_on(current_group))
+            .reputation{:class => class_for_number(reputation)}
+              = format_number(reputation)
           -else
             .avatar
               = gravatar("", :size => 64)
