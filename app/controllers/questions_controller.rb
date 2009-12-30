@@ -219,6 +219,9 @@ class QuestionsController < ApplicationController
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
+
+        Magent.push("/actors/judge", :on_question_solved, @question.id, @answer.id)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }
@@ -230,7 +233,9 @@ class QuestionsController < ApplicationController
   end
 
   def unsolve
-    answer_owner = @question.answer.user
+    @answer = @question.answer
+    @answer_owner = @question.answer.user
+
     @question.answer = nil
     @question.answered = false
 
@@ -238,9 +243,12 @@ class QuestionsController < ApplicationController
       if @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
         current_user.on_activity(:reopen_question, current_group)
-        if current_user != answer_owner
-          answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
+        if current_user != @answer_owner
+          @answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
+
+        Magent.push("/actors/judge", :on_question_unsolved, @question.id, @answer.id)
+
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }
       else
