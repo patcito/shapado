@@ -233,7 +233,7 @@ class QuestionsController < ApplicationController
   end
 
   def unsolve
-    @answer = @question.answer
+    @answer_id = @question.answer.id
     @answer_owner = @question.answer.user
 
     @question.answer = nil
@@ -247,7 +247,7 @@ class QuestionsController < ApplicationController
           @answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
 
-        Magent.push("/actors/judge", :on_question_unsolved, @question.id, @answer.id)
+        Magent.push("/actors/judge", :on_question_unsolved, @question.id, @answer_id)
 
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }

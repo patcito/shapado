@@ -1,7 +1,7 @@
 class Badge
   include MongoMapper::Document
 
-  TYPES = %w[gold silver bronce]
+  TYPES = %w[gold silver bronze]
   TOKENS = %w[service_medal merit_medal effort_medal popstar rockstar addict
               noob fanatic tutor critic commentator student famous_question
               favorite_question good_question good_answer]
@@ -12,6 +12,10 @@ class Badge
 
   key :token, String, :required => true, :index => true
   key :type, String, :required => true
+
+  key :source_id, String
+  key :source_type, String
+  belongs_to :source
 
   key :_type, String
   timestamps!

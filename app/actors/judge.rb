@@ -13,7 +13,10 @@ module Actors
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
 
-      $stderr.puts "#{question.inspect} #{answer.inspect}"
+      if question.answer == answer && answer.votes_average > 2
+        user_badges = answer.user.badges
+        user_badges.find_by_token("tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :source => answer)
+      end
     end
 
     def on_question_unsolved(payload)
@@ -21,7 +24,11 @@ module Actors
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
 
-      $stderr.puts "#{question.inspect} #{answer.inspect}"
+      if answer && question.answer.nil?
+        user_badges = answer.user.badges
+        tutor = user_badges.find(:first, :token => "tutor", :source_id => answer.id)
+        tutor.destroy if tutor
+      end
     end
   end
   Magent.register(Judge.new)
