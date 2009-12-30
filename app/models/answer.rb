@@ -60,9 +60,11 @@ class Answer
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
       voter.on_activity(:vote_up_answer, self.group)
+      self.user.upvote!
     else
       self.user.update_reputation(:answer_receives_down_vote, self.group)
       voter.on_activity(:vote_down_answer, self.group)
+      self.user.downvote!
     end
   end
 
@@ -75,9 +77,11 @@ class Answer
     if v > 0
       self.user.update_reputation(:answer_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_answer, self.group)
+      self.user.upvote!(-1)
     else
       self.user.update_reputation(:answer_undo_down_vote, self.group)
       voter.on_activity(:undo_vote_down_answer, self.group)
+      self.user.downvote!(-1)
     end
   end
 

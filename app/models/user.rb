@@ -36,7 +36,8 @@ class User
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
-  key :visits,                    Hash
+  key :votes_up,                  Float, :default => 0.0
+  key :votes_down,                Float, :default => 0.0
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -230,9 +231,17 @@ class User
     self.update_reputation(activity, group)
   end
 
+  def upvote!(v = 1.0)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_up => v.to_f}}, :upsert => true)
+  end
+
+  def downvote!(v = 1.0)
+    self.collection.update({:_id => self._id}, {:$inc => {:votes_down => v.to_f}}, :upsert => true)
+  end
+
   def update_reputation(key, group)
     value = REPUTATION_CONF[key.to_s]
-    Rails.logger.info "#{self.login} receive #{value} points of karma by #{key} on #{group.name}"
+    Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
     value = key if value.nil? && key.kind_of?(Integer)
     if value
       User.collection.update({:_id => self._id},

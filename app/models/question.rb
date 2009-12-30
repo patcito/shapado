@@ -115,9 +115,11 @@ class Question
     if v > 0
       self.user.update_reputation(:question_receives_up_vote, self.group)
       voter.on_activity(:vote_up_question, self.group)
+      self.user.upvote!
     else
       self.user.update_reputation(:question_receives_down_vote, self.group)
       voter.on_activity(:vote_down_question, self.group)
+      self.user.downvote!
     end
     on_activity
   end
@@ -131,23 +133,25 @@ class Question
     if v > 0
       self.user.update_reputation(:question_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_question, self.group)
+      self.user.upvote!(-1)
     else
       self.user.update_reputation(:question_undo_down_vote, self.group)
       voter.on_activity(:undo_vote_down_question, self.group)
+      self.user.downvote!(-1)
     end
     on_activity
   end
 
   def add_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
-                                                         :upsert => true)
+                                                          :upsert => true)
     on_activity
   end
 
 
   def remove_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
-                                                         :upsert => true)
+                                                          :upsert => true)
     on_activity
   end
 
