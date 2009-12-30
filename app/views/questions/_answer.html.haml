@@ -32,6 +32,11 @@
         = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
         -if current_user != answer.user
           = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
+        -if current_user.can_modify?(@question)
+          -unless @question.answered
+            = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer)
+          -if solution
+            = link_to t(".unset_answer"),  unsolve_question_path(current_languages, @question)
       .clear
       .forms
         -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
