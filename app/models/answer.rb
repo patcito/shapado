@@ -16,6 +16,9 @@ class Answer
   key :user_id, String
   belongs_to :user
 
+  key :updated_by_id, String
+  belongs_to :updated_by, :class_name => "User"
+
   key :question_id, String
   belongs_to :question
 
@@ -40,7 +43,7 @@ class Answer
   validate :disallow_spam
   validate :check_unique_answer
 
-  before_save :save_version, :if => Proc.new { !self.rolling_back }
+  before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
 
   attr_accessor :rolling_back
 
@@ -138,12 +141,21 @@ class Answer
   end
 
   def rollback!
-    self.body = self.versions.pop
+    version = self.versions.pop
+    self.body = version["body"]
+    self.updated_by_id = version["user_id"]
+    self.updated_at = version["date"]
+
     @rolling_back = true
+    a.save!
   end
 
   protected
   def save_version
-    self.versions << self.body_was if !self.new? && self.body_changed?
+    if !self.new? && self.body_changed? && self.updated_by_id
+      self.versions << {'body' => self.body_was,
+                        'user_id' => (self.updated_by_id_was || self.updated_by_id),
+                        'date' => self.updated_at_was}
+    end
   end
 end

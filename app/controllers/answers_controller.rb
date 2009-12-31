@@ -66,6 +66,8 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       @answer.safe_update(%w[parent_id body], params[:answer])
+      @answer.updated_by = current_user
+
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
