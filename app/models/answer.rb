@@ -140,14 +140,18 @@ class Answer
     end
   end
 
-  def rollback!
-    version = self.versions.pop
-    self.body = version["body"]
-    self.updated_by_id = version["user_id"]
-    self.updated_at = version["date"]
+  def rollback!(pos = nil)
+    pos = self.versions.count-1 if pos.nil?
+    version = self.versions[pos]
+
+    if version
+      self.body = version["body"]
+      self.updated_by_id = version["user_id"]
+      self.updated_at = version["date"]
+    end
 
     @rolling_back = true
-    a.save!
+    save!
   end
 
   protected
