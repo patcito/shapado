@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
     if current_group.isolate
       'group'
     else
-      'newlayout'
+      'application'
     end
   end
 

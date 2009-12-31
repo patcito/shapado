@@ -1,51 +1,53 @@
 !!! Strict
 %html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    = render :partial => "layouts/head"
+    %title
+      &= page_title
+    = render :partial => "shared/layout/meta"
+    = render :partial => "shared/layout/javascript"
+    = render :partial => "shared/layout/css"
 
   %body
-    #top_bar
+    #container
       = render :partial => "shared/topbar"
-    - if logged_in?
-      .feedback
-        =link_to "Feedback", feedback_path, :id => "feedback"
-    .two-column
-      -if !AppConfig.system_notice.blank?
-        #system-msg
-          .internal
-            = AppConfig.system_notice
       #header
-        .feedbackform.hide
-          = render :partial => "welcome/feedback"
-      .clear
-      %br
-      = render :partial => "shared/ads/header_ads"
-      #navigation{:class => "#{@active_tab}"}
-        #menu_primary
+        #main-bar{:class => @active_tab}
+          #logo
+            =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
           = render :partial => "shared/user_navigation"
-
-      #main-content
-        #messages
-          -flash.each do |k,v|
-            .message{:class => k.to_s}
-              .internal.markdown
-                = markdown(v)
-        #layout
-          #content
-            = render :partial => "shared/ads/content_ads"
-            .internal
-              = yield
-            = render :partial => "shared/ads/footer_ads"
-          #sidebar
-            .internal
-              =  render :partial => "layouts/question_counter"
-              = yield :sidebar
-              = render :partial => "layouts/feed_urls"
-              = render :partial => "shared/ads/context_panel_ads"
-
           .clear
-      #footer
-        = render :partial => "layouts/footer"
+      #wrapper
+        #main
+          #block-text.block
+            .secondary-navigation{:class => @active_subtab.to_s}
+              = yield :subtabs
+              .clear
+            .content
+              %p.markdown
+                = show_flash_messages(:class => "flash", :markdown => true)
+              .inner
+                = yield
+        #sidebar
+          .block.notice
+            = render :partial => "shared/layout/notice"
 
-      = render :partial => "shared/analytics"
-      .clear
+          = yield :sidebar
+
+          -current_group.widgets.each do |widget|
+            .widget.block{:id => widget.name}
+              = render :partial => widget.partial_name, :locals => {:widget => widget}
+
+          -unless feed_urls.empty?
+            .block
+              %h3
+                = t(".subscribe", :default => "Subscribe")
+              .sidebar-block
+                .feeds
+                  -feed_urls.each do |title, url|
+                    .feed_entry
+                      = link_to h(title), url
+                  .clear
+        .clear
+      #footer
+        .block
+          = render :partial => "layouts/footer"
