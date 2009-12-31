@@ -8,6 +8,7 @@ class Answer
   key :votes_average, Integer, :default => 0
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
+  key :versions, Array
 
   timestamps!
 
@@ -38,6 +39,10 @@ class Answer
 
   validate :disallow_spam
   validate :check_unique_answer
+
+  before_save :save_version, :if => Proc.new { !self.rolling_back }
+
+  attr_accessor :rolling_back
 
   def check_unique_answer
     check_answer = Answer.find(:first,
@@ -130,5 +135,15 @@ class Answer
     if !valid
       self.errors.add(:body, "Your answer looks like spam.")
     end
+  end
+
+  def rollback!
+    self.body = self.versions.pop
+    @rolling_back = true
+  end
+
+  protected
+  def save_version
+    self.versions << self.body_was if !self.new? && self.body_changed?
   end
 end
