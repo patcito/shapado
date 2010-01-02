@@ -170,6 +170,8 @@ class QuestionsController < ApplicationController
         current_user.on_activity(:ask_question, current_group)
         current_group.on_activity(:ask_question)
 
+        Magent.push("/actors/judge", :on_ask_question, @question.id)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_languages, @question)) }
@@ -202,6 +204,9 @@ class QuestionsController < ApplicationController
   def destroy
     @question.user.update_reputation(:delete_question, current_group)
     @question.destroy
+
+    Magent.push("/actors/judge", :on_destroy_question, @question.user.id)
+
     respond_to do |format|
       format.html { redirect_to(questions_url) }
       format.json  { head :ok }

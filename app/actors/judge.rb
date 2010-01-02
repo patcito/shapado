@@ -6,8 +6,6 @@ module Actors
     include Magent::Actor
 
     expose :on_question_solved
-    expose :on_question_unsolved
-
     def on_question_solved(payload)
       question_id, answer_id = payload
       question = Question.find(question_id)
@@ -19,6 +17,7 @@ module Actors
       end
     end
 
+    expose :on_question_unsolved
     def on_question_unsolved(payload)
       question_id, answer_id = payload
       question = Question.find(question_id)
@@ -28,6 +27,27 @@ module Actors
         user_badges = answer.user.badges
         tutor = user_badges.find(:first, :token => "tutor", :source_id => answer.id)
         tutor.destroy if tutor
+      end
+    end
+
+    expose :on_ask_question
+    def on_ask_question(payload)
+      question = Question.find(payload.first)
+      user = question.user
+
+      if user.questions.count(:limit => 2) == 1
+        user_badges = user.badges
+        user_badges.find_by_token("inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :source => question)
+      end
+    end
+
+    expose :on_destroy_question
+    def on_destroy_question(payload)
+      user = User.find(payload.id)
+      if user.questions.count(:limit => 1) == 0
+        user_badges = user.badges
+        inquirer = user_badges.find(:first, :token => "inquirer")
+        inquirer.destroy if inquirer
       end
     end
   end
