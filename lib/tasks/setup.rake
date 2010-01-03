@@ -1,6 +1,8 @@
 desc "Setup application"
-  task :bootstrap => [:environment, "setup:reset", "setup:create_admin",
-                                                   "setup:default_group"] do
+  task :bootstrap => [:environment, "setup:reset",
+                      "setup:create_admin",
+                      "setup:default_group",
+                      "setup:create_widgets"] do
 end
 
 namespace :setup do
@@ -23,8 +25,6 @@ namespace :setup do
                               :default_tags => categories,
                               :state => "active")
 
-    default_group.widgets << GroupsWidget.create(:position => 0)
-
     default_group.save!
     if admin = User.find_by_login("admin")
       default_group.owner = admin
@@ -32,6 +32,15 @@ namespace :setup do
     end
     default_group.logo_data = RAILS_ROOT+"/public/images/logo.png"
     default_group.save
+  end
+
+  desc "Create default widgets"
+  task :create_widgets => :environment do
+    default_group = Group.find_by_domain(AppConfig.domain)
+
+    default_group.widgets << GroupsWidget.create(:position => 0)
+    default_group.widgets << BadgesWidget.create(:position => 1)
+    default_group.save!
   end
 
   desc "Create admin user"
@@ -45,9 +54,7 @@ namespace :setup do
 
   task "Upgrade"
   task :upgrade => [:environment,
-                    "setup:default_group",
-                    "fixdb:groups_support",
-                    "fixdb:cleanup_documents"] do
+                    "setup:create_widgets"] do
   end
 end
 
