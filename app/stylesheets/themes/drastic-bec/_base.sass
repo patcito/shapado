@@ -1,0 +1,395 @@
+.small
+  font-size: 11px
+  font-style: normal
+  font-weight: normal
+  text-transform: normal
+  letter-spacing: normal
+  line-height: 1.4em
+
+
+.gray
+  color: #999999
+  font-family: Georgia, serif
+  font-size: 13px
+  font-style: italic
+  font-weight: normal
+  text-transform: normal
+  letter-spacing: normal
+  line-height: 1.6em
+
+
+.hightlight
+  background-color: #ffff88
+  font-weight: bold
+  color: #36393d
+
+
+a
+  &:link, &:visited, &:hover, &:active
+    color: #36393d
+
+
+h1, h2, h3
+  color: #36393d
+
+
+a
+  -moz-outline: none
+
+
+body
+  color: #222
+  background: #cfcfcf
+  font-family: Verdana, Arial, "Bitstream Vera Sans", sans-serif
+
+
+hr
+  background: #f0f0ee
+  color: #f0f0ee
+
+
+#header
+  background: #36393d
+
+  h1
+    font-size: 28px
+    padding: 5px 0
+    margin: 5px 0
+
+    a
+      &:link, &:active, &:hover, &:visited
+        color: #FFF
+
+
+#user-navigation a.logout
+  padding: 1px 4px
+
+
+#main
+  width: 73%
+
+  .block .content
+    background: #FFF
+    padding-top: 1px
+
+    h2
+      margin-left: 15px
+      font-size: 22px
+      font-style: normal
+      font-weight: bold
+      text-transform: normal
+      letter-spacing: -1px
+      line-height: 1.2em
+
+    p
+      font-size: 13px
+      font-style: normal
+      font-weight: normal
+      text-transform: normal
+      letter-spacing: normal
+      line-height: 1.45em
+
+
+#sidebar
+  .block
+    background: #FFF
+
+    h4
+      font-weight: bold
+
+  .notice
+    background: #E6EEFC
+
+    h4
+      color: #0B43A8
+
+  h3
+    background: #36393d
+    color: #FFF
+    border-bottom: 5px solid #1a1a1a
+
+
+#main-navigation ul li a
+  font-size: 12px
+  padding: 4px 10px
+
+
+#sidebar ul li a
+  &:link, &:visited
+    background: #FFF
+    border-bottom: 1px solid #F0F0EE
+    text-decoration: none
+
+  &:hover, &:active
+    background: #666666
+    color: #ffffff
+
+
+#main-navigation ul li
+  background: #1a1a1a
+
+  &.active
+    background: #f0f0ee
+
+  a
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: #FFF
+
+
+.secondary-navigation ul li a
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+    color: #FFF
+
+
+#user-navigation ul li a
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+    color: #FFF
+
+  &:hover
+    text-decoration: underline
+
+
+.secondary-navigation li a:hover
+  background: #666666
+
+
+#main-navigation ul li.active a
+  &:link, &:visited, &:hover, &:active
+    color: #1a1a1a
+
+
+.secondary-navigation
+  color: #eee
+  background: #36393d
+  border-bottom-color: #1a1a1a
+
+  ul li.active
+    background-color: #1a1a1a
+
+    a:hover
+      background-color: #1a1a1a
+
+
+#footer .block
+  color: #FFF
+  background: #1a1a1a
+
+  p
+    margin: 0
+    padding: 10px
+
+
+.pagination
+  a
+    background: #cfcfcf
+    -moz-border-radius: 3px
+    border: 1px solid #c1c1c1
+
+  span
+    background: #cfcfcf
+    -moz-border-radius: 3px
+    border: 1px solid #c1c1c1
+
+    &.current
+      background: #36393d
+      color: #FFF
+      border: 1px solid #36393d
+
+  a
+    color: #1a1a1a
+
+    &:hover
+      border: 1px solid #666
+
+
+.table
+  th
+    background: #36393d
+    border-bottom: 3px solid #700000
+    color: #FFF
+
+  td
+    border-bottom: 1px solid #F0F0EE
+
+  tr.even
+    background: #ebebeb
+
+
+.form
+  label.label
+    color: #666666
+
+  input.text_field, textarea.text_area
+    width: 100%
+    border: 1px solid #cfcfcf
+
+  input.button
+    background: #cfcfcf
+    -moz-border-radius: 5px
+    border: 1px solid #c1c1c1
+    padding: 2px 5px
+    cursor: pointer
+    color: #36393d
+    font-weight: bold
+    font-size: 11px
+
+    &:hover
+      border: 1px solid #666
+
+  .description
+    font-style: italic
+    color: #8C8C8C
+    font-size: .9em
+
+  .navform a
+    color: #cc0000
+
+
+.flash
+  .message
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    text-align: center
+    margin: 0 auto 15px
+
+    p
+      margin: 8px
+
+  .error
+    border: 1px solid #fbb
+    background-color: #fdd
+
+  .warning
+    border: 1px solid #fffaaa
+    background-color: #ffffcc
+
+  .notice
+    border: 1px solid #1FDF00
+    background-color: #BBFFB6
+
+
+ul.list li
+  border-bottom-color: #F0F0EE
+  border-bottom-width: 1px
+  border-bottom-style: solid
+
+  .item .avatar
+    border-color: #F0F0EE
+    border-width: 1px
+    border-style: solid
+    padding: 2px
+
+
+#box .block
+  background: #FFF
+
+  h2
+    background: #36393d
+    color: #FFF
+
+
+#main, .secondary-navigation, #main .block
+  -moz-border-radius-topleft: 4px
+  -webkit-border-top-left-radius: 4px
+  -moz-border-radius-topright: 4px
+  -webkit-border-top-right-radius: 4px
+
+
+#sidebar
+  .block, h3
+    -moz-border-radius-topleft: 4px
+    -webkit-border-top-left-radius: 4px
+    -moz-border-radius-topright: 4px
+    -webkit-border-top-right-radius: 4px
+
+
+ul.list li, #footer .block, .form input.button
+  -moz-border-radius-topleft: 4px
+  -webkit-border-top-left-radius: 4px
+  -moz-border-radius-topright: 4px
+  -webkit-border-top-right-radius: 4px
+
+
+#box .block
+  -moz-border-radius-topleft: 4px
+  -webkit-border-top-left-radius: 4px
+  -moz-border-radius-topright: 4px
+  -webkit-border-top-right-radius: 4px
+
+  h2
+    -moz-border-radius-topleft: 4px
+    -webkit-border-top-left-radius: 4px
+    -moz-border-radius-topright: 4px
+    -webkit-border-top-right-radius: 4px
+
+
+.secondary-navigation
+  li.first a, ul li.first
+    -moz-border-radius-topleft: 4px
+    -webkit-border-top-left-radius: 4px
+
+
+.table th.last
+  -moz-border-radius-topright: 4px
+  -webkit-border-top-right-radius: 4px
+
+
+.secondary-navigation ul li.first
+  -moz-border-radius-topleft: 4px
+  -webkit-border-top-left-radius: 4px
+
+
+#sidebar
+  -moz-border-radius-bottomleft: 4px
+  -webkit-border-bottom-left-radius: 4px
+  -moz-border-radius-bottomright: 4px
+  -webkit-border-bottom-right-radius: 4px
+
+  .block
+    -moz-border-radius-bottomleft: 4px
+    -webkit-border-bottom-left-radius: 4px
+    -moz-border-radius-bottomright: 4px
+    -webkit-border-bottom-right-radius: 4px
+
+
+#main .block, #sidebar ul.navigation, ul.list li, #footer .block, .form input.button, #box .block
+  -moz-border-radius-bottomleft: 4px
+  -webkit-border-bottom-left-radius: 4px
+  -moz-border-radius-bottomright: 4px
+  -webkit-border-bottom-right-radius: 4px
+
+
+.secondary-navigation
+  border-bottom-width: 5px
+
+
+#main .block .content
+  background: #FFFFFF url(/images/right-bg.gif) repeat-y scroll right center
+
+  .page_header
+    background: #EDF3FE none repeat scroll 0 0
+    color: #000000
+    font-family: "Lucida Grande",verdana,arial,helvetica,sans-serif
+    font-size: 14px
+    font-weight: bold
+    margin: 0 0 5px 0
+    padding: 13px 30px 13px 24px
+
+    .page_header_links
+      width: 350px
+      color: #CCCCCC
+      float: right
+      font-size: 11px
+      line-height: 20px
+      margin-top: 0
+      text-align: right
+
+      a
+        color: #FF0000
+
+        &:hover
+          background: #FF0000 none repeat scroll 0 0
+          color: #FFFFFF
