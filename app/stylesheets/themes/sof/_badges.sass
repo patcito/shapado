@@ -1,0 +1,27 @@
+.badge
+  background: #222
+  +rounded(10px, 10px, 10px, 10px)
+  padding: 10px 20px 10px 10px
+  margin: 4px 10px
+  border-bottom: 1px solid gray
+  .icon
+    margin: 4px 8px 0px 0px
+    +rounded(20px, 20px, 20px, 20px)
+    float: left
+    width: 10px
+    height: 10px
+    &.silver
+      background: lightGrey
+    &.bronze
+      background: brown
+    &.gold
+      background: yellow
+  .text
+    font-size: 18px
+    font-weight: normal
+    color: #eee
+    .user
+      a
+        color: #FF6600 !important
+        &:link, &:hover, &:visited, &:active
+          color: #FF6600 !important
