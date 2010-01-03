@@ -72,6 +72,7 @@ module Actors
         user_badges.find_by_token("critic") || user_badges.create!(:token => "critic", :type => "bronze", :source => vote)
       end
 
+      # users
       if vuser = voteable.user
         user_badges = vuser.badges
 
@@ -85,6 +86,24 @@ module Actors
 
         if vuser.votes_up >= 300
           user_badges.find_by_token("service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :source => vote)
+        end
+      end
+
+      # questions
+      if voteable.kind_of?(Question) && vuser = voteable.user
+        user_badges = vuser.badges
+
+        if voteable.votes_average >= 10
+          user_badges.find(:first, :token => "good_question", :source_id => voteable.id) || user_badges.create!(:token => "good_question", :type => "silver", :source => voteable)
+        end
+      end
+
+      # answers
+      if voteable.kind_of?(Answer) && vuser = voteable.user
+        user_badges = vuser.badges
+
+        if voteable.votes_average >= 10
+          user_badges.find(:first, :token => "good_answer", :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :source => voteable)
         end
       end
     end
