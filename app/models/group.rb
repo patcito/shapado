@@ -31,6 +31,7 @@ class Group
                          :dependent => :destroy
   has_many :ads, :dependent => :destroy
   has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
+  has_many :badges, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
   validates_length_of       :name,           :within => 3..40

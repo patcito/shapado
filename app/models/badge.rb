@@ -10,6 +10,9 @@ class Badge
   key :user_id, String, :required => true
   belongs_to :user
 
+  key :group_id, String, :required => true
+  belongs_to :group
+
   key :token, String, :required => true, :index => true
   key :type, String, :required => true
 

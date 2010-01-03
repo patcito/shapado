@@ -10,15 +10,16 @@ module Actors
       question_id, answer_id = payload
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
+      group = question.group
 
       if question.answer == answer && answer.user.answers.count == 1
         user_badges = answer.user.badges
-        user_badges.find_by_token("troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :source => answer)
+        user_badges.find_by_token("troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
       end
 
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
-        user_badges.find_by_token("tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :source => answer)
+        user_badges.find_by_token("tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
       end
     end
 
@@ -27,16 +28,17 @@ module Actors
       question_id, answer_id = payload
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
+      group = question.group
 
       if answer && question.answer.nil?
         user_badges = answer.user.badges
-        badge = user_badges.find(:first, :token => "troubleshooter", :source_id => answer.id)
+        badge = user_badges.find(:first, :token => "troubleshooter", :group_id => group.id, :source_id => answer.id)
         badge.destroy if badge
       end
 
       if answer && question.answer.nil?
         user_badges = answer.user.badges
-        tutor = user_badges.find(:first, :token => "tutor", :source_id => answer.id)
+        tutor = user_badges.find(:first, :token => "tutor", :group_id => group.id, :source_id => answer.id)
         tutor.destroy if tutor
       end
     end
@@ -48,7 +50,7 @@ module Actors
 
       if user.questions.count == 1
         user_badges = user.badges
-        user_badges.find_by_token("inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :source => question)
+        user_badges.find_by_token("inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
       end
     end
 
@@ -67,9 +69,11 @@ module Actors
       vote = Vote.find(payload.first)
       user = vote.user
       voteable = vote.voteable
+      group = voteable.group
+
       if user.votes.count == 1 && vote.value == -1
         user_badges = user.badges
-        user_badges.find_by_token("critic") || user_badges.create!(:token => "critic", :type => "bronze", :source => vote)
+        user_badges.find_by_token("critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
       # users
@@ -77,15 +81,15 @@ module Actors
         user_badges = vuser.badges
 
         if vuser.votes_up >= 100
-          user_badges.find_by_token("effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :source => vote)
+          user_badges.find_by_token("effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
         if vuser.votes_up >= 200
-          user_badges.find_by_token("merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :source => vote)
+          user_badges.find_by_token("merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
         if vuser.votes_up >= 300
-          user_badges.find_by_token("service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :source => vote)
+          user_badges.find_by_token("service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
       end
 
@@ -94,7 +98,7 @@ module Actors
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_question", :source_id => voteable.id) || user_badges.create!(:token => "good_question", :type => "silver", :source => voteable)
+          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :type => "silver", :group_id => group.id, :source => voteable)
         end
       end
 
@@ -103,7 +107,7 @@ module Actors
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_answer", :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :source => voteable)
+          user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
       end
     end
