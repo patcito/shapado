@@ -11,6 +11,11 @@ module Actors
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
 
+      if question.answer == answer && answer.user.answers.count == 1
+        user_badges = answer.user.badges
+        user_badges.find_by_token("troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :source => answer)
+      end
+
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
         user_badges.find_by_token("tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :source => answer)
@@ -22,6 +27,12 @@ module Actors
       question_id, answer_id = payload
       question = Question.find(question_id)
       answer = Answer.find(answer_id)
+
+      if answer && question.answer.nil?
+        user_badges = answer.user.badges
+        badge = user_badges.find(:first, :token => "troubleshooter", :source_id => answer.id)
+        badge.destroy if badge
+      end
 
       if answer && question.answer.nil?
         user_badges = answer.user.badges
