@@ -277,6 +277,10 @@ class User
     UserStat.find_or_create_by_user_id(self._id, :select => fields)
   end
 
+  def find_badge_on(group, token, opts = {})
+    self.badges.find(:first, opts.merge(:token => token, :group_id => group.id))
+  end
+
   def method_missing(method, *args, &block)
     if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
       key = $1
