@@ -1,8 +1,8 @@
 class BadgesWidget < Widget
   before_validation_on_create :set_name
 
-  def recent_badges(user)
-    user.badges.find(:all, :limit => 5, :order => "created_at desc")
+  def recent_badges(group)
+    group.badges.find(:all, :limit => 5, :order => "created_at desc")
   end
 
   protected
