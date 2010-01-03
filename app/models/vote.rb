@@ -1,6 +1,8 @@
 class Vote
   include MongoMapper::Document
 
+  timestamps!
+
   key :_id, String
   key :value, Integer, :required => true
 

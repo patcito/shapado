@@ -46,7 +46,7 @@ module Actors
       question = Question.find(payload.first)
       user = question.user
 
-      if user.questions.count(:limit => 2) == 1
+      if user.questions.count == 1
         user_badges = user.badges
         user_badges.find_by_token("inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :source => question)
       end
@@ -54,11 +54,21 @@ module Actors
 
     expose :on_destroy_question
     def on_destroy_question(payload)
-      user = User.find(payload.id)
-      if user.questions.count(:limit => 1) == 0
+      user = User.find(payload.first)
+      if user.questions.first.nil?
         user_badges = user.badges
         inquirer = user_badges.find(:first, :token => "inquirer")
         inquirer.destroy if inquirer
+      end
+    end
+
+    expose :on_vote
+    def on_vote(payload)
+      vote = Vote.find(payload.first)
+      user = vote.user
+      if user.votes.count == 1 && vote.value == -1
+        user_badges = user.badges
+        user_badges.find_by_token("critic") || user_badges.create!(:token => "critic", :type => "bronze", :source => vote)
       end
     end
   end
