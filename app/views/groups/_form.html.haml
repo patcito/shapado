@@ -1,3 +1,4 @@
+-require_js "modules/themes"
 
 .group
   = form.label :name, t('.name'), :class => "label"
@@ -78,3 +79,7 @@
   = form.file_field :logo_data
   .description
     = t('.logo_legend')
+
+.group
+  = form.label :theme, t(:theme, :scope => "activerecord.attributes.group", :default => "Theme" ), :class => "label"
+  = form.select :theme, AVAILABLE_THEMES, {}, :class => "choose_theme"

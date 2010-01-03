@@ -97,5 +97,12 @@ module ApplicationHelper
     auto_link(text, :all,  { "rel" => 'nofollow', :class => 'auto-link' })
   end
 
+  def require_js(*files)
+    content_for(:js) { javascript_include_tag(*files) }
+  end
+
+  def require_css(*files)
+    content_for(:css) { stylesheet_link_tag(*files) }
+  end
 end
 

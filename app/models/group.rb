@@ -46,6 +46,7 @@ class Group
   validates_length_of       :subdomain, :within => 3..32
 
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES, :allow_nil => true
+  validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
   before_validation_on_create :check_domain
 
