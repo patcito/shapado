@@ -27,6 +27,7 @@
                 = show_flash_messages(:class => "flash", :markdown => true)
               .inner
                 = yield
+                .clear
         #sidebar
           .block.notice
             = render :partial => "shared/layout/notice"
@@ -49,5 +50,5 @@
                   .clear
         .clear
       #footer
-        .block
+        .block.content
           = render :partial => "layouts/footer"
