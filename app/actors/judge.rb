@@ -66,9 +66,26 @@ module Actors
     def on_vote(payload)
       vote = Vote.find(payload.first)
       user = vote.user
+      voteable = vote.voteable
       if user.votes.count == 1 && vote.value == -1
         user_badges = user.badges
         user_badges.find_by_token("critic") || user_badges.create!(:token => "critic", :type => "bronze", :source => vote)
+      end
+
+      if vuser = voteable.user
+        user_badges = vuser.badges
+
+        if vuser.votes_up >= 100
+          user_badges.find_by_token("effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :source => vote)
+        end
+
+        if vuser.votes_up >= 200
+          user_badges.find_by_token("merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :source => vote)
+        end
+
+        if vuser.votes_up >= 300
+          user_badges.find_by_token("service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :source => vote)
+        end
       end
     end
   end
