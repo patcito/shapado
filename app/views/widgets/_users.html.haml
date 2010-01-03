@@ -1,0 +1,11 @@
+%h3
+  Recent Users
+.content
+  %ul.list
+    -widget.recent_users(current_group).reverse_each do |user|
+      %li
+        =link_to h(user.login), user_path(user)
+        ==(#{user.reputation_on(current_group)})
+  .more
+    =link_to "more...", groups_path
+.clear
