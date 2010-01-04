@@ -94,6 +94,14 @@ class User
     find_by_login(login) || find_by_id(login)
   end
 
+  def self.find_experts(tags, opts = {})
+    opts[:limit] ||= 5
+    opts[:select] = [:user_id]
+    UserStat.find(:all, opts.merge({:answer_tags => {:$in => tags}})).map do |s|
+      s.user
+    end
+  end
+
   def to_param
     if self.login.blank? || self.login.match(/\W/)
       self.id
