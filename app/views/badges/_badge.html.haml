@@ -1,6 +1,7 @@
-.badge
+.badge{:class => local_assigns[:mini] ? "mini" : "big"}
   .icon{:class => badge[:type]}
   .text
     &=badge.name
-    %span.user
-      =link_to h(badge.user.login), user_path(badge.user)
+    -unless local_assigns[:mini]
+      %span.user
+        =link_to h(badge.user.login), user_path(badge.user)

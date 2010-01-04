@@ -21,8 +21,9 @@
     %h3
       = link_to h(user.login), user_path(user)
     =find_and_preserve(auto_link(user.bio))
-    .tag-list
-      -#badges
+    .badges
+      -user.badges_on(current_group, :limit => 3).each do |badge|
+        =render :partial => "badges/badge", :object => badge, :locals => {:mini => true}
     .owner-data
       %strong
         registered

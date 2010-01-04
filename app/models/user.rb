@@ -277,6 +277,10 @@ class User
     UserStat.find_or_create_by_user_id(self._id, :select => fields)
   end
 
+  def badges_on(group, opts = {})
+    self.badges.find(:all, opts.merge(:group_id => group.id, :order => "created_at desc"))
+  end
+
   def find_badge_on(group, token, opts = {})
     self.badges.find(:first, opts.merge(:token => token, :group_id => group.id))
   end
