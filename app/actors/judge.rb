@@ -69,9 +69,9 @@ module Actors
       vote = Vote.find(payload.first)
       user = vote.user
       voteable = vote.voteable
-      group = voteable.group
+      group = vote.group
 
-      if user.votes.count == 1 && vote.value == -1
+      if vote.value == -1
         user_badges = user.badges
         user.find_badge_on(group,"critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
       end
@@ -80,15 +80,15 @@ module Actors
       if vuser = voteable.user
         user_badges = vuser.badges
 
-        if vuser.votes_up >= 100
+        if vuser.votes_up[group.id] >= 100
           vuser.find_badge_on(group,"effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
-        if vuser.votes_up >= 200
+        if vuser.votes_up[group.id] >= 200
           vuser.find_badge_on(group,"merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
-        if vuser.votes_up >= 300
+        if vuser.votes_up[group.id] >= 300
           vuser.find_badge_on(group,"service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
       end
