@@ -12,7 +12,7 @@ module Actors
       answer = Answer.find(answer_id)
       group = question.group
 
-      if question.answer == answer && answer.user.answers.count == 1
+      if question.answer == answer && group.answers.count(:user_id => answer.user.id) == 1
         user_badges = answer.user.badges
         answer.user.find_badge_on(group,"troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
       end
@@ -49,7 +49,7 @@ module Actors
       user = question.user
       group = question.group
 
-      if user.questions.count == 1
+      if group.questions.count(:user_id => user.id) == 1
         user_badges = user.badges
         user.find_badge_on(group, "inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
       end
@@ -57,11 +57,10 @@ module Actors
 
     expose :on_destroy_question
     def on_destroy_question(payload)
-      user = User.find(payload.first)
+      user = User.find(payload.first) # FIXME: pass the group id
       if user.questions.first.nil?
         user_badges = user.badges
-        inquirer = user_badges.find(:first, :token => "inquirer")
-        inquirer.destroy if inquirer
+        user_badges.destroy_all(:token => "inquirer")
       end
     end
 
