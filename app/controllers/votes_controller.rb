@@ -15,6 +15,7 @@ class VotesController < ApplicationController
 
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
+    vote.group = vote.voteable.group
 
     voted = false
     if vote.voteable.user != current_user

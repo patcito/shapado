@@ -9,6 +9,9 @@ class Vote
   key :user_id, String
   belongs_to :user
 
+  key :group_id, String, :required => true
+  belongs_to :group
+
   key :voteable_id, String
   key :voteable_type, String
   belongs_to :voteable, :polymorphic => true
