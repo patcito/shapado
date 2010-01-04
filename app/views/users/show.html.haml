@@ -3,33 +3,44 @@
   .navtitle
     &= @user.login
 
-.general-info
-  .avatar
-    = gravatar @user.email.to_s, :size => 128
-  -if @user.bio.present?
-    .user-info
-      = auto_link(@user.bio)
-.clear
+#users_show
+  .general-info
+    .avatar
+      = gravatar @user.email.to_s, :size => 128
+    -if @user.bio.present?
+      .user-info
+        = auto_link(@user.bio)
+  .clear
 
-%h2.title
-  = number_with_delimiter(@questions.total_entries)
-  =t(:questions, :scope => "activerecord.models")
+  %h2.title
+    = number_with_delimiter(@questions.total_entries)
+    =t(:questions, :scope => "activerecord.models")
 
-%ul.items#questions
-  -@questions.each do |question|
-    = render :partial => "questions/question", :object => question
-= will_paginate @questions, :param_name => "questions_page"
-.clear
+  %ul.items#questions
+    -@questions.each do |question|
+      = render :partial => "questions/question", :object => question
+  = will_paginate @questions, :param_name => "questions_page"
+  .clear
 
-%h2.title
-  = number_with_delimiter(@answers.total_entries)
-  = t(:answers, :scope => "activerecord.models")
+  %h2.title
+    = number_with_delimiter(@answers.total_entries)
+    = t(:answers, :scope => "activerecord.models")
 
-%ul.items#answers
-  -@answers.each do |answer|
-    = render :partial => "answers/answer", :object => answer
-= will_paginate @answers, :param_name => "answers_page"
-.clear
+  %ul.items#answers
+    -@answers.each do |answer|
+      = render :partial => "answers/answer", :object => answer
+  = will_paginate @answers, :param_name => "answers_page"
+  .clear
+
+  %h2.title
+    = number_with_delimiter(@badges.total_entries)
+    = t(:badges, :scope => "activerecord.models", :default => "Badges")
+
+  %ul.items#badges
+    -@badges.each do |badge|
+      = render :partial => "badges/badge", :object => badge
+  = will_paginate @badges, :param_name => "badges_page"
+  .clear
 
 -content_for :sidebar do
   .block.stats

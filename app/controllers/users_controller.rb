@@ -50,6 +50,9 @@ class UsersController < ApplicationController
                                       :group_id => current_group.id,
                                       :per_page => 10)
 
+    @badges = @user.badges.paginate(:page => params[:badges_page],
+                                    :group_id => current_group.id,
+                                    :per_page => 25)
     add_feeds_url(url_for(:format => "atom"), t("feeds.user"))
 
     @user.stats.viewed! if @user != current_user
