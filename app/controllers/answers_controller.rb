@@ -32,6 +32,8 @@ class AnswersController < ApplicationController
       @answer.user = current_user
 
       if @question && @answer.save
+        current_user.stats.add_answer_tags(*@question.tags)
+
         unless @answer.comment?
           @question.answer_added!
 

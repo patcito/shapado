@@ -167,6 +167,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.stats.add_question_tags(*@question.tags)
+
         current_user.on_activity(:ask_question, current_group)
         current_group.on_activity(:ask_question)
 

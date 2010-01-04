@@ -271,7 +271,7 @@ class User
   end
 
   def stats(year = nil)
-    fields = [:_id, :user_id]
+    fields = [:_id, :user_id, :views_count]
     fields << "visits_#{year}" if year
 
     UserStat.find_or_create_by_user_id(self._id, :select => fields)
