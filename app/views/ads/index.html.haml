@@ -1,3 +1,8 @@
+
+-content_for :subtabs do
+  .navtitle
+    Manage Ads
+
 .buttons
   = link_to t("ads.ad_links", :type => "Adsense"), new_ad_path(:type=>Adsense), :class => "button"
   = link_to t("ads.ad_links", :type => "Adbard"), new_ad_path(:type=>Adbard), :class => "button"
