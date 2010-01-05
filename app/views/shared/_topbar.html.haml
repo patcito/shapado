@@ -9,6 +9,11 @@
   %ul.right
     -if logged_in?
       %li
+        You are logged in as
+        =link_to h(current_user.login), user_path(current_user)
+        ==(#{current_user.reputation_on(current_group)})
+        |
+      %li
         =link_to t("layouts.application.settings"), settings_path
         |
       %li
@@ -19,12 +24,6 @@
         =link_to t("layouts.application.log_in"), login_path
         |
     %li
-      =link_to 'Get the facts!', "/facts#facts"
-      |
-    %li
       =link_to t("layouts.application.search"), search_path
-      |
-    %li
-      =link_to t(".about", :default => :"groups.index.about"), about_path
 
   .clear
