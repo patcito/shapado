@@ -17,6 +17,15 @@ namespace :setup do
     MongoMapper.connection.drop_database(MongoMapper.database.name)
   end
 
+  desc "Reset admin password"
+  task :reset_password => :environment do
+    admin = User.find_by_login("admin")
+    admin.crypted_password = nil
+    admin.password = "admins"
+    admin.password_confirmation = "admins"
+    admin.save
+  end
+
   desc "Create the default group"
   task :default_group => [:environment] do
     categories = %w[technology business science politics religion
