@@ -232,28 +232,29 @@ input.checkbox
       color: #333
 
 .pagination
+  font-size: 16px
+  font-weight: bold
   span
+    padding-bottom: 0px
     &.current
-      background: #576C82
-      color: #F5F5F5
-      border: 1px solid #7593B0
-      -moz-border-radius: 5px
+      background: #808185
+      color: #FFFFE0
+      border: 1px solid #808185
+      +rounded(1px,1px,1px,1px)
 
     &.disabled
       background: #eee
       color: #aaa
       border: 1px solid #ddd
-      -moz-border-radius: 5px
+      +rounded(1px,1px,1px,1px)
 
   a
-    color: #364B69
+    color: #808185
     border: 1px solid #ddd
-    -moz-border-radius: 5px
-    font-size: 11px
+    +rounded(1px,1px,1px,1px)
 
     &:hover
       color: #444
-      background: #eaeaea
       border: 1px solid #576C82
 
 
