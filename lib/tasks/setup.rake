@@ -73,10 +73,51 @@ namespace :setup do
     User.all.each do |user|
       group_ids = user.reputation.map {|group_id,_| group_id }
       group_ids.each do |group_id|
+        votes_up = 0
+        votes_down = 0
+        user.votes_up[group_id] = votes_up
+        user.votes_down[group_id] = votes_down
+
         Badge.create(:token => "pioneer", :type => "bronze", :user => user, :group_id => group_id, :created_at => user.created_at)
+
+        questions = user.questions.all(:group_id => group_id)
+        if questions.count > 0
+          Badge.create(:token => "inquirer", :type => "bronze", :user => user,
+                       :group_id => group_id, :created_at => questions.first.created_at)
+
+          questions.each do |question|
+            if answer = question.answer
+              Badge.create(:token => "troubleshooter", :type => "bronze",
+                           :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
+            end
+
+            votes_up = question.votes.group_by { |vote| vote.value }[1].try(:count).to_i
+            votes_down = question.votes.group_by { |vote| vote.value }[-1].try(:count).to_i
+
+            user.votes_up[group_id] += votes_up
+            user.votes_down[group_id] += votes_down
+            user.stats.add_question_tags(*question.tags)
+          end
+        end
+
+        answers = user.answers.all(:group_id => group_id)
+        if answers.count > 0
+          answers.each do |answer|
+            user.stats.add_answer_tags(*answer.question.tags)
+
+            votes_up = answer.votes.group_by { |vote| vote.value }[1].try(:count).to_i
+            votes_down = answer.votes.group_by { |vote| vote.value }[-1].try(:count).to_i
+
+            user.votes_up[group_id] += votes_up
+            user.votes_down[group_id] += votes_down
+          end
+        end
+
         $stdout.print "."
         $stdout.flush if rand(10) == 5
       end
+
+      user.save(false)
     end
   end
 end
