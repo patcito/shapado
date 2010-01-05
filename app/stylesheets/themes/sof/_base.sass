@@ -14,7 +14,8 @@ h1, h2, h3
 body
   color: #333
   background: #fff
-  font: normal 12px/1.5em "Lucida Grande", "Helvetica Neue", Arial, sans-serif
+  font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif
+  font-size: 13px
 
 
 hr
@@ -206,6 +207,7 @@ input.checkbox
     margin-right: 5px
     border-top-left-radius: 5px
     border-top-right-radius: 5px
+    padding: 1px 1px 0px 1px
 
     a
       padding: 3px 10px
@@ -221,16 +223,13 @@ input.checkbox
       background-color: #fff !important
       color: #333
 
-      &:hover
-        background: #fff !important
-        border-top: 1px solid #ccc
-        border-right: 1px solid #ccc
-
       a
         color: #222
 
     &:hover
-      color: #fff
+      border-top: 1px solid #ddd
+      border-right: 1px solid #ddd
+      color: #333
 
 .pagination
   span
