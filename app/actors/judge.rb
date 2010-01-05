@@ -17,6 +17,10 @@ module Actors
         answer.user.find_badge_on(group,"troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
       end
 
+      if question.answer == answer && answer.votes_average >= 40
+        answer.user.find_badge_on(group,"guru") || user_badges.create!(:token => "guru", :type => "silver", :group => group, :source => answer)
+      end
+
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
         answer.user.find_badge_on(group,"tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
@@ -33,6 +37,9 @@ module Actors
       if answer && question.answer.nil?
         user_badges = answer.user.badges
         badge = user_badges.find(:first, :token => "troubleshooter", :group_id => group.id, :source_id => answer.id)
+        badge.destroy if badge
+
+        badge = user_badges.find(:first, :token => "guru", :group_id => group.id, :source_id => answer.id)
         badge.destroy if badge
       end
 
