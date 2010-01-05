@@ -64,7 +64,7 @@ namespace :setup do
     User.all.each do |user|
       group_ids = user.reputation.map {|group_id,_| group_id }
       group_ids.each do |group_id|
-        Badge.create(:token => "pioneer", :type => "bronze", :user => user, :group_id => group_id)
+        Badge.create(:token => "pioneer", :type => "bronze", :user => user, :group_id => group_id, :created_at => user.created_at)
         $stdout.print "."
         $stdout.flush if rand(10) == 5
       end
