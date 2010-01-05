@@ -5,7 +5,7 @@ class Badge
   TOKENS = %w[service_medal merit_medal effort_medal popstar rockstar addict
               noob fanatic tutor critic commentator student famous_question
               favorite_question good_question good_answer inquirer troubleshooter
-              pioneer]
+              pioneer popular_person]
 
   key :_id, String
   key :user_id, String, :required => true

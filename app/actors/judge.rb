@@ -76,6 +76,10 @@ module Actors
         user.find_badge_on(group,"critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
+      if user.stats.views_count >= 10000
+        user.find_badge_on(group,"popular_person") || user.badges.create!(:token => "popular_person", :type => "silver", :group_id => group.id)
+      end
+
       # users
       if vuser = voteable.user
         user_badges = vuser.badges
