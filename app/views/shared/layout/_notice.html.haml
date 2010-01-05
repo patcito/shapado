@@ -1,5 +1,7 @@
 %h4
   &= current_group.name
+  -if current_user.owner_of?(current_group) || current_user.admin?
+    ==(#{link_to "manage", manage_manage_path, :class => "manage_link"})
 
 .markdown
   = auto_link(markdown(current_group.description))
