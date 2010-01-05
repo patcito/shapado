@@ -190,4 +190,8 @@ class ApplicationController < ActionController::Base
       access_denied
     end
   end
+
+  def is_bot?
+    request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler)\b/i
+  end
 end

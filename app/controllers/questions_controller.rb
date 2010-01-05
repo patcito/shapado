@@ -124,7 +124,7 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.paginate(options)
 
     @answer = Answer.new(params[:answer])
-    @question.viewed!
+    @question.viewed! if @question.user != current_user && !is_bot?
 
     set_page_title(@question.title)
     add_feeds_url(url_for(:format => "atom"), t("feeds.question"))
