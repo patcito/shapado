@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   before_filter :check_group_access
   before_filter :find_languages
   before_filter :set_locale
-  layout :set_layout
+  layout 'application'
 
   protected
 
@@ -35,14 +35,6 @@ class ApplicationController < ActionController::Base
     if @current_group &&
        (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
       access_denied
-    end
-  end
-
-  def set_layout
-    if current_group.isolate
-      'group'
-    else
-      'application'
     end
   end
 
