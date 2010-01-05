@@ -48,7 +48,7 @@
       .text
         = t(:created_at, :scope => "activerecord.attributes.user")
       .data
-        = time_ago_in_words(@user.created_at)
+        = t("time.ago", :time => time_ago_in_words(@user.created_at))
     .entry
       .text
         = t(:last_logged_at, :scope => "activerecord.attributes.user")
