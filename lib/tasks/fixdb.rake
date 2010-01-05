@@ -18,9 +18,9 @@ namespace :fixdb do
   task :groups => :environment do
     $stderr.puts "Updating #{Group.count} groups..."
     Group.all.each do |group|
-      [UsersWidget, BadgesWidget].each_with_index do |widget,pos|
-        widget.create(:position => pos, :group_id => group.id)
-      end
+      GroupsWidget.create(:position => 0, :group_id => group.id) unless group.isolate || group.private
+      UsersWidget.create(:position => 1, :group_id => group.id)
+      BadgesWidget.create(:position => 2, :group_id => group.id)
     end
   end
 end
