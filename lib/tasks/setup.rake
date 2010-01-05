@@ -1,8 +1,14 @@
 desc "Setup application"
-  task :bootstrap => [:environment, "setup:reset",
-                      "setup:create_admin",
-                      "setup:default_group",
-                      "setup:create_widgets"] do
+task :bootstrap => [:environment, "setup:reset",
+                    "setup:create_admin",
+                    "setup:default_group",
+                    "setup:create_widgets"] do
+end
+
+desc "Upgrade"
+task :upgrade => [:environment,
+                  "setup:create_widgets",
+                  "setup:pioneer"] do
 end
 
 namespace :setup do
@@ -52,9 +58,17 @@ namespace :setup do
     admin.save!
   end
 
-  task "Upgrade"
-  task :upgrade => [:environment,
-                    "setup:create_widgets"] do
+  desc "Pioneer"
+  task :pioneer => :environment do
+    puts "Processing #{User.count} users"
+    User.all.each do |user|
+      group_ids = user.reputation.map {|group_id,_| group_id }
+      group_ids.each do |group_id|
+        Badge.create(:token => "pioneer", :type => "bronze", :user => user, :group_id => group_id)
+        $stdout.print "."
+        $stdout.flush if rand(10) == 5
+      end
+    end
   end
 end
 
