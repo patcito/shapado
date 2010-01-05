@@ -9,9 +9,9 @@
   %ul.right
     -if logged_in?
       %li
-        You are logged in as
+        logged in as
         =link_to h(current_user.login), user_path(current_user)
-        ==(#{current_user.reputation_on(current_group)})
+        ==(#{format_number(current_user.reputation_on(current_group))})
         |
       %li
         =link_to t("layouts.application.settings"), settings_path
