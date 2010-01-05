@@ -79,16 +79,17 @@ module Actors
       # users
       if vuser = voteable.user
         user_badges = vuser.badges
+        vote_value = vuser.votes_up[group.id] ? vuser.votes_up[group.id] : 0
 
-        if vuser.votes_up[group.id] >= 100
+        if vote_value >= 100
           vuser.find_badge_on(group,"effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
-        if vuser.votes_up[group.id] >= 200
+        if vote_value >= 200
           vuser.find_badge_on(group,"merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
-        if vuser.votes_up[group.id] >= 300
+        if vote_value >= 300
           vuser.find_badge_on(group,"service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
       end
