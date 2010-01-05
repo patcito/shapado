@@ -1,5 +1,7 @@
-%h2
-  = t("ads.ad_links", :type => h(params[:type]))
+
+-content_for :subtabs do
+  .navtitle
+    = t("ads.ad_links", :type => h(params[:type]))
 
 -form_for(:ad, @ad, :url => ads_path,:html => {:class => "form"}) do |f|
   = f.error_messages

@@ -1,35 +1,34 @@
 !!! Strict
 %html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    = render :partial => "layouts/head"
+    %title
+      &= page_title
+    = render :partial => "shared/layout/meta"
+    = render :partial => "shared/layout/javascript"
+    = render :partial => "shared/layout/css"
 
   %body
-    #top_bar
+    #container
       = render :partial => "shared/topbar"
-    .two-column
-      -if !AppConfig.system_notice.blank?
-        #system-msg
-          .internal
-            = AppConfig.system_notice
-      %br
-      #navigation{:class => "#{@active_tab}"}
-        #menu_primary
+      #header
+        #main-bar{:class => @active_tab}
+          #logo
+            =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
           = render :partial => "shared/manage_navigation"
-
-      #main-content
-        #messages
-          -flash.each do |k,v|
-            .message{:class => k.to_s}
-              .internal.markdown
-                = markdown(v)
-        #layout
-          #content{:style=>"width: 100%"}
-            .internal
-              = yield
-
           .clear
+      #wrapper
+        #main{:style=>"width: 100%"}
+          #block-text.block
+            .secondary-navigation{:class => @active_subtab.to_s}
+              = yield :subtabs
+              .clear
+            .content
+              %p.markdown
+                = show_flash_messages(:class => "flash", :markdown => true)
+              .inner
+                = yield
+                .clear
+        .clear
       #footer
-        = render :partial => "layouts/footer"
-
-      = render :partial => "shared/analytics"
-      .clear
+        .block.content
+          = render :partial => "layouts/footer"

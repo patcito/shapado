@@ -1,4 +1,5 @@
 class Admin::ManageController < ApplicationController
+  before_filter :login_required
   before_filter :check_permissions
   layout "manage"
   tabs :dashboard => :dashboard,
@@ -26,7 +27,7 @@ class Admin::ManageController < ApplicationController
       redirect_to groups_path
     elsif !current_user.owner_of?(@group) && !current_user.admin?
       flash[:error] = t("global.permission_denied")
-      redirect_to ads_path
+      redirect_to  domain_url(:custom => @group.domain)
     end
   end
 end
