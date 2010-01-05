@@ -1,0 +1,71 @@
+#main-bar
+  width: 100%
+  float: left
+  margin: 0 10px 10px  10px
+
+  #logo
+    float: left
+    margin-right: 10px
+
+#main-bar ul
+  list-style-type: none
+
+#main-bar ul li
+  margin-top: 18px
+  background: #17B000
+  margin-right: 5px
+  color: #F8F0E6
+  float: left
+
+  &:hover
+    color: #EAFF00
+
+  &.active
+    border-top: 1px solid #fff
+    background-color: #FF9900 !important
+    color: #333
+    a
+      &:link, &:visited, &:hover, &:active
+        color: #364b69
+
+#main-bar ul li
+  a
+    display: block
+    font-size: 16px
+    font-weight: bold
+    padding: 5px 10px
+
+    &:link, &:visited, &:active
+      text-decoration: none
+      color: #FFF
+    &:hover
+      color: #EAFF00
+
+  &.ask_question
+    +fancy-button-structure
+    +fancy-button-colors-matte(#3F8E6D)
+    +fancy-button-size(12px, 4px, 2px, 10px)
+    float: right
+    margin-top: 18px
+    margin-rigth: 2px
+    a
+      font-size: 23px
+
+#top-bar
+  +horizontal-list(2px)
+  padding: 1px 10px
+  margin: 0
+
+  color: white
+  background: #222
+
+  +fancy-matte-gradient(#76FF37, #149B00)
+  a
+    font-family: Helvetica
+    color: white
+    font-weight: bold
+    padding: 2px
+    +rounded(2px, 2px, 0px, 0px)
+    &:hover
+      background: #149B00
+      color: #EAFF00
