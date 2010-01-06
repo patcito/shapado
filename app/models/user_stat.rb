@@ -8,6 +8,7 @@ class UserStat
   key :views_count, Float, :default => 0.0
   key :answer_tags, Array
   key :question_tags, Array
+  key :expert_tags, Array
 
   timestamps!
 
@@ -34,6 +35,13 @@ class UserStat
   def add_question_tags(*tags)
     self.collection.update({:_id => self._id,
                             :question_tags => {:$nin => tags} },
+                           {:$pushAll => {:question_tags => tags}},
+                           {:upsert => true})
+  end
+
+  def add_expert_tags(*tags)
+    self.collection.update({:_id => self._id,
+                            :expert_tags => {:$nin => tags} },
                            {:$pushAll => {:question_tags => tags}},
                            {:upsert => true})
   end

@@ -1,4 +1,15 @@
 class Notifier < ActionMailer::Base
+  def give_advice(user, group, question)
+    I18n.locale = user.language
+    scope = "mailers.notifications.give_advice"
+
+    from "#{group ? group.name : AppConfig.application_name} <notifications@shapado.com>"
+    recipients user.email
+    subject I18n.t("subject", :scope => scope) # FIXME
+    sent_on Time.now
+    body   :user => user, :question => question,
+           :group => group, :domain => group.domain
+  end
 
   def new_answer(user, group, answer)
     self.class.layout "notification_#{user.language.downcase}"

@@ -24,6 +24,8 @@ module Actors
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
         answer.user.find_badge_on(group,"tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
+
+        answer.user.stats.add_expert_tags(*question.tags)
       end
     end
 
