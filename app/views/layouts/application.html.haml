@@ -35,6 +35,7 @@
             = render :partial => "shared/layout/notice"
 
           = yield :sidebar
+          = render :partial => "shared/ads/context_panel_ads"
           -current_group.widgets.each do |widget|
             .widget.block{:id => widget.name}
               = render :partial => widget.partial_name, :locals => {:widget => widget}
