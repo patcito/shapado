@@ -1,0 +1,10 @@
+pt-PT:
+  widgets:
+    badges:
+      title: Recent Badges
+    groups:
+      title: Recent Groups
+    top_users:
+      title: Top 5 Users
+    users:
+      title: Recent Users

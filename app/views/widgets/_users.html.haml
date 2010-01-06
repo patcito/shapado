@@ -1,5 +1,5 @@
 %h3
-  Recent Users
+  =t(".title")
 .content
   %ul.list
     -widget.recent_users(current_group).each do |user|
@@ -12,6 +12,6 @@
             joined
             =t("time.ago", :time => time_ago_in_words(user.created_at))
   .more
-    =link_to "more...", users_path
+    =link_to t("scaffold.more"), users_path
     .clear
 .clear

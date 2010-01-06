@@ -29,7 +29,7 @@
     answer:
       pick_answer: Escoger como solución
       unset_answer: "¿Quitar como solución?"
-      flag: flag
+      flag: "Reportar abuso"
       add_comment: Añadir comentario...
     form:
       body_tip: ¿Cual es tu pregunta? por favor se descriptivo.

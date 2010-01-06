@@ -1,0 +1,10 @@
+es-AR:
+  widgets:
+    badges:
+      title: Placas recientes
+    groups:
+      title: Grupos recientes
+    top_users:
+      title: ranking de usuarios
+    users:
+      title: Usuarios recientes
