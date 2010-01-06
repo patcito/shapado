@@ -8,7 +8,7 @@ fr:
       ask_question: poser une question
       tags: tags
       users: utilisateurs
-      badges: badges
+      badges: insignes
       unanswered: sans réponses
       logout: se déconnecter
       logged: Connecté {{login}}
