@@ -88,8 +88,10 @@ namespace :setup do
 
           questions.each do |question|
             if answer = question.answer
-              Badge.create(:token => "troubleshooter", :type => "bronze",
-                           :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
+              if !answer.user.badges.first(:group_id => group_id, :token => 'troubleshooter')
+                Badge.create(:token => "troubleshooter", :type => "bronze",
+                             :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
+              end
             end
 
             votes_up = question.votes.group_by { |vote| vote.value }[1].try(:count).to_i
