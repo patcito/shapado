@@ -33,4 +33,7 @@ class Widget
                                                                :upsert => true)
     end
   end
+
+  def description
+  end
 end

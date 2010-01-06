@@ -5,6 +5,10 @@ class BadgesWidget < Widget
     group.badges.find(:all, :limit => 5, :order => "created_at desc")
   end
 
+  def description
+    "This widget display recent Badges earned by users or questions"
+  end
+
   protected
   def set_name
     self[:name] ||= "badges"

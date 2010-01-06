@@ -22,7 +22,7 @@ class Admin::ManageController < ApplicationController
   end
 
   def move_widget
-    widget = Widget.find(params[:widget])
+    widget = Widget.find(params[:widget_id])
     widget.move_to(params[:move_to])
     redirect_to manage_widgets_path
   end

@@ -11,6 +11,7 @@
           .joined
             joined
             =t("time.ago", :time => time_ago_in_words(user.created_at))
-  .clear.more
+  .more
     =link_to "more...", users_path
+    .clear
 .clear

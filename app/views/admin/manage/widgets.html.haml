@@ -1,12 +1,23 @@
 -content_for :subtabs do
   .navtitle
-    Manage Widgets
+    Manage Sidebar Widgets
 
-%ul.list
-  -@widgets.each do |widget|
-    %li
-      -form_tag "/move_widget" do
-        = hidden_field_tag("widget", widget.id)
-        = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
-        = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
-      = render :partial => widget.partial_name, :locals => {:widget => widget}
+%h2.title
+  Use the arrows to move your widgets
+
+#manage_widgets
+  %ul.list#widgets
+    -@widgets.each do |widget|
+      %li
+        .widget_description
+          =widget.description # do not escape
+        .widget.block{:id => widget.name}
+          .controls
+            -form_tag "/move_widget" do
+              = hidden_field_tag("widget_id", widget.id)
+              = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
+              = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
+            .clear
+          .widget_content
+            = render :partial => widget.partial_name, :locals => {:widget => widget}
+        .clear
