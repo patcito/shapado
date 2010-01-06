@@ -2,10 +2,14 @@ class Badge
   include MongoMapper::Document
 
   TYPES = %w[gold silver bronze]
-  TOKENS = %w[service_medal merit_medal effort_medal popstar rockstar addict
-              noob fanatic tutor critic commentator student famous_question
-              favorite_question good_question good_answer inquirer troubleshooter
-              pioneer popular_person guru supporter]
+  GOLD = %w[rockstar popstar fanatic service_medal famous_question]
+  SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer]
+  BRONZE = %w[pioneer supporter critic inquirer troubleshooter noob commentator
+              merit_medal effort_medal student]
+
+  def self.TOKENS
+    @tokens ||= GOLD + SILVER + BRONZE
+  end
 
   key :_id, String
   key :user_id, String, :required => true
@@ -25,7 +29,9 @@ class Badge
   timestamps!
 
   validates_inclusion_of :type,  :within => TYPES
-  validates_inclusion_of :token, :within => TOKENS
+  validates_inclusion_of :token, :within => self.TOKENS
+
+  before_validation_on_create :set_type
 
   def self.gold_badges
     self.find_all_by_type("gold")
@@ -36,6 +42,25 @@ class Badge
   end
 
   def name
-    @name ||= I18n.t("badges.#{self.token}", :default => self.token.titleize) if self.token
+    @name ||= I18n.t("badges.#{self.token}.name", :default => self.token.titleize) if self.token
+  end
+
+  def description
+    @description ||= I18n.t("badges.#{self.token}.description") if self.token
+  end
+
+  def self.type_of(token)
+    if BRONZE.include?(token)
+      "bronze"
+    elsif SILVER.include?(token)
+      "silver"
+    elsif GOLD.include?(token)
+      "gold"
+    end
+  end
+
+  protected
+  def set_type
+    self[:type] ||= self.find_type
   end
 end

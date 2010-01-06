@@ -6,7 +6,7 @@
   %h2.title
     All badges that you can earn. Just share your knowledge.
   %ul.list
-    -Badge::TOKENS.each do |token|
+    -Badge.TOKENS.each do |token|
       %li
         .badge_item
           -badge = Badge.new(:token => token)
@@ -14,6 +14,6 @@
           .counter
             == × #{Badge.count(:token => token, :group_id => current_group.id)}
         .badge_description
-          Badge description
+          =badge.description
         .clear
 
