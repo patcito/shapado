@@ -1,0 +1,7 @@
+es-AR:
+  shared:
+    topbar:
+      logged_as: "conectado como {{login}}"
+    layout:
+      notice:
+        manage: administrar

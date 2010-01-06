@@ -12,7 +12,7 @@
       =find_and_preserve(shapado_auto_link(markdown(answer.body)))
     .user_data
       .time_ago
-        answered
+        = t('activerecord.attributes.answer.created_at')
         %strong
           = t("time.ago", :time => time_ago_in_words(answer.created_at))
       .avatar

@@ -1,0 +1,7 @@
+fr:
+  shared:
+    topbar:
+      logged_as: "logged in as {{login}}"
+    layout:
+      notice:
+        manage: manage

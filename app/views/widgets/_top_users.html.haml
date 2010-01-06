@@ -1,5 +1,5 @@
 %h3
-  Top 5 Users
+  =t(".title")
 .content
   %ul.list
     -widget.top_users(current_group).each do |user|
@@ -10,5 +10,5 @@
           =link_to h(user.login), user_path(user)
           ==(#{user.reputation_on(current_group)})
   .clear.more
-    =link_to "more...", users_path
+    =link_to t("scaffold.more"), users_path
 .clear
