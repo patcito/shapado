@@ -26,7 +26,7 @@ fr:
         explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"
     manage:
       dashboard: Dashboard
-      properties: Properties
+      properties: Propriétés
       actions: Actions
-      stats: Stats
-      members: Members
+      stats: États
+      members: Membres

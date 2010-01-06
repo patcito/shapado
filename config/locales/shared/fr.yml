@@ -1,7 +1,7 @@
 fr:
   shared:
     topbar:
-      logged_as: "logged in as {{login}}"
+      logged_as: "connecté en tant que {{login}}"
     layout:
       notice:
-        manage: manage
+        manage: administrer

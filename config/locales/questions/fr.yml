@@ -3,14 +3,14 @@ fr:
     index:
       title: Toutes les questions
       hot:     hot
-      active:  active
+      active:  actives
       votes:   votes
-      newest:  newest
-      oldest:  oldest
+      newest:  récentes
+      oldest:  anciennes
       ask_question: poser une question
       empty: "Aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
-      help_to_answer: Help us to answer
-      unanswered_questions: unanswered questions
+      help_to_answer: Aidez-nous
+      unanswered_questions: questions sans réponses
     show:
       answers: Réponses
       another_answers: Autres réponses
@@ -24,27 +24,27 @@ fr:
       asked_on: "posée dans"
       last_activity: Last activity
       answers_title:
-        one: "{{count}} Answer"
-        other: "{{count}} Answers"
+        one: "{{count}} Réponse"
+        other: "{{count}} Réponses"
     answer:
       pick_answer: Choisir comme solution
       unset_answer: Annuler solution?
       flag: reporter un abus
       add_comment: Ajouter un commentaire...
     form:
-      body_tip: What's your question? Be descriptive.
-      language_tip: Select the language's question.
-      category_tip: Select the category that fits best your question.
-      tags_tip:  Use tags to add more information about your question.
+      body_tip: Quelle est votre question? Soyez descriptif.
+      language_tip: Sélectionnez la langue de votre question.
+      category_tip: Sélectionnez la catégorie qui correspond le mieux à votre question.
+      tags_tip:  Utilisez les tags pour ajouter plus d'information à question.
     flag:
       title: reporter un abus
     edit:
       title: Éditer la question
     unanswered:
       title: Sans Réponses
-      tags: Unanswered Tags
+      tags: tags sans réponses
       empty: "Ce groupe n'a aucune question sans réponses"
-      my_tags: "my tags"
+      my_tags: "mes tags"
     tags:
       title: Tags
     new:
@@ -60,12 +60,12 @@ fr:
     watch:
       success:      "Vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
     move:
-      title:        "Move question: {{title}}"
-      group_label:  "Move to the group with slug:"
-      submit:       "Move!"
+      title:        "Transférer la question: {{title}}"
+      group_label:  "Transférer au groupe du nom:"
+      submit:       "Transférer!"
     move_to:
-      success:      "Question moved to {{group}}"
-      group_dont_exists: "The group {{group}} don't exists"
+      success:      "Question transférée à {{group}}"
+      group_dont_exists: "Le groupe {{group}} n'éxiste pas"
     shared:
       title: reporter un abus
 
@@ -84,4 +84,4 @@ fr:
         votes: Votes
         language: Langue
         category: Catégorie
-        created_at: Asked
+        created_at: Posée
