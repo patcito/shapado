@@ -8,6 +8,7 @@
       ask_question: Pregunte
       tags: Etiquetas
       users: Usuarios
+      badges: placas
       unanswered: Aun no contestadas
       logout: salir
       logged: conectado como {{login}}

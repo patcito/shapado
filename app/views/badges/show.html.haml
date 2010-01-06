@@ -1,0 +1,10 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title", :type => @badge.name)
+
+%table
+  -@users.each_slice(4) do |line|
+    %tr
+      -line.each do |u|
+        %td
+          =link_to h(u.login), user_path

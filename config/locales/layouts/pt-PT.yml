@@ -8,6 +8,7 @@
       ask_question: fazer pergunta
       tags: tags
       users: utilizadores
+      badges: badges
       unanswered: sem resposta
       logout: desligar sessão
       logged: Ligado como {{login}}

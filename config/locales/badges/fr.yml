@@ -1,0 +1,6 @@
+fr:
+  badges:
+    index:
+      title: Badges
+    show:
+      title: Badge {{type}}

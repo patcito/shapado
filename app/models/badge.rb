@@ -31,6 +31,10 @@ class Badge
     self.find_all_by_type("gold")
   end
 
+  def to_param
+    self.token
+  end
+
   def name
     @name ||= I18n.t("badges.#{self.token}", :default => self.token.titleize) if self.token
   end
