@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('.auto-link').autoVideo();
   setupEditor();
   if((navigator.userAgent.indexOf('Gecko')!=-1
     && navigator.userAgent.indexOf('like Gecko')==-1) ||
@@ -18,14 +19,20 @@ $(document).ready(function() {
     }
     return false;
   })
+  $(".markdown code").addClass("prettyprint")
 })
 
+$(window).load(function() {
+  prettyPrint();
+});
+
 function showMessage(message, t) {
+  $("#notifyBar").remove();
   $.notifyBar({
-    html: message,
+    html: "<div class='message "+t+"' style='width: 100%; height: 100%; padding: 5px'>"+message+"</div>",
     delay: 3000,
     animationSpeed: "normal",
-    barClass: "message "+ t
+    barClass: "flash"
   });
 }
 
@@ -33,6 +40,8 @@ function setupEditor() {
   var converter = new Showdown.converter;
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
+    $('#markdown_preview.markdown p code').addClass("prettyprint");
+    prettyPrint();
   }
 
   var textarea = $("#markdown_editor").TextArea({

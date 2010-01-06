@@ -1,12 +1,11 @@
-.tags-list
+.tag-list
   -(tag_list).each do |tag|
     -unless current_tags.include? tag["name"]
       %ul
-        %li{:style => "line-height: 14px"}
+        %li
           %span.tag
             =link_to h(tag["name"]), url_for(:language => current_languages, :tags => (current_tags + [tag["name"]]).join("+"))
-          %span{:style => "padding-left: 4px; clear:both"}
-            %b
-              x
-              = h(tag["count"])
+          .tag-multiplier
+            x
+            = tag["count"].to_i
           .clear

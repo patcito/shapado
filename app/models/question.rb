@@ -45,6 +45,7 @@ class Question
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
+  has_many :badges, :as => "source"
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id
@@ -56,7 +57,6 @@ class Question
 
   before_save :update_activity_at
   before_validation_on_create :sluggize, :update_language
-#   before_validation_on_update :update_answer_count
 
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
   validates_true_for :language, :logic => lambda { |q| q.group.language == q.language },
@@ -115,9 +115,11 @@ class Question
     if v > 0
       self.user.update_reputation(:question_receives_up_vote, self.group)
       voter.on_activity(:vote_up_question, self.group)
+      self.user.upvote!(self.group)
     else
       self.user.update_reputation(:question_receives_down_vote, self.group)
       voter.on_activity(:vote_down_question, self.group)
+      self.user.downvote!(self.group)
     end
     on_activity
   end
@@ -131,23 +133,25 @@ class Question
     if v > 0
       self.user.update_reputation(:question_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_question, self.group)
+      self.user.upvote!(self.group, -1)
     else
       self.user.update_reputation(:question_undo_down_vote, self.group)
       voter.on_activity(:undo_vote_down_question, self.group)
+      self.user.downvote!(self.group, -1)
     end
     on_activity
   end
 
   def add_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
-                                                         :upsert => true)
+                                                          :upsert => true)
     on_activity
   end
 
 
   def remove_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
-                                                         :upsert => true)
+                                                          :upsert => true)
     on_activity
   end
 

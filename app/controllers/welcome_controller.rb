@@ -1,11 +1,14 @@
 class WelcomeController < ApplicationController
+  helper :questions
+  tabs :default => :welcome
+
   before_filter :login_required, :only => [:feedback, :send_feedback]
   def index
-    @active_subtab = params.fetch(:tab, "active")
+    @active_subtab = params.fetch(:tab, "activity")
 
     order = "activity_at desc"
     case @active_subtab
-      when "active"
+      when "activity"
         order = "activity_at desc"
       when "hot"
         order = "hotness desc"
@@ -15,12 +18,11 @@ class WelcomeController < ApplicationController
     add_feeds_url(url_for(:format => "atom", :languages => @langs_conds),
                                                     t("feeds.questions"))
 
-    @questions = Question.paginate({:per_page => 25,
+    @questions = Question.paginate({:per_page => 10,
                                    :page => params[:page] || 1,
-                                   :limit => 20,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
                                    :order => order}.merge(
-                                   scoped_conditions({:answered => false, :banned => false})))
+                                   scoped_conditions({:banned => false})))
   end
 
   def feedback

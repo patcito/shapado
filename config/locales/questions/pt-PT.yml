@@ -9,6 +9,8 @@
       oldest:  mais antigas
       ask_question: fazer pergunta
       empty: "Ainda ninguém fez nenhuma pergunta, seja o primeiro!"
+      help_to_answer: Help us to answer
+      unanswered_questions: unanswered questions
     show:
       answers: Respostas
       another_answers: Outras respostas
@@ -20,6 +22,10 @@
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
       asked_on: "Asked on"
+      last_activity: Last activity
+      answers_title:
+        one: "{{count}} Answer"
+        other: "{{count}} Answers"
     answer:
       pick_answer: Escolher como solução
       unset_answer: Retirar como solução?
@@ -39,6 +45,8 @@
       tags: Etiquetas Sem Resposta
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
+    tags:
+      title: Etiquetas
     new:
       title: Fazer Pergunta
     create:
@@ -76,4 +84,5 @@
         votes: Votos
         language: Idioma
         category: Categoria
+        created_at: Asked
 

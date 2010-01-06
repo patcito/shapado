@@ -1,144 +1,125 @@
--content_for :css do
-  = stylesheet_link_tag 'compiled/components/show_question.css'
+-content_for :subtabs do
+  .navtitle
+    &= @question.title
 
-= error_messages_for :answer
+#question-vote-col
+  -if current_user && @question.watch_for?(current_user)
+    = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_languages, @question)
+  -else
+    = link_to image_tag("layer-visible-off.png"), watch_question_path(current_languages, @question), :title => t(".watch_tooltip")
 
--flag = Flag.new
+  =vote_box(@question, question_path(current_languages,@question))
 
-#question
-  .subtitle
-    %h2
-      = h @question.title
-  #question-body
-    #question_actions.right
-      %div{:style => "text-align: center"}
-        -if logged_in?
-          -if @question.watch_for?(current_user)
-            = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_languages, @question)
-          -else
-            = link_to image_tag("layer-visible-off.png"), watch_question_path(current_languages, @question), :title => t(".watch_tooltip")
-      =vote_box(@question, question_path(current_languages,@question))
-      %div{:style => "text-align: center"}
-        -if logged_in? && favorite = current_user.favorite(@question)
-          -form_tag question_favorite_path(current_languages, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
-            = image_submit_tag("favorites.png")
-        -else
-          - form_tag question_favorites_path(current_languages, @question.id), :id => "favorite_form" do
-            = image_submit_tag("unfavorites.png")
-        &= @question.favorites_count
+  -if logged_in? && favorite = current_user.favorite(@question)
+    -form_tag question_favorite_path(current_languages, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
+      = image_submit_tag("favorites.png")
+  -else
+    - form_tag question_favorites_path(current_languages, @question.id), :id => "favorite_form" do
+      = image_submit_tag("unfavorites.png")
+  .favorites_count
+    &= @question.favorites_count
 
-      .buttons
-        -if logged_in?
-          -if current_user.can_modify?(@question)
-            = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
-          -if current_user.mod_of?(@question.group)
-            %br
-            = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
-    .markdown{:style => "width: 92%"}
-      = markdown(@question.body)
-    .tags-list
-      -@question.tags.each do |tag|
-        %span.tag
-          = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
-    %br.clear
-    %span{:style => "width: 92%"}
-      .answer_info.box.right{:style => "width: 25%"}
+#question-body-col.markdown
+  #body
+    = find_and_preserve(shapado_auto_link(markdown(@question.body)))
+
+  .tag-list
+    -@question.tags.each do |tag|
+      %span.tag
+        = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
+
+  .user_info
+    .gravatar
+      = gravatar(@question.user.email.to_s, :size => 32)
+    .user_data
+      %span.asked_by
         = t('activerecord.attributes.question.asked_by')
-        .gravatar.left{:style => "padding: 2px"}
-          = gravatar(@question.user.email.to_s, :size => 32)
-        = link_to h(@question.user.login), user_path(@question.user)
-        %br
+      = link_to h(@question.user.login), user_path(@question.user)
+      %span.time_ago
         = t("time.ago", :time => time_ago_in_words(@question.created_at))
-        = t("global.from", :site => @question.user.country_name)
-        = country_flag(@question.user.country_code, @question.user.country_name)
-      -if logged_in?
-        .flag_question
-          .actions
-            -if current_user != @question.user
-              .left.internal
-                = link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
-            -if current_user.admin?
-              .left.internal
-                = link_to "move question", move_question_path(current_languages, @question), :rel => 'nofollow'
-          .clear
-          .flag_form.hidden
-            -flag.flaggeable = @question
-            = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages, @question) }
+      = t("global.from", :site => @question.user.country_name)
+      = country_flag(@question.user.country_code, @question.user.country_name)
     .clear
+  .controls
+    .actions
+      =link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
+      -if logged_in?
+        -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
+          = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
+        -if current_user.mod_of?(@question.group)
+          %br
+          = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+    .forms
+      -flag = Flag.new
+      - flag.flaggeable = @question
+      = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages, @question) }
+.clear
+
 
 %a{:name=>"answers"}
+
 #answers
-  -if @question.answered
-    %h2
-      = t(".solution", :scope => "")
-    =render :partial=> "answer", :locals=> {:question => @question, :answer => @question.answer, :solution => true, :comment => @answer}
-    -@answers.delete(@question.answer)
-    %hr
-    .subtitle#question_answers{:class => @active_subtab}
-      = t('.another_answers')
-      .right.tabs
-        .tab.votes
-          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers"))
-        .tab.newest
-          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers"))
-        .tab.oldest
-          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers"))
+  .secondary-navigation{:class => @active_subtab.to_s}
+    .navtitle
+      = t(".answers_title", :count => @answers.total_entries + (@question.answered ? 1 : 0))
+
+    %ul
+      %li.newest
+        = link_to t("questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers")
+      %li.votes
+        = link_to t("questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers")
+      %li.oldest
+        = link_to t("questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers")
+    .clear
+  .block
+    -if @question.answered
+      -solution = @question.answer
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => solution, :comment => @answer} unless solution.nil?
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
-  -else
-    .subtitle#question_answers{:class => @active_subtab}
-      = h(t('.answers'))
-      .right.tabs
-        .tab.votes
-          = link_to(t('.votes', :default => :"questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers"))
-        .tab.newest
-          = link_to(t('.newest', :default => :"questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers"))
-        .tab.oldest
-          = link_to(t('.oldest', :default => :"questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers"))
-    -@answers.each do |answer|
-      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
-  =will_paginate(@answers)
+    =will_paginate(@answers)
 
-%hr
-
-
--if logged_in?
-  -unless @question.answered
-    -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
-      = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
-      = submit_tag t('answers.form.submit')
-    %hr
--else
-  .box.highlight{:style => "text-align: center"}
-    == #{link_to t("global.please_login"), login_path} #{t(".to_answer_question")}.
+%a{:name=>"to_answer"}
+-form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
+  = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
+  .group.navform
+    = submit_tag t('answers.form.submit'), :class => "button"
 
 -content_for :sidebar do
-  %h3
-    = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
-  = render :partial => "shared/tag_list", :object => @tag_cloud
-  .clear
-
-  -if @question.group_id != current_group.id
-    %span
-      %b
-        = t(".asked_on")
-      %h3
-        = @question.group.name
-
-  %span
-    %b
-      = t('.viewed')
+  .block
     %h3
-      = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+    = render :partial => "shared/tag_list", :object => @tag_cloud
+    .clear
 
+  .block.stats
+    -if @question.group_id != current_group.id
+      = t(".asked_on")
+      = @question.group.name
+
+    .entry
+      .text.asked
+        = t('activerecord.attributes.question.created_at')
+      .data
+        = t("time.ago", :time => time_ago_in_words(@question.created_at))
+    .entry
+      .text.viewed
+        = t('.viewed')
+      .data
+        = t('number.x_time', :count => number_with_delimiter(@question.views_count))
+    .entry
+      .text.last_activity
+        = t(".last_activity")
+      .data
+        = t("time.ago", :time => time_ago_in_words(@question.activity_at))
   -if AppConfig.enable_sharing
-    %h2
-      = t(".share")
-    .buttons{:style => "padding: 2px"}
-      = render :partial => "twitter"
-      = render :partial => "identica"
-      = render :partial => "facebook"
-  %br
-  -if @question.flags_count > 0
-    %h1= t(".flags")
-    = render :partial => "flags/list", :locals => {:flaggeable => @question}
+    .block
+      %h3
+        = t(".share")
+      %ul.navigation.content
+        %li
+          = render :partial => "twitter"
+        %li
+          = render :partial => "identica"
+        %li
+          = render :partial => "facebook"

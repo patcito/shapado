@@ -68,7 +68,41 @@ module ApplicationHelper
   end
 
   def markdown(txt)
-    Maruku.new(sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table pre code blockquote a], :attributes => %w[href src title alt])).to_html
+    Maruku.new(sanitize(txt.to_s,
+                        :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table pre code blockquote a],
+                        :attributes => %w[href src title alt])).to_html
+  end
+
+  def format_number(number)
+    if number < 1000
+      number.to_s
+    elsif number >= 1000 && number < 1000000
+      "%.01fK" % (number/1000.0)
+    elsif number >= 1000000
+      "%.01fM" % (number/1000000.0)
+    end
+  end
+
+  def class_for_number(number)
+    if number >= 1000 && number < 10000
+      "medium_number"
+    elsif number >= 10000
+      "big_number"
+    elsif number < 0
+      "negative_number"
+    end
+  end
+
+  def shapado_auto_link(text)
+    auto_link(text, :all,  { "rel" => 'nofollow', :class => 'auto-link' })
+  end
+
+  def require_js(*files)
+    content_for(:js) { javascript_include_tag(*files) }
+  end
+
+  def require_css(*files)
+    content_for(:css) { stylesheet_link_tag(*files) }
   end
 end
 

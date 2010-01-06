@@ -9,7 +9,7 @@ module VotesHelper
           #{hidden_field_tag "voteable_type", voteable.class.name}
           #{hidden_field_tag "voteable_id", voteable.id}
           #{hidden_field_tag "source", source}
-          <button type="submit" name="vote_up" value="1" style="display:block; background-color: transparent">
+          <button type="submit" name="vote_up" value="1" class="arrow">
             #{if vote && vote.value > 0
                 image_tag("vote_up.png", :width => 30, :height => 22)
               else
@@ -17,10 +17,10 @@ module VotesHelper
               end
              }
           </button>
-          <span style="display:block" class="votes_average">
+          <div class="votes_average">
             #{calculate_votes_average(voteable)}
-          </span>
-          <button type="submit" name="vote_down" value="-1" style="display:block; background-color: transparent">
+          </div>
+          <button type="submit" name="vote_down" value="-1" class="arrow">
             #{if vote && vote.value < 0
                 image_tag("vote_down.png", :width => 30, :height => 22)
               else
@@ -33,10 +33,15 @@ module VotesHelper
     else
       %@
         <span class='vote_box'>
-          <span style="display:block">
+          <div class="arrow">
+            #{image_tag("to_vote_up.png", :width => 30, :height => 22)}
+          </div>
+          <div class="votes_average">
             #{calculate_votes_average(voteable)}
-          </span>
-          #{t(:votes, :scope => "activerecord.models")}
+          </div>
+          <div class="arrow">
+            #{image_tag("to_vote_down.png", :width => 30, :height => 22)}
+          </div>
         </span>
       @
     end

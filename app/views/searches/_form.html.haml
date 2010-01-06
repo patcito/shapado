@@ -1,0 +1,10 @@
+
+- form_tag search_path, :class => "form", :method => :get do
+  .group
+    = text_field_tag :q, params[:q], :class => "text_field title"
+    .description
+      == use [tag] to specific tags.
+  .group.navform
+    = submit_tag t("layouts.application.search"), :class => "button"
+    = t("global.or")
+    = link_to t(".clear"), search_path

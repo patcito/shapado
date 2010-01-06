@@ -1,17 +1,20 @@
 
 -if local_assigns[:parent]
   = f.hidden_field :parent_id, :value => local_assigns[:parent].id
-.field-group
-  .label-container
-    %label
-      -if local_assigns[:parent]
-        = t('.comment_label')
-      -else
-        = t('.answer_label')
-  -opts = {:class => "text-area huge"}
+
+.group
+  %label.label
+    -if local_assigns[:parent]
+      = t('.comment_label')
+    -else
+      = t('.answer_label')
+
+  -opts = {:class => "text_area"}
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]
+
   = f.text_area :body, opts
+
   -if local_assigns[:markdown]
-    %h3
-      = t(".preview")
+    %label.label
+      = t("global.preview")
     #markdown_preview.markdown

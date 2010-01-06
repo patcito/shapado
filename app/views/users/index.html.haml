@@ -1,35 +1,15 @@
-%h2
-  =t(".title")
 
+-content_for :subtabs do
+  .navtitle
+    = t("users.index.title")
+    -if @users
+      == (#{format_number(@users.total_entries)})
 
-%table.list#users
-  -if @users.empty?
-    .box.highlight
-      = t(".empty")
-  -@users.each_slice(3) do |line|
-    %tr
-      -line.each do |user|
-        %td.users_info{:style => "padding: 4px"}
-          .gravatar.left{:style => "padding: 5px"}
-            = gravatar user.email.to_s, :size => 64
-          .user_box
-            %span.login{:style => "padding: 5px; font-size: 14px"}
-              = link_to h(user.login), user_path(user), :style => "color: #ACACAC"
-            %table{:style=> "border-bottom: 4px solid #F6F6F6; padding-top: 3px; width: 50%"}
-              %tr
-                %td.users_info_item.first_col.reputation
-                  &= user.reputation_on(current_group)
-                %td.users_info_item.sec_col{:title => t(:reputation, :scope => "activerecord.attributes.user")}
-                  = t(:reputation, :scope => "activerecord.attributes.user")
-              %tr
-                %td.users_info_item.first_col.questions_count
-                  &= user.questions.count
-                %td.users_info_item.sec_col{:title => t(:questions, :scope => "activerecord.models")}
-                  = t(:questions, :scope => "activerecord.models")
-              %tr
-                %td.users_info_item.first_col.answers_count
-                  &= user.answers.count
-                %td.users_info_item.sec_col{:title => t(:answers, :scope => "activerecord.models")}
-                  = t(:answers, :scope => "activerecord.models")
-          .clear
-= will_paginate @users
+/Users
+%ul.items#users
+  -@users.each do |user|
+    = render :partial => "user", :object => user
+
+#additional_info
+  =will_paginate @users
+  .clear

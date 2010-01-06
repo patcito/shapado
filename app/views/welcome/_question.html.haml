@@ -29,7 +29,7 @@
         = gravatar(question.user.email.to_s, :size => 48)
       = link_to h(question.title), question_path(current_languages, question), :title => truncate(question.body, :length => 200)
 
-    .tags-list.left
+    .tag-list.left
       -question.tags.each do |tag|
         %span.tag
           = link_to h(tag), questions_path(:language => current_languages, :tags => tag)

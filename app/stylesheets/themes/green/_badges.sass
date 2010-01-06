@@ -1,0 +1,48 @@
+.badge
+  background: #222
+  +rounded(6px, 6px, 6px, 6px)
+  padding: 4px 8px 4px 3px
+  margin: 0px 3px 3px 0px
+  vertical-align: baseline
+  border-bottom: 1px solid gray
+  line-height: 23px
+
+  .icon
+    margin: 10px 8px 0px 5px
+    +rounded(20px, 20px, 20px, 20px)
+    float: left
+    width: 5px
+    height: 5px
+    &.silver
+      background: #C0C0C0
+    &.bronze
+      background: #CC9965
+    &.gold
+      background: #FFCC00
+  .text
+    font-size: 13px
+    font-weight: normal
+    color: #eee
+    .user
+      a
+        color: #FF6600 !important
+        &:link, &:hover, &:visited, &:active
+          color: #FF6600 !important
+
+  &.mini
+    line-height: 15px
+    padding: 0px 4px 0px 4px
+    margin: 0px
+    +rounded(4px, 4px, 4px, 4px)
+    margin-left: 3px
+    display: inline
+    overflow: hidden
+    float: left
+
+    .icon
+      margin: 5px 4px 0px 2px
+      height: 6px
+      width: 6px
+    .text
+      display: inline
+      font-size: 10px

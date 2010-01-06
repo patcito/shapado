@@ -1,27 +1,26 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+    -if @groups
+      == (#{format_number(@groups.total_entries)})
 
-#groups.subtitle{:class => @state}
-  = t(".title")
-  .right.tabs
-    .tab.active
+  %ul
+    %li.active
       = link_to t(".actives"), groups_path(:tab=>"actives")
-    .tab.pending
+    %li.pending
       = link_to t(".pendings"), groups_path(:tab=>"pendings")
 
-%ul
+%ul.items#groups
   -@groups.each do |group|
-    %li.list-item
-      %span
-        -if group.state == "active"
-          = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), domain_url(:custom => group.domain)
-        -else
-          = image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top")
-      %span
-        -if group.state == "active"
+    %li.item
+      .logo
+        = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), domain_url(:custom => group.domain)
+      .summary
+        %h3
           = link_to h(group.name), domain_url(:custom => group.domain)
-        -else
-          &= group.name
-        &= group.description
-      %span.buttons.right
+        .markdown.group_description
+          = auto_link(markdown(group.description))
+      .actions
         = link_to t(".about"), group, :class => "button"
         -if logged_in?
           -if current_user.can_modify?(group)
@@ -29,19 +28,14 @@
             -if group.state == "active"
               = link_to t(".close"), close_group_path(group), :class => "cancel button"
           -if current_user.admin?
-            = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete, :class => "button cancel"
+            = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete
             - if group.has_custom_ads
-              = link_to t(".disallow_ads"), disallow_custom_ads_group_path(group), :class => "button cancel"
+              = link_to t(".disallow_ads"), disallow_custom_ads_group_path(group)
             -else
-              = link_to t(".allow_ads"), allow_custom_ads_group_path(group), :class => "button cancel"
-
-            -if group.pending?
-              = link_to t(".accept_group"), accept_group_path(group), :class => "button"
-              = link_to t(".accept_group_with_custom_ads"), accept_group_path(group, :has_custom_ads => true), :class => "button"
-
+              = link_to t(".allow_ads"), allow_custom_ads_group_path(group)
       .clear
 =will_paginate @groups
+.clear
 
-.buttons
-  = link_to t(".request_group"), new_group_path, :class => "button"
-
+= link_to t(".request_group"), new_group_path, :class => "request_group"
+.clear

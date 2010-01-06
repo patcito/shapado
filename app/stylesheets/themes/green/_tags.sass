@@ -1,0 +1,54 @@
+.tag-list
+  font-size: .785em
+  overflow: hidden
+  line-height: 25px
+  margin-top: 15px
+
+  ul
+    list-style-type: none
+
+  .tag
+    margin-left: 3px
+    display: inline
+    overflow: hidden
+    float: left
+    a
+      border-bottom: 1px solid #3E6D8E
+      border-right: 1px solid #7F9FB6
+
+      color: #3E6D8E
+      background: #E0EAF1
+      cursor: pointer
+      font-size: 100%
+      font-weight: bold
+      margin-bottom: 5px
+      padding: 2px 8px
+      text-align: center
+      text-decoration: none
+      text-transform: lowercase
+      white-space: nowrap
+      line-height: 20px
+      &:hover
+        color: #E0EBF1 !important
+        background: #3E6E8E !important
+      &.remove_tag
+        background: #FFDDEC
+        +rounded(4px, 4px, 4px, 4px)
+        &:hover
+          color: #ffdede
+          background: #810000
+
+.tag-multiplier
+  font-size: 125%
+  color: #555
+  font-weight: bold
+  margin-left: 5px
+  display: inline
+  font-family: Helvetica
+
+.tag_cloud
+  padding-top: 15px
+
+  a.tag
+    text-decoration: none
+    line-height: 26px

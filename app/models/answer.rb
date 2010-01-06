@@ -8,12 +8,16 @@ class Answer
   key :votes_average, Integer, :default => 0
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
+  key :versions, Array
 
   timestamps!
 
   key :_id, String
   key :user_id, String
   belongs_to :user
+
+  key :updated_by_id, String
+  belongs_to :updated_by, :class_name => "User"
 
   key :question_id, String
   belongs_to :question
@@ -39,6 +43,10 @@ class Answer
   validate :disallow_spam
   validate :check_unique_answer
 
+  before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
+
+  attr_accessor :rolling_back
+
   def check_unique_answer
     check_answer = Answer.find(:first,
                                :question_id => self.question_id,
@@ -60,9 +68,11 @@ class Answer
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
       voter.on_activity(:vote_up_answer, self.group)
+      self.user.upvote!(self.group)
     else
       self.user.update_reputation(:answer_receives_down_vote, self.group)
       voter.on_activity(:vote_down_answer, self.group)
+      self.user.downvote!(self.group)
     end
   end
 
@@ -75,9 +85,11 @@ class Answer
     if v > 0
       self.user.update_reputation(:answer_undo_up_vote, self.group)
       voter.on_activity(:undo_vote_up_answer, self.group)
+      self.user.upvote!(self.group, -1)
     else
       self.user.update_reputation(:answer_undo_down_vote, self.group)
       voter.on_activity(:undo_vote_down_answer, self.group)
+      self.user.downvote!(self.group, -1)
     end
   end
 
@@ -125,6 +137,29 @@ class Answer
             ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
     if !valid
       self.errors.add(:body, "Your answer looks like spam.")
+    end
+  end
+
+  def rollback!(pos = nil)
+    pos = self.versions.count-1 if pos.nil?
+    version = self.versions[pos]
+
+    if version
+      self.body = version["body"]
+      self.updated_by_id = version["user_id"]
+      self.updated_at = version["date"]
+    end
+
+    @rolling_back = true
+    save!
+  end
+
+  protected
+  def save_version
+    if !self.new? && self.body_changed? && self.updated_by_id
+      self.versions << {'body' => self.body_was,
+                        'user_id' => (self.updated_by_id_was || self.updated_by_id),
+                        'date' => self.updated_at_was}
     end
   end
 end

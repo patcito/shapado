@@ -11,7 +11,7 @@ fr:
       unanswered: sans réponses
       logout: se déconnecter
       logged: Connecté {{login}}
-      search: Chercher
+      search: search
       forgot: oublié?
       log_in: Se connecter
       signup: Créer un compte

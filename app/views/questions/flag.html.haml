@@ -1,6 +1,6 @@
 
-%h2
-  = t(".title")
-
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
 
 = render :partial => "flags/form", :locals => {:flag => @flag, :source => question_path(current_languages, @question)}

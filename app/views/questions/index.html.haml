@@ -4,37 +4,45 @@
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom", :tags => params[:tags])}
   %link{:rel=>"alternate", :type=>"application/atom+xml", :title => "atom", :href=> url_for(:format => "atom")}
 
-#questions_index.subtitle{:class => @active_subtab}
-  = t(".title")
-  .right.tabs
-    .tab.newest
-      = link_to t(".newest"), questions_path(:language => current_languages, :sort=>"newest")
-    .tab.hot
-      = link_to t(".hot"), questions_path(:language => current_languages, :sort=>"hot")
-    .tab.votes
-      = link_to t(".votes"), questions_path(:language => current_languages, :sort=>"votes")
-    .tab.active
-      = link_to t(".active"), questions_path(:language => current_languages, :sort=>"active")
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+    -if @questions
+      == (#{@questions.total_entries})
 
-.buttons
-  = link_to t(".ask_question"), new_question_path(:language => current_languages), :class => "button"
-%br.clear
+  %ul
+    %li.newest
+      = link_to t("questions.index.newest"), questions_path(:language => current_languages, :sort=>"newest")
+    %li.hot
+      = link_to t("questions.index.hot"), questions_path(:language => current_languages, :sort=>"hot")
+    %li.votes
+      = link_to t("questions.index.votes"), questions_path(:language => current_languages, :sort=>"votes")
+    %li.activity
+      = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"activity")
 
-#questions
-  -if @questions.empty?
-    .box.highlight
-      = t(".empty")
-  -@questions.each do |question|
-    = render :partial => "question", :object => question
-
-=will_paginate @questions
-
-.buttons
-  = link_to t(".ask_question"), new_question_path(:language => current_languages), :class => "button"
 
 -content_for :sidebar do
   -if logged_in?
     = render :partial => "shared/preferred_tags"
-  %h1
-    = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  = render :partial => "shared/tag_list", :object => @tag_cloud
+
+  .block
+    %h3
+      = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = render :partial => "shared/tag_list", :object => @tag_cloud
+
+/Questions
+%ul.items#questions
+  -if @questions.empty?
+    %li.box.highlight
+      = t(".empty")
+  -@questions.each do |question|
+    = render :partial => "question", :object => question
+
+#additional_info
+  =will_paginate @questions
+
+  #help_us
+    = t(".help_to_answer")
+    =link_to t(".unanswered_questions"), unanswered_questions_path(:language => current_languages)
+
+  .clear

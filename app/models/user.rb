@@ -13,6 +13,7 @@ class User
   key :_id,                     String
   key :login,                     String, :limit => 40
   key :name,                      String, :limit => 100, :default => '', :null => true
+  key :bio,                       String, :limit => 200
   key :email,                     String, :limit => 100
   key :identity_url,              String
   key :crypted_password,          String, :limit => 40
@@ -35,9 +36,13 @@ class User
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
+  key :votes_up,                  Hash
+  key :votes_down,                Hash
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
+  has_many :badges, :dependent => :destroy
 
   has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
   has_many :favorites, :class_name => "Favorite", :foreign_key => "user_id"
@@ -87,6 +92,14 @@ class User
 
   def self.find_by_login_or_id(login)
     find_by_login(login) || find_by_id(login)
+  end
+
+  def self.find_experts(tags, opts = {})
+    opts[:limit] ||= 5
+    opts[:select] = [:user_id]
+    UserStat.find(:all, opts.merge({:answer_tags => {:$in => tags}})).map do |s|
+      s.user
+    end
   end
 
   def to_param
@@ -211,11 +224,13 @@ class User
 
   def logged!
     now = Time.now
+
     if new?
       self.last_logged_at = now
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
+      self.stats.visited_on(now)
     end
   end
 
@@ -225,9 +240,17 @@ class User
     self.update_reputation(activity, group)
   end
 
+  def upvote!(group, v = 1.0)
+    self.collection.update({:_id => self._id}, {:$inc => {"votes_up.#{group.id}" => v.to_f}}, :upsert => true)
+  end
+
+  def downvote!(group, v = 1.0)
+    self.collection.update({:_id => self._id}, {:$inc => {"votes_down.#{group.id}" => v.to_f}}, :upsert => true)
+  end
+
   def update_reputation(key, group)
     value = REPUTATION_CONF[key.to_s]
-    Rails.logger.info "#{self.login} receive #{value} points of karma by #{key} on #{group.name}"
+    Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
     value = key if value.nil? && key.kind_of?(Integer)
     if value
       User.collection.update({:_id => self._id},
@@ -253,6 +276,36 @@ class User
 
   def reputation_on(group)
     self.reputation.fetch(group.id, 0.0 ).to_i
+  end
+
+  def stats(year = nil)
+    fields = [:_id, :user_id, :views_count]
+    fields << "visits_#{year}" if year
+
+    UserStat.find_or_create_by_user_id(self._id, :select => fields)
+  end
+
+  def badges_on(group, opts = {})
+    self.badges.find(:all, opts.merge(:group_id => group.id, :order => "created_at desc"))
+  end
+
+  def find_badge_on(group, token, opts = {})
+    self.badges.find(:first, opts.merge(:token => token, :group_id => group.id))
+  end
+
+  def method_missing(method, *args, &block)
+    if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
+      key = $1
+      group = args.first
+      if group.reputation_constrains.include?(key.to_s)
+        if group.has_reputation_constrains || self.admin_of?(group)
+          return self.reputation_on(group) >= group.reputation_constrains[key].to_i
+        else
+          return true
+        end
+      end
+    end
+    super(method, *args, &block)
   end
 
   protected

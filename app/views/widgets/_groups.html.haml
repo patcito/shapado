@@ -1,0 +1,12 @@
+%h3
+  Recent Groups
+.content
+  %ul.list
+    -widget.recent_groups.reverse_each do |group|
+      %li
+        = link_to h(group.name), domain_url(:custom => group.domain)
+        &= truncate(group.description, :length => 35)
+  .more
+    =link_to "more...", groups_path
+  .clear
+.clear

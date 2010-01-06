@@ -1,0 +1,7 @@
+-if @activities
+  %h4
+    = t(".title")
+
+  %ul.list
+    -@activities.each do |activity|
+      = render :partial => "users/activity_base", :locals => {:activity => activity}

@@ -1,24 +1,22 @@
-#show_groups.subtitle.about
-  = t(".title", :name => h(@group.name))
-  .right.tabs
-    .tab.about
+-content_for :subtabs do
+  .navtitle
+    = t(".title", :name => h(@group.name))
+  %ul
+    %li.about
       = link_to t(".about", :default => :"groups.index.about"), domain_url(:custom => @group.domain)
-    .tab.members
+    %li.members
       = link_to "members", group_members_path(@group)
 
+#show_group
+  = image_tag(logo_group_path(@group), :class => "group_logo")
 
-= image_tag(logo_group_path(@group), :class => "group_logo")
-= link_to t(".visit_group"), domain_url(:custom => @group.domain)
-
-%br
-
-%p
-  &= @group.description
+  .markdown
+    =find_and_preserve(shapado_auto_link(markdown(@group.description)))
+  .clear
   -if @group.owner.login
     %b= t("activerecord.attributes.group.group_created_by")
     = link_to h(@group.owner.login), user_path(@group.owner)
 
-  %br
   -case @group.state
     -when "pending"
       .message.warn
@@ -29,13 +27,14 @@
         .internal
           = t(".group_closed")
 
-.buttons
-  -if logged_in?
-    -if current_user.owner_of?(@group)
-      = link_to t("scaffold.edit"), edit_group_path(@group), :class => "button"
-      = link_to t("scaffold.back"), groups_path, :class => "cancel button"
-    -if current_user.admin? && @group.state == "pending"
-      = link_to t(".accept_group"), accept_group_path(@group), :class => "button"
-      = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true), :class => "button"
-    -if current_user.can_modify?(@group) && @group.state == "active"
-      = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
+  .actions
+    = link_to t(".visit_group"), domain_url(:custom => @group.domain)
+    -if logged_in?
+      -if current_user.owner_of?(@group)
+        = link_to t("scaffold.edit"), edit_group_path(@group), :class => "button"
+        = link_to t("scaffold.back"), groups_path, :class => "cancel button"
+      -if current_user.admin? && @group.state == "pending"
+        = link_to t(".accept_group"), accept_group_path(@group), :class => "button"
+        = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true), :class => "button"
+      -if current_user.can_modify?(@group) && @group.state == "active"
+        = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"

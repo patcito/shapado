@@ -4,7 +4,6 @@ en:
       comment_label: Comment on this answer
       answer_label: Answer the question
       comment_submit: Comment
-      preview: Preview
       submit: Answer
     edit:
       title: Editing answer

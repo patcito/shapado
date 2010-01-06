@@ -1,0 +1,14 @@
+%h3
+  Top 5 Users
+.content
+  %ul.list
+    -widget.top_users(current_group).each do |user|
+      %li
+        .gravatar
+          =gravatar(user.email.to_s, :size => 32)
+        .item
+          =link_to h(user.login), user_path(user)
+          ==(#{user.reputation_on(current_group)})
+  .clear.more
+    =link_to "more...", users_path
+.clear

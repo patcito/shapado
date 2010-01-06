@@ -2,3 +2,7 @@
   searches:
     index:
       empty: "Su búsqueda no produjo ningún resultados."
+      tags: con estas etiquetas
+      search_text: questions containing
+    form:
+      clear: limpiar

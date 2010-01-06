@@ -1,0 +1,63 @@
+#main-bar
+  width: 100%
+  float: left
+  margin: 0 10px 10px  10px
+
+  #logo
+    float: left
+    margin-right: 10px
+
+#main-bar ul
+  list-style-type: none
+
+#main-bar ul li
+  margin-top: 18px
+  background: #777777
+  margin-right: 5px
+  color: #F8F0E6
+  float: left
+
+  &:hover
+    background-color: #FF9900 !important
+    color: #fff
+
+  &.active
+    border-top: 1px solid #fff
+    background-color: #FF9900 !important
+    color: #333
+    a
+      &:link, &:visited, &:hover, &:active
+        color: #364b69
+
+#main-bar ul li
+  a
+    display: block
+    font-size: 16px
+    font-weight: bold
+    padding: 5px 10px
+
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: #FFF
+
+  &.ask_question
+    float: right
+
+#top-bar
+  +horizontal-list(2px)
+  padding: 1px 10px
+  margin: 0
+
+  color: lightGrey
+  background: #222
+
+  +fancy-matte-gradient(#888888, #222)
+  a
+    font-family: Helvetica
+    color: #F1F1F1
+    font-weight: bold
+    padding: 2px
+    +rounded(2px, 2px, 0px, 0px)
+    &:hover
+      background: #FF6600
+      color: black

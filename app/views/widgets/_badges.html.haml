@@ -1,0 +1,9 @@
+%h3
+  Recent Badges
+.content
+  %ul.list
+    -widget.recent_badges(current_group).each do |badge|
+      %li
+        = render :partial => "badges/badge", :object => badge
+  .clear
+.clear

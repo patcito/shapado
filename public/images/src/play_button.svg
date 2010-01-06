@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="play_button.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/pat/gitreps/zeta-code/public/images/buttons/play.png"
+   inkscape:export-xdpi="21.181559"
+   inkscape:export-ydpi="21.181559"
+   version="1.1">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="284.91742"
+     inkscape:cy="581.44625"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#f1f1f1;stroke-width:3;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+       id="rect2383"
+       width="145.71428"
+       height="125.71429"
+       x="121.83192"
+       y="337.13245"
+       ry="11.429382"
+       transform="matrix(0.99995267,-0.00972921,0.00972921,0.99995267,0,0)"
+       inkscape:export-filename="/home/pat/gitreps/shapado/public/images/play_button.png"
+       inkscape:export-xdpi="22.844288"
+       inkscape:export-ydpi="22.844288" />
+    <path
+       sodipodi:type="star"
+       style="fill:#00ffff;fill-opacity:1;stroke:#4d4d4d;stroke-width:3;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+       id="path2391"
+       sodipodi:sides="3"
+       sodipodi:cx="182.85715"
+       sodipodi:cy="380.93362"
+       sodipodi:r1="42.857143"
+       sodipodi:r2="22.027426"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 225.71429,380.93362 -31.84343,19.07632 -32.44228,18.03906 -0.59886,-37.11538 0.59886,-37.11537 32.44228,18.03906 31.84343,19.07631 z"
+       transform="translate(6.428572,15)" />
+  </g>
+</svg>

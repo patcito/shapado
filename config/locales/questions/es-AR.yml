@@ -9,6 +9,8 @@
       oldest:  antiguas
       ask_question: pregunte
       empty: "Nadie a preguntado aun, ¡se el primero!"
+      help_to_answer: Ayudanos a reponder
+      unanswered_questions: preguntas aun no contestadas
     show:
       answers: Respuestas
       another_answers: Otras respuestas
@@ -20,6 +22,10 @@
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
       asked_on: "preguntado en"
+      last_activity: Ultima actividad
+      answers_title:
+        one: "{{count}} Respuesta"
+        other: "{{count}} Respuestas"
     answer:
       pick_answer: Escoger como solución
       unset_answer: "¿Quitar como solución?"
@@ -39,6 +45,8 @@
       tags: etiquetas sin respuesta
       empty: "Este grupo no tiene preguntas no contestadas."
       my_tags: mis etiquetas
+    tags:
+      title: Etiquetas
     new:
       title: Pregunte
     create:
@@ -76,3 +84,4 @@
         votes: Votos
         language: Idioma
         category: Categoria
+        created_at: Preguntado

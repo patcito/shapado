@@ -15,6 +15,7 @@ class VotesController < ApplicationController
 
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
+    vote.group = vote.voteable.group
 
     voted = false
     if vote.voteable.user != current_user
@@ -41,12 +42,13 @@ class VotesController < ApplicationController
       flash[:error] += t(params[:voteable_type].downcase, :scope => "activerecord.models").downcase
     end
 
-
     respond_to do |format|
       format.html{redirect_to params[:source]}
 
       format.json do
         if voted
+          Magent.push("/actors/judge", :on_vote, vote.id)
+
           average = vote.voteable.reload.votes_average
           render(:json => {:status => :ok,
                            :message => flash[:notice],
@@ -69,6 +71,7 @@ class VotesController < ApplicationController
     end
     respond_to do |format|
       format.html { redirect_to params[:source] }
+      format.json  { head :ok }
     end
   end
 

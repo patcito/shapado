@@ -17,27 +17,24 @@ class ApplicationController < ActionController::Base
   before_filter :check_group_access
   before_filter :find_languages
   before_filter :set_locale
-  layout :set_layout
+  layout 'application'
 
   protected
 
   def access_denied
     store_location
-    raise AccessDenied
+    if logged_in?
+      flash[:error] = t("global.permission_denied")
+    else
+      flash[:error] = t("global.please_login")
+    end
+    redirect_to login_path
   end
 
   def check_group_access
     if @current_group &&
        (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
       access_denied
-    end
-  end
-
-  def set_layout
-    if current_group.isolate
-      'group'
-    else
-      'application'
     end
   end
 
@@ -173,9 +170,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
+  def feed_urls
+    @feed_urls ||= Set.new
+  end
+  helper_method :feed_urls
+
   def add_feeds_url(url, title="atom")
-    @feed_urls = [] unless @feed_urls
-    @feed_urls << [title, url]
+    feed_urls << [title, url]
   end
 
   def admin_required
@@ -188,5 +189,9 @@ class ApplicationController < ActionController::Base
     unless current_user.mod_of?(current_group)
       access_denied
     end
+  end
+
+  def is_bot?
+    request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler)\b/i
   end
 end

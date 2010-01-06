@@ -1,55 +1,48 @@
--klass = ""
--if logged_in? && question.tags.detect { |tag| current_user.preferred_tags_on(current_group).include?(tag) }
-  - klass = "highlight"
+-title = h(question.title)
+-owner = question.user
 
--query_regexp = local_assigns[:query_regexp]
-
-.question{:class => klass}
-  -if logged_in? && current_user.can_modify?(question)
-    .right.buttons
-      = link_to t('scaffold.edit'), edit_question_path(current_languages, question), :class => "button"
-      = link_to t('scaffold.destroy'), question_path(current_languages, question), :confirm => t("scaffold.sure", :model => "question"), :method => :delete, :class => "button cancel"
-  %span.left
-    .box
-      .item
-        %span.counter
-          &= question.votes_average
-        %br
-        = truncate(t(:votes, :scope => "activerecord.attributes.question"), :length => 6, :omission => ".")
-      .item.count_answers.clear
-        %span.counter
-          &= question.answers_count
-        %br
-        = truncate(t(:answers, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
-      .clear
-    .item.clear{:style => "height: 10px"}
-      &= question.views_count
-      = truncate(t(:views, :scope => "activerecord.attributes.question"), :length => 6,:omission => ".")
-  %span.left{:style => "width: 90%"}
-    .question_header
-      .gravatar.item
-        = gravatar(question.user.email.to_s, :size => 48)
-      -title = h(question.title)
-      -if query_regexp
-        -title = title.gsub(query_regexp, '<span class="search-highlight">\1</span>')
-      = link_to title, question_path(current_languages, question), :title => truncate(question.body, :length => 200)
-      .question_summary
-        -if query_regexp
-          -body = excerpt_with_regexp(h(question.body), query_regexp, :radius => 50)
-          -if body
-            = body.gsub(query_regexp, '<span class="search-highlight">\1</span>')
-          -else
-            = truncate(h(question.body), :length => 150)
+%li.item
+  / Question Stats
+  .stats
+    .box.votes
+      .counter{:class => class_for_number(question.votes_average) }
+        =format_number(question.votes_average)
+      .text
+        =t(:votes, :scope => "activerecord.attributes.question")
+    .box.answers{:class => question.answered ? "answered" : "" }
+      .counter
+        =format_number(question.answers_count)
+      .text
+        =t(:answers, :scope => "activerecord.attributes.question")
+    .box.views
+      .counter{:class => class_for_number(question.views_count) }
+        =format_number(question.views_count)
+      .text
+        =t(:views, :scope => "activerecord.attributes.question")
+  / Question Summary
+  .summary
+    %h3
+      -if logged_in? && (vote = current_user.vote_on(question))
+        -if vote.value < 0
+          = image_tag "edit-delete.png"
         -else
-          = truncate(h(question.body), :length => 150)
+          = image_tag "dialog-ok-apply.png"
+      -else
+        -form_tag votes_path, :class => "vote-up-form" do
+          = hidden_field_tag "voteable_type", question.class.name
+          = hidden_field_tag "voteable_id", question.id
+          = hidden_field_tag "source", questions_path(:language => current_languages)
+          = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"))
 
-    .tags-list.left
+      = link_to title, question_path(current_languages, question), :title => truncate(h(question.body), :length => 200)
+    .tag-list
       -question.tags.each do |tag|
         %span.tag
           = link_to h(tag), questions_path(current_languages, :tags => tag)
-    .right
-      = t(:asked_by, :scope => "activerecord.attributes.question")
-      = link_to h(question.user.login|| question.user_id), user_path(question.user)
-      %b
+    .owner-data
+      = link_to h(owner.login), user_path(owner)
+      %span.reputation
+        ==(#{owner.reputation_on(question.group)})
+      %strong
         = t("time.ago", :time => time_ago_in_words(question.created_at))
   .clear

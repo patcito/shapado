@@ -15,16 +15,25 @@ class Group
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
   key :private, Boolean, :default => false
+  key :theme, String, :default => "shapado"
   key :owner_id, String
   key :analytics_id, String
   key :analytics_vendor, String
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
+  key :activity_rate, Float, :default => 0.0
+
+  key :has_reputation_constrains, Boolean, :default => true
+  key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
 
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
-  has_many :ads
+  has_many :ads, :dependent => :destroy
+  has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
+  has_many :badges, :dependent => :destroy
+  has_many :questions, :dependent => :destroy
+  has_many :answers, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
   validates_length_of       :name,           :within => 3..40
@@ -39,6 +48,7 @@ class Group
   validates_length_of       :subdomain, :within => 3..32
 
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES, :allow_nil => true
+  validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
   before_validation_on_create :check_domain
 
@@ -156,6 +166,19 @@ class Group
 
   def pending?
     state == "pending"
+  end
+
+  def on_activity(action)
+    value = 0
+    case action
+      when :ask_question
+        value = 0.1
+      when :answer_question
+        value = 0.3
+    end
+
+    self.collection.update({:_id => self._id}, {:$inc => {:activity_rate => value}},
+                                                               :upsert => true)
   end
 
   def language=(lang)

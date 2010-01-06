@@ -28,6 +28,8 @@ en:
     permission_denied: Permission denied
     please_login: please log in
     group_not_found: "the page {{url}} doesn't exist"
+    preview: Preview
+    or: or
   feeds:
     question: Subscribe To This Question
     questions: Subscribe To All Questions

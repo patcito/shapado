@@ -1,32 +1,60 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".recent_questions", :default => "Recent Questions")
+    -if @questions
+      == (#{@questions.total_entries})
 
-#welcome.subtitle{:class => @active_subtab}
-  = t(".recent_questions", :default => "Recent Questions")
-  .right.tabs
-    .tab.active
-      = link_to t(".active"), root_path(:tab=>"active")
-    .tab.hot
-      = link_to t(".hot"), root_path(:tab=>"hot")
+  %ul{:style => "display: inline"}
+    %li.activity
+      = link_to t("questions.index.active"), root_path(:tab=>"activity")
+    %li.hot
+      = link_to t("questions.index.hot"), root_path(:tab=>"hot")
 
-#questions
+%h3.title
+  #quick_question
+    -form_for Question.new, :url => new_question_path(:language => current_languages), :html => {:class => "form", :method => :get} do |f|
+      -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
+      = f.hidden_field :language, :value => logged_in? ? current_user.language : current_languages
+      %label.label
+        Ask a Question, we will find someone to answer
+      .columns
+        .column_info
+          -if logged_in?
+            -reputation = current_user.reputation_on(current_group)
+            .avatar
+              = gravatar(current_user.email.to_s, :size => 64)
+            .reputation{:class => class_for_number(reputation)}
+              = format_number(reputation)
+          -else
+            .avatar
+              = gravatar("", :size => 64)
+        .column_form
+          .group
+            .pointer
+            =f.text_area :title, :class => "text_area"
+          =f.submit "Ask Question", :class => "ask_question"
+      .clear
+%ul.items#questions
   -if @questions.empty?
     .box.highlight
-      = t(".empty", :default => :"questions.index.empty")
+      %li
+        = t(".empty", :default => :"questions.index.empty")
   -@questions.each do |question|
-    = render :partial => "question", :object => question
+    = render :partial => "questions/question", :object => question
 
-= will_paginate @questions
+#additional_info
+  =will_paginate @questions
+
+  #help_us
+    = t("questions.index.help_to_answer")
+    = link_to t("questions.index.unanswered_questions"), unanswered_questions_path(:language => current_languages)
+
+  .clear
 
 -content_for :sidebar do
   -if logged_in?
     = render :partial => "shared/preferred_tags"
-  -else
-    .group_box
-      %h3
-        &= current_group.name
-      .markdown
-        = markdown(truncate(current_group.description, :length => 300))
-        =link_to t("scaffold.more", :default => :"groups.index.about"), about_path
-
-  %h1
-    = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
-  = tag_cloud
+  .block
+    %h3
+      = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+    = tag_cloud

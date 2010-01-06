@@ -4,7 +4,9 @@
 -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
   = render :partial => "form", :object => f
-  .buttons
+  .group.navform
     = f.submit 'Update'
+    = t("global.or")
     = link_to 'Show', group_path(@group), :class => "button"
+    = t("global.or")
     = link_to 'Back', groups_path, :class => "cancel button"

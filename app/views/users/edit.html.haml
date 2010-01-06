@@ -1,11 +1,11 @@
-%h1
-  =t(".title")
+-content_for :subtabs do
+  .navtitle
+    =t(".title")
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user
 - form_for @user, :html => {:class => "form"} do |f|
-  .subtitle
+  %h2.title
     = t("users.form.information")
   =render :partial => "form", :locals => {:f => f}
-  .field-group
-    .buttons
-      = submit_tag t('.submit')
+  .group.navform
+    = submit_tag t('.submit')

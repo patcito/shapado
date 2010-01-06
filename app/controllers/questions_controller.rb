@@ -1,7 +1,8 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:index, :show, :tags, :unanswered]
+  before_filter :login_required, :except => [:new, :index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
-  before_filter :check_permissions, :only => [:edit, :update, :solve, :unsolve, :destroy]
+  before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
+  before_filter :check_update_permissions, :only => [:edit, :update]
   before_filter :set_active_tag
 
   tabs :default => :questions, :tags => :tags,
@@ -14,16 +15,17 @@ class QuestionsController < ApplicationController
   def index
     set_page_title(t("questions.index.title"))
     order = "created_at desc"
-
-
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
-      when "active"
+      when "activity"
         order = "activity_at desc"
       when "votes"
         order = "votes_count desc"
       when "hot"
         order = "hotness desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
 
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
@@ -42,20 +44,28 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @questions }
+      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
       format.atom
     end
   end
 
   def unanswered
     set_page_title(t("questions.unanswered.title"))
+
     @active_subtab = params.fetch(:sort, "newest")
     case @active_subtab
       when "newest"
         order = "activity_at desc"
       when "votes"
         order = "votes_count desc"
+      when "mytags"
+        order = "created_at desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
+
+    @active_subtab = "newest" if !logged_in? && @active_subtab == "mytags"
 
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
                     merge(language_conditions.merge(language_conditions)), 25)
@@ -101,23 +111,27 @@ class QuestionsController < ApplicationController
         order = "created_at desc"
       when "votes"
         order = "votes_count desc"
+      else
+        @active_subtab = "newest"
+        order = "created_at desc"
     end
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
 
-    @answers = @question.answers.paginate(:per_page => 25, :page => params[:page] || 1,
-                                          :order => order,
-                                          :banned => false)
+    options = {:per_page => 25, :page => params[:page] || 1,
+               :order => order, :banned => false}
+    options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
+    @answers = @question.answers.paginate(options)
 
-    @answer = Answer.new
-    @question.viewed!
+    @answer = Answer.new(params[:answer])
+    @question.viewed! if @question.user != current_user && !is_bot?
 
     set_page_title(@question.title)
     add_feeds_url(url_for(:format => "atom"), t("feeds.question"))
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @question }
+      format.json  { render :json => @question.to_json(:except => %w[_keywords slug watchers]) }
       format.atom
     end
   end
@@ -125,11 +139,17 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new
+    @question = Question.new(params[:question])
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @question }
+    if !logged_in?
+      draft = Draft.create(:question => @question)
+      session[:draft] = draft.id
+      login_required
+    else
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json  { render :json => @question.to_json }
+      end
     end
   end
 
@@ -147,15 +167,20 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        current_user.stats.add_question_tags(*@question.tags)
+
         current_user.on_activity(:ask_question, current_group)
+        current_group.on_activity(:ask_question)
+
+        Magent.push("/actors/judge", :on_ask_question, @question.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
 
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.xml  { render :xml => @question, :status => :created, :location => @question }
+        format.json  { render :json => @question.to_json, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -168,10 +193,10 @@ class QuestionsController < ApplicationController
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(current_languages,@question)) }
-        format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -181,9 +206,12 @@ class QuestionsController < ApplicationController
   def destroy
     @question.user.update_reputation(:delete_question, current_group)
     @question.destroy
+
+    Magent.push("/actors/judge", :on_destroy_question, @question.user.id)
+
     respond_to do |format|
       format.html { redirect_to(questions_url) }
-      format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 
@@ -198,16 +226,23 @@ class QuestionsController < ApplicationController
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
+
+        Magent.push("/actors/judge", :on_question_solved, @question.id, @answer.id)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
         format.html { redirect_to question_path(current_languages, @question) }
+        format.json  { head :ok }
       else
         format.html { render :action => "show" }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   def unsolve
-    answer_owner = @question.answer.user
+    @answer_id = @question.answer.id
+    @answer_owner = @question.answer.user
+
     @question.answer = nil
     @question.answered = false
 
@@ -215,12 +250,17 @@ class QuestionsController < ApplicationController
       if @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
         current_user.on_activity(:reopen_question, current_group)
-        if current_user != answer_owner
-          answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
+        if current_user != @answer_owner
+          @answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
+
+        Magent.push("/actors/judge", :on_question_unsolved, @question.id, @answer_id)
+
         format.html { redirect_to question_path(current_languages, @question) }
+        format.json  { head :ok }
       else
         format.html { render :action => "show" }
+        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -232,6 +272,7 @@ class QuestionsController < ApplicationController
     @flag.flaggeable_id = @question.id
     respond_to do |format|
       format.html
+      format.json
     end
   end
 
@@ -282,8 +323,24 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def check_update_permissions
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    if @question.nil?
+      redirect_to questions_path
+    elsif !(current_user.can_edit_others_posts_on?(@question.group) ||
+          current_user.can_modify?(@question))
+      reputation = @question.group.reputation_constrains["edit_others_posts"]
+      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                    :min_reputation => reputation,
+                                    :action => I18n.t("users.actions.edit_others_posts"))
+      redirect_to question_path(current_languages, @question)
+    end
+  end
+
   def set_active_tag
     @active_tag = "tag_#{params[:tags]}" if params[:tags]
     @active_tag
   end
+
 end

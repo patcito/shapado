@@ -15,6 +15,7 @@ class Flag
   validates_inclusion_of :type, :within => TYPES
 
   validate :should_be_unique
+  validate :check_reputation
 
   protected
   def should_be_unique
@@ -28,5 +29,16 @@ class Flag
     if !valid
       self.errors.add(:flagged, "You already flaged this #{self.flaggeable_type}")
     end
+  end
+
+  def check_reputation
+    unless user.can_vote_up_on?(self.flaggeable.group)
+      reputation = self.flaggeable.group.reputation_constrains["flag"]
+      self.errors.add(:reputation, I18n.t("users.messages.errors.reputation_needed",
+                                          :min_reputation => reputation,
+                                          :action => I18n.t("users.actions.flag")))
+      return false
+    end
+    return true
   end
 end
