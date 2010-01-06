@@ -42,9 +42,9 @@ ActionController::Routing::Routes.draw do |map|
                                      :allow_custom_ads => :get,
                                      :disallow_custom_ads => :get,
                                      :logo => :get},
-                          :collection => { :autocomplete_for_group_slug => :get} do |groups|
-    groups.resources :members
-  end
+                          :collection => { :autocomplete_for_group_slug => :get}
+
+  map.resources :members
 
   map.resources :votes
   map.resources :flags

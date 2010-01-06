@@ -10,17 +10,9 @@
     -else
       = t(".title", :name => h(@group.name))
 
-  %ul
-    %li.about
-      = link_to t("groups.index.about"), about_path
-    %li.members
-      = link_to "members", members_path
-
 -if logged_in? && current_user.owner_of?(@group)
   #manage_members
-    %h2
-      = t(".manage_members_title")
-    - form_for([@group, @member], :html=>{:class => "form"}) do |f|
+    - form_for(@member, :html=>{:class => "form"}) do |f|
       =render :partial => "form", :locals => {:f => f}
       .group.navform
         = f.submit t('scaffold.add', :model => "member")

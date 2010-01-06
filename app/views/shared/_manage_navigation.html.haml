@@ -14,3 +14,5 @@
   -if current_group.has_custom_ads
     %li.ads
       =link_to t("layouts.application.manage_ads"), ads_path
+  %li.members
+    = link_to t("layouts.manage.members"), members_path

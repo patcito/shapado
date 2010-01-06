@@ -1,11 +1,6 @@
 -content_for :subtabs do
   .navtitle
     = t(".title", :name => h(@group.name))
-  %ul
-    %li.about
-      = link_to t(".about", :default => :"groups.index.about"), domain_url(:custom => @group.domain)
-    %li.members
-      = link_to "members", group_members_path(@group)
 
 #show_group
   = image_tag(logo_group_path(@group), :class => "group_logo")
