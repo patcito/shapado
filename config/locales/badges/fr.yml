@@ -2,5 +2,70 @@ fr:
   badges:
     index:
       title: Badges
+      description: "All badges that you can earn. Share your knowledge earn badges."
     show:
       title: Badge {{type}}
+      description: "Users earned this badge. Recently awarded to:"
+    shared:
+      rockstar:
+        description: 1000 votes positifs, 10 négatifs maximum
+      popstar:
+        description: 500 votes positifs, 10 négatifs maximum
+      fanatic:
+        name: Fanatique
+        description:
+      service_medal:
+        description: recevoir 300 votes positifs
+      famous_question:
+        description:
+      popular_person:
+        name: Personne populaire
+        description: votre profil est visité 10000 fois
+      guru:
+        name: Guru
+        description: donner une solution à une question ayant une moyenne de votes supérieure à 40
+      favorite_question:
+        name: question favorite
+        description:
+      tutor:
+        name: Tuteur
+        description: donner une solution à une question ayant une moyenne de votes supérieure à 2
+      addict:
+        name: Accro
+        description:
+      good_question:
+        name: Bonne question
+        description: Avoir fait une question ayant atteint une moyenne de 10 votes
+      good_answer:
+        name: Bonne réponse
+        description: Avoir fait une réponse ayant atteint une moyenne de 10 votes
+      pioneer:
+        name: Pionnier
+        description: Être parmi les premiers à s'être inscrit
+      supporter:
+        name: Supporter
+        description: voter positivement pour la première fois
+      critic:
+        name: Critique
+        description: voter négativement pour la première fois
+      inquirer:
+        name: Interrogateur
+        description: "poser une question pour la première fois"
+      troubleshooter:
+        name: solutionneur
+        description: "répondre pour la première fois"
+      noob:
+        name: Noob
+        description:
+      commentator:
+        name: Commentateur
+        description: recevoir 200 votes positifs
+      merit_medal:
+        name: "Médaille de l'éffort"
+        description: recevoir 100 votes positifs
+      effort_medal:
+        name: Medalla al esfuerzo
+        description:
+      student:
+        name: "Étudiant"
+        description:

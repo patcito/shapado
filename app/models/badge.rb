@@ -42,11 +42,11 @@ class Badge
   end
 
   def name
-    @name ||= I18n.t("badges.#{self.token}.name", :default => self.token.titleize) if self.token
+    @name ||= I18n.t("badges.shared.#{self.token}.name", :default => self.token.titleize) if self.token
   end
 
   def description
-    @description ||= I18n.t("badges.#{self.token}.description") if self.token
+    @description ||= I18n.t("badges.shared.#{self.token}.description") if self.token
   end
 
   def self.type_of(token)

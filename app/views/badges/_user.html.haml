@@ -23,6 +23,6 @@
     =find_and_preserve(auto_link(user.bio))
     .owner-data
       %strong
-        registered
+        = t(:created_at, :scope => "activerecord.attributes.user")
         = t("time.ago", :time => time_ago_in_words(user.created_at))
   .clear
