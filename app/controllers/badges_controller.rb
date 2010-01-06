@@ -16,8 +16,11 @@ class BadgesController < ApplicationController
   # GET /badges/1
   # GET /badges/1.xml
   def show
-    user_ids = Badge.paginate(:token => params[:id], :group_id => current_group.id,
-                   :order => "created_at desc", :select => [:user_id]).map do |b| b.user_id end
+    @badges = Badge.paginate(:token => params[:id], :group_id => current_group.id,
+                             :order => "created_at desc", :select => [:user_id],
+                             :page => params[:page] || 1, :per_page => 25)
+
+    user_ids = @badges.map { |b| b.user_id }
     @users = User.find(user_ids)
     @badge = Badge.new(:token => params[:id])
 

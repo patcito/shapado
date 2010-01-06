@@ -17,6 +17,11 @@
         width: 50%
         float: left
 
+#badges_show
+  .title
+    .counter
+      font-size: 28px
+
 .badge
   background: #222
   +rounded(6px, 6px, 6px, 6px)
@@ -54,7 +59,7 @@
       background: #FFCC00
 
   &.mini
-    line-height: 15px
+    line-height: 15px !important
     padding: 0px 4px 0px 4px
     margin: 0px
     +rounded(4px, 4px, 4px, 4px)
@@ -63,9 +68,4 @@
     overflow: hidden
     float: left
     font-size: 10px
-
-    .icon
-      margin: 5px 4px 0px 2px
-      height: 6px
-      width: 6px
 

@@ -2,9 +2,19 @@
   .navtitle
     = t(".title", :type => @badge.name)
 
-%table
-  -@users.each_slice(4) do |line|
-    %tr
-      -line.each do |u|
-        %td
-          =link_to h(u.login), user_path
+#badges_show
+  %h2.title
+    %span.counter
+      =@badges.total_entries
+    Users earned this badge. Recently awarded to:
+
+  .description
+    =@badge.description
+  /Users
+  %ul.items#users
+    -@users.each do |user|
+      = render :partial => "user", :object => user
+
+  #additional_info
+    =will_paginate @badges
+    .clear

@@ -1,33 +1,65 @@
+#badges
+  ul.list
+    padding-bottom: 15px
+    li
+      .badge_item
+        width: 30%
+        float: left
+        .badge
+          width: 55%
+          display: inline
+        .counter
+          display: inline
+          width: 40%
+          font-size: 15px
+          font-weight: bold
+      .badge_description
+        width: 50%
+        float: left
+
+#badges_show
+  .title
+    .counter
+      font-size: 28px
+
 .badge
   background: #222
-  +rounded(10px, 10px, 10px, 10px)
-  padding: 10px 20px 10px 10px
-  margin: 4px 10px
+  +rounded(6px, 6px, 6px, 6px)
+  padding: 4px 8px 4px 3px
+  margin: 0px 3px 3px 0px
+  vertical-align: baseline
   border-bottom: 1px solid gray
+  line-height: 23px
+  text-decoration: none
+
+  font-size: 13px
+  font-weight: bold
+  color: #eee
+
+  &:hover, &:link, &:visited, &:active
+    font-size: 13px !important
+    color: #eee !important
+    background: #222 !important
+    text-decoration: none !important
+
   .icon
-    margin: 4px 8px 0px 0px
+    margin-left: 3px
+    margin-bottom: 2px
+    margin-right: 3px
     +rounded(20px, 20px, 20px, 20px)
-    float: left
-    width: 10px
-    height: 10px
+    width: 5px
+    height: 5px
+    display: inline-block
+
     &.silver
-      background: lightGrey
+      background: #C0C0C0
     &.bronze
-      background: brown
+      background: #CC9965
     &.gold
-      background: yellow
-  .text
-    font-size: 18px
-    font-weight: normal
-    color: #eee
-    .user
-      a
-        color: #FF6600 !important
-        &:link, &:hover, &:visited, &:active
-          color: #FF6600 !important
+      background: #FFCC00
 
   &.mini
-    line-height: 15px
+    line-height: 15px !important
     padding: 0px 4px 0px 4px
     margin: 0px
     +rounded(4px, 4px, 4px, 4px)
@@ -35,10 +67,5 @@
     display: inline
     overflow: hidden
     float: left
-    .icon
-      margin: 5px 4px 0px 2px
-      height: 6px
-      width: 6px
-    .text
-      display: inline
-      font-size: 10px
+    font-size: 10px
+
