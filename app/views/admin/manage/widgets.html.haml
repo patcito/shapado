@@ -1,0 +1,12 @@
+-content_for :subtabs do
+  .navtitle
+    Manage Widgets
+
+%ul.list
+  -@widgets.each do |widget|
+    %li
+      -form_tag "/move_widget" do
+        = hidden_field_tag("widget", widget.id)
+        = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
+        = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
+      = render :partial => widget.partial_name, :locals => {:widget => widget}

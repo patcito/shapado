@@ -33,8 +33,7 @@
             = render :partial => "shared/layout/notice"
 
           = yield :sidebar
-
-          -current_group.widgets.each do |widget|
+          -current_group.widgets.all(:order => "position asc").each do |widget|
             .widget.block{:id => widget.name}
               = render :partial => widget.partial_name, :locals => {:widget => widget}
 

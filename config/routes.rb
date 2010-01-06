@@ -50,10 +50,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :flags
 
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_" do |manage|
-    manage.manage '/manage', :action => 'dashboard'
+    manage.manage '/manage', :action => 'properties'
     manage.properties '/properties', :action => 'properties'
     manage.actions '/actions', :action => 'actions'
-    manage.stats'/stats', :action => 'stats'
+    manage.stats '/stats', :action => 'stats'
+    manage.widgets '/widgets', :action => 'widgets'
+    manage.move_widget '/move_widget', :action => 'move_widget'
   end
 
   map.search '/search', :controller => "searches", :action => "index"
