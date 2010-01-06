@@ -81,6 +81,9 @@ module Actors
       if vote.value == -1
         user_badges = user.badges
         user.find_badge_on(group,"critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
+      else
+        user_badges = user.badges
+        user.find_badge_on(group,"supporter") || user_badges.create!(:token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
       if user.stats.views_count >= 10000
