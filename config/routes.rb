@@ -16,6 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :ads
   map.resources :adsenses
   map.resources :adbards
+  map.resources :badges
 
   map.resources :questions, :path_prefix => '/:language',
                             :collection => {:tags => :get,

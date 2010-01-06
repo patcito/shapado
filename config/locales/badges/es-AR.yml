@@ -1,0 +1,6 @@
+"es-AR":
+  badges:
+    index:
+      title: Badges
+    show:
+      title: Badge {{type}}
