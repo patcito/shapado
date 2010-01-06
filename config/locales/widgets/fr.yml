@@ -1,10 +1,10 @@
 fr:
   widgets:
     badges:
-      title: Recent Badges
+      title: Badges récents
     groups:
-      title: Recent Groups
+      title: Groupes récents
     top_users:
-      title: Top 5 Users
+      title: Top 5 utilisateurs
     users:
-      title: Recent Users
+      title: Utilisateurs récents
