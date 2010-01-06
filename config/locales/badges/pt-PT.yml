@@ -2,5 +2,51 @@
   badges:
     index:
       title: Badges
+      description: "All badges that you can earn. Share your knowledge earn badges."
     show:
       title: Badge {{type}}
+      description: "Users earned this badge. Recently awarded to:"
+      rockstar:
+        description: 1000 positive votes, 10 negative votes maximum
+      popstar:
+        description: 500 positive votes, 10 negative votes maximum
+      fanatic:
+        description:
+      service_medal:
+        description: 300 positive votes
+      famous_question:
+        description:
+      popular_person:
+        description: your profile is visited 10000 times
+      guru:
+        description: give a solution to a question with an average of  more than 40 votes
+      favorite_question:
+        description:
+      tutor:
+        description: give a solution to a question with an average of more than 2 votes
+      addict:
+        description:
+      good_question:
+        description: having a question that reaches an average of more than 10 votes
+      good_answer:
+        description: having an answer that reaches an average of more than 10 votes
+      pioneer:
+        description: be one of the first user to register
+      supporter:
+        description: vote positively for the first time
+      critic:
+        description: vote negatively for the first time
+      inquirer:
+        description: ask for the first time
+      troubleshooter:
+        description: answer for the first time
+      noob:
+        description:
+      commentator:
+        description:
+      merit_medal:
+        description: get 200 positive votes
+      effort_medal:
+        description: get 100 positive votes
+      student:
+        description:

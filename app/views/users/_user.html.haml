@@ -26,6 +26,6 @@
         =render :partial => "badges/badge", :object => badge, :locals => {:mini => true}
     .owner-data
       %strong
-        registered
+        = t(:created_at, :scope => "activerecord.attributes.user")
         = t("time.ago", :time => time_ago_in_words(user.created_at))
   .clear
