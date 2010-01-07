@@ -40,16 +40,6 @@
       = t("global.from", :site => @question.user.country_name)
       = country_flag(@question.user.country_code, @question.user.country_name)
     .clear
-
-  #comments
-    -@question.comments.each do |comment|
-      .comment
-        %strong
-          = t("time.ago", :time => time_ago_in_words(comment.created_at))
-        =link_to comment.user.login, user_path(comment.user)
-        said:
-        .markdown
-          = shapado_auto_link(markdown(comment.body))
   .controls
     .actions
       =link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
@@ -69,6 +59,15 @@
         -@comment = Comment.new
         = render :partial => "comments/form", :locals => {:source => question_path(current_languages, @question), :commentable => @question}
         = submit_tag t("comments.shared.comment_submit")
+  .comments
+    -@question.comments.each do |comment|
+      .comment
+        %strong
+          = t("time.ago", :time => time_ago_in_words(comment.created_at))
+        =link_to comment.user.login, user_path(comment.user)
+        said:
+        .markdown
+          = shapado_auto_link(markdown(comment.body))
 .clear
 
 
