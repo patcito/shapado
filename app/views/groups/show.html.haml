@@ -35,7 +35,7 @@
         = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
 
 %h3= t("models.comments")
-#comments
+.comments
   -@comments.each do |comment|
     = render :partial => "comments/comment", :object => comment, :locals => {:source => group_path(@group)}
   = will_paginate @comments
