@@ -50,3 +50,7 @@
         description: get 100 positive votes
       student:
         description:
+  activerecord:
+    models:
+      badge: badge
+      badges: badges
