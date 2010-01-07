@@ -12,7 +12,7 @@ en:
       allow_ads: Allow ads
       disallow_ads: Disallow ads
     show:
-      title: "{{name}} Group"
+      title: "About {{name}}"
       visit_group: visit this group
       group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
       group_closed: This group was closed.
@@ -21,8 +21,6 @@ en:
       accept_group_with_custom_ads: Accept group and allow custom ads
     new:
       title: Request your group
-    isolate:
-      title: "about {{name}}"
     form:
       description_legend: You have 400 characters to describe the group.
       legend_legend: "It will be used in the header, you have 40 characters"

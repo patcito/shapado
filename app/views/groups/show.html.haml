@@ -8,7 +8,7 @@
   .markdown
     =find_and_preserve(shapado_auto_link(markdown(@group.description)))
   .clear
-  -if @group.owner.login
+  -if !@group.isolate && @group.owner.login
     %b= t("activerecord.attributes.group.group_created_by")
     = link_to h(@group.owner.login), user_path(@group.owner)
 
