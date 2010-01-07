@@ -5,7 +5,7 @@ class Notifier < ActionMailer::Base
 
     from "#{group ? group.name : AppConfig.application_name} <notifications@shapado.com>"
     recipients user.email
-    subject I18n.t("subject", :scope => scope) # FIXME
+    subject I18n.t("subject", :scope => scope, :question_title => question.title) # FIXME
     sent_on Time.now
     body   :user => user, :question => question,
            :group => group, :domain => group.domain

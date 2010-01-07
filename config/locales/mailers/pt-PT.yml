@@ -4,3 +4,5 @@
       new_answer:
         subject_owner: "{{login}} respondeu à sua pergunta {{title}}"
         subject_other: "{{login}} respondeu à pergunta {{title}}"
+      give_advice:
+        subject: "we need your advice: {{question_title}}"
