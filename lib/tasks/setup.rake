@@ -87,7 +87,7 @@ namespace :setup do
                        :group_id => group_id, :created_at => questions.first.created_at)
 
           questions.each do |question|
-            if answer = question.answer
+            if !question.answer.nil? && answer = question.answer
               if !answer.user.badges.first(:group_id => group_id, :token => 'troubleshooter')
                 Badge.create(:token => "troubleshooter", :type => "bronze",
                              :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
