@@ -40,12 +40,23 @@
       = t("global.from", :site => @question.user.country_name)
       = country_flag(@question.user.country_code, @question.user.country_name)
     .clear
+
+  #comments
+    -@question.comments.each do |comment|
+      .comment
+        %strong
+          = t("time.ago", :time => time_ago_in_words(comment.created_at))
+        =link_to comment.user.login, user_path(comment.user)
+        said:
+        .markdown
+          = shapado_auto_link(markdown(comment.body))
   .controls
     .actions
       =link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
       -if logged_in?
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
+        =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if current_user.mod_of?(@question.group)
           %br
           = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"

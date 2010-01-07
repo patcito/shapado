@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   $("form.nestedAnswerForm").hide();
   $("form.flag_form").hide();
+  $("#add_comment_form").hide();
 
   $(".addNestedAnswer").click(function() {
     var controls = $(this).parents(".controls")
@@ -51,9 +52,10 @@ $(document).ready(function() {
     return false;
   });
 
-  $("#add_comment_form").hide();
   $("#add_comment_link").click(function() {
-    $("#question_flag_form").slideUp();
+    var controls = $(this).parents(".controls")
+    controls.find(".forms form.nestedAnswerForm").slideUp();
+    controls.find(".forms .flag_form").slideUp();
     $("#add_comment_form").slideToggle();
     return false;
   });

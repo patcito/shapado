@@ -42,5 +42,6 @@
   -if logged_in?
     -form_tag comments_path, :class => "form" do
       = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
-      = submit_tag t("scaffold.create")
+      .group.navform
+        = submit_tag t("scaffold.create")
 
