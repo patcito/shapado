@@ -13,6 +13,7 @@ en:
       information: Information
       notifications: Notifications
       new_answer_notification: Get mail notifications for new answers
+      give_advice_notification: Receive email notifications about questions in your field of expertise
       categories_tip: only questions belonging to these categories will show
     create:
       flash_notice: "Thanks for signing up!"
