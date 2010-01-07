@@ -32,4 +32,21 @@ namespace :fixdb do
       user.save(false)
     end
   end
+
+  desc "Fix questions"
+  task :questions => :environment do
+    $stderr.puts "Updating #{Question.count} questions..."
+    Question.all.each do |question|
+      if question.views_count > 500
+        if question.views_count > 1000
+          question.views_count = rand(200)+300
+        else
+          question.views_count = question.views_count-500
+        end
+      end
+      question.save(false)
+      $stdout.print "."
+      $stdout.flush if rand(10) == 5
+    end
+  end
 end
