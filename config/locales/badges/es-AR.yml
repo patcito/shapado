@@ -8,33 +8,33 @@
       description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
     shared:
       rockstar:
-        description: 1000 votos positivos, maximo 10 negativos
+        description: 1000 votos positivos, máximo 10 negativos
       popstar:
-        description: 500 votos positivos, maximo 10 negativos
+        description: 500 votos positivos, máximo 10 negativos
       fanatic:
-        name: Fanatico
-        description:
+        name: Fanático
+        description: visita el sitio 100 días consecutivos
       service_medal:
         name: Medalla de servicio
         description: recibir 300 votos positivos
       famous_question:
         name: Pregunta famosa
-        description:
+        description: Responde una pregunta con 10000 visitas
       popular_person:
         name: Persona popular
         description: que tu perfil sea visitado 10000 veces
       guru:
         name: Guru
-        description: dar solucion a una pregunta con promedio de votos superior a 40
+        description: dar solución a una pregunta con promedio de votos superior a 40
       favorite_question:
         name: Pregunta favorita
-        description:
+        description: Pregunta seleccionada como preferida por 25 usuarios
       tutor:
         name: Tutor
-        description: dar solucion a una pregunta con promedio de votos superior a 2
+        description: dar solución a una pregunta con promedio de votos superior a 2
       addict:
         name: Adicto
-        description:
+        description: visita el sitio 20 días consecutivos
       good_question:
         name: Buena pregunta
         description: Haber hecho una pregunta que alcanzo el promedio de 10 votos
@@ -45,7 +45,7 @@
         name: Pionero
         description: Ser de los primeros usuarios registrados
       supporter:
-        name: Partidiario
+        name: Partidario
         description: votar positivamente por primera vez
       critic:
         name: Critico
@@ -56,21 +56,18 @@
       troubleshooter:
         name: Solucionador
         description: responder por primera vez
-      noob:
-        name: Noob
-        description:
       commentator:
         name: Comentador
-        description: recibir 200 votos positivos
+        description: Deja 10 comentarios
       merit_medal:
         name: Medalla al merito
-        description: recibir 100 votos positivos
+        description: recibir 200 votos positivos
       effort_medal:
         name: Medalla al esfuerzo
-        description:
+        description: recibir 100 votos positivos
       student:
         name: Estudiante
-        description:
+        description: primera pregunta con al menos un voto positivo
   activerecord:
     models:
       badge: insignia
