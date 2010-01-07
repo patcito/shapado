@@ -83,8 +83,7 @@ class Question
   end
 
   def self.tag_cloud(conditions = {}, limit = 30)
-    @tag_cloud_code ||= RAILS_ROOT + "/app/javascripts/tag_cloud.js"
-    self.database.eval(File.read(@tag_cloud_code), conditions, limit)
+    self.database.eval("function(a,b) { return tag_cloud(a,b); }", conditions, limit)
   end
 
   def viewed!
