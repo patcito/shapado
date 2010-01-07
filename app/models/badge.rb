@@ -4,7 +4,7 @@ class Badge
   TYPES = %w[gold silver bronze]
   GOLD = %w[rockstar popstar fanatic service_medal famous_question]
   SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer]
-  BRONZE = %w[pioneer supporter critic inquirer troubleshooter noob commentator
+  BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
               merit_medal effort_medal student]
 
   def self.TOKENS
