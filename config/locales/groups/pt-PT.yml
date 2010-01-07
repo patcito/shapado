@@ -1,6 +1,5 @@
 "pt-PT":
   groups:
-    manage: "gerir..."
     index:
       title: Grupos
       actives: activos
@@ -16,7 +15,6 @@
     show:
       title: "Grupo {{name}}"
       visit_group: visitar este grupo
-      group_categories: "as categorias para este grupo são:"
       group_awaiting_acceptance: "Este grupo está à espera da permissão de um moderador."
       group_closed: Este grupo foi fechado.
       accept_group: Aceitar este grupo
@@ -25,17 +23,10 @@
       title: Request your group
     isolate:
       title: "Sobre {{name}}"
-      group_categories: "categories:"
     form:
-      name: Name
-      description: Description
-      legend: Legend
-      categories: Categories
       description_legend: You have 400 characters to describe the group.
       legend_legend: "It will be used in the header, you have 40 characters"
-      default_tags: "Default tags"
       default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
-      logo: Logo
       logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
       any_language: Any
   activerecord:
@@ -45,14 +36,14 @@
       default_tags_message: "You can't have more than 10 default tags"
     attributes:
       group:
-        name: name
+        name: Name
         subdomain: URL
         domain: Domain
         legend: Legend
         description: description
         state: State
-        categories: Categories
         owner: "este grupo foi criado por {{login}}"
         group_created_by: created by
         language: Idioma
-
+        default_tags: "Default tags"
+        logo: Logo

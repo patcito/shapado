@@ -1,6 +1,5 @@
 "es-AR":
   groups:
-    manage: "administrar..."
     index:
       title: Grupos
       actives: activos
@@ -16,26 +15,18 @@
     show:
       title: "Grupo {{name}}"
       visit_group: visitar este grupo
-      group_categories: "las categorias de este grupo son:"
-      group_awaiting_acceptance: "Este grupo esta pendiente de la acceptacion de un moderador."
+      group_awaiting_acceptance: "Este grupo esta pendiente de la aceptación de un moderador."
       group_closed: Este grupo ha sido cerrado.
       accept_group: Aceptar este grupo
       close_group: Cerrar este grupo
     new:
-      title: Request your group
+      title: Solicitar su grupo
     isolate:
       title: "Sobre {{name}}"
-      group_categories: "categories:"
     form:
-      name: Name
-      description: Description
-      legend: Legend
-      categories: Categories
-      description_legend: You have 400 characters to describe the group.
-      legend_legend: "It will be used in the header, you have 40 characters"
-      default_tags: "Default tags"
+      description_legend: Tiene 4000 caracteres para describir el grupo.
+      legend_legend: "Esto será usado en el titulo de la web, tienes 40 caracteres"
       default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
-      logo: Logo
       logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
       any_language: Cualquiera
   activerecord:
@@ -49,10 +40,12 @@
         subdomain: URL
         domain: Dominio
         legend: Legenda
-        description: descripcion
+        description: Descripción
         state: Estado
         categories: Categorias
         owner: "Esta grupo fue creado por {{login}}"
         group_created_by: created by
         language: Idioma
+        logo: Logo
+        default_tags: "Etiquetas por omision"
 

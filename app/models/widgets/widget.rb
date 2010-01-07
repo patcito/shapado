@@ -35,5 +35,7 @@ class Widget
   end
 
   def description
+    @description ||= I18n.t("widgets.#{self.name}.description") if self.name
   end
 end
+

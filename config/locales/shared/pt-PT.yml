@@ -4,4 +4,4 @@ pt-PT:
       logged_as: "logged in as {{login}}"
     layout:
       notice:
-        manage: manage
+        manage: gerir

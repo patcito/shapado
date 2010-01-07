@@ -7,10 +7,6 @@ class TopUsersWidget < Widget
              :limit => 5)
   end
 
-  def description
-    "This widget displays top five users"
-  end
-
   protected
   def set_name
     self[:name] ||= "top_users"

@@ -1,10 +1,14 @@
 fr:
   widgets:
     badges:
-      title: Badges récents
+      title: Insigne récents
+      description: "Ce widget montre les insignes récement gagnées par les utilisateurs ou questions"
     groups:
       title: Groupes récents
+      description: "Ce widget montre les derniers groupes en date"
     top_users:
       title: Top 5 utilisateurs
+      description: Ce widget montre le top 5 des utilisateurs
     users:
       title: Utilisateurs récents
+      description: "Ce widget montre les nouveaux membres enregistrés"

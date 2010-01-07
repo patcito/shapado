@@ -7,10 +7,6 @@ class UsersWidget < Widget
              :limit => 5)
   end
 
-  def description
-    "This widget display new registered members"
-  end
-
   protected
   def set_name
     self[:name] ||= "users"
