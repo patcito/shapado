@@ -1,10 +1,10 @@
 fr:
   badges:
     index:
-      title: Badges
+      title: Insignes
       description: "All badges that you can earn. Share your knowledge earn badges."
     show:
-      title: Badge {{type}}
+      title: Insigne {{type}}
       description: "Users earned this badge. Recently awarded to:"
     shared:
       rockstar:
@@ -69,3 +69,7 @@ fr:
       student:
         name: "Étudiant"
         description:
+  activerecord:
+    models:
+      badge: Insigne
+      badges: Insignes
