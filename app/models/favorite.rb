@@ -5,7 +5,7 @@ class Favorite
   key :group_id, String
   belongs_to :group
 
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
   key :question_id, String

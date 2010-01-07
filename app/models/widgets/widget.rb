@@ -7,7 +7,7 @@ class Widget
   key :position, Integer, :default => 0
 
   key :_type, String
-  key :group_id, String
+  key :group_id, String, :index => true
   belongs_to :group
 
   validates_uniqueness_of :name, :scope => :group_id

@@ -13,7 +13,7 @@ class Answer
   timestamps!
 
   key :_id, String
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
   key :updated_by_id, String
@@ -22,7 +22,7 @@ class Answer
   key :question_id, String
   belongs_to :question
 
-  key :group_id, String
+  key :group_id, String, :index => true
   belongs_to :group
 
   key :parent_id, String

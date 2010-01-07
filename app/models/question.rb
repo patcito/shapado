@@ -28,13 +28,13 @@ class Question
 
   key :activity_at, Time
 
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
   key :answer_id, String
   belongs_to :answer
 
-  key :group_id, String
+  key :group_id, String, :index => true
   belongs_to :group
 
   key :watchers, Array

@@ -8,7 +8,7 @@ class Comment
 
   timestamps!
 
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
   key :commentable_id, String, :required => true

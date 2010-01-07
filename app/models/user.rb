@@ -2,7 +2,6 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-  ensure_index :login
 
   include Authentication
   include Authentication::ByPassword
@@ -10,8 +9,8 @@ class User
 
   ROLES = %w[user admin]
 
-  key :_id,                     String
-  key :login,                     String, :limit => 40
+  key :_id,                       String
+  key :login,                     String, :limit => 40, :index => true
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :bio,                       String, :limit => 200
   key :email,                     String, :limit => 100
