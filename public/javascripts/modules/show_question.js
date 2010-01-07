@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   $("form.nestedAnswerForm").hide();
   $("form.flag_form").hide();
+  $("#add_comment_form").hide();
 
   $(".addNestedAnswer").click(function() {
     var controls = $(this).parents(".controls")
@@ -44,4 +45,19 @@ $(document).ready(function() {
     controls.find(".forms .flag_form").slideToggle();
     return false;
   });
+
+  $("#question_flag_link").click(function() {
+    $("#add_comment_form").slideUp();
+    $("#question_flag_form").slideToggle();
+    return false;
+  });
+
+  $("#add_comment_link").click(function() {
+    var controls = $(this).parents(".controls")
+    controls.find(".forms form.nestedAnswerForm").slideUp();
+    controls.find(".forms .flag_form").slideUp();
+    $("#add_comment_form").slideToggle();
+    return false;
+  });
 });
+

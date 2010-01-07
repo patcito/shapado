@@ -29,7 +29,7 @@
             = link_to t("scaffold.edit"), edit_question_answer_path(current_languages, @question, answer)
           -if current_user.can_modify?(answer)
             = link_to t("scaffold.destroy"), question_answer_path(current_languages, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
-        = link_to t(".add_comment"), "#", :class => "addNestedAnswer"
+        = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
         -if current_user != answer.user
           = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
         -if current_user.can_modify?(@question)

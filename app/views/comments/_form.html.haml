@@ -1,0 +1,4 @@
+= hidden_field_tag "commentable_type", commentable.class.name
+= hidden_field_tag "commentable_id", commentable.id
+= hidden_field_tag "source", source
+= text_area_tag "body", @comment.body, :class => "text_area"
