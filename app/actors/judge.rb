@@ -114,6 +114,10 @@ module Actors
       if voteable.kind_of?(Question) && vuser = voteable.user
         user_badges = vuser.badges
 
+        if vote.value == 1
+          vuser.find_badge_on(group, "student") || user_badges.create!(:token => "student", :group_id => group.id, :source => voteable)
+        end
+
         if voteable.votes_average >= 10
           user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :type => "silver", :group_id => group.id, :source => voteable)
         end
