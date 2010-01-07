@@ -132,6 +132,18 @@ module Actors
         end
       end
     end
+
+    expose :on_comment
+    def on_comment(payload)
+      question_id, comment_id = payload
+      comment = Answer.find(comment_id)
+      group = comment.group
+      user = comment.user
+
+      if user.answers.count(:group_id => comment.group_id, :parent_id => {:$ne => nil}) >= 10
+        user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
+      end
+    end
   end
   Magent.register(Judge.new)
 end

@@ -50,6 +50,7 @@ class AnswersController < ApplicationController
           current_group.on_activity(:answer_question)
           current_user.on_activity(:answer_question, current_group)
         else
+          Magent.push("/actors/judge", :on_comment, @question.id, @answer.id)
           current_user.on_activity(:comment_question, current_group)
         end
 
