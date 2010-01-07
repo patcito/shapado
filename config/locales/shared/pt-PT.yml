@@ -2,6 +2,8 @@ pt-PT:
   shared:
     topbar:
       logged_as: "logged in as {{login}}"
+    current_tags:
+      title: Selected tags
     layout:
       notice:
         manage: gerir

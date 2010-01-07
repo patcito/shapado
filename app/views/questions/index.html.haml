@@ -25,6 +25,7 @@
   -if logged_in?
     = render :partial => "shared/preferred_tags"
 
+  = render :partial => "shared/current_tags"
   .block
     %h3
       = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize

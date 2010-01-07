@@ -2,6 +2,8 @@ es-AR:
   shared:
     topbar:
       logged_as: "conectado como {{login}}"
+    current_tags:
+      title: Etiquetas seleccionadas
     layout:
       notice:
         manage: administrar
