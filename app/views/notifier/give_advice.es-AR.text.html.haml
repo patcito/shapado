@@ -1,19 +1,18 @@
 %p
-  == Hi #{h(@user.login)},
+  == Hola #{h(@user.login)},
   %br
   = h(@question.user.login)
-  just asked a question you might be able to answer:
+  acaba de hacer una pregunta que usted podria contestar:
   %br
   == "#{h(@question.title)}"
   %br
-  To answer, just reply to this message here:
-  = link_to url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
-, url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
+  Para contestar, responde a este mensaje en el siguiente enlace:
+  -link = url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
+  = link_to link, link
   %br
-
-  Or, if you know someone who might be able to answer, send them this referral link:
+  o, si conoces a alguien que pueda contestar, enviale este enlace:
   =  url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
   %br
-  If we don't get an answer from you soon, we'll ask someone else; you can still answer it whenever you want.
+  si no tenemos respuesta de ti pronto, le preguntaremos a otra persona; puedes contestar la pregunta cuando quieras.
   %br
 == - #{h(@group.name)}

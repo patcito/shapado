@@ -7,8 +7,7 @@
   == "#{h(@question.title)}"
   %br
   To answer, just reply to this message here:
-  = link_to url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
-, url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
+  = link_to url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
   %br
 
   Or, if you know someone who might be able to answer, send them this referral link:

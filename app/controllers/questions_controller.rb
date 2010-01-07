@@ -101,8 +101,6 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find_by_slug_or_id(params[:id])
 
-    Notifier.deliver_give_advice(current_user, current_group, @question)
-
     raise PageNotFound  unless @question
     order = "created_at desc"
     @active_subtab = params.fetch(:sort, "newest")
