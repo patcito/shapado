@@ -37,8 +37,8 @@ class AnswersController < ApplicationController
         unless @answer.comment?
           @question.answer_added!
 
-          # TODO: use mangent to do it
-          users = User.find(@question.watchers, :fields => ["email", "notification_opts"]) || []
+          # TODO: use magent to do it
+          users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
           users.push(@question.user)
           users.each do |u|
             email = u.email
@@ -46,9 +46,11 @@ class AnswersController < ApplicationController
               Notifier.deliver_new_answer(u, current_group, @answer)
             end
           end
+
           current_group.on_activity(:answer_question)
           current_user.on_activity(:answer_question, current_group)
         else
+          Magent.push("/actors/judge", :on_comment, @question.id, @answer.id)
           current_user.on_activity(:comment_question, current_group)
         end
 

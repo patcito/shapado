@@ -23,4 +23,13 @@ namespace :fixdb do
       BadgesWidget.create(:position => 2, :group_id => group.id)
     end
   end
+
+  desc "Fix Notifications"
+  task :notifs => :environment do
+    $stderr.puts "Updating #{User.count} users..."
+    User.all.each do |user|
+      user.notification_opts["give_advice"] ||= "1"
+      user.save(false)
+    end
+  end
 end

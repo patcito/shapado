@@ -175,6 +175,14 @@ class QuestionsController < ApplicationController
         Magent.push("/actors/judge", :on_ask_question, @question.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
+        # TODO: move to magent
+        users = User.find_experts(@question.tags, [@question.language])
+        users.each do |u|
+          email = u.email
+          if !email.blank?
+            Notifier.deliver_give_advice(u, current_group, @question)
+          end
+        end
 
         format.html { redirect_to(question_path(current_languages, @question)) }
         format.json  { render :json => @question.to_json, :status => :created, :location => @question }

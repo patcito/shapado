@@ -5,7 +5,8 @@ class Admin::ManageController < ApplicationController
   tabs :dashboard => :dashboard,
        :properties => :properties,
        :actions => :actions,
-       :stats => :stats
+       :stats => :stats,
+       :widgets => :widgets
 
   def dashboard
   end
@@ -14,6 +15,16 @@ class Admin::ManageController < ApplicationController
   end
 
   def actions
+  end
+
+  def widgets
+    @widgets = @group.widgets.all(:order => "position asc")
+  end
+
+  def move_widget
+    widget = Widget.find(params[:widget_id])
+    widget.move_to(params[:move_to])
+    redirect_to manage_widgets_path
   end
 
   def stats

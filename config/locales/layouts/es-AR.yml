@@ -8,6 +8,7 @@
       ask_question: Pregunte
       tags: Etiquetas
       users: Usuarios
+      badges: Insignias
       unanswered: Aun no contestadas
       logout: salir
       logged: conectado como {{login}}
@@ -28,3 +29,4 @@
       properties: Properties
       actions: Actions
       stats: Stats
+      members: Miembros

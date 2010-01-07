@@ -1,0 +1,8 @@
+fr:
+  admin:
+    manage:
+      properties:
+        title: Propriétés du groupe
+      widgets:
+        title: Administrer les widgets de la barre latérale
+        description: Utiliser les flèches pour déplacer les widgets

@@ -26,7 +26,7 @@ class User
   key :preferred_tags,            Hash, :default => {} #by group
   key :preferred_languages,       Array
 
-  key :notification_opts,         Hash, :default => {"new_answer"=>"1"}
+  key :notification_opts,         Hash, :default => {"new_answer"=>"1", "give_advice" => "1"}
 
   key :language,                  String, :default => "en"
   key :timezone,                  String
@@ -94,12 +94,16 @@ class User
     find_by_login(login) || find_by_id(login)
   end
 
-  def self.find_experts(tags, opts = {})
-    opts[:limit] ||= 5
+  def self.find_experts(tags, langs = AVAILABLE_LANGUAGES)
+    opts = {}
+    opts[:limit] = 15
     opts[:select] = [:user_id]
-    UserStat.find(:all, opts.merge({:answer_tags => {:$in => tags}})).map do |s|
-      s.user
+    user_ids = UserStat.find(:all, opts.merge({:answer_tags => {:$in => tags}})).map do |s|
+      s.user_id
     end
+
+    u=User.find(user_ids, "notification_opts.give_advice" => {:$in => ["1", true]}, :select => [:email, :login, :name, :language], :preferred_languages => langs)
+    u ? u : []
   end
 
   def to_param

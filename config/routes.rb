@@ -16,6 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :ads
   map.resources :adsenses
   map.resources :adbards
+  map.resources :badges
 
   map.resources :questions, :path_prefix => '/:language',
                             :collection => {:tags => :get,
@@ -42,18 +43,21 @@ ActionController::Routing::Routes.draw do |map|
                                      :allow_custom_ads => :get,
                                      :disallow_custom_ads => :get,
                                      :logo => :get},
-                          :collection => { :autocomplete_for_group_slug => :get} do |groups|
-    groups.resources :members
-  end
+                          :collection => { :autocomplete_for_group_slug => :get}
 
+  map.resources :members
+
+  map.resources :comments
   map.resources :votes
   map.resources :flags
 
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_" do |manage|
-    manage.manage '/manage', :action => 'dashboard'
+    manage.manage '/manage', :action => 'properties'
     manage.properties '/properties', :action => 'properties'
     manage.actions '/actions', :action => 'actions'
-    manage.stats'/stats', :action => 'stats'
+    manage.stats '/stats', :action => 'stats'
+    manage.widgets '/widgets', :action => 'widgets'
+    manage.move_widget '/move_widget', :action => 'move_widget'
   end
 
   map.search '/search', :controller => "searches", :action => "index"

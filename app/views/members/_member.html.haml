@@ -27,7 +27,7 @@
       =find_and_preserve(auto_link(user.bio))
     .tag-list
       -if can_modify_member
-        -form_for([@group, member], :html=>{:class => "form"}) do |f|
+        -form_for(member, :html=>{:class => "form"}) do |f|
           = f.select :role, Member::ROLES, :selected => member.role
           = f.submit t("scaffold.update")
       -else

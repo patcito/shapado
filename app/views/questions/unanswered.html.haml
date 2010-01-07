@@ -20,8 +20,9 @@
       = link_to t(".votes", :default => :"questions.index.votes"), unanswered_questions_path(:sort=>"votes")
 
 -content_for :sidebar do
+  = render :partial => "shared/current_tags"
   .block
-    %h1
+    %h3
       = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
     = render :partial => "shared/tag_list", :object => @tag_cloud
   -if logged_in?

@@ -1,0 +1,14 @@
+es-AR:
+  widgets:
+    badges:
+      title: Insignias recientes
+      description: "Este widget muestra las insignias ganadas por los usuarios o las preguntas"
+    groups:
+      title: Grupos recientes
+      description: "Este widget muestra los últimos grupos registrados"
+    top_users:
+      title: ranking de usuarios
+      description: "Este widget muestra ranking de usuarios"
+    users:
+      title: Usuarios recientes
+      description: "Este widget muestra los nuevos miembros registrados"

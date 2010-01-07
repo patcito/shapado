@@ -1,4 +1,5 @@
 require 'ostruct'
+require "support/sluggizer"
 
 config_file = "/etc/shapado.yml"
 if !File.exist?(config_file)

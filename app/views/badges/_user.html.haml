@@ -1,0 +1,28 @@
+%li.item
+  / User Stats
+  .stats
+    .box.votes
+      .counter{:class => class_for_number(user.questions.count) }
+        =format_number(user.questions.count)
+      .text
+        = t(:questions, :scope => "activerecord.models")
+    .box.answers
+      .counter
+        =format_number(user.badges_on(current_group).count)
+      .text
+        = t(:badges, :scope => "activerecord.models")
+    .box.views
+      .counter{:class => class_for_number(user.reputation_on(current_group)) }
+        =format_number(user.reputation_on(current_group))
+      .text
+        = t(:reputation, :scope => "activerecord.attributes.user")
+  / User Summary
+  .summary
+    %h3
+      = link_to h(user.login), user_path(user)
+    =find_and_preserve(auto_link(user.bio))
+    .owner-data
+      %strong
+        = t(:created_at, :scope => "activerecord.attributes.user")
+        = t("time.ago", :time => time_ago_in_words(user.created_at))
+  .clear

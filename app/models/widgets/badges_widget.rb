@@ -5,6 +5,7 @@ class BadgesWidget < Widget
     group.badges.find(:all, :limit => 5, :order => "created_at desc")
   end
 
+
   protected
   def set_name
     self[:name] ||= "badges"

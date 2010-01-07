@@ -1,0 +1,20 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title", :type => @badge.name)
+
+#badges_show
+  %h2.title
+    %span.counter
+      =@badges.total_entries
+    =t(".description")
+
+  .description
+    =@badge.description
+  /Users
+  %ul.items#users
+    -@users.each do |user|
+      = render :partial => "user", :object => user
+
+  #additional_info
+    =will_paginate @badges
+    .clear

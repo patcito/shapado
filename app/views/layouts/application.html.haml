@@ -18,6 +18,7 @@
           .clear
       #wrapper
         #main
+          = render :partial => "shared/ads/header_ads"
           #block-text.block
             .secondary-navigation{:class => @active_subtab.to_s}
               = yield :subtabs
@@ -25,6 +26,7 @@
             .content
               %p.markdown
                 = show_flash_messages(:class => "flash", :markdown => true)
+              = render :partial => "shared/ads/content_ads"
               .inner
                 = yield
                 .clear
@@ -34,7 +36,8 @@
 
           = yield :sidebar
 
-          -current_group.widgets.each do |widget|
+          = render :partial => "shared/ads/context_panel_ads"
+          -current_group.widgets.all(:order => "position asc").each do |widget|
             .widget.block{:id => widget.name}
               = render :partial => widget.partial_name, :locals => {:widget => widget}
 
@@ -46,9 +49,14 @@
                 .feeds
                   -feed_urls.each do |title, url|
                     .feed_entry
-                      = link_to h(title), url
+                      %a{:href => url}
+                        %span
+                          =image_tag "atom.png", :width => 20
+                        =h(title)
                   .clear
         .clear
+        = render :partial => "shared/ads/footer_ads"
+
       #footer
         .block.content
           = render :partial => "layouts/footer"

@@ -5,12 +5,11 @@
       ==-
   -if current_group.default_tags.size > 7
     %li
-      = link_to "more...", tags_questions_path(:language => current_languages)
+      = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
   %ul.right
     -if logged_in?
       %li
-        logged in as
-        =link_to h(current_user.login), user_path(current_user)
+        = t(".logged_as", :login => link_to(h(current_user.login), user_path(current_user)))
         ==(#{format_number(current_user.reputation_on(current_group))})
         |
       %li

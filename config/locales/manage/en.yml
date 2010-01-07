@@ -1,0 +1,8 @@
+en:
+  admin:
+    manage:
+      properties:
+        title: Group properties
+      widgets:
+        title: Manage Sidebar Widgets
+        description: Use the arrows to move your widgets

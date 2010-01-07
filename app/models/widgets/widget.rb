@@ -15,4 +15,27 @@ class Widget
   def partial_name
     "widgets/#{self.name}"
   end
+
+  def up
+    self.move_to(self.position-1)
+  end
+
+  def down
+    self.move_to(self.position+1)
+  end
+
+  def move_to(pos)
+    widget = Widget.find(:first, :position => pos.to_i, :group_id => self.group_id)
+    if widget
+      self.collection.update({:_id => widget._id}, {:$set => {:position => self.position}},
+                                                               :upsert => true)
+      self.collection.update({:_id => self._id}, {:$set => {:position => widget.position}},
+                                                               :upsert => true)
+    end
+  end
+
+  def description
+    @description ||= I18n.t("widgets.#{self.name}.description") if self.name
+  end
 end
+

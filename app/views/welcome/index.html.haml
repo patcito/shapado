@@ -16,7 +16,7 @@
       -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
       = f.hidden_field :language, :value => logged_in? ? current_user.language : current_languages
       %label.label
-        Ask a Question, we will find someone to answer
+        =t(".quick_question")
       .columns
         .column_info
           -if logged_in?
@@ -32,7 +32,7 @@
           .group
             .pointer
             =f.text_area :title, :class => "text_area"
-          =f.submit "Ask Question", :class => "ask_question"
+          =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
       .clear
 %ul.items#questions
   -if @questions.empty?

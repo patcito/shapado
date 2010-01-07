@@ -5,6 +5,7 @@ class GroupsWidget < Widget
     Group.find(:all, :limit => 5, :order => "created_at desc", :state => "active")
   end
 
+
   protected
   def set_name
     self[:name] ||= "groups"

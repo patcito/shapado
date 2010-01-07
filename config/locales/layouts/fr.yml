@@ -8,6 +8,7 @@ fr:
       ask_question: poser une question
       tags: tags
       users: utilisateurs
+      badges: insignes
       unanswered: sans réponses
       logout: se déconnecter
       logged: Connecté {{login}}
@@ -25,6 +26,7 @@ fr:
         explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"
     manage:
       dashboard: Dashboard
-      properties: Properties
+      properties: Propriétés
       actions: Actions
-      stats: Stats
+      stats: États
+      members: Membres

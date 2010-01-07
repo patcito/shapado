@@ -8,6 +8,7 @@ en:
       ask_question: ask question
       tags: tags
       users: users
+      badges: badges
       unanswered: unanswered
       logout: logout
       logged: Logged in as {{login}}
@@ -28,3 +29,4 @@ en:
       properties: Properties
       actions: Actions
       stats: Stats
+      members: Members

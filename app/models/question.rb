@@ -46,6 +46,7 @@ class Question
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
   has_many :badges, :as => "source"
+  has_many :comments, :as => "commentable", :dependent => :destroy
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id

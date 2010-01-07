@@ -55,7 +55,8 @@ namespace :setup do
     default_group = Group.find_by_domain(AppConfig.domain)
 
     default_group.widgets << GroupsWidget.create(:position => 0)
-    default_group.widgets << BadgesWidget.create(:position => 1)
+    default_group.widgets << UsersWidget.create(:position => 1)
+    default_group.widgets << BadgesWidget.create(:position => 2)
     default_group.save!
   end
 
@@ -87,9 +88,11 @@ namespace :setup do
                        :group_id => group_id, :created_at => questions.first.created_at)
 
           questions.each do |question|
-            if answer = question.answer
-              Badge.create(:token => "troubleshooter", :type => "bronze",
-                           :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
+            if !question.answer.nil? && answer = question.answer
+              if !answer.user.badges.first(:group_id => group_id, :token => 'troubleshooter')
+                Badge.create(:token => "troubleshooter", :type => "bronze",
+                             :user => answer.user, :group_id => group_id, :created_at => answer.created_at)
+              end
             end
 
             votes_up = question.votes.group_by { |vote| vote.value }[1].try(:count).to_i

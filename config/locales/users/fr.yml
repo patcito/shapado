@@ -13,6 +13,7 @@ fr:
       information: Information
       notifications: Notifications
       new_answer_notification: Obtenir des notifications via email de nouvelles réponses
+      give_advice_notification:  Recevoir des notifications via courrier électronique sur les questions liées à votre champs d'expertise
       categories_tip: seules les questions appartenant à ces catégories seront visible
     create:
       flash_notice: "Merci pour vous avoir enregistrer!"

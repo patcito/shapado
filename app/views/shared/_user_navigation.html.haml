@@ -5,6 +5,8 @@
     =link_to t("layouts.application.tags"), tags_questions_path(:language => current_languages)
   %li.users
     =link_to t("layouts.application.users"), users_path
+  %li.badges
+    =link_to t("layouts.application.badges"), badges_path
   %li.unanswered.last
     =link_to t("layouts.application.unanswered"), unanswered_questions_path(:language => current_languages)
   -if logged_in?

@@ -1,0 +1,7 @@
+%h2 Edit comment
+
+-form_tag comment_path(@comment), :method => "put", :class => "form" do
+  = render :partial => "comments/form", :locals => {:source => params[:source], :commentable => @comment.commentable}
+  .buttons
+    = submit_tag t("scaffold.update")
+    = link_to t("scaffold.cancel"), params[:source], :class => "button cancel"

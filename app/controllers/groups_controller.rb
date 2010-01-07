@@ -28,20 +28,20 @@ class GroupsController < ApplicationController
   # GET /groups/1.xml
   def show
     @active_subtab = "about"
+
     if params[:id]
       @group = Group.find_by_slug_or_id(params[:id])
     else
       @group = current_group
     end
+    @comments = @group.comments.paginate(:page => params[:page].to_i,
+                                         :per_page => params[:per_page] || 10 )
+
+    @comment = Comment.new
+
 
     respond_to do |format|
-      format.html do
-        if @group.isolate
-          render :template => 'groups/isolate'
-        else
-          render
-        end
-      end# show.html.erb
+      format.html # show.html.erb
       format.xml  { render :xml => @group }
     end
   end

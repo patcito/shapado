@@ -1,11 +1,6 @@
 -content_for :subtabs do
   .navtitle
     = t(".title", :name => h(@group.name))
-  %ul
-    %li.about
-      = link_to t(".about", :default => :"groups.index.about"), domain_url(:custom => @group.domain)
-    %li.members
-      = link_to "members", group_members_path(@group)
 
 #show_group
   = image_tag(logo_group_path(@group), :class => "group_logo")
@@ -13,7 +8,7 @@
   .markdown
     =find_and_preserve(shapado_auto_link(markdown(@group.description)))
   .clear
-  -if @group.owner.login
+  -if !@group.isolate && @group.owner.login
     %b= t("activerecord.attributes.group.group_created_by")
     = link_to h(@group.owner.login), user_path(@group.owner)
 
@@ -38,3 +33,15 @@
         = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true), :class => "button"
       -if current_user.can_modify?(@group) && @group.state == "active"
         = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
+
+%h3= t("models.comments")
+.comments
+  -@comments.each do |comment|
+    = render :partial => "comments/comment", :object => comment, :locals => {:source => group_path(@group)}
+  = will_paginate @comments
+  -if logged_in?
+    -form_tag comments_path, :class => "form" do
+      = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
+      .group.navform
+        = submit_tag t("scaffold.create")
+

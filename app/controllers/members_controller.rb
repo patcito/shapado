@@ -1,14 +1,12 @@
 
 class MembersController < ApplicationController
+  layout "manage"
   before_filter :login_required, :except => [:index, :show]
   before_filter :check_permissions, :only => [:create, :update, :edit, :destroy]
+  tabs :default => :members
 
   def index
-    if params[:group_id]
-      @group = Group.find_by_slug_or_id(params[:group_id])
-    else
-      @group = current_group
-    end
+    @group = current_group
     @members = @group.memberships.paginate(:page => params[:page] || 1,
                                            :per_page => params[:per_page] || 25)
     @member = Member.new
@@ -19,7 +17,7 @@ class MembersController < ApplicationController
     if @user
       @member = @group.add_member(@user, params[:member][:role])
       if @member.valid?
-        return redirect_to group_members_path(@group)
+        return redirect_to members_path
       end
     else
       flash[:error] = "Sorry, the user **#{params[:member][:user_id]}** does not exists"
@@ -39,7 +37,7 @@ class MembersController < ApplicationController
     else
       flash[:error] = "Sorry, you cannot be change the **#{@member.user.login}'s** membership"
     end
-    redirect_to group_members_path(@group)
+    redirect_to members_path
   end
 
   def destroy
@@ -49,15 +47,15 @@ class MembersController < ApplicationController
     else
       flash[:error] = "Sorry, you cannot destroy the **#{@member.user.login}'s** membership"
     end
-    redirect_to group_members_path(@group)
+    redirect_to members_path
   end
 
   def check_permissions
-    @group = Group.find_by_slug_or_id(params[:id]) || current_group
+    @group = current_group
 
     if !current_user.owner_of?(@group)
       flash[:error] = t("global.permission_denied")
-      redirect_to group_path(@group)
+      redirect_to domain_url(:custom => current_group.domain)
     end
   end
 end

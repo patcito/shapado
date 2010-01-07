@@ -1,7 +1,7 @@
 -require_js "modules/themes"
 
 .group
-  = form.label :name, t('.name'), :class => "label"
+  = form.label :name, t('name', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_field :name, :class => "text_field"
 
 .group
@@ -15,7 +15,7 @@
 
 -if current_user.admin?
   .group
-    = form.label :domain, "Domain", :class => "label"
+    = form.label :domain,  t('domain', :scope => "activerecord.attributes.group"), :class => "label"
     %span.description
       =request.protocol
     = form.text_field :domain, :class=> "text_field", :style => "width: 20%"
@@ -41,7 +41,7 @@
     = form.text_field :analytics_id, :class=> "text_field"
 
 .group
-  = form.label :description, t('.description'), :class => "label"
+  = form.label :description,  t('description', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_area :description, :class => "text_area", :id => "markdown_editor"
   .description
     = t('.description_legend')
@@ -52,13 +52,13 @@
 
 
 .group
-  = form.label :legend, t('.legend'), :class => "label"
+  = form.label :legend, t('legend', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_field :legend, :class => "text_field"
   .description
     = t('.legend_legend')
 
 .group
-  = form.label :default_tags, t('.default_tags'), :class => "label"
+  = form.label :default_tags, t('default_tags', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_field :default_tags, :value => @group.default_tags.join(", "), :class => "text_field"
   .description
     = t('.default_tags_legend')
@@ -72,7 +72,7 @@
   = t(".any_language")
 
 .group
-  = form.label :logo_data, t(".logo"), :class => "label"
+  = form.label :logo_data, t('logo', :scope => "activerecord.attributes.group"), :class => "label"
   -unless @group.new?
     = image_tag(logo_group_path(@group))
   %br

@@ -1,5 +1,5 @@
 %h3
-  Recent Groups
+  =t(".title")
 .content
   %ul.list
     -widget.recent_groups.reverse_each do |group|
@@ -7,6 +7,6 @@
         = link_to h(group.name), domain_url(:custom => group.domain)
         &= truncate(group.description, :length => 35)
   .more
-    =link_to "more...", groups_path
+    =link_to t("scaffold.more"), groups_path
   .clear
 .clear

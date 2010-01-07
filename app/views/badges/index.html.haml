@@ -1,0 +1,20 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+
+#badges
+  %h2.title
+    = t(".description")
+  .inner
+    %ul.list
+      -Badge.TOKENS.each do |token|
+        %li
+          .badge_item
+            -badge = Badge.new(:token => token)
+            = render :partial => "badges/badge", :object => badge, :locals => {:hide_user => true}
+            .counter
+              == × #{Badge.count(:token => token, :group_id => current_group.id)}
+          .badge_description
+            =badge.description
+          .clear
+

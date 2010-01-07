@@ -1,0 +1,11 @@
+pt-PT:
+  comments:
+    create:
+      flash_notice: Thanks for your comment
+    update:
+      flash_notice: "Comment was successfully updated."
+    shared:
+      add_comment: "add comment..."
+      comment_submit: "Comment"
+  models:
+    comments: Comments

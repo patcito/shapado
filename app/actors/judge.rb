@@ -24,6 +24,8 @@ module Actors
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
         answer.user.find_badge_on(group,"tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
+
+        answer.user.stats.add_expert_tags(*question.tags)
       end
     end
 
@@ -81,6 +83,9 @@ module Actors
       if vote.value == -1
         user_badges = user.badges
         user.find_badge_on(group,"critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
+      else
+        user_badges = user.badges
+        user.find_badge_on(group,"supporter") || user_badges.create!(:token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
       if user.stats.views_count >= 10000
@@ -109,6 +114,10 @@ module Actors
       if voteable.kind_of?(Question) && vuser = voteable.user
         user_badges = vuser.badges
 
+        if vote.value == 1
+          vuser.find_badge_on(group, "student") || user_badges.create!(:token => "student", :group_id => group.id, :source => voteable)
+        end
+
         if voteable.votes_average >= 10
           user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :type => "silver", :group_id => group.id, :source => voteable)
         end
@@ -121,6 +130,18 @@ module Actors
         if voteable.votes_average >= 10
           user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
+      end
+    end
+
+    expose :on_comment
+    def on_comment(payload)
+      question_id, comment_id = payload
+      comment = Answer.find(comment_id)
+      group = comment.group
+      user = comment.user
+
+      if user.answers.count(:group_id => comment.group_id, :parent_id => {:$ne => nil}) >= 10
+        user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
       end
     end
   end
