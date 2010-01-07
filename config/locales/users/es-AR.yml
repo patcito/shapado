@@ -13,6 +13,7 @@
       information: Información
       notifications: Notificaciones
       new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+      give_advice_notification:  Obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
       categories_tip: solo las preguntas pertenecientes a estas categorías serán mostradas
     create:
       flash_notice: "Gracias por registrarse!"

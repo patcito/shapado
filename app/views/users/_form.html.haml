@@ -53,3 +53,6 @@
   .group
     = f.check_box "notification_opts[new_answer]", :checked => @user.notification_opts["new_answer"] == "1"
     = t(".new_answer_notification")
+  .group
+    = f.check_box "notification_opts[give_advice]", :checked => @user.notification_opts["give_advice"] == "1"
+    = t(".give_advice_notification")
