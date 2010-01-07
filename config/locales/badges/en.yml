@@ -12,21 +12,21 @@ en:
       popstar:
         description: 500 positive votes, 10 negative votes maximum
       fanatic:
-        description:
+        description: Visited the site each day for 100 consecutive days
       service_medal:
         description: 300 positive votes
       famous_question:
-        description:
+        description: asked a question with 10000 views
       popular_person:
         description: your profile is visited 10000 times
       guru:
         description: give a solution to a question with an average of  more than 40 votes
       favorite_question:
-        description:
+        description: question favorited by 25 users
       tutor:
         description: give a solution to a question with an average of more than 2 votes
       addict:
-        description:
+        description: visited the site each day for 20 consecutive days
       good_question:
         description: having a question that reaches an average of more than 10 votes
       good_answer:
@@ -41,16 +41,14 @@ en:
         description: ask for the first time
       troubleshooter:
         description: answer for the first time
-      noob:
-        description:
       commentator:
-        description:
+        description: Left 10 comments
       merit_medal:
         description: get 200 positive votes
       effort_medal:
         description: get 100 positive votes
       student:
-        description:
+        description: Asked first question with at least one up vote
   activerecord:
     models:
       badge: badge
