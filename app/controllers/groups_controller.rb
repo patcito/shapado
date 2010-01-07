@@ -41,13 +41,7 @@ class GroupsController < ApplicationController
 
 
     respond_to do |format|
-      format.html do
-        if @group.isolate
-          render :template => 'groups/isolate'
-        else
-          render
-        end
-      end# show.html.erb
+      format.html # show.html.erb
       format.xml  { render :xml => @group }
     end
   end

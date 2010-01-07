@@ -13,7 +13,7 @@
       disallow_ads: Prohibir propaganda
       accept_group_with_custom_ads: Aceptar este grupo y permitir propaganda personalizada
     show:
-      title: "Grupo {{name}}"
+      title: "Sobre {{name}}"
       visit_group: visitar este grupo
       group_awaiting_acceptance: "Este grupo esta pendiente de la aceptación de un moderador."
       group_closed: Este grupo ha sido cerrado.
@@ -21,8 +21,6 @@
       close_group: Cerrar este grupo
     new:
       title: Solicitar su grupo
-    isolate:
-      title: "Sobre {{name}}"
     form:
       description_legend: Tiene 4000 caracteres para describir el grupo.
       legend_legend: "Esto será usado en el titulo de la web, tienes 40 caracteres"
