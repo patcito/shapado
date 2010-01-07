@@ -48,7 +48,10 @@
                 .feeds
                   -feed_urls.each do |title, url|
                     .feed_entry
-                      = link_to h(title), url
+                      %a{:href => url}
+                        %span
+                          =image_tag "atom.png", :width => 20
+                        =h(title)
                   .clear
         .clear
         = render :partial => "shared/ads/footer_ads"
