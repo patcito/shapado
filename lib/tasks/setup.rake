@@ -33,6 +33,7 @@ namespace :setup do
 
     subdomain = AppConfig.application_name.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
     default_group = Group.new(:name => AppConfig.application_name,
+                              :domain => AppConfig.domain,
                               :subdomain => subdomain,
                               :domain => AppConfig.domain,
                               :description => "question-and-answer website",
