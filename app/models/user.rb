@@ -37,6 +37,7 @@ class User
 
   key :votes_up,                  Hash
   key :votes_down,                Hash
+  key :default_subtab,            Hash
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy

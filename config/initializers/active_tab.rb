@@ -30,11 +30,29 @@ module ActiveTab
       end
       helper_method :current_order
 
+      define_method(:load_default_subtab) do
+        key = "#{params[:controller]}/#{params[:action]}"
+        @subtabs = subtabs[params[:action].to_sym]
+        @active_subtab = params[:sort]
+        @store_subtab = true
+
+        if @active_subtab.nil?
+          if logged_in?
+            @active_subtab, @current_order = current_user.default_subtab[key]
+            @store_subtab = false
+          elsif session[:subtab] && session[:subtab][key]
+            @active_subtab, @current_order = session[:subtab][key]
+            @store_subtab = false
+          else
+            @active_subtab, @current_order = @subtabs.first
+          end
+        end
+      end
+
       private
       define_method(:set_active_subtab) do
-        @subtabs = subtabs[params[:action].to_sym]
-        if !@subtabs.blank?
-          @active_subtab = params.fetch(:sort, @subtabs.first.first.to_s)
+        load_default_subtab
+        if !@subtabs.blank? && @current_order.nil?
           @subtabs.each do |st|
             if st.first.to_s == @active_subtab
               @current_order = st.last
@@ -42,6 +60,17 @@ module ActiveTab
             end
           end
           @current_order ||= @subtabs.first.last
+        end
+
+        if @store_subtab
+          subtab = [@active_subtab, @current_order]
+          key = "#{params[:controller]}/#{params[:action]}"
+          (session[:subtab] ||= {})[key] = subtab
+          if logged_in?
+            current_user.collection.update({:_id => current_user._id},
+                                           {:$set => {"default_subtab.#{key}" => subtab}},
+                                           {:upsert => true})
+          end
         end
       end
     end
