@@ -1,9 +1,31 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update]
+  before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
 
   helper :votes
+
+  def history
+    @answer = Answer.find(params[:id])
+    @question = @answer.question
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @answer.versions.to_json }
+    end
+  end
+
+  def rollback
+    @question = @answer.question
+
+    if @answer.rollback!(params[:version].to_i)
+      flash[:notice] = t(:flash_notice, :scope => "answers.update")
+    end
+
+    respond_to do |format|
+      format.html { redirect_to history_question_answer_path(current_languages, @question, @answer) }
+    end
+  end
 
   def show
     @answer = Answer.find(params[:id])

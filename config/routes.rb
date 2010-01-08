@@ -28,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
                                         :unwatch => :any,
                                         :move => :get,
                                         :move_to => :put} do |questions|
-    questions.resources :answers, :member => {:flag => :get}
+    questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
     questions.resources :favorites
   end
 

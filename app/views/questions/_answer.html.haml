@@ -51,6 +51,8 @@
               = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer)
             -if solution
               = link_to t(".unset_answer"),  unsolve_question_path(current_languages, @question)
+        -if answer.versions.count > 0
+          = link_to t(".history", :default => "history"), history_question_answer_path(current_languages, @question, answer)
       .clear
       .forms
         -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
