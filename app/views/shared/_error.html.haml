@@ -1,20 +1,24 @@
+-content_for :subtabs do
+  .navtitle
+    %h1= title
+
 .error-dialog
-  %h1= title
   #dialog-content
-    %span
+    %span.left
       = image_tag(error_image)
+    %span.left
       %p= explanation
       .error-options
         %b= t("errors.options_label")
-        %ul
+        %ul.list
           %li
-            = t("errors.go_to", :link =>link_to(t("layouts.application.home"), root_path))
+            = t("errors.go_to", :link =>link_to(t("layouts.application.home"), domain_url(:custom => current_group.domain)))
           %li
             = t("errors.help_us_answer", :link => link_to(t("layouts.application.questions"), questions_path(current_languages)))
           %li
             -form_tag search_path, :class => "form", :method => :get do
               =t("errors.search")
-              = text_field_tag 'q', "", :class => "text-field"
+              = text_field_tag 'q', request.path.split("/").last.split("-").join(" "), :class => "text_field", :style => "width: 50%"
               %button{:type => "submit"}
                 = t('layouts.applications.search', :default => "Go")
     .clear
