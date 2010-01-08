@@ -5,7 +5,7 @@
       description: "Todas las insignias que puedes ganar. comparte tu conocimiento, gana placas."
     show:
       title: Insignia {{type}}
-      description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
+      description: "Usuarios que ganaron esta insignia. Recientemente otorgada a:
     shared:
       rockstar:
         description: 1000 votos positivos, máximo 10 negativos

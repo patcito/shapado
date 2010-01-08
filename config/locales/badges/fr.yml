@@ -2,10 +2,10 @@ fr:
   badges:
     index:
       title: Insignes
-      description: "All badges that you can earn. Share your knowledge earn badges."
+      description: "Liste des insignes que vous pouvez gagner. Partager votre connaissance, gagner des insignes."
     show:
       title: Insigne {{type}}
-      description: "Users earned this badge. Recently awarded to:"
+      description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:":"
     shared:
       rockstar:
         description: 1000 votes positifs, 10 négatifs maximum
@@ -13,26 +13,28 @@ fr:
         description: 500 votes positifs, 10 négatifs maximum
       fanatic:
         name: Fanatique
-        description: Visited the site each day for 100 consecutive days
+        description: Visiter le site 100 jours consécutifs
       service_medal:
-        description: recevoir 300 votes positifs
+        name: Question ayant reçu 10000 visites
+        description: Recevoir 300 votes positifs
       famous_question:
-        description: asked a question with 10000 views
+        name: Question renommée
+        description: question ayant reçu 10000 visites
       popular_person:
         name: Personne populaire
-        description: votre profil est visité 10000 fois
+        description: "Votre profil est visité 10000 fois"
       guru:
         name: Guru
-        description: donner une solution à une question ayant une moyenne de votes supérieure à 40
+        description: "Donner une solution à une question ayant une moyenne de votes supérieure à 40"
       favorite_question:
-        name: question favorite
-        description: question favorited by 25 users
+        name: Question favorite
+        description: Question sélectionnée comme favorite par 25 utilisateurs
       tutor:
         name: Tuteur
-        description: donner une solution à une question ayant une moyenne de votes supérieure à 2
+        description: "Donner une solution à une question ayant une moyenne de votes supérieure à 2"
       addict:
         name: Accro
-        description: visited the site each day for 20 consecutive days
+        description: Visiter le site 20 jours consécutifs
       good_question:
         name: Bonne question
         description: Avoir fait une question ayant atteint une moyenne de 10 votes
@@ -41,35 +43,37 @@ fr:
         description: Avoir fait une réponse ayant atteint une moyenne de 10 votes
       pioneer:
         name: Pionnier
-        description: Être parmi les premiers à s'être inscrit
+        description: "Être parmi les premiers à s'être inscrit"
       supporter:
         name: Supporter
-        description: voter positivement pour la première fois
+        description: Voter positivement pour la première fois
       critic:
         name: Critique
-        description: voter négativement pour la première fois
+        description: "Voter négativement pour la première fois"
       inquirer:
         name: Interrogateur
-        description: "poser une question pour la première fois"
+        description: "Poser une question pour la première fois"
       troubleshooter:
-        name: solutionneur
-        description: "répondre pour la première fois"
+        name: Solutionneur
+        description: "Répondre pour la première fois"
       commentator:
         name: Commentateur
-        description: Left 10 comments
+        description: Recevoir 100 votes positifs
       merit_medal:
-        name: "Médaille de l'éffort"
-        description: recevoir 200 votes positifs
+        name: Médaille de l'éffort
+        description: Recevoir 200 votes positifs
       effort_medal:
-        name: Medalla al esfuerzo
-        description: recevoir 100 votes positifs
+        name: Médaille de l'éffort
+        description: Recevoir 100 votes positifs
       student:
         name: "Étudiant"
-        description: Asked first question with at least one up vote
+        description: Recevoir au moins un vote positif sur sa première question
       shapado:
+        name: Shapado
         description: visited the site each day for 8 consecutive days
       editor:
-        description: first edited post
+        name "Éditeur"
+        description: premier poste édité
   activerecord:
     models:
       badge: Insigne
