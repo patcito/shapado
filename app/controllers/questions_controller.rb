@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
 
   subtabs :index => [[:newest, "created_at desc"], [:hot, "hotness desc"], [:votes, "votes_count desc"], [:activity, "activity_at desc"]],
           :unanswered => [[:newest, "created_at desc"], [:votes, "votes_count desc"], [:mytags, "created_at desc"]],
-          :show => [[:oldest, "created_at asc"], [:newest, "created_at desc"], [:votes, "votes_count desc"]]
+          :show => [[:votes, "votes_count desc"], [:oldest, "created_at asc"], [:newest, "created_at desc"]]
   helper :votes
 
   # GET /questions

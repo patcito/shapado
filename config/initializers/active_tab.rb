@@ -40,10 +40,14 @@ module ActiveTab
           if logged_in?
             @active_subtab, @current_order = current_user.default_subtab[key]
             @store_subtab = false
-          elsif session[:subtab] && session[:subtab][key]
+          end
+
+          if @active_subtab.nil? && session[:subtab] && session[:subtab][key]
             @active_subtab, @current_order = session[:subtab][key]
-            @store_subtab = false
-          else
+            @store_subtab = logged_in?
+          end
+
+          if @active_subtab.nil?
             @active_subtab, @current_order = @subtabs.first
           end
         end
