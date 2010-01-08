@@ -41,26 +41,13 @@ class QuestionsController < ApplicationController
   def unanswered
     set_page_title(t("questions.unanswered.title"))
 
-    @active_subtab = params.fetch(:sort, "newest")
-    case @active_subtab
-      when "newest"
-        order = "activity_at desc"
-      when "votes"
-        order = "votes_count desc"
-      when "mytags"
-        order = "created_at desc"
-      else
-        @active_subtab = "newest"
-        order = "created_at desc"
-    end
-
     @active_subtab = "newest" if !logged_in? && @active_subtab == "mytags"
 
     @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
                     merge(language_conditions.merge(language_conditions)), 25)
 
     if @active_subtab != "mytags"
-      @questions = Question.paginate({:order => order,
+      @questions = Question.paginate({:order => current_order,
                                       :per_page => 25,
                                       :page => params[:page] || 1,
                                       :fields => (Question.keys.keys - ["_keywords", "watchers"])
@@ -91,24 +78,11 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
 
     raise PageNotFound  unless @question
-    order = "created_at desc"
-    @active_subtab = params.fetch(:sort, "newest")
-    case @active_subtab
-      when "oldest"
-        order = "created_at asc"
-      when "newest"
-        order = "created_at desc"
-      when "votes"
-        order = "votes_count desc"
-      else
-        @active_subtab = "newest"
-        order = "created_at desc"
-    end
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
 
     options = {:per_page => 25, :page => params[:page] || 1,
-               :order => order, :banned => false}
+               :order => current_order, :banned => false}
     options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
     @answers = @question.answers.paginate(options)
 
