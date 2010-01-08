@@ -9,6 +9,7 @@ class Answer
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
   key :versions, Array
+  key :wiki, Boolean, :default => false
 
   timestamps!
 

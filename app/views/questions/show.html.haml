@@ -98,7 +98,11 @@
 -form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
   = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
   .group.navform
+    .right
+      = f.label :wiki, "Wiki", :class => "radio"
+      = f.check_box :wiki, :class => "checkbox"
     = submit_tag t('answers.form.submit'), :class => "button"
+  .clear
 
 -content_for :sidebar do
   .block
@@ -110,7 +114,7 @@
   .block.stats
     -if @question.group_id != current_group.id
       = t(".asked_on")
-      = @question.group.name
+      &= @question.group.name
 
     .entry
       .text.asked
@@ -131,10 +135,11 @@
     .block
       %h3
         = t(".share")
-      %ul.navigation.content
-        %li
-          = render :partial => "twitter"
-        %li
-          = render :partial => "identica"
-        %li
-          = render :partial => "facebook"
+      .content
+        %ul.navigation
+          %li
+            = render :partial => "twitter"
+          %li
+            = render :partial => "identica"
+          %li
+            = render :partial => "facebook"

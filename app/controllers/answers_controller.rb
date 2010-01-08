@@ -16,7 +16,7 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new
-    @answer.safe_update(%w[parent_id body], params[:answer])
+    @answer.safe_update(%w[parent_id body wiki], params[:answer])
     @question = Question.find(params[:question_id])
 
     if @answer.parent_id.blank?
@@ -121,7 +121,7 @@ class AnswersController < ApplicationController
     if @answer.nil?
       redirect_to questions_path
     elsif !(current_user.can_edit_others_posts_on?(@answer.group) ||
-          current_user.can_modify?(@answer))
+          current_user.can_modify?(@answer) || @answer.wiki)
       reputation = @answer.group.reputation_constrains["edit_others_posts"]
       flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                                     :min_reputation => reputation,
