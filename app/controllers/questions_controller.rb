@@ -8,28 +8,17 @@ class QuestionsController < ApplicationController
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question
 
+  subtabs :index => [[:newest, "created_at desc"], [:hot, "hotness desc"], [:votes, "votes_count desc"], [:activity, "activity_at desc"]],
+          :unanswered => [[:newest, "created_at desc"], [:votes, "votes_count desc"], [:mytags, "created_at desc"]],
+          :show => [[:oldest, "created_at asc"], [:newest, "created_at desc"], [:votes, "votes_count desc"]]
   helper :votes
 
   # GET /questions
   # GET /questions.xml
   def index
     set_page_title(t("questions.index.title"))
-    order = "created_at desc"
-    @active_subtab = params.fetch(:sort, "newest")
-    case @active_subtab
-      when "activity"
-        order = "activity_at desc"
-      when "votes"
-        order = "votes_count desc"
-      when "hot"
-        order = "hotness desc"
-      else
-        @active_subtab = "newest"
-        order = "created_at desc"
-    end
-
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
-                                   :order => order,
+                                   :order => current_order,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
                                   merge( scoped_conditions(:banned => false)))
 
