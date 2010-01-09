@@ -70,10 +70,10 @@ fr:
         description: Recevoir au moins un vote positif sur sa première question
       shapado:
         name: Shapado
-        description: visited the site each day for 8 consecutive days
+        description: Visiter le site tous jours durant 8 jours consécutifs
       editor:
         name "Éditeur"
-        description: premier poste édité
+        description: Premier poste édité
   activerecord:
     models:
       badge: Insigne
