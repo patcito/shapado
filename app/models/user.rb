@@ -234,13 +234,15 @@ class User
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
-      self.stats.visited_on(now)
     end
   end
 
   def on_activity(activity, group)
-    self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
-                                               :upsert => true)
+    if !self.last_logged_at.today?
+      self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
+                                                  :upsert => true)
+    end
+    self.stats(:last_activity_at, :user_id).activity_on(group, Time.now)
     self.update_reputation(activity, group)
   end
 
@@ -282,11 +284,9 @@ class User
     self.reputation.fetch(group.id, 0.0 ).to_i
   end
 
-  def stats(year = nil)
-    fields = [:_id, :user_id, :views_count]
-    fields << "visits_#{year}" if year
-
-    UserStat.find_or_create_by_user_id(self._id, :select => fields)
+  def stats(*extra_fields)
+    fields = [:_id]
+    UserStat.find_or_create_by_user_id(self._id, :select => fields+extra_fields)
   end
 
   def badges_on(group, opts = {})

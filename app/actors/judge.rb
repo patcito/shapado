@@ -88,7 +88,7 @@ module Actors
         user.find_badge_on(group,"supporter") || user_badges.create!(:token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
-      if user.stats.views_count >= 10000
+      if user.stats(:views_count).views_count >= 10000
         user.find_badge_on(group,"popular_person") || user.badges.create!(:token => "popular_person", :type => "silver", :group_id => group.id)
       end
 
@@ -130,6 +130,20 @@ module Actors
         if voteable.votes_average >= 10
           user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
+      end
+    end
+
+    expose :on_activity
+    def on_activity(payload)
+      group_id, user_id = payload
+      user = User.find(user_id, :select => [:_id])
+      group = Group.find(group_id, :select => [:_id])
+
+      days = user.stats(:activity_days).activity_days[group_id]
+      if days > 20 && user.find_badge_on(group, "addict").nil?
+        user.badges.create!(:token => "addict", :group_id => group_id)
+      elsif days > 100 && user.find_badge_on(group, "fanatic").nil?
+        user.badges.create!(:token => "fanatic", :group_id => group_id)
       end
     end
 

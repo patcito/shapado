@@ -61,6 +61,6 @@ class Badge
 
   protected
   def set_type
-    self[:type] ||= self.find_type
+    self[:type] ||= self.class.type_of(self[:token])
   end
 end
