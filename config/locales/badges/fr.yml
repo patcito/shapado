@@ -5,7 +5,7 @@ fr:
       description: "Liste des insignes que vous pouvez gagner. Partager votre connaissance, gagner des insignes."
     show:
       title: Insigne {{type}}
-      description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:":"
+      description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
     shared:
       rockstar:
         description: 1000 votes positifs, 10 négatifs maximum
@@ -19,7 +19,7 @@ fr:
         description: Recevoir 300 votes positifs
       famous_question:
         name: Question renommée
-        description: question ayant reçu 10000 visites
+        description: "Question ayant reçu 10000 visites"
       popular_person:
         name: Personne populaire
         description: "Votre profil est visité 10000 fois"
@@ -28,13 +28,13 @@ fr:
         description: "Donner une solution à une question ayant une moyenne de votes supérieure à 40"
       favorite_question:
         name: Question favorite
-        description: Question sélectionnée comme favorite par 25 utilisateurs
+        description: "Question sélectionnée comme favorite par 25 utilisateurs"
       tutor:
         name: Tuteur
         description: "Donner une solution à une question ayant une moyenne de votes supérieure à 2"
       addict:
         name: Accro
-        description: Visiter le site 20 jours consécutifs
+        description: "Visiter le site 20 jours consécutifs"
       good_question:
         name: Bonne question
         description: Avoir fait une question ayant atteint une moyenne de 10 votes
@@ -63,17 +63,17 @@ fr:
         name: Médaille de l'éffort
         description: Recevoir 200 votes positifs
       effort_medal:
-        name: Médaille de l'éffort
+        name: "Médaille de l'éffort"
         description: Recevoir 100 votes positifs
       student:
         name: "Étudiant"
         description: Recevoir au moins un vote positif sur sa première question
       shapado:
         name: Shapado
-        description: Visiter le site tous jours durant 8 jours consécutifs
+        description: "Visiter le site tous jours durant 8 jours consécutifs"
       editor:
-        name "Éditeur"
-        description: Premier poste édité
+        name: "Éditeur"
+        description: "Premier poste édité"
   activerecord:
     models:
       badge: Insigne
