@@ -140,7 +140,9 @@ module Actors
       group = Group.find(group_id, :select => [:_id])
 
       days = user.stats(:activity_days).activity_days[group_id]
-      if days > 20 && user.find_badge_on(group, "addict").nil?
+      if days > 8 && user.find_badge_on(group, "shapado").nil?
+        user.badges.create!(:token => "shapado", :group_id => group_id)
+      elsif days > 20 && user.find_badge_on(group, "addict").nil?
         user.badges.create!(:token => "addict", :group_id => group_id)
       elsif days > 100 && user.find_badge_on(group, "fanatic").nil?
         user.badges.create!(:token => "fanatic", :group_id => group_id)
