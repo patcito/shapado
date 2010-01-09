@@ -11,11 +11,9 @@
   =vote_box(@question, question_path(current_languages,@question))
 
   -if logged_in? && favorite = current_user.favorite(@question)
-    -form_tag question_favorite_path(current_languages, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
-      = image_submit_tag("favorites.png")
+    =link_to image_tag("favorites.png"), unfavorite_question_path(current_languages, @question), :id => "unfavorite-link"
   -else
-    - form_tag question_favorites_path(current_languages, @question.id), :id => "favorite_form" do
-      = image_submit_tag("unfavorites.png")
+    =link_to image_tag("unfavorites.png"), favorite_question_path(current_languages, @question), :id => "favorite-link"
   .favorites_count
     &= @question.favorites_count
 

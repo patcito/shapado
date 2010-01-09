@@ -24,12 +24,13 @@ ActionController::Routing::Routes.draw do |map|
                             :member => {:solve => :get,
                                         :unsolve => :get,
                                         :flag => :get,
+                                        :favorite => :any,
+                                        :unfavorite => :any,
                                         :watch => :any,
                                         :unwatch => :any,
                                         :move => :get,
                                         :move_to => :put} do |questions|
     questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
-    questions.resources :favorites
   end
 
   map.resources :questions, :collection => {:tags => :get,

@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
   before_filter :check_update_permissions, :only => [:edit, :update]
+  before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite]
   before_filter :set_active_tag
 
   tabs :default => :questions, :tags => :tags,
@@ -60,6 +61,11 @@ class QuestionsController < ApplicationController
                                     :page => params[:page] || 1,
                                     :fields => (Question.keys.keys - ["_keywords", "watchers"])
                                    }.merge(conditions))
+
+    respond_to do |format|
+      format.html # unanswered.html.erb
+      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
+    end
   end
 
   def tags
@@ -144,10 +150,10 @@ class QuestionsController < ApplicationController
         end
 
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.json  { render :json => @question.to_json, :status => :created, :location => @question }
+        format.json { render :json => @question.to_json(:except => %w[_keywords watchers]), :status => :created}
       else
         format.html { render :action => "new" }
-        format.json  { render :json => @question.errors, :status => :unprocessable_entity }
+        format.json { render :json => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -243,19 +249,61 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def favorite
+    @favorite = Favorite.new
+    @favorite.question_id = @question.id
+    @favorite.user = current_user
+    @favorite.group = @question.group
+
+    @question.add_watcher(current_user)
+
+    respond_to do |format|
+      if @favorite.save
+        @question.add_favorite!(@favorite, current_user)
+        flash[:notice] = t("favorites.create.success")
+        format.html { redirect_to(question_path(current_languages, @question)) }
+        format.json  { render :json => @favorite.to_json, :status => :created, :location => @question }
+      else
+        flash[:error] = @favorite.errors.full_messages.join("**")
+        format.html { redirect_to(question_path(current_languages, @question)) }
+        format.json  { render :json => @favorite.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def unfavorite
+    @favorite = Favorite.find(:first, :limit => 1, :question_id => @question.id)
+    if @favorite
+      if current_user.can_modify?(@favorite)
+        @question.remove_favorite!(@favorite, current_user)
+        @favorite.destroy
+        @question.remove_watcher(current_user)
+      end
+    end
+
+    respond_to do |format|
+      format.html { redirect_to(question_path(current_languages, @question)) }
+      format.json  { head :ok }
+    end
+  end
 
   def watch
     @question = Question.find_by_slug_or_id(params[:id])
     @question.add_watcher(current_user)
     flash[:notice] = t("questions.watch.success")
-
-    redirect_to question_path(current_languages, @question)
+    respond_to do |format|
+      format.html {redirect_to question_path(current_languages, @question)}
+      format.json { head :ok }
+    end
   end
 
   def unwatch
     @question = Question.find_by_slug_or_id(params[:id])
     @question.remove_watcher(current_user)
-    redirect_to question_path(current_languages, @question)
+    respond_to do |format|
+      format.html {redirect_to question_path(current_languages, @question)}
+      format.json { head :ok }
+    end
   end
 
   def move
@@ -302,6 +350,23 @@ class QuestionsController < ApplicationController
                                     :min_reputation => reputation,
                                     :action => I18n.t("users.actions.edit_others_posts"))
       redirect_to question_path(current_languages, @question)
+    end
+  end
+
+  def check_favorite_permissions
+    @question = Question.find_by_slug_or_id(params[:id])
+    unless logged_in?
+      flash[:error] = t(:unauthenticated, :scope => "favorites.create")
+      respond_to do |format|
+        format.html do
+          flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
+          redirect_to question_path(current_languages, @question)
+        end
+        format.json do
+          flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
+          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+        end
+      end
     end
   end
 
