@@ -45,6 +45,7 @@ fr:
       tags: tags sans réponses
       empty: "Ce groupe n'a aucune question sans réponses"
       my_tags: "mes tags"
+      expert: expert
     tags:
       title: Tags
     new:

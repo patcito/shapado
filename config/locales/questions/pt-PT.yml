@@ -45,6 +45,7 @@
       tags: Etiquetas Sem Resposta
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
+      expert: expert
     tags:
       title: Etiquetas
     new:

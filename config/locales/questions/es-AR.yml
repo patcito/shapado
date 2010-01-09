@@ -45,6 +45,7 @@
       tags: etiquetas sin respuesta
       empty: "Este grupo no tiene preguntas no contestadas."
       my_tags: mis etiquetas
+      expert: expertos
     tags:
       title: Etiquetas
     new:

@@ -64,7 +64,7 @@ class UserStat
   def add_expert_tags(*tags)
     self.collection.update({:_id => self._id,
                             :expert_tags => {:$nin => tags} },
-                           {:$pushAll => {:question_tags => tags}},
+                           {:$pushAll => {:expert_tags => tags}},
                            {:upsert => true})
   end
 end

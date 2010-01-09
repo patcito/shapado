@@ -34,9 +34,9 @@ module ActiveTab
         key = "#{params[:controller]}/#{params[:action]}"
         @subtabs = subtabs[params[:action].to_sym]
         @active_subtab = params[:sort]
-        @store_subtab = true
+        @store_subtab = !@subtabs.blank?
 
-        if @active_subtab.nil?
+        if @store_subtab && @active_subtab.nil?
           if logged_in?
             @active_subtab, @current_order = current_user.default_subtab[key]
             @store_subtab = false
