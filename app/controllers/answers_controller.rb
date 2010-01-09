@@ -96,6 +96,8 @@ class AnswersController < ApplicationController
 
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
+
+        Magent.push("/actors/judge", :on_update_answer, @answer.id)
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
         format.json  { head :ok }
       else

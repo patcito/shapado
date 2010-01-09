@@ -70,6 +70,8 @@
         description: primera pregunta con al menos un voto positivo
       shapado:
         description: visita el sitio 8 días consecutivos
+      editor:
+        description: primer mensaje editado
   activerecord:
     models:
       badge: insignia

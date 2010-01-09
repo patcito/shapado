@@ -51,6 +51,8 @@
         description: Asked first question with at least one up vote
       shapado:
         description: visited the site each day for 8 consecutive days
+      editor:
+        description: first edited post
   activerecord:
     models:
       badge: badge

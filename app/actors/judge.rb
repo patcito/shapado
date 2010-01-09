@@ -157,6 +157,14 @@ module Actors
       end
     end
 
+    expose :on_update_answer
+    def on_update_answer(payload)
+      answer = Answer.find(payload.first)
+      user = answer.updated_by
+
+      user.find_badge_on(answer.group, "editor") || user.badges.create!(:token => "editor", :group_id => answer.group_id)
+    end
+
     expose :on_comment
     def on_comment(payload)
       question_id, comment_id = payload
