@@ -203,6 +203,17 @@ module Actors
         user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
       end
     end
+
+    expose :on_question_favorite
+    def on_question_favorite(payload)
+      question = Question.find(payload.first)
+      user = question.user
+      group = question.group
+      if question.favorites_count >= 25
+        user_badges = user.badges
+        user_badges.create!(:token => "famous_question", :type => "gold", :group_id => group.id, :source => question)
+      end
+    end
   end
   Magent.register(Judge.new)
 end

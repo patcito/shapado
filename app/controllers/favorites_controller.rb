@@ -13,6 +13,7 @@ class FavoritesController < ApplicationController
     respond_to do |format|
       if @favorite.save
         @question.add_favorite!(@favorite, current_user)
+        Magent.push("/actors/judge", :on_question_favorite, @question.id)
         flash[:notice] = t("favorites.create.success")
         format.html { redirect_to(question_path(current_languages, @question)) }
         format.xml  { render :xml => @favorite, :status => :created, :location => @favorite }
