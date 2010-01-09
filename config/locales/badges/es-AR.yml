@@ -19,7 +19,7 @@
         description: recibir 300 votos positivos
       famous_question:
         name: Pregunta famosa
-        description: Responde una pregunta con 10000 visitas
+        description: responde una pregunta con 10000 visitas
       popular_person:
         name: Persona popular
         description: que tu perfil sea visitado 10000 veces
@@ -28,7 +28,7 @@
         description: dar solución a una pregunta con promedio de votos superior a 40
       favorite_question:
         name: Pregunta favorita
-        description: Pregunta seleccionada como preferida por 25 usuarios
+        description: pregunta seleccionada como preferida por 25 usuarios
       tutor:
         name: Tutor
         description: dar solución a una pregunta con promedio de votos superior a 2
@@ -37,13 +37,13 @@
         description: visita el sitio 20 días consecutivos
       good_question:
         name: Buena pregunta
-        description: Haber hecho una pregunta que alcanzo el promedio de 10 votos
+        description: haber hecho una pregunta que alcanzo el promedio de 10 votos
       good_answer:
         name: Buena respuesta
-        description: Haber hecho una respuesta que alcanzo el promedio de 10 votos
+        description: haber hecho una respuesta que alcanzo el promedio de 10 votos
       pioneer:
         name: Pionero
-        description: Ser de los primeros usuarios registrados
+        description: ser de los primeros usuarios registrados
       supporter:
         name: Partidario
         description: votar positivamente por primera vez
@@ -58,7 +58,7 @@
         description: responder por primera vez
       commentator:
         name: Comentador
-        description: Deja 10 comentarios
+        description: deja 10 comentarios
       merit_medal:
         name: Medalla al merito
         description: recibir 200 votos positivos
@@ -68,6 +68,8 @@
       student:
         name: Estudiante
         description: primera pregunta con al menos un voto positivo
+      shapado:
+        description: visita el sitio 8 días consecutivos
   activerecord:
     models:
       badge: insignia

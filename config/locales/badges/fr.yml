@@ -66,6 +66,8 @@ fr:
       student:
         name: "Étudiant"
         description: Asked first question with at least one up vote
+      shapado:
+        description: visited the site each day for 8 consecutive days
   activerecord:
     models:
       badge: Insigne

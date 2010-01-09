@@ -12,7 +12,7 @@ en:
       popstar:
         description: 500 positive votes, 10 negative votes maximum
       fanatic:
-        description: Visited the site each day for 100 consecutive days
+        description: visited the site each day for 100 consecutive days
       service_medal:
         description: 300 positive votes
       famous_question:
@@ -42,13 +42,15 @@ en:
       troubleshooter:
         description: answer for the first time
       commentator:
-        description: Left 10 comments
+        description: left 10 comments
       merit_medal:
         description: get 200 positive votes
       effort_medal:
         description: get 100 positive votes
       student:
-        description: Asked first question with at least one up vote
+        description: asked first question with at least one up vote
+      shapado:
+        description: visited the site each day for 8 consecutive days
   activerecord:
     models:
       badge: badge
