@@ -262,11 +262,11 @@ class QuestionsController < ApplicationController
         @question.add_favorite!(@favorite, current_user)
         flash[:notice] = t("favorites.create.success")
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.json  { render :json => @favorite.to_json, :status => :created, :location => @question }
+        format.json { head :ok }
       else
         flash[:error] = @favorite.errors.full_messages.join("**")
         format.html { redirect_to(question_path(current_languages, @question)) }
-        format.json  { render :json => @favorite.errors, :status => :unprocessable_entity }
+        format.json { render :json => @favorite.errors, :status => :unprocessable_entity }
       end
     end
   end

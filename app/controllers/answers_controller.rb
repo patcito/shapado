@@ -39,7 +39,7 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new
     @answer.safe_update(%w[parent_id body wiki], params[:answer])
-    @question = Question.find(params[:question_id])
+    @question = Question.find_by_slug_or_id(params[:question_id])
 
     if @answer.parent_id.blank?
       @answer.question = @question
@@ -52,35 +52,38 @@ class AnswersController < ApplicationController
       login_required
     else
       @answer.user = current_user
+      respond_to do |format|
+        if @question && @answer.save
+          current_user.stats.add_answer_tags(*@question.tags)
 
-      if @question && @answer.save
-        current_user.stats.add_answer_tags(*@question.tags)
+          unless @answer.comment?
+            @question.answer_added!
 
-        unless @answer.comment?
-          @question.answer_added!
-
-          # TODO: use magent to do it
-          users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
-          users.push(@question.user)
-          users.each do |u|
-            email = u.email
-            if !email.blank? && u.notification_opts["new_answer"] == "1"
-              Notifier.deliver_new_answer(u, current_group, @answer)
+            # TODO: use magent to do it
+            users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
+            users.push(@question.user)
+            users.each do |u|
+              email = u.email
+              if !email.blank? && u.notification_opts["new_answer"] == "1"
+                Notifier.deliver_new_answer(u, current_group, @answer)
+              end
             end
+
+            current_group.on_activity(:answer_question)
+            current_user.on_activity(:answer_question, current_group)
+          else
+            Magent.push("/actors/judge", :on_comment, @question.id, @answer.id)
+            current_user.on_activity(:comment_question, current_group)
           end
 
-          current_group.on_activity(:answer_question)
-          current_user.on_activity(:answer_question, current_group)
+          flash[:notice] = t(:flash_notice, :scope => "answers.create")
+          format.html{redirect_to question_path(current_languages, @question)}
+          format.json { render :json => @answer.to_json(:except => %w[_keywords]) }
         else
-          Magent.push("/actors/judge", :on_comment, @question.id, @answer.id)
-          current_user.on_activity(:comment_question, current_group)
+          flash[:error] = t(:flash_error, :scope => "answers.create")
+          format.html{redirect_to question_path(current_languages, @question)}
+          format.json { render :json => @answer.errors, :status => :unprocessable_entity }
         end
-
-        flash[:notice] = t(:flash_notice, :scope => "answers.create")
-        redirect_to question_path(current_languages, @question)
-      else
-        flash[:error] = t(:flash_error, :scope => "answers.create")
-        redirect_to question_path(current_languages, @question)
       end
     end
   end
