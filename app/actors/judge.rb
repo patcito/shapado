@@ -108,6 +108,14 @@ module Actors
         if vote_value >= 300
           vuser.find_badge_on(group,"service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
+
+        if vote_value >= 500 && vuser.votes_down <= 10
+          vuser.find_badge_on(group,"popstar") || user_badges.create!(:token => "popstar", :group_id => group.id, :source => vote)
+        end
+
+        if vote_value >= 1000 && vuser.votes_down <= 10
+          vuser.find_badge_on(group,"rockstar") || user_badges.create!(:token => "rockstar", :group_id => group.id, :source => vote)
+        end
       end
 
       # questions
