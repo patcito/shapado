@@ -10,6 +10,8 @@
     =link_to t("layouts.manage.properties"), manage_properties_path
   %li.widgets
     =link_to "Widgets", manage_widgets_path
+  %li.reputation
+    =link_to t("layouts.manage.reputation"), manage_reputation_path
 
   -if current_group.has_custom_ads
     %li.ads

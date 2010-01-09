@@ -6,3 +6,5 @@ es-AR:
       widgets:
         title: Administrar los widgets de la barra lateral
         description: Usar las flechas para mover los widgets
+      reputation:
+        title: Setup reputation's properties

@@ -6,3 +6,5 @@ pt-PT:
       widgets:
         title: Manage Sidebar Widgets
         description: Use the arrows to move your widgets
+      reputation:
+        title: Setup reputation's properties

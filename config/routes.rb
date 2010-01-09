@@ -60,6 +60,7 @@ ActionController::Routing::Routes.draw do |map|
     manage.stats '/stats', :action => 'stats'
     manage.widgets '/widgets', :action => 'widgets'
     manage.move_widget '/move_widget', :action => 'move_widget'
+    manage.reputation '/reputation', :action => 'reputation'
   end
 
   map.search '/search', :controller => "searches", :action => "index"

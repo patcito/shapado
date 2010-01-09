@@ -190,5 +190,9 @@ class Group
       self[:language] = nil
     end
   end
+
+  def self.humanize_reputation_constrain(key)
+    I18n.t("groups.shared.reputation_constrains", :default => key.humanize)
+  end
 end
 

@@ -17,6 +17,9 @@ class Admin::ManageController < ApplicationController
   def actions
   end
 
+  def reputation
+  end
+
   def widgets
     @widgets = @group.widgets.all(:order => "position asc")
   end
