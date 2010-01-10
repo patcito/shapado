@@ -6,7 +6,8 @@ class Admin::ManageController < ApplicationController
        :properties => :properties,
        :actions => :actions,
        :stats => :stats,
-       :widgets => :widgets
+       :widgets => :widgets,
+       :reputation => :reputation
 
   def dashboard
   end
@@ -18,6 +19,7 @@ class Admin::ManageController < ApplicationController
   end
 
   def reputation
+    @active_subtab = params[:tab] || "rewards"
   end
 
   def widgets

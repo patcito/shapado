@@ -255,9 +255,9 @@ class User
   end
 
   def update_reputation(key, group)
-    value = REPUTATION_CONF[key.to_s]
+    value = group.reputation_rewards[key.to_s].to_i
     Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
-    value = key if value.nil? && key.kind_of?(Integer)
+    value = key if key.kind_of?(Integer)
     if value
       User.collection.update({:_id => self._id},
                              {:$inc => {"reputation.#{group.id}" => value}},

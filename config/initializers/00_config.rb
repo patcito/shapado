@@ -44,7 +44,7 @@ REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "edit_others_posts" => 2000, "view_offensive_counts" => 2000, "vote_to_open_any_question" => 3000,
 "vote_to_close_any_question" => 3000, "delete_closed_questions" => 10000, "moderate" => 10000}
 
-REPUTATION_CONF = YAML.load_file(reputation_config_file)
+REPUTATION_REWARDS = YAML.load_file(reputation_config_file)
 
 
 REST_AUTH_SITE_KEY         = AppConfig.rest_auth_key

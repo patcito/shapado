@@ -8,3 +8,5 @@ en:
         description: Use the arrows to move your widgets
       reputation:
         title: Setup reputation's properties
+        constrains: constrains
+        rewards: rewards
