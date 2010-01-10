@@ -9,6 +9,7 @@ en:
       for_tag_bronze: 200 votes in tag {{tag}}
       for_tag_silver: 400 votes in tag {{tag}}
       for_tag_gold: 1000 votes in tag {{tag}}
+      earned: earned
     shared:
       rockstar:
         description: 1000 positive votes, 10 negative votes maximum

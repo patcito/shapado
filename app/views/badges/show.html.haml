@@ -17,7 +17,7 @@
   /Users
   %ul.items#users
     -@users.each do |user|
-      = render :partial => "user", :object => user
+      = render :partial => "user", :object => user, :locals => {:badge => @badge}
 
   #additional_info
     =will_paginate @badges
