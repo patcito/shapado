@@ -1,5 +1,8 @@
 fr:
   widgets:
+    index:
+      title: Administrer les widgets de la barre latérale
+      description: Utiliser les flèches pour déplacer les widgets
     badges:
       title: Insigne récents
       description: "Ce widget montre les insignes récement gagnées par les utilisateurs ou questions"

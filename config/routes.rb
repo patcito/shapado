@@ -51,15 +51,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :votes
   map.resources :flags
 
+  map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.manage '/manage', :controller => 'admin/manage', :action => 'properties'
   map.members '/members', :controller => "members", :path_prefix => "/manage", :action => "index"
+
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_",
                    :path_prefix => "/manage" do |manage|
     manage.properties '/properties', :action => 'properties'
     manage.actions '/actions', :action => 'actions'
     manage.stats '/stats', :action => 'stats'
-    manage.widgets '/widgets', :action => 'widgets'
-    manage.move_widget '/move_widget', :action => 'move_widget'
     manage.reputation '/reputation', :action => 'reputation'
   end
 
