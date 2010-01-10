@@ -44,7 +44,7 @@
   %ul.list#badges
     -@badges.each do |badge|
       %li
-        = render :partial => "badges/badge", :object => badge
+        = render :partial => "badges/badge", :object => badge, :locals => {:hide_user => true}
   .additional_info
     = will_paginate @badges, :param_name => "badges_page"
     .clear
