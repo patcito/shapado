@@ -89,6 +89,7 @@ class Question
   def self.related_questions(question, opts = {})
     opts[:per_page] ||= 10
     opts[:page]     ||= 1
+    opts[:group_id] = question.group_id
 
     Question.paginate(opts.merge(:_keywords => {:$in => question.tags}, :_id => {:$ne => question.id}))
   end

@@ -92,6 +92,7 @@ class ApplicationController < ActionController::Base
       languages
     end
   end
+  helper_method :find_languages
 
   def language_conditions
     conditions = {}
