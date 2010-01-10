@@ -23,6 +23,7 @@ class BadgesController < ApplicationController
     user_ids = @badges.map { |b| b.user_id }
     @users = User.find(user_ids)
     @badge = Badge.new(:token => params[:id])
+    @badge[:type] ||= (@badge.type || params[:type] || "bronze")
 
     respond_to do |format|
       format.html # show.html.erb

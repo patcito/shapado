@@ -104,5 +104,9 @@ module ApplicationHelper
   def require_css(*files)
     content_for(:css) { stylesheet_link_tag(*files) }
   end
+
+  def render_tag(tag)
+    %@<span class="tag"><a href="#{questions_path(:language => current_languages, :tags => tag)}">#{@badge.token}</a></span>@
+  end
 end
 
