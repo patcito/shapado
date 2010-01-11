@@ -23,9 +23,5 @@ function tagCloud(q, limit) {
     sorted.push( { name : tag , count : counts[tag] } )
   }
 
-  return sorted.sort(
-    function(l,r){
-      return r.count - l.count;
-    }
-  ).slice(0,limit||30);
+  return sorted.slice(0,limit||30);
 }
