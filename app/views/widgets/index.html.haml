@@ -16,8 +16,8 @@
             .action
               = link_to t("scaffold.destroy"), widget_path(widget), :method => :delete, :confirm => t("scaffold.sure", :model => "widget")
             -form_tag move_widget_path(widget), :class => "vote_box" do
-              = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
-              = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
+              = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => "up")
+              = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => "down")
             .clear
           .widget_content
             = render :partial => widget.partial_name, :locals => {:widget => widget}
