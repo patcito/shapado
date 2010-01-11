@@ -2,8 +2,8 @@ en:
   admin:
     manage:
       properties:
-        title: Group properties
+        title: group properties
       reputation:
-        title: Setup reputation's properties
+        title: setup reputation's properties
         constrains: constrains
         rewards: rewards

@@ -1,18 +1,18 @@
 en:
   errors:
-    options_label: "Other things to try:"
+    options_label: "other things to try:"
     go_to: "go to {{link}} page"
-    help_us_answer: Help us to answer {{link}}
+    help_us_answer: help us to answer {{link}}
     search: "search"
     forbidden:
       title: "access denied"
-      explanation: "You don't have the required rights to access this page."
+      explanation: "you don't have the required rights to access this page."
     not_found:
-      title: "Page not found."
-      explanation: "You may have mistyped the address or the page may have moved."
+      title: "page not found."
+      explanation: "you may have mistyped the address or the page may have moved."
     unprocessable_entity:
-      title: "The change you wanted was rejected."
-      explanation: "Maybe you tried to change something you didn't have access to."
+      title: "the change you wanted was rejected."
+      explanation: "maybe you tried to change something you didn't have access to."
     internal_error:
-      title: "We're sorry, but something went wrong."
-      explanation: "We've been notified about this issue and we'll take a look at it shortly."
+      title: "we're sorry, but something went wrong."
+      explanation: "we've been notified about this issue and we'll take a look at it shortly."

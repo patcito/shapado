@@ -3,7 +3,7 @@ en:
     facts:
       prices:
         cols:
-          onsite: On site
+          onsite: on site
         stackexchange:
           small: $129/month
           medium: $999/month
@@ -16,11 +16,11 @@ en:
           onsite: prolly $0 on your own server duh
       features:
         cols:
-          adaptable: Adaptable
-          multitopic: Multi-topic
-          multilanguage: Multi-language
-          foss: Free/Open Source
-          joel: Will I make Joel richer?
+          adaptable: adaptable
+          multitopic: multi-topic
+          multilanguage: multi-language
+          foss: free/open source
+          joel: will i make joel richer?
         stackexchange:
           adaptable: no
           multitopic: no
@@ -33,8 +33,12 @@ en:
           multilanguage: yes!
           foss: yes!
           joel: "no :/"
+    feedback:
+      title: send your feedback
+      feedback_title: title
+      feedback_description: description
     index:
       hot:     hot
       active:  active
-      recent_questions: Recent questions
-      quick_question: Ask a Question, we will find someone to answer
+      recent_questions: recent questions
+      quick_question: ask a question, we will find someone to answer

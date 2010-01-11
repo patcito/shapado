@@ -2,12 +2,12 @@ en:
   flags:
     form:
       spam: spam
-      offensive: offensive, abusive or Hate speech
-      attention: Requires Moderator attention
-      label: Please flag with care
+      offensive: offensive, abusive or hate speech
+      attention: requires moderator attention
+      label: please flag with care
     create:
       flash_notice: thanks for your report
-      flash_error: You cannot flag this
+      flash_error: you cannot flag this
 
   activerecord:
     models:
@@ -15,4 +15,4 @@ en:
       flag: flag
     attributes:
       flag:
-        type: Reason
+        type: reason

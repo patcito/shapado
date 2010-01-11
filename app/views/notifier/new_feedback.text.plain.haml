@@ -1,3 +1,7 @@
-== The user #{h(@user.login)}<#{h(@user.email)}> sent a feedback
+-if @user
+  == The user #{h(@user.login)}<#{h(@user.email)}> sent a feedback
+-else
+  anonymous user sent a feedback
+
 == subject: #{h(@subject)}
 = @content

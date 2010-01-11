@@ -1,11 +1,11 @@
 en:
   comments:
     create:
-      flash_notice: Thanks for your comment
+      flash_notice: thanks for your comment
     update:
-      flash_notice: "Comment was successfully updated."
+      flash_notice: "comment was successfully updated."
     shared:
       add_comment: "add comment..."
-      comment_submit: "Comment"
+      comment_submit: "comment"
   models:
-    comments: Comments
+    comments: comments

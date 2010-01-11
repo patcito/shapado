@@ -1,23 +1,23 @@
-"pt-PT":
+pt-PT:
   users:
     index:
-      title: Todos os utilizadores
-      empty: "Este grupo não tem nenhum membro, participa para te juntares a este grupo."
+      title: todos os utilizadores
+      empty: "este grupo não tem nenhum membro, participa para te juntares a este grupo."
     new:
-      title: Registar-se como novo utlizador
-      submit: Registar
+      title: registar-se como novo utlizador
+      submit: registar
     edit:
-      title: Preferências
-      submit: Gravar
+      title: preferências
+      submit: gravar
     form:
-      information: Informação
-      notifications: Notificações
-      new_answer_notification: Receber notificações via email de novas respostas
-      give_advice_notification: Receive email notifications about questions in your field of expertise
+      information: informação
+      notifications: notificações
+      new_answer_notification: receber notificações via email de novas respostas
+      give_advice_notification: receive email notifications about questions in your field of expertise
       categories_tip: só perguntas pertencentes a estas categorias serão mostradas
     create:
-      flash_notice: "Obrigado por registar-se!"
-      flash_error:  "Pedimos desculpa mas não pudemos criar essa conta. Por favor tente novamente ou contacte um administrador (a ligação está acima)."
+      flash_notice: "obrigado por registar-se!"
+      flash_error:  "pedimos desculpa mas não pudemos criar essa conta. por favor tente novamente ou contacte um administrador (a ligação está acima)."
     messages:
       errors:
         reputation_needed: "you need a reputation of {{min_reputation}} to {{action}}"
@@ -32,22 +32,22 @@
       user: utilizador
     attributes:
       user:
-        login: Nome de Utilizador
-        email: Endereço de E-mail
-        name: Nome real
-        current_password: Palavra-passe actual
-        password: Palavra-passe
-        password_confirmation: Confirmação da Palavra-passe
-        created_at: Criado em
-        updated_at: Actualizado em
-        activation_code: Código de Activação
-        activated_at: Activado em
-        fullname: Nome completo
-        language: Idioma
+        login: nome de utilizador
+        email: endereço de e-mail
+        name: nome real
+        current_password: palavra-passe actual
+        password: palavra-passe
+        password_confirmation: confirmação da palavra-passe
+        created_at: criado em
+        updated_at: actualizado em
+        activation_code: código de activação
+        activated_at: activado em
+        fullname: nome completo
+        language: idioma
         asked_by: perguntado por
-        timezone: Localização
-        preferred_tags: Etiquetas preferidas
-        preferred_languages: Seleccione os idiomas que conhece
+        timezone: localização
+        preferred_tags: etiquetas preferidas
+        preferred_languages: seleccione os idiomas que conhece
         last_logged_at: visto
         created_at: registado
-        reputation: Reputação
+        reputation: reputação

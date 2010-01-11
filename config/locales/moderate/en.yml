@@ -2,7 +2,7 @@ en:
   admin:
     moderate:
       index:
-        title: Moderate
+        title: moderate
         ban: ban
         content: content
         item_title: title

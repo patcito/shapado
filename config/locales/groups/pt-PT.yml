@@ -1,47 +1,47 @@
-"pt-PT":
+pt-PT:
   groups:
     index:
-      title: Grupos
+      title: grupos
       actives: activos
       pendings: pendentes
-      about: Sobre
-      close: Fechar
-      accept_group: Aceitar este grupo
-      close_group: Fechar este grupo
-      request_group: Pedir um novo grupo
-      allow_ads: Permitir a propaganda
-      disallow_ads: Proibir a propaganda
-      accept_group_with_custom_ads: Aceitar este grupo e permitir propaganda personalizada
+      about: sobre
+      close: fechar
+      accept_group: aceitar este grupo
+      close_group: fechar este grupo
+      request_group: pedir um novo grupo
+      allow_ads: permitir a propaganda
+      disallow_ads: proibir a propaganda
+      accept_group_with_custom_ads: aceitar este grupo e permitir propaganda personalizada
     show:
-      title: "Sobre {{name}}"
+      title: "sobre {{name}}"
       visit_group: visitar este grupo
-      group_awaiting_acceptance: "Este grupo está à espera da permissão de um moderador."
-      group_closed: Este grupo foi fechado.
-      accept_group: Aceitar este grupo
-      close_group: Fechar este grupo
+      group_awaiting_acceptance: "este grupo está à espera da permissão de um moderador."
+      group_closed: este grupo foi fechado.
+      accept_group: aceitar este grupo
+      close_group: fechar este grupo
     new:
-      title: Request your group
+      title: request your group
     form:
-      description_legend: You have 400 characters to describe the group.
-      legend_legend: "It will be used in the header, you have 40 characters"
-      default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
-      logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
-      any_language: Any
+      description_legend: you have 400 characters to describe the group.
+      legend_legend: "it will be used in the header, you have 40 characters"
+      default_tags_legend: "separate tags by commas. only 10 default tags allowed."
+      logo_legend: "you can upload the group logo. the maximum file size is 2mb."
+      any_language: any
   activerecord:
     models:
-      groups: Grupos
+      groups: grupos
       group: grupo
-      default_tags_message: "You can't have more than 10 default tags"
+      default_tags_message: "you can't have more than 10 default tags"
     attributes:
       group:
-        name: Name
-        subdomain: URL
-        domain: Domain
-        legend: Legend
+        name: name
+        subdomain: url
+        domain: domain
+        legend: legend
         description: description
-        state: State
+        state: state
         owner: "este grupo foi criado por {{login}}"
         group_created_by: created by
-        language: Idioma
-        default_tags: "Default tags"
-        logo: Logo
+        language: idioma
+        default_tags: "default tags"
+        logo: logo

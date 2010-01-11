@@ -2,11 +2,11 @@ fr:
   activerecord:
     attributes:
       member:
-        role: Role
+        role: role
   members:
     index:
-      title: "Members of {{name}}'s Group"
-      title_isolate: "Members of {{name}}"
-      manage_members_title: Manage members
+      title: "members of {{name}}'s group"
+      title_isolate: "members of {{name}}"
+      manage_members_title: manage members
     form:
       login_tip: "search as you type"

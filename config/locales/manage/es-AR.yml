@@ -2,6 +2,6 @@ es-AR:
   admin:
     manage:
       properties:
-        title: Propiedades del grupo
+        title: propiedades del grupo
       reputation:
-        title: Setup reputation's properties
+        title: setup reputation's properties

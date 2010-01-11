@@ -1,18 +1,19 @@
-"es-AR":
+es-AR:
   scaffold:
-    sure: ¿Esta seguro que quiere borrar esta {{model}}?
-    show: Ver
-    edit: Editar
-    destroy: Borrar
-    back: Volver
-    update: Actualizar
-    cancel: Cancelar
-    create: Crear
-    new: Add new {{model}}
+    sure: ¿esta seguro que quiere borrar esta {{model}}?
+    show: ver
+    edit: editar
+    destroy: borrar
+    back: volver
+    update: actualizar
+    cancel: cancelar
+    create: crear
+    new: add new {{model}}
     more: "más..."
     add: añadir
+    send: enviar
   time:
-    today: Hoy
+    today: hoy
     ago: "hace {{time}}"
   messages:
     success: "{{model}} was successfully {{action}}."
@@ -25,36 +26,23 @@
     closed:      closed
   global:
     from: "desde {{site}}"
-    permission_denied: Permiso denegado
+    permission_denied: permiso denegado
     please_login: por favor inicia sesión
     group_not_found: "la página {{url}} no existe"
-    preview: Vista previa
+    preview: vista previa
     or: o
   feeds:
-    question: Subscribirse A Esta Pregunta
-    questions: Subscribirse A Todas Las Preguntas
-    tag: Subscribirse Al Tag
-    user: Subscribirse a las preguntas del usuario
+    question: subscribirse a esta pregunta
+    questions: subscribirse a todas las preguntas
+    tag: subscribirse al tag
+    user: subscribirse a las preguntas del usuario
   languages:
-    en:      Inglés
-    es:      Español
-    es-AR:   Español latino
-    fr:      Francés
-    pt:      Portugués
-    pt-PT:      Portugués
-  categories:
-    technology:    Tecnología
-    programming:   Programación
-    science:       Ciencia
-    politics:      Politica
-    religion:      Religión
-    sports:        Deportes
-    music:         Musica
-    gaming:        Juegos
-    lifestyle:     Estilo de vida
-    business:      Negocios
-    entertainment: Entretenimiento
-    offbeat:       Poco convencional
+    en:      inglés
+    es:      español
+    es-AR:   español latino
+    fr:      francés
+    pt:      portugués
+    pt-PT:   portugués
   number:
     x_time:
       zero: "nunca"

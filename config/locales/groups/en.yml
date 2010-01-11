@@ -1,47 +1,47 @@
 en:
   groups:
     index:
-      title: Groups
+      title: groups
       actives: active
       pendings: pending
-      about: About
-      close: Close
-      accept_group: Accept this group
-      close_group: Close this group
-      request_group: Request a new group
-      allow_ads: Allow ads
-      disallow_ads: Disallow ads
+      about: about
+      close: close
+      accept_group: accept this group
+      close_group: close this group
+      request_group: request a new group
+      allow_ads: allow ads
+      disallow_ads: disallow ads
     show:
-      title: "About {{name}}"
+      title: "about {{name}}"
       visit_group: visit this group
-      group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
-      group_closed: This group was closed.
-      accept_group: Accept this group
-      close_group: Close this group
-      accept_group_with_custom_ads: Accept group and allow custom ads
+      group_awaiting_acceptance: "this group is awaiting for the acceptance of a moderator."
+      group_closed: this group was closed.
+      accept_group: accept this group
+      close_group: close this group
+      accept_group_with_custom_ads: accept group and allow custom ads
     new:
-      title: Request your group
+      title: request your group
     form:
-      description_legend: You have 400 characters to describe the group.
-      legend_legend: "It will be used in the header, you have 40 characters"
-      default_tags_legend: "Separate tags by commas. Only 10 default tags allowed."
-      logo_legend: "You can upload the group logo. The maximum file size is 2Mb."
-      any_language: Any
+      description_legend: you have 400 characters to describe the group.
+      legend_legend: "it will be used in the header, you have 40 characters"
+      default_tags_legend: "separate tags by commas. only 10 default tags allowed."
+      logo_legend: "you can upload the group logo. the maximum file size is 2mb."
+      any_language: any
   activerecord:
     models:
-      groups: Groups
+      groups: groups
       group: group
-      default_tags_message: "You can't have more than 10 default tags"
+      default_tags_message: "you can't have more than 10 default tags"
     attributes:
       group:
-        name: Name
-        subdomain: URL
-        domain: Domain
-        legend: Legend
-        description: Description
-        state: State
+        name: name
+        subdomain: url
+        domain: domain
+        legend: legend
+        description: description
+        state: state
         owner: "this group was created by {{login}}"
         group_created_by: created by
-        language: Language
-        default_tags: "Default tags"
-        logo: Logo
+        language: language
+        default_tags: "default tags"
+        logo: logo

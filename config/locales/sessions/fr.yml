@@ -1,14 +1,14 @@
 fr:
   sessions:
     create:
-      flash_notice: "Connexion réussie"
-      flash_error: "Nous n'avons pas pu vous connecter en tant que '{{login}}'"
+      flash_notice: "connexion réussie"
+      flash_error: "nous n'avons pas pu vous connecter en tant que '{{login}}'"
     destroy:
-      flash_notice: "Vous avez été déconnecté."
+      flash_notice: "vous avez été déconnecté."
     new:
-      with_openid: Se connecter avec OpenID
-      with_authentication: "Se connecer avec notre système d'identification"
-      registered: "Déjà enregistré?"
-      not_registered: "Pas encore enregistré?"
-      log_in: Se connecter
-      signup: Créer un compte
+      with_openid: se connecter avec openid
+      with_authentication: "se connecer avec notre système d'identification"
+      registered: "déjà enregistré?"
+      not_registered: "pas encore enregistré?"
+      log_in: se connecter
+      signup: créer un compte
