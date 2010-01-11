@@ -108,5 +108,27 @@ module ApplicationHelper
   def render_tag(tag)
     %@<span class="tag"><a href="#{questions_path(:language => current_languages, :tags => tag)}">#{@badge.token}</a></span>@
   end
+
+  def class_for_question(question)
+    klass = ""
+
+    if question.answered
+      klass << "answered"
+    else
+      klass << "unanswered"
+    end
+
+    if logged_in?
+      if current_user.is_preferred_tag?(current_group, *question.tags)
+        klass << " highlight"
+      end
+
+      if current_user == question.user
+        klass << " own_question"
+      end
+    end
+
+    klass
+  end
 end
 

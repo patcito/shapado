@@ -142,6 +142,11 @@ class User
                            :upsert => true)
   end
 
+  def is_preferred_tag?(group, *tags)
+    ptags = self.preferred_tags[group.id] || []
+    tags.detect { |t| ptags.include?(t) }
+  end
+
   def admin?
     self.role == "admin"
   end
