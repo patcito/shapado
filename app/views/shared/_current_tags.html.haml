@@ -1,11 +1,11 @@
 
--unless current_tags.nil?
+-unless self.current_tags.empty?
   .block
     %h3
       =t(".title")
-    .tag-list
-      -current_tags.each do |tag|
+    .content.tag-list
+      -self.current_tags.each do |tag|
         %span.tag
           = link_to h(tag), url_for(:language => current_languages, :tags => tag)
-          = link_to "-", url_for(:language => current_languages, :tags => (current_tags - [tag]).join("+")), :class => "remove_tag"
+          = link_to "-", url_for(:language => current_languages, :tags => (self.current_tags - [tag]).join("+")), :class => "remove_tag"
     .clear

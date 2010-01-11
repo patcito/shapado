@@ -64,12 +64,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_group
 
   def current_tags
-    if params[:tags].kind_of?(String)
-      @current_tags ||= params[:tags].split("+")
+    @current_tags ||=  if params[:tags].kind_of?(String)
+      params[:tags].split("+")
     elsif params[:tags].kind_of?(Array)
-      @current_tags ||= params[:tags]
+      params[:tags]
     else
-      @current_tags || []
+      []
     end
   end
   helper_method :current_tags
