@@ -272,7 +272,7 @@ class QuestionsController < ApplicationController
   end
 
   def unfavorite
-    @favorite = Favorite.find(:first, :limit => 1, :question_id => @question.id)
+    @favorite = current_user.favorite(@question)
     if @favorite
       if current_user.can_modify?(@favorite)
         @question.remove_favorite!(@favorite, current_user)
