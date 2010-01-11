@@ -28,7 +28,7 @@
   = render :partial => "shared/current_tags"
   .block
     %h3
-      = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+      = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"])
     .content
       = render :partial => "shared/tag_list", :object => @tag_cloud
 

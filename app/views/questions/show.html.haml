@@ -105,7 +105,7 @@
 -content_for :sidebar do
   .block
     %h3
-      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]))
     = render :partial => "shared/tag_list", :object => @tag_cloud
     .clear
 

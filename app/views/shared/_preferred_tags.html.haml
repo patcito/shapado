@@ -1,6 +1,6 @@
 .block
   %h3
-    = t(:preferred_tags, :scope => "activerecord.attributes.user").titleize
+    = t(:preferred_tags, :scope => "activerecord.attributes.user")
   .content
     .tag-list{:style => "margin-bottom: 3px"}
       -current_user.preferred_tags_on(current_group).each do |tag|

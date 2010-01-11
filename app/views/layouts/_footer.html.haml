@@ -16,7 +16,8 @@
   |
   = link_to 'irc', 'irc://irc.freenode.org/shapado'
   |
-  = link_to 'feedback', feedback_url, :class => "feedback", :id => "feedback"
+  %b
+    = link_to 'feedback', feedback_url, :class => "feedback", :id => "feedback"
   #feedbackform.hide
     = render :partial => "welcome/feedback"
 

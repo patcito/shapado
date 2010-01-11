@@ -26,7 +26,7 @@
     = link_to t(".visit_group"), domain_url(:custom => @group.domain)
     -if logged_in?
       -if current_user.owner_of?(@group)
-        = link_to t("shared.layout.notice.manage").titleize, domain_url(:controller => "manage", :custom => @group.domain)
+        = link_to t("shared.layout.notice.manage"), domain_url(:controller => "manage", :custom => @group.domain)
       -if current_user.admin? && @group.state == "pending"
         = link_to t(".accept_group"), accept_group_path(@group)
         = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true)
