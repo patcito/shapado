@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include ExceptionNotifiable
   include SuperExceptionNotifier
   include ExceptionNotifierHelper
-  self.error_layout = 'error'
+  self.error_layout = 'application'
 
   include AuthenticatedSystem
   include Subdomains
@@ -36,6 +36,11 @@ class ApplicationController < ActionController::Base
        (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
       access_denied
     end
+  end
+
+  exception_data :additional_data
+  def additional_data
+    { :group => find_group}
   end
 
   def find_group
@@ -70,7 +75,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_tags
 
   def current_languages
-    @current_languages = find_languages.join("+")
+    @current_languages ||= find_languages.join("+")
   end
   helper_method :current_languages
 

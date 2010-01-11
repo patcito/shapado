@@ -46,7 +46,7 @@
           = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
           -if current_user != answer.user
             = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
-          -if current_user.can_modify?(@question)
+          -if logged_in? && current_user.can_modify?(@question)
             -unless @question.answered
               = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer)
             -if solution
