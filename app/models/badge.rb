@@ -25,7 +25,7 @@ class Badge
 
   key :source_id, String
   key :source_type, String
-  belongs_to :source
+  belongs_to :source, :polymorphic => true
 
   key :_type, String
   timestamps!
