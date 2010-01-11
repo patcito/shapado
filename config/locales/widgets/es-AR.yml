@@ -1,5 +1,8 @@
 es-AR:
   widgets:
+    index:
+      title: Administrar los widgets de la barra lateral
+      description: Usar las flechas para mover los widgets
     badges:
       title: Insignias recientes
       description: "Este widget muestra las insignias ganadas por los usuarios o las preguntas"

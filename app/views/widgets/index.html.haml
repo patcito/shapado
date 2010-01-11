@@ -1,0 +1,33 @@
+-content_for :subtabs do
+  .navtitle
+    =t(".title")
+
+%h2.title
+  =t(".description")
+
+#manage_widgets
+  %ul.list#widgets
+    -@widgets.each do |widget|
+      %li
+        .widget_description
+          =widget.description # do not escape
+        .widget.block{:id => widget.name}
+          .controls
+            .right
+              = link_to  t("scaffold.destroy"), widget_path(widget), :method => :delete, :confirm => t("scaffold.sure", :model => "widget")
+            -form_tag move_widget_path(widget) do
+              = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
+              = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
+            .clear
+          .widget_content
+            = render :partial => widget.partial_name, :locals => {:widget => widget}
+        .clear
+
+%h2.title
+  =t(".new_widget", :default => "Create new widget")
+
+-form_tag widgets_path, :class => "form" do
+  .group
+    = select :widget, "_type", Widget::TYPES
+  .group.navform
+    =submit_tag t("scaffold.create")

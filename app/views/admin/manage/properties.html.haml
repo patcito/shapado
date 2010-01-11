@@ -4,6 +4,7 @@
 
 -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
+  =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")
   = render :partial => "groups/form", :object => f
-  .buttons
+  .group.navform
     = f.submit t('scaffold.update')

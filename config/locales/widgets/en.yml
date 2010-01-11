@@ -1,5 +1,8 @@
 en:
   widgets:
+    index:
+      title: Manage Sidebar Widgets
+      description: Use the arrows to move your widgets
     badges:
       title: Recent Badges
       description: "This widget display recent Badges earned by users or questions"

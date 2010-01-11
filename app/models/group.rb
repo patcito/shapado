@@ -24,6 +24,7 @@ class Group
   key :activity_rate, Float, :default => 0.0
 
   key :has_reputation_constrains, Boolean, :default => true
+  key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
 
   has_many :memberships, :class_name => "Member",
@@ -53,6 +54,7 @@ class Group
   validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
   before_validation_on_create :check_domain
+  validate :check_reputation_configs
 
   def check_domain
     if domain.blank?
@@ -190,5 +192,32 @@ class Group
       self[:language] = nil
     end
   end
-end
 
+  def self.humanize_reputation_constrain(key)
+    I18n.t("groups.shared.reputation_constrains.#{key}", :default => key.humanize)
+  end
+
+  def self.humanize_reputation_rewards(key)
+    I18n.t("groups.shared.reputation_rewards.#{key}", :default => key.humanize)
+  end
+
+  def check_reputation_configs
+    self.reputation_constrains.each do |k,v|
+      self.reputation_constrains[k] = v.to_i
+      if !REPUTATION_CONSTRAINS.has_key?(k)
+        self.errors.add(:reputation_constrains, "Invalid key")
+        return false
+      end
+    end
+
+    self.reputation_rewards.each do |k,v|
+      self.reputation_rewards[k] = v.to_i
+      if !REPUTATION_REWARDS.has_key?(k)
+        self.errors.add(:reputation_rewards, "Invalid key")
+        return false
+      end
+    end
+
+    return true
+  end
+end
