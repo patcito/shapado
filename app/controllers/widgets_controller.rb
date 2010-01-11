@@ -4,21 +4,23 @@ class WidgetsController < ApplicationController
   layout "manage"
   tabs :default => :widgets
 
+  # GET /widgets
+  # GET /widgets.json
   def index
     @widget = Widget.new
     @widgets = @group.widgets.all(:order => "position asc")
   end
 
-  # POST /ads
-  # POST /ads.json
+  # POST /widgets
+  # POST /widgets.json
   def create
     if Widget::TYPES.include?(params[:widget][:_type])
-      @widget = params[:widget][:_type].classify.constantize.new
+      @widget = params[:widget][:_type].constantize.new
     end
-#     @widget.safe_update(%w[], params[:widget])
+
     @widget.group = @group
     @widgets = @group.widgets.all(:order => "position asc")
-    @widget.position = @widgets.last.position #FIXME
+    @widget.position = @widgets.last.position+1 # FIXME: it's not safe
 
     respond_to do |format|
       if @widget.save
@@ -36,7 +38,7 @@ class WidgetsController < ApplicationController
   # DELETE /ads/1
   # DELETE /ads/1.json
   def destroy
-    @widget = Widget.find(params[:id])
+    @widget = @group.widgets.find(params[:id])
     @widget.destroy
 
     respond_to do |format|
@@ -46,7 +48,7 @@ class WidgetsController < ApplicationController
   end
 
   def move
-    widget = Widget.find(params[:id])
+    widget = @group.widgets.find(params[:id])
     widget.move_to(params[:move_to])
     redirect_to widgets_path
   end

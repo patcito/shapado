@@ -24,10 +24,10 @@
         .clear
 
 %h2.title
-  =t(".new_widget", :default => "Create new widget")
+  =t(".new_widget", :default => "Add new widget")
 
 -form_tag widgets_path, :class => "form" do
   .group
     = select :widget, "_type", Widget::TYPES
   .group.navform
-    =submit_tag t("scaffold.create")
+    =submit_tag t("scaffold.add")
