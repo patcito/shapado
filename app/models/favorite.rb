@@ -2,15 +2,16 @@ class Favorite
   include MongoMapper::Document
 
   key :_id, String
-  key :group_id, String
+  key :group_id, String, :index => true
   belongs_to :group
 
   key :user_id, String, :index => true
   belongs_to :user
 
   key :question_id, String
+  belongs_to :question
 
-  validate :should_be_unique
+  validate :should_be_unique # FIXME
 
   protected
   def should_be_unique

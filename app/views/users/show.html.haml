@@ -12,6 +12,7 @@
         = auto_link(@user.bio)
   .clear
 
+  /Questions
   %h2.title
     .counter
       = number_with_delimiter(@questions.total_entries)
@@ -24,6 +25,20 @@
     = will_paginate @questions, :param_name => "questions_page"
     .clear
 
+  /Favorites
+  %h2.title
+    .counter
+      = number_with_delimiter(@favorites.total_entries)
+    =t(:favorites, :scope => "activerecord.models")
+
+  %ul.items#questions
+    -@favorite_questions.each do |question|
+      = render :partial => "questions/question", :object => question
+  .additional_info
+    = will_paginate @favorites, :param_name => "favorites_page"
+    .clear
+
+  / Answers
   %h2.title
     .counter
       = number_with_delimiter(@answers.total_entries)
@@ -36,6 +51,7 @@
     = will_paginate @answers, :param_name => "answers_page"
     .clear
 
+  /Badges
   %h2.title
     .counter
       = number_with_delimiter(@badges.total_entries)

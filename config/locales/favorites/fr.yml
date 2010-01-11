@@ -3,3 +3,8 @@ fr:
     create:
       unauthenticated: "vous devez créer un compte pour ajouter des favorits"
       success:         "la question a été ajouté à vos favorits"
+
+  activerecord:
+    models:
+      favorites: favorites
+      favorite: favorite
