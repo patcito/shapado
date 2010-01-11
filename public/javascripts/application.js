@@ -1,21 +1,17 @@
 $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
-  if((navigator.userAgent.indexOf('Gecko')!=-1
-    && navigator.userAgent.indexOf('like Gecko')==-1) ||
-    navigator.userAgent.indexOf('WebKit')!=-1){
-  $(".feedback").removeClass("feedback").addClass("feedbackjs");}
-  $(".feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
-  $('.cancel-feedback').click(function(){
-    $(".feedbackform").dialog('close');
+  $("#feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
+  $('#feedbackform .cancel-feedback').click(function(){
+    $("#feedbackform").dialog('close');
     return false;
   })
   $('#feedback').click(function(){
-    var isOpen = $(".feedbackform").dialog('isOpen');
+    var isOpen = $("#feedbackform").dialog('isOpen');
     if (isOpen){
-      $(".feedbackform").dialog('close');
+      $("#feedbackform").dialog('close');
     } else {
-      $(".feedbackform").dialog('open');
+      $("#feedbackform").dialog('open');
     }
     return false;
   })

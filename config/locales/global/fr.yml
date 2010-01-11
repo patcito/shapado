@@ -11,6 +11,7 @@ fr:
     new: Add new {{model}}
     more: more...
     add: ajouter
+    send: send
   time:
     today: Today
     ago: "{{time}} ago"
@@ -42,19 +43,6 @@ fr:
     fr:      Français
     pt:      Portugais
     pt-PT:   Portugais
-  categories:
-    technology:    Technologie
-    programming:   Programmation
-    science:       Science
-    politics:      Politique
-    religion:      Religion
-    sports:        Sports
-    music:         Musique
-    gaming:        Jeux vidéos
-    lifestyle:     Style de vie
-    business:      Business
-    entertainment: Divertissement
-    offbeat:       Peu conventionnel
   number:
     x_time:
       zero: "jamais"

@@ -33,6 +33,10 @@ fr:
           multilanguage: oui!
           foss: oui!
           joel: "non :/"
+    feedback:
+      title: Send your feedback
+      feedback_title: title
+      feedback_description: description
     index:
       hot:     chaudes
       active:  actives

@@ -11,6 +11,7 @@ en:
     new: Add new {{model}}
     more: "more ..."
     add: add
+    send: send
   time:
     today: Today
     ago: "{{time}} ago"
@@ -41,8 +42,7 @@ en:
     es-AR:   Latin American Spanish
     fr:      French
     pt:      Portuguese
-    pt-PT:      Portuguese
-
+    pt-PT:   Portuguese
   number:
     x_time:
       zero: "never"

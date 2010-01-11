@@ -33,6 +33,10 @@
           multilanguage: sim!
           foss: sim!
           joel: "não :/"
+    feedback:
+      title: Send your feedback
+      feedback_title: title
+      feedback_description: description
     index:
       hot:     popular
       active:  activo

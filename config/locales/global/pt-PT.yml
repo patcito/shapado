@@ -11,6 +11,7 @@
     new: Adicionar novo {{model}}
     more: "mais ..."
     add: adicionar
+    send: send
   time:
     today: Hoje
     ago: "{{time}} atrás"
@@ -41,8 +42,7 @@
     es-AR:   Epanhol Latino-Americano
     fr:      Francês
     pt:      Português
-    pt-PT:      Português de Portugal
-
+    pt-PT:   Português de Portugal
   number:
     x_time:
       zero: "nunca"
