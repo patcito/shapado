@@ -211,6 +211,7 @@ module Actors
       group = question.group
       if question.favorites_count >= 25
         user_badges = user.badges
+        user_badges.find(:first, :token => "famous_question", :group_id => group.id, :source_id => question.id) ||
         user_badges.create!(:token => "famous_question", :type => "gold", :group_id => group.id, :source => question)
       end
     end
