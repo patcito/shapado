@@ -49,4 +49,20 @@ namespace :fixdb do
       $stdout.flush if rand(10) == 5
     end
   end
+
+  desc "Check Answers"
+  task :answers => :environment do
+    $stderr.puts "Checking #{Answer.count} answers..."
+    Answer.all.each do |answer|
+      if answer.group_id.blank?
+        if answer.question.present? && q = answer.question
+          answer.group = q.group
+        end
+        answer.save(false)
+      end
+
+      $stdout.print "."
+      $stdout.flush if rand(10) == 5
+    end
+  end
 end
