@@ -1,13 +1,13 @@
-"pt-PT":
+pt-PT:
   votes:
     create:
-      flash_notice: "Obrigado pelo seu voto!"
-      flash_error:  "Não pode votar isto"
+      flash_notice: "obrigado pelo seu voto!"
+      flash_error:  "não pode votar isto"
       unauthenticated: "utilizadores anónimos não podem votar"
     control:
       to_vote_up: "click to vote up"
       to_vote_down: "click to vote down"
   activerecord:
     models:
-      votes: Votos
+      votes: votos
       vote: voto

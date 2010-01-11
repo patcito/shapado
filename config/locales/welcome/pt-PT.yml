@@ -1,9 +1,9 @@
-"pt-PT":
+pt-PT:
   welcome:
     facts:
       prices:
         cols:
-          onsite: No seu sítio web
+          onsite: no seu sítio web
         stackexchange:
           small: $129/mês
           medium: $999/mês
@@ -16,11 +16,11 @@
           onsite: $0 no seu servidor duh
       features:
         cols:
-          adaptable: Adaptável
-          multitopic: Multi-tópicos
-          multilanguage: Multi-idioma
-          foss: Livre/Código Aberto
-          joel: Farei Joel mais rico?
+          adaptable: adaptável
+          multitopic: multi-tópicos
+          multilanguage: multi-idioma
+          foss: livre/código aberto
+          joel: farei joel mais rico?
         stackexchange:
           adaptable: não
           multitopic: não
@@ -34,11 +34,11 @@
           foss: sim!
           joel: "não :/"
     feedback:
-      title: Send your feedback
+      title: send your feedback
       feedback_title: title
       feedback_description: description
     index:
       hot:     popular
       active:  activo
-      recent_questions: Perguntas recentes
-      quick_question: Ask a Question, we will find someone to answer
+      recent_questions: perguntas recentes
+      quick_question: ask a question, we will find someone to answer

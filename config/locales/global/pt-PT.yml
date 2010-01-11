@@ -1,19 +1,19 @@
-"pt-PT":
+pt-PT:
   scaffold:
-    sure: Tem a certeza que pretende apagar este {{model}} ?
-    show: Mostrar
-    edit: Editar
-    destroy: Apagar
-    back: Voltar
-    update: Actualizar
-    cancel: Cancelar
-    create: Criar
-    new: Adicionar novo {{model}}
+    sure: tem a certeza que pretende apagar este {{model}} ?
+    show: mostrar
+    edit: editar
+    destroy: apagar
+    back: voltar
+    update: actualizar
+    cancel: cancelar
+    create: criar
+    new: adicionar novo {{model}}
     more: "mais ..."
     add: adicionar
     send: send
   time:
-    today: Hoje
+    today: hoje
     ago: "{{time}} atrás"
   messages:
     success: "{{model}} foi {{action}} com sucesso."
@@ -26,23 +26,23 @@
     closed:      fechado
   global:
     from: "de {{site}}"
-    permission_denied: Permissão negada
+    permission_denied: permissão negada
     please_login: por favor inicie sessão
     group_not_found: "the page {{url}} doesn't exists"
-    preview: Pré-visualizar
+    preview: pré-visualizar
     or: or
   feeds:
-    question: Subscrever A Esta Pergunta
-    questions: Subscrever A Todas As Perguntas
-    tag: Subscrever À Tag
-    user: Subscrever Às Perguntas Do Utilizador
+    question: subscrever a esta pergunta
+    questions: subscrever a todas as perguntas
+    tag: subscrever À tag
+    user: subscrever Às perguntas do utilizador
   languages:
-    en:      Inglês
-    es:      Espanhol
-    es-AR:   Epanhol Latino-Americano
-    fr:      Francês
-    pt:      Português
-    pt-PT:   Português de Portugal
+    en:      inglês
+    es:      espanhol
+    es-AR:   epanhol latino-americano
+    fr:      francês
+    pt:      português
+    pt-PT:   português de portugal
   number:
     x_time:
       zero: "nunca"

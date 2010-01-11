@@ -1,17 +1,17 @@
-"pt-PT":
+pt-PT:
   errors:
-    options_label: "Outras coisas que podes tentar:"
+    options_label: "outras coisas que podes tentar:"
     go_to: "ir para {{link}} página"
-    help_us_answer: Ajuda-nos a responder a {{link}}
+    help_us_answer: ajuda-nos a responder a {{link}}
     search: "pesquisar"
     forbidden:
-      explanation: "Não tem as permissões necessárias para aceder a esta página."
+      explanation: "não tem as permissões necessárias para aceder a esta página."
     not_found:
-      title: "Página não encontrada."
-      explanation: "Pode ter escrito mal o endereço ou a página pode ter sido movida."
+      title: "página não encontrada."
+      explanation: "pode ter escrito mal o endereço ou a página pode ter sido movida."
     unprocessable_entity:
-      title: "A alteração que pretendeu foi rejeitada"
-      explanation: "Se calhar tentou modificar algo para o qual não tinha permissões."
+      title: "a alteração que pretendeu foi rejeitada"
+      explanation: "se calhar tentou modificar algo para o qual não tinha permissões."
     internal_error:
-      title: "Pedimos desculpa, mas ocorreu um erro."
-      explanation: "Fomos notificados sobre este problema e vamos averiguá-lo em breve."
+      title: "pedimos desculpa, mas ocorreu um erro."
+      explanation: "fomos notificados sobre este problema e vamos averiguá-lo em breve."

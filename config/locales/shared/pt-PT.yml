@@ -3,7 +3,7 @@ pt-PT:
     topbar:
       logged_as: "logged in as {{login}}"
     current_tags:
-      title: Selected tags
+      title: selected tags
     layout:
       notice:
         manage: gerir

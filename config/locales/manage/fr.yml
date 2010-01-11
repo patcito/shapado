@@ -2,6 +2,6 @@ fr:
   admin:
     manage:
       properties:
-        title: Propriétés du groupe
+        title: propriétés du groupe
       reputation:
-        title: Setup reputation's properties
+        title: setup reputation's properties

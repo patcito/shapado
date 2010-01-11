@@ -1,17 +1,17 @@
 es-AR:
   widgets:
     index:
-      title: Administrar los widgets de la barra lateral
-      description: Usar las flechas para mover los widgets
+      title: administrar los widgets de la barra lateral
+      description: usar las flechas para mover los widgets
     badges:
-      title: Insignias recientes
-      description: "Este widget muestra las insignias ganadas por los usuarios o las preguntas"
+      title: insignias recientes
+      description: "este widget muestra las insignias ganadas por los usuarios o las preguntas"
     groups:
-      title: Grupos recientes
-      description: "Este widget muestra los últimos grupos registrados"
+      title: grupos recientes
+      description: "este widget muestra los últimos grupos registrados"
     top_users:
       title: ranking de usuarios
-      description: "Este widget muestra ranking de usuarios"
+      description: "este widget muestra ranking de usuarios"
     users:
-      title: Usuarios recientes
-      description: "Este widget muestra los nuevos miembros registrados"
+      title: usuarios recientes
+      description: "este widget muestra los nuevos miembros registrados"

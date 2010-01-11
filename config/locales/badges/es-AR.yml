@@ -1,11 +1,11 @@
-"es-AR":
+es-AR:
   badges:
     index:
-      title: Insignias
-      description: "Todas las insignias que puedes ganar. comparte tu conocimiento, gana placas."
+      title: insignias
+      description: "todas las insignias que puedes ganar. comparte tu conocimiento, gana placas."
     show:
-      title: Insignia {{type}}
-      description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
+      title: insignia {{type}}
+      description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
       for_tag_bronze: 200 votos en la etiqueta {{tag}}
       for_tag_silver: 400 votos en la etiqueta {{tag}}
       for_tag_gold: 1000 votos en la etiqueta {{tag}}
@@ -16,61 +16,61 @@
       popstar:
         description: 500 votos positivos, máximo 10 negativos
       fanatic:
-        name: Fanático
+        name: fanático
         description: visita el sitio 100 días consecutivos
       service_medal:
-        name: Medalla de servicio
+        name: medalla de servicio
         description: recibir 300 votos positivos
       famous_question:
-        name: Pregunta famosa
+        name: pregunta famosa
         description: responde una pregunta con 10000 visitas
       popular_person:
-        name: Persona popular
+        name: persona popular
         description: que tu perfil sea visitado 10000 veces
       guru:
-        name: Guru
+        name: guru
         description: dar solución a una pregunta con promedio de votos superior a 40
       favorite_question:
-        name: Pregunta favorita
+        name: pregunta favorita
         description: pregunta seleccionada como preferida por 25 usuarios
       tutor:
-        name: Tutor
+        name: tutor
         description: dar solución a una pregunta con promedio de votos superior a 2
       addict:
-        name: Adicto
+        name: adicto
         description: visita el sitio 20 días consecutivos
       good_question:
-        name: Buena pregunta
+        name: buena pregunta
         description: haber hecho una pregunta que alcanzo el promedio de 10 votos
       good_answer:
-        name: Buena respuesta
+        name: buena respuesta
         description: haber hecho una respuesta que alcanzo el promedio de 10 votos
       pioneer:
-        name: Pionero
+        name: pionero
         description: ser de los primeros usuarios registrados
       supporter:
-        name: Partidario
+        name: partidario
         description: votar positivamente por primera vez
       critic:
-        name: Critico
+        name: critico
         description: votar negativamente por primera vez
       inquirer:
-        name: Investigador
+        name: investigador
         description: preguntar por primera vez
       troubleshooter:
-        name: Solucionador
+        name: solucionador
         description: responder por primera vez
       commentator:
-        name: Comentador
+        name: comentador
         description: deja 10 comentarios
       merit_medal:
-        name: Medalla al merito
+        name: medalla al merito
         description: recibir 200 votos positivos
       effort_medal:
-        name: Medalla al esfuerzo
+        name: medalla al esfuerzo
         description: recibir 100 votos positivos
       student:
-        name: Estudiante
+        name: estudiante
         description: primera pregunta con al menos un voto positivo
       shapado:
         description: visita el sitio 8 días consecutivos

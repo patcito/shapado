@@ -1,25 +1,25 @@
-"es-AR":
+es-AR:
   answers:
     form:
-      comment_label: Commenta sobre esta respuesta
-      answer_label: Conteste la pregunta
-      comment_submit: Comentar
-      submit: Contestar
+      comment_label: commenta sobre esta respuesta
+      answer_label: conteste la pregunta
+      comment_submit: comentar
+      submit: contestar
     edit:
-      title: Editar respuesta
+      title: editar respuesta
     create:
-      flash_notice: "¡Gracias!"
-      flash_error:  "Algo fue mal añadiendo tu respuesta.
+      flash_notice: "¡gracias!"
+      flash_error:  "algo fue mal añadiendo tu respuesta.
 \n  recuerda que:
 \n - no se permiten respuestas vacias ni repetidas.
 \n - debes esperar 20 segundos antes de volver a contestar.
 \n - solo puede hacer una sola respuesta por cada pregunta."
     update:
-      flash_notice: "La respuesta fue actualizada exitosamente."
+      flash_notice: "la respuesta fue actualizada exitosamente."
 
   activerecord:
     models:
-      answers: Respuestas
+      answers: respuestas
       answer: respuesta
     attributes:
       answer:

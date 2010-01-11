@@ -1,8 +1,8 @@
-"es-AR":
+es-AR:
   admin:
     moderate:
       index:
-        title: Moderar
+        title: moderar
         ban: ban
         content: contenido
         item_title: titulo

@@ -1,23 +1,23 @@
 "es-AR":
   users:
     index:
-      title: Todos los usuarios
-      empty: "Este grupo no tiene miembros, participe para unirse a este grupo."
+      title: todos los usuarios
+      empty: "este grupo no tiene miembros, participe para unirse a este grupo."
     new:
-      title: Registrar un nuevo usuario
-      submit: Registrar
+      title: registrar un nuevo usuario
+      submit: registrar
     edit:
-      title: Configuración
-      submit: Guardar
+      title: configuración
+      submit: guardar
     form:
-      information: Información
-      notifications: Notificaciones
-      new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
-      give_advice_notification:  Obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
+      information: información
+      notifications: notificaciones
+      new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
+      give_advice_notification:  obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
       categories_tip: solo las preguntas pertenecientes a estas categorías serán mostradas
     create:
-      flash_notice: "Gracias por registrarse!"
-      flash_error:  "No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
+      flash_notice: "gracias por registrarse!"
+      flash_error:  "no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
     messages:
       errors:
         reputation_needed: "necesitas una reputación de {{min_reputation}} para {{action}}"
@@ -28,26 +28,26 @@
       edit_others_posts: "editar preguntas o respuestas de otros usuarios"
   activerecord:
     models:
-      users: Usuarios
+      users: usuarios
       user: usuario
     attributes:
       user:
-        login: Nombre de usuario
-        email: Correo electrónico
-        name: Nombre real
-        current_password: Contraseña actual
-        password: Contraseña
-        password_confirmation: Confirmación de contraseña
+        login: nombre de usuario
+        email: correo electrónico
+        name: nombre real
+        current_password: contraseña actual
+        password: contraseña
+        password_confirmation: confirmación de contraseña
         created_at: creado en
         updated_at: actualizado en
         activation_code: código de activación
         activated_at: activado en
-        fullname: Nombre completo
-        language: Idioma
+        fullname: nombre completo
+        language: idioma
         asked_by: asked by
-        timezone: Zona horaria
-        preferred_tags: Etiquetas preferidas
-        preferred_languages: Escoja los idiomas que conozca
+        timezone: zona horaria
+        preferred_tags: etiquetas preferidas
+        preferred_languages: escoja los idiomas que conozca
         last_logged_at: visto
         created_at: registrado
-        reputation: Reputación
+        reputation: reputación

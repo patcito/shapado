@@ -1,7 +1,7 @@
 fr:
   layouts:
     application:
-      title: "Questions & Réponses"
+      title: "questions & réponses"
       questions: questions
       questions_in: questions en
       questions_tagged: taguées
@@ -11,23 +11,23 @@ fr:
       badges: insignes
       unanswered: sans réponses
       logout: se déconnecter
-      logged: Connecté {{login}}
+      logged: connecté {{login}}
       search: search
       forgot: oublié?
-      log_in: Se connecter
-      signup: Créer un compte
-      settings: Configuration
-      categories: Catégories
-      languages: Langues
-      moderate: Modérer
-      manage_ads: Administrer les publicités
+      log_in: se connecter
+      signup: créer un compte
+      settings: configuration
+      categories: catégories
+      languages: langues
+      moderate: modérer
+      manage_ads: administrer les publicités
       home: page principale
       openid:
-        explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur OpenID:"
+        explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
     manage:
-      dashboard: Dashboard
-      properties: Propriétés
-      actions: Actions
+      dashboard: dashboard
+      properties: propriétés
+      actions: actions
       stats: États
-      members: Membres
-      reputation: Reputation
+      members: membres
+      reputation: reputation

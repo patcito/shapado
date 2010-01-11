@@ -1,4 +1,4 @@
-"es-AR":
+es-AR:
   flags:
     form:
       spam: spam
@@ -15,4 +15,4 @@
       flag: reporte de abuso
     attributes:
       flag:
-        type: Razón
+        type: razón

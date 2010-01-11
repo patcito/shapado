@@ -1,12 +1,12 @@
-"es-AR":
+es-AR:
   activerecord:
     attributes:
       member:
-        role: Rol
+        role: rol
   members:
     index:
-      title: "Miembros del group {{name}}"
-      title_isolate: "Miembros de {{name}}"
-      manage_members_title: "Administrar membresías"
+      title: "miembros del group {{name}}"
+      title_isolate: "miembros de {{name}}"
+      manage_members_title: "administrar membresías"
     form:
       login_tip: "busca cuando usted digita"

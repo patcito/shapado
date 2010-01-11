@@ -1,17 +1,17 @@
 fr:
   widgets:
     index:
-      title: Administrer les widgets de la barre latérale
-      description: Utiliser les flèches pour déplacer les widgets
+      title: administrer les widgets de la barre latérale
+      description: utiliser les flèches pour déplacer les widgets
     badges:
-      title: Insigne récents
-      description: "Ce widget montre les insignes récement gagnées par les utilisateurs ou questions"
+      title: insigne récents
+      description: "ce widget montre les insignes récement gagnées par les utilisateurs ou questions"
     groups:
-      title: Groupes récents
-      description: "Ce widget montre les derniers groupes en date"
+      title: groupes récents
+      description: "ce widget montre les derniers groupes en date"
     top_users:
-      title: Top 5 utilisateurs
-      description: Ce widget montre le top 5 des utilisateurs
+      title: top 5 utilisateurs
+      description: ce widget montre le top 5 des utilisateurs
     users:
-      title: Utilisateurs récents
-      description: "Ce widget montre les nouveaux membres enregistrés"
+      title: utilisateurs récents
+      description: "ce widget montre les nouveaux membres enregistrés"

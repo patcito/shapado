@@ -1,12 +1,12 @@
 fr:
   ads:
-    ad_links: Ad a new {{type}} ad
-    title: Ad a new {{type}} ad
-    name: "Name:"
-    position: "Position:"
+    ad_links: ad a new {{type}} ad
+    title: ad a new {{type}} ad
+    name: "name:"
+    position: "position:"
     index:
-      title: Ads
-      add_adsense: Add a new Google Adsense ad
-      add_adbard: Add a new Adbard ad
+      title: ads
+      add_adsense: add a new google adsense ad
+      add_adbard: add a new adbard ad
     create:
-      success: "Ad was successfully created."
+      success: "ad was successfully created."

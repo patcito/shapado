@@ -1,11 +1,11 @@
 fr:
   badges:
     index:
-      title: Insignes
-      description: "All badges that you can earn. Share your knowledge earn badges."
+      title: insignes
+      description: "all badges that you can earn. share your knowledge earn badges."
     show:
-      title: Insigne {{type}}
-      description: "Users earned this badge. Recently awarded to:"
+      title: insigne {{type}}
+      description: "users earned this badge. recently awarded to:"
       for_tag_bronze: 200 votes in tag {{tag}}
       for_tag_silver: 400 votes in tag {{tag}}
       for_tag_gold: 1000 votes in tag {{tag}}
@@ -16,65 +16,65 @@ fr:
       popstar:
         description: 500 votes positifs, 10 négatifs maximum
       fanatic:
-        name: Fanatique
-        description: Visited the site each day for 100 consecutive days
+        name: fanatique
+        description: visited the site each day for 100 consecutive days
       service_medal:
         description: recevoir 300 votes positifs
       famous_question:
         description: asked a question with 10000 views
       popular_person:
-        name: Personne populaire
+        name: personne populaire
         description: votre profil est visité 10000 fois
       guru:
-        name: Guru
+        name: guru
         description: donner une solution à une question ayant une moyenne de votes supérieure à 40
       favorite_question:
         name: question favorite
         description: question favorited by 25 users
       tutor:
-        name: Tuteur
+        name: tuteur
         description: donner une solution à une question ayant une moyenne de votes supérieure à 2
       addict:
-        name: Accro
+        name: accro
         description: visited the site each day for 20 consecutive days
       good_question:
-        name: Bonne question
-        description: Avoir fait une question ayant atteint une moyenne de 10 votes
+        name: bonne question
+        description: avoir fait une question ayant atteint une moyenne de 10 votes
       good_answer:
-        name: Bonne réponse
-        description: Avoir fait une réponse ayant atteint une moyenne de 10 votes
+        name: bonne réponse
+        description: avoir fait une réponse ayant atteint une moyenne de 10 votes
       pioneer:
-        name: Pionnier
+        name: pionnier
         description: Être parmi les premiers à s'être inscrit
       supporter:
-        name: Supporter
+        name: supporter
         description: voter positivement pour la première fois
       critic:
-        name: Critique
+        name: critique
         description: voter négativement pour la première fois
       inquirer:
-        name: Interrogateur
+        name: interrogateur
         description: "poser une question pour la première fois"
       troubleshooter:
         name: solutionneur
         description: "répondre pour la première fois"
       commentator:
-        name: Commentateur
-        description: Left 10 comments
+        name: commentateur
+        description: left 10 comments
       merit_medal:
-        name: "Médaille de l'éffort"
+        name: "médaille de l'éffort"
         description: recevoir 200 votes positifs
       effort_medal:
-        name: Medalla al esfuerzo
+        name: medalla al esfuerzo
         description: recevoir 100 votes positifs
       student:
         name: "Étudiant"
-        description: Asked first question with at least one up vote
+        description: asked first question with at least one up vote
       shapado:
         description: visited the site each day for 8 consecutive days
       editor:
         description: first edited post
   activerecord:
     models:
-      badge: Insigne
-      badges: Insignes
+      badge: insigne
+      badges: insignes

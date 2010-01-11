@@ -1,89 +1,89 @@
-"es-AR":
+es-AR:
   questions:
     index:
-      title: Todas las preguntas
+      title: todas las preguntas
       hot:     calientes
       active:  activas
       votes:   votos
       newest:  recientes
       oldest:  antiguas
       ask_question: pregunte
-      empty: "Nadie a preguntado aun, ¡se el primero!"
-      help_to_answer: Ayudanos a reponder
+      empty: "nadie a preguntado aun, ¡se el primero!"
+      help_to_answer: ayudanos a reponder
       unanswered_questions: preguntas aun no contestadas
     show:
-      answers: Respuestas
-      another_answers: Otras respuestas
-      solution: Solución
-      share: "Compartir esta pregunta en"
-      related_questions: Preguntas Relacionadas
-      flags: Reportado como
-      flag: "Reportar abuso"
-      viewed: Visto
+      answers: respuestas
+      another_answers: otras respuestas
+      solution: solución
+      share: "compartir esta pregunta en"
+      related_questions: preguntas relacionadas
+      flags: reportado como
+      flag: "reportar abuso"
+      viewed: visto
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
       asked_on: "preguntado en"
-      last_activity: Ultima actividad
+      last_activity: ultima actividad
       answers_title:
-        one: "{{count}} Respuesta"
-        other: "{{count}} Respuestas"
+        one: "{{count}} respuesta"
+        other: "{{count}} respuestas"
     answer:
-      pick_answer: Escoger como solución
-      unset_answer: "¿Quitar como solución?"
-      flag: "Reportar abuso"
-      add_comment: Añadir comentario...
+      pick_answer: escoger como solución
+      unset_answer: "¿quitar como solución?"
+      flag: "reportar abuso"
+      add_comment: añadir comentario...
     form:
-      body_tip: ¿Cual es tu pregunta? por favor se descriptivo.
-      language_tip: Selecciona el idioma de tu pregunta.
-      category_tip: Selecciona la categoria que mejor se ajusta a la pregunta.
-      tags_tip:  Usa etiquetas para añadir más información sobre tu pregunta.
+      body_tip: ¿cual es tu pregunta? por favor se descriptivo.
+      language_tip: selecciona el idioma de tu pregunta.
+      category_tip: selecciona la categoria que mejor se ajusta a la pregunta.
+      tags_tip:  usa etiquetas para añadir más información sobre tu pregunta.
     flag:
-      title:   Reportar abuso en esta pregunta
+      title:   reportar abuso en esta pregunta
     edit:
-      title: Editar pregunta
+      title: editar pregunta
     unanswered:
-      title: Preguntas no contestadas
+      title: preguntas no contestadas
       tags: etiquetas sin respuesta
-      empty: "Este grupo no tiene preguntas no contestadas."
+      empty: "este grupo no tiene preguntas no contestadas."
       my_tags: mis etiquetas
       expert: expertos
     tags:
-      title: Etiquetas
+      title: etiquetas
     new:
-      title: Pregunte
+      title: pregunte
     create:
-      flash_notice: "La pregunta fue creada exitosamente."
+      flash_notice: "la pregunta fue creada exitosamente."
     update:
-      flash_notice: "La pregunta fue actualizada exitosamente."
+      flash_notice: "la pregunta fue actualizada exitosamente."
     solve:
-      flash_notice: "La pregunta ha sido resuelta"
+      flash_notice: "la pregunta ha sido resuelta"
     unsolve:
-      flash_notice: "La pregunta ahora no esta resuelta."
+      flash_notice: "la pregunta ahora no esta resuelta."
     watch:
       success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
     move:
-      title:        "Mover la pregunta: {{title}}"
-      group_label:  "Mover la pregunta a el group con slug:"
-      submit:       "Mover!"
+      title:        "mover la pregunta: {{title}}"
+      group_label:  "mover la pregunta a el group con slug:"
+      submit:       "mover!"
     move_to:
-      success:      "Pegunta movida a {{group}}"
-      group_dont_exists: "El group {{group}} no existe"
+      success:      "pegunta movida a {{group}}"
+      group_dont_exists: "el group {{group}} no existe"
     shared:
-      flag: Reportar abuso
+      flag: reportar abuso
 
   activerecord:
     models:
-      questions: Preguntas
+      questions: preguntas
       question: pregunta
     attributes:
       question:
-        title: Titulo
-        body: Contenido
-        tags: Etiquetas
-        asked_by: Preguntado por
-        answers: Respuestas
-        views: Visitas
-        votes: Votos
-        language: Idioma
-        category: Categoria
-        created_at: Preguntado
+        title: titulo
+        body: contenido
+        tags: etiquetas
+        asked_by: preguntado por
+        answers: respuestas
+        views: visitas
+        votes: votos
+        language: idioma
+        category: categoria
+        created_at: preguntado
