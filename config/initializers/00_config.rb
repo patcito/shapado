@@ -27,15 +27,6 @@ begin
   end
 end
 
-reputation_config_file = "/etc/shapado.reputation.yml"
-if !File.exist?(reputation_config_file)
-  reputation_config_file = RAILS_ROOT+"/config/reputation.yml"
-end
-
-if !File.exist?(reputation_config_file)
-  raise StandardError,  "Reputation Config file was not found"
-end
-
 REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "comment" => 50, "delete_own_comments" => 50, "vote_down" => 100,
 "create_new_tags" => 100, "post_whithout_limits" => 100, "edit_wiki_post" => 100,
@@ -44,7 +35,7 @@ REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "edit_others_posts" => 2000, "view_offensive_counts" => 2000, "vote_to_open_any_question" => 3000,
 "vote_to_close_any_question" => 3000, "delete_closed_questions" => 10000, "moderate" => 10000}
 
-REPUTATION_REWARDS = YAML.load_file(reputation_config_file)
+REPUTATION_REWARDS = YAML.load_file(RAILS_ROOT+"/config/default_reputation.yml")
 
 
 REST_AUTH_SITE_KEY         = AppConfig.rest_auth_key
