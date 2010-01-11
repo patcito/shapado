@@ -18,15 +18,28 @@ class Widget
   end
 
   def up
-    self.move_to(self.position-1)
+    self.move_to("up")
   end
 
   def down
-    self.move_to(self.position+1)
+    self.move_to("down")
   end
 
   def move_to(pos)
-    widget = Widget.find(:first, :position => pos.to_i, :group_id => self.group_id)
+    scope = {:group_id => self.group_id}
+    widget = nil
+    if pos == "up"
+      widget = Widget.find(:first, scope.merge(:position => {:$lt => self.position}))
+    elsif pos == "down"
+      widget = Widget.find(:first, scope.merge(:position => {:$gt => self.position}))
+    else
+      if pos.to_i > self.position
+        widget = Widget.find(:first, scope.merge(:position => {:$gt => self.position}))
+      else
+        widget = Widget.find(:first, scope.merge(:position => {:$lt => self.position}))
+      end
+    end
+
     if widget
       self.collection.update({:_id => widget._id}, {:$set => {:position => self.position}},
                                                                :upsert => true)
