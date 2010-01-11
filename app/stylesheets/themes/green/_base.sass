@@ -90,8 +90,11 @@ input.checkbox
   padding: 2px 5px
   .notice
     padding: 0 10px
-    border: 2px solid #666
-    background: #FFF !important
+    border: 2px solid #eee
+
+    &.block
+      background: #FFF
+      +rounded(1px, 1px, 1px, 1px)
 
     h2
       font-size: 16px
