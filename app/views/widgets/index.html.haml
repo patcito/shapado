@@ -13,9 +13,9 @@
           =widget.description # do not escape
         .widget.block{:id => widget.name}
           .controls
-            .right
-              = link_to  t("scaffold.destroy"), widget_path(widget), :method => :delete, :confirm => t("scaffold.sure", :model => "widget")
-            -form_tag move_widget_path(widget) do
+            .action
+              = link_to t("scaffold.destroy"), widget_path(widget), :method => :delete, :confirm => t("scaffold.sure", :model => "widget")
+            -form_tag move_widget_path(widget), :class => "vote_box" do
               = image_submit_tag("to_vote_up.png", :name=>"move_to", :value => widget.position-1)
               = image_submit_tag("to_vote_down.png", :name=>"move_to", :value => widget.position+1)
             .clear
@@ -30,4 +30,4 @@
   .group
     = select :widget, "_type", Widget::TYPES
   .group.navform
-    =submit_tag t("scaffold.add")
+    =submit_tag t("scaffold.add"), :class => "button"
