@@ -1,7 +1,7 @@
-module ActiveTab                                                                      
-  def self.included(base)                                                               
-    base.extend(ClassMethods)                                                           
-  end                                                                                   
+module ActiveTab
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
 
   module ClassMethods
     unloadable
@@ -19,9 +19,68 @@ module ActiveTab
         @active_tab
       end
     end
+
+    def subtabs(subtabs)
+      subtabs.symbolize_keys!
+
+      before_filter :set_active_subtab
+
+      define_method(:current_order) do
+        @current_order
+      end
+      helper_method :current_order
+
+      define_method(:load_default_subtab) do
+        key = "#{params[:controller]}/#{params[:action]}"
+        @subtabs = subtabs[params[:action].to_sym]
+        @active_subtab = params[:sort]
+        @store_subtab = !@subtabs.blank?
+
+        if @store_subtab && @active_subtab.nil?
+          if logged_in?
+            @active_subtab, @current_order = current_user.default_subtab[key]
+            @store_subtab = false
+          end
+
+          if @active_subtab.nil? && session[:subtab] && session[:subtab][key]
+            @active_subtab, @current_order = session[:subtab][key]
+            @store_subtab = logged_in?
+          end
+
+          if @active_subtab.nil?
+            @active_subtab, @current_order = @subtabs.first
+          end
+        end
+      end
+
+      private
+      define_method(:set_active_subtab) do
+        load_default_subtab
+        if !@subtabs.blank? && @current_order.nil?
+          @subtabs.each do |st|
+            if st.first.to_s == @active_subtab
+              @current_order = st.last
+              break
+            end
+          end
+          @current_order ||= @subtabs.first.last
+        end
+
+        if @store_subtab
+          subtab = [@active_subtab, @current_order]
+          key = "#{params[:controller]}/#{params[:action]}"
+          (session[:subtab] ||= {})[key] = subtab
+          if logged_in?
+            current_user.collection.update({:_id => current_user._id},
+                                           {:$set => {"default_subtab.#{key}" => subtab}},
+                                           {:upsert => true})
+          end
+        end
+      end
+    end
   end
 end
 
 ActionController::Base.class_eval do
-  include ActiveTab               
+  include ActiveTab
 end

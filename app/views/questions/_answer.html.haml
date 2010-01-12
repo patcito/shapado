@@ -10,6 +10,20 @@
   #body-col
     .markdown
       =find_and_preserve(shapado_auto_link(markdown(answer.body)))
+    -if !answer.updated_by.nil?
+      .user_data
+        .time_ago
+          = t('activerecord.attributes.answer.updated_at', :default => "updated")
+          %strong
+            = t("time.ago", :time => time_ago_in_words(answer.updated_at))
+        .avatar
+          = gravatar(answer.updated_by.email.to_s, :size => 32)
+        .user
+          = link_to h(answer.updated_by.login), user_path(answer.updated_by)
+          == (#{answer.updated_by.reputation_on(current_group)})
+          = t("global.from", :site => answer.updated_by.country_name)
+          = country_flag(answer.updated_by.country_code, answer.updated_by.country_name)
+
     .user_data
       .time_ago
         = t('activerecord.attributes.answer.created_at')
@@ -25,18 +39,20 @@
     .controls
       .actions
         -if logged_in?
-          -if current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
+          -if answer.wiki || current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
             = link_to t("scaffold.edit"), edit_question_answer_path(current_languages, @question, answer)
           -if current_user.can_modify?(answer)
             = link_to t("scaffold.destroy"), question_answer_path(current_languages, @question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
-        = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
-        -if current_user != answer.user
-          = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
-        -if current_user.can_modify?(@question)
-          -unless @question.answered
-            = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer)
-          -if solution
-            = link_to t(".unset_answer"),  unsolve_question_path(current_languages, @question)
+          = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
+          -if current_user != answer.user
+            = link_to t(".flag"), flag_question_answer_path(current_languages,@question,answer), :class => "flag-link"
+          -if current_user.can_modify?(@question)
+            -unless @question.answered
+              = link_to t(".pick_answer"), solve_question_path(current_languages, @question, :answer_id => answer)
+            -if solution
+              = link_to t(".unset_answer"),  unsolve_question_path(current_languages, @question)
+        -if answer.versions.count > 0
+          = link_to t(".history", :default => "history"), history_question_answer_path(current_languages, @question, answer)
       .clear
       .forms
         -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|

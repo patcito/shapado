@@ -1,12 +1,12 @@
 a
-  color: #029AEC
+  color: #149600
 
   &:link, &:visited
-    color: #07b
+    color: #149600
     text-decoration: none
 
   &:hover, &:active
-    color: #d30
+    color: #73FA34
 
 h1, h2, h3
   color: #444
@@ -90,6 +90,8 @@ input.checkbox
   padding: 2px 5px
   .notice
     padding: 0 10px
+    border: 2px solid #666
+    background: #FFF !important
 
     h2
       font-size: 16px
@@ -100,8 +102,9 @@ input.checkbox
       font-size: 12px
 
   .block
-    padding-bottom: 0
-    background: #FFF
+    padding-bottom: 10px
+    background: #EEEEEE
+    +rounded(0px, 0px, 8px, 8px)
 
     .content
       padding: 0 10px
@@ -112,6 +115,7 @@ input.checkbox
     font-weight: bold
     font-size: 16px
     background: #17AD00
+    +rounded(6px, 6px, 4px, 4px)
 
   ul
     li a
@@ -130,7 +134,7 @@ input.checkbox
 
       a
         &:link, &:visited
-          padding: 5px 10px
+          padding: 7px 10px
           color: #6a6a6a
           text-decoration: none
 

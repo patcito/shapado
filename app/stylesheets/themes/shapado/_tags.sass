@@ -13,7 +13,9 @@
     overflow: hidden
     float: left
     a
-      +rounded(4px, 0px, 4px, 0px)
+      +rounded(2px, 2px, 2px, 2px)
+      border-bottom: 1px solid #95959F
+      border-right: 1px solid #B9B9C5
       color: #666
       background: #DDDDEC
       cursor: pointer
@@ -23,12 +25,14 @@
       padding: 2px 8px
       text-align: center
       text-decoration: none
-      text-transform: uppercase
+      text-transform: lowercase
       white-space: nowrap
       line-height: 20px
       &:hover
-        color: #dedede
-        background: #004181
+        background: #CECEDB !important
+        text-decoration: none !important
+        border-bottom: 1px solid #B9B9C5
+        border-right: 1px solid #C0C0CD
       &.remove_tag
         background: #FFDDEC
         +rounded(4px, 4px, 4px, 4px)

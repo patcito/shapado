@@ -115,9 +115,9 @@ class ApplicationController < ActionController::Base
     locale = 'en'
     if logged_in?
       locale = current_user.language
+      Time.zone = current_user.timezone || "UTC"
     elsif params[:lang] =~ /^(\w\w)/
       locale = find_valid_locale($1)
-      puts locale
     else
       if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
         locale = find_valid_locale($1)

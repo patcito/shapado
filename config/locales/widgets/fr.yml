@@ -1,7 +1,7 @@
 fr:
   widgets:
     badges:
-      title: Insigne récents
+      title: Récentes insignes
       description: "Ce widget montre les insignes récement gagnées par les utilisateurs ou questions"
     groups:
       title: Groupes récents

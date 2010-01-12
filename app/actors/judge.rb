@@ -24,9 +24,9 @@ module Actors
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
         answer.user.find_badge_on(group,"tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
-
-        answer.user.stats.add_expert_tags(*question.tags)
       end
+
+      answer.user.stats.add_expert_tags(*question.tags)
     end
 
     expose :on_question_unsolved
@@ -88,7 +88,7 @@ module Actors
         user.find_badge_on(group,"supporter") || user_badges.create!(:token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
-      if user.stats.views_count >= 10000
+      if user.stats(:views_count).views_count >= 10000
         user.find_badge_on(group,"popular_person") || user.badges.create!(:token => "popular_person", :type => "silver", :group_id => group.id)
       end
 
@@ -107,6 +107,14 @@ module Actors
 
         if vote_value >= 300
           vuser.find_badge_on(group,"service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
+        end
+
+        if vote_value >= 500 && vuser.votes_down <= 10
+          vuser.find_badge_on(group,"popstar") || user_badges.create!(:token => "popstar", :group_id => group.id, :source => vote)
+        end
+
+        if vote_value >= 1000 && vuser.votes_down <= 10
+          vuser.find_badge_on(group,"rockstar") || user_badges.create!(:token => "rockstar", :group_id => group.id, :source => vote)
         end
       end
 
@@ -131,6 +139,30 @@ module Actors
           user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
       end
+    end
+
+    expose :on_activity
+    def on_activity(payload)
+      group_id, user_id = payload
+      user = User.find(user_id, :select => [:_id])
+      group = Group.find(group_id, :select => [:_id])
+
+      days = user.stats(:activity_days).activity_days[group_id]
+      if days > 8 && user.find_badge_on(group, "shapado").nil?
+        user.badges.create!(:token => "shapado", :group_id => group_id)
+      elsif days > 20 && user.find_badge_on(group, "addict").nil?
+        user.badges.create!(:token => "addict", :group_id => group_id)
+      elsif days > 100 && user.find_badge_on(group, "fanatic").nil?
+        user.badges.create!(:token => "fanatic", :group_id => group_id)
+      end
+    end
+
+    expose :on_update_answer
+    def on_update_answer(payload)
+      answer = Answer.find(payload.first)
+      user = answer.updated_by
+
+      user.find_badge_on(answer.group, "editor") || user.badges.create!(:token => "editor", :group_id => answer.group_id)
     end
 
     expose :on_comment

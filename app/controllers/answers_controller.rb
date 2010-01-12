@@ -1,9 +1,31 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update]
+  before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
 
   helper :votes
+
+  def history
+    @answer = Answer.find(params[:id])
+    @question = @answer.question
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @answer.versions.to_json }
+    end
+  end
+
+  def rollback
+    @question = @answer.question
+
+    if @answer.rollback!(params[:version].to_i)
+      flash[:notice] = t(:flash_notice, :scope => "answers.update")
+    end
+
+    respond_to do |format|
+      format.html { redirect_to history_question_answer_path(current_languages, @question, @answer) }
+    end
+  end
 
   def show
     @answer = Answer.find(params[:id])
@@ -16,7 +38,7 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new
-    @answer.safe_update(%w[parent_id body], params[:answer])
+    @answer.safe_update(%w[parent_id body wiki], params[:answer])
     @question = Question.find(params[:question_id])
 
     if @answer.parent_id.blank?
@@ -74,6 +96,8 @@ class AnswersController < ApplicationController
 
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
+
+        Magent.push("/actors/judge", :on_update_answer, @answer.id)
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
         format.json  { head :ok }
       else
@@ -121,7 +145,7 @@ class AnswersController < ApplicationController
     if @answer.nil?
       redirect_to questions_path
     elsif !(current_user.can_edit_others_posts_on?(@answer.group) ||
-          current_user.can_modify?(@answer))
+          current_user.can_modify?(@answer) || @answer.wiki)
       reputation = @answer.group.reputation_constrains["edit_others_posts"]
       flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                                     :min_reputation => reputation,

@@ -5,7 +5,7 @@ class Badge
   GOLD = %w[rockstar popstar fanatic service_medal famous_question]
   SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer]
   BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
-              merit_medal effort_medal student]
+              merit_medal effort_medal student shapado editor]
 
   def self.TOKENS
     @tokens ||= GOLD + SILVER + BRONZE
@@ -15,7 +15,7 @@ class Badge
   key :user_id, String, :required => true
   belongs_to :user
 
-  key :group_id, String, :required => true
+  key :group_id, String, :required => true, :index => true
   belongs_to :group
 
   key :token, String, :required => true, :index => true
@@ -61,6 +61,6 @@ class Badge
 
   protected
   def set_type
-    self[:type] ||= self.find_type
+    self[:type] ||= self.class.type_of(self[:token])
   end
 end

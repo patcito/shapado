@@ -6,10 +6,10 @@ class Vote
   key :_id, String
   key :value, Integer, :required => true
 
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
-  key :group_id, String, :required => true
+  key :group_id, String, :required => true, :index => true
   belongs_to :group
 
   key :voteable_id, String

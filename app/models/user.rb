@@ -2,7 +2,6 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-  ensure_index :login
 
   include Authentication
   include Authentication::ByPassword
@@ -10,8 +9,8 @@ class User
 
   ROLES = %w[user admin]
 
-  key :_id,                     String
-  key :login,                     String, :limit => 40
+  key :_id,                       String
+  key :login,                     String, :limit => 40, :index => true
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :bio,                       String, :limit => 200
   key :email,                     String, :limit => 100
@@ -38,6 +37,7 @@ class User
 
   key :votes_up,                  Hash
   key :votes_down,                Hash
+  key :default_subtab,            Hash
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -234,13 +234,15 @@ class User
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
-      self.stats.visited_on(now)
     end
   end
 
   def on_activity(activity, group)
-    self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
-                                               :upsert => true)
+    if !self.last_logged_at.today?
+      self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
+                                                  :upsert => true)
+    end
+    self.stats(:last_activity_at, :user_id).activity_on(group, Time.now)
     self.update_reputation(activity, group)
   end
 
@@ -282,11 +284,9 @@ class User
     self.reputation.fetch(group.id, 0.0 ).to_i
   end
 
-  def stats(year = nil)
-    fields = [:_id, :user_id, :views_count]
-    fields << "visits_#{year}" if year
-
-    UserStat.find_or_create_by_user_id(self._id, :select => fields)
+  def stats(*extra_fields)
+    fields = [:_id]
+    UserStat.find_or_create_by_user_id(self._id, :select => fields+extra_fields)
   end
 
   def badges_on(group, opts = {})

@@ -28,13 +28,13 @@ class Question
 
   key :activity_at, Time
 
-  key :user_id, String
+  key :user_id, String, :index => true
   belongs_to :user
 
   key :answer_id, String
   belongs_to :answer
 
-  key :group_id, String
+  key :group_id, String, :index => true
   belongs_to :group
 
   key :watchers, Array
@@ -83,8 +83,7 @@ class Question
   end
 
   def self.tag_cloud(conditions = {}, limit = 30)
-    @tag_cloud_code ||= RAILS_ROOT + "/app/javascripts/tag_cloud.js"
-    self.database.eval(File.read(@tag_cloud_code), conditions, limit)
+    self.database.eval("function(a,b) { return tag_cloud(a,b); }", conditions, limit)
   end
 
   def viewed!

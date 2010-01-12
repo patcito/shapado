@@ -34,7 +34,7 @@
 /Questions
 %ul.items#questions
   -if @questions.empty?
-    %li.box.highlight
+    %li.highlight
       = t(".empty")
   -@questions.each do |question|
     = render :partial => "question", :object => question
