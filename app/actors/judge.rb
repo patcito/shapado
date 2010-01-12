@@ -127,7 +127,7 @@ module Actors
         end
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :type => "silver", :group_id => group.id, :source => voteable)
+          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :group_id => group.id, :source => voteable)
         end
       end
 
