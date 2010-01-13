@@ -160,7 +160,7 @@ class Answer
     if !self.new? && self.body_changed? && self.updated_by_id
       self.versions << {'body' => self.body_was,
                         'user_id' => (self.updated_by_id_was || self.updated_by_id),
-                        'date' => self.updated_at_was}
+                        'date' => self.updated_at_was.try(:utc) }
     end
   end
 end
