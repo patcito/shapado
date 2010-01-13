@@ -28,7 +28,7 @@ pt-PT:
     from: "de {{site}}"
     permission_denied: permissão negada
     please_login: por favor inicie sessão
-    group_not_found: "the page {{url}} doesn't exists"
+    group_not_found: "the page {{url}} doesn't exist"
     preview: pré-visualizar
     or: or
   feeds:

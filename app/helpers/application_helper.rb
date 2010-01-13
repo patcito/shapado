@@ -44,7 +44,8 @@ module ApplicationHelper
 
     tag_class = options.delete(:tag_class) || "tag"
 
-    lowest_value, highest_value = tags.minmax_by { |tag| tag["count"].to_i }
+    lowest_value = tags.min { |a, b| a["count"].to_i <=> b["count"].to_i }
+    highest_value = tags.max { |a, b| a["count"].to_i <=> b["count"].to_i }
 
     spread = (highest_value["count"] - lowest_value["count"])
     spread = 1 if spread == 0

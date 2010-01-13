@@ -28,7 +28,7 @@ en:
     from: "from {{site}}"
     permission_denied: permission denied
     please_login: please log in
-    group_not_found: "the page {{url}} doesn't exists"
+    group_not_found: "the page {{url}} doesn't exist"
     preview: preview
     or: or
   feeds:
