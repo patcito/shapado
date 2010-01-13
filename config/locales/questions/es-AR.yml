@@ -9,7 +9,7 @@ es-AR:
       oldest:  antiguas
       ask_question: pregunte
       empty: "nadie a preguntado aun, ¡se el primero!"
-      help_to_answer: ayudanos a reponder
+      help_to_answer: ayudanos a responder
       unanswered_questions: preguntas aun no contestadas
     show:
       answers: respuestas
