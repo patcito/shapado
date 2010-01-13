@@ -1,28 +1,29 @@
-%ul#top-bar
+#top-bar
   -current_group.default_tags[0,7].each do |tag|
-    %li
+    .entry
       = link_to(tag, questions_url(:language => current_languages, :tags => tag))
       ==-
   -if current_group.default_tags.size > 7
-    %li
+    .entry
       = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
-  %ul.right
+
+  %span.right
     -if logged_in?
-      %li
+      .entry
         = t(".logged_as", :login => link_to(h(current_user.login), user_path(current_user)))
         ==(#{format_number(current_user.reputation_on(current_group))})
         |
-      %li
+      .entry
         =link_to t("layouts.application.settings"), settings_path
         |
-      %li
+      .entry
         =link_to t("layouts.application.logout"), logout_path
         |
     -else
-      %li
+      .entry
         =link_to t("layouts.application.log_in"), login_path
         |
-    %li
+    .entry
       =link_to t("layouts.application.search"), search_path
 
   .clear
