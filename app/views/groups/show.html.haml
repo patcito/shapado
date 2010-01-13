@@ -26,13 +26,12 @@
     = link_to t(".visit_group"), domain_url(:custom => @group.domain)
     -if logged_in?
       -if current_user.owner_of?(@group)
-        = link_to t("scaffold.edit"), edit_group_path(@group), :class => "button"
-        = link_to t("scaffold.back"), groups_path, :class => "cancel button"
+        = link_to t("shared.layout.notice.manage"), domain_url(:controller => "manage", :custom => @group.domain)
       -if current_user.admin? && @group.state == "pending"
-        = link_to t(".accept_group"), accept_group_path(@group), :class => "button"
-        = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true), :class => "button"
+        = link_to t(".accept_group"), accept_group_path(@group)
+        = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true)
       -if current_user.can_modify?(@group) && @group.state == "active"
-        = link_to t(".close_group"), close_group_path(@group), :class => "cancel button"
+        = link_to t(".close_group"), close_group_path(@group)
 
 %h3= t("models.comments")
 .comments

@@ -13,6 +13,8 @@ class UserStat
   key :last_activity_at, Hash
   key :activity_days, Hash
 
+  key :tag_votes, Hash
+
   timestamps!
 
   def activity_on(group, date)
@@ -65,6 +67,16 @@ class UserStat
     self.collection.update({:_id => self._id,
                             :expert_tags => {:$nin => tags} },
                            {:$pushAll => {:expert_tags => tags}},
+                           {:upsert => true})
+  end
+
+  def vote_on_tags(tags, inc = 1)
+    opts = {}
+    tags.each do |tag|
+      opts["tag_votes.#{tag}"] = inc
+    end
+    self.collection.update({:_id => self._id},
+                           {:$inc => opts},
                            {:upsert => true})
   end
 end

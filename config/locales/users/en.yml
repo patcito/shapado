@@ -1,23 +1,23 @@
 en:
   users:
     index:
-      title: All users
+      title: all users
       empty: "this group doesn't have any members, participate to join this group."
     new:
-      title: Sign up as a new user
-      submit: Sign up
+      title: sign up as a new user
+      submit: sign up
     edit:
-      title: Settings
-      submit: Save
+      title: settings
+      submit: save
     form:
-      information: Information
-      notifications: Notifications
-      new_answer_notification: Get mail notifications for new answers
-      give_advice_notification: Receive email notifications about questions in your field of expertise
+      information: information
+      notifications: notifications
+      new_answer_notification: get mail notifications for new answers
+      give_advice_notification: receive email notifications about questions in your field of expertise
       categories_tip: only questions belonging to these categories will show
     create:
-      flash_notice: "Thanks for signing up!"
-      flash_error:  "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+      flash_notice: "thanks for signing up!"
+      flash_error:  "we couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
     messages:
       errors:
         reputation_needed: "you need a reputation of {{min_reputation}} to {{action}}"
@@ -28,26 +28,26 @@ en:
       edit_others_posts: "edit other's posts"
   activerecord:
     models:
-      users: Users
+      users: users
       user: user
     attributes:
       user:
-        login: Login
-        email: Email
-        name: Real name
-        current_password: Current Password
-        password: Password
-        password_confirmation: Password Confirmation
-        created_at: Created At
-        updated_at: Updated At
-        activation_code: Activation Code
-        activated_at: Activated At
-        fullname: Full name
-        language: Language
+        login: login
+        email: email
+        name: real name
+        current_password: current password
+        password: password
+        password_confirmation: password confirmation
+        created_at: created at
+        updated_at: updated at
+        activation_code: activation code
+        activated_at: activated at
+        fullname: full name
+        language: language
         asked_by: asked by
-        timezone: Time zone
-        preferred_tags: Preferred tags
-        preferred_languages: Select the languages you know
+        timezone: time zone
+        preferred_tags: preferred tags
+        preferred_languages: select the languages you know
         last_logged_at: seen
         created_at: joined
-        reputation: Reputation
+        reputation: reputation

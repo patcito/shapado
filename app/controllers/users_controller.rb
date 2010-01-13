@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_login_or_id(params[:id])
-    raise SuperExceptionNotifier::CustomExceptionClasses::PageNotFound unless @user
+    raise PageNotFound unless @user
     @questions = @user.questions.paginate(:page=>params[:questions_page],
                                           :per_page => 10,
                                           :group_id => current_group.id)
@@ -53,6 +53,13 @@ class UsersController < ApplicationController
     @badges = @user.badges.paginate(:page => params[:badges_page],
                                     :group_id => current_group.id,
                                     :per_page => 25)
+
+    @favorites = @user.favorites.paginate(:page => params[:favorites_page],
+                                          :per_page => 25,
+                                          :group_id => current_group.id)
+
+    @favorite_questions = Question.find(@favorites.map{|f| f.question_id })
+
     add_feeds_url(url_for(:format => "atom"), t("feeds.user"))
 
     @user.stats.viewed! if @user != current_user && !is_bot?

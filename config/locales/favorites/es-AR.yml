@@ -1,5 +1,10 @@
-"es-AR":
+es-AR:
   favorites:
     create:
       unauthenticated: "necesitas tener una cuenta para agregar favoritos"
-      success:         "La pregunta ha sido añadida a tus favoritas"
+      success:         "la pregunta ha sido añadida a tus favoritas"
+
+  activerecord:
+    models:
+      favorites: favorites
+      favorite: favorite

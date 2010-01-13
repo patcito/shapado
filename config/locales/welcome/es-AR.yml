@@ -1,9 +1,9 @@
-"es-AR":
+es-AR:
   welcome:
     facts:
       prices:
         cols:
-          onsite: En su sitio
+          onsite: en su sitio
         stackexchange:
           small: $129/mes
           medium: $999/mes
@@ -16,11 +16,11 @@
           onsite: pues $0 en tu propio servidor
       features:
         cols:
-          adaptable: Adaptable
-          multitopic: Multi-topic
-          multilanguage: Multilenguas
-          foss: Libre/Open Source
-          joel: Voy a hacer Joel mas rico?
+          adaptable: adaptable
+          multitopic: multi-topic
+          multilanguage: multilenguas
+          foss: libre/open source
+          joel: voy a hacer joel mas rico?
         stackexchange:
           adaptable: "no"
           multitopic: "no"
@@ -33,8 +33,12 @@
           multilanguage: si!
           foss: si!
           joel: "no :/"
+    feedback:
+      title: envía tu sugerencia
+      feedback_title: titulo
+      feedback_description: descripción
     index:
       hot:     calientes
       active:  activas
-      recent_questions: Preguntas recientes
-      quick_question: Has tu pregunta, nosotros buscaremos quien la responda
+      recent_questions: preguntas recientes
+      quick_question: has tu pregunta, nosotros buscaremos quien la responda

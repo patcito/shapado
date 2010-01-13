@@ -24,7 +24,7 @@
   -if @search_tags
     .block
       %h3
-        = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"]).capitalize
+        = t('.tags', :default => [:"layout.application.tags", :"activerecord.attributes.user.tags", "tags"])
       .tag-list
         %ul
           -@search_tags.each do |tag|

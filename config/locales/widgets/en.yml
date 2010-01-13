@@ -1,14 +1,17 @@
 en:
   widgets:
+    index:
+      title: manage sidebar widgets
+      description: use the arrows to move your widgets
     badges:
-      title: Recent Badges
-      description: "This widget display recent Badges earned by users or questions"
+      title: recent badges
+      description: "this widget display recent badges earned by users or questions"
     groups:
-      title: Recent Groups
-      description: "This widget displays the latest groups"
+      title: recent groups
+      description: "this widget displays the latest groups"
     top_users:
-      title: Top 5 Users
-      description: "This widget displays top five users"
+      title: top 5 users
+      description: "this widget displays top five users"
     users:
-      title: Recent Users
-      description: "This widget display new registered members"
+      title: recent users
+      description: "this widget display new registered members"

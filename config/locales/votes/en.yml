@@ -1,8 +1,8 @@
 en:
   votes:
     create:
-      flash_notice: "Thanks for your vote!"
-      flash_error:  "You cannot vote this"
+      flash_notice: "thanks for your vote!"
+      flash_error:  "you cannot vote this"
       unauthenticated: "anonymous users can't vote"
     control:
       to_vote_up: "click to vote up"
@@ -10,5 +10,5 @@ en:
 
   activerecord:
     models:
-      votes: Votes
+      votes: votes
       vote: vote

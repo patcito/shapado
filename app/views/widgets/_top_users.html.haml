@@ -9,6 +9,7 @@
         .item
           =link_to h(user.login), user_path(user)
           ==(#{user.reputation_on(current_group)})
-  .clear.more
+  .more
     =link_to t("scaffold.more"), users_path
+  .clear
 .clear

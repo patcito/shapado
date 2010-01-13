@@ -1,18 +1,19 @@
 fr:
   scaffold:
     sure: Êtes-vous sûr de vouloir effacer ce {{model}} ?
-    show: Monter
+    show: monter
     edit: Éditer
-    destroy: Effacer
-    back: Retour
-    update: Actualiser
-    cancel: Annuler
-    create: Créer
-    new: Add new {{model}}
+    destroy: effacer
+    back: retour
+    update: actualiser
+    cancel: annuler
+    create: créer
+    new: add new {{model}}
     more: more...
     add: ajouter
+    send: send
   time:
-    today: Today
+    today: today
     ago: "{{time}} ago"
   messages:
     success: "{{model}} was successfully {{action}}."
@@ -25,36 +26,23 @@ fr:
     closed:      closed
   global:
     from: depuis {{site}}
-    permission_denied: Permission refusée
+    permission_denied: permission refusée
     please_login: ouvrez une session s'il vous plait
     group_not_found: "la page {{url}} n'existe pas"
-    preview: Preview
+    preview: preview
     or: or
   feeds:
-    question: Souscrire à cette question
-    questions: Souscrire à toutes les questions
-    tag: Souscrite au tag
-    user:  Inscrivez-vous aux questions de l'utilisateur
+    question: souscrire à cette question
+    questions: souscrire à toutes les questions
+    tag: souscrite au tag
+    user:  inscrivez-vous aux questions de l'utilisateur
   languages:
-    en:      Anglais
-    es:      Espagnol
-    es-AR:   Espagnol d'Amérique Latine
-    fr:      Français
-    pt:      Portugais
-    pt-PT:   Portugais
-  categories:
-    technology:    Technologie
-    programming:   Programmation
-    science:       Science
-    politics:      Politique
-    religion:      Religion
-    sports:        Sports
-    music:         Musique
-    gaming:        Jeux vidéos
-    lifestyle:     Style de vie
-    business:      Business
-    entertainment: Divertissement
-    offbeat:       Peu conventionnel
+    en:      anglais
+    es:      espagnol
+    es-AR:   espagnol d'amérique latine
+    fr:      français
+    pt:      portugais
+    pt-PT:   portugais
   number:
     x_time:
       zero: "jamais"

@@ -1,7 +1,7 @@
 en:
   layouts:
     application:
-      title: "Questions & Answers"
+      title: "questions & answers"
       questions: questions
       questions_in: questions in
       questions_tagged: tagged with
@@ -11,22 +11,23 @@ en:
       badges: badges
       unanswered: unanswered
       logout: logout
-      logged: Logged in as {{login}}
+      logged: logged in as {{login}}
       search: search
       forgot: forgot?
       log_in: login
-      signup: Signup
+      signup: signup
       settings: settings
-      categories: Categories
-      languages: Languages
-      moderate: Moderate
-      manage_ads: Manage ads
+      categories: categories
+      languages: languages
+      moderate: moderate
+      manage_ads: manage ads
       home: home
       openid:
-        explaination: "If you'd like to register or just log in, please select your OpenID provider:"
+        explaination: "if you'd like to register or just log in, please select your openid provider:"
     manage:
-      dashboard: Dashboard
-      properties: Properties
-      actions: Actions
-      stats: Stats
-      members: Members
+      dashboard: dashboard
+      properties: properties
+      actions: actions
+      stats: stats
+      members: members
+      reputation: reputation

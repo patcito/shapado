@@ -21,15 +21,17 @@ class Badge
   key :token, String, :required => true, :index => true
   key :type, String, :required => true
 
+  key :for_tag, Boolean
+
   key :source_id, String
   key :source_type, String
-  belongs_to :source
+  belongs_to :source, :polymorphic => true
 
   key :_type, String
   timestamps!
 
   validates_inclusion_of :type,  :within => TYPES
-  validates_inclusion_of :token, :within => self.TOKENS
+  validates_inclusion_of :token, :within => self.TOKENS, :if => Proc.new { |b| !b.for_tag }
 
   before_validation_on_create :set_type
 
@@ -57,6 +59,10 @@ class Badge
     elsif GOLD.include?(token)
       "gold"
     end
+  end
+
+  def type
+    self[:type] ||= Badge.type_of(self.token)
   end
 
   protected

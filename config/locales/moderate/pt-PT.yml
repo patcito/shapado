@@ -1,8 +1,8 @@
-"pt-PT":
+pt-PT:
   admin:
     moderate:
       index:
-        title: Moderar
+        title: moderar
         ban: banir
         content: conteúdo
         item_title: título

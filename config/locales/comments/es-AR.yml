@@ -1,11 +1,11 @@
 es-AR:
   comments:
     create:
-      flash_notice: Gracias por tu comentario
+      flash_notice: gracias por tu comentario
     update:
-      flash_notice: "El commentario ha sido actualizado con exito."
+      flash_notice: "el commentario ha sido actualizado con exito."
     shared:
       add_comment: "añadir comentario..."
-      comment_submit: "Comentar"
+      comment_submit: "comentar"
   models:
-    comments: Comentarios
+    comments: comentarios

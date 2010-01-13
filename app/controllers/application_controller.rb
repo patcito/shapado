@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include ExceptionNotifiable
   include SuperExceptionNotifier
   include ExceptionNotifierHelper
-  self.error_layout = 'error'
+  self.error_layout = 'application'
 
   include AuthenticatedSystem
   include Subdomains
@@ -38,6 +38,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  exception_data :additional_data
+  def additional_data
+    { :group => find_group}
+  end
+
   def find_group
     @current_group ||= begin
       subdomains = request.subdomains
@@ -59,18 +64,18 @@ class ApplicationController < ActionController::Base
   helper_method :current_group
 
   def current_tags
-    if params[:tags].kind_of?(String)
-      @current_tags ||= params[:tags].split("+")
+    @current_tags ||=  if params[:tags].kind_of?(String)
+      params[:tags].split("+")
     elsif params[:tags].kind_of?(Array)
-      @current_tags ||= params[:tags]
+      params[:tags]
     else
-      @current_tags || []
+      []
     end
   end
   helper_method :current_tags
 
   def current_languages
-    @current_languages = find_languages.join("+")
+    @current_languages ||= find_languages.join("+")
   end
   helper_method :current_languages
 
@@ -92,6 +97,7 @@ class ApplicationController < ActionController::Base
       languages
     end
   end
+  helper_method :find_languages
 
   def language_conditions
     conditions = {}

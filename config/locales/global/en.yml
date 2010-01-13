@@ -1,18 +1,19 @@
 en:
   scaffold:
-    sure: Are you sure you want to delete this {{model}} ?
-    show: Show
-    edit: Edit
-    destroy: Delete
-    back: Back
-    update: Update
-    cancel: Cancel
-    create: Create
-    new: Add new {{model}}
+    sure: are you sure you want to delete this {{model}} ?
+    show: show
+    edit: edit
+    destroy: delete
+    back: back
+    update: update
+    cancel: cancel
+    create: create
+    new: add new {{model}}
     more: "more ..."
     add: add
+    send: send
   time:
-    today: Today
+    today: today
     ago: "{{time}} ago"
   messages:
     success: "{{model}} was successfully {{action}}."
@@ -25,24 +26,23 @@ en:
     closed:      closed
   global:
     from: "from {{site}}"
-    permission_denied: Permission denied
+    permission_denied: permission denied
     please_login: please log in
     group_not_found: "the page {{url}} doesn't exists"
-    preview: Preview
+    preview: preview
     or: or
   feeds:
-    question: Subscribe To This Question
-    questions: Subscribe To All Questions
-    tag: Subscribe To Tag
-    user: Subscribe To User Questions
+    question: subscribe to this question
+    questions: subscribe to all questions
+    tag: subscribe to tag
+    user: subscribe to user questions
   languages:
-    en:      English
-    es:      Spanish
-    es-AR:   Latin American Spanish
-    fr:      French
-    pt:      Portuguese
-    pt-PT:      Portuguese
-
+    en:      english
+    es:      spanish
+    es-AR:   latin american spanish
+    fr:      french
+    pt:      portuguese
+    pt-PT:   portuguese
   number:
     x_time:
       zero: "never"

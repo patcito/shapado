@@ -1,12 +1,12 @@
 .block
   %h3
-    = t(:preferred_tags, :scope => "activerecord.attributes.user").titleize
+    = t(:preferred_tags, :scope => "activerecord.attributes.user")
   .content
     .tag-list{:style => "margin-bottom: 3px"}
       -current_user.preferred_tags_on(current_group).each do |tag|
         %span.tag
           = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
-          = link_to "x", change_preferred_tags_user_path(current_user, :language => current_languages, :opt => "remove", :tags => [tag]), :class => "remove_tag"
+          = link_to "-", change_preferred_tags_user_path(current_user, :language => current_languages, :opt => "remove", :tags => [tag]), :class => "remove_tag"
 
     - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
       = hidden_field_tag :category, current_languages

@@ -142,6 +142,11 @@ class User
                            :upsert => true)
   end
 
+  def is_preferred_tag?(group, *tags)
+    ptags = self.preferred_tags[group.id] || []
+    tags.detect { |t| ptags.include?(t) }
+  end
+
   def admin?
     self.role == "admin"
   end
@@ -255,9 +260,9 @@ class User
   end
 
   def update_reputation(key, group)
-    value = REPUTATION_CONF[key.to_s]
+    value = group.reputation_rewards[key.to_s].to_i
     Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
-    value = key if value.nil? && key.kind_of?(Integer)
+    value = key if key.kind_of?(Integer)
     if value
       User.collection.update({:_id => self._id},
                              {:$inc => {"reputation.#{group.id}" => value}},
@@ -302,8 +307,8 @@ class User
       key = $1
       group = args.first
       if group.reputation_constrains.include?(key.to_s)
-        if group.has_reputation_constrains || self.admin_of?(group)
-          return self.reputation_on(group) >= group.reputation_constrains[key].to_i
+        if group.has_reputation_constrains
+          return self.owner_of?(group) || (self.reputation_on(group) >= group.reputation_constrains[key].to_i)
         else
           return true
         end

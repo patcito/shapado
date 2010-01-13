@@ -1,7 +1,7 @@
-"pt-PT":
+pt-PT:
   layouts:
     application:
-      title: "Perguntas & Respostas"
+      title: "perguntas & respostas"
       questions: perguntas
       questions_in: perguntas em
       questions_tagged: tagged with
@@ -11,22 +11,23 @@
       badges: badges
       unanswered: sem resposta
       logout: desligar sessão
-      logged: Ligado como {{login}}
+      logged: ligado como {{login}}
       search: search
-      forgot: Esqueceu-se?
+      forgot: esqueceu-se?
       log_in: ligar
-      signup: Registar-se
+      signup: registar-se
       settings: preferências
-      categories: Categorias
-      languages: Idiomas
-      moderate: Moderar
-      manage_ads: Gerir as propaganda
+      categories: categorias
+      languages: idiomas
+      moderate: moderar
+      manage_ads: gerir as propaganda
       home: início
       openid:
-        explaination: "Se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de OpenID:"
+        explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
     manage:
-      dashboard: Dashboard
-      properties: Properties
-      actions: Actions
-      stats: Stats
-      members: Members
+      dashboard: dashboard
+      properties: properties
+      actions: actions
+      stats: stats
+      members: members
+      reputation: reputation

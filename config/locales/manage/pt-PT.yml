@@ -2,7 +2,6 @@ pt-PT:
   admin:
     manage:
       properties:
-        title: Group properties
-      widgets:
-        title: Manage Sidebar Widgets
-        description: Use the arrows to move your widgets
+        title: group properties
+      reputation:
+        title: setup reputation's properties

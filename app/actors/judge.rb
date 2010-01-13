@@ -127,16 +127,43 @@ module Actors
         end
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :type => "silver", :group_id => group.id, :source => voteable)
+          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :group_id => group.id, :source => voteable)
         end
       end
 
       # answers
-      if voteable.kind_of?(Answer) && vuser = voteable.user
+      if voteable.kind_of?(Answer) && voteable.parent_id.nil? && (vuser = voteable.user)
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
           user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
+        end
+
+        if vote.value == 1
+          stats = vuser.stats(:tag_votes)
+          tags = voteable.question.tags
+          tokens = Set.new(Badge.TOKENS)
+          tags.delete_if { |t| tokens.include?(t) }
+
+          stats.vote_on_tags(tags)
+
+          tags.each do |tag|
+            next if stats.tag_votes[tag].blank?
+
+            badge_type = nil
+            votes = stats.tag_votes[tag]+1
+            if votes >= 200 && votes < 400
+              badge_type = "bronze"
+            elsif votes >= 400 && votes < 1000
+              badge_type = "silver"
+            elsif votes >= 1000
+              badge_type = "gold"
+            end
+
+            if badge_type && vuser.find_badge_on(group, tag, :type => badge_type).nil?
+              vuser.badges.create!(:token => tag, :type => badge_type, :group_id => group.id, :source => voteable, :for_tag => true)
+            end
+          end
         end
       end
     end
@@ -174,6 +201,19 @@ module Actors
 
       if user.answers.count(:group_id => comment.group_id, :parent_id => {:$ne => nil}) >= 10
         user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
+      end
+    end
+
+    expose :on_question_favorite
+    def on_question_favorite(payload)
+      question = Question.find(payload.first)
+      user = question.user
+      group = question.group
+      if question.favorites_count >= 25 &&
+          user.badges.find_badge_on(group, "famous_question", :source_id => question.id).nil?
+        user.badges.create!(:token => "famous_question",
+                            :group_id => group.id,
+                            :source => question)
       end
     end
   end

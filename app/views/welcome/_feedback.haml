@@ -1,18 +1,11 @@
 -form_tag send_feedback_path, :class => "form", :method => "post" do
-  .field-group
-    .label-container
-      %label.label Title:
-    .field
-      = text_field_tag "feedback[title]", "", :class=> "text-field"
-  .field-group
-    .label-container
-      %label.label Description:
-    %br
-    .without-label
-      = text_area_tag "feedback[description]", "", :class=> "text-area"
-  .field-group.clear
-    .field
-      = submit_tag("Send")
-      %span.tip
-        or
-      = link_to 'Cancel', root_path, :class => 'cancel-feedback'
+  .group
+    = label_tag "feedback[title]", t(".feedback_title"), :class => "label"
+    = text_field_tag "feedback[title]", "", :class=> "text_field"
+  .group
+    = label_tag "feedback[description]", t(".feedback_description"), :class => "label"
+    = text_area_tag "feedback[description]", "", :class=> "text_area"
+  .group.navform
+    = submit_tag(t("scaffold.send"), :class => "button")
+    = t("global.or")
+    = link_to t("scaffold.cancel"), root_path, :class => 'cancel-feedback'

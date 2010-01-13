@@ -1,32 +1,33 @@
-"es-AR":
+es-AR:
   layouts:
     application:
-      title: "Preguntas & Respuestas"
-      questions: Preguntas
-      questions_in: Preguntas en
+      title: "preguntas & respuestas"
+      questions: preguntas
+      questions_in: preguntas en
       questions_tagged: etiquetadas con
-      ask_question: Pregunte
-      tags: Etiquetas
-      users: Usuarios
-      badges: Insignias
-      unanswered: Aun no contestadas
+      ask_question: pregunte
+      tags: etiquetas
+      users: usuarios
+      badges: insignias
+      unanswered: aun no contestadas
       logout: salir
       logged: conectado como {{login}}
       search: buscar
       forgot: la olvido?
       log_in: acceder
-      signup: Registrarse
+      signup: registrarse
       settings: configuración
-      categories: Categorias
-      languages: Idiomas
-      moderate: Moderar
-      manage_ads: Manejar las propagandas
+      categories: categorias
+      languages: idiomas
+      moderate: moderar
+      manage_ads: manejar las propagandas
       home: pagina principal
       openid:
-        explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor OpenID:"
+        explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
     manage:
-      dashboard: Dashboard
-      properties: Properties
-      actions: Actions
-      stats: Stats
-      members: Miembros
+      dashboard: dashboard
+      properties: properties
+      actions: actions
+      stats: stats
+      members: miembros
+      reputation: reputación

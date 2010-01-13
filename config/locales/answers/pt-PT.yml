@@ -1,25 +1,25 @@
 "pt-PT":
   answers:
     form:
-      comment_label: Comenta sobre esta resposta
-      answer_label: Responde à pergunta
-      comment_submit: Comentar
-      submit: Submeter
+      comment_label: comenta sobre esta resposta
+      answer_label: responde à pergunta
+      comment_submit: comentar
+      submit: submeter
     edit:
-      title: Editar resposta
+      title: editar resposta
     create:
-      flash_notice: "Obrigado!"
-      flash_error:  "Algo correu mal ao adicionar a sua resposta.
+      flash_notice: "obrigado!"
+      flash_error:  "algo correu mal ao adicionar a sua resposta.
   \n  lembre-se que:
   \n - respostas vazias e repetidas não são permitidas
   \n - tem que esperar 20 segundos para colocar uma nova resposta.
   \n - só pode colocar uma resposta por pergunta."
     update:
-      flash_notice: "Resposta foi actualizada com sucesso."
+      flash_notice: "resposta foi actualizada com sucesso."
 
   activerecord:
     models:
-      answers: Respostas
+      answers: respostas
       answer: resposta
     attributes:
       answer:

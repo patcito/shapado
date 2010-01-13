@@ -1,7 +1,7 @@
-"es-AR":
+es-AR:
   searches:
     index:
-      empty: "Su búsqueda no produjo ningún resultados."
+      empty: "su búsqueda no produjo ningún resultados."
       tags: con estas etiquetas
       search_text: questions containing
     form:

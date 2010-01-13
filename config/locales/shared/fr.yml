@@ -3,7 +3,7 @@ fr:
     topbar:
       logged_as: "connecté en tant que {{login}}"
     current_tags:
-      title: Selected tags
+      title: selected tags
     layout:
       notice:
         manage: administrer

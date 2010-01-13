@@ -1,88 +1,89 @@
 en:
   questions:
     index:
-      title: All questions
+      title: all questions
       hot:     hot
       active:  active
       votes:   votes
       newest:  newest
       oldest:  oldest
       ask_question: ask question
-      empty: "No one has asked any questions yet, be the first!"
-      help_to_answer: Help us to answer
+      empty: "no one has asked any questions yet, be the first!"
+      help_to_answer: help us to answer
       unanswered_questions: unanswered questions
     show:
-      answers: Answers
-      another_answers: Other answers
-      solution: Solution
-      share: "Share this question on"
+      answers: answers
+      another_answers: other answers
+      solution: solution
+      share: "share this question on"
+      related_questions: related questions
       flags: reported as
       flag: flag
       viewed: viewed
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
-      asked_on: "Asked on"
-      last_activity: Last activity
+      asked_on: "asked on"
+      last_activity: last activity
       answers_title:
-        one: "{{count}} Answer"
-        other: "{{count}} Answers"
+        one: "{{count}} answer"
+        other: "{{count}} answers"
     answer:
-      pick_answer: Pick as solution
-      unset_answer: Unset as solution?
+      pick_answer: pick as solution
+      unset_answer: unset as solution?
       flag: flag
-      add_comment: Add comment...
+      add_comment: add comment...
     form:
-      body_tip: What's your question? Be descriptive.
-      language_tip: Select the language's question.
-      category_tip: Select the category that fits best your question.
-      tags_tip:  Use tags to add more information about your question.
+      body_tip: what's your question? be descriptive.
+      language_tip: select the language's question.
+      category_tip: select the category that fits best your question.
+      tags_tip:  use tags to add more information about your question.
     flag:
-      title:   Flag question
+      title:   flag question
     edit:
-      title: Editing question
+      title: editing question
     unanswered:
-      title: Unanswered Questions
-      tags: Unanswered Tags
+      title: unanswered questions
+      tags: unanswered tags
       empty: "this group doesn't have any unanswered questions."
       my_tags: my tags
       expert: experts
     tags:
       title: tags
     new:
-      title: Ask question
+      title: ask question
     create:
-      flash_notice: "Question was successfully created."
+      flash_notice: "question was successfully created."
     update:
-      flash_notice: "Question was successfully updated."
+      flash_notice: "question was successfully updated."
     solve:
-      flash_notice: "Question was solved."
+      flash_notice: "question was solved."
     unsolve:
-      flash_notice: "Question now is not solved."
+      flash_notice: "question now is not solved."
     watch:
-      success:      "You will now receive notifications by mail for every new answer to this question"
+      success:      "you will now receive notifications by mail for every new answer to this question"
     move:
-      title:        "Move question: {{title}}"
-      group_label:  "Move to the group with slug:"
-      submit:       "Move!"
+      title:        "move question: {{title}}"
+      group_label:  "move to the group with slug:"
+      submit:       "move!"
     move_to:
-      success:      "Question moved to {{group}}"
-      group_dont_exists: "The group {{group}} don't exists"
+      success:      "question moved to {{group}}"
+      group_dont_exists: "the group {{group}} don't exists"
     shared:
       flag: flag
 
   activerecord:
     models:
-      questions: Questions
+      questions: questions
       question: question
     attributes:
       question:
-        title: Title
-        body: Body
-        tags: Tags
-        asked_by: Asked by
-        answers: Answers
-        views: Views
-        votes: Votes
-        language: Language
-        category: Category
-        created_at: Asked
+        title: title
+        body: body
+        tags: tags
+        asked_by: asked by
+        answers: answers
+        views: views
+        votes: votes
+        language: language
+        category: category
+        created_at: asked

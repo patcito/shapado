@@ -1,7 +1,7 @@
 %ul
   -#
     %li.dashboard
-      =link_to t("layouts.manage.dashboard"), manage_manage_path
+      =link_to t("layouts.manage.dashboard"), manage_dashboard_path
     %li.actions
       =link_to t("layouts.manage.actions"), manage_actions_path
     %li.stats
@@ -9,7 +9,9 @@
   %li.properties
     =link_to t("layouts.manage.properties"), manage_properties_path
   %li.widgets
-    =link_to "Widgets", manage_widgets_path
+    =link_to "Widgets", widgets_path
+  %li.reputation
+    =link_to t("layouts.manage.reputation"), manage_reputation_path
 
   -if current_group.has_custom_ads
     %li.ads

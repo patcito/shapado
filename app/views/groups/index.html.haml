@@ -24,7 +24,7 @@
         = link_to t(".about"), group, :class => "button"
         -if logged_in?
           -if current_user.can_modify?(group)
-            = link_to t("scaffold.edit"), edit_group_path(group), :class => "button"
+            = link_to t("shared.layout.notice.manage"), domain_url(:controller => "manage", :custom => group.domain), :class => "button"
             -if group.state == "active"
               = link_to t(".close"), close_group_path(group), :class => "cancel button"
           -if current_user.admin?

@@ -1,89 +1,90 @@
-"pt-PT":
+pt-PT:
   questions:
     index:
-      title: Todas as perguntas
+      title: todas as perguntas
       hot:     populares
       active:  activas
       votes:   votos
       newest:  mais recentes
       oldest:  mais antigas
       ask_question: fazer pergunta
-      empty: "Ainda ninguém fez nenhuma pergunta, seja o primeiro!"
-      help_to_answer: Help us to answer
+      empty: "ainda ninguém fez nenhuma pergunta, seja o primeiro!"
+      help_to_answer: help us to answer
       unanswered_questions: unanswered questions
     show:
-      answers: Respostas
-      another_answers: Outras respostas
-      solution: Solução
-      share: "Partilhar esta pergunta em"
+      answers: respostas
+      another_answers: outras respostas
+      solution: solução
+      share: "partilhar esta pergunta em"
+      related_questions: related questions
       flags: reportado como
       flag: reportar
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
-      asked_on: "Asked on"
-      last_activity: Last activity
+      asked_on: "asked on"
+      last_activity: last activity
       answers_title:
-        one: "{{count}} Answer"
-        other: "{{count}} Answers"
+        one: "{{count}} answer"
+        other: "{{count}} answers"
     answer:
-      pick_answer: Escolher como solução
-      unset_answer: Retirar como solução?
+      pick_answer: escolher como solução
+      unset_answer: retirar como solução?
       flag: reporte
-      add_comment: Adicionar comentário...
+      add_comment: adicionar comentário...
     form:
-      body_tip: Qual é a sua pergunta? Seja descritivo.
-      language_tip: Seleccione o idioma da questão.
-      category_tip: Selecciona a categoria que encaixa melhor a sua questão.
-      tags_tip:  Usar etiquetas para dar mais informação sobre a sua questão.
+      body_tip: qual é a sua pergunta? seja descritivo.
+      language_tip: seleccione o idioma da questão.
+      category_tip: selecciona a categoria que encaixa melhor a sua questão.
+      tags_tip:  usar etiquetas para dar mais informação sobre a sua questão.
     flag:
-      title:   Reportar pergunta
+      title:   reportar pergunta
     edit:
-      title: Editar pergunta
+      title: editar pergunta
     unanswered:
-      title: Perguntas Sem Resposta
-      tags: Etiquetas Sem Resposta
+      title: perguntas sem resposta
+      tags: etiquetas sem resposta
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
       expert: expert
     tags:
-      title: Etiquetas
+      title: etiquetas
     new:
-      title: Fazer Pergunta
+      title: fazer pergunta
     create:
-      flash_notice: "Pergunta foi criada com sucesso."
+      flash_notice: "pergunta foi criada com sucesso."
     update:
-      flash_notice: "Pergunta foi actualizada com sucesso."
+      flash_notice: "pergunta foi actualizada com sucesso."
     solve:
-      flash_notice: "Pergunta foi resolvida."
+      flash_notice: "pergunta foi resolvida."
     unsolve:
-      flash_notice: "Pergunta agora não está resolvida."
+      flash_notice: "pergunta agora não está resolvida."
     watch:
-      success:      "You will now receive notifications by mail for every new answer to this question"
+      success:      "you will now receive notifications by mail for every new answer to this question"
     move:
-      title:        "Move question: {{title}}"
-      group_label:  "Move to the group with slug:"
-      submit:       "Move!"
+      title:        "move question: {{title}}"
+      group_label:  "move to the group with slug:"
+      submit:       "move!"
     move_to:
-      success:      "Question moved to {{group}}"
-      group_dont_exists: "The group {{group}} don't exists"
+      success:      "question moved to {{group}}"
+      group_dont_exists: "the group {{group}} don't exists"
     shared:
       flag: reportar
 
   activerecord:
     models:
-      questions: Perguntas
+      questions: perguntas
       question: pergunta
     attributes:
       question:
-        title: Título
-        body: Conteúdo
-        tags: Etiquetas
-        asked_by: Perguntado por
-        answers: Respostas
-        views: Visitas
-        votes: Votos
-        language: Idioma
-        category: Categoria
-        created_at: Asked
+        title: título
+        body: conteúdo
+        tags: etiquetas
+        asked_by: perguntado por
+        answers: respostas
+        views: visitas
+        votes: votos
+        language: idioma
+        category: categoria
+        created_at: asked
 

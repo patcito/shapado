@@ -1,7 +1,7 @@
 -title = h(question.title)
 -owner = question.user
 
-%li.item
+%li.item{:class => class_for_question(question)}
   / Question Stats
   .stats
     .box.votes

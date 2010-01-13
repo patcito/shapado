@@ -11,11 +11,9 @@
   =vote_box(@question, question_path(current_languages,@question))
 
   -if logged_in? && favorite = current_user.favorite(@question)
-    -form_tag question_favorite_path(current_languages, @question.id, favorite.id), :method => :delete, :id => "favorite_form" do |f|
-      = image_submit_tag("favorites.png")
+    =link_to image_tag("favorites.png"), unfavorite_question_path(current_languages, @question), :id => "unfavorite-link"
   -else
-    - form_tag question_favorites_path(current_languages, @question.id), :id => "favorite_form" do
-      = image_submit_tag("unfavorites.png")
+    =link_to image_tag("unfavorites.png"), favorite_question_path(current_languages, @question), :id => "favorite-link"
   .favorites_count
     &= @question.favorites_count
 
@@ -27,7 +25,6 @@
     -@question.tags.each do |tag|
       %span.tag
         = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
-
   .user_info
     .gravatar
       = gravatar(@question.user.email.to_s, :size => 32)
@@ -107,9 +104,18 @@
 -content_for :sidebar do
   .block
     %h3
-      = h(t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"]).to_s.capitalize)
+      = t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"])
     = render :partial => "shared/tag_list", :object => @tag_cloud
     .clear
+
+  -if @question.badges.size > 0
+    .block
+      %h3
+        = t('badges', :scope => "activerecord.models")
+      %ul.list
+        -@question.badges.each do |badge|
+          %li
+            = render :partial => "badges/badge", :object => badge, :locals => {:hide_user => true}
 
   .block.stats
     -if @question.group_id != current_group.id
@@ -143,3 +149,14 @@
             = render :partial => "identica"
           %li
             = render :partial => "facebook"
+
+  -related_questions = Question.related_questions(@question, :language => find_languages)
+  -if !related_questions.empty?
+    .block
+      %h3
+        =t(".related_questions")
+      .content
+        %ul.list
+          -related_questions.each do |rq|
+            %li
+              =link_to h(rq.title), question_path(current_languages, rq), :title => truncate(rq.body, :length => 200)

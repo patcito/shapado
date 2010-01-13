@@ -15,6 +15,11 @@
   = link_to 'identi.ca', 'http://identi.ca/shapado'
   |
   = link_to 'irc', 'irc://irc.freenode.org/shapado'
+  |
+  %b
+    = link_to 'feedback', feedback_url, :class => "feedback", :id => "feedback"
+  #feedbackform.hide
+    = render :partial => "welcome/feedback"
 
 = render :partial => "shared/analytics"
 

@@ -1,88 +1,89 @@
 fr:
   questions:
     index:
-      title: Toutes les questions
+      title: toutes les questions
       hot:     hot
       active:  actives
       votes:   votes
       newest:  récentes
       oldest:  anciennes
       ask_question: poser une question
-      empty: "Aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
-      help_to_answer: Aidez-nous
+      empty: "aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
+      help_to_answer: aidez-nous
       unanswered_questions: questions sans réponses
     show:
-      answers: Réponses
-      another_answers: Autres réponses
-      solution: Solution
-      share: "Partager cette question"
+      answers: réponses
+      another_answers: autres réponses
+      solution: solution
+      share: "partager cette question"
+      related_questions: related questions
       flag: reporter un abus
       flags: reporter en tant que
       viewed: lues
       to_answer_question: to answer this question
       watch_tooltip: "suivre cette question"
       asked_on: "posée dans"
-      last_activity: Last activity
+      last_activity: last activity
       answers_title:
-        one: "{{count}} Réponse"
-        other: "{{count}} Réponses"
+        one: "{{count}} réponse"
+        other: "{{count}} réponses"
     answer:
-      pick_answer: Choisir comme solution
-      unset_answer: Annuler solution?
+      pick_answer: choisir comme solution
+      unset_answer: annuler solution?
       flag: reporter un abus
-      add_comment: Ajouter un commentaire...
+      add_comment: ajouter un commentaire...
     form:
-      body_tip: Quelle est votre question? Soyez descriptif.
-      language_tip: Sélectionnez la langue de votre question.
-      category_tip: Sélectionnez la catégorie qui correspond le mieux à votre question.
-      tags_tip:  Utilisez les tags pour ajouter plus d'information à question.
+      body_tip: quelle est votre question? soyez descriptif.
+      language_tip: sélectionnez la langue de votre question.
+      category_tip: sélectionnez la catégorie qui correspond le mieux à votre question.
+      tags_tip:  utilisez les tags pour ajouter plus d'information à question.
     flag:
       title: reporter un abus
     edit:
       title: Éditer la question
     unanswered:
-      title: Sans Réponses
+      title: sans réponses
       tags: tags sans réponses
-      empty: "Ce groupe n'a aucune question sans réponses"
+      empty: "ce groupe n'a aucune question sans réponses"
       my_tags: "mes tags"
       expert: expert
     tags:
-      title: Tags
+      title: tags
     new:
-      title: Poser une question
+      title: poser une question
     create:
-      flash_notice: "La question a été créée avec succès."
+      flash_notice: "la question a été créée avec succès."
     update:
-      flash_notice: "La question a été actualisée avec succès."
+      flash_notice: "la question a été actualisée avec succès."
     solve:
-      flash_notice: "La question a été résolue."
+      flash_notice: "la question a été résolue."
     unsolve:
-      flash_notice: "La question n'est pas résolue."
+      flash_notice: "la question n'est pas résolue."
     watch:
-      success:      "Vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
+      success:      "vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
     move:
-      title:        "Transférer la question: {{title}}"
-      group_label:  "Transférer au groupe du nom:"
-      submit:       "Transférer!"
+      title:        "transférer la question: {{title}}"
+      group_label:  "transférer au groupe du nom:"
+      submit:       "transférer!"
     move_to:
-      success:      "Question transférée à {{group}}"
-      group_dont_exists: "Le groupe {{group}} n'éxiste pas"
+      success:      "question transférée à {{group}}"
+      group_dont_exists: "le groupe {{group}} n'éxiste pas"
     shared:
       title: reporter un abus
 
   activerecord:
     models:
-      questions: Questions
+      questions: questions
       question: question
     attributes:
       question:
-        title: Titre
-        body: Corps
-        tags: Tags
-        asked_by: Posée par
-        answers: Réponses
-        views: Vues
-        votes: Votes
-        language: Langue
-        category: Catégorie
-        created_at: Posée
+        title: titre
+        body: corps
+        tags: tags
+        asked_by: posée par
+        answers: réponses
+        views: vues
+        votes: votes
+        language: langue
+        category: catégorie
+        created_at: posée
