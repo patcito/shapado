@@ -1,3 +1,7 @@
+desc "Fix all"
+task :fixall => [:environment, "fixdb:groups", "fixdb:notifs", "fixdb:votes", "fixdb:answers"] do
+end
+
 namespace :fixdb do
   desc "Fix votes"
   task :votes => :environment do
