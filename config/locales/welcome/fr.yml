@@ -34,8 +34,8 @@ fr:
           foss: oui!
           joel: "non :/"
     feedback:
-      title: send your feedback
-      feedback_title: title
+      title: envoyer votre feedback
+      feedback_title: titre
       feedback_description: description
     index:
       hot:     chaudes
