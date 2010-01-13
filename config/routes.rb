@@ -33,6 +33,11 @@ ActionController::Routing::Routes.draw do |map|
     questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
   end
 
+  map.resources :questions, :name_prefix => "without_language_", :collection => {:tags => :get,
+                                            :unanswered => :get} do |questions|
+     questions.resources :answers
+  end
+
   map.resources :questions, :collection => {:tags => :get,
                                             :unanswered => :get} do |questions|
     questions.resources :answers
