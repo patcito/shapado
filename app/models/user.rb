@@ -48,6 +48,11 @@ class User
   has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
   has_many :favorites, :class_name => "Favorite", :foreign_key => "user_id"
 
+  key :friends_list_id, String
+  belongs_to :friends_list, :dependent => :destroy
+
+  before_create :create_friend_list
+
   timestamps!
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
@@ -331,6 +336,12 @@ class User
     return false if openid_login?
 
     (crypted_password.blank? || !password.blank?)
+  end
+
+  def create_friend_list
+    if !self.friend_list.present?
+      self.friend_list = FriendList.new
+    end
   end
 end
 
