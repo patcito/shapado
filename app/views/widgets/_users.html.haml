@@ -9,7 +9,7 @@
         .item
           =link_to h(user.login), user_path(user)
           .joined
-            joined
+            = t(:created_at, :scope => "activerecord.attributes.user")
             =t("time.ago", :time => time_ago_in_words(user.created_at))
   .more
     =link_to t("scaffold.more"), users_path

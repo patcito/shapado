@@ -31,6 +31,7 @@ es-AR:
     group_not_found: "la página {{url}} no existe"
     preview: vista previa
     or: o
+    by: por
   feeds:
     question: subscribirse a esta pregunta
     questions: subscribirse a todas las preguntas

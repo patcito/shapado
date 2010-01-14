@@ -16,6 +16,12 @@ fr:
 \n - vous ne pouvez poster qu'une réponse par question"
     update:
       flash_notice: "la réponse a été créée avec succès."
+    history:
+      title: "history ({{count}})"
+      current_version: current version
+      previous_versions: previous versions
+      version: version
+      set_as_current: set as current
 
   activerecord:
     models:

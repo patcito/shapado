@@ -3,7 +3,7 @@
   -flaggeable.flags.group_by{|f| f.type}.each do |type, flags|
     %li
       = t(type, :scope=>"flags.form")
-      by
+      = t("global.by")
       -last = flags.pop
       -flags.each do |flag|
         == #{link_to h(flag.user.login), user_path(flag.user)},

@@ -22,11 +22,13 @@ fr:
       moderate: modérer
       manage_ads: administrer les publicités
       home: page principale
+      subscribe: subscribe
       openid:
         explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
     manage:
       dashboard: dashboard
       properties: propriétés
+      widgets: widgets
       actions: actions
       stats: États
       members: membres

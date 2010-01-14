@@ -31,6 +31,7 @@ pt-PT:
     group_not_found: "the page {{url}} doesn't exists"
     preview: pré-visualizar
     or: or
+    by: by
   feeds:
     question: subscrever a esta pergunta
     questions: subscrever a todas as perguntas

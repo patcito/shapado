@@ -5,3 +5,5 @@ es-AR:
         title: propiedades del grupo
       reputation:
         title: setup reputation's properties
+        constrains: restricciónes
+        rewards: premios

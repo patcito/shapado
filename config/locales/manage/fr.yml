@@ -5,3 +5,5 @@ fr:
         title: propriétés du groupe
       reputation:
         title: setup reputation's properties
+        constrains: constrains
+        rewards: rewards

@@ -31,6 +31,7 @@ fr:
     group_not_found: "la page {{url}} n'existe pas"
     preview: preview
     or: or
+    by: by
   feeds:
     question: souscrire à cette question
     questions: souscrire à toutes les questions

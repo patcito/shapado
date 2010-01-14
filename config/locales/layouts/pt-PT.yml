@@ -22,11 +22,13 @@ pt-PT:
       moderate: moderar
       manage_ads: gerir as propaganda
       home: início
+      subscribe: subscribe
       openid:
         explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
     manage:
       dashboard: dashboard
       properties: properties
+      widgets: widgets
       actions: actions
       stats: stats
       members: members
