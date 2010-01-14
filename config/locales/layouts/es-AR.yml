@@ -22,11 +22,13 @@ es-AR:
       moderate: moderar
       manage_ads: manejar las propagandas
       home: pagina principal
+      subscribe: subscribirse
       openid:
         explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
     manage:
       dashboard: dashboard
       properties: properties
+      widgets: widgets
       actions: actions
       stats: stats
       members: miembros

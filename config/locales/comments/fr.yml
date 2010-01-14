@@ -1,11 +1,13 @@
 fr:
   comments:
+    edit:
+      title: Éditer le commentaire
     create:
-      flash_notice: thanks for your comment
+      flash_notice: merci pour votre commentaire
     update:
-      flash_notice: "comment was successfully updated."
+      flash_notice: "le commentaire a été actualisé avec succès."
     shared:
-      add_comment: "add comment..."
-      comment_submit: "comment"
+      add_comment: "ajouter un commentaire..."
+      comment_submit: "commentaire"
   models:
-    comments: comments
+    comments: commentaire

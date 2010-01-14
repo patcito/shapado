@@ -83,7 +83,7 @@
         one: "1 día"
         other: "{{count}} días"
       about_x_months:
-        one: aproximandamente 1 mes
+        one: aproximadamente 1 mes
         other: "aproximadamente {{count}} mes"
       x_months:
         one: hace 1 month

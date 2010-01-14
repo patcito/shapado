@@ -1,5 +1,7 @@
 en:
   comments:
+    edit:
+      title: Edit comment
     create:
       flash_notice: thanks for your comment
     update:

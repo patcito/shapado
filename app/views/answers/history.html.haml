@@ -1,12 +1,12 @@
 -content_for :subtabs do
   .navtitle
-    &= "History (#{@answer.versions.count})"
+    =t(".title", :count => @answer.versions.count)
 
 %h2
   = link_to h(@question.title), question_path(current_languages, @question)
 
 %h2.title
-  Current Version
+  =t(".current_version")
 .markdown
   = shapado_auto_link(markdown(@answer["body"]))
 .clear
@@ -14,19 +14,19 @@
 
 #answers
   %h2.title
-    Previous Versions
+    =t(".previous_versions")
   -@answer.versions.each_with_index do |version, pos|
     .answer
       %h2.version_title
         %span.version
           &=pos
-        version
+        =t(".version")
       #question-body-col
         .markdown
           = find_and_preserve(shapado_auto_link(markdown(version["body"])))
         .controls
           .actions
             -if logged_in? && current_user.can_modify?(@answer)
-              =link_to "set as current", rollback_question_answer_path(current_languages, @question, @answer, :version => pos), :method => :put
+              =link_to t(".set_as_current"), rollback_question_answer_path(current_languages, @question, @answer, :version => pos), :method => :put
         .clear
       .clear

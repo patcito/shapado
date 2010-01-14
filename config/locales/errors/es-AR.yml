@@ -8,7 +8,7 @@ es-AR:
       explanation: "no tienes los derechos de acceso requeridos para esta página."
     not_found:
       title: "pagina no encontrada."
-      explanation: "has digitado mal la direccion o esta página ha sido movida."
+      explanation: "haz digitado mal la direccion o esta página ha sido movida."
     unprocessable_entity:
       title: "el cambio que querías ha sido rechazado."
       explanation: "quizás no tenías acceso a lo que intentaste cambiar."

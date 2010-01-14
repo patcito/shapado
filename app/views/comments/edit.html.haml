@@ -1,4 +1,6 @@
-%h2 Edit comment
+-content_for :subtabs do
+  .navtitle
+    =t(".title")
 
 -form_tag comment_path(@comment), :method => "put", :class => "form" do
   = render :partial => "comments/form", :locals => {:source => params[:source], :commentable => @comment.commentable}

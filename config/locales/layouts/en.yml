@@ -22,11 +22,13 @@ en:
       moderate: moderate
       manage_ads: manage ads
       home: home
+      subscribe: subscribe
       openid:
         explaination: "if you'd like to register or just log in, please select your openid provider:"
     manage:
       dashboard: dashboard
       properties: properties
+      widgets: widgets
       actions: actions
       stats: stats
       members: members

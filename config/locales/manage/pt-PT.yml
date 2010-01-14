@@ -5,3 +5,5 @@ pt-PT:
         title: group properties
       reputation:
         title: setup reputation's properties
+        constrains: constrains
+        rewards: rewards
