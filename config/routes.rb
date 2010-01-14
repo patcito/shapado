@@ -18,26 +18,26 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adbards
   map.resources :badges
 
-  map.resources :questions, :path_prefix => '/:language',
-                            :collection => {:tags => :get,
-                                            :unanswered => :get},
-                            :member => {:solve => :get,
-                                        :unsolve => :get,
-                                        :flag => :get,
-                                        :favorite => :any,
-                                        :unfavorite => :any,
-                                        :watch => :any,
-                                        :unwatch => :any,
-                                        :move => :get,
-                                        :move_to => :put} do |questions|
-    questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
+  def build_questions_routes(router, options)
+    router.with_options(options) do |route|
+      route.resources :questions, :collection => {:tags => :get,
+                                                :unanswered => :get},
+                                :member => {:solve => :get,
+                                            :unsolve => :get,
+                                            :flag => :get,
+                                            :favorite => :any,
+                                            :unfavorite => :any,
+                                            :watch => :any,
+                                            :unwatch => :any,
+                                            :move => :get,
+                                            :move_to => :put} do |questions|
+        questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
+      end
+    end
   end
 
-  map.resources :questions, :collection => {:tags => :get,
-                                            :unanswered => :get} do |questions|
-    questions.resources :answers
-  end
-
+  build_questions_routes(map, :path_prefix => '/:language')
+  build_questions_routes(map, :name_prefix => "without_language_")
 
   map.resources :groups, :member => {:accept => :get,
                                      :close => :get,
