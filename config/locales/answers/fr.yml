@@ -17,11 +17,11 @@ fr:
     update:
       flash_notice: "la réponse a été créée avec succès."
     history:
-      title: "history ({{count}})"
-      current_version: current version
-      previous_versions: previous versions
+      title: "historial ({{count}})"
+      current_version: version actuelle
+      previous_versions: versions précédentes
       version: version
-      set_as_current: set as current
+      set_as_current: établir comme version actuelle
 
   activerecord:
     models:

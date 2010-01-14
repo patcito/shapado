@@ -12,7 +12,7 @@ fr:
       unanswered: sans réponses
       logout: se déconnecter
       logged: connecté {{login}}
-      search: search
+      search: chercher
       forgot: oublié?
       log_in: se connecter
       signup: créer un compte
@@ -22,7 +22,7 @@ fr:
       moderate: modérer
       manage_ads: administrer les publicités
       home: page principale
-      subscribe: subscribe
+      subscribe: s'inscrire
       openid:
         explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
     manage:
@@ -32,4 +32,4 @@ fr:
       actions: actions
       stats: États
       members: membres
-      reputation: reputation
+      reputation: réputation

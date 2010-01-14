@@ -4,6 +4,6 @@ fr:
       properties:
         title: propriétés du groupe
       reputation:
-        title: setup reputation's properties
-        constrains: constrains
-        rewards: rewards
+        title: configurer les propriétés de la réputation
+        constrains: constraintes
+        rewards: récompenses
