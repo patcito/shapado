@@ -16,6 +16,6 @@ module QuestionsHelper
       when :facebook
         url = "http://www.facebook.com/sharer.php?u=#{microblogging_message(question)}&t=TEXTO"
     end
-    URI.escape(url)
+    url
   end
 end
