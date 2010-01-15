@@ -8,7 +8,7 @@ es-AR:
       newest:  recientes
       oldest:  antiguas
       ask_question: pregunte
-      empty: "nadie a preguntado aun, ¡se el primero!"
+      empty: "nadie ha preguntado aun, ¡se el primero!"
       help_to_answer: ayudanos a responder
       unanswered_questions: preguntas aun no contestadas
     show:
@@ -23,7 +23,7 @@ es-AR:
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
       asked_on: "preguntado en"
-      last_activity: ultima actividad
+      last_activity: última actividad
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"

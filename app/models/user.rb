@@ -127,9 +127,10 @@ class User
       t = t.split(",").join(" ").split(" ")
     end
     if preferred_tags[group.id]
-      self.collection.update({:_id => self._id}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
+      t = t - preferred_tags[group.id]
+      self.collection.update({:_id => self._id, "preferred_tags.#{group.id}" =>  {:$nin => t}}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
                              :upsert => true, :safe => true)
-    else
+    elsif preferred_tags[group.id].empty?
       set_preferred_tags(t, group)
     end
   end
