@@ -77,20 +77,20 @@
         one: 1 minuto
         other: "{{count}} minutos"
       about_x_hours:
-        one: aproximadamente 1 hora
-        other: aproximadamente {{count}} horas
+        one: aprox. 1 hora
+        other: aprox. {{count}} horas
       x_days:
         one: "1 día"
         other: "{{count}} días"
       about_x_months:
-        one: aproximadamente 1 mes
-        other: "aproximadamente {{count}} mes"
+        one: aprox. 1 mes
+        other: "aprox. {{count}} meses"
       x_months:
         one: hace 1 month
-        other: "{{count}} mes"
+        other: "{{count}} meses"
       about_x_years:
-        one: "aproximadamente 1 año"
-        other: "aproximadamente {{count}} años"
+        one: "aprox. 1 año"
+        other: "aprox. {{count}} años"
       over_x_years:
         one: "más de 1 año"
         other: "más de {{count}} años"

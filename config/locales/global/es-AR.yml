@@ -16,7 +16,7 @@ es-AR:
     today: hoy
     ago: "hace {{time}}"
   messages:
-    success: "{{model}} was successfully {{action}}."
+    success: "{{model}} fue exitosamente {{action}}."
   models:
     question:   la pregunta
   actions:
