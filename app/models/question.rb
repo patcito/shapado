@@ -10,7 +10,7 @@ class Question
 
   key :_id, String
   key :title, String, :required => true
-  key :body, String, :required => true
+  key :body, String
   key :slug, String, :required => true
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
@@ -52,7 +52,7 @@ class Question
   validates_uniqueness_of :slug, :scope => :group_id
 
   validates_length_of       :title,    :within => 6..100
-  validates_length_of       :body,     :minimum => 6
+  validates_length_of       :body,     :minimum => 6, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { !tags.empty? }
   filterable_keys :title, :body
 
