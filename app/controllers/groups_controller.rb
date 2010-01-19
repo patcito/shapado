@@ -70,6 +70,7 @@ class GroupsController < ApplicationController
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
 
     @group.owner = current_user
+    @group.state = "active"
 
     respond_to do |format|
       if @group.save
@@ -77,7 +78,7 @@ class GroupsController < ApplicationController
         if data = params[:group][:logo_data]
           @group.logo_data = data
         end
-        flash[:notice] = 'Group was successfully created.'
+        flash[:notice] = 'Group was successfully created.' # TODO: i18n
         format.html { redirect_to(@group) }
         format.xml  { render :xml => @group, :status => :created, :location => @group }
       else
@@ -97,7 +98,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        flash[:notice] = 'Group was successfully updated.'
+        flash[:notice] = 'Group was successfully updated.' # TODO: i18n
         format.html { redirect_to(params[:source] ? params[:source] : group_path(@group)) }
         format.xml  { head :ok }
       else

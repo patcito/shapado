@@ -37,7 +37,7 @@
         name: nombre
         subdomain: url
         domain: dominio
-        legend: legenda
+        legend: leyenda
         description: descripción
         state: estado
         categories: categorias
