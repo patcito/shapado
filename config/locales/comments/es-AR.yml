@@ -5,7 +5,7 @@ es-AR:
     create:
       flash_notice: gracias por tu comentario
     update:
-      flash_notice: "el commentario ha sido actualizado con exito."
+      flash_notice: "el comentario ha sido actualizado con exito."
     shared:
       add_comment: "añadir comentario..."
       comment_submit: "comentar"

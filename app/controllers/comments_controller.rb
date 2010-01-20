@@ -3,29 +3,40 @@ class CommentsController < ApplicationController
   before_filter :check_permissions, :except => [:create]
 
   def create
-    comment = Comment.new
-    comment.body = params[:body]
-    comment.commentable_type = params[:commentable_type]
-    comment.commentable_id = params[:commentable_id]
-    comment.user = current_user
-    comment.group = current_group
+    @comment = Comment.new
+    @comment.body = params[:body]
+    @comment.commentable_type = params[:commentable_type]
+    @comment.commentable_id = params[:commentable_id]
+    @comment.user = current_user
+    @comment.group = current_group
 
-    if comment.save
+    if @comment.save
       current_user.on_activity(:comment_question, current_group)
-      Magent.push("actors.judge", :on_comment, comment.id)
+      Magent.push("actors.judge", :on_comment, @comment.id)
       flash[:notice] = t("comments.create.flash_notice")
     else
-      flash[:error] = comment.errors.full_messages.join(", ")
+      flash[:error] = @comment.errors.full_messages.join(", ")
     end
 
     respond_to do |format|
       format.html{redirect_to params[:source]}
+      format.json { render :json => @comment.to_json, :status => :created}
     end
   end
 
 
   def edit
     @comment = Comment.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:status => :ok,
+         :html => render_to_string(:partial => "comments/edit_form",
+                                   :locals => {:source => params[:source],
+                                               :commentable => @comment.commentable})
+        }
+      end
+    end
   end
 
   def update
@@ -35,10 +46,10 @@ class CommentsController < ApplicationController
       if @comment.valid? && @comment.save
         flash[:notice] = t(:flash_notice, :scope => "comments.update")
         format.html { redirect_to(params[:source]) }
-        format.xml  { head :ok }
+        format.json { render :json => @comment.to_json, :status => :ok}
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
+        format.json { render :json => @comment.errors, :status => :unprocessable_entity }
       end
     end
   end

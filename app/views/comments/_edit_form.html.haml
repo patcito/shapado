@@ -1,0 +1,6 @@
+-form_for @comment, :html => {:class => "form"} do
+  = render :partial => "comments/form", :locals => local_assigns
+  .group.navform
+    = submit_tag t("scaffold.update")
+    = t("global.or")
+    = link_to t("scaffold.cancel"), params[:source], :class => "cancel cancel_edit_comment"

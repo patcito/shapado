@@ -2,14 +2,4 @@
   .navtitle
     =t(".title")
 
--form_for @comment, :html => {:class => "form"} do
-  = render :partial => "comments/form", :locals => {:source => params[:source], :commentable => @comment.commentable}
-  .group
-    %label.label
-      = t("global.preview")
-    #markdown_preview.markdown
-      =markdown(@comment.body)
-  .group.navform
-    = submit_tag t("scaffold.update")
-    = t("global.or")
-    = link_to t("scaffold.cancel"), params[:source], :class => "cancel"
+= render :partial => "comments/edit_form", :locals => {:source => params[:source], :commentable => @comment.commentable}

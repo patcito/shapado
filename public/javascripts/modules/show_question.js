@@ -1,5 +1,9 @@
 
 $(document).ready(function() {
+  $("form.nestedAnswerForm").hide();
+  $("form.flag_form").hide();
+  $("#add_comment_form").hide();
+
   $("form.vote_form button").live("click", function(event) {
     var btn_name = $(this).attr("name")
     var form = $(this).parents("form");
@@ -22,9 +26,41 @@ $(document).ready(function() {
     return false;
   });
 
-  $("form.nestedAnswerForm").hide();
-  $("form.flag_form").hide();
-  $("#add_comment_form").hide();
+
+  $(".edit_comment").live("click", function() {
+    var comment = $(this).parents(".comment")
+    var link = $(this)
+    $.ajax({
+      url: $(this).attr("href"),
+      dataType: "json",
+      type: "GET",
+      data: {format: 'js'},
+      success: function(data) {
+        comment = comment.append(data.html);
+        link.hide()
+        var form = comment.find("form.form")
+        form.find(".cancel_edit_comment").click(function() {
+          form.remove();
+          link.show();
+          return false;
+        });
+
+        form.submit(function() {
+          $.post(form.attr("action"), form.serialize(), function(data, textStatus) {
+            comment.find(".markdown p").html(data.body);
+            form.remove();
+            link.show();
+            comment.fadeOut(400, function() {
+              comment.fadeIn(400)
+            });
+          }, "json");
+          return false
+        });
+
+      }
+    });
+    return false;
+  });
 
   $(".addNestedAnswer").click(function() {
     var controls = $(this).parents(".controls")
