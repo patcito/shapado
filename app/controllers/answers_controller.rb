@@ -72,7 +72,7 @@ class AnswersController < ApplicationController
             current_group.on_activity(:answer_question)
             current_user.on_activity(:answer_question, current_group)
           else
-            Magent.push("/actors/judge", :on_comment, @question.id, @answer.id)
+            Magent.push("actors.judge", :on_comment, @question.id, @answer.id)
             current_user.on_activity(:comment_question, current_group)
           end
 
@@ -100,7 +100,7 @@ class AnswersController < ApplicationController
       if @answer.valid? && @answer.save
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
 
-        Magent.push("/actors/judge", :on_update_answer, @answer.id)
+        Magent.push("actors.judge", :on_update_answer, @answer.id)
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
         format.json  { head :ok }
       else

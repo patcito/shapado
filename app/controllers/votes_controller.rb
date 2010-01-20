@@ -43,7 +43,7 @@ class VotesController < ApplicationController
     end
 
     if voted
-      Magent.push("/actors/judge", :on_vote, vote.id)
+      Magent.push("actors.judge", :on_vote, vote.id)
     end
 
     respond_to do |format|

@@ -29,7 +29,7 @@ class UserStat
           self.collection.update({:_id => self._id},
                                  {:$inc => {"activity_days.#{group.id}" => 1}},
                                   :upsert => true)
-          Magent.push("/actors/judge", :on_activity, group.id, self.user_id)
+          Magent.push("actors.judge", :on_activity, group.id, self.user_id)
         else
           reset_activity_days!(group)
         end

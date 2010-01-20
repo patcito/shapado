@@ -137,7 +137,7 @@ class QuestionsController < ApplicationController
         current_user.on_activity(:ask_question, current_group)
         current_group.on_activity(:ask_question)
 
-        Magent.push("/actors/judge", :on_ask_question, @question.id)
+        Magent.push("actors.judge", :on_ask_question, @question.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
         # TODO: move to magent
@@ -180,7 +180,7 @@ class QuestionsController < ApplicationController
     @question.user.update_reputation(:delete_question, current_group)
     @question.destroy
 
-    Magent.push("/actors/judge", :on_destroy_question, @question.user.id)
+    Magent.push("actors.judge", :on_destroy_question, @question.user.id)
 
     respond_to do |format|
       format.html { redirect_to(questions_url) }
@@ -200,7 +200,7 @@ class QuestionsController < ApplicationController
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
         end
 
-        Magent.push("/actors/judge", :on_question_solved, @question.id, @answer.id)
+        Magent.push("actors.judge", :on_question_solved, @question.id, @answer.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
         format.html { redirect_to question_path(current_languages, @question) }
@@ -227,7 +227,7 @@ class QuestionsController < ApplicationController
           @answer_owner.update_reputation(:answer_unpicked_as_solution, current_group)
         end
 
-        Magent.push("/actors/judge", :on_question_unsolved, @question.id, @answer_id)
+        Magent.push("actors.judge", :on_question_unsolved, @question.id, @answer_id)
 
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }
