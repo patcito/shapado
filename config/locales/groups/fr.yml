@@ -13,35 +13,35 @@ fr:
       disallow_ads: interdir publicité
       accept_group_with_custom_ads: accepter ce groupe et autoriser publicité personnalisée
     show:
-      title: "about {{name}}"
+      title: "à propos de {{name}}"
       visit_group: visiter ce groupe
       group_awaiting_acceptance: "ce groupe est dans l'attente de l'acceptation d'un modérateur."
       group_closed: ce groupe a été fermé.
       accept_group: accepter ce groupe
       close_group: fermer ce groupe
     new:
-      title: request your group
+      title: demander un nouveau groupe
     form:
-      description_legend: you have 400 characters to describe the group.
-      legend_legend: "it will be used in the header, you have 40 characters"
-      default_tags_legend: "separate tags by commas. only 10 default tags allowed."
-      logo_legend: "you can upload the group logo. the maximum file size is 2mb."
+      description_legend: vous avez 400 caractères pour décrire le groupe.
+      legend_legend: "ceci sera utilisé dans l'entête, vous disposez de 40 caractères"
+      default_tags_legend: "séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés."
+      logo_legend: "vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb."
       any_language: "n'importe qu'elle"
   activerecord:
     models:
-      groups: groups
-      group: group
+      groups: groupes
+      group: groupe
       default_tags_message: vous ne pouvez pas utiliser plus de 10 tags par défaut.
     attributes:
       group:
         name: name
         subdomain: url
-        domain: domain
-        legend: legend
+        domain: domaine
+        legend: légende
         description: description
-        state: state
+        state: état
         owner: "ce groupe a été crée par {{login}}"
-        group_created_by: created by
+        group_created_by: crée par
         language: langue
-        default_tags: "default tags"
+        default_tags: "tags par défaut"
         logo: logo
