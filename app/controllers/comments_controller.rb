@@ -52,7 +52,7 @@ class CommentsController < ApplicationController
 
   protected
   def check_permissions
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find!(params[:id])
     if @comment.nil? || !(current_user.can_modify?(@comment) || current_user.mod_of?(current_group))
       flash[:error] = t("global.permission_denied")
       redirect_to params[:source]

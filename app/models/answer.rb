@@ -1,6 +1,8 @@
-class Answer
+class Answer < Comment
   include MongoMapper::Document
   include MongoMapperExt::Filter
+  key :_id, String
+  key :_type, String
 
   key :body, String, :required => true
   key :language, String, :default => "en"
@@ -13,7 +15,6 @@ class Answer
 
   timestamps!
 
-  key :_id, String
   key :user_id, String, :index => true
   belongs_to :user
 
@@ -43,20 +44,23 @@ class Answer
 
   validate :disallow_spam
   validate :check_unique_answer
+  before_create :save_commentable
 
   before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
 
   attr_accessor :rolling_back
 
   def check_unique_answer
-    check_answer = Answer.find(:first,
-                               :question_id => self.question_id,
-                               :user_id => self.user_id,
-                               :parent_id => nil)
+    if !comment?
+      check_answer = Answer.find(:first,
+                                 :question_id => self.question_id,
+                                 :user_id => self.user_id,
+                                 :parent_id => nil)
 
-    if !check_answer.nil? && check_answer.id != self.id
-      self.errors.add(:limitation, "Your can only post one answer by question.")
-      return false
+      if !check_answer.nil? && check_answer.id != self.id
+        self.errors.add(:limitation, "Your can only post one answer by question.")
+        return false
+      end
     end
   end
 
@@ -161,6 +165,12 @@ class Answer
       self.versions << {'body' => self.body_was,
                         'user_id' => (self.updated_by_id_was || self.updated_by_id),
                         'date' => self.updated_at_was.try(:utc) }
+    end
+  end
+
+  def save_commentable
+    if self.parent_id
+      self.commentable = self.parent
     end
   end
 end

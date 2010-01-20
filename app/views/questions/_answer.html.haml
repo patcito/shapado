@@ -1,6 +1,6 @@
 
 -solution = question.answered && question.answer_id == answer.id
-
+-source = question_path(current_languages,@question)
 .answer{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
   #vote-col
@@ -63,7 +63,7 @@
         -if current_user != answer.user
           -flag = Flag.new
           -flag.flaggeable = answer
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages,@question) }
+          = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
     .clear
 
     / Nested Answers
@@ -76,5 +76,9 @@
           said:
           .markdown
             = shapado_auto_link(markdown(comment.body))
-
+          .controls
+            .actions
+              -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
+                = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source)
+                = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
   .clear

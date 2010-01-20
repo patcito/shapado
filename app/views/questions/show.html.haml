@@ -4,6 +4,8 @@
   .navtitle
     &= @question.title
 
+-source = question_path(current_languages, @question)
+
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
     = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_languages, @question)
@@ -55,11 +57,11 @@
     .forms
       -flag = Flag.new
       - flag.flaggeable = @question
-      = render :partial => "flags/form", :locals => {:flag => flag, :source => question_path(current_languages, @question) }
+      = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
 
       -form_tag comments_path, :class => "form", :id => "add_comment_form" do
         -@comment = Comment.new
-        = render :partial => "comments/form", :locals => {:source => question_path(current_languages, @question), :commentable => @question}
+        = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
         = submit_tag t("comments.shared.comment_submit")
   .comments
     -@question.comments.each do |comment|
@@ -68,8 +70,13 @@
           = t("time.ago", :time => time_ago_in_words(comment.created_at))
         =link_to comment.user.login, user_path(comment.user)
         said:
-        .markdown
+        %span.markdown
           = shapado_auto_link(markdown(comment.body))
+        %span.actions
+          -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
+            = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source)
+            = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
+
 .clear
 
 

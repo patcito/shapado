@@ -69,4 +69,16 @@ namespace :fixdb do
       $stdout.flush if rand(10) == 5
     end
   end
+
+  desc "Answers to Comments"
+  task :answers_to_comments => :environment do
+    db = MongoMapper.database
+    comments = db.collection("comments")
+    db.collection("answers").find.each do |a|
+      $stderr.puts a["body"].inspect
+      a["_type"] = "Answer"
+      comments.insert(a, :safe => true)
+    end
+    db.drop_collection("answers")
+  end
 end

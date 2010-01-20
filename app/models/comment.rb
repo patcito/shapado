@@ -2,6 +2,7 @@
 class Comment
   include MongoMapper::Document
 
+  key :_id, String
   key :body, String, :required => true
   key :language, String, :default => "en"
   key :banned, Boolean, :default => false
@@ -11,13 +12,9 @@ class Comment
   key :user_id, String, :index => true
   belongs_to :user
 
-  key :commentable_id, String, :required => true
-  key :commentable_type, String, :required => true
+  key :commentable_id, String
+  key :commentable_type, String
   belongs_to :commentable, :polymorphic => true
-
-
-  key :parent_id
-  has_many :children, :foreign_key => "parent_id", :class_name => "Comment", :dependent => :destroy
 
   validates_presence_of :user
 
