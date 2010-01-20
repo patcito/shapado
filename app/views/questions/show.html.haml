@@ -62,21 +62,22 @@
       -form_tag comments_path, :class => "form", :id => "add_comment_form" do
         -@comment = Comment.new
         = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
-        = submit_tag t("comments.shared.comment_submit")
+        .group.navform
+          = submit_tag t("comments.shared.comment_submit"), :class => "button"
   .comments
     -@question.comments.each do |comment|
       .comment
         %strong
           = t("time.ago", :time => time_ago_in_words(comment.created_at))
         =link_to comment.user.login, user_path(comment.user)
-        said:
+        == #{t("comments.shared.said")}:
         %span.markdown
           = shapado_auto_link(markdown(comment.body))
         %span.actions
           -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
             = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source)
             = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
-
+        .clear
 .clear
 
 

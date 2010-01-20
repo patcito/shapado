@@ -38,13 +38,10 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new
-    @answer.safe_update(%w[parent_id body wiki], params[:answer])
+    @answer.safe_update(%w[body wiki], params[:answer])
     @question = Question.find_by_slug_or_id(params[:question_id])
-
-    if @answer.parent_id.blank?
-      @answer.question = @question
-      @answer.group_id = @question.group_id
-    end
+    @answer.question = @question
+    @answer.group_id = @question.group_id
 
     if !logged_in?
       draft = Draft.create(:answer => @answer)
@@ -56,24 +53,19 @@ class AnswersController < ApplicationController
         if @question && @answer.save
           current_user.stats.add_answer_tags(*@question.tags)
 
-          unless @answer.comment?
-            @question.answer_added!
+          @question.answer_added!
 
-            # TODO: use magent to do it
-            users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
-            users.push(@question.user)
-            users.each do |u|
-              email = u.email
-              if !email.blank? && u.notification_opts["new_answer"] == "1"
-                Notifier.deliver_new_answer(u, current_group, @answer)
-              end
+          current_group.on_activity(:answer_question)
+          current_user.on_activity(:answer_question, current_group)
+
+          # TODO: use magent to do it
+          users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
+          users.push(@question.user)
+          users.each do |u|
+            email = u.email
+            if !email.blank? && u.notification_opts["new_answer"] == "1"
+              Notifier.deliver_new_answer(u, current_group, @answer)
             end
-
-            current_group.on_activity(:answer_question)
-            current_user.on_activity(:answer_question, current_group)
-          else
-            Magent.push("actors.judge", :on_comment, @question.id, @answer.id)
-            current_user.on_activity(:comment_question, current_group)
           end
 
           flash[:notice] = t(:flash_notice, :scope => "answers.create")
@@ -94,7 +86,7 @@ class AnswersController < ApplicationController
 
   def update
     respond_to do |format|
-      @answer.safe_update(%w[parent_id body], params[:answer])
+      @answer.safe_update(%w[body], params[:answer])
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save
@@ -147,10 +139,6 @@ class AnswersController < ApplicationController
 
     if @answer.nil?
       redirect_to questions_path
-    elsif @answer.comment?
-      if !current_user.can_modify?(@answer)
-        access_denied
-      end
     elsif !((current_user.can_edit_others_posts_on?(@answer.group)) ||
           current_user.can_modify?(@answer) || @answer.wiki)
       reputation = @answer.group.reputation_constrains["edit_others_posts"]

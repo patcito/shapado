@@ -74,9 +74,26 @@ namespace :fixdb do
   task :answers_to_comments => :environment do
     db = MongoMapper.database
     comments = db.collection("comments")
+
+    comments.find.each do |c|
+      c["_type"] ||= "Comment"
+      if c["_id"].kind_of?(Mongo::ObjectID)
+        comments.remove(:_id => c["_id"])
+        c["_id"] = c["_id"].to_s
+      end
+      comments.save(c)
+    end
+
     db.collection("answers").find.each do |a|
-      $stderr.puts a["body"].inspect
-      a["_type"] = "Answer"
+      if a["parent_id"]
+        a["commentable_id"] = a["parent_id"]
+        a["commentable_type"] = "Answer"
+        a["_type"] = "Comment"
+
+        a.delete("parent_id")
+      else
+        a["_type"] = "Answer"
+      end
       comments.insert(a, :safe => true)
     end
     db.drop_collection("answers")

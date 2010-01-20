@@ -3,6 +3,7 @@ class Comment
   include MongoMapper::Document
 
   key :_id, String
+  key :_type, String
   key :body, String, :required => true
   key :language, String, :default => "en"
   key :banned, Boolean, :default => false

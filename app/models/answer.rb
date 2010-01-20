@@ -2,7 +2,6 @@ class Answer < Comment
   include MongoMapper::Document
   include MongoMapperExt::Filter
   key :_id, String
-  key :_type, String
 
   key :body, String, :required => true
   key :language, String, :default => "en"
@@ -15,9 +14,6 @@ class Answer < Comment
 
   timestamps!
 
-  key :user_id, String, :index => true
-  belongs_to :user
-
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
@@ -27,40 +23,31 @@ class Answer < Comment
   key :group_id, String, :index => true
   belongs_to :group
 
-  key :parent_id, String
-  belongs_to :parent, :class_name => "Answer"
-
-  has_many :children, :foreign_key => "parent_id", :class_name => "Answer", :dependent => :destroy
-
-
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 
+  has_many :comments, :foreign_key => "commentable_id", :class_name => "Comment", :dependent => :destroy
+
   validates_presence_of :user_id
-  validates_presence_of :question_id, :if => lambda { |e| e.parent_id.blank? }
-  validates_presence_of :parent_id, :if => lambda { |e| e.question_id.blank? }
+  validates_presence_of :question_id
 
   filterable_keys :body
 
   validate :disallow_spam
   validate :check_unique_answer
-  before_create :save_commentable
 
   before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
 
   attr_accessor :rolling_back
 
   def check_unique_answer
-    if !comment?
-      check_answer = Answer.find(:first,
-                                 :question_id => self.question_id,
-                                 :user_id => self.user_id,
-                                 :parent_id => nil)
+    check_answer = Answer.find(:first,
+                               :question_id => self.question_id,
+                               :user_id => self.user_id)
 
-      if !check_answer.nil? && check_answer.id != self.id
-        self.errors.add(:limitation, "Your can only post one answer by question.")
-        return false
-      end
+    if !check_answer.nil? && check_answer.id != self.id
+      self.errors.add(:limitation, "Your can only post one answer by question.")
+      return false
     end
   end
 
@@ -117,10 +104,6 @@ class Answer < Comment
                                                      :upsert => true)
   end
 
-  def comment?
-    !self.parent_id.blank?
-  end
-
   def to_html
     Maruku.new(self.body).to_html
   end
@@ -165,12 +148,6 @@ class Answer < Comment
       self.versions << {'body' => self.body_was,
                         'user_id' => (self.updated_by_id_was || self.updated_by_id),
                         'date' => self.updated_at_was.try(:utc) }
-    end
-  end
-
-  def save_commentable
-    if self.parent_id
-      self.commentable = self.parent
     end
   end
 end

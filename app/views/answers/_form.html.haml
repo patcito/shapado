@@ -1,13 +1,7 @@
 
--if local_assigns[:parent]
-  = f.hidden_field :parent_id, :value => local_assigns[:parent].id
-
 .group
   %label.label
-    -if local_assigns[:parent]
-      = t('.comment_label')
-    -else
-      = t('.answer_label')
+    = t('.answer_label')
 
   -opts = {:class => "text_area"}
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]

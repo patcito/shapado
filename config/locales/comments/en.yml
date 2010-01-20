@@ -9,5 +9,6 @@ en:
     shared:
       add_comment: "add comment..."
       comment_submit: "comment"
+      said: said
   models:
     comments: comments

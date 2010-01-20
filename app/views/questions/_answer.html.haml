@@ -55,10 +55,12 @@
           = link_to t(".history", :default => "history"), history_question_answer_path(current_languages, @question, answer)
       .clear
       .forms
-        -form_for comment, :url => question_answers_path(current_languages, @question.id, comment.id), :html => {:class => "form nestedAnswerForm"} do |f|
-          = render :partial => "answers/form", :locals => {:f => f, :parent => answer}
+        -form_tag comments_path, :class => "form nestedAnswerForm"do
+          -@comment = Comment.new
+          = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
           .group.navform
-            = submit_tag t('.comment_submit', :default => :"answers.form.comment_submit"), :class => "button"
+            = submit_tag t("comments.shared.comment_submit"), :class => "button"
+
 
         -if current_user != answer.user
           -flag = Flag.new
@@ -68,12 +70,12 @@
 
     / Nested Answers
     .children.comments
-      -answer.children.each do |comment|
+      -answer.comments.each do |comment|
         .comment
           %strong
             = t("time.ago", :time => time_ago_in_words(comment.created_at))
           =link_to comment.user.login, user_path(comment.user)
-          said:
+          == #{t("comments.shared.said")}:
           .markdown
             = shapado_auto_link(markdown(comment.body))
           .controls
@@ -81,4 +83,5 @@
               -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
                 = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source)
                 = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
+          .clear
   .clear

@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
     comment.user = current_user
 
     if comment.save
+      current_user.on_activity(:comment_question, current_group)
+      Magent.push("actors.judge", :on_comment, params[:commentable_id])
       flash[:notice] = t("comments.create.flash_notice")
     else
       flash[:error] = comment.errors.full_messages.join(", ")
@@ -53,7 +55,7 @@ class CommentsController < ApplicationController
   protected
   def check_permissions
     @comment = Comment.find!(params[:id])
-    if @comment.nil? || !(current_user.can_modify?(@comment) || current_user.mod_of?(current_group))
+    if !(current_user.owner_of?(current_group) || current_user.can_modify?(@comment))
       flash[:error] = t("global.permission_denied")
       redirect_to params[:source]
     end

@@ -9,5 +9,6 @@ es-AR:
     shared:
       add_comment: "añadir comentario..."
       comment_submit: "comentar"
+      said: dijo
   models:
     comments: comentarios

@@ -46,7 +46,6 @@ class UsersController < ApplicationController
                                           :per_page => 10,
                                           :group_id => current_group.id)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
-                                      :parent_id => nil,
                                       :group_id => current_group.id,
                                       :per_page => 10)
 

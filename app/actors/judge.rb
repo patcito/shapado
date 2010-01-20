@@ -132,7 +132,7 @@ module Actors
       end
 
       # answers
-      if voteable.kind_of?(Answer) && voteable.parent_id.nil? && (vuser = voteable.user)
+      if voteable.kind_of?(Answer) && (vuser = voteable.user)
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
@@ -194,12 +194,12 @@ module Actors
 
     expose :on_comment
     def on_comment(payload)
-      question_id, comment_id = payload
-      comment = Answer.find(comment_id)
+      commentable_id, comment_id = payload
+      comment = Comment.find(comment_id)
       group = comment.group
       user = comment.user
 
-      if user.answers.count(:group_id => comment.group_id, :parent_id => {:$ne => nil}) >= 10
+      if user.comments.count(:group_id => comment.group_id, :_type => {:$ne => "Answer"}) >= 10
         user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
       end
     end
