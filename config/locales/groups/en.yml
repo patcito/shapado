@@ -20,7 +20,7 @@ en:
       close_group: close this group
       accept_group_with_custom_ads: accept group and allow custom ads
     new:
-      title: request your group
+      title: create your group
     form:
       description_legend: you have 400 characters to describe the group.
       legend_legend: "it will be used in the header, you have 40 characters"

@@ -20,7 +20,7 @@
       accept_group: aceptar este grupo
       close_group: cerrar este grupo
     new:
-      title: solicitar su grupo
+      title: crear su grupo
     form:
       description_legend: tiene 4000 caracteres para describir el grupo.
       legend_legend: "esto será usado en el titulo de la web, tienes 40 caracteres"
