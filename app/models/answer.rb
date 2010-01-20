@@ -20,9 +20,6 @@ class Answer < Comment
   key :question_id, String
   belongs_to :question
 
-  key :group_id, String, :index => true
-  belongs_to :group
-
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 

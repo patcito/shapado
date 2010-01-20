@@ -70,6 +70,22 @@ namespace :fixdb do
     end
   end
 
+  desc "Check Comments"
+  task :comments => :environment do
+    $stderr.puts "Checking #{Comment.count} comments..."
+    Comment.all.each do |comment|
+      if comment.group_id.blank?
+        if comment.commentable.present? && target = comment.commentable
+          comment.group = target.group
+        end
+        comment.save(false)
+      end
+
+      $stdout.print "."
+      $stdout.flush if rand(10) == 5
+    end
+  end
+
   desc "Answers to Comments"
   task :answers_to_comments => :environment do
     db = MongoMapper.database

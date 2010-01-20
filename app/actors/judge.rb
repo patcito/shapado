@@ -194,8 +194,9 @@ module Actors
 
     expose :on_comment
     def on_comment(payload)
-      commentable_id, comment_id = payload
+      comment_id = payload.first
       comment = Comment.find(comment_id)
+      commentable = comment.commentable
       group = comment.group
       user = comment.user
 

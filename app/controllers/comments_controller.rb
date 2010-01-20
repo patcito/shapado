@@ -8,10 +8,11 @@ class CommentsController < ApplicationController
     comment.commentable_type = params[:commentable_type]
     comment.commentable_id = params[:commentable_id]
     comment.user = current_user
+    comment.group = current_group
 
     if comment.save
       current_user.on_activity(:comment_question, current_group)
-      Magent.push("actors.judge", :on_comment, params[:commentable_id])
+      Magent.push("actors.judge", :on_comment, comment.id)
       flash[:notice] = t("comments.create.flash_notice")
     else
       flash[:error] = comment.errors.full_messages.join(", ")

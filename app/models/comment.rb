@@ -13,6 +13,10 @@ class Comment
   key :user_id, String, :index => true
   belongs_to :user
 
+  key :group_id, String, :index => true
+  belongs_to :group
+
+
   key :commentable_id, String
   key :commentable_type, String
   belongs_to :commentable, :polymorphic => true
