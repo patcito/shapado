@@ -31,6 +31,7 @@ class UsersController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset session
       self.current_user = @user # !! now logged in
+      current_user.localize(request.remote_ip)
       redirect_back_or_default('/')
       flash[:notice] = t("flash_notice", :scope => "users.create")
     else
