@@ -45,11 +45,15 @@ $(document).ready(function() {
           return false;
         });
 
+        var button = form.find("input[type=submit]");
+
         form.submit(function() {
+          button.attr('disabled', true)
           $.post(form.attr("action"), form.serialize(), function(data, textStatus) {
             comment.find(".markdown p").html(data.body);
             form.remove();
             link.show();
+            button.attr('disabled', false)
             comment.fadeOut(400, function() {
               comment.fadeIn(400)
             });
