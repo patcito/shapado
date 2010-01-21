@@ -137,7 +137,7 @@ jsMath.Easy = {
   //
   //  Disable image fonts?  (In case you don't load them on your server.)
   //
-  noImageFonts: 0
+  noImageFonts: 1
 
 };
 
