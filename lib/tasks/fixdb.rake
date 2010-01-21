@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:groups", "fixdb:notifs", "fixdb:votes", "fixdb:answers"] do
+task :fixall => [:environment, "fixdb:comments", "fixdb:answers_to_comments"] do
 end
 
 namespace :fixdb do
@@ -73,6 +73,19 @@ namespace :fixdb do
   desc "Check Comments"
   task :comments => :environment do
     $stderr.puts "Checking #{Comment.count} comments..."
+
+    db = MongoMapper.database
+    comments = db.collection("comments")
+
+    comments.find.each do |c|
+      c["_type"] ||= "Comment"
+      if c["_id"].kind_of?(Mongo::ObjectID)
+        comments.remove(:_id => c["_id"])
+        c["_id"] = c["_id"].to_s
+      end
+      comments.save(c)
+    end
+
     Comment.all.each do |comment|
       if comment.group_id.blank?
         if comment.commentable.present? && target = comment.commentable
@@ -90,15 +103,6 @@ namespace :fixdb do
   task :answers_to_comments => :environment do
     db = MongoMapper.database
     comments = db.collection("comments")
-
-    comments.find.each do |c|
-      c["_type"] ||= "Comment"
-      if c["_id"].kind_of?(Mongo::ObjectID)
-        comments.remove(:_id => c["_id"])
-        c["_id"] = c["_id"].to_s
-      end
-      comments.save(c)
-    end
 
     db.collection("answers").find.each do |a|
       if a["parent_id"]
