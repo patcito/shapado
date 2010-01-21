@@ -46,15 +46,14 @@ ActionController::Routing::Routes.draw do |map|
                                      :logo => :get},
                           :collection => { :autocomplete_for_group_slug => :get}
 
-  map.resources :members
 
   map.resources :comments
   map.resources :votes
   map.resources :flags
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
+  map.resources :members, :path_prefix => "/manage"
   map.manage '/manage', :controller => 'admin/manage', :action => 'properties'
-  map.members '/members', :controller => "members", :path_prefix => "/manage", :action => "index"
 
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_",
                    :path_prefix => "/manage" do |manage|
