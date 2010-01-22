@@ -7,6 +7,9 @@
   .general-info
     .avatar
       = gravatar @user.email.to_s, :size => 128
+      -if current_user == @user
+        %div
+          =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
     -if @user.bio.present?
       .user-info
         = auto_link(@user.bio)

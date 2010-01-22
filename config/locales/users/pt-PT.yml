@@ -14,7 +14,7 @@ pt-PT:
       notifications: notificações
       new_answer_notification: receber notificações via email de novas respostas
       give_advice_notification: receive email notifications about questions in your field of expertise
-      categories_tip: só perguntas pertencentes a estas categorias serão mostradas
+      avatar_tip: "change your profile image using gravatar"
     create:
       flash_notice: "obrigado por registar-se!"
       flash_error:  "pedimos desculpa mas não pudemos criar essa conta. por favor tente novamente ou contacte um administrador (a ligação está acima)."
@@ -51,3 +51,4 @@ pt-PT:
         last_logged_at: visto
         created_at: registado
         reputation: reputação
+        avatar: Profile image

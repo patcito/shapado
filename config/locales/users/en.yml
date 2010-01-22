@@ -14,7 +14,7 @@ en:
       notifications: notifications
       new_answer_notification: get mail notifications for new answers
       give_advice_notification: receive email notifications about questions in your field of expertise
-      categories_tip: only questions belonging to these categories will show
+      avatar_tip: "change your profile image using gravatar"
     create:
       flash_notice: "thanks for signing up!"
       flash_error:  "we couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
@@ -51,3 +51,4 @@ en:
         last_logged_at: seen
         created_at: joined
         reputation: reputation
+        avatar: Profile image

@@ -14,7 +14,7 @@ fr:
       notifications: notifications
       new_answer_notification: obtenir des notifications via email de nouvelles réponses
       give_advice_notification:  recevoir des notifications via courrier électronique sur les questions liées à votre champs d'expertise
-      categories_tip: seules les questions appartenant à ces catégories seront visible
+      avatar_tip: "change your profile image using gravatar"
     create:
       flash_notice: "merci pour vous avoir enregistrer!"
       flash_error:  "désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
@@ -51,3 +51,4 @@ fr:
         last_logged_at: vu
         created_at: membre
         reputation: reputation
+        avatar: Profile image

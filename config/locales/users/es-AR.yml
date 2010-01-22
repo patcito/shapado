@@ -14,7 +14,7 @@
       notifications: notificaciones
       new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
       give_advice_notification:  obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
-      categories_tip: solo las preguntas pertenecientes a estas categorías serán mostradas
+      avatar_tip: "cambia tu imagen del perfil usando gravatar"
     create:
       flash_notice: "gracias por registrarse!"
       flash_error:  "no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
@@ -51,3 +51,4 @@
         last_logged_at: visto
         created_at: registrado
         reputation: reputación
+        avatar: imagen del perfil
