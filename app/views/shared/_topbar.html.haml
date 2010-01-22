@@ -6,9 +6,19 @@
   -if current_group.default_tags.size > 5
     .entry
       = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
-
   %span.right
     -if logged_in?
+      -if !current_group.isolate && !current_user.reputation.empty?
+        .entry
+          %ul.combobox
+            %li
+              =link_to h(current_group.name), groups_path
+              %ul
+                -current_user.reputation.keys.each do |group_id|
+                  %li
+                    -group = Group.find(group_id)
+                    =link_to h(group.name), domain_url(:custom => group.domain)
+          |
       .entry
         = t(".logged_as", :login => link_to(h(current_user.login), user_path(current_user)))
         ==(#{format_number(current_user.reputation_on(current_group))})

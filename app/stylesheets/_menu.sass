@@ -1,0 +1,35 @@
+
+ul.combobox
+  padding: 0
+  margin: 0
+  list-style: none
+  list-style-image: none
+  list-style-position: outside
+  list-style-type: none
+  display: inline
+
+  li
+    float: left
+    margin-right: 0.7em
+    &:hover ul
+      left: auto
+      z-index: 2
+
+    ul
+      background-color: black
+      display: block
+      position: absolute
+      width: 10em
+      left: -999em
+      list-style: none
+      li
+        margin-left: 0
+        width: 100%
+        a
+          color: #666666
+          text-decoration: none
+          display: block
+
+
+ul.combobox li:hover ul, ul.combobox li.sfhover ul
+  left: auto
