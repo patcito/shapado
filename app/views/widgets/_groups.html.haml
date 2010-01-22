@@ -2,7 +2,7 @@
   =t(".title")
 .content
   %ul.list
-    -widget.recent_groups.reverse_each do |group|
+    -widget.recent_groups.each do |group|
       %li
         = link_to h(group.name), domain_url(:custom => group.domain)
         &= truncate(group.description, :length => 35)

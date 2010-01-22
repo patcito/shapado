@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:comments", "fixdb:answers_to_comments"] do
+task :fixall => [:environment, "fixdb:comments", "fixdb:answers_to_comments", "fixdb:group_date"] do
 end
 
 namespace :fixdb do
@@ -117,5 +117,20 @@ namespace :fixdb do
       comments.insert(a, :safe => true)
     end
     db.drop_collection("answers")
+  end
+
+  desc "Creation date"
+  task :group_date => :environment do
+    $stderr.puts "Updating #{Group.count} groups..."
+    admin = User.find_by_login("admin")
+    Group.all.each do |group|
+      if group.owner.present?
+        group.created_at = group.owner.created_at
+      else
+        group.created_at = admin.created_at
+      end
+
+      group.save
+    end
   end
 end

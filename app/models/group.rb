@@ -1,6 +1,7 @@
 class Group
   include MongoMapper::Document
   include Support::Sluggizer
+  timestamps!
 
   key :_id, String
   slug_key :name
