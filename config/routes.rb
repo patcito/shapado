@@ -9,7 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   map.feedback '/feedback', :controller => 'welcome', :action => 'feedback'
   map.send_feedback '/send_feedback', :controller => 'welcome', :action => 'send_feedback'
   map.settings '/settings', :controller => 'users', :action => 'edit'
-
+  map.tos '/tos', :controller => 'doc', :action => 'tos'
+  map.privacy '/privacy', :controller => 'doc', :action => 'privacy'
   map.resources :users, :member => { :change_preferred_tags => :any},
                         :collection => {:autocomplete_for_user_login => :get}
   map.resource :session
