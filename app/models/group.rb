@@ -1,6 +1,7 @@
 class Group
   include MongoMapper::Document
   include Support::Sluggizer
+  include MongoMapperExt::Storage
   timestamps!
 
   key :_id, String
@@ -23,6 +24,7 @@ class Group
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
   key :activity_rate, Float, :default => 0.0
+  file_key :custom_css
 
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS

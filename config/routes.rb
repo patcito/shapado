@@ -44,7 +44,8 @@ ActionController::Routing::Routes.draw do |map|
                                      :close => :get,
                                      :allow_custom_ads => :get,
                                      :disallow_custom_ads => :get,
-                                     :logo => :get},
+                                     :logo => :get,
+                                     :css => :get},
                           :collection => { :autocomplete_for_group_slug => :get}
 
 

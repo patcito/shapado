@@ -83,3 +83,11 @@
 .group
   = form.label :theme, t(:theme, :scope => "activerecord.attributes.group", :default => "Theme" ), :class => "label"
   = form.select :theme, AVAILABLE_THEMES, {}, :class => "choose_theme"
+
+.group
+  = form.label :custom_css, "Custom css", :class => "label"
+  -if @group.custom_css
+    %code
+      =find_and_preserve(@group.custom_css.read)
+  = form.file_field :custom_css
+
