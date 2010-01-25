@@ -188,6 +188,10 @@ class Group
                                                                :upsert => true)
   end
 
+  def has_custom_css?
+    metaclass.keys.has_key?(:_custom_css)
+  end
+
   def language=(lang)
     if lang != "none"
       self[:language] = lang

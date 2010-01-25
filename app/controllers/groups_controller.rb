@@ -136,12 +136,12 @@ class GroupsController < ApplicationController
   end
 
   def logo
-    @group = Group.find_by_slug_or_id(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:logo_id])
     send_data(@group.logo.raw, :filename => @group.logo.filename,  :disposition => 'inline')
   end
 
   def css
-    @group = Group.find_by_slug_or_id(params[:id])
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_css])
     send_data(@group.custom_css.read, :filename => "custom_theme.css", :type => "text/css")
   end
 

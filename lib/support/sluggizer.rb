@@ -34,8 +34,8 @@ module Support
     end
 
     module Finder
-      def by_slug(id)
-        self.find_by_slug(id) || self.find_by_id(id)
+      def by_slug(id, opts = {})
+        self.find_by_slug(id, opts) || self.find_by_id(id, opts)
       end
       alias :find_by_slug_or_id :by_slug
     end
