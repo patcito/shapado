@@ -25,6 +25,7 @@ class Group
   key :language, String
   key :activity_rate, Float, :default => 0.0
   file_key :custom_css
+  file_key :custom_favicon
 
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
@@ -216,6 +217,10 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   def has_custom_css?
     metaclass.keys.has_key?(:_custom_css)
+  end
+
+  def has_custom_favicon?
+    metaclass.keys.has_key?(:_custom_favicon)
   end
 
   def language=(lang)

@@ -81,6 +81,14 @@
     = t('.logo_legend')
 
 .group
+  = form.label :custom_favicon, "Favicon", :class => "label"
+  -if @group.has_custom_favicon?
+    = image_tag(favicon_group_path(@group))
+  -else
+    = image_tag("/favicon.ico")
+  = form.file_field :custom_favicon
+
+.group
   = form.label :theme, t(:theme, :scope => "activerecord.attributes.group", :default => "Theme" ), :class => "label"
   = form.select :theme, AVAILABLE_THEMES, {}, :class => "choose_theme"
 

@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  skip_before_filter :check_group_access, :only => [:logo]
-  before_filter :login_required, :except => [:index, :show, :logo, :css]
+  skip_before_filter :check_group_access, :only => [:logo, :css, :favicon]
+  before_filter :login_required, :except => [:index, :show, :logo, :css, :favicon]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups
@@ -66,7 +66,7 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
                           language custom_css theme], params[:group])
 
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
@@ -93,7 +93,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data
+    @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
                           language theme custom_css reputation_rewards reputation_constrains _question_prompt], params[:group])
     @group.safe_update(%w[isolate domain private has_custom_analytics], params[:group]) if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
@@ -148,6 +148,11 @@ class GroupsController < ApplicationController
     else
       render :text => ""
     end
+  end
+
+  def favicon
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_favicon])
+    send_data(@group.custom_favicon.read, :filename => "favicon.ico")
   end
 
   def autocomplete_for_group_slug
