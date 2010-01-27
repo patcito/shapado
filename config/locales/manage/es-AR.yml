@@ -7,3 +7,7 @@ es-AR:
         title: setup reputation's properties
         constrains: restricciónes
         rewards: premios
+      content:
+        title: custom content
+        question_prompt: question prompt
+        question_help: question help

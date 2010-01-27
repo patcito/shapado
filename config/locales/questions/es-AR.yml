@@ -51,6 +51,7 @@ es-AR:
       title: etiquetas
     new:
       title: pregunte
+      how_to_ask: como preguntar
     create:
       flash_notice: "la pregunta fue creada exitosamente."
     update:

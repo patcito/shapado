@@ -30,6 +30,24 @@ class Group
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
 
+  #custom html
+  key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
+                                           "es" => "¿cual es tu pregunta? por favor se descriptivo.",
+                                           "fr" => "quelle est votre question? soyez descriptif.",
+                                           "pt" => "qual é a sua pergunta? seja descritivo."}
+  key :_question_help, Hash, :default => {
+"en" => "Provide as much details as possible so that it will have more
+chance to be answered instead of being endlessly discussed.
+Try to be clear and simple.",
+"es" => "Sobre que es tu pregunta?
+provee tantos detalles como puedas para tener más suerte
+de conseguir una respuesta y no una discusion sin fin.
+intenta ser claro y simple",
+"fr" => "Sur quoi porte votre question?
+Donnez autants de détails que possible afin d'avoir plus de chance
+d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
+"pt" => ""}
+
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy
@@ -63,6 +81,14 @@ class Group
     if domain.blank?
       self[:domain] = "#{subdomain}.#{AppConfig.domain}"
     end
+  end
+
+  def question_prompt
+    self._question_prompt[I18n.locale.split("-").first] || ""
+  end
+
+  def question_help
+    self._question_help[I18n.locale.split("-").first] || ""
   end
 
   def context_panel_ads

@@ -7,3 +7,8 @@ fr:
         title: configurer les propriétés de la réputation
         constrains: constraintes
         rewards: récompenses
+      content:
+        title: custom content
+        question_prompt: question prompt
+        question_help: question help
+

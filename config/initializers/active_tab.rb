@@ -33,7 +33,7 @@ module ActiveTab
       define_method(:load_default_subtab) do
         key = "#{params[:controller]}/#{params[:action]}"
         @subtabs = subtabs[params[:action].to_sym]
-        @active_subtab = params[:sort]
+        @active_subtab = params[:sort] || params[:tab]
         @store_subtab = !@subtabs.blank?
 
         if @store_subtab && @active_subtab.nil?

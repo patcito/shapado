@@ -4,10 +4,14 @@ class Admin::ManageController < ApplicationController
   layout "manage"
   tabs :dashboard => :dashboard,
        :properties => :properties,
+       :content => :content,
        :actions => :actions,
        :stats => :stats,
        :widgets => :widgets,
        :reputation => :reputation
+
+  subtabs :content => [[:question_prompt, "question_prompt"],
+                       [:question_help, "question_help"]]
 
   def dashboard
   end
@@ -23,6 +27,9 @@ class Admin::ManageController < ApplicationController
   end
 
   def stats
+  end
+
+  def content
   end
 
   protected

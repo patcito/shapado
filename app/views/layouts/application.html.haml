@@ -40,7 +40,6 @@
           -current_group.widgets.all(:order => "position asc").each do |widget|
             .widget.block{:id => widget.name}
               = render :partial => widget.partial_name, :locals => {:widget => widget}
-
           -unless feed_urls.empty?
             .block
               %h3
