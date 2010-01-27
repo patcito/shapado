@@ -11,7 +11,8 @@ class Admin::ManageController < ApplicationController
        :reputation => :reputation
 
   subtabs :content => [[:question_prompt, "question_prompt"],
-                       [:question_help, "question_help"]]
+                       [:question_help, "question_help"],
+                       [:head_tag, "head_tag"]]
 
   def dashboard
   end

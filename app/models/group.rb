@@ -49,6 +49,8 @@ Donnez autants de détails que possible afin d'avoir plus de chance
 d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
 "pt" => ""}
 
+  key :head_tag, String
+
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
                          :dependent => :destroy

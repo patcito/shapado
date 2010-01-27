@@ -3,6 +3,8 @@
   .navtitle
     = t(".title")
   %ul
+    %li.head_tag
+      = link_to h("<head>"), manage_content_path(:tab=>"head_tag")
     %li.question_help
       = link_to t(".question_help"), manage_content_path(:tab=>"question_help")
     %li.question_prompt
@@ -22,5 +24,10 @@
         .group
           =form.label "_question_help[#{lang}]", language_desc(lang), :class => "label"
           =form.text_area "_question_help[#{lang}]", :value => @group._question_help[lang], :class => "text_area"
+    -when :head_tag
+      .group
+        = form.label "head_tag", h("<head>"), :class => "label"
+        = form.text_area "head_tag", :class => "text_area"
+
   .navform.group
     = form.submit t("scaffold.update")

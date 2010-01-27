@@ -94,7 +94,8 @@ class GroupsController < ApplicationController
   # PUT /groups/1.xml
   def update
     @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
-                          language theme custom_css reputation_rewards reputation_constrains _question_prompt], params[:group])
+                          language theme custom_css reputation_rewards reputation_constrains _question_prompt
+                          head_tag], params[:group])
     @group.safe_update(%w[isolate domain private has_custom_analytics], params[:group]) if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
 
