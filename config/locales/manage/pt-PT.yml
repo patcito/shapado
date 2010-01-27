@@ -11,3 +11,4 @@ pt-PT:
         title: custom content
         question_prompt: question prompt
         question_help: question help
+        head: header

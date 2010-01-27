@@ -12,7 +12,8 @@ class Admin::ManageController < ApplicationController
 
   subtabs :content => [[:question_prompt, "question_prompt"],
                        [:question_help, "question_help"],
-                       [:head_tag, "head_tag"]]
+                       [:head_tag, "head_tag"],
+                       [:head, "head"]]
 
   def dashboard
   end

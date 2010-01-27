@@ -9,6 +9,8 @@
       = link_to t(".question_help"), manage_content_path(:tab=>"question_help")
     %li.question_prompt
       = link_to t(".question_prompt"), manage_content_path(:tab=>"question_prompt")
+    %li.head
+      = link_to t(".head"), manage_content_path(:tab=>"head")
 
 -form_for @group, :html => {:class => "form"} do |form|
   = form.error_messages
@@ -18,12 +20,17 @@
       -AVAILABLE_LANGUAGES.sort.each do |lang|
         .group
           =form.label "_question_prompt[#{lang}]", language_desc(lang), :class => "label"
-          =form.text_field "_question_prompt[#{lang}]", :value => @group._question_prompt[lang], :class => "text_field"
+          =text_field_tag "group[_question_prompt[#{lang}]]", @group._question_prompt[lang], :class => "text_field"
     -when :question_help
       -AVAILABLE_LANGUAGES.sort.each do |lang|
         .group
           =form.label "_question_help[#{lang}]", language_desc(lang), :class => "label"
-          =form.text_area "_question_help[#{lang}]", :value => @group._question_help[lang], :class => "text_area"
+          =text_area_tag "group[_question_help[#{lang}]]", @group._question_help[lang], :class => "text_area"
+    -when :head
+      -AVAILABLE_LANGUAGES.sort.each do |lang|
+        .group
+          =form.label "_head[#{lang}]", language_desc(lang), :class => "label"
+          =text_area_tag "group[_head[#{lang}]]", @group._head[lang], :class => "text_area"
     -when :head_tag
       .group
         = form.label "head_tag", h("<head>"), :class => "label"
