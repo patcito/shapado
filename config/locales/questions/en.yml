@@ -35,7 +35,6 @@ en:
     form:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.
-      category_tip: select the category that fits best your question.
       tags_tip:  use tags to add more information about your question.
     flag:
       title:   flag question
@@ -85,5 +84,4 @@ en:
         views: views
         votes: votes
         language: language
-        category: category
         created_at: asked

@@ -12,7 +12,6 @@ namespace :populator do
                        :body => Faker::Lorem.paragraphs(rand(10)+6),
                        :language => (rand(100) % 2 == 0) ? 'en' : 'es',
                        :tags => Faker::Lorem.words(rand(6)+1),
-                       :category => Shapado::CATEGORIES.rand,
                        :banned => false)
       q.group = default_group
       q.user = users.rand

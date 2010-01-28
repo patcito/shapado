@@ -17,7 +17,6 @@ en:
       log_in: login
       signup: signup
       settings: settings
-      categories: categories
       languages: languages
       moderate: moderate
       manage_ads: manage ads
