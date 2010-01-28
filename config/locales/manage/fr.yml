@@ -12,4 +12,5 @@ fr:
         question_prompt: question prompt
         question_help: question help
         head: header
+        footer: footer
 

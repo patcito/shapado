@@ -12,3 +12,4 @@ es-AR:
         question_prompt: question prompt
         question_help: question help
         head: cabecera
+        footer: pie de página

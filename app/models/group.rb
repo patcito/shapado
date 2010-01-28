@@ -50,6 +50,8 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 "pt" => ""}
 
   key :_head, Hash, :default => { }
+  key :has_custom_footer, Boolean, :default => false
+  key :footer, String
 
   key :head_tag, String
 

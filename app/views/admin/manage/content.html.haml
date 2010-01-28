@@ -11,6 +11,9 @@
       = link_to t(".question_prompt"), manage_content_path(:tab=>"question_prompt")
     %li.head
       = link_to t(".head"), manage_content_path(:tab=>"head")
+    -if @group.has_custom_footer
+      %li.footer
+        = link_to t(".footer"), manage_content_path(:tab=>"footer")
 
 -form_for @group, :html => {:class => "form"} do |form|
   = form.error_messages
@@ -31,6 +34,11 @@
         .group
           =form.label "_head[#{lang}]", language_desc(lang), :class => "label"
           =text_area_tag "group[_head[#{lang}]]", @group._head[lang], :class => "text_area"
+    -when :footer
+      -if @group.has_custom_footer
+        .group
+          = form.label "footer", "footer", :class => "label"
+          = form.text_area "footer", :class => "text_area"
     -when :head_tag
       .group
         = form.label "head_tag", h("<head>"), :class => "label"
