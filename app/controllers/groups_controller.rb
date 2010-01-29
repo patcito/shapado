@@ -94,11 +94,10 @@ class GroupsController < ApplicationController
   # PUT /groups/1.xml
   def update
     @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
-                          language theme custom_css reputation_rewards reputation_constrains _question_prompt
-                          head_tag _head has_custom_footer], params[:group])
-    @group.safe_update(%w[isolate domain private has_custom_analytics], params[:group]) if current_user.admin?
+                          language theme custom_css reputation_rewards reputation_constrains], params[:group])
+    @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
-    @group.safe_update(%w[footer], params[:group]) if @group.has_custom_footer
+    @group.safe_update(%w[footer _head _question_help _question_prompt head_tag], params[:group]) if @group.has_custom_html
 
     respond_to do |format|
       if @group.save

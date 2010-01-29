@@ -32,6 +32,11 @@ class Admin::ManageController < ApplicationController
   end
 
   def content
+    unless @group.has_custom_html
+      flash[:error] = t("global.permission_denied")
+      redirect_to domain_url(:custom => @group.domain, :controller => "manage",
+                             :action => "properties")
+    end
   end
 
   protected
@@ -42,7 +47,7 @@ class Admin::ManageController < ApplicationController
       redirect_to groups_path
     elsif !current_user.owner_of?(@group) && !current_user.admin?
       flash[:error] = t("global.permission_denied")
-      redirect_to  domain_url(:custom => @group.domain)
+      redirect_to domain_url(:custom => @group.domain)
     end
   end
 end

@@ -50,7 +50,8 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 "pt" => ""}
 
   key :_head, Hash, :default => { }
-  key :has_custom_footer, Boolean, :default => false
+  key :has_custom_html, Boolean, :default => false
+  key :has_custom_js, Boolean, :default => false
   key :footer, String
 
   key :head_tag, String
@@ -82,11 +83,28 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
   before_validation_on_create :check_domain
+  before_save :disallow_javascript
   validate :check_reputation_configs
 
   def check_domain
     if domain.blank?
       self[:domain] = "#{subdomain}.#{AppConfig.domain}"
+    end
+  end
+
+  def disallow_javascript
+    unless self.has_custom_js
+       %w[footer _head _question_help _question_prompt head_tag].each do |key|
+         value = self[key]
+         if value.kind_of?(Hash)
+           value.each do |k,v|
+             value[k] = v.gsub(/<*.?script.*?>/, "")
+           end
+         elsif value.kind_of?(String)
+           value = value.gsub(/<*.?script.*?>/, "")
+         end
+         self[key] = value
+       end
     end
   end
 

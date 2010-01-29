@@ -26,8 +26,11 @@
     = form.check_box :private, :class => "checkbox"
     = form.label :private, "Only the group's members will be able to access this group", :class => "radio"
   .group
-    = form.check_box :has_custom_footer, :class => "checkbox"
-    = form.label :has_custom_footer, "Allow custom footer", :class => "radio"
+    = form.check_box :has_custom_html, :class => "checkbox"
+    = form.label :has_custom_html, "Allow custom html", :class => "radio"
+  .group
+    = form.check_box :has_custom_js, :class => "checkbox"
+    = form.label :has_custom_js, "Allow custom javascript", :class => "radio"
   .group
     = form.check_box :has_custom_analytics, :class => "checkbox"
     = form.label :private, "Allow Custom Analytics", :class => "radio"

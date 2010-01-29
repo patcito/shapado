@@ -1,5 +1,5 @@
 
--if current_group.has_custom_footer && !current_group.footer.blank?
+-if !current_group.footer.blank?
   =current_group.footer
 -else
   %hr
