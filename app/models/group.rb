@@ -24,6 +24,7 @@ class Group
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
   key :activity_rate, Float, :default => 0.0
+  file_key :logo
   file_key :custom_css
   file_key :custom_favicon
 
@@ -206,26 +207,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     member
   end
 
-  def logo_data=(data)
-    logo = self.logo
-    if data.respond_to?(:read)
-      logo.image = data.read
-      ext = data.original_filename.split(".").last
-      logo.ext = ext if ext
-    elsif data.kind_of?(String)
-      logo.image = File.read(data)
-      ext = data.split(".").last
-      logo.ext = ext if ext
-    end
-    logo.group = self
-
-    logo.save
-  end
-
-  def logo
-    @logo ||= (Logo.find(:first, :group_id => self._id) || Logo.new)
-  end
-
   def pending?
     state == "pending"
   end
@@ -241,14 +222,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
     self.collection.update({:_id => self._id}, {:$inc => {:activity_rate => value}},
                                                                :upsert => true)
-  end
-
-  def has_custom_css?
-    metaclass.keys.has_key?(:_custom_css)
-  end
-
-  def has_custom_favicon?
-    metaclass.keys.has_key?(:_custom_favicon)
   end
 
   def language=(lang)

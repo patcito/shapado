@@ -66,7 +66,7 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
+    @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
                           language custom_css theme], params[:group])
 
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
@@ -77,9 +77,6 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.save
         @group.add_member(current_user, "owner")
-        if data = params[:group][:logo_data]
-          @group.logo_data = data
-        end
         flash[:notice] = 'Group was successfully created.' # TODO: i18n
         format.html { redirect_to(@group) }
         format.xml  { render :xml => @group, :status => :created, :location => @group }
@@ -93,7 +90,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
-    @group.safe_update(%w[name legend description default_tags subdomain logo_data custom_favicon
+    @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
                           language theme custom_css reputation_rewards reputation_constrains], params[:group])
     @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
@@ -138,8 +135,8 @@ class GroupsController < ApplicationController
   end
 
   def logo
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:logo_id])
-    send_data(@group.logo.raw, :filename => @group.logo.filename,  :disposition => 'inline')
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo])
+    send_data(@group.logo.read, :filename => "logo.png",  :disposition => 'inline')
   end
 
   def css

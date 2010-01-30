@@ -78,11 +78,11 @@
   = t(".any_language")
 
 .group
-  = form.label :logo_data, t('logo', :scope => "activerecord.attributes.group"), :class => "label"
+  = form.label :logo, t('logo', :scope => "activerecord.attributes.group"), :class => "label"
   -unless @group.new?
     = image_tag(logo_group_path(@group))
   %br
-  = form.file_field :logo_data
+  = form.file_field :logo
   .description
     = t('.logo_legend')
 
