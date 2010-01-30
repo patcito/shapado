@@ -67,7 +67,11 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new
     @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
-                          language custom_css theme], params[:group])
+                          language theme], params[:group])
+
+    if custom_css = params[:group][:custom_css]
+      @group.custom_css = StringIO.new(custom_css)
+    end
 
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
 
@@ -91,7 +95,10 @@ class GroupsController < ApplicationController
   # PUT /groups/1.xml
   def update
     @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
-                          language theme custom_css reputation_rewards reputation_constrains], params[:group])
+                          language theme reputation_rewards reputation_constrains], params[:group])
+    if custom_css = params[:group][:custom_css]
+      @group.custom_css = StringIO.new(custom_css)
+    end
     @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
     @group.safe_update(%w[footer _head _question_help _question_prompt head_tag], params[:group]) if @group.has_custom_html

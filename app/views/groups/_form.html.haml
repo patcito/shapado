@@ -100,8 +100,7 @@
 
 .group
   = form.label :custom_css, "Custom css", :class => "label"
-  -if @group.has_custom_css?
-    %code
-      =find_and_preserve(@group.custom_css.read)
-  = form.file_field :custom_css
+  -custom_css = ""
+  -@group.has_custom_css? ? custom_css = @group.custom_css.read : custom_css = ""
+  = form.text_area :custom_css, :value => custom_css, :class => "text_area"
 
