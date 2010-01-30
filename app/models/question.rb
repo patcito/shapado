@@ -62,6 +62,9 @@ class Question
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
   validates_true_for :language, :logic => lambda { |q| q.group.language == q.language },
                                 :if => lambda { |q| !q.group.language.nil? }
+  validate :disallow_spam
+  validate :check_useful
+
   timestamps!
 
   def to_param
@@ -217,8 +220,30 @@ class Question
     watchers.include?(user._id)
   end
 
-  protected
+  def check_useful
+    if !self.title.blank? && (self.title.split.count < 6)
+      self.errors.add(:title, I18n.t("questions.model.messages.useless", :count => 5))
+    end
 
+    if !self.body.blank? && (self.body.split.count < 6)
+      self.errors.add(:body, I18n.t("questions.model.messages.useless", :count => 5))
+    end
+  end
+
+  def disallow_spam
+    last_question = Question.find(:first, :limit => 1,
+                                          :user_id => self._id,
+                                          :question_id => self.question_id,
+                                          :group_id => self.group_id,
+                                          :order => "created_at desc")
+
+    valid = ((last_question.nil?) || (Time.now - last_question.created_at) > 20)
+    if !valid
+      self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
+    end
+  end
+
+  protected
   def sluggize
     if self.slug.blank?
       self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-").downcase
@@ -237,5 +262,6 @@ class Question
   def update_language
     self.language = self.language.split("-").first
   end
+
 end
 

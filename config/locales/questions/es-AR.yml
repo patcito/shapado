@@ -70,6 +70,9 @@ es-AR:
       group_dont_exists: "el group {{group}} no existe"
     shared:
       flag: reportar abuso
+    model:
+      messages:
+        useless: "seems useless. please use more words than {{count}}"
 
   activerecord:
     models:

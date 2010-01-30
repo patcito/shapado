@@ -70,6 +70,9 @@ pt-PT:
       group_dont_exists: "the group {{group}} don't exists"
     shared:
       flag: reportar
+    model:
+      messages:
+        useless: "seems useless. please use more words than {{count}}"
 
   activerecord:
     models:
