@@ -13,4 +13,6 @@ fr:
         question_help: question help
         head: header
         footer: footer
+      theme:
+        title: setup the group's theme
 

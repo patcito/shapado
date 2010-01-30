@@ -13,3 +13,5 @@ es-AR:
         question_help: question help
         head: cabecera
         footer: pie de página
+      theme:
+        title: configure el tema del grupo

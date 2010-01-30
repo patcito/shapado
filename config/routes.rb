@@ -62,6 +62,7 @@ ActionController::Routing::Routes.draw do |map|
                    :path_prefix => "/manage" do |manage|
     manage.properties '/properties', :action => 'properties'
     manage.content '/content', :action => 'content'
+    manage.theme '/theme', :action => 'theme'
     manage.actions '/actions', :action => 'actions'
     manage.stats '/stats', :action => 'stats'
     manage.reputation '/reputation', :action => 'reputation'

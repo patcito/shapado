@@ -5,6 +5,7 @@ class Admin::ManageController < ApplicationController
   tabs :dashboard => :dashboard,
        :properties => :properties,
        :content => :content,
+       :theme => :theme,
        :actions => :actions,
        :stats => :stats,
        :widgets => :widgets,
@@ -37,6 +38,9 @@ class Admin::ManageController < ApplicationController
       redirect_to domain_url(:custom => @group.domain, :controller => "manage",
                              :action => "properties")
     end
+  end
+
+  def theme
   end
 
   protected
