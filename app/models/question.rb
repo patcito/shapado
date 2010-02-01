@@ -222,11 +222,11 @@ class Question
 
   def check_useful
     if !self.title.blank? && (self.title.split.count < 6)
-      self.errors.add(:title, I18n.t("questions.model.messages.useless", :count => 5))
+      self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 5))
     end
 
     if !self.body.blank? && (self.body.split.count < 6)
-      self.errors.add(:body, I18n.t("questions.model.messages.useless", :count => 5))
+      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 5))
     end
   end
 

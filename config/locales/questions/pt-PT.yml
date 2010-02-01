@@ -72,7 +72,7 @@ pt-PT:
       flag: reportar
     model:
       messages:
-        useless: "seems useless. please use more words than {{count}}"
+        too_short: "seems too short. Please use more words than {{count}} to be more specific."
 
   activerecord:
     models:

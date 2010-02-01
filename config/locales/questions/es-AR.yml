@@ -72,7 +72,7 @@ es-AR:
       flag: reportar abuso
     model:
       messages:
-        useless: "seems useless. please use more words than {{count}}"
+        too_short: "demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico."
 
   activerecord:
     models:

@@ -72,7 +72,7 @@ fr:
       title: reporter un abus
     model:
       messages:
-        useless: "seems useless. please use more words than {{count}}"
+        too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"
 
   activerecord:
     models:
