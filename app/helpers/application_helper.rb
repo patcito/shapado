@@ -1,16 +1,5 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def category_desc(key)
-    I18n.t("categories.#{key}", :default => key.to_s.capitalize)
-  end
-
-  def category_options
-    categories = Shapado::CATEGORIES
-    categories = current_group.categories if current_group
-    categories.collect do |category|
-      [category_desc(category), category]
-    end
-  end
 
   def language_desc(langs)
     langs.map do |lang|

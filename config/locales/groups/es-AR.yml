@@ -40,7 +40,6 @@
         legend: leyenda
         description: descripción
         state: estado
-        categories: categorias
         owner: "esta grupo fue creado por {{login}}"
         group_created_by: created by
         language: idioma

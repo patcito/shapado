@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
     I18n.locale = user.language
     scope = "mailers.notifications.give_advice"
 
-    from "#{group ? group.name : AppConfig.application_name} <notifications@shapado.com>"
+    from "#{group ? group.name : AppConfig.application_name} <#{AppConfig.notification_email}>"
     recipients user.email
     subject I18n.t("subject", :scope => scope, :question_title => question.title) # FIXME
     sent_on Time.now
@@ -28,7 +28,7 @@ class Notifier < ActionMailer::Base
 
     recipients user.email
     domain = group ? group.domain : AppConfig.domain
-    from "#{group ? group.name : AppConfig.application_name} <notifications@shapado.com>"
+    from "#{group ? group.name : AppConfig.application_name} <#{AppConfig.notification_email}>"
     subject @subject
     sent_on Time.now
     body   :user => user, :answer => answer, :question => answer.question,
@@ -39,7 +39,7 @@ class Notifier < ActionMailer::Base
 
   def new_feedback(user, subject, content)
     recipients AppConfig.exception_recipients
-    from "Shapado[feedback] <notifications@shapado.com>"
+    from "Shapado[feedback] <#{AppConfig.notification_email}>"
     subject "feedback: #{subject}"
     sent_on Time.now
     body   :user => user, :subject => subject, :content => content

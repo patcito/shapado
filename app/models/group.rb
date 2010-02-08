@@ -11,7 +11,6 @@ class Group
   key :domain, String
   key :legend, String
   key :description, String
-  key :categories, Array
   key :default_tags, Array
   key :has_custom_ads, Boolean, :default => false
   key :state, String, :default => "pending" #pending, active, closed

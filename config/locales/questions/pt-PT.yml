@@ -35,7 +35,6 @@ pt-PT:
     form:
       body_tip: qual é a sua pergunta? seja descritivo.
       language_tip: seleccione o idioma da questão.
-      category_tip: selecciona a categoria que encaixa melhor a sua questão.
       tags_tip:  usar etiquetas para dar mais informação sobre a sua questão.
     flag:
       title:   reportar pergunta
@@ -88,6 +87,5 @@ pt-PT:
         views: visitas
         votes: votos
         language: idioma
-        category: categoria
         created_at: asked
 

@@ -35,7 +35,6 @@ es-AR:
     form:
       body_tip: ¿cual es tu pregunta? por favor se descriptivo.
       language_tip: selecciona el idioma de tu pregunta.
-      category_tip: selecciona la categoria que mejor se ajusta a la pregunta.
       tags_tip:  usa etiquetas para añadir más información sobre tu pregunta.
     flag:
       title:   reportar abuso en esta pregunta
@@ -88,5 +87,4 @@ es-AR:
         views: visitas
         votes: votos
         language: idioma
-        category: categoria
         created_at: preguntado

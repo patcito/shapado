@@ -35,7 +35,6 @@ fr:
     form:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.
-      category_tip: sélectionnez la catégorie qui correspond le mieux à votre question.
       tags_tip:  utilisez les tags pour ajouter plus d'information à question.
     flag:
       title: reporter un abus
@@ -88,5 +87,4 @@ fr:
         views: vues
         votes: votes
         language: langue
-        category: catégorie
         created_at: posée
