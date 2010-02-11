@@ -4,9 +4,11 @@ es-AR:
       properties:
         title: propiedades del grupo
       reputation:
-        title: setup reputation's properties
+        title: configuración de las propiedades de reputación
         constrains: restricciónes
         rewards: premios
+        reputation_rewards_subtitle: lista de los premios de reputación
+        reputation_rewards_description: este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
       content:
         title: custom content
         question_prompt: question prompt

@@ -7,6 +7,8 @@ fr:
         title: configurer les propriétés de la réputation
         constrains: constraintes
         rewards: récompenses
+        reputation_rewards_subtitle: liste des récompenses de reputation
+        reputation_rewards_description: ce formulaire permet de configurer comment les utilisateurs peuvent gagner et perdre des points de réputation pour chaque action.
       content:
         title: custom content
         question_prompt: question prompt

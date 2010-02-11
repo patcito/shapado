@@ -7,6 +7,8 @@ en:
         title: setup reputation's properties
         constrains: constrains
         rewards: rewards
+        reputation_rewards_subtitle: list of reputations rewards
+        reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
       content:
         title: custom content
         question_prompt: question prompt
