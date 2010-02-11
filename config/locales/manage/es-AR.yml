@@ -17,3 +17,5 @@ es-AR:
         footer: pie de página
       theme:
         title: configure el tema del grupo
+        logo_legend: puede subir el logo del grupo. el tamaño maximo es de 2mb.
+

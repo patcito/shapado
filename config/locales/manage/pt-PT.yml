@@ -17,3 +17,5 @@ pt-PT:
         footer: footer
       theme:
         title: setup the group's theme
+        logo_legend: you can upload the group logo. the maximum file size is 2mb.
+
