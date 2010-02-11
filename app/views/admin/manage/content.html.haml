@@ -11,9 +11,8 @@
       = link_to t(".question_prompt"), manage_content_path(:tab=>"question_prompt")
     %li.head
       = link_to t(".head"), manage_content_path(:tab=>"head")
-    -if @group.has_custom_footer
-      %li.footer
-        = link_to t(".footer"), manage_content_path(:tab=>"footer")
+    %li.footer
+      = link_to t(".footer"), manage_content_path(:tab=>"footer")
 
 -form_for @group, :html => {:class => "form"} do |form|
   = form.error_messages
