@@ -229,8 +229,7 @@ class Question
 
   def disallow_spam
     last_question = Question.find(:first, :limit => 1,
-                                          :user_id => self._id,
-                                          :question_id => self.question_id,
+                                          :user_id => self.user_id,
                                           :group_id => self.group_id,
                                           :order => "created_at desc")
 
