@@ -46,7 +46,7 @@ namespace :setup do
       default_group.owner = admin
       default_group.add_member(admin, "owner")
     end
-    default_group.logo_data = RAILS_ROOT+"/public/images/logo.png"
+    default_group.logo = File.open(RAILS_ROOT+"/public/images/logo.png")
     default_group.save
   end
 
