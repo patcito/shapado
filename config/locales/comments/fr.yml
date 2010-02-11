@@ -8,7 +8,7 @@ fr:
       flash_notice: "le commentaire a été actualisé avec succès."
     shared:
       add_comment: "ajouter un commentaire..."
-      comment_submit: "commentaire"
+      comment_submit: "commenter"
       said: said
   models:
     comments: commentaire
