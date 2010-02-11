@@ -26,6 +26,12 @@
     = form.check_box :private, :class => "checkbox"
     = form.label :private, "Only the group's members will be able to access this group", :class => "radio"
   .group
+    = form.check_box :has_custom_html, :class => "checkbox"
+    = form.label :has_custom_html, "Allow custom html", :class => "radio"
+  .group
+    = form.check_box :has_custom_js, :class => "checkbox"
+    = form.label :has_custom_js, "Allow custom javascript", :class => "radio"
+  .group
     = form.check_box :has_custom_analytics, :class => "checkbox"
     = form.label :private, "Allow Custom Analytics", :class => "radio"
     .description
@@ -71,23 +77,4 @@
   = form.radio_button :language, "none", :checked => @group.language.nil?
   = t(".any_language")
 
-.group
-  = form.label :logo_data, t('logo', :scope => "activerecord.attributes.group"), :class => "label"
-  -unless @group.new?
-    = image_tag(logo_group_path(@group))
-  %br
-  = form.file_field :logo_data
-  .description
-    = t('.logo_legend')
-
-.group
-  = form.label :theme, t(:theme, :scope => "activerecord.attributes.group", :default => "Theme" ), :class => "label"
-  = form.select :theme, AVAILABLE_THEMES, {}, :class => "choose_theme"
-
-.group
-  = form.label :custom_css, "Custom css", :class => "label"
-  -if @group.has_custom_css?
-    %code
-      =find_and_preserve(@group.custom_css.read)
-  = form.file_field :custom_css
 

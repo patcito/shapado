@@ -23,11 +23,38 @@ class Group
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
   key :activity_rate, Float, :default => 0.0
+  file_key :logo
   file_key :custom_css
+  file_key :custom_favicon
 
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
+
+  #custom html
+  key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
+                                           "es" => "¿cual es tu pregunta? por favor se descriptivo.",
+                                           "fr" => "quelle est votre question? soyez descriptif.",
+                                           "pt" => "qual é a sua pergunta? seja descritivo."}
+  key :_question_help, Hash, :default => {
+"en" => "Provide as much details as possible so that it will have more
+chance to be answered instead of being endlessly discussed.
+Try to be clear and simple.",
+"es" => "Sobre que es tu pregunta?
+provee tantos detalles como puedas para tener más suerte
+de conseguir una respuesta y no una discusion sin fin.
+intenta ser claro y simple",
+"fr" => "Sur quoi porte votre question?
+Donnez autants de détails que possible afin d'avoir plus de chance
+d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
+"pt" => ""}
+
+  key :_head, Hash, :default => { }
+  key :has_custom_html, Boolean, :default => false
+  key :has_custom_js, Boolean, :default => false
+  key :footer, String
+
+  key :head_tag, String
 
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
@@ -56,12 +83,41 @@ class Group
   validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
   before_validation_on_create :check_domain
+  before_save :disallow_javascript
   validate :check_reputation_configs
 
   def check_domain
     if domain.blank?
       self[:domain] = "#{subdomain}.#{AppConfig.domain}"
     end
+  end
+
+  def disallow_javascript
+    unless self.has_custom_js
+       %w[footer _head _question_help _question_prompt head_tag].each do |key|
+         value = self[key]
+         if value.kind_of?(Hash)
+           value.each do |k,v|
+             value[k] = v.gsub(/<*.?script.*?>/, "")
+           end
+         elsif value.kind_of?(String)
+           value = value.gsub(/<*.?script.*?>/, "")
+         end
+         self[key] = value
+       end
+    end
+  end
+
+  def question_prompt
+    self._question_prompt[I18n.locale.split("-").first] || ""
+  end
+
+  def question_help
+    self._question_help[I18n.locale.split("-").first] || ""
+  end
+
+  def head
+    self._head[I18n.locale.split("-").first] || ""
   end
 
   def context_panel_ads
@@ -150,26 +206,6 @@ class Group
     member
   end
 
-  def logo_data=(data)
-    logo = self.logo
-    if data.respond_to?(:read)
-      logo.image = data.read
-      ext = data.original_filename.split(".").last
-      logo.ext = ext if ext
-    elsif data.kind_of?(String)
-      logo.image = File.read(data)
-      ext = data.split(".").last
-      logo.ext = ext if ext
-    end
-    logo.group = self
-
-    logo.save
-  end
-
-  def logo
-    @logo ||= (Logo.find(:first, :group_id => self._id) || Logo.new)
-  end
-
   def pending?
     state == "pending"
   end
@@ -185,10 +221,6 @@ class Group
 
     self.collection.update({:_id => self._id}, {:$inc => {:activity_rate => value}},
                                                                :upsert => true)
-  end
-
-  def has_custom_css?
-    metaclass.keys.has_key?(:_custom_css)
   end
 
   def language=(lang)

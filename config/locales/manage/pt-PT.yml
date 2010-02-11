@@ -7,3 +7,11 @@ pt-PT:
         title: setup reputation's properties
         constrains: constrains
         rewards: rewards
+      content:
+        title: custom content
+        question_prompt: question prompt
+        question_help: question help
+        head: header
+        footer: footer
+      theme:
+        title: setup the group's theme

@@ -50,6 +50,7 @@ en:
       title: tags
     new:
       title: ask question
+      how_to_ask: how to ask
     create:
       flash_notice: "question was successfully created."
     update:

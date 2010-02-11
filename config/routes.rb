@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
                                      :allow_custom_ads => :get,
                                      :disallow_custom_ads => :get,
                                      :logo => :get,
+                                     :favicon => :get,
                                      :css => :get},
                           :collection => { :autocomplete_for_group_slug => :get}
 
@@ -60,6 +61,8 @@ ActionController::Routing::Routes.draw do |map|
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_",
                    :path_prefix => "/manage" do |manage|
     manage.properties '/properties', :action => 'properties'
+    manage.content '/content', :action => 'content'
+    manage.theme '/theme', :action => 'theme'
     manage.actions '/actions', :action => 'actions'
     manage.stats '/stats', :action => 'stats'
     manage.reputation '/reputation', :action => 'reputation'

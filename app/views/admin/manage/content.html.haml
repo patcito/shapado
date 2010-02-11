@@ -1,0 +1,48 @@
+
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+  %ul
+    %li.head_tag
+      = link_to h("<head>"), manage_content_path(:tab=>"head_tag")
+    %li.question_help
+      = link_to t(".question_help"), manage_content_path(:tab=>"question_help")
+    %li.question_prompt
+      = link_to t(".question_prompt"), manage_content_path(:tab=>"question_prompt")
+    %li.head
+      = link_to t(".head"), manage_content_path(:tab=>"head")
+    -if @group.has_custom_footer
+      %li.footer
+        = link_to t(".footer"), manage_content_path(:tab=>"footer")
+
+-form_for @group, :html => {:class => "form"} do |form|
+  = form.error_messages
+  =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "content", :tab=>@active_subtab)
+  -case @active_subtab.to_sym
+    -when :question_prompt
+      -AVAILABLE_LANGUAGES.sort.each do |lang|
+        .group
+          =form.label "_question_prompt[#{lang}]", language_desc(lang), :class => "label"
+          =text_field_tag "group[_question_prompt[#{lang}]]", @group._question_prompt[lang], :class => "text_field"
+    -when :question_help
+      -AVAILABLE_LANGUAGES.sort.each do |lang|
+        .group
+          =form.label "_question_help[#{lang}]", language_desc(lang), :class => "label"
+          =text_area_tag "group[_question_help[#{lang}]]", @group._question_help[lang], :class => "text_area"
+    -when :head
+      -AVAILABLE_LANGUAGES.sort.each do |lang|
+        .group
+          =form.label "_head[#{lang}]", language_desc(lang), :class => "label"
+          =text_area_tag "group[_head[#{lang}]]", @group._head[lang], :class => "text_area"
+    -when :footer
+      -if @group.has_custom_footer
+        .group
+          = form.label "footer", "footer", :class => "label"
+          = form.text_area "footer", :class => "text_area"
+    -when :head_tag
+      .group
+        = form.label "head_tag", h("<head>"), :class => "label"
+        = form.text_area "head_tag", :class => "text_area"
+
+  .navform.group
+    = form.submit t("scaffold.update")

@@ -3,6 +3,7 @@
   %head
     %title
       &= page_title
+    = current_group.head_tag
     = render :partial => "shared/layout/meta"
     = render :partial => "shared/layout/javascript"
     = render :partial => "shared/layout/css"
@@ -11,6 +12,7 @@
     #container
       = render :partial => "shared/topbar"
       #header
+        = current_group.head
         #main-bar{:class => @active_tab}
           #logo
             =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)

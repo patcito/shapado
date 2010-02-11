@@ -50,6 +50,7 @@ pt-PT:
       title: etiquetas
     new:
       title: fazer pergunta
+      how_to_ask: how to ask
     create:
       flash_notice: "pergunta foi criada com sucesso."
     update:
