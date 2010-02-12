@@ -113,7 +113,7 @@ class Answer < Comment
                                     })
 
     last_answer  = Answer.find(:first, :limit => 1,
-                                       :user_id => self._id,
+                                       :user_id => self.user_id,
                                        :question_id => self.question_id,
                                        :group_id => self.group_id,
                                        :order => "created_at desc")

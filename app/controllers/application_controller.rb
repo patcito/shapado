@@ -130,7 +130,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    I18n.locale = locale
+    I18n.locale = locale.to_s
   end
 
   def find_valid_locale(lang)

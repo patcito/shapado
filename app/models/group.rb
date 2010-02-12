@@ -109,15 +109,15 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   end
 
   def question_prompt
-    self._question_prompt[I18n.locale.split("-").first] || ""
+    self._question_prompt[I18n.locale.to_s.split("-").first] || ""
   end
 
   def question_help
-    self._question_help[I18n.locale.split("-").first] || ""
+    self._question_help[I18n.locale.to_s.split("-").first] || ""
   end
 
   def head
-    self._head[I18n.locale.split("-").first] || ""
+    self._head[I18n.locale.to_s.split("-").first] || ""
   end
 
   def context_panel_ads
