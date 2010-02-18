@@ -10,8 +10,8 @@ class QuestionsController < ApplicationController
        :unanswered => :unanswered, :new => :ask_question
 
   subtabs :index => [[:newest, "created_at desc"], [:hot, "hotness desc"], [:votes, "votes_average desc"], [:activity, "activity_at desc"], [:expert, "created_at desc"]],
-          :unanswered => [[:newest, "created_at desc"], [:votes, "votes_count desc"], [:mytags, "created_at desc"]],
-          :show => [[:votes, "votes_count desc"], [:oldest, "created_at asc"], [:newest, "created_at desc"]]
+          :unanswered => [[:newest, "created_at desc"], [:votes, "votes_average desc"], [:mytags, "created_at desc"]],
+          :show => [[:votes, "votes_average desc"], [:oldest, "created_at asc"], [:newest, "created_at desc"]]
   helper :votes
 
   # GET /questions
@@ -82,7 +82,6 @@ class QuestionsController < ApplicationController
     raise PageNotFound  unless @question
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
-
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
     options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
