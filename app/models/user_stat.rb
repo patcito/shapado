@@ -25,12 +25,12 @@ class UserStat
                              {:$set => {"last_activity_at.#{group.id}" => day}},
                               :upsert => true)
       if last_day
-        if day.yesterday == last_day
+        if last_day == day.yesterday
           self.collection.update({:_id => self._id},
                                  {:$inc => {"activity_days.#{group.id}" => 1}},
                                   :upsert => true)
           Magent.push("actors.judge", :on_activity, group.id, self.user_id)
-        else
+        elsif !last_day.today?
           reset_activity_days!(group)
         end
       end
