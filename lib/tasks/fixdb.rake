@@ -8,12 +8,13 @@ namespace :fixdb do
     $stderr.puts "Updating #{Group.count} groups..."
     MongoMapper.database.collection("image_uploads").find.each do |i|
       g = Group.find(i["group_id"])
-      puts "Updating #{g.name}..."
 
-      filename = g.name.gsub("/", "_")+"_logo.png"
-      g.logo_ext = 'png'
+      if !g.nil? && !i["image"].to_s.blank? && g.logo.nil?
+        puts "Updating #{g.name}..."
 
-      if !g.nil? && !i["image"].to_s.blank?
+        filename = g.name.gsub("/", "_")+"_logo.png"
+        g.logo_ext = 'png'
+
         File.open(filename, "w") do |file|
           file << i["image"].to_s
         end
