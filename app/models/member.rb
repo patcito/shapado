@@ -20,11 +20,8 @@ class Member
 
   protected
   def should_be_unique
-    membership = self.class.find(:first, {:limit => 1,
-                              :conditions => {
-                                :user_id  => self.user_id,
-                                :group_id  => self.group_id}
-                             })
+    membership = self.class.first( :user_id  => self.user_id,
+                                   :group_id  => self.group_id)
 
     valid = (membership.nil? || membership.id == self.id)
     if !valid

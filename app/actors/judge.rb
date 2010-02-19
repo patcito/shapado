@@ -38,16 +38,16 @@ module Actors
 
       if answer && question.answer.nil?
         user_badges = answer.user.badges
-        badge = user_badges.find(:first, :token => "troubleshooter", :group_id => group.id, :source_id => answer.id)
+        badge = user_badges.first(:token => "troubleshooter", :group_id => group.id, :source_id => answer.id)
         badge.destroy if badge
 
-        badge = user_badges.find(:first, :token => "guru", :group_id => group.id, :source_id => answer.id)
+        badge = user_badges.first(:token => "guru", :group_id => group.id, :source_id => answer.id)
         badge.destroy if badge
       end
 
       if answer && question.answer.nil?
         user_badges = answer.user.badges
-        tutor = user_badges.find(:first, :token => "tutor", :group_id => group.id, :source_id => answer.id)
+        tutor = user_badges.first(:token => "tutor", :group_id => group.id, :source_id => answer.id)
         tutor.destroy if tutor
       end
     end
@@ -127,7 +127,7 @@ module Actors
         end
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :group_id => group.id, :source => voteable)
+          user_badges.first( :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :group_id => group.id, :source => voteable)
         end
       end
 
@@ -136,7 +136,7 @@ module Actors
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
-          user_badges.find(:first, :token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
+          user_badges.first(:token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
 
         if vote.value == 1

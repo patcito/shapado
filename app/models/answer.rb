@@ -38,8 +38,7 @@ class Answer < Comment
   attr_accessor :rolling_back
 
   def check_unique_answer
-    check_answer = Answer.find(:first,
-                               :question_id => self.question_id,
+    check_answer = Answer.first(:question_id => self.question_id,
                                :user_id => self.user_id)
 
     if !check_answer.nil? && check_answer.id != self.id
@@ -106,17 +105,15 @@ class Answer < Comment
   end
 
   def disallow_spam
-    eq_answer = Answer.find(:first, { :limit => 1,
-                                      :body => self.body,
-                                      :question_id => self.question_id,
-                                      :group_id => self.group_id
-                                    })
+    eq_answer = Answer.first({:body => self.body,
+                                :question_id => self.question_id,
+                                :group_id => self.group_id
+                              })
 
-    last_answer  = Answer.find(:first, :limit => 1,
-                                       :user_id => self.user_id,
-                                       :question_id => self.question_id,
-                                       :group_id => self.group_id,
-                                       :order => "created_at desc")
+    last_answer  = Answer.first(:user_id => self.user_id,
+                                 :question_id => self.question_id,
+                                 :group_id => self.group_id,
+                                 :order => "created_at desc")
 
     valid = (eq_answer.nil? || eq_answer.id == self.id) &&
             ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)

@@ -1,12 +1,12 @@
 class Group
   include MongoMapper::Document
-  include Support::Sluggizer
+  include MongoMapperExt::Slugizer
   include MongoMapperExt::Storage
   timestamps!
 
   key :_id, String
-  slug_key :name
   key :name, String, :required => true
+  slug_key :name, :unique => false
   key :subdomain, String
   key :domain, String
   key :legend, String

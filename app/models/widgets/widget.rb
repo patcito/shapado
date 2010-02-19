@@ -29,14 +29,14 @@ class Widget
     scope = {:group_id => self.group_id}
     widget = nil
     if pos == "up"
-      widget = Widget.find(:first, scope.merge(:position => {:$lt => self.position}))
+      widget = Widget.first(scope.merge(:position => {:$lt => self.position}))
     elsif pos == "down"
-      widget = Widget.find(:first, scope.merge(:position => {:$gt => self.position}))
+      widget = Widget.first(scope.merge(:position => {:$gt => self.position}))
     else
       if pos.to_i > self.position
-        widget = Widget.find(:first, scope.merge(:position => {:$gt => self.position}))
+        widget = Widget.first(scope.merge(:position => {:$gt => self.position}))
       else
-        widget = Widget.find(:first, scope.merge(:position => {:$lt => self.position}))
+        widget = Widget.first(scope.merge(:position => {:$lt => self.position}))
       end
     end
 

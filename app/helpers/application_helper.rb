@@ -58,9 +58,7 @@ module ApplicationHelper
   end
 
   def markdown(txt)
-    Maruku.new(sanitize(txt.to_s,
-                        :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table pre code blockquote a],
-                        :attributes => %w[href src title alt])).to_html
+    RDiscount.new(txt.to_s, :smart, :filter_html).to_html
   end
 
   def format_number(number)

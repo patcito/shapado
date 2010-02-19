@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
     @current_group ||= begin
       subdomains = request.subdomains
       subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
-      _current_group = Group.find(:first, :state => "active", :domain => request.host)
+      _current_group = Group.first(:state => "active", :domain => request.host)
       unless _current_group
         flash[:warn] = t("global.group_not_found", :url => request.host)
         redirect_to domain_url(:custom => AppConfig.domain)

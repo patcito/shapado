@@ -13,7 +13,6 @@ Dir.glob("#{RAILS_ROOT}/app/models/**/*.rb") do |model_path|
   File.basename(model_path, ".rb").classify.constantize
 end
 
-MongoMapper.ensure_indexes!
 
 Dir.glob("#{RAILS_ROOT}/app/javascripts/**/*.js") do |js_path|
   code = File.read(js_path)

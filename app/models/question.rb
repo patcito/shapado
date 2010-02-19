@@ -1,8 +1,8 @@
 class Question
   include MongoMapper::Document
   include MongoMapperExt::Filter
+  include MongoMapperExt::Slugizer
 
-  ensure_index :slug
   ensure_index :tags
   ensure_index :language
   ensure_index :title
@@ -11,7 +11,7 @@ class Question
   key :_id, String
   key :title, String, :required => true
   key :body, String
-  key :slug, String, :required => true
+  slug_key :title, :unique => false
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
   key :votes_count, Integer, :default => 0
@@ -54,7 +54,7 @@ class Question
   filterable_keys :title, :body
 
   before_save :update_activity_at
-  before_validation_on_create :sluggize, :update_language
+  before_validation_on_create :update_language
 
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES
   validates_true_for :language, :logic => lambda { |q| q.group.language == q.language },
@@ -63,14 +63,6 @@ class Question
   validate :check_useful
 
   timestamps!
-
-  def to_param
-    self.slug || self.id
-  end
-
-  def self.find_by_slug_or_id(id)
-    self.find_by_slug(id) || self.find_by_id(id)
-  end
 
   def tags=(t)
     if t.kind_of?(String)
@@ -228,10 +220,9 @@ class Question
   end
 
   def disallow_spam
-    last_question = Question.find(:first, :limit => 1,
-                                          :user_id => self.user_id,
-                                          :group_id => self.group_id,
-                                          :order => "created_at desc")
+    last_question = Question.first( :user_id => self.user_id,
+                                    :group_id => self.group_id,
+                                    :order => "created_at desc")
 
     valid = ((last_question.nil?) || (Time.now - last_question.created_at) > 20)
     if !valid
@@ -240,12 +231,6 @@ class Question
   end
 
   protected
-  def sluggize
-    if self.slug.blank?
-      self.slug = self.title.gsub(/[^A-Za-z0-9\s\-]/, "")[0,40].strip.gsub(/\s+/, "-").downcase
-    end
-  end
-
   def update_answer_count
     self.answers_count = self.answers.count
     votes_average = 0
