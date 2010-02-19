@@ -11,7 +11,7 @@ class Question
   key :_id, String
   key :title, String, :required => true
   key :body, String
-  slug_key :title
+  slug_key :title, :unique => false
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
   key :votes_count, Integer, :default => 0
