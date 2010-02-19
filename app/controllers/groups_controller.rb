@@ -168,11 +168,11 @@ class GroupsController < ApplicationController
   end
 
   def autocomplete_for_group_slug
-    @groups = Group.find(:all, :limit => params[:limit] || 20,
-                             :fields=> 'slug',
-                             :slug =>  /.*#{params[:prefix].downcase.to_s}.*/,
-                             :order => "slug desc",
-                             :state => "active")
+    @groups = Group.all( :limit => params[:limit] || 20,
+                         :fields=> 'slug',
+                         :slug =>  /.*#{params[:prefix].downcase.to_s}.*/,
+                         :order => "slug desc",
+                         :state => "active")
 
     respond_to do |format|
       format.json {render :json=>@groups}

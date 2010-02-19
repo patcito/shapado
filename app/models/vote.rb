@@ -24,11 +24,9 @@ class Vote
 
   protected
   def should_be_unique
-    vote = Vote.find(:first, {:limit => 1,
-                              :voteable_type => self.voteable_type,
-                              :voteable_id => self.voteable_id,
-                              :user_id     => self.user_id
-                             })
+    vote = Vote.first( :voteable_type => self.voteable_type,
+                       :voteable_id => self.voteable_id,
+                       :user_id     => self.user_id )
 
     valid = (vote.nil? || vote.id == self.id)
     if !valid

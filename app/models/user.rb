@@ -79,7 +79,7 @@ class User
   #
   def self.authenticate(login, password)
     return nil if login.blank? || password.blank?
-    u = find(:first, :login => login.downcase) # need to get the salt
+    u = User.first(:login => login.downcase) # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
 
@@ -99,7 +99,7 @@ class User
     opts = {}
     opts[:limit] = 15
     opts[:select] = [:user_id]
-    user_ids = UserStat.find(:all, opts.merge({:answer_tags => {:$in => tags}})).map do |s|
+    user_ids = UserStat.all(opts.merge({:answer_tags => {:$in => tags}})).map do |s|
       s.user_id
     end
 
@@ -182,8 +182,7 @@ class User
 
     return @roles[group.id] if @roles[group.id]
 
-    if membership = Member.find(:first, :limit => 1, :group_id => group.id,
-                                :user_id => self.id)
+    if membership = Member.first(:group_id => group.id, :user_id => self.id)
       return @roles[group.id] = membership.role
     end
     "none"
@@ -214,11 +213,9 @@ class User
   end
 
   def vote_on(voteable)
-    Vote.find(:first, {:limit => 1,
-                          :voteable_type => voteable.class.to_s,
-                          :voteable_id => voteable._id,
-                          :user_id     => self._id
-                         })
+    Vote.first(:voteable_type => voteable.class.to_s,
+               :voteable_id => voteable._id,
+               :user_id     => self._id )
   end
 
   def favorite?(question)
@@ -226,7 +223,7 @@ class User
   end
 
   def favorite(question)
-    self.favorites.find(:first, :question_id => question._id, :user_id => self._id )
+    self.favorites.first(:question_id => question._id, :user_id => self._id )
   end
 
   def logged!
@@ -293,11 +290,11 @@ class User
   end
 
   def badges_on(group, opts = {})
-    self.badges.find(:all, opts.merge(:group_id => group.id, :order => "created_at desc"))
+    self.badges.all(opts.merge(:group_id => group.id, :order => "created_at desc"))
   end
 
   def find_badge_on(group, token, opts = {})
-    self.badges.find(:first, opts.merge(:token => token, :group_id => group.id))
+    self.badges.first(opts.merge(:token => token, :group_id => group.id))
   end
 
   def method_missing(method, *args, &block)
@@ -318,7 +315,7 @@ class User
   protected
   def add_email_validation
     if !self.email.blank?
-      doc = User.find(:first, :email => self.email, :limit => 1)
+      doc = User.first(:email => self.email)
       valid = doc.nil? || self.id == doc.id
       if !valid
         self.errors.add(:email, 'Email has already been taken')

@@ -38,10 +38,9 @@ class Comment
   end
 
   def disallow_spam
-    eq_comment = Comment.find(:first, { :limit => 1,
-                                          :body => self.body,
-                                          :commentable_id => self.commentable_id
-                                        })
+    eq_comment = Comment.first({ :body => self.body,
+                                  :commentable_id => self.commentable_id
+                                })
 
 
     valid = (eq_comment.nil? || eq_comment.id == self.id)

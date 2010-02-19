@@ -1,6 +1,6 @@
 class Group
   include MongoMapper::Document
-  include Support::Sluggizer
+  include MongoMapperExt::Slugizer
   include MongoMapperExt::Storage
   timestamps!
 

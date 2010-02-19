@@ -106,10 +106,10 @@ class UsersController < ApplicationController
   end
 
   def autocomplete_for_user_login
-    @users = User.find(:all, :limit => params[:limit] || 20,
-                             :fields=> 'login',
-                             :login =>  /^#{params[:prefix].downcase.to_s}.*/,
-                             :order => "login desc")
+    @users = User.all( :limit => params[:limit] || 20,
+                       :fields=> 'login',
+                       :login =>  /^#{params[:prefix].downcase.to_s}.*/,
+                       :order => "login desc")
     respond_to do |format|
       format.json {render :json=>@users}
     end

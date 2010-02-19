@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "maruku"
   config.gem "jnunemaker-validatable", :version => "1.8.1", :lib => "validatable"
-  config.gem "mongo_mapper", :version => "0.6.10", :source => "http://gemcutter.org"
+  config.gem "mongo_mapper", :version => "0.7.0", :source => "http://gemcutter.org"
   config.gem "compass", :version => "0.10.0.pre2", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.3.7", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"

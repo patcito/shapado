@@ -1,5 +1,4 @@
 require 'ostruct'
-require "support/sluggizer"
 
 config_file = "/etc/shapado.yml"
 if !File.exist?(config_file)
@@ -26,6 +25,7 @@ begin
     end
   end
 end
+
 
 REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "comment" => 50, "delete_own_comments" => 50, "vote_down" => 100,
