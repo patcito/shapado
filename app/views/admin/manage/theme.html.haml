@@ -3,7 +3,7 @@
   .navtitle
     = t(".title")
 
--form_for @group, :html => {:class => "form"} do |form|
+-form_for @group, :html => {:class => "form", :multipart => true} do |form|
   = form.error_messages
   =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "theme")
   .group

@@ -190,7 +190,7 @@ class User
   end
 
   def owner_of?(group)
-    admin? || role_on(group) == "owner"
+    admin? || group.owner_id == self.id || role_on(group) == "owner"
   end
 
   def mod_of?(group)

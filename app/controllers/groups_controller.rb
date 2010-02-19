@@ -94,6 +94,13 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.xml
   def update
+    logo = params[:group][:logo]
+    if logo && logo.respond_to?(:original_filename)
+      if logo.original_filename =~ /\.(\w+)$/
+        @group.logo_ext = $1
+      end
+    end
+
     @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
                           language theme reputation_rewards reputation_constrains], params[:group])
     if custom_css = params[:group][:custom_css]
@@ -142,8 +149,8 @@ class GroupsController < ApplicationController
   end
 
   def logo
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo])
-    send_data(@group.logo.read, :filename => "logo.png",  :disposition => 'inline')
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo, :logo_ext])
+    send_data(@group.logo.read, :filename => "logo.#{@group.logo_ext}",  :disposition => 'inline')
   end
 
   def css

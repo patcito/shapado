@@ -23,6 +23,8 @@ class Group
   key :has_custom_analytics, Boolean, :default => false
   key :language, String
   key :activity_rate, Float, :default => 0.0
+  key :logo_ext, String, :default => 'png'
+
   file_key :logo
   file_key :custom_css
   file_key :custom_favicon
