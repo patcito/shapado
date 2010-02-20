@@ -6,7 +6,7 @@ class Group
 
   key :_id, String
   key :name, String, :required => true
-  slug_key :name, :unique => false
+  slug_key :name, :unique => true
   key :subdomain, String
   key :domain, String
   key :legend, String
