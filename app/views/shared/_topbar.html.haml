@@ -15,8 +15,9 @@
               =link_to h(current_group.name), groups_path
               %ul
                 -current_user.reputation.keys.each do |group_id|
+                  -group = Group.find(group_id, :select => [:name, :domain])
+                  -next if group.nil?
                   %li
-                    -group = Group.find(group_id)
                     =link_to h(group.name), domain_url(:custom => group.domain)
           |
       .entry
