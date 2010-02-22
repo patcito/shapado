@@ -5,4 +5,8 @@ class DocController < ApplicationController
   def tos
     set_page_title("Terms of service")
   end
+
+  def plans
+    set_page_title(t('doc.plans.title'))
+  end
 end

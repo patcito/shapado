@@ -44,5 +44,6 @@ class WelcomeController < ApplicationController
 
   def facts
   end
+
 end
 

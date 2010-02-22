@@ -1,0 +1,30 @@
+!!! Strict
+%html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      &= page_title
+    = current_group.head_tag
+    = render :partial => "shared/layout/meta"
+    = render :partial => "shared/layout/javascript"
+    = render :partial => "shared/layout/css"
+
+  %body
+    #container
+      = render :partial => "shared/topbar"
+      #header
+        = current_group.head
+        #main-bar{:class => @active_tab}
+          #logo
+            -if current_group.has_logo?
+              =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
+            -else
+              = image_tag("default_logo.png", :class => "group_logo")
+          .clear
+      #wrapper
+        #main-doc
+          = yield
+          .clear
+    .clear
+    #footer
+      .block.content
+        = render :partial => "layouts/footer"

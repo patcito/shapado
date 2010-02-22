@@ -59,7 +59,7 @@
   -if !current_group.isolate
     .block{:style => "background: transparent"}
       .content
-        =link_to t(".create_own_site"), new_group_path, :id => "create_own_site"
+        = link_to t(".create_own_site"), new_group_path, :id => "create_own_site"
 
   -if logged_in?
     = render :partial => "shared/preferred_tags"
