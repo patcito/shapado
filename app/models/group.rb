@@ -86,7 +86,13 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   before_validation_on_create :check_domain
   before_save :disallow_javascript
+  before_save :downcase_domain
   validate :check_reputation_configs
+
+  def downcase_domain
+    domain.downcase!
+    subdomain.downcase!
+  end
 
   def check_domain
     if domain.blank?
