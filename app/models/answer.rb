@@ -1,6 +1,7 @@
 class Answer < Comment
   include MongoMapper::Document
   include MongoMapperExt::Filter
+  include Support::Versioneable
   key :_id, String
 
   key :body, String, :required => true
@@ -9,7 +10,6 @@ class Answer < Comment
   key :votes_average, Integer, :default => 0
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
-  key :versions, Array
   key :wiki, Boolean, :default => false
 
   timestamps!
@@ -28,14 +28,11 @@ class Answer < Comment
   validates_presence_of :user_id
   validates_presence_of :question_id
 
+  versioneable_keys :body
   filterable_keys :body
 
   validate :disallow_spam
   validate :check_unique_answer
-
-  before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
-
-  attr_accessor :rolling_back
 
   def check_unique_answer
     check_answer = Answer.first(:question_id => self.question_id,
@@ -122,26 +119,6 @@ class Answer < Comment
     end
   end
 
-  def rollback!(pos = nil)
-    pos = self.versions.count-1 if pos.nil?
-    version = self.versions[pos]
-
-    if version
-      self.body = version["body"]
-      self.updated_by_id = version["user_id"]
-      self.updated_at = version["date"]
-    end
-
-    @rolling_back = true
-    save!
-  end
-
   protected
-  def save_version
-    if !self.new? && self.body_changed? && self.updated_by_id
-      self.versions << {'body' => self.body_was,
-                        'user_id' => (self.updated_by_id_was || self.updated_by_id),
-                        'date' => self.updated_at_was.try(:utc) }
-    end
-  end
+
 end

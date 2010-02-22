@@ -88,6 +88,7 @@ class AnswersController < ApplicationController
 
   def update
     respond_to do |format|
+      @question = @answer.question
       @answer.safe_update(%w[body], params[:answer])
       @answer.updated_by = current_user
 
@@ -96,10 +97,10 @@ class AnswersController < ApplicationController
 
         Magent.push("actors.judge", :on_update_answer, @answer.id)
         format.html { redirect_to(question_path(current_languages, @answer.question)) }
-        format.json  { head :ok }
+        format.json { head :ok }
       else
         format.html { render :action => "edit" }
-        format.json  { render :json => @answer.errors, :status => :unprocessable_entity }
+        format.json { render :json => @answer.errors, :status => :unprocessable_entity }
       end
     end
   end

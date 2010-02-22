@@ -8,7 +8,7 @@
 %h2.title
   =t(".current_version")
 .markdown
-  = shapado_auto_link(markdown(@answer["body"]))
+  = shapado_auto_link(markdown(@answer.body))
 .clear
 
 
@@ -16,17 +16,18 @@
   %h2.title
     =t(".previous_versions")
   -@answer.versions.each_with_index do |version, pos|
-    .answer
-      %h2.version_title
-        %span.version
-          &=pos
-        =t(".version")
-      #question-body-col
-        .markdown
-          = find_and_preserve(shapado_auto_link(markdown(version["body"])))
-        .controls
-          .actions
-            -if logged_in? && current_user.can_modify?(@answer)
-              =link_to t(".set_as_current"), rollback_question_answer_path(current_languages, @question, @answer, :version => pos), :method => :put
+    -if !version.data.empty?
+      .answer
+        %h2.version_title
+          %span.version
+            &=pos
+          =t(".version")
+        #question-body-col
+          .markdown
+            = find_and_preserve(shapado_auto_link(markdown(version.data["body"].first)))
+          .controls
+            .actions
+              -if logged_in? && current_user.can_modify?(@answer)
+                =link_to t(".set_as_current"), rollback_question_answer_path(current_languages, @question, @answer, :version => pos), :method => :put
+          .clear
         .clear
-      .clear
