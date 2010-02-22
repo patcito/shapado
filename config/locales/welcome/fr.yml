@@ -37,6 +37,8 @@ fr:
       title: envoyer votre feedback
       feedback_title: titre
       feedback_description: description
+      email_description: s'il vous plait, donnez-nous votre email afin que nous puissions répondre à votre message.
+      captcha_error: s'il vous plait, veuillez résoudre cette simple opération mathématique
     index:
       hot:     chaudes
       active:  actives

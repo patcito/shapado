@@ -20,7 +20,7 @@ es-AR:
           multitopic: multi-topic
           multilanguage: multilenguas
           foss: libre/open source
-          joel: voy a hacer joel mas rico?
+          joel: voy a hacer joel más rico?
         stackexchange:
           adaptable: "no"
           multitopic: "no"
@@ -37,6 +37,8 @@ es-AR:
       title: envía tu sugerencia
       feedback_title: titulo
       feedback_description: descripción
+      email_description: por favor, provee tu correo electrónico para poder responder tu inquietud
+      captcha_error: por favor, resuelve una simple operación matemática
     index:
       hot:     calientes
       active:  activas

@@ -28,9 +28,18 @@ class WelcomeController < ApplicationController
   end
 
   def send_feedback
-    Notifier.deliver_new_feedback(current_user, params[:feedback][:title],
-                                      params[:feedback][:description])
-    redirect_to root_path
+    if params[:result].blank? ||
+       (params[:result].to_i != (params[:n1].to_i * params[:n2].to_i))
+      flash[:error] = I18n.t("welcome.feedback.captcha_error")
+      flash[:error] += ". Domo arigato, Mr. Roboto. "
+      redirect_to feedback_path(:feedback => params[:feedback])
+    else
+      Notifier.deliver_new_feedback(current_user, params[:feedback][:title],
+                                                  params[:feedback][:description],
+                                                  params[:feedback][:email],
+                                                  request.remote_ip)
+      redirect_to root_path
+    end
   end
 
   def facts

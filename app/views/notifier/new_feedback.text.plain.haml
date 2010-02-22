@@ -1,7 +1,9 @@
 -if @user
   == The user #{h(@user.login)}<#{h(@user.email)}> sent a feedback
 -else
-  anonymous user sent a feedback
+  == anonymous user sent a feedback from #{@ip} ip
+
+== email provied #{@email}
 
 == subject: #{h(@subject)}
 = @content
