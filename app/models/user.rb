@@ -165,7 +165,7 @@ class User
       return page
     end
 
-    default_opts = {:conditions => {:_id => {:$in => spaces_ids}}}
+    default_opts = {:conditions => {:_id => {:$in => groups_ids}}}
     Group.paginate(options.merge(default_opts))
   end
 
