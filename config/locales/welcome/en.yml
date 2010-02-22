@@ -37,6 +37,8 @@ en:
       title: send your feedback
       feedback_title: title
       feedback_description: description
+      email_description: please, provie your email so we can answer your message
+      captcha_error: please, solve a simple math operation
     index:
       hot:     hot
       active:  active

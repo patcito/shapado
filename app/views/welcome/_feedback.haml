@@ -1,10 +1,22 @@
+-feedback = params[:feedback] || {}
 -form_tag send_feedback_path, :class => "form", :method => "post" do
   .group
     = label_tag "feedback[title]", t(".feedback_title"), :class => "label"
-    = text_field_tag "feedback[title]", "", :class=> "text_field"
+    = text_field_tag "feedback[title]", feedback[:title], :class=> "text_field"
   .group
     = label_tag "feedback[description]", t(".feedback_description"), :class => "label"
-    = text_area_tag "feedback[description]", "", :class=> "text_area"
+    = text_area_tag "feedback[description]", feedback[:description], :class=> "text_area"
+  .group
+    = label_tag "feedback[email]", t(".feedback_email", :default => :"activerecord.attributes.user.email"), :class => "label"
+    = text_field_tag "feedback[email]", feedback[:email], :class=> "text_field"
+    .description
+      = t(".email_description")
+  .group
+    - n1 = rand(10); n2 = rand(10)
+    = hidden_field_tag "n1", n1
+    = hidden_field_tag "n2", n2
+    = label_tag "result", "#{n1} * #{n2}="
+    = text_field_tag "result", "", :class=> "text_field"
   .group.navform
     = submit_tag(t("scaffold.send"), :class => "button")
     = t("global.or")
