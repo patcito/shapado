@@ -12,7 +12,7 @@ class Group
   key :legend, String
   key :description, String
   key :default_tags, Array
-  key :has_custom_ads, Boolean, :default => false
+  key :has_custom_ads, Boolean, :default => true
   key :state, String, :default => "pending" #pending, active, closed
   key :isolate, Boolean, :default => false
   key :private, Boolean, :default => false
@@ -20,7 +20,7 @@ class Group
   key :owner_id, String
   key :analytics_id, String
   key :analytics_vendor, String
-  key :has_custom_analytics, Boolean, :default => false
+  key :has_custom_analytics, Boolean, :default => true
   key :language, String
   key :activity_rate, Float, :default => 0.0
   key :logo_ext, String, :default => 'png'
@@ -52,8 +52,8 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 "pt" => ""}
 
   key :_head, Hash, :default => { }
-  key :has_custom_html, Boolean, :default => false
-  key :has_custom_js, Boolean, :default => false
+  key :has_custom_html, Boolean, :default => true
+  key :has_custom_js, Boolean, :default => true
   key :footer, String
 
   key :head_tag, String
