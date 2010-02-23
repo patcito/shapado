@@ -18,7 +18,7 @@ class UserStat
   timestamps!
 
   def activity_on(group, date)
-    day = date.at_beginning_of_day
+    day = date.utc.at_beginning_of_day
     last_day = self.last_activity_at[group.id]
     if last_day != day
       self.collection.update({:_id => self._id},
