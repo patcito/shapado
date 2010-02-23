@@ -1,5 +1,7 @@
 fr:
   doc:
+    chat:
+      title: Support par tchat
     plans:
       title: Plans de souscription et prix
       free_plan: plan gratuit

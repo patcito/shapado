@@ -1,5 +1,7 @@
 pt-PT:
   doc:
+    chat:
+      title: Chat Support
     plans:
       plans: plans
       title: Plans and pricing

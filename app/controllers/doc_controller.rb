@@ -9,4 +9,8 @@ class DocController < ApplicationController
   def plans
     set_page_title(t('doc.plans.title'))
   end
+
+  def chat
+    set_page_title(t('doc.chat.title'))
+  end
 end

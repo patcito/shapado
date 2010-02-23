@@ -1,5 +1,7 @@
 es-AR:
   doc:
+    chat:
+      title: Soporte por chat
     plans:
       plans: planes
       title: Planes de suscripcion y precios
