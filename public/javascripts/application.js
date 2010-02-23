@@ -34,10 +34,18 @@ function showMessage(message, t) {
 
 function setupEditor() {
   var converter = new Showdown.converter;
+  var timer_id = null;
+
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
     $('#markdown_preview.markdown p code').addClass("prettyprint");
-    prettyPrint();
+    if(timer_id)
+      clearTimeout(timer_id);
+
+    timer_id = setTimeout(function(){
+      prettyPrint();
+    }, 500);
+
   }
 
   var textarea = $("#markdown_editor").TextArea({
