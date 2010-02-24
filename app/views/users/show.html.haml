@@ -4,12 +4,12 @@
     &= @user.login
 
 #users_show
+  -if current_user == @user
+    %span
+      =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
   .general-info
     .avatar
       = gravatar @user.email.to_s, :size => 128
-      -if current_user == @user
-        %div
-          =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
     -if logged_in? && current_user.following?(@user)
       =link_to "- unfollow", unfollow_user_path(@user), :class => "unfollow_link", :method => :post
     -else
@@ -18,6 +18,25 @@
       .user-info
         = auto_link(@user.bio)
   .clear
+
+  -if @user.following.count > 0
+    %h2.title
+      .counter
+        = number_with_delimiter(@user.following.count)
+      Following
+    .friend_list
+      -@user.following.each do |follower|
+        %span
+          = gravatar follower.email.to_s, :size => 24
+  -if @user.followers.count > 0
+    %h2.title
+      .counter
+        = number_with_delimiter(@user.followers.count)
+      Followers
+    .friend_list
+      -@user.followers.each do |follower|
+        %span
+          =link_to gravatar(follower.email.to_s, :size => 24), user_path(follower)
 
   /Questions
   %h2.title
