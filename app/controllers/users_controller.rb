@@ -111,6 +111,8 @@ class UsersController < ApplicationController
 
     flash[:notice] = t("flash_notice", :scope => "users.follow", :user => @user.login)
 
+    Notifier.deliver_follow(current_user, @user)
+
     respond_to do |format|
       format.html do
         redirect_to user_path(@user)

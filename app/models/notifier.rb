@@ -46,5 +46,13 @@ class Notifier < ActionMailer::Base
     content_type  "text/plain"
   end
 
+  def follow(user, followed)
+    recipients followed.email
+    from "Shapado <#{AppConfig.notification_email}>"
+    subject "#{user.login} is now following you on Shapado"
+    sent_on Time.now
+    body :user => user, :followed => followed
+  end
+
   protected
 end

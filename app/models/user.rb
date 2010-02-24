@@ -318,17 +318,15 @@ class User
   end
 
   def followers
-    self.friend_list.followers || []
+    self.friend_list.followers
   end
 
   def following
-    self.friend_list.following || []
+    self.friend_list.following
   end
 
   def following?(user)
-    if flist = friend_list(:select => [:following_ids]) && !flist.nil?
-      flist.following_ids.include?(user.id)
-    end
+    friend_list(:select => [:following_ids]).following_ids.include?(user.id)
   end
 
   def method_missing(method, *args, &block)
