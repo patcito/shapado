@@ -2,7 +2,7 @@ function tagCloud(q, limit) {
   var counts = db.eval(
     function(q){
       var counts = {};
-      db.questions.find(q).limit(500).forEach(
+      db.questions.find(q, {"tags":1}).limit(500).forEach(
         function(p){
           if ( p.tags ){
             for ( var i=0; i<p.tags.length; i++ ){
