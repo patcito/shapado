@@ -61,7 +61,9 @@ class AnswersController < ApplicationController
           # TODO: use magent to do it
           users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
           users.push(@question.user)
-          users.each do |u|
+          users += @question.user.followers
+
+          users.uniq.each do |u|
             email = u.email
             if !email.blank? && u.notification_opts["new_answer"] == "1"
               Notifier.deliver_new_answer(u, current_group, @answer)
