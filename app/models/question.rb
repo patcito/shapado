@@ -85,8 +85,8 @@ class Question
     self.database.eval("function(a,b) { return tag_cloud(a,b); }", conditions, limit)
   end
 
-  def self.find_tags(regex, limit = 30)
-    self.database.eval("function(a,b) { return find_tags(a,b); }", regex, limit)
+  def self.find_tags(regex, conditions = {}, limit = 30)
+    self.database.eval("function(a,b,c) { return find_tags(a,b,c); }", regex, conditions, limit)
   end
 
   def self.related_questions(question, opts = {})
