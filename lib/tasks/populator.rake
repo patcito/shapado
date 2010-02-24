@@ -1,8 +1,11 @@
-require 'faker'
 
 namespace :populator do
+  task :populator_env => :environment do
+    require 'faker'
+  end
+
   desc "Creates 10 random questions"
-  task :questions => :environment do
+  task :questions => :populator_env do
     users = User.find(:all, :limit => 20)
     raise "There are no users!" if users.empty?
     default_group = Group.find_by_name(AppConfig.application_name)
@@ -50,7 +53,7 @@ namespace :populator do
   end
 
   desc "Creates 10 random users"
-  task :users => :environment do
+  task :users => :populator_env do
     10.times do
       user = User.create(:login => Faker::Internet.user_name.gsub(/\W/, "-"),
                          :email => Faker::Internet.email,
@@ -60,7 +63,7 @@ namespace :populator do
   end
 
   desc "Creates 10 random groups"
-  task :groups => :environment do
+  task :groups => :populator_env do
     states = ["active", "pending"]
     users = User.find(:all, :limit => 20)
     raise "There are no users!" if users.empty?
