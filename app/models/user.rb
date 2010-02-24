@@ -302,6 +302,12 @@ class User
     self.badges.first(opts.merge(:token => token, :group_id => group.id))
   end
 
+  # self follows user
+  def add_friend(user)
+    FriendList.push_uniq(self.friend_list_id, :following_ids => user.id)
+    FriendList.push_uniq(user.friend_list_id, :follower_ids => self.id)
+  end
+
   def method_missing(method, *args, &block)
     if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
       key = $1
