@@ -304,13 +304,17 @@ class User
 
   # self follows user
   def add_friend(user)
+    return false if user == self
     FriendList.push_uniq(self.friend_list_id, :following_ids => user.id)
     FriendList.push_uniq(user.friend_list_id, :follower_ids => self.id)
+    true
   end
 
   def remove_friend(user)
+    return false if user == self
     FriendList.pull(self.friend_list_id, :following_ids => user.id)
     FriendList.pull(user.friend_list_id, :follower_ids => self.id)
+    true
   end
 
   def followers
