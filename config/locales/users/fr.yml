@@ -10,12 +10,12 @@ fr:
       title: configuration
       submit: sauver
     show:
-      follow: follow
-      unfollow: unfollow
+      follow: suivre
+      unfollow: ne plus suivre
     follow:
-      flash_notice: "The user {{user}} was added to your friends"
+      flash_notice: "L'utilisateur {{user}} a été ajouté à votre liste d' amis"
     unfollow:
-      flash_notice: "The user {{user}} was removed from your friends"
+      flash_notice: "L'utilisateur {{user}} a été ajouté à votre liste d'amis"
     form:
       information: information
       notifications: notifications
