@@ -11,9 +11,9 @@
     .avatar
       = gravatar @user.email.to_s, :size => 128
     -if logged_in? && current_user.following?(@user)
-      =link_to "- unfollow", unfollow_user_path(@user), :class => "unfollow_link", :method => :post
+      =link_to "- #{t(".unfollow")}", unfollow_user_path(@user), :class => "unfollow_link", :method => :post
     -else
-      =link_to "+ follow", follow_user_path(@user), :class => "follow_link", :method => :post
+      =link_to "+ #{t(".follow")}", follow_user_path(@user), :class => "follow_link", :method => :post
     -if @user.bio.present?
       .user-info
         = auto_link(@user.bio)

@@ -9,6 +9,13 @@ en:
     edit:
       title: settings
       submit: save
+    show:
+      follow: follow
+      unfollow: unfollow
+    follow:
+      flash_notice: "The user {{user}} was added to your friends"
+    unfollow:
+      flash_notice: "The user {{user}} was removed from your friends"
     form:
       information: information
       notifications: notifications

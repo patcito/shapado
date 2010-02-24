@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       redirect_back_or_default('/')
       flash[:notice] = t("flash_notice", :scope => "users.create")
     else
-      flash[:error]  = t("flash_error", :scope => "create")
+      flash[:error]  = t("flash_error", :scope => "users.create")
       render :action => 'new'
     end
   end
@@ -109,7 +109,7 @@ class UsersController < ApplicationController
     @user = User.find_by_login_or_id(params[:id])
     current_user.add_friend(@user)
 
-    flash[:notice] = "The user #{@user.login} was added to your friends"
+    flash[:notice] = t("flash_notice", :scope => "users.follow", :user => @user.login)
 
     respond_to do |format|
       format.html do
@@ -122,7 +122,7 @@ class UsersController < ApplicationController
     @user = User.find_by_login_or_id(params[:id])
     current_user.remove_friend(@user)
 
-    flash[:notice] = "The user #{@user.login} was removed from your friends"
+    flash[:notice] = t("flash_notice", :scope => "users.unfollow", :user => @user.login)
 
     respond_to do |format|
       format.html do

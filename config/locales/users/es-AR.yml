@@ -9,6 +9,13 @@
     edit:
       title: configuración
       submit: guardar
+    show:
+      follow: seguir
+      unfollow: dejar de seguir
+    follow:
+      flash_notice: "El usuario {{user}} fue añadido a su lista de amigos"
+    unfollow:
+      flash_notice: "El usuario {{user}} fue removido de su lista de amigos"
     form:
       information: información
       notifications: notificaciones
