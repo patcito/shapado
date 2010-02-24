@@ -3,3 +3,5 @@ coverage
 *.log
 *.sqlite3
 public/stylesheets/compiled/
+config/shapado.yml
+data/*.dat
