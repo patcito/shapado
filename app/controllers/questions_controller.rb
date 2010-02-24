@@ -141,9 +141,10 @@ class QuestionsController < ApplicationController
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
         # TODO: move to magent
         users = User.find_experts(@question.tags, [@question.language])
-        users.each do |u|
-          email = u.email
-          if !email.blank?
+        users += @question.user.followers
+
+        users.uniq.each do |u|
+          if !u.email.blank?
             Notifier.deliver_give_advice(u, current_group, @question)
           end
         end
