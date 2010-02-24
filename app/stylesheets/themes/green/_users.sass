@@ -16,8 +16,25 @@
     float: left
     background: #eee
 
-  .follow_link
-    float: right
-    +fancy-button-structure
-    +fancy-button-colors(#17AD00)
-    +fancy-button-size(20px, 4px, 2px)
+
+a.follow_link
+  +fancy-button-structure
+  +fancy-button-colors-matte(#E76400)
+  +fancy-button-size(24px, 18px, 1px, 15px)
+  float: right
+  &:active, &:link
+    color: white
+
+a.unfollow_link
+  +fancy-button-structure
+  +fancy-button-colors-matte(#FF0000)
+  +fancy-button-size(24px, 18px, 1px, 15px)
+  float: right
+  &:active, &:link, &:visited
+    color: white
+
+
+.friend_list
+  margin: 3px
+  span
+    padding: 1px 2px
