@@ -2,6 +2,7 @@ class Question
   include MongoMapper::Document
   include MongoMapperExt::Filter
   include MongoMapperExt::Slugizer
+  include Support::Versioneable
 
   ensure_index :tags
   ensure_index :language
@@ -22,6 +23,7 @@ class Question
 
   key :banned, Boolean, :default => false
   key :answered, Boolean, :default => false
+  key :wiki, Boolean, :default => false
   key :language, String, :default => "en"
 
   key :tags, Array, :default => []
@@ -39,6 +41,9 @@ class Question
 
   key :watchers, Array
 
+  key :updated_by_id, String
+  belongs_to :updated_by, :class_name => "User"
+
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
@@ -51,6 +56,8 @@ class Question
   validates_length_of       :title,    :within => 6..100
   validates_length_of       :body,     :minimum => 6, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { !tags.empty? }
+
+  versioneable_keys :title, :body, :tags
   filterable_keys :title, :body
 
   before_save :update_activity_at

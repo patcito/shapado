@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:new, :index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update]
+  before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
   before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite]
   before_filter :set_active_tag
 
@@ -13,6 +13,31 @@ class QuestionsController < ApplicationController
           :unanswered => [[:newest, "created_at desc"], [:votes, "votes_average desc"], [:mytags, "created_at desc"]],
           :show => [[:votes, "votes_average desc"], [:oldest, "created_at asc"], [:newest, "created_at desc"]]
   helper :votes
+
+
+  helper :votes
+
+  def history
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @question.versions.to_json }
+    end
+  end
+
+
+  def rollback
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    if @question.rollback!(params[:version].to_i)
+      flash[:notice] = t(:flash_notice, :scope => "questions.update")
+    end
+
+    respond_to do |format|
+      format.html { redirect_to history_question_path(current_languages, @question) }
+    end
+  end
 
   # GET /questions
   # GET /questions.xml
@@ -163,6 +188,7 @@ class QuestionsController < ApplicationController
   def update
     respond_to do |format|
       @question.safe_update(%w[title body language tags], params[:question])
+      @question.updated_by = current_user
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(current_languages,@question)) }

@@ -68,6 +68,12 @@ en:
     move_to:
       success:      "question moved to {{group}}"
       group_dont_exists: "the group {{group}} don't exists"
+    history:
+      title: "history ({{count}})"
+      current_version: current version
+      previous_versions: previous versions
+      version: version
+      set_as_current: set as current
     shared:
       flag: flag
     model:
