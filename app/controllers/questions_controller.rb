@@ -232,6 +232,13 @@ class QuestionsController < ApplicationController
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }
       else
+        @tag_cloud = Question.tag_cloud(:_id => @question.id)
+        options = {:per_page => 25, :page => params[:page] || 1,
+                   :order => current_order, :banned => false}
+        options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
+        @answers = @question.answers.paginate(options)
+        @answer = Answer.new
+
         format.html { render :action => "show" }
         format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
@@ -258,6 +265,13 @@ class QuestionsController < ApplicationController
         format.html { redirect_to question_path(current_languages, @question) }
         format.json  { head :ok }
       else
+        @tag_cloud = Question.tag_cloud(:_id => @question.id)
+        options = {:per_page => 25, :page => params[:page] || 1,
+                   :order => current_order, :banned => false}
+        options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
+        @answers = @question.answers.paginate(options)
+        @answer = Answer.new
+
         format.html { render :action => "show" }
         format.json  { render :json => @question.errors, :status => :unprocessable_entity }
       end
