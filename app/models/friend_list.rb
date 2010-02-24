@@ -7,5 +7,5 @@ class FriendList
   many :followers, :in => :follower_ids, :class_name => "User"
 
   key :following_ids, Array
-  many :following, :in => :followers_ids, :class_name => "User"
+  many :following, :in => :following_ids, :class_name => "User"
 end

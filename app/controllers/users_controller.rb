@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :login_required, :only => [:edit, :update]
+  before_filter :login_required, :only => [:edit, :update, :follow]
   tabs :default => :users
   def index
     set_page_title(t("users.index.title"))
@@ -102,6 +102,17 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html {redirect_to questions_path(current_languages)}
+    end
+  end
+
+  def follow
+    @user = User.find_by_login_or_id(params[:id])
+    current_user.add_friend(@user)
+
+    respond_to do |format|
+      format.html do
+        redirect_to user_path(@user)
+      end
     end
   end
 

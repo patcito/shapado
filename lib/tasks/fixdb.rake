@@ -7,7 +7,7 @@ namespace :fixdb do
   task :friends => :environment do
     User.all.each do |user|
       user.send(:create_friend_list)
-      user.save(false)
+      user.save(:validate => false)
     end
   end
 end

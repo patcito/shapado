@@ -48,8 +48,8 @@ class User
   has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
   has_many :favorites, :class_name => "Favorite", :foreign_key => "user_id"
 
-  key :friends_list_id, String
-  belongs_to :friends_list, :dependent => :destroy
+  key :friend_list_id, String
+  belongs_to :friend_list, :dependent => :destroy
 
   before_create :create_friend_list
 
