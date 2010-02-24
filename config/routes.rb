@@ -30,6 +30,8 @@ ActionController::Routing::Routes.draw do |map|
                                             :unfavorite => :any,
                                             :watch => :any,
                                             :unwatch => :any,
+                                            :history => :get,
+                                            :rollback => :put,
                                             :move => :get,
                                             :move_to => :put} do |questions|
         questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}

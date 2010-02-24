@@ -20,7 +20,7 @@ module Versioneable
           self.send("#{key}=", value.first)
         end
         self.updated_by_id = version.user_id
-        self.updated_at = version.updated_at
+        self.updated_at = version.date
       end
 
       @rolling_back = true

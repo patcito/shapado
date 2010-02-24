@@ -51,6 +51,9 @@
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
         =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
+        -if @question.versions.count > 0
+          = link_to t(".history", :default => "history"), history_question_path(current_languages, @question)
+
         -if current_user.mod_of?(@question.group)
           %br
           = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
