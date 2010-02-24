@@ -25,7 +25,7 @@ class UserStat
                              {:$set => {"last_activity_at.#{group.id}" => day}},
                               :upsert => true)
       if last_day
-        if last_day == day.yesterday
+        if last_day.utc == day.yesterday
           self.collection.update({:_id => self._id},
                                  {:$inc => {"activity_days.#{group.id}" => 1}},
                                   :upsert => true)

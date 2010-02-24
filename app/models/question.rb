@@ -78,6 +78,10 @@ class Question
     self.database.eval("function(a,b) { return tag_cloud(a,b); }", conditions, limit)
   end
 
+  def self.find_tags(regex, limit = 30)
+    self.database.eval("function(a,b) { return find_tags(a,b); }", regex, limit)
+  end
+
   def self.related_questions(question, opts = {})
     opts[:per_page] ||= 10
     opts[:page]     ||= 1
