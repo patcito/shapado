@@ -308,12 +308,21 @@ class User
     FriendList.push_uniq(user.friend_list_id, :follower_ids => self.id)
   end
 
+  def remove_friend(user)
+    FriendList.pull(self.friend_list_id, :following_ids => user.id)
+    FriendList.pull(user.friend_list_id, :follower_ids => self.id)
+  end
+
   def followers
     self.friend_list.followers
   end
 
   def following
     self.friend_list.following
+  end
+
+  def following?(user)
+    self.friend_list(:select => [:following_ids]).following_ids.include?(user.id)
   end
 
   def method_missing(method, *args, &block)

@@ -10,7 +10,10 @@
       -if current_user == @user
         %div
           =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
-    = link_to "follow", follow_user_path(@user), :class => "follow_link", :method => :post
+    -if logged_in? && current_user.following?(@user)
+      =link_to "- unfollow", unfollow_user_path(@user), :class => "unfollow_link", :method => :post
+    -else
+      =link_to "+ follow", follow_user_path(@user), :class => "follow_link", :method => :post
     -if @user.bio.present?
       .user-info
         = auto_link(@user.bio)
