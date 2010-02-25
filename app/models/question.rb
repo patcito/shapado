@@ -53,8 +53,8 @@ class Question
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id
 
-  validates_length_of       :title,    :within => 6..100
-  validates_length_of       :body,     :minimum => 6, :allow_blank => true, :allow_nil => true
+  validates_length_of       :title,    :within => 5..100
+  validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { !tags.empty? }
 
   versioneable_keys :title, :body, :tags
@@ -221,12 +221,12 @@ class Question
   end
 
   def check_useful
-    if !self.title.blank? && (self.title.split.count < 6)
-      self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 5))
+    if !self.title.blank? && (self.title.split.count < 5)
+      self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 4))
     end
 
-    if !self.body.blank? && (self.body.split.count < 6)
-      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 5))
+    if !self.body.blank? && (self.body.split.count < 5)
+      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 4))
     end
   end
 
