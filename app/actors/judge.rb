@@ -14,16 +14,16 @@ module Actors
 
       if question.answer == answer && group.answers.count(:user_id => answer.user.id) == 1
         user_badges = answer.user.badges
-        answer.user.find_badge_on(group,"troubleshooter") || user_badges.create!(:token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
+        answer.user.find_badge_on(group,"troubleshooter") || create_badge(answer.user, group, :token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
       end
 
       if question.answer == answer && answer.votes_average >= 40
-        answer.user.find_badge_on(group,"guru") || user_badges.create!(:token => "guru", :type => "silver", :group => group, :source => answer)
+        answer.user.find_badge_on(group,"guru") || create_badge(answer.user, group, :token => "guru", :type => "silver", :group => group, :source => answer)
       end
 
       if question.answer == answer && answer.votes_average > 2
         user_badges = answer.user.badges
-        answer.user.find_badge_on(group,"tutor") || user_badges.create!(:token => "tutor", :type => "bronze", :group => group, :source => answer)
+        answer.user.find_badge_on(group,"tutor") || create_badge(answer.user, group, :token => "tutor", :type => "bronze", :group => group, :source => answer)
       end
 
       answer.user.stats.add_expert_tags(*question.tags)
@@ -60,7 +60,7 @@ module Actors
 
       if group.questions.count(:user_id => user.id) == 1
         user_badges = user.badges
-        user.find_badge_on(group, "inquirer") || user_badges.create!(:token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
+        user.find_badge_on(group, "inquirer") || create_badge(user, group, :token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
       end
     end
 
@@ -82,14 +82,14 @@ module Actors
 
       if vote.value == -1
         user_badges = user.badges
-        user.find_badge_on(group,"critic") || user_badges.create!(:token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
+        user.find_badge_on(group,"critic") || create_badge(user, group, :token => "critic", :type => "bronze", :group_id => group.id, :source => vote)
       else
         user_badges = user.badges
-        user.find_badge_on(group,"supporter") || user_badges.create!(:token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
+        user.find_badge_on(group,"supporter") || create_badge(user, group, :token => "supporter", :type => "bronze", :group_id => group.id, :source => vote)
       end
 
       if user.stats(:views_count).views_count >= 10000
-        user.find_badge_on(group,"popular_person") || user.badges.create!(:token => "popular_person", :type => "silver", :group_id => group.id)
+        user.find_badge_on(group,"popular_person") || create_badge(user, group, :token => "popular_person", :type => "silver", :group_id => group.id)
       end
 
       # users
@@ -98,23 +98,23 @@ module Actors
         vote_value = vuser.votes_up[group.id] ? vuser.votes_up[group.id] : 0
 
         if vote_value >= 100
-          vuser.find_badge_on(group,"effort_medal") || user_badges.create!(:token => "effort_medal", :type => "silver", :group_id => group.id, :source => vote)
+          vuser.find_badge_on(group,"effort_medal") || create_badge(vuser, group, :token => "effort_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
         if vote_value >= 200
-          vuser.find_badge_on(group,"merit_medal") || user_badges.create!(:token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote)
+          vuser.find_badge_on(group,"merit_medal") || create_badge(vuser, group, :token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
         if vote_value >= 300
-          vuser.find_badge_on(group,"service_medal") || user_badges.create!(:token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
+          vuser.find_badge_on(group,"service_medal") || create_badge(vuser, group, :token => "service_medal", :type => "silver", :group_id => group.id, :source => vote)
         end
 
         if vote_value >= 500 && vuser.votes_down <= 10
-          vuser.find_badge_on(group,"popstar") || user_badges.create!(:token => "popstar", :group_id => group.id, :source => vote)
+          vuser.find_badge_on(group,"popstar") || create_badge(vuser, group, :token => "popstar", :group_id => group.id, :source => vote)
         end
 
         if vote_value >= 1000 && vuser.votes_down <= 10
-          vuser.find_badge_on(group,"rockstar") || user_badges.create!(:token => "rockstar", :group_id => group.id, :source => vote)
+          vuser.find_badge_on(group,"rockstar") || create_badge(vuser, group, :token => "rockstar", :group_id => group.id, :source => vote)
         end
       end
 
@@ -123,11 +123,11 @@ module Actors
         user_badges = vuser.badges
 
         if vote.value == 1
-          vuser.find_badge_on(group, "student") || user_badges.create!(:token => "student", :group_id => group.id, :source => voteable)
+          vuser.find_badge_on(group, "student") || create_badge(vuser, group, :token => "student", :group_id => group.id, :source => voteable)
         end
 
         if voteable.votes_average >= 10
-          user_badges.first( :token => "good_question", :source_id => voteable.id, :group_id => group.id) || user_badges.create!(:token => "good_question", :group_id => group.id, :source => voteable)
+          user_badges.first( :token => "good_question", :source_id => voteable.id, :group_id => group.id) || create_badge(vuser, group, :token => "good_question", :group_id => group.id, :source => voteable)
         end
       end
 
@@ -136,7 +136,7 @@ module Actors
         user_badges = vuser.badges
 
         if voteable.votes_average >= 10
-          user_badges.first(:token => "good_answer", :group_id => group.id, :source_id => voteable.id) || user_badges.create!(:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
+          user_badges.first(:token => "good_answer", :group_id => group.id, :source_id => voteable.id) || create_badge(vuser, group, :token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable)
         end
 
         if vote.value == 1
@@ -161,7 +161,7 @@ module Actors
             end
 
             if badge_type && vuser.find_badge_on(group, tag, :type => badge_type).nil?
-              vuser.badges.create!(:token => tag, :type => badge_type, :group_id => group.id, :source => voteable, :for_tag => true)
+              create_badge(vuser, group, :token => tag, :type => badge_type, :group_id => group.id, :source => voteable, :for_tag => true)
             end
           end
         end
@@ -176,11 +176,11 @@ module Actors
 
       days = user.stats(:activity_days).activity_days[group_id]
       if days > 8 && user.find_badge_on(group, "shapado").nil?
-        user.badges.create!(:token => "shapado", :group_id => group_id)
+        create_badge(user, group, :token => "shapado", :group_id => group_id)
       elsif days > 20 && user.find_badge_on(group, "addict").nil?
-        user.badges.create!(:token => "addict", :group_id => group_id)
+        create_badge(user, group, :token => "addict", :group_id => group_id)
       elsif days > 100 && user.find_badge_on(group, "fanatic").nil?
-        user.badges.create!(:token => "fanatic", :group_id => group_id)
+        create_badge(user, group, :token => "fanatic", :group_id => group_id)
       end
     end
 
@@ -189,7 +189,7 @@ module Actors
       answer = Answer.find(payload.first)
       user = answer.updated_by
 
-      user.find_badge_on(answer.group, "editor") || user.badges.create!(:token => "editor", :group_id => answer.group_id)
+      user.find_badge_on(answer.group, "editor") || create_badge(user, answer.group, :token => "editor", :group_id => answer.group_id)
     end
 
     expose :on_comment
@@ -201,7 +201,7 @@ module Actors
       user = comment.user
 
       if user.comments.count(:group_id => comment.group_id, :_type => {:$ne => "Answer"}) >= 10
-        user.find_badge_on(group, "commentator") || user.badges.create!(:token => "commentator", :group_id => group.id, :source => comment)
+        user.find_badge_on(group, "commentator") || create_badge(user, group, :token => "commentator", :group_id => group.id, :source => comment)
       end
     end
 
@@ -212,9 +212,17 @@ module Actors
       group = question.group
       if question.favorites_count >= 25 &&
           user.badges.find_badge_on(group, "famous_question", :source_id => question.id).nil?
-        user.badges.create!(:token => "famous_question",
-                            :group_id => group.id,
-                            :source => question)
+        create_badge(user, group, :token => "famous_question",
+                                  :group_id => group.id,
+                                  :source => question)
+      end
+    end
+
+    private
+    def create_badge(user, group, opts)
+      badge = user.badges.create!(opts)
+      if !badge.new? && !user.email.blank?
+        Notifier.deliver_earned_badge(user, group, badge)
       end
     end
   end

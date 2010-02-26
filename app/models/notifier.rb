@@ -60,6 +60,7 @@ class Notifier < ActionMailer::Base
     subject "You have earned a badge on #{group.name}!"
     sent_on Time.now
     body :user => user, :group => group, :badge => badge
+    content_type    "multipart/alternative"
   end
 
   protected
