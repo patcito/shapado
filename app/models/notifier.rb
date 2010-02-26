@@ -49,9 +49,17 @@ class Notifier < ActionMailer::Base
   def follow(user, followed)
     recipients followed.email
     from "Shapado <#{AppConfig.notification_email}>"
-    subject "#{user.login} is now following you on Shapado"
+    subject "#{user.login} is now following you on #{AppConfig.application_name}"
     sent_on Time.now
     body :user => user, :followed => followed
+  end
+
+  def earned_badge(user, group, badge)
+    recipients user.email
+    from "Shapado <#{AppConfig.notification_email}>"
+    subject "You have earned a badge on #{group.name}!"
+    sent_on Time.now
+    body :user => user, :group => group, :badge => badge
   end
 
   protected

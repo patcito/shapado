@@ -1,0 +1,10 @@
+-link = url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
+
+== Hi #{@user.login}
+
+== You have earned a #{@badge.name} badge on #{AppConfig.application_name}
+
+= render :partial => "badges/badge", :object => @badge, :locals => {:hide_user => true}
+
+You can see all your badges on your
+=link_to "user page", link
