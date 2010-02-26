@@ -20,7 +20,9 @@ class WidgetsController < ApplicationController
 
     @widget.group = @group
     @widgets = @group.widgets.all(:order => "position asc")
-    @widget.position = @widgets.last.position+1 # FIXME: it's not safe
+    if  @widgets && !@widgets.empty?
+      @widget.position = @widgets.last.position+1
+    end
 
     respond_to do |format|
       if @widget.save
