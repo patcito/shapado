@@ -30,7 +30,8 @@ class UserStat
                                  {:$inc => {"activity_days.#{group.id}" => 1}},
                                   :upsert => true)
           Magent.push("actors.judge", :on_activity, group.id, self.user_id)
-        elsif !last_day.today?
+        elsif !last_day.utc.today?
+          Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
           reset_activity_days!(group)
         end
       end
