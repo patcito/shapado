@@ -7,7 +7,6 @@ class Admin::ModerateController < ApplicationController
 
     options = {:order => "flags_count desc",
                       :conditions => {"flags_count" => {:$gt => 0}},
-                      "banned" => false,
                       :group_id => current_group.id}
 
     case @active_subtab
