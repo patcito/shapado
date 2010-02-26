@@ -45,7 +45,8 @@ class UsersController < ApplicationController
     raise PageNotFound unless @user
     @questions = @user.questions.paginate(:page=>params[:questions_page],
                                           :per_page => 10,
-                                          :group_id => current_group.id)
+                                          :group_id => current_group.id,
+                                          :banned => false)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
                                       :group_id => current_group.id,
                                       :per_page => 10)
