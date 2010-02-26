@@ -94,9 +94,24 @@ class QuestionsController < ApplicationController
   end
 
   def tags
-    set_page_title(t("layouts.application.tags"))
-    @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
-                    merge(language_conditions.merge(language_conditions)))
+    respond_to do |format|
+      format.html do
+        set_page_title(t("layouts.application.tags"))
+        @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
+                        merge(language_conditions.merge(language_conditions)))
+      end
+      format.js do
+        result = []
+        if q =params[:prefix]
+          result = Question.find_tags(/^#{q}/,
+                             :group_id => current_group.id)
+          p result.inspect
+        end
+        p result.join(",")
+
+        render :text => result.join("\n")
+      end
+    end
   end
 
   # GET /questions/1

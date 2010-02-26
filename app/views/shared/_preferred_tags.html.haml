@@ -11,5 +11,5 @@
     - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
       = hidden_field_tag :language, current_languages
       = hidden_field_tag :opt, "add"
-      = text_field_tag "tags", "", :class => "text_field", :style => "width: 70%"
+      = text_field_tag "tags", "", :class => "text_field", :style => "width: 70%", :id => "autocomplete_for_tags"
       = submit_tag t("scaffold.add"), :class => "button"
