@@ -211,8 +211,8 @@ module Actors
       user = question.user
       group = question.group
       if question.favorites_count >= 25 &&
-          user.badges.find_badge_on(group, "famous_question", :source_id => question.id).nil?
-        create_badge(user, group, :token => "famous_question",
+          user.badges.find_badge_on(group, "favorite_question", :source_id => question.id).nil?
+        create_badge(user, group, :token => "favorite_question",
                                   :group_id => group.id,
                                   :source => question)
       end
