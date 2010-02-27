@@ -12,6 +12,8 @@ en:
         subject: "You have earned a badge on {{group}}!"
       favorited:
         subject: "{{login}} added your question as a favorite!"
+      report:
+        subject: "report for the group {{group}} of {{app}}"
 
 
 

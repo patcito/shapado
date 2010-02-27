@@ -12,4 +12,6 @@ es-AR:
         subject: "Has ganado una insignia en {{group}}!"
       favorited:
         subject: "{{login}} puso tu pregunta como favorita!"
+      report:
+        subject: "reporte para el grupo {{group}} de {{app}}"
 
