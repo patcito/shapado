@@ -9,6 +9,8 @@ class Vote
   key :user_id, String, :index => true
   belongs_to :user
 
+  key :user_ip, String
+
   key :group_id, String, :required => true, :index => true
   belongs_to :group
 

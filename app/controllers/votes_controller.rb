@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
   before_filter :check_permissions
 
+  # TODO: refactor
   def create
     vote = Vote.new
     vote_type = ""
@@ -16,6 +17,7 @@ class VotesController < ApplicationController
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
     vote.group = vote.voteable.group
+    vote.user_ip = request.remote_ip
 
     voted = false
     if vote.voteable.user != current_user
