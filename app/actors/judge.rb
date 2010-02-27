@@ -52,6 +52,23 @@ module Actors
       end
     end
 
+    expose :on_view_question
+    def on_view_question(payload)
+      question = Question.find(payload.first)
+      user = question.user
+      group = question.group
+
+      views = question.views_count
+      opts = {:source_id => question.id, :source_type => "Question"}
+      if views > 1000 && user.find_badge_on(group, "popular_question", opts).nil?
+        create_badge(user, group, :token => "popular_question", :group_id => group.id, :source => question)
+      elsif views > 2500 && user.find_badge_on(group, "notable_question", opts).nil?
+        create_badge(user, group, :token => "notable_question", :group_id => group.id, :source => question)
+      elsif views > 10000 && user.find_badge_on(group, "famous_question", opts).nil?
+        create_badge(user, group, :token => "famous_question", :group_id => group.id, :source => question)
+      end
+    end
+
     expose :on_ask_question
     def on_ask_question(payload)
       question = Question.find(payload.first)
@@ -73,6 +90,7 @@ module Actors
       end
     end
 
+    # TODO: awful, refactor!
     expose :on_vote
     def on_vote(payload)
       vote = Vote.find(payload.first)
