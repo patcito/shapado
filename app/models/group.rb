@@ -66,6 +66,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   has_many :badges, :dependent => :destroy
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
+  has_many :votes, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
   has_many :comments, :as => "commentable", :dependent => :destroy

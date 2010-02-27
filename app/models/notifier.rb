@@ -72,5 +72,15 @@ class Notifier < ActionMailer::Base
     content_type    "multipart/alternative"
   end
 
+  def report(user, report)
+    recipients user.email
+    from "Shapado <#{AppConfig.notification_email}>"
+    subject I18n.t("mailer.notifications.report.subject")
+    sent_on Time.now
+
+    body :user => user, :report => report
+    content_type    "multipart/alternative"
+  end
+
   protected
 end

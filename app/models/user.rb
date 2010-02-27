@@ -26,7 +26,7 @@ class User
   key :preferred_languages,       Array
 
   key :notification_opts,         Hash, :default => {"new_answer"=>"1", "give_advice" => "1",
-                                                     "activities" => "1"}
+                                                     "activities" => "1", "reports" => "1"}
 
   key :language,                  String, :default => "en"
   key :timezone,                  String

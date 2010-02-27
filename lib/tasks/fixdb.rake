@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:friends", :activity_notifs] do
+task :fixall => [:environment, "fixdb:friends", "fixdb:activity_notifs"] do
 end
 
 namespace :fixdb do
@@ -14,7 +14,7 @@ namespace :fixdb do
   desc "Notifications"
   task :activity_notifs => :environment do
     User.find_each(:fields => [:_id]) do |user|
-      User.set(user.id, {"notification_opts.activities" => "1"})
+      User.set(user.id, {"notification_opts.activities" => "1", "notification_opts.reports" => "1"})
     end
   end
 end
