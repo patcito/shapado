@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
+
   $("#feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
   $('#feedbackform .cancel-feedback').click(function(){
     $("#feedbackform").dialog('close');
@@ -41,6 +42,10 @@ function showMessage(message, t) {
 }
 
 function setupEditor() {
+  var editor = $("#markdown_editor");
+  if(!editor || editor.length == 0)
+    return;
+
   var converter = new Showdown.converter;
   var timer_id = null;
 
@@ -56,7 +61,7 @@ function setupEditor() {
 
   }
 
-  var textarea = $("#markdown_editor").TextArea({
+  var textarea = editor.TextArea({
     change: converter_callback
   });
 
@@ -147,19 +152,4 @@ function setupEditor() {
   },{
     id: 'markdown_help_button'
   });
-
-// make dropdown work with IE http://htmldog.com/articles/suckerfish/dropdowns/
-  sfHover = function() {
-    var sfEls = document.getElementById("nav").getElementsByTagName("LI");
-    for (var i=0; i<sfEls.length; i++) {
-      sfEls[i].onmouseover=function() {
-        this.className+=" sfhover";
-      }
-      sfEls[i].onmouseout=function() {
-        this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
-      }
-    }
-  }
-  if (window.attachEvent) window.attachEvent("onload", sfHover);
 }
-
