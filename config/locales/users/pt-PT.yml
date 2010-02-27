@@ -21,6 +21,7 @@ pt-PT:
       notifications: notificações
       new_answer_notification: receber notificações via email de novas respostas
       give_advice_notification: receive email notifications about questions in your field of expertise
+      activities_notification: receive email notifications about system activities such as earned badges, new followers, etc.
       avatar_tip: "change your profile image using gravatar"
     create:
       flash_notice: "obrigado por registar-se!"
