@@ -312,7 +312,9 @@ class QuestionsController < ApplicationController
 
     @question.add_watcher(current_user)
 
-    Notifier.deliver_favorited(current_user, @question.group, @question)
+    if current_user.notification_opts["activities"] == "1"
+      Notifier.deliver_favorited(current_user, @question.group, @question)
+    end
 
     respond_to do |format|
       if @favorite.save

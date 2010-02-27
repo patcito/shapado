@@ -221,7 +221,7 @@ module Actors
     private
     def create_badge(user, group, opts)
       badge = user.badges.create!(opts)
-      if !badge.new? && !user.email.blank?
+      if !badge.new? && !user.email.blank? && user.notification_opts["activities"] == "1"
         Notifier.deliver_earned_badge(user, group, badge)
       end
     end
