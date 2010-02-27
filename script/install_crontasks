@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'cronedit'
+
+APP_ROOT = File.expand_path(File.dirname(__FILE__) + "/../")
+
+daily_report = "#{APP_ROOT}/script/daily_report"
+CronEdit::Crontab.Add  'daily_report', {:hour => "2", :minute=> "50", :command => daily_report}
