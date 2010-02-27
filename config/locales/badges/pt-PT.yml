@@ -20,7 +20,14 @@
       service_medal:
         description: 300 positive votes
       famous_question:
+        name: famous question
         description: asked a question with 10000 views
+      notable_question:
+        name: notable question
+        description: asked a question with 2500 views
+      popular_question:
+        name: poular question
+        description: asked a question with 1000 views
       popular_person:
         description: your profile is visited 10000 times
       guru:

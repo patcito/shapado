@@ -23,7 +23,13 @@ es-AR:
         description: recibir 300 votos positivos
       famous_question:
         name: pregunta famosa
-        description: responde una pregunta con 10000 visitas
+        description: hace una pregunta con 10000 visitas
+      notable_question:
+        name: pregunta notable
+        description: hace una pregunta con 2500 visitas
+      popular_question:
+        name: pregunta popular
+        description: hace una pregunta con 1000 visitas
       popular_person:
         name: persona popular
         description: que tu perfil sea visitado 10000 veces

@@ -24,6 +24,12 @@ fr:
       famous_question:
         name: Question renommée
         description: "Question ayant reçu 10000 visites"
+      notable_question:
+        name: notable question
+        description: "Question ayant reçu 2500 visites"
+      popular_question:
+        name: popular question
+        description: "Question ayant reçu 1000 visites"
       popular_person:
         name: personne populaire
         description: "Votre profil est visité 10000 fois"
