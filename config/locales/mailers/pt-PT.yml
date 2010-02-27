@@ -6,3 +6,10 @@ pt-PT:
         subject_other: "{{login}} respondeu à pergunta {{title}}"
       give_advice:
         subject: "we need your advice: {{question_title}}"
+      follow:
+        subject: "{{login}} is now following you on {{app}}"
+      earned_badge:
+        subject: "You have earned a badge on {{group}}!"
+      favorited:
+        subject: "{{login}} added your question as a favorite!"
+

@@ -6,3 +6,10 @@ es-AR:
         subject_other: "{{login}} respondio la pregunta {{title}}"
       give_advice:
         subject: "necesitamos tu ayuda: {{question_title}}"
+      follow:
+        subject: "{{login}} ahora te esta siguiendo en {{app}}"
+      earned_badge:
+        subject: "Has ganado una insignia en {{group}}!"
+      favorited:
+        subject: "{{login}} puso tu pregunta como favorita!"
+
