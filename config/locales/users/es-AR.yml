@@ -22,6 +22,7 @@
       new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
       give_advice_notification:  obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
       activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
+      reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
       avatar_tip: "cambia tu imagen del perfil usando gravatar"
     create:
       flash_notice: "gracias por registrarse!"
