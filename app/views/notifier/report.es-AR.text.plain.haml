@@ -1,0 +1,20 @@
+-link = url_for(:host => @report.group.domain, :controller => "welcome", :action => "index")
+
+== Hola #{@user.login},
+==
+==
+== reporte para el groupo #{@report.group.name}
+==
+
+== desde el #{@report.since}
+==
+==
+== #{@report.questions} preguntas han sido creadas
+== #{@report.answers} respuestas han sido creadas
+== #{@report.votes} votos has sido efectuados
+== #{@report.badges} insignas han sido reconpensadas
+==
+==
+== La cuenta tiene #{@report.users} usuarios.
+
+== Visita el  grupo en #{link}

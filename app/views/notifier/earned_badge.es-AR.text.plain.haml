@@ -1,12 +1,12 @@
 -link = url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
 
-== Hi #{@user.login}
+== Hola #{@user.login}
 
-== You have earned a #{@badge.name} badge on #{AppConfig.application_name}
+== Has ganado una insigna #{@badge.name} en #{AppConfig.application_name}
 
-Badge description:
+La descripcion de la insigna:
 
 = @badge.description
 
-You can see all your badges on your user page
+Puedes ver todas tus insignas en tu pagina de usuario
 =link

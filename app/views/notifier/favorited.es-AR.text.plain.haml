@@ -1,16 +1,16 @@
 -link = url_for(:host => @group.domain, :controller => "questions", :action => "show", :id => @question.to_param)
 -user_link= url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
 
-== Hi #{@question.user.login},
+== Hola #{@question.user.login},
 ==
 ==
 
-== #{@user.login} has added your question as a favorite on #{@group.name}
+== #{@user.login} agrego tu pregunta como favorita en #{@group.name}
 ==
 
-The text of your question:
+El texto de tu pregunta:
 ==...     #{@question.title}
 
 ==
-you can see it here:
+La puedes ver aqui:
 =link
