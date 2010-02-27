@@ -21,11 +21,11 @@ fr:
       notifications: notifications
       new_answer_notification: obtenir des notifications via email de nouvelles réponses
       give_advice_notification:  recevoir des notifications via courrier électronique sur les questions liées à votre champs d'expertise
-      activities_notification: receive email notifications about system activities such as earned badges, new followers, etc.
+      activities_notification: recevoir des notifications via courrier électronique sur les activités système telles que les insignes gagnées, les nouveaux suiveurs, etc.
       reports_notification: receive a report with latest group activity (only for group admins)
-      avatar_tip: "change your profile image using gravatar"
+      avatar_tip: "changer votre l'image de votre profil en utilisant gravatar"
     create:
-      flash_notice: "merci pour vous avoir enregistrer!"
+      flash_notice: "merci de vous avoir enregistrer!"
       flash_error:  "désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
     messages:
       errors:
@@ -34,7 +34,7 @@ fr:
       vote_up: voter positif
       vote_down: voter négatif
       flag: flag
-      edit_others_posts: "edit other's posts"
+      edit_others_posts: "modifier les postes des autres"
   activerecord:
     models:
       users: utilisateurs

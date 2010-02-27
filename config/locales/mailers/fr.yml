@@ -7,11 +7,11 @@ fr:
       give_advice:
         subject: "nous avons besoin de votre aide: {{question_title}}"
       follow:
-        subject: "{{login}} is now following you on {{app}}"
+        subject: "{{login}} vous suit sur {{app}}"
       earned_badge:
-        subject: "You have earned a badge on {{group}}!"
+        subject: "Vous avez gagné une insigne sur {{group}}!"
       favorited:
-        subject: "{{login}} added your question as a favorite!"
+        subject: "{{login}} a ajouté votre question comme favorite!"
       report:
-        subject: "report for the group {{group}} of {{app}}"
+        subject: "rapport pour le groupe {{group}} de {{app}}"
 
