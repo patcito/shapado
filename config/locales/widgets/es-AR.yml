@@ -9,6 +9,9 @@ es-AR:
     groups:
       title: grupos recientes
       description: "este widget muestra los últimos grupos registrados"
+    top_groups:
+      title: ranking de grupos
+      description: "este widget muestra los grupos mas activos"
     top_users:
       title: ranking de usuarios
       description: "este widget muestra ranking de usuarios"

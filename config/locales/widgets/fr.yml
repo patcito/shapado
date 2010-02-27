@@ -9,6 +9,9 @@ fr:
     groups:
       title: groupes récents
       description: "ce widget montre les derniers groupes en date"
+    top_groups:
+      title: top 5 groups
+      description: "this widget displays the top five groups"
     top_users:
       title: top 5 utilisateurs
       description: ce widget montre le top 5 des utilisateurs

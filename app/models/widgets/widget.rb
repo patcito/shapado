@@ -10,7 +10,7 @@ class Widget
   key :group_id, String, :index => true
   belongs_to :group
 
-  TYPES = %w[UsersWidget BadgesWidget GroupsWidget TopUsersWidget]
+  TYPES = %w[UsersWidget BadgesWidget GroupsWidget TopUsersWidget TopGroupsWidget]
   validates_uniqueness_of :name, :scope => :group_id
 
   def partial_name

@@ -129,6 +129,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     self._head[I18n.locale.to_s.split("-").first] || ""
   end
 
+  # FIXME: View code on the model IS NOT cool, move it to a helper
   def context_panel_ads
     if has_custom_ads == true
       ads = []
@@ -146,6 +147,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
       <!--Ad Bard, end -->"
   end
 
+  # FIXME: View code on the model IS NOT cool, move it to a helper
   def header_ads
     if has_custom_ads
       ads = []
@@ -156,6 +158,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     end
   end
 
+  # FIXME: View code on the model IS NOT cool, move it to a helper
   def content_ads
     if has_custom_ads
       ads = []
@@ -166,6 +169,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     end
   end
 
+  # FIXME: View code on the model IS NOT cool, move it to a helper
   def footer_ads
     if has_custom_ads
       ads = []
