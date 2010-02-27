@@ -312,6 +312,8 @@ class QuestionsController < ApplicationController
 
     @question.add_watcher(current_user)
 
+    Notifier.deliver_favorited(current_user, @question.group, @question)
+
     respond_to do |format|
       if @favorite.save
         @question.add_favorite!(@favorite, current_user)

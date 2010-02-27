@@ -63,5 +63,14 @@ class Notifier < ActionMailer::Base
     content_type    "multipart/alternative"
   end
 
+  def favorited(user, group, question)
+    recipients question.user.email
+    from "Shapado <#{AppConfig.notification_email}>"
+    subject "#{user.login} added your question as a favorite!"
+    sent_on Time.now
+    body :user => user, :group => group, :question => question
+    content_type    "multipart/alternative"
+  end
+
   protected
 end
