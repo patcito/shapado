@@ -105,10 +105,7 @@ class QuestionsController < ApplicationController
         if q =params[:prefix]
           result = Question.find_tags(/^#{q}/,
                              :group_id => current_group.id)
-          p result.inspect
         end
-        p result.join(",")
-
         render :text => result.join("\n")
       end
     end

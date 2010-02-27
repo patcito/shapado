@@ -73,10 +73,17 @@ class AnswersController < ApplicationController
           flash[:notice] = t(:flash_notice, :scope => "answers.create")
           format.html{redirect_to question_path(current_languages, @question)}
           format.json { render :json => @answer.to_json(:except => %w[_keywords]) }
+          format.js do
+            render(:json => {:success => true, :message => flash[:notice],
+              :html => render_to_string(:partial => "questions/answer",
+                                        :object => @answer,
+                                        :locals => {:question => @question})}.to_json)
+          end
         else
           flash[:error] = t(:flash_error, :scope => "answers.create")
           format.html{redirect_to question_path(current_languages, @question)}
           format.json { render :json => @answer.errors, :status => :unprocessable_entity }
+          format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
         end
       end
     end

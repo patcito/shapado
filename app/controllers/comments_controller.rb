@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.group = current_group
 
-    if @comment.save
+    if saved = @comment.save
       current_user.on_activity(:comment_question, current_group)
       Magent.push("actors.judge", :on_comment, @comment.id)
       flash[:notice] = t("comments.create.flash_notice")
@@ -19,8 +19,20 @@ class CommentsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html{redirect_to params[:source]}
-      format.json { render :json => @comment.to_json, :status => :created}
+      if saved
+        format.html {redirect_to params[:source]}
+        format.json {render :json => @comment.to_json, :status => :created}
+        format.js do
+          render(:json => {:success => true, :message => flash[:notice],
+            :html => render_to_string(:partial => "comments/comment",
+                                      :object => @comment,
+                                      :locals => {:source => params[:source], :mini => true})}.to_json)
+        end
+      else
+        format.html {redirect_to params[:source]}
+        format.json {render :json => @comment.errors.to_json, :status => :unprocessable_entity }
+        format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
+      end
     end
   end
 
@@ -60,7 +72,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(params[:source]) }
-      format.xml  { head :ok }
+      format.json { head :ok }
     end
   end
 
@@ -68,8 +80,11 @@ class CommentsController < ApplicationController
   def check_permissions
     @comment = Comment.find!(params[:id])
     if !(current_user.owner_of?(current_group) || current_user.can_modify?(@comment))
-      flash[:error] = t("global.permission_denied")
-      redirect_to params[:source]
+      format.html do
+        flash[:error] = t("global.permission_denied")
+        redirect_to params[:source]
+      end
+      format.json { render :json => {:message => t("global.permission_denied")}, :status => :unprocessable_entity }
     end
   end
 end

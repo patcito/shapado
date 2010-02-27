@@ -1,7 +1,7 @@
 
 -solution = question.answered && question.answer_id == answer.id
 -source = question_path(current_languages,@question)
-.answer{:class => solution ? "solution" : ""}
+.answer.commentable{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
   #vote-col
     =vote_box(answer, question_path(current_languages, question))
@@ -55,7 +55,7 @@
           = link_to t(".history", :default => "history"), history_question_answer_path(current_languages, @question, answer)
       .clear
       .forms
-        -form_tag comments_path, :class => "form nestedAnswerForm"do
+        -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
           -@comment = Comment.new
           = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
           .group.navform
@@ -71,17 +71,5 @@
     / Nested Answers
     .children.comments
       -answer.comments.each do |comment|
-        .comment
-          %strong
-            = t("time.ago", :time => time_ago_in_words(comment.created_at))
-          =link_to comment.user.login, user_path(comment.user)
-          == #{t("comments.shared.said")}:
-          .markdown
-            = shapado_auto_link(markdown(comment.body))
-          .controls
-            .actions
-              -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
-                = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source), :class => "edit_comment"
-                = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
-          .clear
+        = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
   .clear

@@ -26,6 +26,54 @@ $(document).ready(function() {
     return false;
   });
 
+  $("form.mainAnswerForm .button").live("click", function(event) {
+    var form = $(this).parents("form");
+    var answers = $("#answers .block");
+    var button = $(this)
+
+    button.attr('disabled', true)
+    $.post(form.attr("action"), form.serialize()+"&format=js", function(data, textStatus, XMLHttpRequest) {
+      if(data.success) {
+        var answer = $(data.html)
+        answer.find("form.commentForm").hide();
+        answers.append(answer)
+        highlightEffect(answer)
+        showMessage(data.message, "notice")
+        button.attr('disabled', false)
+        form.find("textarea").text("");
+        form.find("#markdown_preview").html("");
+      } else {
+        button.attr('disabled', false)
+        showMessage(data.message, "error")
+      }
+    }, "json" );
+    return false;
+  });
+
+  $("form.commentForm .button").live("click", function(event) {
+    var form = $(this).parents("form");
+    var commentable = $(this).parents(".commentable");
+    var comments = commentable.find(".comments")
+    var button = $(this)
+
+    button.attr('disabled', true)
+    $.post(form.attr("action"), form.serialize()+"&format=js", function(data, textStatus, XMLHttpRequest) {
+      if(data.success) {
+        var comment = $(data.html)
+        comments.append(comment)
+        showMessage(data.message, "notice")
+        form.hide();
+        form.find("textarea").val("");
+        button.attr('disabled', false)
+        comment.fadeOut(400, function() {
+          comment.fadeIn(400)
+        });
+      } else {
+        showMessage(data.message, "error")
+      }
+    }, "json" );
+    return false;
+  });
 
   $(".edit_comment").live("click", function() {
     var comment = $(this).parents(".comment")
@@ -60,7 +108,6 @@ $(document).ready(function() {
           }, "json");
           return false
         });
-
       }
     });
     return false;

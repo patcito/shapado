@@ -41,6 +41,14 @@ function showMessage(message, t) {
   });
 }
 
+function highlightEffect(object) {
+  if(typeof object != "undefined") {
+    object.fadeOut(400, function() {
+      object.fadeIn(400)
+    });
+  }
+}
+
 function setupEditor() {
   var editor = $("#markdown_editor");
   if(!editor || editor.length == 0)
