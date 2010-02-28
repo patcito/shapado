@@ -12,8 +12,14 @@ class Export
   end
 
   def to_file(model, opts = {})
-    file = File.open("#{model.to_s.tableize}.json", "w")
-    export_model(model, file, opts)
-    file.close
+    File.open("#{model.to_s.tableize}.json", "w") do |file|
+      export_model(model, file, opts)
+    end
+  end
+
+  def to_zip(model, zf, opts = {})
+    zf.file.open("#{model.to_s.tableize}.json", "w") do |file|
+      export_model(model, file, opts)
+    end
   end
 end

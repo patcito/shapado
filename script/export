@@ -1,28 +1,80 @@
 #!/usr/bin/env ruby
 
+require 'optparse'
+
+options = {}
+optparser = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$0} [options] <group_id or domain>"
+
+  opts.on("-z", "--zip", "Perform a complete search") do |o|
+    options[:method] = :zip
+  end
+
+  opts.on_tail("-h", "--help", "Show this help message.") do
+    puts opts
+    exit
+  end
+end
+
+args = []
+begin
+  args = optparser.parse!
+  if args.empty?
+    raise StandardError, "Missing group id"
+  end
+rescue => e
+  $stderr.puts e
+  $stderr.puts optparser
+  exit 0
+end
+
 require File.dirname(__FILE__)+'/../config/environment'
 
-group = Group.find(ARGV.first) || Group.find_by_subdomain(ARGV.first)
-
-FileUtils.mkpath(group.subdomain)
-Dir.chdir(group.subdomain)
-
-$stderr.puts "Created #{File.expand_path(Dir.getwd)}"
-
+group = Group.find(args.first) || Group.find_by_subdomain(args.first)
 exporter = Export.new(group)
 time = Time.now
 
-exporter.to_file(Question)
-exporter.to_file(Answer)
-exporter.to_file(Comment)
-exporter.to_file(Vote, :except => [:_keywords, :user_ip])
-exporter.to_file(Badge)
-exporter.to_file(Member)
-exporter.to_file(Ad)
-exporter.to_file(Favorite)
-exporter.to_file(Widget)
-exporter.to_file(User, :selector => {"reputation.#{group.id}" => {:$exists => true}},
-                       :except => [:_keywords, :salt, :remember_token_expires_at, :crypted_password, :ip, :identity_url, :email, :default_subtab, :admin])
+if options[:method] == :zip
+  require 'zip/zipfilesystem'
+  require 'ftools'
+
+  filename = "#{group.subdomain}.zip"
+  File.unlink(filename) if File.exist?(filename)
+  Zip::ZipFile.open(filename, Zip::ZipFile::CREATE) do |zf|
+    zf.dir.mkdir(group.subdomain)
+    zf.dir.chdir(group.subdomain)
+
+    exporter.to_zip(Question, zf)
+    exporter.to_zip(Answer, zf)
+    exporter.to_zip(Comment, zf)
+    exporter.to_zip(Vote, zf, :except => [:_keywords, :user_ip])
+    exporter.to_zip(Badge, zf)
+    exporter.to_zip(Member, zf)
+    exporter.to_zip(Ad, zf)
+    exporter.to_zip(Favorite, zf)
+    exporter.to_zip(Widget, zf)
+    exporter.to_zip(User, zf, :selector => {"reputation.#{group.id}" => {:$exists => true}},
+                           :except => [:_keywords, :salt, :remember_token_expires_at, :crypted_password, :ip, :identity_url, :email, :default_subtab, :admin])
+  end
+else
+  FileUtils.mkpath(group.subdomain)
+  Dir.chdir(group.subdomain)
+
+  $stderr.puts "Created #{File.expand_path(Dir.getwd)}"
+
+  exporter.to_file(Question)
+  exporter.to_file(Answer)
+  exporter.to_file(Comment)
+  exporter.to_file(Vote, :except => [:_keywords, :user_ip])
+  exporter.to_file(Badge)
+  exporter.to_file(Member)
+  exporter.to_file(Ad)
+  exporter.to_file(Favorite)
+  exporter.to_file(Widget)
+  exporter.to_file(User, :selector => {"reputation.#{group.id}" => {:$exists => true}},
+                         :except => [:_keywords, :salt, :remember_token_expires_at, :crypted_password, :ip, :identity_url, :email, :default_subtab, :admin])
+end
 
 time = Time.now - time
 $stderr.puts "Exported #{group.name} in #{time} seconds"
+
