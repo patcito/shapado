@@ -238,19 +238,20 @@ module Actors
 
     expose :on_follow
     def on_follow(payload)
-      group = Group.find(payload.pop)
-      follower, followed = User.find(payload)
+      follower = User.find(payload.shift)
+      followed = User.find(payload.shift)
+      group = Group.find(payload.shift)
 
-      if follower.following_count < 5 && follower.find_badge_on(group, "friendly")
+      if follower.following_count < 5 && follower.find_badge_on(group, "friendly").nil?
         create_badge(follower, group, :token => "friendly",:group_id => group.id, :source => followed)
       end
 
       if followed.followers_count >= 10 && followed.find_badge_on(group, "interesting_person").nil?
-        create_badge(follower, group, :token => "interesting_person",:group_id => group.id)
+        create_badge(followed, group, :token => "interesting_person",:group_id => group.id)
       elsif followed.followers_count >= 50 && followed.find_badge_on(group, "popular_person").nil?
-        create_badge(follower, group, :token => "popular_person",:group_id => group.id)
+        create_badge(followed, group, :token => "popular_person",:group_id => group.id)
       elsif followed.followers_count >= 100 && followed.find_badge_on(group, "celebrity").nil?
-        create_badge(follower, group, :token => "celebrity",:group_id => group.id)
+        create_badge(followed, group, :token => "celebrity",:group_id => group.id)
       end
     end
 
