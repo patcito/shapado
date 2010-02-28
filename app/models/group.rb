@@ -219,6 +219,10 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     member
   end
 
+  def users
+    User.all("reputation.#{self.id}" => {:$exists => true})
+  end
+
   def pending?
     state == "pending"
   end
