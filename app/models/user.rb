@@ -243,6 +243,7 @@ class User
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
+      self.stats(:last_activity_at, :user_id).activity_on(group, Time.now)
     end
   end
 
