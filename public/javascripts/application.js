@@ -27,6 +27,10 @@ $(document).ready(function() {
   });
 })
 
+function manageAjaxError(XMLHttpRequest, textStatus, errorThrown) {
+  showMessage("sorry, something went wrong.", "error");
+}
+
 $(window).load(function() {
   prettyPrint();
 });

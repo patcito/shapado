@@ -32,21 +32,28 @@ $(document).ready(function() {
     var button = $(this)
 
     button.attr('disabled', true)
-    $.post(form.attr("action"), form.serialize()+"&format=js", function(data, textStatus, XMLHttpRequest) {
-      if(data.success) {
-        var answer = $(data.html)
-        answer.find("form.commentForm").hide();
-        answers.append(answer)
-        highlightEffect(answer)
-        showMessage(data.message, "notice")
-        button.attr('disabled', false)
-        form.find("textarea").text("");
-        form.find("#markdown_preview").html("");
-      } else {
-        button.attr('disabled', false)
-        showMessage(data.message, "error")
-      }
-    }, "json" );
+    $.ajax({ url: form.attr("action"),
+      data: form.serialize()+"&format=js",
+      dataType: "json",
+      type: "POST",
+      success: function(data, textStatus, XMLHttpRequest) {
+                  if(data.success) {
+                    var answer = $(data.html)
+                    answer.find("form.commentForm").hide();
+                    answers.append(answer)
+                    highlightEffect(answer)
+                    showMessage(data.message, "notice")
+                    form.find("textarea").text("");
+                    form.find("#markdown_preview").html("");
+                  } else {
+                    showMessage(data.message, "error")
+                  }
+                },
+       error: manageAjaxError,
+       complete: function(XMLHttpRequest, textStatus) {
+         button.attr('disabled', false)
+       }
+      });
     return false;
   });
 
@@ -57,27 +64,34 @@ $(document).ready(function() {
     var button = $(this)
 
     button.attr('disabled', true)
-    $.post(form.attr("action"), form.serialize()+"&format=js", function(data, textStatus, XMLHttpRequest) {
-      if(data.success) {
-        var comment = $(data.html)
-        comments.append(comment)
-        showMessage(data.message, "notice")
-        form.hide();
-        form.find("textarea").val("");
-        button.attr('disabled', false)
-        comment.fadeOut(400, function() {
-          comment.fadeIn(400)
-        });
-      } else {
-        showMessage(data.message, "error")
-      }
-    }, "json" );
+    $.ajax({ url: form.attr("action"),
+             data: form.serialize()+"&format=js",
+             dataType: "json",
+             type: "POST",
+             success: function(data, textStatus, XMLHttpRequest) {
+                          if(data.success) {
+                            var comment = $(data.html)
+                            comments.append(comment)
+                            highlightEffect(comment)
+                            showMessage(data.message, "notice")
+                            form.hide();
+                            form.find("textarea").val("");
+                          } else {
+                            showMessage(data.message, "error")
+                          }
+                      },
+             error: manageAjaxError,
+             complete: function(XMLHttpRequest, textStatus) {
+               button.attr('disabled', false)
+             }
+    });
     return false;
   });
 
   $(".edit_comment").live("click", function() {
     var comment = $(this).parents(".comment")
     var link = $(this)
+    link.hide()
     $.ajax({
       url: $(this).attr("href"),
       dataType: "json",
@@ -97,29 +111,38 @@ $(document).ready(function() {
 
         form.submit(function() {
           button.attr('disabled', true)
-          $.post(form.attr("action"), form.serialize(), function(data, textStatus) {
-            comment.find(".markdown p").html(data.body);
-            form.remove();
-            link.show();
-            button.attr('disabled', false)
-            comment.fadeOut(400, function() {
-              comment.fadeIn(400)
-            });
-          }, "json");
-          return false
+          $.ajax({url: form.attr("action"),
+                  dataType: "json",
+                  type: "PUT",
+                  data: form.serialize()+"&format=js",
+                  success: function(data, textStatus) {
+                              comment.find(".markdown p").html(data.body);
+                              form.remove();
+                              link.show();
+                              highlightEffect(comment)
+                            },
+                  error: manageAjaxError,
+                  complete: function(XMLHttpRequest, textStatus) {
+                    button.attr('disabled', false)
+                  }
+           });
+           return false
         });
+      },
+      error: manageAjaxError,
+      complete: function(XMLHttpRequest, textStatus) {
+        link.show()
       }
     });
     return false;
   });
 
-  $(".addNestedAnswer").click(function() {
+  $(".addNestedAnswer").live("click", function() {
     var controls = $(this).parents(".controls")
     controls.find(".forms form.flag_form").slideUp();
     controls.find("form.nestedAnswerForm").slideToggle();
     return false;
   });
-
 
   $(".flag_form .cancel").live("click", function() {
     $(this).parents(".flag_form").slideUp();

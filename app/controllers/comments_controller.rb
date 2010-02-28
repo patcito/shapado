@@ -59,9 +59,11 @@ class CommentsController < ApplicationController
         flash[:notice] = t(:flash_notice, :scope => "comments.update")
         format.html { redirect_to(params[:source]) }
         format.json { render :json => @comment.to_json, :status => :ok}
+        format.js { render :json => { :message => flash[:notice], :success => true } }
       else
         format.html { render :action => "edit" }
         format.json { render :json => @comment.errors, :status => :unprocessable_entity }
+        format.js { render :json => { :success => false } }
       end
     end
   end
