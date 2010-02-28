@@ -27,6 +27,10 @@ $(document).ready(function() {
   });
 })
 
+function manageAjaxError(XMLHttpRequest, textStatus, errorThrown) {
+  showMessage("sorry, something went wrong.", "error");
+}
+
 $(window).load(function() {
   prettyPrint();
 });
@@ -39,6 +43,14 @@ function showMessage(message, t) {
     animationSpeed: "normal",
     barClass: "flash"
   });
+}
+
+function highlightEffect(object) {
+  if(typeof object != "undefined") {
+    object.fadeOut(400, function() {
+      object.fadeIn(400)
+    });
+  }
 }
 
 function setupEditor() {

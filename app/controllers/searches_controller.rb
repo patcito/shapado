@@ -6,6 +6,7 @@ class SearchesController < ApplicationController
       @search_tags = pharse.scan(/\[(\w+)\]/).flatten
       @search_text = pharse.gsub(/\[(\w+)\]/, "")
       options[:tags] = {:$all => @search_tags} unless @search_tags.empty?
+      options[:group_id] = current_group.id
 
       if !@search_text.blank?
         q = @search_text.split.map do |k|

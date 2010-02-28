@@ -21,7 +21,7 @@
   .favorites_count
     &= @question.favorites_count
 
-#question-body-col.markdown
+#question-body-col.commentable.markdown
   #body
     -if @question.body.present?
       =find_and_preserve(shapado_auto_link(markdown(@question.body)))
@@ -62,25 +62,14 @@
       - flag.flaggeable = @question
       = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
 
-      -form_tag comments_path, :class => "form", :id => "add_comment_form" do
+      -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do
         -@comment = Comment.new
         = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
         .group.navform
           = submit_tag t("comments.shared.comment_submit"), :class => "button"
   .comments
     -@question.comments.each do |comment|
-      .comment
-        %strong
-          = t("time.ago", :time => time_ago_in_words(comment.created_at))
-        =link_to comment.user.login, user_path(comment.user)
-        == #{t("comments.shared.said")}:
-        %span.markdown
-          = shapado_auto_link(markdown(comment.body))
-        %span.actions
-          -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
-            = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source), :class => "edit_comment"
-            = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
-        .clear
+      = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
 .clear
 
 
@@ -102,9 +91,9 @@
   .block
     -if @question.answered
       -solution = @question.answer
-      =render :partial=> "answer", :locals=> {:question => @question, :answer => solution, :comment => @answer} unless solution.nil?
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => solution} unless solution.nil?
     -@answers.each do |answer|
-      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer, :comment => @answer}
+      =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
     =will_paginate(@answers)
 
 %a{:name=>"to_answer"}
