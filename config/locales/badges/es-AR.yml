@@ -82,6 +82,18 @@ es-AR:
         description: visita el sitio 8 días consecutivos
       editor:
         description: primer mensaje editado
+      friendly:
+        name: amistoso
+        description: sigue a alguien por primera vez
+      interesting_person:
+        name: persona interesante
+        description: tiene mas de 10 seguidores
+      popular_person:
+        name: persona popular
+        description: tiene mas de 50 seguidores
+      celebrity:
+        name: celebridad
+        description: tiene mas de 100 seguidores
   activerecord:
     models:
       badge: insignia

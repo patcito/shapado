@@ -61,6 +61,18 @@ en:
         description: visited the site each day for 8 consecutive days
       editor:
         description: first edited post
+      friendly:
+        name: friendly
+        description: following someone for the first time
+      interesting_person:
+        name: interesting person
+        description: getting more than 10 followers
+      popular_person:
+        name: popular person
+        description: getting more than 50 followers
+      celebrity:
+        name: celebrity
+        description: getting more than 100 followers
   activerecord:
     models:
       badge: badge
