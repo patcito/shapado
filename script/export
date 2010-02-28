@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__)+'/../config/environment'
+
+group = Group.find(ARGV.first) || Group.find_by_subdomain(ARGV.first)
+
+FileUtils.mkpath(group.subdomain)
+Dir.chdir(group.subdomain)
+
+$stderr.puts "Created #{File.expand_path(Dir.getwd)}"
+
+exporter = Export.new(group)
+time = Time.now
+
+exporter.to_file(Question)
+exporter.to_file(Answer)
+exporter.to_file(Comment)
+exporter.to_file(Vote, :except => [:_keywords, :user_ip])
+exporter.to_file(Badge)
+exporter.to_file(Member)
+exporter.to_file(Ad)
+exporter.to_file(Favorite)
+exporter.to_file(Widget)
+exporter.to_file(User, :selector => {"reputation.#{group.id}" => {:$exists => true}},
+                       :except => [:_keywords, :salt, :remember_token_expires_at, :crypted_password, :ip, :identity_url, :email, :default_subtab, :admin])
+
+time = Time.now - time
+$stderr.puts "Exported #{group.name} in #{time} seconds"
