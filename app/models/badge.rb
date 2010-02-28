@@ -6,7 +6,7 @@ class Badge
   SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer notable_question]
   BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
               merit_medal effort_medal student shapado editor popular_question
-              friendly]
+              friendly interesting_person]
 
   def self.TOKENS
     @tokens ||= GOLD + SILVER + BRONZE

@@ -116,6 +116,8 @@ class UsersController < ApplicationController
       Notifier.deliver_follow(current_user, @user)
     end
 
+    Magent.push("actors.judge", :on_follow, current_user.id, @user.id, current_group.id)
+
     respond_to do |format|
       format.html do
         redirect_to user_path(@user)
@@ -128,6 +130,8 @@ class UsersController < ApplicationController
     current_user.remove_friend(@user)
 
     flash[:notice] = t("flash_notice", :scope => "users.unfollow", :user => @user.login)
+
+    Magent.push("actors.judge", :on_unfollow, current_user.id, @user.id, current_group.id)
 
     respond_to do |format|
       format.html do

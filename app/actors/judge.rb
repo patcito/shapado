@@ -236,6 +236,28 @@ module Actors
       end
     end
 
+    expose :on_follow
+    def on_follow(payload)
+      group = Group.find(payload.pop)
+      follower, followed = User.find(payload)
+
+      if follower.following_count < 5 && follower.find_badge_on(group, "friendly")
+        create_badge(follower, group, :token => "friendly",:group_id => group.id, :source => followed)
+      end
+
+      if followed.followers_count >= 10 && followed.find_badge_on(group, "interesting_person").nil?
+        create_badge(follower, group, :token => "interesting_person",:group_id => group.id)
+      elsif followed.followers_count >= 50 && followed.find_badge_on(group, "popular_person").nil?
+        create_badge(follower, group, :token => "popular_person",:group_id => group.id)
+      elsif followed.followers_count >= 100 && followed.find_badge_on(group, "celebrity").nil?
+        create_badge(follower, group, :token => "celebrity",:group_id => group.id)
+      end
+    end
+
+    expose :on_unfollow
+    def on_unfollow(payload)
+    end
+
     private
     def create_badge(user, group, opts)
       badge = user.badges.create!(opts)
