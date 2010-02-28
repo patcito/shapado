@@ -40,6 +40,9 @@ class User
   key :votes_down,                Hash
   key :default_subtab,            Hash
 
+  key :followers_count,           Integer, :default => 0
+  key :following_count,           Integer, :default => 0
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :comments, :dependent => :destroy
@@ -308,6 +311,9 @@ class User
     return false if user == self
     FriendList.push_uniq(self.friend_list_id, :following_ids => user.id)
     FriendList.push_uniq(user.friend_list_id, :follower_ids => self.id)
+
+    User.increment(self.id, :following_count => 1)
+    User.increment(user.id, :followers_count => 1)
     true
   end
 
@@ -315,6 +321,10 @@ class User
     return false if user == self
     FriendList.pull(self.friend_list_id, :following_ids => user.id)
     FriendList.pull(user.friend_list_id, :follower_ids => self.id)
+
+    User.decrement(self.id, :following_count => 1)
+    User.decrement(user.id, :followers_count => 1)
+
     true
   end
 
