@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "rdiscount"
+  config.gem "rdiscount", :version => "1.5.8"
   config.gem "jnunemaker-validatable", :version => "1.8.1", :lib => "validatable"
   config.gem "mongo_mapper", :version => "0.7.0", :source => "http://gemcutter.org"
   config.gem "compass", :version => "0.10.0.pre2", :lib => "compass", :source => "http://gemcutter.org"
