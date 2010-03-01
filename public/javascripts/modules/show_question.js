@@ -49,11 +49,11 @@ $(document).ready(function() {
                     showMessage(data.message, "error")
                   }
                 },
-       error: manageAjaxError,
-       complete: function(XMLHttpRequest, textStatus) {
+      error: manageAjaxError,
+      complete: function(XMLHttpRequest, textStatus) {
          button.attr('disabled', false)
-       }
-      });
+      }
+    });
     return false;
   });
 

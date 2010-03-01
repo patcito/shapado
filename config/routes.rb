@@ -22,7 +22,8 @@ ActionController::Routing::Routes.draw do |map|
   def build_questions_routes(router, options)
     router.with_options(options) do |route|
       route.resources :questions, :collection => {:tags => :get,
-                                                :unanswered => :get},
+                                                  :unanswered => :get,
+                                                  :related_questions => :get},
                                 :member => {:solve => :get,
                                             :unsolve => :get,
                                             :flag => :get,

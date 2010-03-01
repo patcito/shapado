@@ -9,7 +9,7 @@
         = t(".how_to_ask")
       =current_group.question_help
 
-- form_for(@question, :html=>{:class => "form"}) do |f|
+- form_for(@question, :html=>{:class => "form", :id => "ask_question"}) do |f|
   =render :partial => "form", :locals => {:f => f}
 
   .group.navform
@@ -20,3 +20,6 @@
     = f.submit t('scaffold.create')
     = t("global.or")
     = link_to t('scaffold.cancel'), questions_path, :class => "button cancel"
+
+%ul.items#related_questions
+
