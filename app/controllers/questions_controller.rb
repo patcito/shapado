@@ -66,6 +66,27 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def related_questions
+    @question = Question.new(params[:question]) if params[:question_id]
+    @question = Question.new(params[:question]) if params[:question]
+
+    @question.group_id = current_group.id
+
+    @question.tags += @question.title.downcase.split(",").join(" ").split(" ")
+
+    @questions = Question.related_questions(@question, :page => params[:page],
+                                                       :per_page => params[:per_page],
+                                                       :order => "activity_at desc")
+
+    respond_to do |format|
+      format.js do
+        render :json => {:html => render_to_string(:partial => "questions/question",
+                                                   :collection  => @questions,
+                                                   :locals => {:mini => true})}.to_json
+      end
+    end
+  end
+
   def unanswered
     set_page_title(t("questions.unanswered.title"))
     conditions = scoped_conditions({:answered => false, :banned => false})
