@@ -18,4 +18,12 @@ fr:
       theme:
         title: configurez le thème du groupe
         logo_legend: Vous pouvez télécharger le logo du groupe. La taille maximum est de 2mb.
-
+      domain:
+        title: configurer votre nom de domaine
+        description: "Vous pouvez configurer votre nom de domaine à fin de le faire pointer vers votre site de la manière suivante:"
+        instruction1: "Vous devez tout d'abord vous rendre sur le site où vous avez acheter votre nom de de domaine tel que {{subdomain}}.com."
+        instruction2: "Là, vous devez vous rendre dans la section DNS pour y créer un CNAME."
+        instruction3: "Choisissez 'www' ou tout autre nom pour votre CNAME."
+        instruction4: "Ensuite, comme host ou destination, tapez le nom de votre site shapado actuel: {{domain}}."
+        instruction5: "Après une heure ou deux, votre domaine www.{{subdomain}}.com devrait pointer vers {{appdomain}}."
+        instruction6: "Vous pouvez maintenant revenir sur cette page et tapez le nom de domaine que vous avez choisi tel que www.{{subdomain}}.com dans le champs de texte ci-dessous et confirmer. Si vous avez des questions, posez-les sur le {{chat_url}} ou sur notre forum"

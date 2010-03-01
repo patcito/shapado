@@ -18,4 +18,12 @@ pt-PT:
       theme:
         title: setup the group's theme
         logo_legend: you can upload the group logo. the maximum file size is 2mb.
-
+      domain:
+        title: setup your domain
+        description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
+        instruction1: "To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com)."
+        instruction2: There you need to go to the DNS section and create something called a CNAME.
+        instruction3: "Pick 'www' or anything else as the name of your CNAME."
+        instruction4: "Then in the host or destination field, put your current shapado domain: {{domain}}."
+        instruction5: "Once this is done, after an hour or so, your domain www.{{subdomain}}.com should point to {{appdomain}}."
+        instruction6: "When this is the case, come back here and put your domain name www.{{subdomain}}.com in the field below and press the button 'update'. If you have questions, ask us in the {{chat_url}} or on our support forum"

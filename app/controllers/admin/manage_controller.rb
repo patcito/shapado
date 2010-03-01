@@ -32,6 +32,9 @@ class Admin::ManageController < ApplicationController
   def stats
   end
 
+  def domain
+  end
+
   def content
     unless @group.has_custom_html
       flash[:error] = t("global.permission_denied")
