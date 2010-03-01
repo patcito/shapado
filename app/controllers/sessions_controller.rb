@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
     if current_user
       current_user.localize(request.remote_ip)
-      current_user.logged!
+      current_user.logged!(current_group)
     end
   end
 

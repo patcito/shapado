@@ -235,7 +235,7 @@ class User
     self.favorites.first(:question_id => question._id, :user_id => self._id )
   end
 
-  def logged!
+  def logged!(group = nil)
     now = Time.now
 
     if new?
@@ -243,7 +243,7 @@ class User
     else
       self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
                                                  :upsert => true)
-      self.stats(:last_activity_at, :user_id).activity_on(group, Time.now)
+      self.stats(:last_activity_at, :user_id).activity_on(group, Time.now) if group
     end
   end
 
