@@ -20,7 +20,7 @@ class WidgetsController < ApplicationController
 
     @widget.group = @group
     @widgets = @group.widgets.all(:order => "position asc")
-    if  @widgets && !@widgets.empty?
+    if @widgets && !@widgets.last.nil?
       @widget.position = @widgets.last.position+1
     end
 
