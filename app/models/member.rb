@@ -12,7 +12,7 @@ class Member
   key :role, String, :default => "user"
   validates_inclusion_of :role,  :within => ROLES
 
-  before_validation_on_update :ensure_user_owners_on_update
+  validate_on_update :ensure_user_owners_on_update
   before_destroy :ensure_user_owners_on_destroy
   validate :should_be_unique
 
