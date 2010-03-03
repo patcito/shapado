@@ -1,4 +1,6 @@
 class Notifier < ActionMailer::Base
+  helper :application
+
   def give_advice(user, group, question)
     I18n.locale = user.language
     scope = "mailers.notifications.give_advice"
