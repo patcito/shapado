@@ -67,10 +67,12 @@ class QuestionsController < ApplicationController
   end
 
   def related_questions
-    @question = Question.new(params[:question]) if params[:question_id]
-    @question = Question.new(params[:question]) if params[:question]
-
-    @question.group_id = current_group.id
+    if params[:id]
+      @question = Question.find(params[:id])
+    elsif params[:question]
+      @question = Question.new(params[:question])
+      @question.group_id = current_group.id
+    end
 
     @question.tags += @question.title.downcase.split(",").join(" ").split(" ")
 

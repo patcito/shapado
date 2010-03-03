@@ -12,6 +12,11 @@
     = t(".tags_tip")
 
 .group
+  %label.label#rqlabel
+    =t(".related_questions", :default => :"questions.show.related_questions" )
+  %ul.items#related_questions
+
+.group
   = f.label :body, t(:body, :scope => "activerecord.attributes.question"), :class => "label"
   = f.text_area :body, :class => "text_area", :id => "markdown_editor"
 
