@@ -6,5 +6,5 @@ en:
       search_text: questions containing
     form:
       clear: clear
-      search_box_title: "Check whether your question already have asked"
+      search_box_title: "Check whether your question has already been asked"
       tags_tip: use [tag] to specify tags.

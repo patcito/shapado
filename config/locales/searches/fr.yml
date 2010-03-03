@@ -2,9 +2,9 @@ fr:
   searches:
     index:
       empty: "aucune question ne correspond aux termes de recherche spécifiés."
-      tags: within these tags
-      search_text: questions containing
+      tags: parmi ces tags
+      search_text: questions contenant
     form:
-      clear: clear
+      clear: effacer
       search_box_title: "Vérifiez que votre question n'ait pas déjà été posé"
-      tags_tip: use [tag] to specify tags.
+      tags_tip: utiliser [tag] pour décrire vos tags.
