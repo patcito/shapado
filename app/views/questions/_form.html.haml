@@ -7,7 +7,7 @@
 
 .group
   = f.label :tags, t(:tags, :scope => "activerecord.attributes.question"), :class => "label"
-  = f.text_field :tags, :value => @question.tags.join(", "),:class => "text_field", :id => "autocomplete_for_tags"
+  = f.text_field :tags, :value => @question.tags.join(", "),:class => "text_field autocomplete_for_tags"
   .description
     = t(".tags_tip")
 

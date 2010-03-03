@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:new, :index, :show, :tags, :unanswered]
+  before_filter :login_required, :except => [:create, :index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
@@ -162,16 +162,9 @@ class QuestionsController < ApplicationController
   # GET /questions/new.xml
   def new
     @question = Question.new(params[:question])
-
-    if !logged_in?
-      draft = Draft.create(:question => @question)
-      session[:draft] = draft.id
-      login_required
-    else
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json  { render :json => @question.to_json }
-      end
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json  { render :json => @question.to_json }
     end
   end
 
@@ -186,6 +179,12 @@ class QuestionsController < ApplicationController
     @question.safe_update(%w[title body language tags], params[:question])
     @question.group = current_group
     @question.user = current_user
+
+    if !logged_in?
+      draft = Draft.create!(:question => @question)
+      session[:draft] = draft.id
+      return login_required
+    end
 
     respond_to do |format|
       if @question.save

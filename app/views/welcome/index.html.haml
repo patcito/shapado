@@ -12,7 +12,8 @@
 
 %h3.title
   #quick_question
-    -form_for Question.new, :url => new_question_path(:language => current_languages), :html => {:class => "form", :method => :get} do |f|
+    -@question = Question.new
+    -form_for(@question, :url => questions_url(current_languages), :html=>{:class => "form", :id => "ask_question"}) do |f|
       -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
       = f.hidden_field :language, :value => logged_in? ? current_user.language : current_languages
       %label.label
@@ -31,7 +32,10 @@
         .column_form
           .group
             .pointer
-            =f.text_area :title, :class => "text_area"
+            =f.text_area :title, :class => "text_area", :id => "question_title"
+          %span#tags.group
+            =t(:tags, :scope => "activerecord.attributes.question")
+            =f.text_field :tags, :class => "text_field autocomplete_for_tags"
           =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
       .clear
 %ul.items#questions

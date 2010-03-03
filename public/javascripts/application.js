@@ -18,7 +18,7 @@ $(document).ready(function() {
   })
   $(".markdown code").addClass("prettyprint")
 
-  $('#autocomplete_for_tags').autocomplete('/questions/tags.js', {
+  $('.autocomplete_for_tags').autocomplete('/questions/tags.js', {
       multiple: true,
       delay: 200,
       max: 10,
