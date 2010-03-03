@@ -1,0 +1,14 @@
+
+%h4.title
+  #search_box
+    - form_tag search_path, :class => "form", :method => :get do
+      %label.label
+        Check if your question already have answers....
+      %br
+      .group
+        = text_field_tag :q, params[:q], :class => "text_field title"
+        .description
+          == use [tag] to specify tags.
+      = submit_tag t("scaffold.close"), :class => "button close"
+      = submit_tag t("layouts.application.search"), :class => "button search"
+    .clear

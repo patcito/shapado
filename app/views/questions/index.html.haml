@@ -32,6 +32,9 @@
     .content
       = render :partial => "shared/tag_list", :object => @tag_cloud
 
+
+= render :partial => "searches/search_box"
+
 /Questions
 %ul.items#questions
   -if @questions.empty?
