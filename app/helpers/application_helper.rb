@@ -45,7 +45,7 @@ module ApplicationHelper
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
       url = questions_path(:language => current_languages, :tags => tag["name"])
       cloud << "<span>#{link_to(tag["name"], url,
-          :style => "font-size:#{size}px", :class => "#{tag_class}")}</span> "
+          :style => "font-size:#{size}px;line-height:#{size.to_i+12}px;", :class => "#{tag_class}")}</span> "
     end
     cloud += "</div>"
     cloud
