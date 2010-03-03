@@ -51,9 +51,11 @@
 -else
   %li.item
     .stats
-      .box.votes
-        .counter{:class => class_for_number(question.votes_average) }
-          =format_number(question.votes_average)
+      .box.answers{:class => question.answered ? "answered" : "" }
+        .counter
+          =format_number(question.answers_count)
+        .text
+          =t(:answers, :scope => "activerecord.attributes.question")
     .summary
       %h3
         = link_to title, question_path(current_languages, question)

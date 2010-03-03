@@ -36,6 +36,7 @@ fr:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.
       tags_tip:  utilisez les tags pour ajouter plus d'information à question.
+      more_details: "add more details..."
     flag:
       title: reporter un abus
     edit:
