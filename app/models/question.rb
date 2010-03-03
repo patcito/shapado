@@ -58,6 +58,7 @@ class Question
 
   versioneable_keys :title, :body, :tags
   filterable_keys :title, :body
+  language :language
 
   before_save :update_activity_at
   before_validation_on_create :update_language
