@@ -1,13 +1,5 @@
 
 $(document).ready(function() {
-
-  $("#question_body").hide();
-  $("#more_details").show();
-
-  $("#more_details").click(function() {
-    $("#question_body").toggle();
-  });
-
   $(".text_field#question_title").focus( function() {
     highlightEffect($("#sidebar .help"))
   });

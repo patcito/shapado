@@ -36,7 +36,6 @@ es-AR:
       body_tip: ¿cual es tu pregunta? por favor se descriptivo.
       language_tip: selecciona el idioma de tu pregunta.
       tags_tip:  usa etiquetas para añadir más información sobre tu pregunta.
-      more_details: "añadir más detalles..."
     flag:
       title:   reportar abuso en esta pregunta
     edit:

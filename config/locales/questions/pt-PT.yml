@@ -36,7 +36,6 @@ pt-PT:
       body_tip: qual é a sua pergunta? seja descritivo.
       language_tip: seleccione o idioma da questão.
       tags_tip:  usar etiquetas para dar mais informação sobre a sua questão.
-      more_details: "add more details..."
     flag:
       title:   reportar pergunta
     edit:
