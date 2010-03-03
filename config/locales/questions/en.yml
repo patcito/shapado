@@ -36,7 +36,6 @@ en:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.
       tags_tip:  use tags to add more information about your question.
-      more_details: "add more details..."
     flag:
       title:   flag question
     edit:
