@@ -8,6 +8,7 @@ pt-PT:
     update: actualizar
     cancel: cancelar
     create: criar
+    close: close
     new: adicionar novo {{model}}
     more: "mais ..."
     add: adicionar

@@ -7,6 +7,7 @@ es-AR:
     back: volver
     update: actualizar
     cancel: cancelar
+    close: cerrar
     create: crear
     new: add new {{model}}
     more: "más..."

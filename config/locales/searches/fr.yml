@@ -6,3 +6,5 @@ fr:
       search_text: questions containing
     form:
       clear: clear
+      search_box_title: "Vérifiez que votre question n'ait pas déjà été posé"
+      tags_tip: use [tag] to specify tags.

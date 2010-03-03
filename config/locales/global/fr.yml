@@ -7,6 +7,7 @@ fr:
     back: retour
     update: actualiser
     cancel: annuler
+    close: fermer
     create: créer
     new: ajouter {{model}}
     more: plus...
