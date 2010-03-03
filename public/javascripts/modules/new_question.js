@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+  $("label#rqlabel").hide();
+
   $(".text_field#question_title").focus( function() {
     highlightEffect($("#sidebar .help"))
   });
@@ -8,6 +10,9 @@ $(document).ready(function() {
                               target : $("#related_questions"),
                               behaviour : "focusout",
                               timeout : 10,
-                              extraParams : { 'format' : 'js', 'per_page' : 5 }
+                              extraParams : { 'format' : 'js', 'per_page' : 5 },
+                              success: function() {
+                                $("label#rqlabel").show();
+                              }
   });
 });

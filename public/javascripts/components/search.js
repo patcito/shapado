@@ -34,6 +34,8 @@
         success: function(data) {
           settings.target.empty();
           settings.target.append(data.html);
+          if(settings.success)
+            settings.success();
         }
       });
     }
