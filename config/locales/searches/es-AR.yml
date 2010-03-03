@@ -6,3 +6,5 @@ es-AR:
       search_text: questions containing
     form:
       clear: limpiar
+      search_box_title: "Comprueba si tu pregunta ya ha sido hecha"
+      tags_tip: User [etiqueta] para especificar etiquetas.

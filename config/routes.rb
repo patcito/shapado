@@ -71,7 +71,7 @@ ActionController::Routing::Routes.draw do |map|
     manage.reputation '/reputation', :action => 'reputation'
   end
 
-  map.search '/search', :controller => "searches", :action => "index"
+  map.search '/search.:format', :controller => "searches", :action => "index"
   map.about '/about', :controller => "groups", :action => "show"
   map.root :controller => "welcome"
 
