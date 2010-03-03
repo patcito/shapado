@@ -13,17 +13,16 @@
       = render :partial => "shared/topbar"
       #header
         = current_group.head
-        #main-bar{:class => @active_tab}
+        #doc-main-bar
           #logo
             -if current_group.has_logo?
               =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
             -else
               = image_tag("default_logo.png", :class => "group_logo")
-          .clear
-      #wrapper
-        #main-doc
-          = yield
-          .clear
+    #doc-wrapper
+      #main-doc
+        = yield
+        .clear
     .clear
     #footer
       .block.content
