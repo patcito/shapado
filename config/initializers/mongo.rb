@@ -2,6 +2,7 @@ require 'mm-paginate'
 
 MongoMapper.connection = Mongo::Connection.new(nil, nil, :auto_reconnect => true)
 MongoMapper.database = "shapado-#{Rails.env}"
+MongoMapperExt.init
 
 if defined?(PhusionPassenger)
   PhusionPassenger.on_event(:starting_worker_process) do |forked|

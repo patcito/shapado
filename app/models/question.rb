@@ -2,6 +2,7 @@ class Question
   include MongoMapper::Document
   include MongoMapperExt::Filter
   include MongoMapperExt::Slugizer
+  include MongoMapperExt::Tags
   include Support::Versioneable
 
   ensure_index :tags
@@ -25,8 +26,6 @@ class Question
   key :answered, Boolean, :default => false
   key :wiki, Boolean, :default => false
   key :language, String, :default => "en"
-
-  key :tags, Array, :default => []
 
   key :activity_at, Time
 
@@ -79,14 +78,6 @@ class Question
       tag.gsub("#", "sharp").gsub(".", "dot").gsub("www", "w3")
     end
     self[:tags] = t
-  end
-
-  def self.tag_cloud(conditions = {}, limit = 30)
-    self.database.eval("function(a,b) { return tag_cloud(a,b); }", conditions, limit)
-  end
-
-  def self.find_tags(regex, conditions = {}, limit = 30)
-    self.database.eval("function(a,b,c) { return find_tags(a,b,c); }", regex, conditions, limit)
   end
 
   def self.related_questions(question, opts = {})
