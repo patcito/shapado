@@ -14,8 +14,11 @@
   #quick_question
     -@question = Question.new
     -form_for(@question, :url => questions_url(current_languages), :html=>{:class => "form", :id => "ask_question"}) do |f|
+      -# TODO: refactor this
       -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
-      = f.hidden_field :language, :value => logged_in? ? current_user.language : current_languages
+      -lang = logged_in? ? current_user.language : lang
+      -lang = current_group.language ? current_group.language : lang
+      = f.hidden_field :language, :value => lang
       %label.label
         =t(".quick_question")
       .columns
