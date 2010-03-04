@@ -78,7 +78,7 @@ class QuestionsController < ApplicationController
 
     @questions = Question.related_questions(@question, :page => params[:page],
                                                        :per_page => params[:per_page],
-                                                       :order => "activity_at desc")
+                                                       :order => "answers_count desc")
 
     respond_to do |format|
       format.js do
