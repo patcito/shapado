@@ -84,5 +84,16 @@ class Notifier < ActionMailer::Base
     content_type    "multipart/alternative"
   end
 
-  protected
+  private
+
+  # we override the template_path to render localized templates (since rails does not support that :-( )
+  # This thing is not testable since you cannot access the instance of a mailer...
+  def initialize_defaults(method_name)
+    super
+    template_name = "#{method_name}_#{I18n.locale}"
+    if Dir.glob(RAILS_ROOT+"/app/views/notifier/#{template_name}").size == 0
+      template_name = method_name
+    end
+    @template = template_name
+  end
 end
