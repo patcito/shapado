@@ -1,5 +1,5 @@
 atom_feed do |feed|
-  feed.title("#{h(@question.title)} - #{AppConfig.domain}")
+  feed.title("#{h(@question.title)} - #{current_group.name}")
   feed.updated(@question.updated_at)
 
   feed.entry(@question, :url => question_url(current_languages, @question), :id =>"tag:#{@question.id}") do |entry|
