@@ -1,45 +1,43 @@
 -content_for :subtabs do
   .navtitle
     =t(".title", :count => @question.versions.count)
-
-%h2.title
-  =t(".current_version")
-
-%h2
-  = link_to h(@question.title), question_path(current_languages, @question)
-
-%h3=t(:body, :scope => "activerecord.attributes.question")
-.markdown
-  = shapado_auto_link(markdown(@question.body))
-%h3=t(:tags, :scope => "activerecord.attributes.question")
-=@question.tags.join(", ")
-.clear
-
-
+-counter = @question.versions.count
 #questions
-  %h2.title
-    =t(".previous_versions")
-  -@question.versions.each_with_index do |version, pos|
+  .question
+    %h2.version_title
+      =t(".current_version")
+
+    %h2
+      = link_to h(@question.title), question_path(current_languages, @question)
+
+    %h2=t(:body, :scope => "activerecord.attributes.question")
+    .markdown
+      = shapado_auto_link(markdown(@question.body))
+    %h2=t(:tags, :scope => "activerecord.attributes.question")
+    =@question.tags.join(", ")
+
+  -@question.versions.reverse_each do |version|
+    -counter -= 1
     -if !version.data.empty?
       .question
         %h2.version_title
-          %span.version
-            &=pos
           =t(".version")
-        #question-body-col
+          %span.version
+            &=counter
+        .question-body
           -if version.data["title"]
-            %h3=t(:title, :scope => "activerecord.attributes.question")
+            %h2=t(:title, :scope => "activerecord.attributes.question")
             = version.data["title"].first
           -if version.data["body"]
-            %h3=t(:body, :scope => "activerecord.attributes.question")
+            %h2=t(:body, :scope => "activerecord.attributes.question")
             .markdown
               = find_and_preserve(shapado_auto_link(markdown(version.data["body"].first)))
           -if version.data["tags"]
-            %h3=t(:tags, :scope => "activerecord.attributes.question")
+            %h2=t(:tags, :scope => "activerecord.attributes.question")
             = version.data["tags"].first.join(", ")
           .controls
             .actions
               -if logged_in? && current_user.can_modify?(@question)
-                =link_to t(".set_as_current"), rollback_question_path(current_languages, @question, :version => pos), :method => :put
+                =link_to t(".set_as_current"), rollback_question_path(current_languages, @question, :version => counter), :method => :put
           .clear
         .clear
