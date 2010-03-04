@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:friends", "fixdb:activity_notifs"] do
+task :fixall => [:environment, "fixdb:friends", "fixdb:activity_notifs", "fixdb:custom_settings"] do
 end
 
 namespace :fixdb do
