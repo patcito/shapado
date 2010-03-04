@@ -1,4 +1,4 @@
-- if RAILS_ENV == "production" && !AppConfig.analytics_id.blank? && !current_group.has_custom_analytics
+- if RAILS_ENV == "production" && !AppConfig.analytics_id.blank? && !current_group.has_custom_analytics && !current_group.analytics_id.blank?
   %a#googlean{:href => AppConfig.analytics_id, :style => "display: none", :rel=>"nofollow" }
   =javascript_include_tag 'jquery.geekga-1.1.min.js'
   =javascript_include_tag 'modules/googlean'
