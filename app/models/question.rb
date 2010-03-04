@@ -54,7 +54,8 @@ class Question
 
   validates_length_of       :title,    :within => 5..100
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
-  validates_true_for :tags, :logic => lambda { !tags.empty? }
+  validates_true_for :tags, :logic => lambda { !tags.empty? && tags.size <= 6},
+                     :message => lambda {I18n.t("questions.model.messages.too_many_tags") }
 
   versioneable_keys :title, :body, :tags
   filterable_keys :title, :body
