@@ -38,6 +38,7 @@ en:
     questions: subscribe to all questions
     tag: subscribe to tag
     user: subscribe to user questions
+    feed: Feed
   languages:
     en:      english
     es:      spanish
