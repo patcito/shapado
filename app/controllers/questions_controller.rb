@@ -84,7 +84,7 @@ class QuestionsController < ApplicationController
       format.js do
         render :json => {:html => render_to_string(:partial => "questions/question",
                                                    :collection  => @questions,
-                                                   :locals => {:mini => true})}.to_json
+                                                   :locals => {:mini => true, :lite => true})}.to_json
       end
     end
   end
