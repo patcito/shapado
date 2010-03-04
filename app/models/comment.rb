@@ -48,4 +48,21 @@ class Comment
       self.errors.add(:body, "Your comment looks like spam.")
     end
   end
+
+  def find_question
+    question = nil
+    if self.commentable.kind_of?(Question)
+      question = self.commentable
+    elsif self.commentable.respond_to?(:question)
+      question = self.commentable.question
+    end
+
+    question
+  end
+
+  def find_recipient
+    if self.commentable.respond_to?(:user)
+      self.commentable.user
+    end
+  end
 end

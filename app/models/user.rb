@@ -25,6 +25,7 @@ class User
   key :preferred_tags,            Hash, :default => {} #by group
   key :preferred_languages,       Array
 
+  # FIXME: use an embedded doc
   key :notification_opts,         Hash, :default => {"new_answer"=>"1", "give_advice" => "1",
                                                      "activities" => "1", "reports" => "1"}
 
