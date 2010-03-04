@@ -11,6 +11,6 @@
         -current_tags.each {|tag| tags += " [#{tag}]"}
         = text_field_tag :q, params[:q].to_s + tags, :class => "text_field title"
         .description
-          = t("searches.form.search_tip")
+          = t("searches.form.tags_tip")
       = submit_tag t("layouts.application.search"), :class => "button search"
     .clear

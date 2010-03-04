@@ -3,7 +3,7 @@
   .group
     = text_field_tag :q, params[:q], :class => "text_field title"
     .description
-      == use [tag] to specific tags.
+      = t("searches.form.tags_tip")
   .group.navform
     = submit_tag t("layouts.application.search"), :class => "button"
     = t("global.or")
