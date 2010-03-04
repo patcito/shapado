@@ -66,5 +66,18 @@ namespace :setup do
                                         :role => "admin")
     admin.save!
   end
+
+  desc "Reindex data"
+  task :reindex => [:environment] do
+    Question.find_each do |question|
+      question._keywords = []
+      question.save(:validate => false)
+    end
+
+    Answer.find_each do |answer|
+      answer._keywords = []
+      answer.save(:validate => false)
+    end
+  end
 end
 
