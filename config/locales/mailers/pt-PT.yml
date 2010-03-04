@@ -5,7 +5,7 @@ pt-PT:
         subject_owner: "{{login}} respondeu à sua pergunta {{title}}"
         subject_other: "{{login}} respondeu à pergunta {{title}}"
       new_comment:
-        subject: "{{login}} commented on {{title}}"
+        subject: "{{login}} commented on {{group}}"
       give_advice:
         subject: "we need your advice: {{question_title}}"
       follow:

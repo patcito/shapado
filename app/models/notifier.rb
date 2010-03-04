@@ -44,7 +44,7 @@ class Notifier < ActionMailer::Base
     recipients user.email
     template_for user
     from "Shapado <#{AppConfig.notification_email}>"
-    subject I18n.t("mailers.notifications.new_comment.subject", :login => user.login, :app => AppConfig.application_name)
+    subject I18n.t("mailers.notifications.new_comment.subject", :login => user.login, :group => group.name)
     sent_on Time.now
     content_type    "multipart/alternative"
 

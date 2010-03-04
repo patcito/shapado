@@ -5,7 +5,7 @@ en:
         subject_owner: "{{login}} answered your question {{title}}"
         subject_other: "{{login}} answered the question {{title}}"
       new_comment:
-        subject: "{{login}} commented on {{title}}"
+        subject: "{{login}} commented on {{group}}"
       give_advice:
         subject: "we need your advice: {{question_title}}"
       follow:
