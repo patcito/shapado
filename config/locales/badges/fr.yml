@@ -28,7 +28,7 @@ fr:
         name: notable question
         description: "Question ayant reçu 2500 visites"
       popular_question:
-        name: popular question
+        name: question populaire
         description: "Question ayant reçu 1000 visites"
       popular_person:
         name: personne populaire
@@ -86,16 +86,16 @@ fr:
         description: "Premier poste édité"
       friendly:
         name: friendly
-        description: following someone for the first time
+        description: "suivre quelqu'un pour la première fois"
       interesting_person:
-        name: interesting person
-        description: getting more than 10 followers
+        name: "personne intéressante"
+        description: "avoir plus de 10 suiveurs"
       popular_person:
-        name: popular person
-        description: getting more than 50 followers
+        name: personne populaire
+        description: "avoir plus de 50 suiveurs"
       celebrity:
-        name: celebrity
-        description: getting more than 100 followers
+        name: célébrité
+        description: "avoir plus de 50 suiveurs"
   activerecord:
     models:
       badge: insigne
