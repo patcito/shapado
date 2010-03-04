@@ -202,7 +202,7 @@ class User
   end
 
   def mod_of?(group)
-    owner_of?(group) || role_on(group) == "moderator"
+    owner_of?(group) || role_on(group) == "moderator" || self.can_moderate_on?(group)
   end
 
   def user_of?(group)
