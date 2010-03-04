@@ -1,16 +1,16 @@
 atom_feed do |feed|
-  title = "#{AppConfig.domain} - #{t("activerecord.models.questions")}"
+  title = "#{current_group.name} - #{t("activerecord.models.questions").capitalize} #{t("feeds.feed")}"
 
   tags = params[:tags]
   if tags && !tags.empty?
     title += " tags: #{tags.kind_of?(String) ? tags : tags.join(", ")}"
   end
 
-  if @langs_conds.kind_of?(Array)
-    title += " languages: #{@langs_conds.join(", ")}"
-  elsif @lang_lands.kind_of?(String)
-    title += " languages: #{@langs_conds}"
-  end
+  #if @langs_conds.kind_of?(Array)
+  #  title += " languages: #{@langs_conds.join(", ")}"
+  #elsif @lang_lands.kind_of?(String)
+  #  title += " languages: #{@langs_conds}"
+  #end
 
   feed.title(title)
   unless @questions.empty?
