@@ -51,7 +51,7 @@ class Notifier < ActionMailer::Base
   def follow(user, followed)
     recipients followed.email
     from "Shapado <#{AppConfig.notification_email}>"
-    subject I18n.t("mailer.notifications.follow.subject", :login => user.login, :app => AppConfig.application_name)
+    subject I18n.t("mailers.notifications.follow.subject", :login => user.login, :app => AppConfig.application_name)
     sent_on Time.now
     body :user => user, :followed => followed
   end
@@ -59,7 +59,7 @@ class Notifier < ActionMailer::Base
   def earned_badge(user, group, badge)
     recipients user.email
     from "Shapado <#{AppConfig.notification_email}>"
-    subject I18n.t("mailer.notifications.earned_badge.subject", :group => group.name)
+    subject I18n.t("mailers.notifications.earned_badge.subject", :group => group.name)
     sent_on Time.now
     body :user => user, :group => group, :badge => badge
     content_type    "multipart/alternative"
@@ -68,7 +68,7 @@ class Notifier < ActionMailer::Base
   def favorited(user, group, question)
     recipients question.user.email
     from "Shapado <#{AppConfig.notification_email}>"
-    subject I18n.t("mailer.notifications.favorited.subject", :login => user.login)
+    subject I18n.t("mailers.notifications.favorited.subject", :login => user.login)
     sent_on Time.now
     body :user => user, :group => group, :question => question
     content_type    "multipart/alternative"
@@ -77,7 +77,7 @@ class Notifier < ActionMailer::Base
   def report(user, report)
     recipients user.email
     from "Shapado <#{AppConfig.notification_email}>"
-    subject I18n.t("mailer.notifications.report.subject")
+    subject I18n.t("mailers.notifications.report.subject")
     sent_on Time.now
 
     body :user => user, :report => report
