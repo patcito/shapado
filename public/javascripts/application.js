@@ -1,7 +1,11 @@
 $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
+  $('.confirm-domain').submit(function(){
+      var bool = confirm($(this).attr('data-confirm'));
+      if(bool==false) return false;
 
+  })
   $("#feedbackform").dialog({ title: "Feedback", autoOpen: false, modal: true, width:"420px" })
   $('#feedbackform .cancel-feedback').click(function(){
     $("#feedbackform").dialog('close');
@@ -164,4 +168,5 @@ function setupEditor() {
   },{
     id: 'markdown_help_button'
   });
+
 }

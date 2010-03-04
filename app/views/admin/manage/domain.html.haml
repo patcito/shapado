@@ -11,7 +11,7 @@
   %li=t(".instruction4", :domain=> "#{@group.subdomain}.#{AppConfig.domain}")
   %li=t(".instruction5", :appdomain => AppConfig.domain, :subdomain => @group.domain)
   %li=t(".instruction6", :subdomain => @group.domain, :chat_url => link_to("chat", chat_path))
--form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
+-form_for(@group, :html => {:class => "form confirm-domain", "data-confirm" => t('.warning'), :multipart => true}) do |f|
   = f.error_messages
   =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")
   .group.center

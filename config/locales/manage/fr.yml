@@ -25,5 +25,6 @@ fr:
         instruction2: "Là, vous devez vous rendre dans la section DNS pour y créer un CNAME."
         instruction3: "Choisissez 'www' ou tout autre nom pour votre CNAME."
         instruction4: "Ensuite, comme host ou destination, tapez le nom de votre site shapado actuel: {{domain}}."
-        instruction5: "Après une heure ou deux, votre domaine www.{{subdomain}}.com devrait pointer vers {{appdomain}}."
-        instruction6: "Vous pouvez maintenant revenir sur cette page et tapez le nom de domaine que vous avez choisi tel que www.{{subdomain}}.com dans le champs de texte ci-dessous et confirmer. Si vous avez des questions, posez-les sur le {{chat_url}} ou sur notre forum"
+        instruction5: "Après une heure ou deux, votre domaine www.{{subdomain}} devrait pointer vers {{appdomain}}."
+        instruction6: "Vous pouvez maintenant revenir sur cette page et tapez le nom de domaine que vous avez choisi tel que www.{{subdomain}} dans le champs de texte ci-dessous et confirmer. Si vous avez des questions, posez-les sur le {{chat_url}} ou sur notre forum"
+        warning: Êtes-vous sûr de vouloir changer votre domaine?
