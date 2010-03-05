@@ -3,7 +3,6 @@
     = t(".title")
 
 - form_for(@question, :url => question_path(current_languages,@question), :html => {:class => "form"}) do |f|
-  = f.error_messages
   =render :partial => "form", :locals => {:f => f}
   .field-group
     .buttons

@@ -129,57 +129,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     self._head[I18n.locale.to_s.split("-").first] || ""
   end
 
-  # FIXME: View code on the model IS NOT cool, move it to a helper
-  def context_panel_ads
-    if has_custom_ads == true
-      ads = []
-      Ad.find_all_by_group_id_and_position(id,'context_panel').each do |ad|
-        ads << ad.code
-      end
-      return ads.join
-    end
-    "<!--Ad Bard advertisement snippet, begin -->
-      <script type='text/javascript'>
-      var ab_h = '#{AppConfig.adbard_host_id}';
-      var ab_s = '#{AppConfig.adbard_site_key}';
-      </script>
-      <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
-      <!--Ad Bard, end -->"
-  end
-
-  # FIXME: View code on the model IS NOT cool, move it to a helper
-  def header_ads
-    if has_custom_ads
-      ads = []
-      Ad.find_all_by_group_id_and_position(id,'header').each do |ad|
-        ads << ad.code
-      end
-      return ads.join
-    end
-  end
-
-  # FIXME: View code on the model IS NOT cool, move it to a helper
-  def content_ads
-    if has_custom_ads
-      ads = []
-      Ad.find_all_by_group_id_and_position(id,'content').each do |ad|
-        ads << ad.code
-      end
-      return ads.join
-    end
-  end
-
-  # FIXME: View code on the model IS NOT cool, move it to a helper
-  def footer_ads
-    if has_custom_ads
-      ads = []
-      Ad.find_all_by_group_id_and_position(id,'footer').each do |ad|
-        ads << ad.code
-      end
-      return ads.join
-    end
-  end
-
   def default_tags=(c)
     if c.kind_of?(String)
       c = c.downcase.split(",").join(" ").split(" ")
