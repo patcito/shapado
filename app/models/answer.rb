@@ -47,8 +47,7 @@ class Answer < Comment
   def add_vote!(v, voter)
     self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1,
                                                           :votes_average => v}},
-                                                         :upsert => true,
-                                                         :safe => true)
+                                                         :upsert => true)
 
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
@@ -64,8 +63,7 @@ class Answer < Comment
   def remove_vote!(v, voter)
     self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1,
                                                           :votes_average => (-v)}},
-                                                         :upsert => true,
-                                                         :safe => true)
+                                                         :upsert => true)
 
     if v > 0
       self.user.update_reputation(:answer_undo_up_vote, self.group)
