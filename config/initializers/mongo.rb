@@ -22,3 +22,6 @@ Dir.glob("#{RAILS_ROOT}/app/javascripts/**/*.js") do |js_path|
   # HACK: looks like ruby driver doesn't support this
   MongoMapper.database.eval("db.system.js.save({_id: '#{name}', value: #{code}})")
 end
+
+require 'support/versioneable'
+
