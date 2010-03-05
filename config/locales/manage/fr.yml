@@ -9,6 +9,8 @@ fr:
         rewards: récompenses
         reputation_rewards_subtitle: liste des récompenses de reputation
         reputation_rewards_description: ce formulaire permet de configurer comment les utilisateurs peuvent gagner et perdre des points de réputation pour chaque action.
+        reputation_constrains_subtitle: liste des contraintes pour chaque action
+        reputation_constrains_description: ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action.
       content:
         title: custom content
         question_prompt: question prompt

@@ -43,11 +43,16 @@ class AnswersController < ApplicationController
     @answer.question = @question
     @answer.group_id = @question.group_id
 
+    # workaround, seems like mm default values are broken
+    @answer.votes_count = 0
+    @answer.votes_average = 0
+    @answer.flags_count = 0
+
     if !logged_in?
       draft = Draft.create(:answer => @answer)
       session[:draft] = draft.id
       login_required
-    else
+    else # TODO: put a return statement and remove this else block
       @answer.user = current_user
       respond_to do |format|
         if @question && @answer.save
