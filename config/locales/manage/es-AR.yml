@@ -9,6 +9,8 @@ es-AR:
         rewards: premios
         reputation_rewards_subtitle: lista de los premios de reputación
         reputation_rewards_description: este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
+        reputation_constrains_subtitle: lista de las restricciónes de repotación por acción
+        reputation_constrains_description: este formulario permite configurar cuantos puntos de reputación se necesitan para efectuar cada acción
       content:
         title: custom content
         question_prompt: question prompt
