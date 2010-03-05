@@ -9,6 +9,8 @@ pt-PT:
         rewards: rewards
         reputation_rewards_subtitle: list of reputations rewards
         reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+        reputation_constrains_subtitle: list of reputations constrains for each action
+        reputation_constrains_description: this formular allows you to configure how much reputation points users to be able to do a given action
       content:
         title: custom content
         question_prompt: question prompt
