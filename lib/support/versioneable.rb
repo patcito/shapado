@@ -5,9 +5,13 @@ module Versioneable
       extend ClassMethods
       include InstanceMethods
       attr_accessor :rolling_back
-      key :versions, Array, :default => []
       many :versions
       before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
+
+      define_method(:versions=) do |v|
+        return if v.nil?
+        self[:versions] = v
+      end
     end
   end
 
