@@ -14,7 +14,7 @@ class Widget
 
   def self.types
     types = %w[UsersWidget BadgesWidget TopUsersWidget]
-    if AppConfig.enable_widgets
+    if AppConfig.enable_groups
       types += %w[GroupsWidget TopGroupsWidget]
     end
 
