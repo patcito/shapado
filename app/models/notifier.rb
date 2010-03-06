@@ -122,6 +122,7 @@ class Notifier < ActionMailer::Base
     if user && user.language
       language = user.language
     end
+    I18n.locale = language
 
     template_name = "#{@method_name}_#{language}"
     if Dir.glob(RAILS_ROOT+"/app/views/notifier/#{template_name}*").size == 0
