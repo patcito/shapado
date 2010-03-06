@@ -8,13 +8,13 @@ class WidgetsController < ApplicationController
   # GET /widgets.json
   def index
     @widget = Widget.new
-    @widgets = @group.widgets.all(:order => "position asc")
+    @widgets = @group.widgets.all(:order => "position asc", :_type.in => Widget.types)
   end
 
   # POST /widgets
   # POST /widgets.json
   def create
-    if Widget::TYPES.include?(params[:widget][:_type])
+    if Widget.types.include?(params[:widget][:_type])
       @widget = params[:widget][:_type].constantize.new
     end
 

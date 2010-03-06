@@ -28,6 +28,6 @@
 
 -form_tag widgets_path, :class => "form" do
   .group
-    = select :widget, "_type", Widget::TYPES
+    = select :widget, "_type", Widget.types
   .group.navform
     =submit_tag t("scaffold.add"), :class => "button"

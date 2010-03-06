@@ -8,7 +8,7 @@
       = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
   %span.right
     -if logged_in?
-      -if !current_group.isolate && !current_user.reputation.empty?
+      -if !current_group.isolate && !current_user.reputation.empty? && AppConfig.enable_groups
         .entry
           %ul.combobox
             %li
@@ -31,9 +31,10 @@
         =link_to t("layouts.application.logout"), logout_path
         |
     -else
-      .entry
-        =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
-        |
+      -if AppConfig.is_shapadocom
+        .entry
+          =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
+          |
       .entry
         =link_to t("layouts.application.log_in"), login_path
         |

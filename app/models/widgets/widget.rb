@@ -10,8 +10,16 @@ class Widget
   key :group_id, String, :index => true
   belongs_to :group
 
-  TYPES = %w[UsersWidget BadgesWidget GroupsWidget TopUsersWidget TopGroupsWidget]
   validates_uniqueness_of :name, :scope => :group_id
+
+  def self.types
+    types = %w[UsersWidget BadgesWidget TopUsersWidget]
+    if AppConfig.enable_widgets
+      types += %w[GroupsWidget TopGroupsWidget]
+    end
+
+    types
+  end
 
   def partial_name
     "widgets/#{self.name}"
