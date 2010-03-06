@@ -5,5 +5,5 @@ require 'cronedit'
 
 APP_ROOT = File.expand_path(File.dirname(__FILE__) + "/../")
 
-daily_report = "RAILS_ENV=production #{APP_ROOT}/script/daily_report"
+daily_report = "#{APP_ROOT}/script/daily_report production"
 CronEdit::Crontab.Add  'daily_report', {:hour => "2", :minute=> "50", :command => daily_report}
