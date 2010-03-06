@@ -105,7 +105,7 @@ class Notifier < ActionMailer::Base
       sent_on Time.now
 
       body :user => user, :report => report
-      content_type    "multipart/alternative"
+      content_type    "text/plain"
     end
   end
 
