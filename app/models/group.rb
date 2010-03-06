@@ -161,6 +161,10 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   end
 
   def add_member(user, role)
+    if !user.reputation[self.id]
+      User.set(user.id, {"reputation.#{self.id}" => 5})
+    end
+
     member = Member.new( :group_id => self._id,
                          :user_id => user._id,
                          :role => role)
