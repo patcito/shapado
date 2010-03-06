@@ -5,13 +5,13 @@ module Versionable
       extend ClassMethods
       include InstanceMethods
       attr_accessor :rolling_back
-      key :versions, Array
       many :versions
       before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
 
+      alias_method :assign_versions, :versions=
       define_method(:versions=) do |v|
         return if v.nil?
-        self[:versions] = v
+        assign_versions v
       end
     end
   end
@@ -31,6 +31,30 @@ module Versionable
 
       @rolling_back = true
       save!
+    end
+
+    def diff(key, pos1, pos2, format = :html)
+      version1 = self.version_at(pos1)
+      version2 = self.version_at(pos2)
+
+      Differ.diff_by_word(version1.content(key), version2.content(key)).format_as(format)
+    end
+
+    def current_version
+      Version.new(:data => self.attributes, :user_id => (self.updated_by_id_was || self.updated_by_id), :date => Time.now)
+    end
+
+    def version_at(pos)
+      case pos
+      when :current
+        current_version
+      when :first
+        self.versions.first
+      when :last
+        self.versions.last
+      else
+        self.versions[pos]
+      end
     end
   end
 

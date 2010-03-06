@@ -8,4 +8,9 @@ class Version
 
   key :user_id, String
   belongs_to :user
+
+  def content(key)
+    self.data[key].to_s
+  end
 end
+
