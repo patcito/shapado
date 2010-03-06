@@ -1,5 +1,5 @@
 module Support
-module Versioneable
+module Versionable
   def self.included(klass)
     klass.class_eval do
       extend ClassMethods
@@ -35,7 +35,7 @@ module Versioneable
   end
 
   module ClassMethods
-    def versioneable_keys(*keys)
+    def versionable_keys(*keys)
       define_method(:save_version) do
         data = {}
         keys.each do |key|

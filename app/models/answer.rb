@@ -1,7 +1,7 @@
 class Answer < Comment
   include MongoMapper::Document
   include MongoMapperExt::Filter
-  include Support::Versioneable
+  include Support::Versionable
   key :_id, String
 
   key :body, String, :required => true
@@ -28,7 +28,7 @@ class Answer < Comment
   validates_presence_of :user_id
   validates_presence_of :question_id
 
-  versioneable_keys :body
+  versionable_keys :body
   filterable_keys :body
 
   validate :disallow_spam

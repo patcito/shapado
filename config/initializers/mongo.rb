@@ -23,5 +23,5 @@ Dir.glob("#{RAILS_ROOT}/app/javascripts/**/*.js") do |js_path|
   MongoMapper.database.eval("db.system.js.save({_id: '#{name}', value: #{code}})")
 end
 
-require 'support/versioneable'
+require 'support/versionable'
 

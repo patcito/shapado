@@ -3,7 +3,7 @@ class Question
   include MongoMapperExt::Filter
   include MongoMapperExt::Slugizer
   include MongoMapperExt::Tags
-  include Support::Versioneable
+  include Support::Versionable
 
   ensure_index :tags
   ensure_index :language
@@ -57,7 +57,7 @@ class Question
   validates_true_for :tags, :logic => lambda { !tags.empty? && tags.size <= 6},
                      :message => lambda {I18n.t("questions.model.messages.too_many_tags") }
 
-  versioneable_keys :title, :body, :tags
+  versionable_keys :title, :body, :tags
   filterable_keys :title, :body
   language :language
 
