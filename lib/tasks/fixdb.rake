@@ -10,7 +10,14 @@ namespace :fixdb do
       question.versions.each do |version|
         new_data = {}
         version.data.each do |k, v|
+          next unless v.kind_of?(Array)
           new_data[k] = v.first
+        end
+
+        %w[title body tags].each do |k|
+          if !version.data[k]
+            new_data[k] = question[k]
+          end
         end
         version.data = new_data
       end
@@ -22,8 +29,16 @@ namespace :fixdb do
       answer.versions.each do |version|
         new_data = {}
         version.data.each do |k, v|
+          next unless v.kind_of?(Array)
           new_data[k] = v.first
         end
+
+        %w[body].each do |k|
+          if !version.data[k]
+            new_data[k] = answer[k]
+          end
+        end
+
         version.data = new_data
       end
       answer.save(:validate => false)

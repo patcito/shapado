@@ -65,6 +65,8 @@ module Versionable
         keys.each do |key|
           if change = changes[key.to_s]
             data[key.to_s] = change.first
+          else
+            data[key.to_s] = self[key]
           end
         end
 

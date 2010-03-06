@@ -10,7 +10,12 @@ class Version
   belongs_to :user
 
   def content(key)
-    self.data[key].to_s
+    cdata = self.data[key]
+    if cdata.respond_to?(:join)
+      cdata.join(" ")
+    else
+      cdata
+    end
   end
 end
 
