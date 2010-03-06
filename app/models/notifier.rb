@@ -101,7 +101,7 @@ class Notifier < ActionMailer::Base
     recipients user.email
     template_for user do
       from "Shapado <#{AppConfig.notification_email}>"
-      subject I18n.t("mailers.notifications.report.subject", :group => report.group, :app => AppConfig.application_name)
+      subject I18n.t("mailers.notifications.report.subject", :group => report.group.name, :app => AppConfig.application_name)
       sent_on Time.now
 
       body :user => user, :report => report
