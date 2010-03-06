@@ -1,32 +1,32 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:friends", "fixdb:activity_notifs", "fixdb:custom_settings"] do
+task :fixall => [:environment, "fixdb:wiki"] do
 end
 
 namespace :fixdb do
-  desc "Friends"
-  task :friends => :environment do
-    User.all.each do |user|
-      user.send(:create_friend_list)
-      user.save(:validate => false)
+  desc "Fix wiki"
+  task :wiki => :environment do
+    puts "Updating #{Question.count(:versions => {:$exists => true})} questions"
+    Question.find_each(:versions => {:$exists => true}) do |question|
+      question.versions.each do |version|
+        new_data = {}
+        version.data.each do |k, v|
+          new_data[k] = v.first
+        end
+        version.data = new_data
+      end
+      question.save(:validate => false)
     end
-  end
 
-  desc "Notifications"
-  task :activity_notifs => :environment do
-    User.find_each(:fields => [:_id]) do |user|
-      User.set(user.id, {"notification_opts.activities" => "1", "notification_opts.reports" => "1"})
-    end
-  end
-
-  desc "Update custom settings"
-  task :custom_settings => :environment do
-    $stderr.puts "Updating #{Group.count} groups..."
-    Group.find_each do |g|
-      g.has_custom_ads = true
-      g.has_custom_analytics = true
-      g.has_custom_html = true
-      g.has_custom_js = true
-      g.save
+    puts "Updating #{Answer.count(:versions => {:$exists => true})} answers"
+    Answer.find_each(:versions => {:$exists => true}) do |answer|
+      answer.versions.each do |version|
+        new_data = {}
+        version.data.each do |k, v|
+          new_data[k] = v.first
+        end
+        version.data = new_data
+      end
+      answer.save(:validate => false)
     end
   end
 end

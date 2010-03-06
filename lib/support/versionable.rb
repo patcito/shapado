@@ -64,7 +64,7 @@ module Versionable
         data = {}
         keys.each do |key|
           if change = changes[key.to_s]
-            data[key.to_s] = change
+            data[key.to_s] = change.first
           end
         end
 
