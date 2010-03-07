@@ -45,7 +45,11 @@ class VotesController < ApplicationController
     end
 
     if voted
-      Magent.push("actors.judge", :on_vote, vote.id)
+      if vote.voteable_type == "Question"
+        Magent.push("actors.judge", :on_vote_question, vote.id)
+      elsif vote.voteable_type == "Answer"
+        Magent.push("actors.judge", :on_vote_answer, vote.id)
+      end
     end
 
     respond_to do |format|

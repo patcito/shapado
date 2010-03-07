@@ -24,7 +24,8 @@ module Actors
     expose :on_follow
     expose :on_unfollow
 
-    expose :on_vote
+    expose :on_vote_question
+    expose :on_vote_answer
 
     private
     def create_badge(user, group, opts)
