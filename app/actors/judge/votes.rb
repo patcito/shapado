@@ -2,6 +2,7 @@ module JudgeActions
   module Votes
     def on_vote_question(payload)
       vote = Vote.find(payload.first)
+
       user = vote.user
       question = vote.voteable
       group = vote.group

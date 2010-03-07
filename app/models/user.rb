@@ -224,8 +224,8 @@ class User
 
   def vote_on(voteable)
     Vote.first(:voteable_type => voteable.class.to_s,
-               :voteable_id => voteable._id,
-               :user_id     => self._id )
+               :voteable_id => voteable.id,
+               :user_id     => self.id )
   end
 
   def favorite?(question)

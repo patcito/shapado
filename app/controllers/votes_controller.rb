@@ -13,11 +13,11 @@ class VotesController < ApplicationController
       vote.value = -1
     end
 
-
     vote.voteable_type = params[:voteable_type]
     vote.voteable_id = params[:voteable_id]
     vote.group = vote.voteable.group
     vote.user_ip = request.remote_ip
+    vote.user = current_user
 
     voted = false
     if vote.voteable.user != current_user
@@ -30,7 +30,6 @@ class VotesController < ApplicationController
         user_vote.save!
         flash[:notice] = t("votes.create.flash_notice")
       else
-        vote.user = current_user
         if vote.save
           vote.voteable.add_vote!(vote.value, current_user)
           voted = true
@@ -44,7 +43,7 @@ class VotesController < ApplicationController
       flash[:error] += t(params[:voteable_type].downcase, :scope => "activerecord.models").downcase
     end
 
-    if voted
+    if voted && !vote.new?
       if vote.voteable_type == "Question"
         Magent.push("actors.judge", :on_vote_question, vote.id)
       elsif vote.voteable_type == "Answer"
