@@ -28,7 +28,16 @@ module Actors
     expose :on_vote_answer
 
     private
-    def create_badge(user, group, opts)
+    def create_badge(user, group, opts, check_opts = {})
+      unique = opts.delete(:unique) || check_opts.delete(:unique)
+
+      ok = true
+      if unique
+        ok = user.find_badge_on(group, opts[:token], check_opts).nil?
+      end
+
+      return unless ok
+
       badge = user.badges.create!(opts)
       if !badge.new? && !user.email.blank? && user.notification_opts["activities"] == "1"
         Notifier.deliver_earned_badge(user, group, badge)
