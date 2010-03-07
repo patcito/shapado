@@ -21,15 +21,8 @@ class VotesController < ApplicationController
 
     voted = false
     if vote.voteable.user != current_user
-      user_vote = current_user.vote_on(vote.voteable)
-      if user_vote && (user_vote.value != vote.value)
-        vote.voteable.remove_vote!(user_vote.value, current_user)
-        vote.voteable.add_vote!(vote.value, current_user)
-        user_vote.value = vote.value
-        voted = true
-        user_vote.save!
-        flash[:notice] = t("votes.create.flash_notice")
-      else
+      voted = change_vote(vote)
+      if !voted
         if vote.save
           vote.voteable.add_vote!(vote.value, current_user)
           voted = true
@@ -99,4 +92,19 @@ class VotesController < ApplicationController
     end
   end
 
+  def change_vote(vote)
+    user_vote = current_user.vote_on(vote.voteable)
+    voteable = vote.voteable
+
+    if user_vote && (user_vote.value != vote.value)
+      voteable.remove_vote!(user_vote.value, current_user)
+      voteable.add_vote!(vote.value, current_user)
+
+      user_vote.value = vote.value
+      user_vote.save!
+      flash[:notice] = t("votes.create.flash_notice")
+
+      true
+    end
+  end
 end
