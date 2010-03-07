@@ -67,6 +67,15 @@ namespace :setup do
     admin.save!
   end
 
+  desc "Create user"
+  task :create_user => [:environment] do
+    user = User.new(:login => "user", :password => "user123",
+                                      :password_confirmation => "user123",
+                                      :email => "user@example.com",
+                                      :role => "user")
+    user.save!
+  end
+
   desc "Reindex data"
   task :reindex => [:environment] do
     Question.find_each do |question|

@@ -5,35 +5,35 @@ module JudgeActions
       user = vote.user
       question = vote.voteable
       group = vote.group
-      
-      if voteable.kind_of?(Question) && vuser = voteable.user
+
+      if vuser = question.user
         if vote.value == 1
-          create_badge(vuser, group, :token => "student", :group_id => group.id, :source => voteable, :unique => true)
+          create_badge(vuser, group, :token => "student", :group_id => group.id, :source => question, :unique => true)
         end
 
-        if voteable.votes_average >= 10
-          create_badge(vuser, group, {:token => "good_question", :group_id => group.id, :source => voteable}, {:unique => true, :source_id => voteable.id})
+        if question.votes_average >= 10
+          create_badge(vuser, group, {:token => "good_question", :group_id => group.id, :source => question}, {:unique => true, :source_id => question.id})
         end
       end
-      
+
       on_vote(vote)
       on_vote_user(vote)
     end
-    
+
     def on_vote_answer(payload)
       vote = Vote.find(payload.first)
       user = vote.user
       answer = vote.voteable
       group = vote.group
 
-      if vuser = voteable.user
-        if voteable.votes_average >= 10
-          create_badge(vuser, group, {:token => "good_answer", :type => "silver", :group_id => group.id, :source => voteable}, {:unique => true, :source_id => voteable.id})
+      if vuser = answer.user
+        if answer.votes_average >= 10
+          create_badge(vuser, group, {:token => "good_answer", :type => "silver", :group_id => group.id, :source => answer}, {:unique => true, :source_id => answer.id})
         end
 
         if vote.value == 1
           stats = vuser.stats(:tag_votes)
-          tags = voteable.question.tags
+          tags = answer.question.tags
           tokens = Set.new(Badge.TOKENS)
           tags.delete_if { |t| tokens.include?(t) }
 
@@ -53,16 +53,16 @@ module JudgeActions
             end
 
             if badge_type && vuser.find_badge_on(group, tag, :type => badge_type).nil?
-              create_badge(vuser, group, :token => tag, :type => badge_type, :group_id => group.id, :source => voteable, :for_tag => true)
+              create_badge(vuser, group, :token => tag, :type => badge_type, :group_id => group.id, :source => answer, :for_tag => true)
             end
           end
         end
       end
-      
+
       on_vote(vote)
       on_vote_user(vote)
     end
-    
+
     private
     def on_vote(vote)
       group = vote.group
@@ -78,12 +78,12 @@ module JudgeActions
         create_badge(user, group, :token => "popular_person", :type => "silver", :group_id => group.id, :unique => true)
       end
     end
-    
+
     def on_vote_user(vote)
       group = vote.group
       user = vote.user
 
-      vuser = voteable.user
+      vuser = vote.voteable.user
       return if vuser.nil?
 
       vote_value = vuser.votes_up[group.id] ? vuser.votes_up[group.id] : 0
