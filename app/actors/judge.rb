@@ -40,7 +40,7 @@ module Actors
 
       return unless ok
 
-      badge = user.badges.create!(opts.merge{:group_id => group.id})
+      badge = user.badges.create!(opts.merge({:group_id => group.id}))
       if !badge.new? && !user.email.blank? && user.notification_opts["activities"] == "1"
         Notifier.deliver_earned_badge(user, group, badge)
       end
