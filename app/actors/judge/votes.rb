@@ -12,6 +12,10 @@ module JudgeActions
           create_badge(vuser, group, :token => "student", :source => question, :unique => true)
         end
 
+        if question.votes_average >= 10
+          create_badge(vuser, group, {:token => "nice_question", :source => question}, {:unique => true, :source_id => question.id})
+        end
+
         if question.votes_average >= 25
           create_badge(vuser, group, {:token => "good_question", :source => question}, {:unique => true, :source_id => question.id})
         end
@@ -32,6 +36,10 @@ module JudgeActions
       group = vote.group
 
       if vuser = answer.user
+        if answer.votes_average >= 10
+          create_badge(vuser, group, {:token => "nice_answer", :source => answer}, {:unique => true, :source_id => answer.id})
+        end
+
         if answer.votes_average >= 25
           create_badge(vuser, group, {:token => "good_answer", :source => answer}, {:unique => true, :source_id => answer.id})
         end
