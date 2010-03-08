@@ -2,7 +2,7 @@ class Badge
   include MongoMapper::Document
 
   TYPES = %w[gold silver bronze]
-  GOLD = %w[rockstar popstar fanatic service_medal famous_question celebrity great_answer]
+  GOLD = %w[rockstar popstar fanatic service_medal famous_question celebrity great_answer great_question]
   SILVER = %w[popular_person guru favorite_question tutor addict good_question
               good_answer notable_question civic_duty enlightened]
   BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
