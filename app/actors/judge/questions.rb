@@ -84,6 +84,10 @@ module JudgeActions
         if attributes["votes_average"] >= 3
           create_badge(deleter, group, :token => "disciplined", :unique => true)
         end
+
+        if attributes["votes_average"] <= -3
+          create_badge(deleter, group, :token => "peer_pressure", :unique => true)
+        end
       end
     end
 
