@@ -97,41 +97,41 @@ fr:
         name: célébrité
         description: "avoir plus de 50 suiveurs"
       necromancer:
-        name: necromancer
-        description: Answered a question more than 60 days later with at least 5 votes
+        name: nécromancien
+        description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
       stellar_question:
-        name: stellar question
-        description: Question favorited by 100 users
+        name: question stellaire
+        description: Question favorie d'au moins 100 utilisateurs
       nice_question:
-        name: nice question
-        description: Question voted up 10 times
+        name: bonne question
+        description: Question votée positivement 10 fois
       nice_answer:
-        name: nice answer
-        description: Answer voted up 10 times
+        name: bonne réponse
+        description: Réponse votée positivement 10 fois
       great_question:
-        name: great question
-        description: Question voted up 100 times
+        name: formidable question
+        description: Question votée positivement 100 fois
       great_answer:
-        name: great answer
-        description: Answer voted up 100 times
+        name: formidable réponse
+        description: Réponse votée positivement 100 fois
       peer_pressure:
-        name: peer pressure
-        description: Deleted own post with score of -3 or lower
+        name: influence des pairs
+        description: A supprimé un poste avec un score de -3 ou moins
       enlightened:
-        name: enlightened
-        description: First answer was accepted with at least 10 up votes
+        name: éclairé
+        description: Première réponse acceptée avec au moins 10 votes positifs
       disciplined:
-        name: disciplined
-        description: Deleted own post with score of 3 or higher
+        name: discipliné
+        description: A supprimé un poste avec un score de 3 ou plus
       cleanup:
-        name: cleanup
-        description: First rollback
+        name: nettoyage
+        description: Premier défait
       civic_duty:
-        name: civic duty
-        description: Voted 300 times
+        name: devoir civique
+        description: A voté 300 fois
       citizen_patrol:
-        name: citizen patrol
-        description: First flagged post
+        name: patrouille civile
+        description: Premier rapport de poste
 
   activerecord:
     models:
