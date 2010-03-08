@@ -95,11 +95,12 @@ module JudgeActions
       question = Question.find(payload.first)
       user = question.user
       group = question.group
-      if question.favorites_count >= 25 &&
-          user.badges.find_badge_on(group, "favorite_question", :source_id => question.id).nil?
-        create_badge(user, group, :token => "favorite_question",
-                                  :group_id => group.id,
-                                  :source => question)
+      if question.favorites_count >= 25
+        create_badge(user, group, :token => "favorite_question", :source => question, {:unique => true, :source_id => question.id})
+      end
+
+      if question.favorites_count >= 100
+        create_badge(user, group, :token => "stellar_question", :source => question, {:unique => true, :source_id => question.id})
       end
     end
 
