@@ -12,11 +12,11 @@ module JudgeActions
       end
 
       if question.answer == answer && answer.votes_average >= 10
-        create_badge(answer.user, group, :token => "enlightened", :source => answer)
+        create_badge(answer.user, group, :token => "enlightened", :source => answer, {:unique => true, :source_id => answer.id})
       end
 
       if question.answer == answer && answer.votes_average >= 40
-        create_badge(answer.user, group, :token => "guru", :source => answer)
+        create_badge(answer.user, group, :token => "guru", :source => answer, {:unique => true, :source_id => answer.id})
       end
 
       if question.answer == answer && answer.votes_average > 2
