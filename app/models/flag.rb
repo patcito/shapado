@@ -7,6 +7,9 @@ class Flag
   key :user_id, String
   belongs_to :user
 
+  key :group_id, String
+  belongs_to :group
+
   key :flaggeable_id, String
   key :flaggeable_type, String
   belongs_to :flaggeable, :polymorphic => true

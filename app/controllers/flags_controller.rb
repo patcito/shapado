@@ -4,6 +4,8 @@ class FlagsController < ApplicationController
   def create
     flag = Flag.new
     flag.safe_update(%w[flaggeable_type flaggeable_id type], params[:flag])
+    flag.group = current_group
+
     flagged = false
 
     if flag.flaggeable.user != current_user
@@ -12,6 +14,8 @@ class FlagsController < ApplicationController
         flagged = true
         flag.flaggeable.flagged!
         flash[:notice] = t(:flash_notice, :scope => "flags.create")
+
+        Magent.push("actors.judge", :on_flag, flag.id)
       else
         flash[:error] = flag.errors.full_messages.join(", ")
       end

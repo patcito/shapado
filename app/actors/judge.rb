@@ -23,6 +23,7 @@ module Actors
     expose :on_comment
     expose :on_follow
     expose :on_unfollow
+    expose :on_flag
 
     expose :on_vote_question
     expose :on_vote_answer
@@ -38,7 +39,7 @@ module Actors
 
       return unless ok
 
-      badge = user.badges.create!(opts)
+      badge = user.badges.create!(opts.merge{:group_id => group.id})
       if !badge.new? && !user.email.blank? && user.notification_opts["activities"] == "1"
         Notifier.deliver_earned_badge(user, group, badge)
       end

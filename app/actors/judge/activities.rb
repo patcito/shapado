@@ -14,14 +14,14 @@ module JudgeActions
         create_badge(user, group, :token => "fanatic", :group_id => group_id)
       end
     end
-    
+
     def on_update_answer(payload)
       answer = Answer.find(payload.first)
       user = answer.updated_by
 
       user.find_badge_on(answer.group, "editor") || create_badge(user, answer.group, :token => "editor", :group_id => answer.group_id)
     end
-    
+
     def on_comment(payload)
       comment_id = payload.first
       comment = Comment.find(comment_id)
@@ -33,7 +33,7 @@ module JudgeActions
         user.find_badge_on(group, "commentator") || create_badge(user, group, :token => "commentator", :group_id => group.id, :source => comment)
       end
     end
-    
+
     def on_follow(payload)
       follower = User.find(payload.shift)
       followed = User.find(payload.shift)
@@ -51,8 +51,13 @@ module JudgeActions
         create_badge(followed, group, :token => "celebrity",:group_id => group.id)
       end
     end
-    
+
     def on_unfollow(payload)
+    end
+
+    def on_flag(payload)
+      flag = Flag.find(payload.first)
+      create_badge(flag.user, flag.group, :token => "citizen_patrol", :source => flag, :unique => true)
     end
   end
 end
