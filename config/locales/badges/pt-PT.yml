@@ -64,6 +64,43 @@
         description: visited the site each day for 8 consecutive days
       editor:
         description: first edited post
+      necromancer:
+        name: necromancer
+        description:
+      stellar_question:
+        name: stellar_question
+        description:
+      nice_question:
+        name: nice_question
+        description:
+      nice_answer:
+        name: nice_answer
+        description:
+      great_question:
+        name: great_question
+        description:
+      great_answer:
+        name: great_answer
+        description:
+      peer_pressure:
+        name: peer_pressure
+        description:
+      enlightened:
+        name: enlightened
+        description:
+      disciplined:
+        name: disciplined
+        description:
+      cleanup:
+        name: cleanup
+        description:
+      civic_duty:
+        name: civic_duty
+        description:
+      citizen_patrol:
+        name: citizen_patrol
+        description:
+
   activerecord:
     models:
       badge: badge
