@@ -8,16 +8,19 @@ module JudgeActions
 
       if question.answer == answer && group.answers.count(:user_id => answer.user.id) == 1
         user_badges = answer.user.badges
-        answer.user.find_badge_on(group,"troubleshooter") || create_badge(answer.user, group, :token => "troubleshooter", :type => "bronze", :group => group, :source => answer)
+        answer.user.find_badge_on(group,"troubleshooter") || create_badge(answer.user, group, :token => "troubleshooter", :source => answer)
+      end
+
+      if question.answer == answer && answer.votes_average >= 10
+        create_badge(answer.user, group, :token => "enlightened", :source => answer)
       end
 
       if question.answer == answer && answer.votes_average >= 40
-        answer.user.find_badge_on(group,"guru") || create_badge(answer.user, group, :token => "guru", :type => "silver", :group => group, :source => answer)
+        create_badge(answer.user, group, :token => "guru", :source => answer)
       end
 
       if question.answer == answer && answer.votes_average > 2
-        user_badges = answer.user.badges
-        answer.user.find_badge_on(group,"tutor") || create_badge(answer.user, group, :token => "tutor", :type => "bronze", :group => group, :source => answer)
+        create_badge(answer.user, group, :token => "tutor", :source => answer, :unique => true)
       end
 
       answer.user.stats.add_expert_tags(*question.tags)
