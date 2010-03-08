@@ -12,11 +12,11 @@ module JudgeActions
       end
 
       if question.answer == answer && answer.votes_average >= 10
-        create_badge(answer.user, group, :token => "enlightened", :source => answer, {:unique => true, :source_id => answer.id})
+        create_badge(answer.user, group, {:token => "enlightened", :source => answer}, {:unique => true, :source_id => answer.id})
       end
 
       if question.answer == answer && answer.votes_average >= 40
-        create_badge(answer.user, group, :token => "guru", :source => answer, {:unique => true, :source_id => answer.id})
+        create_badge(answer.user, group, {:token => "guru", :source => answer}, {:unique => true, :source_id => answer.id})
       end
 
       if question.answer == answer && answer.votes_average > 2
@@ -96,11 +96,11 @@ module JudgeActions
       user = question.user
       group = question.group
       if question.favorites_count >= 25
-        create_badge(user, group, :token => "favorite_question", :source => question, {:unique => true, :source_id => question.id})
+        create_badge(user, group, {:token => "favorite_question", :source => question}, {:unique => true, :source_id => question.id})
       end
 
       if question.favorites_count >= 100
-        create_badge(user, group, :token => "stellar_question", :source => question, {:unique => true, :source_id => question.id})
+        create_badge(user, group, {:token => "stellar_question", :source => question}, {:unique => true, :source_id => question.id})
       end
     end
 

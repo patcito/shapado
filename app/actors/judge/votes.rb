@@ -48,6 +48,10 @@ module JudgeActions
           create_badge(vuser, group, {:token => "great_answer", :source => answer}, {:unique => true, :source_id => answer.id})
         end
 
+        if (answer.created_at - answer.question.created_at) >= 60.days && answer.votes_average >= 5
+          create_badge(vuser, group, {:token => "necromancer", :source => answer}, {:unique => true, :source_id => answer.id})
+        end
+
         if vote.value == 1
           stats = vuser.stats(:tag_votes)
           tags = answer.question.tags
