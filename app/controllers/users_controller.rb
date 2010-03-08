@@ -49,7 +49,8 @@ class UsersController < ApplicationController
                                           :banned => false)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
                                       :group_id => current_group.id,
-                                      :per_page => 10)
+                                      :per_page => 10,
+                                      :banned => false)
 
     @badges = @user.badges.paginate(:page => params[:badges_page],
                                     :group_id => current_group.id,
