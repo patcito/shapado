@@ -125,6 +125,8 @@ class AnswersController < ApplicationController
     @answer.destroy
     @question.answer_removed!
 
+    Magent.push("actors.judge", :on_destroy_answer, current_user.id, @answer.attributes)
+
     respond_to do |format|
       format.html { redirect_to(question_path(current_languages, @question)) }
       format.json  { head :ok }

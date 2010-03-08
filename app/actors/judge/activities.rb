@@ -22,6 +22,22 @@ module JudgeActions
       user.find_badge_on(answer.group, "editor") || create_badge(user, answer.group, :token => "editor", :group_id => answer.group_id)
     end
 
+    def on_destroy_answer(payload)
+      deleter = User.find(payload.first)
+      attributes = payload.last
+      group = Group.find(attributes["group_id"])
+
+      if deleter.id == attributes["user_id"]
+        if attributes["votes_average"] >= 3
+          create_badge(deleter, group, :token => "disciplined", :unique => true)
+        end
+
+        if attributes["votes_average"] <= -3
+          create_badge(deleter, group, :token => "peer_pressure", :unique => true)
+        end
+      end
+    end
+
     def on_comment(payload)
       comment_id = payload.first
       comment = Comment.find(comment_id)

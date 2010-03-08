@@ -19,7 +19,6 @@ module Actors
     expose :on_question_favorite
 
     expose :on_activity
-    expose :on_update_answer
     expose :on_comment
     expose :on_follow
     expose :on_unfollow
@@ -28,6 +27,9 @@ module Actors
 
     expose :on_vote_question
     expose :on_vote_answer
+
+    expose :on_destroy_answer
+    expose :on_update_answer
 
     private
     def create_badge(user, group, opts, check_opts = {})
