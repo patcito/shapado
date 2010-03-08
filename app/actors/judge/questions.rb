@@ -73,10 +73,14 @@ module JudgeActions
     end
 
     def on_destroy_question(payload)
-      user = User.find(payload.first) # FIXME: pass the group id
-      if user.questions.first.nil?
-        user_badges = user.badges
-        user_badges.destroy_all(:token => "inquirer")
+      deleter = User.find(payload.first)
+      attributes = payload.last
+      group = Group.find(attributes["group_id"])
+
+      if deleter.id == attributes["user_id"]
+        if attributes["votes_average"] >= 3
+          create_badge(deleter, group, :token => "disciplined", :unique => true)
+        end
       end
     end
 
