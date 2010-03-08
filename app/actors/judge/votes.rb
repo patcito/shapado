@@ -78,6 +78,10 @@ module JudgeActions
       if user.stats(:views_count).views_count >= 10000
         create_badge(user, group, :token => "popular_person", :type => "silver", :group_id => group.id, :unique => true)
       end
+
+      if user.votes.count >= 300
+        create_badge(user, group, :token => "civic_duty", :unique => true)
+      end
     end
 
     def on_vote_user(vote)

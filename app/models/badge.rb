@@ -3,7 +3,7 @@ class Badge
 
   TYPES = %w[gold silver bronze]
   GOLD = %w[rockstar popstar fanatic service_medal famous_question celebrity]
-  SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer notable_question]
+  SILVER = %w[popular_person guru favorite_question tutor addict good_question good_answer notable_question civic_duty]
   BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
               merit_medal effort_medal student shapado editor popular_question
               friendly interesting_person citizen_patrol]
