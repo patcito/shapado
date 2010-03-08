@@ -29,9 +29,11 @@ class QuestionsController < ApplicationController
 
   def rollback
     @question = Question.find_by_slug_or_id(params[:id])
+    @question.updated_by = current_user
 
     if @question.rollback!(params[:version].to_i)
       flash[:notice] = t(:flash_notice, :scope => "questions.update")
+      Magent.push("actors.judge", :on_rollback, @question.id)
     end
 
     respond_to do |format|

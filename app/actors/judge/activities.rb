@@ -59,5 +59,10 @@ module JudgeActions
       flag = Flag.find(payload.first)
       create_badge(flag.user, flag.group, :token => "citizen_patrol", :source => flag, :unique => true)
     end
+
+    def on_rollback(payload)
+      question = Question.find(payload.first)
+      create_badge(question.updated_by, question.group, :token => "cleanup", :source => question, :unique => true)
+    end
   end
 end

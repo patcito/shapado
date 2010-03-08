@@ -25,8 +25,8 @@ module Versionable
         version.data.each do |key, value|
           self.send("#{key}=", value.first)
         end
-        self.updated_by_id = version.user_id
-        self.updated_at = version.date
+        self.updated_by_id = version.user_id unless self.updated_by_id_changed?
+        self.updated_at = version.date unless self.updated_at_changed?
       end
 
       @rolling_back = true

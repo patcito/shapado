@@ -22,7 +22,7 @@ module JudgeActions
 
       answer.user.stats.add_expert_tags(*question.tags)
     end
-  
+
     def on_question_unsolved(payload)
       question_id, answer_id = payload
       question = Question.find(question_id)
@@ -44,7 +44,7 @@ module JudgeActions
         tutor.destroy if tutor
       end
     end
-    
+
     def on_view_question(payload)
       question = Question.find(payload.first)
       user = question.user
@@ -60,7 +60,7 @@ module JudgeActions
         create_badge(user, group, :token => "famous_question", :group_id => group.id, :source => question)
       end
     end
-    
+
     def on_ask_question(payload)
       question = Question.find(payload.first)
       user = question.user
@@ -71,7 +71,7 @@ module JudgeActions
         user.find_badge_on(group, "inquirer") || create_badge(user, group, :token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
       end
     end
-    
+
     def on_destroy_question(payload)
       user = User.find(payload.first) # FIXME: pass the group id
       if user.questions.first.nil?
@@ -79,7 +79,7 @@ module JudgeActions
         user_badges.destroy_all(:token => "inquirer")
       end
     end
-    
+
     def on_question_favorite(payload)
       question = Question.find(payload.first)
       user = question.user
@@ -91,6 +91,6 @@ module JudgeActions
                                   :source => question)
       end
     end
-    
+
   end
 end
