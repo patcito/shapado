@@ -36,9 +36,9 @@ en:
       addict:
         description: visited the site each day for 20 consecutive days
       good_question:
-        description: having a question that reaches an average of more than 10 votes
+        description: having a question that reaches an average of more than 25 votes
       good_answer:
-        description: having an answer that reaches an average of more than 10 votes
+        description: having an answer that reaches an average of more than 25 votes
       pioneer:
         description: be one of the first user to register
       supporter:
@@ -75,40 +75,40 @@ en:
         description: getting more than 100 followers
       necromancer:
         name: necromancer
-        description:
+        description: Answered a question more than 60 days later with at least 5 votes
       stellar_question:
-        name: stellar_question
-        description:
+        name: stellar question
+        description: Question favorited by 100 users
       nice_question:
-        name: nice_question
-        description:
+        name: nice question
+        description: Question voted up 10 times
       nice_answer:
-        name: nice_answer
-        description:
+        name: nice answer
+        description: Answer voted up 10 times
       great_question:
-        name: great_question
-        description:
+        name: great question
+        description: Question voted up 100 times
       great_answer:
-        name: great_answer
-        description:
+        name: great answer
+        description: Answer voted up 100 times
       peer_pressure:
-        name: peer_pressure
-        description:
+        name: peer pressure
+        description: Deleted own post with score of -3 or lower
       enlightened:
         name: enlightened
-        description:
+        description: First answer was accepted with at least 10 up votes
       disciplined:
         name: disciplined
-        description:
+        description: Deleted own post with score of 3 or higher
       cleanup:
         name: cleanup
-        description:
+        description: First rollback
       civic_duty:
-        name: civic_duty
-        description:
+        name: civic duty
+        description: Voted 300 times
       citizen_patrol:
-        name: citizen_patrol
-        description:
+        name: citizen patrol
+        description: First flagged post
 
   activerecord:
     models:

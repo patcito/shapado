@@ -96,40 +96,40 @@ es-AR:
         description: tiene mas de 100 seguidores
       necromancer:
         name: necromancer
-        description:
+        description: contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
       stellar_question:
-        name: stellar_question
-        description:
+        name: stellar question
+        description: Pregunta con mas de 100 favoritos
       nice_question:
-        name: nice_question
-        description:
+        name: nice question
+        description: pregunta votada 10 veces
       nice_answer:
-        name: nice_answer
-        description:
+        name: nice answer
+        description: respuesta votada 10 veces
       great_question:
-        name: great_question
-        description:
+        name: great question
+        description: pregunta votada 100 veces
       great_answer:
-        name: great_answer
-        description:
+        name: great answer
+        description: respuesta votada 10 veces
       peer_pressure:
-        name: peer_pressure
-        description:
+        name: peer pressure
+        description: borra su propio post con puntaje menor igual a -3
       enlightened:
         name: enlightened
-        description:
+        description: primera respuesta aceptada con al menos 10 votos positivos
       disciplined:
         name: disciplined
-        description:
+        description: borra su propio post con puntaje mayor igual a 3
       cleanup:
         name: cleanup
-        description:
+        description: Primer rollback
       civic_duty:
-        name: civic_duty
-        description:
+        name: civic duty
+        description: vota 300 veces
       citizen_patrol:
-        name: citizen_patrol
-        description:
+        name: citizen patrol
+        description: primer post reportado
 
   activerecord:
     models:
