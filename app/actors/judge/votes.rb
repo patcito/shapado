@@ -28,8 +28,8 @@ module JudgeActions
       group = vote.group
 
       if vuser = answer.user
-        if answer.votes_average >= 10
-          create_badge(vuser, group, {:token => "good_answer", :type => "silver", :group_id => group.id, :source => answer}, {:unique => true, :source_id => answer.id})
+        if answer.votes_average >= 25
+          create_badge(vuser, group, {:token => "good_answer", :source => answer}, {:unique => true, :source_id => answer.id})
         end
 
         if vote.value == 1
