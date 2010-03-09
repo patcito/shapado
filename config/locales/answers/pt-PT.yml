@@ -16,12 +16,6 @@
   \n - só pode colocar uma resposta por pergunta."
     update:
       flash_notice: "resposta foi actualizada com sucesso."
-    history:
-      title: "history ({{count}})"
-      current_version: current version
-      previous_versions: previous versions
-      version: version
-      set_as_current: set as current
 
   activerecord:
     models:
@@ -31,3 +25,4 @@
       answer:
         link: ligação
         created_at: answered
+        body: conteúdo

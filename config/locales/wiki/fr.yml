@@ -1,0 +1,14 @@
+fr:
+  wiki:
+    history:
+      title: "historial ({{count}})"
+      previous_versions: versions précédentes
+      current_version: version actuelle
+      version: version
+    diff:
+      title: differences between {{prev}} and {{curr}}
+    actions:
+      set_as_current: établir comme version actuelle
+      show_diff: show diff
+      all_history: all history
+      back_to_question: back to question

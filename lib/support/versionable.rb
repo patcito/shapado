@@ -23,7 +23,7 @@ module Versionable
 
       if version
         version.data.each do |key, value|
-          self.send("#{key}=", value.first)
+          self.send("#{key}=", value)
         end
         self.updated_by_id = version.user_id unless self.updated_by_id_changed?
         self.updated_at = version.date unless self.updated_at_changed?
@@ -76,6 +76,10 @@ module Versionable
                                         'user_id' => (self.updated_by_id_was || self.updated_by_id),
                                         'date' => e.kind_of?(ActiveSupport::TimeWithZone) ? e.utc : e })
         end
+      end
+
+      define_method(:versioned_keys) do
+        keys
       end
     end
   end

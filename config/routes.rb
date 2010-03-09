@@ -34,10 +34,14 @@ ActionController::Routing::Routes.draw do |map|
                                             :watch => :any,
                                             :unwatch => :any,
                                             :history => :get,
+                                            :diff => :get,
                                             :rollback => :put,
                                             :move => :get,
                                             :move_to => :put} do |questions|
-        questions.resources :answers, :member => {:flag => :get, :history => :get, :rollback => :put}
+        questions.resources :answers, :member => {:flag => :get,
+                                                  :history => :get,
+                                                  :diff => :get,
+                                                  :rollback => :put}
       end
     end
   end

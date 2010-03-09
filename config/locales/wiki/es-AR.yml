@@ -1,0 +1,14 @@
+es-AR:
+  wiki:
+    history:
+      title: "historia ({{count}})"
+      previous_versions: versiónes antériores
+      current_version: versión actual
+      version: versión
+    diff:
+      title: diferencias entre las versiones {{prev}} y {{curr}}
+    actions:
+      set_as_current: poner como la versión actual
+      show_diff: mostrar diferencias
+      all_history: toda la history
+      back_to_question: volver a la pregunta
