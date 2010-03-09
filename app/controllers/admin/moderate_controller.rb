@@ -6,8 +6,9 @@ class Admin::ModerateController < ApplicationController
     @active_subtab = params.fetch(:tab, "questions")
 
     options = {:order => "flags_count desc",
-                      :conditions => {"flags_count" => {:$gt => 0}},
-                      :group_id => current_group.id}
+               :flags_count.gt => 0,
+               :banned => false,
+               :group_id => current_group.id}
 
     case @active_subtab
       when "questions"
