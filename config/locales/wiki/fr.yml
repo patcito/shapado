@@ -9,6 +9,6 @@ fr:
       title: differences between {{prev}} and {{curr}}
     actions:
       set_as_current: établir comme version actuelle
-      show_diff: show diff
-      all_history: all history
-      back_to_question: back to question
+      show_diff: comparer les versions sélectionnées
+      all_history: historique
+      back_to_question: retourner à la question

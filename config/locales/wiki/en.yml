@@ -10,5 +10,5 @@ en:
     actions:
       set_as_current: set as current
       show_diff: show diff
-      all_history: all history
+      all_history: whole history
       back_to_question: back to question
