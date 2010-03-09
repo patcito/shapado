@@ -83,16 +83,15 @@ class Answer < Comment
 
 
   def ban
+    self.question.answer_removed!
     self.collection.update({:_id => self._id}, {:$set => {:banned => true}},
                                                :upsert => true)
   end
 
   def self.ban(ids)
-    ids = ids.map do |id| id end
-
-    self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
-                                                     :multi => true,
-                                                     :upsert => true)
+    self.find_each(:_id.in => ids, :select => [:question_id]) do |answer|
+      answer.ban
+    end
   end
 
   def to_html
