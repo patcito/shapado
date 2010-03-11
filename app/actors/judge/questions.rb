@@ -20,10 +20,9 @@ module JudgeActions
       end
 
       if question.answer == answer && answer.votes_average > 2
+        answer.user.stats.add_expert_tags(*question.tags)
         create_badge(answer.user, group, :token => "tutor", :source => answer, :unique => true)
       end
-
-      answer.user.stats.add_expert_tags(*question.tags)
     end
 
     def on_question_unsolved(payload)
