@@ -2,7 +2,7 @@ class TopGroupsWidget < Widget
   before_validation_on_create :set_name
 
   def top_groups
-    Group.all(:limit => 5, :order => "activity_rate desc", :state => "active", :private => false)
+    Group.all(:limit => 5, :order => "activity_rate desc", :state => "active", :private => false, :isolate => false)
   end
 
   protected
