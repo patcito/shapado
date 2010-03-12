@@ -33,6 +33,8 @@ en:
     preview: preview
     or: or
     by: by
+    current: current
+    previous: previous
   feeds:
     question: subscribe to this question
     questions: subscribe to all questions

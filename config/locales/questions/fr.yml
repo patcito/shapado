@@ -68,12 +68,6 @@ fr:
     move_to:
       success:      "question transférée à {{group}}"
       group_dont_exists: "le groupe {{group}} n'éxiste pas"
-    history:
-      title: "historial ({{count}})"
-      current_version: version actuelle
-      previous_versions: versions précédentes
-      version: version
-      set_as_current: établir comme version actuelle
     shared:
       title: reporter un abus
     model:

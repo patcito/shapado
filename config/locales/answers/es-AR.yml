@@ -16,13 +16,6 @@ es-AR:
 \n - solo puede hacer una sola respuesta por cada pregunta."
     update:
       flash_notice: "la respuesta fue actualizada exitosamente."
-    history:
-      title: "historia ({{count}})"
-      current_version: versión actual
-      previous_versions: versiónes previas
-      version: versión
-      set_as_current: poner como actual
-
   activerecord:
     models:
       answers: respuestas
@@ -31,3 +24,4 @@ es-AR:
       answer:
         link: enlace
         created_at: contestado
+        body: contenido

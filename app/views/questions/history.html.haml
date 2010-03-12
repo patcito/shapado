@@ -1,43 +1,36 @@
 -content_for :subtabs do
   .navtitle
-    =t(".title", :count => @question.versions.count)
+    =t("wiki.history.title", :count => @question.versions.count)
+
 -counter = @question.versions.count
-#questions
-  .question
-    %h2.version_title
-      =t(".current_version")
 
-    %h2
-      = link_to h(@question.title), question_path(current_languages, @question)
+-form_tag diff_question_path(current_languages, @question), :method => "GET", :class => "form" do
+  #questions
+    .question
+      %h2
+        =link_to h(@question.title), question_path(current_languages, @question)
+      %h2.version_title
+        = radio_button_tag("prev", :current, :checked => @prev == "current")
+        = radio_button_tag("curr", :current, :checked => @curr == "current")
+        =t("wiki.history.current_version")
+        .diff_actions
+          -if @question.versions.count > 0
+            =link_to t("global.previous"), diff_question_path(current_languages, @question, :curr => :current, :prev => @question.versions.count-1 ), :class => "diff_prev"
 
-    %h2=t(:body, :scope => "activerecord.attributes.question")
-    .markdown
-      = shapado_auto_link(markdown(@question.body))
-    %h2=t(:tags, :scope => "activerecord.attributes.question")
-    =@question.tags.join(", ")
+      %h2=t(:title, :scope => "activerecord.attributes.question")
+      =h(@question.title)
+      -if !@question.body.blank?
+        %h2=t(:body, :scope => "activerecord.attributes.question")
+        .markdown
+          = shapado_auto_link(markdown(@question.body))
+      %h2=t(:tags, :scope => "activerecord.attributes.question")
+      =@question.tags.join(", ")
 
-  -@question.versions.reverse_each do |version|
-    -counter -= 1
-    -if !version.data.empty?
-      .question
-        %h2.version_title
-          =t(".version")
-          %span.version
-            &=counter
-        .question-body
-          -if version.data["title"]
-            %h2=t(:title, :scope => "activerecord.attributes.question")
-            = version.data["title"].first
-          -if version.data["body"]
-            %h2=t(:body, :scope => "activerecord.attributes.question")
-            .markdown
-              = find_and_preserve(shapado_auto_link(markdown(version.data["body"].first)))
-          -if version.data["tags"]
-            %h2=t(:tags, :scope => "activerecord.attributes.question")
-            = version.data["tags"].first.join(", ")
-          .controls
-            .actions
-              -if logged_in? && current_user.can_modify?(@question)
-                =link_to t(".set_as_current"), rollback_question_path(current_languages, @question, :version => counter), :method => :put
-          .clear
-        .clear
+    -@question.versions.reverse_each do |version|
+      -counter -= 1
+      -if !version.data.empty?
+        = render :partial => "wiki/version", :object => version, :locals => {:post => @question, :number => counter, :prev => @prev, :curr => @curr, :scope => "activerecord.attributes.question"}
+  .group.navform
+    = submit_tag t("wiki.actions.show_diff"), :value => "diff", :name => "show"
+    = t("global.or")
+    = link_to(t("scaffold.back"), question_path(current_languages, @question))

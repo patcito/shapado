@@ -15,6 +15,25 @@ class AnswersController < ApplicationController
     end
   end
 
+  def diff
+    @answer = Answer.find(params[:id])
+    @question = @answer.question
+    @prev = params[:prev]
+    @curr = params[:curr]
+    if @prev.blank? || @curr.blank? || @prev == @curr
+      flash[:error] = "please, select two versions"
+      render :history
+    else
+      if @prev
+        @prev = (@prev == "current" ? :current : @prev.to_i)
+      end
+
+      if @curr
+        @curr = (@curr == "current" ? :current : @curr.to_i)
+      end
+    end
+  end
+
   def rollback
     @question = @answer.question
     @question.updated_by = current_user

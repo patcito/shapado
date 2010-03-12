@@ -1,0 +1,12 @@
+-content_for :subtabs do
+  .navtitle
+    =t("wiki.diff.title", :prev => @prev, :curr => @curr)
+
+=render :partial => "wiki/diff", :locals => {:post => @question, :prev => @prev, :curr => @curr, :scope => "activerecord.attributes.question" }
+
+%br
+.form
+  .group.navform
+    = link_to(t("wiki.actions.all_history"), history_question_path(current_languages, @question))
+    = t("global.or")
+    = link_to(t("wiki.actions.back_to_question"), question_path(current_languages, @question))

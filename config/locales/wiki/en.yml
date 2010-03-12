@@ -1,0 +1,14 @@
+en:
+  wiki:
+    history:
+      title: "history ({{count}})"
+      previous_versions: previous versions
+      current_version: current version
+      version: version
+    diff:
+      title: differences between {{prev}} and {{curr}}
+    actions:
+      set_as_current: set as current
+      show_diff: show diff
+      all_history: whole history
+      back_to_question: back to question

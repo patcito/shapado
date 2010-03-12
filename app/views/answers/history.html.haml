@@ -1,34 +1,33 @@
 -content_for :subtabs do
   .navtitle
-    =t(".title", :count => @answer.versions.count)
-
-%h2
-  = link_to h(@question.title), question_path(current_languages, @question)
+    =t("wiki.history.title", :count => @answer.versions.count)
 
 -counter = @answer.versions.count
-#answers
-  .answer
-    %h2.version_title
-      =t(".current_version")
-      = counter
-    .answer-body
-      .markdown
-        = shapado_auto_link(markdown(@answer.body))
 
-  -@answer.versions.reverse_each do |version|
-    -counter -= 1
-    -if !version.data.empty?
-      .answer
-        %h2.version_title
-          =t(".version")
-          %span.version
-            &=counter
-        .answer-body
-          .markdown
-            = find_and_preserve(shapado_auto_link(markdown(version.data["body"].first)))
-          .controls
-            .actions
-              -if logged_in? && current_user.can_modify?(@answer)
-                =link_to t(".set_as_current"), rollback_question_answer_path(current_languages, @question, @answer, :version => counter), :method => :put
-          .clear
-        .clear
+-form_tag diff_question_answer_path(current_languages, @question, @answer), :method => "GET", :class => "form" do
+  #answers
+    .answer
+      %h2
+        =link_to h(@question.title), question_path(current_languages, @question)
+      %h2.version_title
+        = radio_button_tag("prev", :current, :checked => @prev == "current")
+        = radio_button_tag("curr", :current, :checked => @curr == "current")
+        =t("wiki.history.current_version")
+        .diff_actions
+          -if @answer.versions.count > 0
+            =link_to t("global.previous"), diff_question_answer_path(current_languages, @question, @answer, :curr => :current, :prev => @question.versions.count-1), :class => "diff_prev"
+
+      -if !@answer.body.blank?
+        %h2=t(:body, :scope => "activerecord.attributes.answer")
+        .markdown
+          = shapado_auto_link(markdown(@answer.body))
+
+    -@answer.versions.reverse_each do |version|
+      -counter -= 1
+      -if !version.data.empty?
+        = render :partial => "wiki/version", :object => version, :locals => {:post => @answer, :number => counter, :prev => @prev, :curr => @curr, :scope => "activerecord.attributes.answer"}
+
+  .group.navform
+    = submit_tag t("wiki.actions.show_diff"), :value => "diff", :name => "show"
+    = t("global.or")
+    = link_to(t("scaffold.back"), question_path(current_languages, @question))

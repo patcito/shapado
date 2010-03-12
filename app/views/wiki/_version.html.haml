@@ -1,0 +1,11 @@
+.answer.version
+  %h2.version_title
+    = radio_button_tag("prev", number, prev.to_s == number.to_s)
+    = radio_button_tag("curr", number, curr.to_s == number.to_s)
+    .diff_actions
+      = render :partial => "diff_actions", :locals => {:post => post, :number => number}
+    =t("wiki.history.version")
+    %span.version
+      &=number
+  .changes
+    = render :partial => "wiki/changes", :locals => {:post => post, :version => version, :scope => scope}
