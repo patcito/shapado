@@ -127,29 +127,24 @@ class User
     end
   end
 
-  def set_preferred_tags(t, group)
-    if t.kind_of?(String)
-      t = t.split(",").join(" ").split(" ")
-    end
-    self.collection.update({:_id => self._id}, {:$set => {"preferred_tags.#{group.id}" => t}},
-                           :upsert => true)
-  end
-
   def add_preferred_tags(t, group)
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-    t = t - preferred_tags[group.id] if preferred_tags[group.id]
-    self.collection.update({:_id => self._id, "preferred_tags.#{group.id}" =>  {:$nin => t}}, {:$pushAll => {"preferred_tags.#{group.id}" => t}},
-                           :upsert => true, :safe => true)
+    self.collection.update({:_id => self._id, "membership_list.#{group.id}.preferred_tags" =>  {:$nin => t}},
+                    {:$pushAll => {"membership_list.#{group.id}.preferred_tags" => t}},
+                    {:upsert => true})
   end
 
   def remove_preferred_tags(t, group)
     if t.kind_of?(String)
       t = t.split(",").join(" ").split(" ")
     end
-    self.collection.update({:_id => self._id}, {:$pullAll => {"preferred_tags.#{group.id}" => t}},
-                           :upsert => true)
+    self.class.pull_all({:_id => self._id}, {"membership_list.#{group.id}.preferred_tags" => t})
+  end
+
+  def preferred_tags_on(group)
+    @group_preferred_tags ||= (config_for(group).preferred_tags || []).to_a
   end
 
   def is_preferred_tag?(group, *tags)
@@ -285,10 +280,6 @@ class User
       self.country_name = l[4]
     end
     save
-  end
-
-  def preferred_tags_on(group)
-    @group_preferred_tags ||= (self.preferred_tags[group.id] || []).to_a
   end
 
   def reputation_on(group)

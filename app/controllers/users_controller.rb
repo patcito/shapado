@@ -84,7 +84,7 @@ class UsersController < ApplicationController
                          notification_opts bio], params[:user])
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
-      @user.set_preferred_tags(preferred_tags, current_group) if preferred_tags
+      @user.add_preferred_tags(preferred_tags, current_group) if preferred_tags
       redirect_to root_path
     else
       render :action => "edit"
