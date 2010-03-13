@@ -42,10 +42,9 @@ class User
   key :preferred_tags,            Hash, :default => {} # membership, done
   key :followers_count,           Integer, :default => 0 # membership
   key :following_count,           Integer, :default => 0 # membership
+  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
 
   key :membership_list,           MembershipList
-
-  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -185,14 +184,7 @@ class User
   end
 
   def role_on(group)
-    @roles ||= {}
-
-    return @roles[group.id] if @roles[group.id]
-
-    if membership = Member.first(:group_id => group.id, :user_id => self.id)
-      return @roles[group.id] = membership.role
-    end
-    "none"
+    config_for(group).role
   end
 
   def owner_of?(group)
