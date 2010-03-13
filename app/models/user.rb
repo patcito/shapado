@@ -255,20 +255,21 @@ class User
   end
 
   def upvote!(group, v = 1.0)
-    User.increment(self.id, {"membership_list.#{group.id}.votes_up" => v.to_f}, {:upsert => true})
+    collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.votes_up" => v.to_f}}, {:upsert => true})
   end
 
   def downvote!(group, v = 1.0)
-    User.increment(self.id, {"membership_list.#{group.id}.votes_down" => v.to_f}, {:upsert => true})
+    collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.votes_down" => v.to_f}}, {:upsert => true})
   end
 
   def update_reputation(key, group)
     value = group.reputation_rewards[key.to_s].to_i
-    Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
     value = key if key.kind_of?(Integer)
 
+    Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
+
     if value
-      User.increment(self._id, {"membership_list.#{group.id}.reputation" => value}, {:upsert => true})
+      collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.reputation" => value}}, {:upsert => true})
     end
   end
 
