@@ -55,6 +55,7 @@ namespace :fixdb do
   desc "Fix group configuration"
   task :group_config => :environment do
     $stderr.puts "Updating #{User.count} users..."
+    destroy = !!ENV['destroy']
 
     User.find_each do |user|
       (user[:reputation]||{}).each do |group_id, v|
@@ -62,27 +63,32 @@ namespace :fixdb do
 
         user.config_for(group_id).reputation = v
       end
+      user[:reputation] = nil if destroy
 
       (user[:votes_up]||{}).each do |group_id, v|
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).votes_up = v
       end
+      user[:votes_up] = nil if destroy
 
       (user[:votes_down]||{}).each do |group_id, v|
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).votes_down = v
       end
+      user[:votes_down] = nil if destroy
 
       (user[:preferred_tags]||{}).each do |group_id, v|
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).preferred_tags = v
       end
+      user[:preferred_tags] = nil if destroy
 
       user.memberships.each do |member|
         next if Group.find(member.group_id, :select => [:_id]).nil?
 
         user.config_for(member.group_id).role = member.role
       end
+      user.memberships if destroy
 
       stats = user.stats.reload
       (stats.activity_days||{}).each do |group_id, v|
@@ -94,7 +100,6 @@ namespace :fixdb do
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).last_activity_at = v
       end
-
 
       user.save(:validate => false)
     end
