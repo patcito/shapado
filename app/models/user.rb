@@ -22,25 +22,27 @@ class User
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
-  key :preferred_tags,            Hash, :default => {} #by group
+  key :preferred_tags,            Hash, :default => {} # membership
   key :preferred_languages,       Array
 
   key :notification_opts,         NotificationConfig
 
   key :language,                  String, :default => "en"
   key :timezone,                  String
-  key :reputation,                Hash, :default => {}
+  key :reputation,                Hash, :default => {} # membership
 
   key :ip,                        String
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
-  key :votes_up,                  Hash
-  key :votes_down,                Hash
+  key :votes_up,                  Hash # membership
+  key :votes_down,                Hash # membership
   key :default_subtab,            Hash
 
-  key :followers_count,           Integer, :default => 0
-  key :following_count,           Integer, :default => 0
+  key :followers_count,           Integer, :default => 0 # membership
+  key :following_count,           Integer, :default => 0 # membership
+
+  has_many :memberships
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -48,7 +50,6 @@ class User
   has_many :votes, :dependent => :destroy
   has_many :badges, :dependent => :destroy
 
-  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
   has_many :favorites, :class_name => "Favorite", :foreign_key => "user_id"
 
   key :friend_list_id, String
