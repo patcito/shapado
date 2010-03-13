@@ -12,10 +12,10 @@
 
 -if logged_in? && current_user.owner_of?(@group)
   #manage_members
-    - form_for(@member, :html=>{:class => "form"}) do |f|
-      =render :partial => "form", :locals => {:f => f}
+    -form_tag(members_path, :class => "form", :method => :post) do
+      =render :partial => "form"
       .group.navform
-        = f.submit t('scaffold.add', :model => "member")
+        = submit_tag t('scaffold.add', :model => "member")
 
 %ul.items#members
   -@members.each do |member|

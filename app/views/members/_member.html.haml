@@ -1,39 +1,39 @@
--user = member.user
+-membership = member.config_for(@group)
 -can_modify_member = logged_in? && (current_user.admin? || current_user != user ) && current_user.owner_of?(@group)
 
 %li.item
   / Member Stats
   .stats
     .box.votes
-      .counter{:class => class_for_number(user.questions.count) }
-        =format_number(user.questions.count)
+      .counter{:class => class_for_number(member.questions.count) }
+        =format_number(member.questions.count)
       .text
         = t(:questions, :scope => "activerecord.models")
     .box.answers
       .counter
-        =format_number(user.answers.count)
+        =format_number(member.answers.count)
       .text
         = t(:answers, :scope => "activerecord.models")
     .box.views
-      .counter{:class => class_for_number(user.reputation_on(current_group)) }
-        =format_number(user.reputation_on(current_group))
+      .counter{:class => class_for_number(member.reputation_on(current_group)) }
+        =format_number(member.reputation_on(current_group))
       .text
         = t(:reputation, :scope => "activerecord.attributes.user")
   / Member Summary
   .summary
     %h3
-      = link_to h(user.login), user_path(user)
+      = link_to h(member.login), user_path(member)
     .bio
-      =find_and_preserve(auto_link(user.bio))
+      =find_and_preserve(auto_link(member.bio))
     .tag-list
       -if can_modify_member
-        -form_for(member, :html=>{:class => "form"}) do |f|
-          = f.select :role, Member::ROLES, :selected => member.role
-          = f.submit t("scaffold.update")
+        -form_tag(member_path(member.id), :class => "form", :method => :put) do |f|
+          = select_tag :role, options_for_select(Member::ROLES, membership.role)
+          = submit_tag t("scaffold.update")
       -else
-        &= member.role
+        &= membership.role
     .owner-data
       %strong
         registered
-        = t("time.ago", :time => time_ago_in_words(user.created_at))
+        = t("time.ago", :time => time_ago_in_words(member.created_at))
   .clear

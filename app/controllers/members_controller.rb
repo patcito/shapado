@@ -7,41 +7,42 @@ class MembersController < ApplicationController
 
   def index
     @group = current_group
-    @members = @group.memberships.paginate(:page => params[:page] || 1,
-                                           :per_page => params[:per_page] || 25)
-    @member = Member.new
+    @members = @group.users(:page => params[:page] || 1,
+                            :per_page => params[:per_page] || 25)
+    @member = User.new
+    @membership = Membership.new
   end
 
   def create
-    @user = User.find_by_login(params[:member][:user_id])
-    if @user
-      @member = @group.add_member(@user, params[:member][:role])
-      if @member.valid?
-        return redirect_to members_path
+    @member = User.find_by_login(params[:user_id])
+    if @member
+      ok = @group.add_member(@member, params[:role])
+      if ok
+        return redirect_to(members_path)
       end
     else
-      flash[:error] = "Sorry, the user **#{params[:member][:user_id]}** does not exists"
-      @member = Member.new
+      flash[:error] = "Sorry, the user **#{params[:user_id]}** does not exists" # TODO: i18n
+      @membership = Membership.new
     end
 
-    @members = @group.memberships.paginate(:page => params[:page] || 1,
-                                       :per_page => params[:per_page] || 25)
+    @members = @group.users(:page => params[:page] || 1,
+                            :per_page => params[:per_page] || 25)
     render :index
   end
 
   def update
-    @member = @group.memberships.find(params[:id])
-    if @member.user_id != current_user.id || current_user.admin?
-      @member.role = params[:member][:role]
+    @member = @group.users(:_id => params[:id]).first
+    if @member.id != current_user.id || current_user.admin?
+      @member.config_for(@group).role = params[:role]
       @member.save
     else
-      flash[:error] = "Sorry, you cannot be change the **#{@member.user.login}'s** membership"
+      flash[:error] = "Sorry, you cannot be change the **#{@member.login}'s** membership"
     end
     redirect_to members_path
   end
 
   def destroy
-    @member = @group.memberships.find(params[:id])
+    @member = @group.users(:_id => params[:id]).first
     if (@member.user_id != current_user.id) || current_user.admin?
       @member.destroy
     else
@@ -54,7 +55,7 @@ class MembersController < ApplicationController
     @group = current_group
 
     if !current_user.owner_of?(@group)
-      flash[:error] = t("global.permission_denied")
+      flash[:notice] = t("global.permission_denied")
       redirect_to domain_url(:custom => current_group.domain)
     end
   end

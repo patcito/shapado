@@ -6,7 +6,6 @@ class Group
 
   key :_id, String
   key :name, String, :required => true
-  slug_key :name, :unique => true
   key :subdomain, String
   key :domain, String
   key :legend, String
@@ -24,10 +23,6 @@ class Group
   key :language, String
   key :activity_rate, Float, :default => 0.0
   key :logo_ext, String, :default => 'png'
-
-  file_key :logo
-  file_key :custom_css
-  file_key :custom_favicon
 
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
@@ -58,9 +53,16 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   key :head_tag, String
 
+  file_key :logo
+  file_key :custom_css
+  file_key :custom_favicon
+
+  slug_key :name, :unique => true
+
   has_many :memberships, :class_name => "Member",
                          :foreign_key => "group_id",
-                         :dependent => :destroy
+                         :dependent => :destroy # TODO: kill this
+
   has_many :ads, :dependent => :destroy
   has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
   has_many :badges, :dependent => :destroy
