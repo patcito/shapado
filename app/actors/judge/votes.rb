@@ -74,7 +74,7 @@ module JudgeActions
             end
 
             if badge_type && vuser.find_badge_on(group, tag, :type => badge_type).nil?
-              create_badge(vuser, group, :token => tag, :type => badge_type, :group_id => group.id, :source => answer, :for_tag => true)
+              create_badge(vuser, group, :token => tag, :type => badge_type, :source => answer, :for_tag => true)
             end
           end
         end
@@ -90,16 +90,16 @@ module JudgeActions
       user = vote.user
 
       if vote.value == -1
-        create_badge(user,  group,  :token => "critic",  :type => "bronze", :group_id => group.id, :source => vote, :unique => true)
+        create_badge(user,  group,  :token => "critic", :source => vote, :unique => true)
       else
-        create_badge(user, group, :token => "supporter", :type => "bronze", :group_id => group.id, :source => vote, :unique => true)
+        create_badge(user, group, :token => "supporter", :source => vote, :unique => true)
       end
 
-      if user.stats(:views_count).views_count >= 10000
-        create_badge(user, group, :token => "popular_person", :type => "silver", :group_id => group.id, :unique => true)
+      if user.config_for(group).views_count >= 10000
+        create_badge(user, group, :token => "popular_person", :unique => true)
       end
 
-      if user.votes.count >= 300
+      if user.votes.count(:group_id => group.id) >= 300
         create_badge(user, group, :token => "civic_duty", :unique => true)
       end
     end
@@ -111,26 +111,26 @@ module JudgeActions
       vuser = vote.voteable.user
       return if vuser.nil?
 
-      vote_value = vuser.votes_up[group.id] ? vuser.votes_up[group.id] : 0
+      vote_value = vuser.config_for(group).votes_up
 
       if vote_value >= 100
-        create_badge(vuser, group, :token => "effort_medal", :type => "silver", :group_id => group.id,  :source => vote, :unique => true)
+        create_badge(vuser, group, :token => "effort_medal",  :source => vote, :unique => true)
       end
 
       if vote_value >= 200
-        create_badge(vuser, group, :token => "merit_medal", :type => "silver", :group_id => group.id, :source => vote, :unique => true)
+        create_badge(vuser, group, :token => "merit_medal", :source => vote, :unique => true)
       end
 
       if vote_value >= 300
-        create_badge(vuser,  group, :token => "service_medal", :type => "silver", :group_id => group.id, :source => vote, :unique => true)
+        create_badge(vuser,  group, :token => "service_medal", :source => vote, :unique => true)
       end
 
-      if vote_value >= 500 && vuser.votes_down <= 10 # FIXME: by group
-        create_badge(vuser, group, :token => "popstar", :group_id => group.id, :source => vote, :unique => true)
+      if vote_value >= 500 && vuser.config_for(group).votes_down <= 10
+        create_badge(vuser, group, :token => "popstar", :source => vote, :unique => true)
       end
 
-      if vote_value >= 1000 && vuser.votes_down <= 10 # FIXME: by group
-        create_badge(vuser, group, :token => "rockstar", :group_id => group.id,  :source => vote, :unique => true)
+      if vote_value >= 1000 && vuser.config_for(group).votes_down <= 10
+        create_badge(vuser, group, :token => "rockstar",  :source => vote, :unique => true)
       end
     end
   end
