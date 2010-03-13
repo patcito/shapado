@@ -381,6 +381,9 @@ class User
     if !self.friend_list.present?
       self.friend_list = FriendList.new
     end
+    if !self.notification_opts
+      self.notification_opts = NotificationConfig.new
+    end
   end
 end
 
