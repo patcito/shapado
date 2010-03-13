@@ -231,19 +231,49 @@ class User
     if new?
       self.last_logged_at = now
     else
-      self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => now}},
-                                                 :upsert => true)
-      self.stats(:last_activity_at, :user_id).activity_on(group, Time.now) if group
+      on_activity(:login, group)
     end
   end
 
   def on_activity(activity, group)
-    if !self.last_logged_at.today?
-      self.collection.update({:_id => self._id}, {:$set => {:last_logged_at => Time.now}},
-                                                  :upsert => true)
+    if activity == :login
+      if !self.last_logged_at.today?
+        self.collection.update({:_id => self._id},
+                               {:$set => {:last_logged_at => Time.now}},
+                               {:upsert => true})
+      end
+    else
+      self.update_reputation(activity, group) if activity != :login
     end
-    self.stats(:last_activity_at, :user_id).activity_on(group, Time.now)
-    self.update_reputation(activity, group)
+    activity_on(group, Time.now)
+  end
+
+  def activity_on(group, date)
+    day = date.utc.at_beginning_of_day
+    last_day = config_for(group).last_activity_at
+
+    if last_day != day
+      collection.update({:_id => self.id},
+                        {:$set => {"membership_list.#{group.id}.last_activity_at" => day}},
+                        {:upsert => true})
+      if last_day
+        if last_day.utc == day.yesterday
+          collection.update({:_id => self.id},
+                            {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
+                            {:upsert => true})
+          Magent.push("actors.judge", :on_activity, group.id, self.id)
+        elsif !last_day.utc.today?
+          Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
+          reset_activity_days!(group)
+        end
+      end
+    end
+  end
+
+  def reset_activity_days!(group)
+    self.collection.update({:_id => self._id},
+                           {:$set => {"membership_list.#{group.id}.activity_days" => 0}},
+                            :upsert => true)
   end
 
   def upvote!(group, v = 1.0)

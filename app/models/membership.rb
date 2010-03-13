@@ -20,7 +20,7 @@ class Membership
   key :preferred_tags, Array
 
   key :last_activity_at, Time
-  key :activity_days, Integer
+  key :activity_days, Integer, :default => 0
 
   key :role, String, :default => "user"
 
