@@ -5,17 +5,13 @@ class UserStat
   key :user_id, String
   belongs_to :user
 
-  key :views_count, Float, :default => 0.0 # membership, done
   key :answer_tags, Array
   key :question_tags, Array
   key :expert_tags, Array
 
-
   key :tag_votes, Hash
 
   timestamps!
-
-  def activity_on(group, date)
 
 
   def viewed!
