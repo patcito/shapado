@@ -113,7 +113,7 @@ class UsersController < ApplicationController
 
     flash[:notice] = t("flash_notice", :scope => "users.follow", :user => @user.login)
 
-    if @user.notification_opts["activities"] == "1"
+    if @user.notification_opts.activities
       Notifier.deliver_follow(current_user, @user)
     end
 

@@ -91,7 +91,7 @@ class AnswersController < ApplicationController
 
           users.uniq.each do |u|
             email = u.email
-            if !email.blank? && u.notification_opts["new_answer"] == "1"
+            if !email.blank? && u.notification_opts.new_answer
               Notifier.deliver_new_answer(u, current_group, @answer)
             end
           end

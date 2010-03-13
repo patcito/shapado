@@ -58,14 +58,14 @@
     = t(".notifications")
 
   .group
-    = f.check_box "notification_opts[new_answer]", :checked => @user.notification_opts["new_answer"] == "1"
+    = f.check_box "notification_opts[new_answer]", :checked => @user.notification_opts.new_answer
     = t(".new_answer_notification")
   .group
-    = f.check_box "notification_opts[give_advice]", :checked => @user.notification_opts["give_advice"] == "1"
+    = f.check_box "notification_opts[give_advice]", :checked => @user.notification_opts.give_advice
     = t(".give_advice_notification")
   .group
-    = f.check_box "notification_opts[activities]", :checked => @user.notification_opts["activities"] == "1"
+    = f.check_box "notification_opts[activities]", :checked => @user.notification_opts.activities
     = t(".activities_notification")
   .group
-    = f.check_box "notification_opts[reports]", :checked => @user.notification_opts["reports"] == "1"
+    = f.check_box "notification_opts[reports]", :checked => @user.notification_opts.reports
     = t(".reports_notification")

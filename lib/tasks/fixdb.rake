@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:wiki"] do
+task :fixall => [:environment, "fixdb:wiki", "fixdb:notif_rules"] do
 end
 
 namespace :fixdb do
@@ -42,6 +42,13 @@ namespace :fixdb do
         version.data = new_data
       end
       answer.save(:validate => false)
+    end
+  end
+
+  desc "Fix notification rules"
+  task :notif_rules => :environment do
+    User.find_each do |user|
+      user.save(:validate => false)
     end
   end
 end

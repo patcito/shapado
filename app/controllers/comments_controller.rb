@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
     # TODO: use magent to do it
     if (question = @comment.find_question) && (recipient = @comment.find_recipient)
       email = recipient.email
-      if !email.blank? && recipient.notification_opts["new_answer"] == "1"
+      if !email.blank? && recipient.notification_opts.new_answer
         Notifier.deliver_new_comment(current_group, @comment, recipient, question)
       end
     end
