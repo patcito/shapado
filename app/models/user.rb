@@ -273,7 +273,7 @@ class User
     value = key if key.kind_of?(Integer)
 
     if value
-      User.inc(self._id, {"membership_list.#{group.id}.reputation" => value}, {:upsert => true})
+      User.increment(self._id, {"membership_list.#{group.id}.reputation" => value}, {:upsert => true})
     end
   end
 
