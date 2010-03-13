@@ -260,11 +260,11 @@ class User
   end
 
   def upvote!(group, v = 1.0)
-    self.collection.update({:_id => self._id}, {:$inc => {"votes_up.#{group.id}" => v.to_f}}, :upsert => true)
+    User.increment(self.id, {"membership_list.#{group.id}.votes_up" => v.to_f}, {:upsert => true})
   end
 
   def downvote!(group, v = 1.0)
-    self.collection.update({:_id => self._id}, {:$inc => {"votes_down.#{group.id}" => v.to_f}}, :upsert => true)
+    User.increment(self.id, {"membership_list.#{group.id}.votes_down" => v.to_f}, {:upsert => true})
   end
 
   def update_reputation(key, group)
