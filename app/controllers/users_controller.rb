@@ -3,10 +3,9 @@ class UsersController < ApplicationController
   tabs :default => :users
   def index
     set_page_title(t("users.index.title"))
-    @users = User.paginate(:per_page => params[:per_page]||24,
-                          :order => "reputation.#{current_group.id} desc",
-                          :conditions => {:"reputation.#{current_group.id}" => {:"$exists" => true}},
-                          :page => params[:page] || 1)
+    @users = current_group.users(:per_page => params[:per_page]||24,
+                                 :order => "membership_list.#{current_group.id}.reputation desc",
+                                 :page => params[:page] || 1)
 
     respond_to do |format|
       format.html

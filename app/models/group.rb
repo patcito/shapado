@@ -161,19 +161,17 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   end
 
   def add_member(user, role)
-    if !user.reputation[self.id]
-      User.set(user.id, {"reputation.#{self.id}" => 5})
+    membership = user.config_for(self.id)
+    if membership.reputation < 5
+      membership.reputation = 5
     end
+    membership.role = role
 
-    member = Member.new( :group_id => self._id,
-                         :user_id => user._id,
-                         :role => role)
-    member.save
-    member
+    user.save
   end
 
-  def users
-    User.all("reputation.#{self.id}" => {:$exists => true})
+  def users(conditions = {})
+    User.paginate(conditions.merge("membership_list.#{self.id}.reputation" => {:$exists => true}))
   end
 
   def pending?
