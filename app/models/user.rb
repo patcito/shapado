@@ -326,6 +326,12 @@ class User
     friend_list(:select => [:following_ids]).following_ids.include?(user.id)
   end
 
+  def viewed_on!(group)
+    self.collection.update({:_id => self._id},
+                           {:$inc => {"membership_list.#{group.id}.views_count" => 1.0}},
+                            :upsert => true)
+  end
+
   def method_missing(method, *args, &block)
     if !args.empty? && method.to_s =~ /can_(\w*)\_on?/
       key = $1

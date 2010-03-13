@@ -15,8 +15,8 @@ class Membership
   key :votes_up, Float, :default => 0.0
   key :votes_down, Float, :default => 0.0
 
-  key :followers_count, Integer, :default => 0
-  key :following_count, Integer, :default => 0
+  key :views_count, Float, :default => 0.0
+
   key :preferred_tags, Array
 
   key :last_activity_at, Time
