@@ -1,5 +1,6 @@
 class Membership
-  include MongoMapper::Document
+  include MongoMapper::EmbeddedDocument
+
   ROLES = %w[user moderator owner]
 
   key :_id, String
@@ -19,7 +20,7 @@ class Membership
   key :preferred_tags, Array
 
   key :last_activity_at, Time
-  key :activity_days, Time
+  key :activity_days, Integer
 
   key :role, String, :default => "user"
 

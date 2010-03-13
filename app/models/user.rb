@@ -22,27 +22,30 @@ class User
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
-  key :preferred_tags,            Hash, :default => {} # membership
   key :preferred_languages,       Array
 
   key :notification_opts,         NotificationConfig
 
   key :language,                  String, :default => "en"
   key :timezone,                  String
-  key :reputation,                Hash, :default => {} # membership
 
   key :ip,                        String
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
 
-  key :votes_up,                  Hash # membership
-  key :votes_down,                Hash # membership
   key :default_subtab,            Hash
 
+  # TODO: remove these fields
+  key :reputation,                Hash, :default => {} # membership, done
+  key :votes_up,                  Hash # membership, done
+  key :votes_down,                Hash # membership, done
+  key :preferred_tags,            Hash, :default => {} # membership, done
   key :followers_count,           Integer, :default => 0 # membership
   key :following_count,           Integer, :default => 0 # membership
 
-  has_many :memberships
+  key :membership_list,           MembershipList
+
+  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -268,11 +271,9 @@ class User
     value = group.reputation_rewards[key.to_s].to_i
     Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
     value = key if key.kind_of?(Integer)
+
     if value
-      User.collection.update({:_id => self._id},
-                             {:$inc => {"reputation.#{group.id}" => value}},
-                             :upsert => true,
-                             :safe => true)
+      User.inc(self._id, {"membership_list.#{group.id}.reputation" => value}, {:upsert => true})
     end
   end
 
@@ -291,7 +292,7 @@ class User
   end
 
   def reputation_on(group)
-    self.reputation.fetch(group.id, 0.0 ).to_i
+    config_for(group).reputation
   end
 
   def stats(*extra_fields)
@@ -354,6 +355,13 @@ class User
       end
     end
     super(method, *args, &block)
+  end
+
+  def config_for(group)
+    if group.kind_of?(Group)
+      group = group.id
+    end
+    self.membership_list[group] ||= Membership.new(:group_id => group)
   end
 
   protected

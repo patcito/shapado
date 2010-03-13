@@ -10,8 +10,8 @@ class UserStat
   key :question_tags, Array
   key :expert_tags, Array
 
-  key :last_activity_at, Hash # membership
-  key :activity_days, Hash # membership
+  key :last_activity_at, Hash # membership, done
+  key :activity_days, Hash # membership, done
 
   key :tag_votes, Hash
 
