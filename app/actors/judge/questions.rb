@@ -7,8 +7,7 @@ module JudgeActions
       group = question.group
 
       if question.answer == answer && group.answers.count(:user_id => answer.user.id) == 1
-        user_badges = answer.user.badges
-        answer.user.find_badge_on(group,"troubleshooter") || create_badge(answer.user, group, :token => "troubleshooter", :source => answer)
+        create_badge(answer.user, group, :token => "troubleshooter", :source => answer, :unique => true)
       end
 
       if question.answer == answer && answer.votes_average >= 10
@@ -48,29 +47,28 @@ module JudgeActions
     end
 
     def on_view_question(payload)
-      question = Question.find(payload.first)
+      question = Question.find!(payload.first)
       user = question.user
       group = question.group
 
       views = question.views_count
-      opts = {:source_id => question.id, :source_type => "Question"}
-      if views >= 1000 && user.find_badge_on(group, "popular_question", opts).nil?
-        create_badge(user, group, :token => "popular_question", :group_id => group.id, :source => question)
-      elsif views >= 2500 && user.find_badge_on(group, "notable_question", opts).nil?
-        create_badge(user, group, :token => "notable_question", :group_id => group.id, :source => question)
-      elsif views >= 10000 && user.find_badge_on(group, "famous_question", opts).nil?
-        create_badge(user, group, :token => "famous_question", :group_id => group.id, :source => question)
+      opts = {:source_id => question.id, :source_type => "Question", :unique => true}
+      if views >= 1000
+        create_badge(user, group, {:token => "popular_question", :source => question}, opts)
+      elsif views >= 2500
+        create_badge(user, group, {:token => "notable_question", :source => question}, opts)
+      elsif views >= 10000
+        create_badge(user, group, {:token => "famous_question", :source => question}, opts)
       end
     end
 
     def on_ask_question(payload)
-      question = Question.find(payload.first)
+      question = Question.find!(payload.first)
       user = question.user
       group = question.group
 
       if group.questions.count(:user_id => user.id) == 1
-        user_badges = user.badges
-        user.find_badge_on(group, "inquirer") || create_badge(user, group, :token => "inquirer", :type => "bronze", :group_id => group.id, :source => question)
+        create_badge(user, group, :token => "inquirer", :source => question, :unique => true)
       end
     end
 
