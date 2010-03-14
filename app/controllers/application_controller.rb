@@ -118,7 +118,7 @@ class ApplicationController < ActionController::Base
   def available_locales; AVAILABLE_LOCALES; end
 
   def set_locale
-    locale = 'en'
+    locale = AppConfig.default_language || 'en'
     if logged_in?
       locale = current_user.language
       Time.zone = current_user.timezone || "UTC"
