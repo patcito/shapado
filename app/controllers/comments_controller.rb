@@ -69,9 +69,10 @@ class CommentsController < ApplicationController
         format.json { render :json => @comment.to_json, :status => :ok}
         format.js { render :json => { :message => flash[:notice], :success => true } }
       else
+        flash[:error] = @comment.errors.full_messages.join(", ")
         format.html { render :action => "edit" }
         format.json { render :json => @comment.errors, :status => :unprocessable_entity }
-        format.js { render :json => { :success => false } }
+        format.js { render :json => { :success => false, :message => flash[:error]}.to_json }
       end
     end
   end

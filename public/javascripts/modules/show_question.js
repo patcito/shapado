@@ -8,7 +8,7 @@ $(document).ready(function() {
     var btn_name = $(this).attr("name")
     var form = $(this).parents("form");
     $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
-      if(data.status == "ok"){
+      if(data.success){
         form.find(".votes_average").text(data.average)
         if(data.vote_type == "vote_down") {
           form.find("button[name=vote_down] img").attr("src", "/images/vote_down.png")
@@ -17,10 +17,12 @@ $(document).ready(function() {
           form.find("button[name=vote_up] img").attr("src", "/images/vote_up.png")
           form.find("button[name=vote_down] img").attr("src", "/images/to_vote_down.png")
         }
-
         showMessage(data.message, "notice")
       } else {
         showMessage(data.message, "error")
+        if(data.status == "unauthenticate") {
+          window.location="/login"
+        }
       }
     }, "json");
     return false;
@@ -47,6 +49,9 @@ $(document).ready(function() {
                     form.find("#markdown_preview").html("");
                   } else {
                     showMessage(data.message, "error")
+                    if(data.status == "unauthenticate") {
+                      window.location="/login"
+                    }
                   }
                 },
       error: manageAjaxError,
@@ -78,6 +83,9 @@ $(document).ready(function() {
                             form.find("textarea").val("");
                           } else {
                             showMessage(data.message, "error")
+                            if(data.status == "unauthenticate") {
+                              window.location="/login"
+                            }
                           }
                       },
              error: manageAjaxError,
@@ -116,10 +124,17 @@ $(document).ready(function() {
                   type: "PUT",
                   data: form.serialize()+"&format=js",
                   success: function(data, textStatus) {
-                              comment.find(".markdown p").html(data.body);
-                              form.remove();
-                              link.show();
-                              highlightEffect(comment)
+                              if(data.sucess) {
+                                comment.find(".markdown p").html(data.body);
+                                form.remove();
+                                link.show();
+                                highlightEffect(comment)
+                              } else {
+                                showMessage(data.message, "error")
+                                if(data.status == "unauthenticate") {
+                                  window.location="/login"
+                                }
+                              }
                             },
                   error: manageAjaxError,
                   complete: function(XMLHttpRequest, textStatus) {
