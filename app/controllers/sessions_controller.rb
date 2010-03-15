@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
   skip_before_filter :check_group_access
   include OpenIdAuthentication
 
+  layout "sessions"
+
   # render new.rhtml
   def new
     session[:return_to] ||= request.referrer if !request.referrer.blank?
