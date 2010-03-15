@@ -124,11 +124,12 @@ $(document).ready(function() {
                   type: "PUT",
                   data: form.serialize()+"&format=js",
                   success: function(data, textStatus) {
-                              if(data.sucess) {
+                              if(data.success) {
                                 comment.find(".markdown p").html(data.body);
                                 form.remove();
                                 link.show();
                                 highlightEffect(comment)
+                                showMessage(data.message, "notice")
                               } else {
                                 showMessage(data.message, "error")
                                 if(data.status == "unauthenticate") {
