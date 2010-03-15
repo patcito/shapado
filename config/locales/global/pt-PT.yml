@@ -33,6 +33,8 @@ pt-PT:
     preview: pré-visualizar
     or: or
     by: by
+    current: current
+    previous: previous
   feeds:
     question: subscrever a esta pergunta
     questions: subscrever a todas as perguntas

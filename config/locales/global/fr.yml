@@ -33,6 +33,8 @@ fr:
     preview: preview
     or: ou
     by: par
+    current: current
+    previous: previous
   feeds:
     question: souscrire à cette question
     questions: souscrire à toutes les questions

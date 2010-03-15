@@ -33,6 +33,8 @@ es-AR:
     preview: vista previa
     or: o
     by: por
+    current: actual
+    previous: anterior
   feeds:
     question: subscribirse a esta pregunta
     questions: subscribirse a todas las preguntas
