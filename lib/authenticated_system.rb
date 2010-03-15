@@ -72,6 +72,11 @@ module AuthenticatedSystem
         # Add any other API formats here.  (Some browsers, notably IE6, send Accept: */* and trigger
         # the 'format.any' block incorrectly. See http://bit.ly/ie6_borken or http://bit.ly/ie6_borken2
         # for a workaround.)
+        format.js do
+          return render(:json => {:message => t("global.please_login"),
+                                  :success => false,
+                                  :status => :unauthenticate}.to_json)
+        end
         format.any(:json, :xml) do
           request_http_basic_authentication 'Web Password'
         end

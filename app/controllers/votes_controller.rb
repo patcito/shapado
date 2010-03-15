@@ -50,12 +50,12 @@ class VotesController < ApplicationController
       format.json do
         if voted
           average = vote.voteable.reload.votes_average
-          render(:json => {:status => :ok,
+          render(:json => {:success => true,
                            :message => flash[:notice],
                            :vote_type => vote_type,
                            :average => average}.to_json)
         else
-          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+          render(:json => {:success => true, :message => flash[:error] }.to_json)
         end
       end
     end
@@ -85,8 +85,8 @@ class VotesController < ApplicationController
           redirect_to params[:source]
         end
         format.json do
-          flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
-          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+          flash[:error] = t("global.please_login")
+          render(:json => {:status => :unauthenticate, :sucess => false, :message => flash[:error] }.to_json)
         end
       end
     end
