@@ -85,8 +85,11 @@ class AnswersController < ApplicationController
           current_user.on_activity(:answer_question, current_group)
 
           # TODO: use magent to do it
-          users = User.find(@question.watchers, "notification_opts.new_answer" => {:$in => ["1", true]}, :select => ["email"])
-          users.push(@question.user)
+          users = User.find(@question.watchers,
+                            "notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
+                            :_id => {:$ne => current_user.id},
+                            :select => ["email"])
+          users.push(@question.user) if @question.user != current_user
           users += @question.user.followers
 
           users.uniq.each do |u|
