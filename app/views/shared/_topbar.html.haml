@@ -8,15 +8,13 @@
       = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
   %span.right
     -if logged_in?
-      -if !current_group.isolate && !current_user.reputation.empty? && AppConfig.enable_groups
+      -if !current_group.isolate && AppConfig.enable_groups
         .entry
           %ul.combobox
             %li
               =link_to h(current_group.name), groups_path
               %ul
-                -current_user.reputation.keys.each do |group_id|
-                  -group = Group.find(group_id, :select => [:name, :domain])
-                  -next if group.nil?
+                -current_user.groups(:select => [:name, :domain]).each do |group|
                   %li
                     =link_to h(group.name), domain_url(:custom => group.domain)
           |

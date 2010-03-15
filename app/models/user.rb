@@ -141,7 +141,7 @@ class User
   end
 
   def is_preferred_tag?(group, *tags)
-    ptags = self.preferred_tags[group.id] || []
+    ptags = config_for(group).preferred_tags
     tags.detect { |t| ptags.include?(t) }
   end
 
