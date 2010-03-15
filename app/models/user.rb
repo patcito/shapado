@@ -155,18 +155,8 @@ class User
   end
 
   def groups(options = {})
-    groups_ids = memberships(:fields => "id" ).map do |member|
-      member.group_id
-    end
-
-    if groups_ids.empty?
-      page = MongoMapper::Pagination::PaginationProxy.new(0, 1, 25);
-      page.subject = []
-      return page
-    end
-
-    default_opts = {:conditions => {:_id => {:$in => groups_ids}}}
-    Group.paginate(options.merge(default_opts))
+    options[:order] ||= "activity_rate desc"
+    self.membership_list.groups(options)
   end
 
   def member_of?(group)

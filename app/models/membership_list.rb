@@ -20,4 +20,8 @@ class MembershipList < Hash
 
     result
   end
+
+  def groups(options = {})
+    Group.find(self.keys, options)
+  end
 end
