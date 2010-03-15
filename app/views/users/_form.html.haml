@@ -46,6 +46,10 @@
   =time_zone_select( "user", "timezone", ActiveSupport::TimeZone.all, {:include_blank => true}, :class => "select")
 
 .group
+  = f.label :hide_country, t(:hide_country, :scope => "activerecord.attributes.user"), :class => "label"
+  = f.check_box :hide_country, :class => "checkbox"
+
+.group
   = f.label :preferred_languages, t(:preferred_languages, :scope => "activerecord.attributes.user"), :class => "label"
   -AVAILABLE_LANGUAGES.each do |lang|
     .radio_option

@@ -61,3 +61,4 @@ en:
         created_at: joined
         reputation: reputation
         avatar: Profile image
+        hide_country: Do not display my country

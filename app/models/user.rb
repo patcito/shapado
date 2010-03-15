@@ -32,6 +32,7 @@ class User
   key :ip,                        String
   key :country_code,              String
   key :country_name,              String, :default => "unknown"
+  key :hide_country,              Boolean, :default => false
 
   key :default_subtab,            Hash
 

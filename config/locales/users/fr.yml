@@ -61,3 +61,4 @@ fr:
         created_at: membre
         reputation: reputation
         avatar: Profile image
+        hide_country: Do not display my country
