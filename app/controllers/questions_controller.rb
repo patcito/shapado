@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   helper :votes
 
   def history
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
 
     respond_to do |format|
       format.html
@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
   end
 
   def diff
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
     @prev = params[:prev]
     @curr = params[:curr]
     if @prev.blank? || @curr.blank? || @prev == @curr
@@ -45,7 +45,7 @@ class QuestionsController < ApplicationController
   end
 
   def rollback
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
     @question.updated_by = current_user
 
     if @question.rollback!(params[:version].to_i)
@@ -156,7 +156,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
 
     raise PageNotFound  unless @question
 
@@ -436,7 +436,7 @@ class QuestionsController < ApplicationController
   end
 
   def check_update_permissions
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
 
     if @question.nil?
       redirect_to questions_path
@@ -451,7 +451,7 @@ class QuestionsController < ApplicationController
   end
 
   def check_favorite_permissions
-    @question = Question.find_by_slug_or_id(params[:id])
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
     unless logged_in?
       flash[:error] = t(:unauthenticated, :scope => "favorites.create")
       respond_to do |format|
