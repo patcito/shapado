@@ -100,10 +100,15 @@ class User
     find_by_login(login) || find_by_id(login)
   end
 
-  def self.find_experts(tags, langs = AVAILABLE_LANGUAGES)
+  def self.find_experts(tags, langs = AVAILABLE_LANGUAGES, options = {})
     opts = {}
     opts[:limit] = 15
     opts[:select] = [:user_id]
+    if except = options[:except]
+      except = [except] unless except.is_a? Array
+      opts[:user_id] = {:$nin => except}
+    else
+    end
     user_ids = UserStat.all(opts.merge({:answer_tags => {:$in => tags}})).map do |s|
       s.user_id
     end

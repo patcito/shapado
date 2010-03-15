@@ -218,7 +218,7 @@ class QuestionsController < ApplicationController
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
         # TODO: move to magent
-        users = User.find_experts(@question.tags, [@question.language])
+        users = User.find_experts(@question.tags, [@question.language], :except => [current_user.id])
         users += @question.user.followers
 
         users.uniq.each do |u|
