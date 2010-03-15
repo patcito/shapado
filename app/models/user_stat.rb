@@ -13,13 +13,6 @@ class UserStat
 
   timestamps!
 
-
-  def viewed!
-    self.collection.update({:_id => self._id},
-                           {:$inc => {:views_count => 1.0}},
-                           :upsert => true)
-  end
-
   def add_answer_tags(*tags)
     self.collection.update({:_id => self._id,
                             :answer_tags => {:$nin => tags} },
