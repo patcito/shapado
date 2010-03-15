@@ -35,14 +35,8 @@ class User
 
   key :default_subtab,            Hash
 
-  # TODO: remove these fields
-  key :reputation,                Hash, :default => {} # membership, done
-  key :votes_up,                  Hash # membership, done
-  key :votes_down,                Hash # membership, done
-  key :preferred_tags,            Hash, :default => {} # membership, done
-  key :followers_count,           Integer, :default => 0 # membership
-  key :following_count,           Integer, :default => 0 # membership
-  has_many :memberships, :class_name => "Member", :foreign_key => "user_id"
+  key :followers_count,           Integer, :default => 0
+  key :following_count,           Integer, :default => 0
 
   key :membership_list,           MembershipList
 

@@ -59,10 +59,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   slug_key :name, :unique => true
 
-  has_many :memberships, :class_name => "Member",
-                         :foreign_key => "group_id",
-                         :dependent => :destroy # TODO: kill this
-
   has_many :ads, :dependent => :destroy
   has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
   has_many :badges, :dependent => :destroy

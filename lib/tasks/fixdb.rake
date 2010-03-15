@@ -83,25 +83,42 @@ namespace :fixdb do
       end
       user[:preferred_tags] = nil if destroy
 
-      user.memberships.each do |member|
-        next if Group.find(member.group_id, :select => [:_id]).nil?
+      cursor = MongoMapper.database.collection("members").find({:user_id => user.id})
 
-        user.config_for(member.group_id).role = member.role
+      while member = cursor.next_document
+        next if Group.find(member["group_id"], :select => [:_id]).nil?
+
+        user.config_for(member["group_id"]).role = member["role"]
       end
-      user.memberships if destroy
 
       stats = user.stats.reload
-      (stats.activity_days||{}).each do |group_id, v|
+      (stats[:activity_days]||{}).each do |group_id, v|
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).activity_days = v
       end
 
-      (stats.last_activity_at||{}).each do |group_id, v|
+      (stats[:last_activity_at]||{}).each do |group_id, v|
         next if Group.find(group_id, :select => [:_id]).nil?
         user.config_for(group_id).last_activity_at = v
       end
 
-      user.save(:validate => false)
+      stats_atts = stats.attributes
+      user_atts = user.attributes
+
+      if destroy
+        MongoMapper.database.drop_collection("members")
+
+        %w[activity_days last_activity_at].each do |key|
+          stats_atts.delete(key)
+        end
+
+        %w[reputation votes_up votes_down preferred_tags].each do |key|
+          user_atts.delete(key)
+        end
+      end
+
+      user.collection.save(user_atts)
+      UserStat.collection.save(stats_atts)
     end
   end
 end
