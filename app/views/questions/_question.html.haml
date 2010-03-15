@@ -47,6 +47,9 @@
           ==(#{owner.reputation_on(question.group)})
         %strong
           = t("time.ago", :time => time_ago_in_words(question.created_at))
+        -if question.wiki
+          %span.wiki_flag
+            wiki
     .clear
 -else
   %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}

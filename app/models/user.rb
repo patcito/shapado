@@ -296,7 +296,7 @@ class User
   end
 
   def reputation_on(group)
-    config_for(group).reputation
+    config_for(group).reputation.to_i
   end
 
   def stats(*extra_fields)
