@@ -108,13 +108,18 @@ class User
     if except = options[:except]
       except = [except] unless except.is_a? Array
       opts[:user_id] = {:$nin => except}
-    else
-    end
-    user_ids = UserStat.all(opts.merge({:answer_tags => {:$in => tags}})).map do |s|
-      s.user_id
     end
 
-    u=User.find(user_ids, "notification_opts.give_advice" => {:$in => ["1", true]}, :select => [:email, :login, :name, :language], :preferred_languages => langs)
+    user_ids = UserStat.all(opts.merge({:answer_tags => {:$in => tags}})).map(&:user_id)
+
+    conditions = {"notification_opts.give_advice" => {:$in => ["1", true]},
+                  :preferred_languages => langs}
+
+    if group_id = options[:group_id]
+      conditions["membership_list.#{group_id}"] = {:$exists => true}
+    end
+
+    u = User.find(user_ids, conditions.merge(:select => [:email, :login, :name, :language]))
     u ? u : []
   end
 
@@ -334,8 +339,11 @@ class User
     true
   end
 
-  def followers
-    self.friend_list.followers
+  def followers(scope = {})
+    conditions = {}
+    conditions[:preferred_languages] = {:in => scope[:languages]}  if scope[:languages]
+    conditions["membership_list.#{scope[:group_id]}"] = {:$exists => true} if scope[:group_id]
+    self.friend_list.followers.all(conditions)
   end
 
   def following

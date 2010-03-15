@@ -85,12 +85,18 @@ class AnswersController < ApplicationController
           current_user.on_activity(:answer_question, current_group)
 
           # TODO: use magent to do it
-          users = User.find(@question.watchers,
-                            "notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
-                            :_id => {:$ne => current_user.id},
-                            :select => ["email"])
+          search_opts = {"notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
+                          :_id => {:$ne => current_user.id},
+                          :select => ["email"]}
+
+          users = User.find(@question.watchers, search_opts)
           users.push(@question.user) if @question.user != current_user
-          users += @question.user.followers
+
+          if current_group.private || current_group.isolate
+            users += @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
+          else
+            users += @question.user.followers(:languages => [@question.language])
+          end
 
           users.uniq.each do |u|
             email = u.email
