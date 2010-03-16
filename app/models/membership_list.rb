@@ -1,6 +1,6 @@
 class MembershipList < Hash
   def self.to_mongo(value)
-    return value if kind_of?(self)
+    return value if value.kind_of?(self)
 
     result = {}
     value.each do |k, v|
@@ -11,7 +11,7 @@ class MembershipList < Hash
   end
 
   def self.from_mongo(value)
-    return value if kind_of?(self)
+    return value if value.kind_of?(self)
 
     result = MembershipList.new
     (value||{}).each do |k, v|
