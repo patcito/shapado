@@ -2,9 +2,9 @@ class UsersWidget < Widget
   before_validation_on_create :set_name
 
   def recent_users(group)
-    User.all(:order => "created_at desc",
-             :conditions => {:"reputation.#{group.id}" => {:"$exists" => true}},
-             :limit => 5)
+    group.users(:order => "created_at desc",
+                :per_page => 5,
+                :page => 1)
   end
 
   protected
