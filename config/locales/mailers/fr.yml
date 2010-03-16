@@ -3,13 +3,13 @@ fr:
     notifications:
       new_answer:
         subject_owner: "{{login}} a répondu à votre question {{title}}"
-        subject_friend: "your friend {{login}} answered the question {{title}}"
+        subject_friend: "votre amis {{login}} a répondu à la question {{title}}"
         subject_other: "{{login}} a répondu à la question {{title}}"
       new_comment:
         subject: "{{login}} a commenté sur {{group}}"
       give_advice:
         subject: "nous avons besoin de votre aide: {{question_title}}"
-        friend_subject: "your friend needs help: {{question_title}}"
+        friend_subject: "votre amis à besoin d'aide: {{question_title}}"
       follow:
         subject: "{{login}} vous suit sur {{app}}"
       earned_badge:
