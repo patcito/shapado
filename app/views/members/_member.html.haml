@@ -1,5 +1,5 @@
 -membership = member.config_for(@group)
--can_modify_member = logged_in? && (current_user.admin? || current_user != user ) && current_user.owner_of?(@group)
+-can_modify_member = logged_in? && (current_user.admin? || current_user != member ) && current_user.owner_of?(@group)
 
 %li.item
   / Member Stats
@@ -28,7 +28,7 @@
     .tag-list
       -if can_modify_member
         -form_tag(member_path(member.id), :class => "form", :method => :put) do |f|
-          = select_tag :role, options_for_select(Member::ROLES, membership.role)
+          = select_tag :role, options_for_select(Membership::ROLES, membership.role)
           = submit_tag t("scaffold.update")
       -else
         &= membership.role

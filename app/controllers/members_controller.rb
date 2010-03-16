@@ -8,7 +8,8 @@ class MembersController < ApplicationController
   def index
     @group = current_group
     @members = @group.users(:page => params[:page] || 1,
-                            :per_page => params[:per_page] || 25)
+                            :per_page => params[:per_page] || 25,
+                            :order => "membership_list.#{@group.id}.role asc, membership_list.#{@group.id}.reputation desc")
     @member = User.new
     @membership = Membership.new
   end
