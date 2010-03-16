@@ -1,21 +1,27 @@
 class Notifier < ActionMailer::Base
   helper :application
 
-  def give_advice(user, group, question)
+  def give_advice(user, group, question, following = false)
     template_for user do
 
       scope = "mailers.notifications.give_advice"
 
       from "#{group ? group.name : AppConfig.application_name} <#{AppConfig.notification_email}>"
       recipients user.email
-      subject I18n.t("subject", :scope => scope, :question_title => question.title) # FIXME
+
+      if following
+        subject I18n.t("friend_subject", :scope => scope, :question_title => question.title)
+      else
+        subject I18n.t("subject", :scope => scope, :question_title => question.title)
+      end
       sent_on Time.now
       body   :user => user, :question => question,
-             :group => group, :domain => group.domain
+             :group => group, :domain => group.domain,
+             :following => following
     end
   end
 
-  def new_answer(user, group, answer)
+  def new_answer(user, group, answer, following = false)
     self.class.layout "notification_#{user.language.downcase}"
     template_for user do
 
@@ -24,6 +30,10 @@ class Notifier < ActionMailer::Base
         @subject = I18n.t("subject_owner", :scope => scope,
                                            :title => answer.question.title,
                                            :login => answer.user.login)
+      elsif following
+        @subject = I18n.t("subject_friend", :scope => scope,
+                                            :title => answer.question.title,
+                                            :login => answer.user.login)
       else
         @subject = I18n.t("subject_other", :scope => scope,
                                            :title => answer.question.title,

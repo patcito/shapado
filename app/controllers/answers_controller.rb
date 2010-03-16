@@ -91,17 +91,23 @@ class AnswersController < ApplicationController
 
           users = User.find(@question.watchers, search_opts)
           users.push(@question.user) if @question.user != current_user
+          followers = []
 
           if current_group.private || current_group.isolate
-            users += @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
+            followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
           else
-            users += @question.user.followers(:languages => [@question.language])
+            followers = @question.user.followers(:languages => [@question.language])
           end
 
-          users.uniq.each do |u|
-            email = u.email
-            if !email.blank? && u.notification_opts.new_answer
-              Notifier.deliver_new_answer(u, current_group, @answer)
+          (users - followers).each do |u|
+            if !u.email.blank? && u.notification_opts.new_answer
+              Notifier.deliver_new_answer(u, current_group, @answer, false)
+            end
+          end
+
+          followers.each do |u|
+            if !u.email.blank? && u.notification_opts.new_answer
+              Notifier.deliver_new_answer(u, current_group, @answer, true)
             end
           end
 

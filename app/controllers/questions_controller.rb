@@ -218,20 +218,26 @@ class QuestionsController < ApplicationController
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
         # TODO: move to magent
-        users = []
+        users = []; followers = []
         if current_group.private || current_group.isolate
           users = User.find_experts(@question.tags, [@question.language],
                                                     :except => [current_user.id],
                                                     :group_id => current_group.id)
-          users += @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
+          followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
         else
           User.find_experts(@question.tags, [@question.language], :except => [current_user.id])
-          users += @question.user.followers(:languages => [@question.language])
+          followers = @question.user.followers(:languages => [@question.language])
         end
 
-        users.uniq.each do |u|
+        (users - followers).each do |u|
           if !u.email.blank?
-            Notifier.deliver_give_advice(u, current_group, @question)
+            Notifier.deliver_give_advice(u, current_group, @question, false)
+          end
+        end
+
+        followers.each do |u|
+          if !u.email.blank?
+            Notifier.deliver_give_advice(u, current_group, @question, true)
           end
         end
 

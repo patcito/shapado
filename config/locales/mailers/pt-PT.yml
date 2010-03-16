@@ -3,11 +3,13 @@ pt-PT:
     notifications:
       new_answer:
         subject_owner: "{{login}} respondeu à sua pergunta {{title}}"
+        subject_friend: "your friend {{login}} answered the question {{title}}"
         subject_other: "{{login}} respondeu à pergunta {{title}}"
       new_comment:
         subject: "{{login}} commented on {{group}}"
       give_advice:
         subject: "we need your advice: {{question_title}}"
+        friend_subject: "your friend needs help: {{question_title}}"
       follow:
         subject: "{{login}} is now following you on {{app}}"
       earned_badge:
