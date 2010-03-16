@@ -60,5 +60,5 @@ fr:
         last_logged_at: vu
         created_at: membre
         reputation: reputation
-        avatar: Profile image
-        hide_country: Do not display my country
+        avatar: Image de profile
+        hide_country: Ne pas dévoiler mon pays

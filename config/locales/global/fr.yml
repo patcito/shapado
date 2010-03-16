@@ -30,11 +30,11 @@ fr:
     permission_denied: permission refusée
     please_login: ouvrez une session s'il vous plait
     group_not_found: "la page {{url}} n'existe pas"
-    preview: preview
+    preview: prévue
     or: ou
     by: par
-    current: current
-    previous: previous
+    current: précédent
+    previous: suivant
   feeds:
     question: souscrire à cette question
     questions: souscrire à toutes les questions
