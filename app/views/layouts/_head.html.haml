@@ -8,16 +8,10 @@
   -@feed_urls.each do |title, url|
     %link{:rel=>"alternate", :type=>"application/atom+xml", :title => h(title), :href=> url}
 
-= javascript_include_tag "jquery", "jquery-ui", "showdown", "jquery.textarea", "application"
-= javascript_include_tag 'modules/sessions.js'
-= javascript_include_tag 'modules/show_question.js'
-= javascript_include_tag 'openid/js/jquery.openid.min.js'
-= javascript_include_tag 'jquery.notifyBar.js'
+= javascript_include_merged :base
 = yield :js
-= stylesheet_link_tag 'compoments/dialog.css', :media => 'screen, projection'
-= stylesheet_link_tag 'jquery-ui.css', :media => 'screen, projection'
+= stylesheet_link_merged :base, :media => 'screen, projection'
 = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
-= stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
 = stylesheet_link_tag 'compiled/markdown_editor.css', :media => 'screen, projection'
-= stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
+ projection'
 = yield :css

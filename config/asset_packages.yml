@@ -25,10 +25,8 @@ javascripts:
   - jquery.geekga-1.1.min
   - jquery.treeview
   - jquery.autocomplete
-- secondary:
   - components/search
   - highlight/prettify
-- jsMath:
   - jsMath/jsMath
   - jsMath/jsMath-BaKoMa-fonts
   - jsMath/jsMath-easy-load
@@ -41,7 +39,6 @@ javascripts:
   - jsMath/jsMath-loader-omniweb4
   - jsMath/jsMath-msie-mac
   - jsMath/jsMath-old-browsers
-- modules:
   - modules/googlean      
   - modules/index_welcome  
   - modules/move_group   
@@ -51,12 +48,13 @@ javascripts:
   - modules/members      
   - modules/new_question
   - modules/show_question
-- openid:
   - openid/js/jquery.openid
   - openid/js/jquery.openid.min
-
 
 stylesheets: 
 - base: 
   - jquery-ui
   - prettify
+  - compoments/dialog
+  - compiled/application
+  - ../javascripts/openid/css/style
