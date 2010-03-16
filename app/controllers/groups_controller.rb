@@ -85,12 +85,12 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.save
         @group.add_member(current_user, "owner")
-        flash[:notice] = 'Group was successfully created.' # TODO: i18n
-        format.html { redirect_to(@group) }
-        format.xml  { render :xml => @group, :status => :created, :location => @group }
+        flash[:notice] = I18n.t("groups.create.flash_notice")
+        format.html { redirect_to(domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")) }
+        format.xml  { render :json => @group.to_json, :status => :created, :location => @group }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+        format.xml  { render :json => @group.errors, :status => :unprocessable_entity }
       end
     end
   end
