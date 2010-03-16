@@ -44,8 +44,9 @@
       -if !@question.user.hide_country
         = t("global.from", :site => @question.user.country_name)
         = country_flag(@question.user.country_code, @question.user.country_name)
-    .wiki_flag
-      wiki
+    -if @question.wiki
+      .wiki_flag
+        wiki
     .clear
   .controls
     .actions
