@@ -154,7 +154,7 @@ class GroupsController < ApplicationController
 
   def logo
     @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo, :logo_ext])
-    send_data(@group.logo.read, :filename => "logo.#{@group.logo_ext}",  :disposition => 'inline')
+    send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo_ext}",  :disposition => 'inline')
   end
 
   def css

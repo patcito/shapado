@@ -7,7 +7,7 @@ class User
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
-  ROLES = %w[user admin]
+  ROLES = %w[user moderator admin]
 
   key :_id,                       String
   key :login,                     String, :limit => 40, :index => true
