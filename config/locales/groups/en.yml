@@ -21,6 +21,8 @@ en:
       accept_group_with_custom_ads: accept group and allow custom ads
     new:
       title: create your group
+    create:
+      flash_notice: Your group was successfully created, you can now start to configure it.
     form:
       description_legend: you have 400 characters to describe the group.
       legend_legend: "it will be used in the header, you have 40 characters"

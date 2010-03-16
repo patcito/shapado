@@ -21,6 +21,8 @@ fr:
       close_group: fermer ce groupe
     new:
       title: créez votre groupe
+    create:
+      flash_notice: "Votre groupe a été créé avec succès, vous pouvez maintenant commencer à le configurer."
     form:
       description_legend: vous avez 400 caractères pour décrire le groupe.
       legend_legend: "ceci sera utilisé dans l'entête, vous disposez de 40 caractères"
