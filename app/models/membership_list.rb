@@ -1,10 +1,12 @@
 class MembershipList < Hash
   def self.to_mongo(value)
-    return value if value.kind_of?(self)
-
     result = {}
     value.each do |k, v|
-      result[k] = v.to_mongo
+      if v.kind_of?(Membership)
+        result[k] = v.attributes
+      else
+        result[k] = v
+      end
     end
 
     result
