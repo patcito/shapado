@@ -341,7 +341,7 @@ class User
 
   def followers(scope = {})
     conditions = {}
-    conditions[:preferred_languages] = {:in => scope[:languages]}  if scope[:languages]
+    conditions[:preferred_languages] = {:$in => scope[:languages]}  if scope[:languages]
     conditions["membership_list.#{scope[:group_id]}"] = {:$exists => true} if scope[:group_id]
     self.friend_list.followers.all(conditions)
   end
