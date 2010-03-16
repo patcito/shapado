@@ -1,0 +1,62 @@
+--- 
+javascripts: 
+- base: 
+  - jquery.autovideo
+  - jquery.json
+  - jquery.treeTable
+  - jquery.localscroll
+  - jquery.textarea
+  - showdown
+  - jquery
+  - jquery.notifyBar
+  - parseuri
+  - jquery.mousewheel
+  - jquery.autogrow
+  - jquery.scrollTo
+  - jquery.form
+  - jquery.dynatree.min
+  - jquery.cookie
+  - jquery.dimensions.min
+  - jquery.sprintf
+  - jquery.treeview.async
+  - jquery-ui
+  - jquery.wysiwyg
+  - application
+  - jquery.geekga-1.1.min
+  - jquery.treeview
+  - jquery.autocomplete
+- secondary:
+  - components/search
+  - highlight/prettify
+- jsMath:
+  - jsMath/jsMath
+  - jsMath/jsMath-BaKoMa-fonts
+  - jsMath/jsMath-easy-load
+  - jsMath/jsMath-fallback-mac
+  - jsMath/jsMath-fallback-mac-mozilla
+  - jsMath/jsMath-fallback-mac-msie
+  - jsMath/jsMath-fallback-pc
+  - jsMath/jsMath-fallback-symbols
+  - jsMath/jsMath-fallback-unix
+  - jsMath/jsMath-loader-omniweb4
+  - jsMath/jsMath-msie-mac
+  - jsMath/jsMath-old-browsers
+- modules:
+  - modules/googlean      
+  - modules/index_welcome  
+  - modules/move_group   
+  - modules/sessions     
+  - modules/themes
+  - modules/index_question
+  - modules/members      
+  - modules/new_question
+  - modules/show_question
+- openid:
+  - openid/js/jquery.openid
+  - openid/js/jquery.openid.min
+
+
+stylesheets: 
+- base: 
+  - jquery-ui
+  - prettify
