@@ -3,7 +3,7 @@ es-AR:
     notifications:
       new_answer:
         subject_owner: "{{login}} respondio su pregunta {{title}}"
-        subject_friend: "tu amigo {{login}} answered the question {{title}}"
+        subject_friend: "tu amigo {{login}} respondio la pregunta {{title}}"
         subject_other: "{{login}} respondio la pregunta {{title}}"
       new_comment:
         subject: "{{login}} comento en {{group}}"

@@ -94,9 +94,9 @@ class AnswersController < ApplicationController
           followers = []
 
           if current_group.private || current_group.isolate
-            followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
+            followers = @answer.user.followers(:group_id => current_group.id, :languages => [@question.language])
           else
-            followers = @question.user.followers(:languages => [@question.language])
+            followers = @answer.user.followers(:languages => [@question.language])
           end
 
           (users - followers).each do |u|
