@@ -159,7 +159,7 @@ class ApplicationController < ActionController::Base
         if current_group.isolate
           "#{@page_title} - #{current_group.name} #{current_group.legend}"
         else
-          "#{@page_title} - #{current_group.name}@#{AppConfig.application_name}: #{current_group.legend}"
+          "#{@page_title} - #{current_group.name} - #{AppConfig.application_name} -  #{current_group.legend}"
         end
       end
     else
@@ -169,7 +169,7 @@ class ApplicationController < ActionController::Base
         if current_group.isolate
           "#{current_group.name} - #{current_group.legend}"
         else
-          "#{current_group.name}@#{AppConfig.application_name} - #{current_group.legend}"
+          "#{current_group.name} - #{current_group.legend} - #{AppConfig.application_name}"
         end
       end
     end
