@@ -2,14 +2,31 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  include ExceptionNotifiable
-  include SuperExceptionNotifier
-  include ExceptionNotifierHelper
-  self.error_layout = 'application'
+
+  if AppConfig.exception_notification['activate']
+    include ExceptionNotifiable
+    include SuperExceptionNotifier
+    include ExceptionNotifierHelper
+    self.error_layout = 'application'
+    local_addresses.clear
+
+    exception_data :additional_data
+    def additional_data
+      { :group => find_group}
+    end
+    protected :additional_data
+  else
+
+    # This method is override from Rails API
+    # so see if allways works in next Rails version
+    def render_optional_error_file(status_code)
+      status = interpret_status(status_code)
+      render "error/#{status[0,3]}"
+    end
+  end
 
   include AuthenticatedSystem
   include Subdomains
-  local_addresses.clear
 
   protect_from_forgery
 
@@ -36,11 +53,6 @@ class ApplicationController < ActionController::Base
        (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
       access_denied
     end
-  end
-
-  exception_data :additional_data
-  def additional_data
-    { :group => find_group}
   end
 
   def find_group
