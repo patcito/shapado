@@ -1,16 +1,16 @@
-
-%h4.title
-  #search_box
-    - form_tag search_path, :class => "form", :method => :get do
+#search_box
+  - form_tag search_path, :class => "form", :method => :get do
+    %h4.title
       %label.label
         = t("searches.form.search_box_title")
-      %br
+    .field
       = hidden_field_tag :sort_by, current_order
-      .group
-        -tags = ""
-        -current_tags.each {|tag| tags += " [#{tag}]"}
-        = text_field_tag :q, params[:q].to_s + tags, :class => "text_field title"
-        .description
-          = t("searches.form.tags_tip")
+    .group.search_field
+      -tags = ""
+      -current_tags.each {|tag| tags += " [#{tag}]"}
+      = text_field_tag :q, params[:q].to_s + tags, :class => "text_field title"
+      .description
+        = t("searches.form.tags_tip")
+    .field
       = submit_tag t("layouts.application.search"), :class => "button search"
-    .clear
+  .clear

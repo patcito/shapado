@@ -5,7 +5,7 @@
     = text_field_tag "feedback[title]", feedback[:title], :class=> "text_field"
   .group
     = label_tag "feedback[description]", t(".feedback_description"), :class => "label"
-    = text_area_tag "feedback[description]", feedback[:description], :class=> "text_area"
+    = text_area_tag "feedback[description]", feedback[:description], :class=> "text_area", :cols => 55, :rows => 15
   .group
     = label_tag "feedback[email]", t(".feedback_email", :default => :"activerecord.attributes.user.email"), :class => "label"
     = text_field_tag "feedback[email]", feedback[:email], :class=> "text_field"

@@ -9,7 +9,8 @@
           = link_to "-", change_preferred_tags_user_path(current_user, :language => current_languages, :opt => "remove", :tags => [tag]), :class => "remove_tag"
 
     - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
-      = hidden_field_tag :language, current_languages
-      = hidden_field_tag :opt, "add"
-      = text_field_tag "tags", "", :class => "text_field", :style => "width: 70%", :class => "autocomplete_for_tags"
-      = submit_tag t("scaffold.add"), :class => "button"
+      .fields
+        = hidden_field_tag :language, current_languages
+        = hidden_field_tag :opt, "add"
+        = text_field_tag "tags", "", :class => "text_field", :style => "width: 70%", :class => "autocomplete_for_tags", :id => 'tags_autocomplete'
+        = submit_tag t("scaffold.add"), :class => "button"

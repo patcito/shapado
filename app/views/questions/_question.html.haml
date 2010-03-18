@@ -23,7 +23,7 @@
           =t(:views, :scope => "activerecord.attributes.question")
     / Question Summary
     .summary
-      %h3
+      .left.vote-icon
         -if logged_in? && (vote = current_user.vote_on(question))
           -if vote.value < 0
             = image_tag "edit-delete.png"
@@ -31,12 +31,13 @@
             = image_tag "dialog-ok-apply.png"
         -else
           -form_tag votes_path, :class => "vote-up-form" do
-            = hidden_field_tag "voteable_type", question.class.name
-            = hidden_field_tag "voteable_id", question.id
-            = hidden_field_tag "source", questions_path(:language => current_languages)
-            = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"))
+            .fields
+              = hidden_field_tag "voteable_type", question.class.name, :id => "voteable_type_#{question.id}"
+              = hidden_field_tag "voteable_id", question.id, :id =>  "voteable_id_#{question.id}"
+              = hidden_field_tag "source", questions_path(:language => current_languages), :id =>  "source_#{question.id}"
+              = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"))
 
-        = link_to title, question_path(current_languages, question), :title => truncate(h(question.body), :length => 200)
+      %h3= link_to title, question_path(current_languages, question), :title => truncate(h(question.body), :length => 200)
       .tag-list
         -question.tags.each do |tag|
           %span.tag

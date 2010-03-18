@@ -10,7 +10,7 @@
     %li.hot
       = link_to t("questions.index.hot"), root_path(:tab=>"hot")
 
-%h3.title
+%div
   #quick_question
     -@question = Question.new
     -form_for(@question, :url => questions_url(current_languages), :html=>{:class => "form", :id => "ask_question"}) do |f|
@@ -18,9 +18,10 @@
       -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
       -lang = logged_in? ? current_user.language : lang
       -lang = current_group.language ? current_group.language : lang
-      = f.hidden_field :language, :value => lang
-      %label.label
-        =t(".quick_question")
+
+      %h3
+        %label.label
+          =t(".quick_question")
       .columns
         .column_info
           -if logged_in?
@@ -39,6 +40,7 @@
           %span#tags.group
             =t(:tags, :scope => "activerecord.attributes.question")
             =f.text_field :tags, :class => "text_field autocomplete_for_tags"
+          = f.hidden_field :language, :value => lang
           =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
       .clear
 %ul.items#questions
