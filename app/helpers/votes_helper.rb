@@ -1,14 +1,17 @@
 module VotesHelper
   def vote_box(voteable, source)
+    class_name = voteable.class.name
     if (logged_in? && voteable.user != current_user) || !logged_in?
       vote = current_user.vote_on(voteable) if logged_in?
       %@
       <form action='#{votes_path}' method='post' class='vote_form' >
-        #{token_tag}
-        <span class='vote_box'>
-          #{hidden_field_tag "voteable_type", voteable.class.name}
-          #{hidden_field_tag "voteable_id", voteable.id}
-          #{hidden_field_tag "source", source}
+        <div>
+          #{token_tag}
+        </div>
+        <div class='vote_box'>
+          #{hidden_field_tag "voteable_type", class_name, :id => "voteable_type_#{class_name}_#{voteable.id}"}
+          #{hidden_field_tag "voteable_id", voteable.id, :id => "voteable_id_#{class_name}_#{voteable.id}"}
+          #{hidden_field_tag "source", source, :id => "source_#{class_name}_#{voteable.id}"}
           <button type="submit" name="vote_up" value="1" class="arrow">
             #{if vote && vote.value > 0
                 image_tag("vote_up.png", :width => 30, :height => 22)
@@ -27,12 +30,12 @@ module VotesHelper
                 image_tag("to_vote_down.png", :width => 30, :height => 22)
               end}
           </button>
-        </span>
+        </div>
       </form>
       @
     else
       %@
-        <span class='vote_box'>
+        <div class='vote_box'>
           <div class="arrow">
             #{image_tag("to_vote_up.png", :width => 30, :height => 22)}
           </div>
@@ -42,7 +45,7 @@ module VotesHelper
           <div class="arrow">
             #{image_tag("to_vote_down.png", :width => 30, :height => 22)}
           </div>
-        </span>
+        </div>
       @
     end
   end

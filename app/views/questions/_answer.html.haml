@@ -3,11 +3,11 @@
 -source = question_path(current_languages,@question)
 .answer.commentable{:class => solution ? "solution" : ""}
   %a{:name=>"#{answer.id}"}
-  #vote-col
+  .vote-col
     =vote_box(answer, question_path(current_languages, question))
     -if solution
       =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
-  #body-col
+  .body-col
     .markdown
       =find_and_preserve(shapado_auto_link(markdown(answer.body)))
     -if !answer.updated_by.nil?

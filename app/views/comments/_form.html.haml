@@ -1,6 +1,6 @@
 .group
-  = hidden_field_tag "commentable_type", commentable.class.name
-  = hidden_field_tag "commentable_id", commentable.id
-  = hidden_field_tag "source", source
+  = hidden_field_tag "commentable_type", commentable.class.name, :id => "commentable_type_#{commentable.id}"
+  = hidden_field_tag "commentable_id", commentable.id, :id => "commentable_id_#{commentable.id}"
+  = hidden_field_tag "source", source, :id => "source_#{commentable.id}"
 
-  = text_area_tag "body", @comment.body, :class => "text_area markdown_editor"
+  = text_area_tag "body", @comment.body, :class => "text_area markdown_editor", :id => "comment_#{commentable.id}", :rows => 'auto', :cols => 'auto'

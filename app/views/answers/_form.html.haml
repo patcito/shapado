@@ -3,7 +3,7 @@
   %label.label
     = t('.answer_label')
 
-  -opts = {:class => "text_area"}
+  -opts = {:class => "text_area", :rows => 'auto', :cols => 'auto'}
   -opts[:id] = "markdown_editor" if local_assigns[:markdown]
 
   = f.text_area :body, opts
