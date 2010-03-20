@@ -6,7 +6,7 @@
 #question
   #question-title
     %h2
-      = link_to h(@question.title), question_path(current_languages, @question)
+      = link_to h(@question.title), question_path(@question)
   #question-body.markdown
     = markdown(@question.body)
 

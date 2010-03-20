@@ -19,7 +19,7 @@
       %li.mytags
         = link_to t("questions.unanswered.my_tags"), unanswered_questions_path(:sort=>"mytags")
       %li.expert
-        = link_to t(".expert"), unanswered_questions_path(:language => current_languages, :sort=>"expert")
+        = link_to t(".expert"), unanswered_questions_path(:sort=>"expert")
 
 -content_for :sidebar do
   = render :partial => "shared/current_tags"

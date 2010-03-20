@@ -2,9 +2,9 @@
   .navtitle
     = t(".title")
 
-- form_for(@question, :url => question_path(current_languages,@question), :html => {:class => "form"}) do |f|
+- form_for(@question, :url => question_path(@question), :html => {:class => "form"}) do |f|
   =render :partial => "form", :locals => {:f => f}
   .field-group
     .buttons
       = f.submit t("scaffold.update")
-      = link_to t("scaffold.cancel"), question_path(current_languages,@question), :class => "button cancel"
+      = link_to t("scaffold.cancel"), question_path(@question), :class => "button cancel"

@@ -54,7 +54,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to history_question_path(current_languages, @question) }
+      format.html { redirect_to history_question_path(@question) }
     end
   end
 
@@ -241,7 +241,7 @@ class QuestionsController < ApplicationController
           end
         end
 
-        format.html { redirect_to(question_path(current_languages, @question)) }
+        format.html { redirect_to(question_path(@question)) }
         format.json { render :json => @question.to_json(:except => %w[_keywords watchers]), :status => :created}
       else
         format.html { render :action => "new" }
@@ -258,7 +258,7 @@ class QuestionsController < ApplicationController
       @question.updated_by = current_user
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
-        format.html { redirect_to(question_path(current_languages,@question)) }
+        format.html { redirect_to(question_path(@question)) }
         format.json  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -296,7 +296,7 @@ class QuestionsController < ApplicationController
         Magent.push("actors.judge", :on_question_solved, @question.id, @answer.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.solve")
-        format.html { redirect_to question_path(current_languages, @question) }
+        format.html { redirect_to question_path(@question) }
         format.json  { head :ok }
       else
         @tag_cloud = Question.tag_cloud(:_id => @question.id)
@@ -329,7 +329,7 @@ class QuestionsController < ApplicationController
 
         Magent.push("actors.judge", :on_question_unsolved, @question.id, @answer_id)
 
-        format.html { redirect_to question_path(current_languages, @question) }
+        format.html { redirect_to question_path(@question) }
         format.json  { head :ok }
       else
         @tag_cloud = Question.tag_cloud(:_id => @question.id)
@@ -372,11 +372,11 @@ class QuestionsController < ApplicationController
       if @favorite.save
         @question.add_favorite!(@favorite, current_user)
         flash[:notice] = t("favorites.create.success")
-        format.html { redirect_to(question_path(current_languages, @question)) }
+        format.html { redirect_to(question_path(@question)) }
         format.json { head :ok }
       else
         flash[:error] = @favorite.errors.full_messages.join("**")
-        format.html { redirect_to(question_path(current_languages, @question)) }
+        format.html { redirect_to(question_path(@question)) }
         format.json { render :json => @favorite.errors, :status => :unprocessable_entity }
       end
     end
@@ -393,7 +393,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to(question_path(current_languages, @question)) }
+      format.html { redirect_to(question_path(@question)) }
       format.json  { head :ok }
     end
   end
@@ -403,7 +403,7 @@ class QuestionsController < ApplicationController
     @question.add_watcher(current_user)
     flash[:notice] = t("questions.watch.success")
     respond_to do |format|
-      format.html {redirect_to question_path(current_languages, @question)}
+      format.html {redirect_to question_path(@question)}
       format.json { head :ok }
     end
   end
@@ -412,7 +412,7 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
     @question.remove_watcher(current_user)
     respond_to do |format|
-      format.html {redirect_to question_path(current_languages, @question)}
+      format.html {redirect_to question_path(@question)}
       format.json { head :ok }
     end
   end
@@ -429,7 +429,7 @@ class QuestionsController < ApplicationController
       @question.group = @group
       @question.save
       flash[:notice] = t("questions.move_to.success", :group => @group.name)
-      redirect_to question_path(current_languages, @question)
+      redirect_to question_path(@question)
     else
       flash[:error] = t("questions.move_to.group_dont_exists",
                         :group => params[:question][:group])
@@ -445,7 +445,7 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     elsif !current_user.can_modify?(@question)
       flash[:error] = t("global.permission_denied")
-      redirect_to question_path(current_languages, @question)
+      redirect_to question_path(@question)
     end
   end
 
@@ -460,7 +460,7 @@ class QuestionsController < ApplicationController
       flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                                     :min_reputation => reputation,
                                     :action => I18n.t("users.actions.edit_others_posts"))
-      redirect_to question_path(current_languages, @question)
+      redirect_to question_path(@question)
     end
   end
 
@@ -471,7 +471,7 @@ class QuestionsController < ApplicationController
       respond_to do |format|
         format.html do
           flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
-          redirect_to question_path(current_languages, @question)
+          redirect_to question_path(@question)
         end
         format.json do
           flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"

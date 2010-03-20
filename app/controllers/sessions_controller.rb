@@ -141,14 +141,12 @@ protected
         if !draft.question.nil?
           question = draft.question
           question.user = current_user
-          session[:return_to] = new_question_path(current_languages,
-                          :question => {:body => question.body, :language => question.language,
+          session[:return_to] = new_question_path(:question => {:body => question.body, :language => question.language,
                                         :title => question.title, :tags => question.tags})
         elsif !draft.answer.nil?
           answer = draft.answer
           answer.user = current_user
-          session[:return_to] = question_path(current_languages, answer.question,
-                                              :answer => {:body => answer.body},
+          session[:return_to] = question_path(answer.question, :answer => {:body => answer.body},
                                               :anchor => "to_answer")
         end
         draft.destroy

@@ -12,13 +12,13 @@
 
   %ul
     %li.newest
-      = link_to t("questions.index.newest"), questions_path(:language => current_languages, :sort=>"newest")
+      = link_to t("questions.index.newest"), questions_path(:sort=>"newest")
     %li.hot
-      = link_to t("questions.index.hot"), questions_path(:language => current_languages, :sort=>"hot")
+      = link_to t("questions.index.hot"), questions_path(:sort=>"hot")
     %li.votes
-      = link_to t("questions.index.votes"), questions_path(:language => current_languages, :sort=>"votes")
+      = link_to t("questions.index.votes"), questions_path(:sort=>"votes")
     %li.activity
-      = link_to t("questions.index.active"), questions_path(:language => current_languages, :sort=>"activity")
+      = link_to t("questions.index.active"), questions_path(:sort=>"activity")
 
 
 -content_for :sidebar do
@@ -48,6 +48,6 @@
 
   #help_us
     = t(".help_to_answer")
-    =link_to t(".unanswered_questions"), unanswered_questions_path(:language => current_languages)
+    =link_to t(".unanswered_questions"), unanswered_questions_path
 
   .clear

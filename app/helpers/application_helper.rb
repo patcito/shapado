@@ -90,7 +90,7 @@ module ApplicationHelper
     cloud = '<div class="tag_cloud">'
     tags.each do |tag|
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
-      url = questions_path(:language => current_languages, :tags => tag["name"])
+      url = questions_path(:tags => tag["name"])
       cloud << "<span>#{link_to(tag["name"], url,
           :style => "font-size:#{size}px;line-height:#{size.to_i+12}px;", :class => "#{tag_class}")}</span> "
     end
@@ -142,7 +142,7 @@ module ApplicationHelper
   end
 
   def render_tag(tag)
-    %@<span class="tag"><a href="#{questions_path(:language => current_languages, :tags => tag)}">#{@badge.token}</a></span>@
+    %@<span class="tag"><a href="#{questions_path(:tags => tag)}">#{@badge.token}</a></span>@
   end
 
   def class_for_question(question)

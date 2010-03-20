@@ -1,8 +1,8 @@
 
-=link_to t("global.current"), diff_question_answer_path(current_languages, post.question, post, :curr => number, :prev => "current"), :class => "diff_current"
+=link_to t("global.current"), diff_question_answer_path(post.question, post, :curr => number, :prev => "current"), :class => "diff_current"
 -if (number-1) >= 0
   |
-  =link_to t("global.previous"), diff_question_answer_path(current_languages, post.question, post, :curr => number, :prev => number-1 ), :class => "diff_prev"
+  =link_to t("global.previous"), diff_question_answer_path(post.question, post, :curr => number, :prev => number-1 ), :class => "diff_prev"
 -if logged_in? && current_user.can_modify?(post)
   |
-  =link_to t("wiki.actions.set_as_current"), rollback_question_answer_path(current_languages, post.question, post, :version => number), :method => :put
+  =link_to t("wiki.actions.set_as_current"), rollback_question_answer_path(post.question, post, :version => number), :method => :put

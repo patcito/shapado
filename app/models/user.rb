@@ -8,6 +8,7 @@ class User
   include Authentication::ByCookieToken
 
   ROLES = %w[user moderator admin]
+  LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
 
   key :_id,                       String
   key :login,                     String, :limit => 40, :index => true
@@ -28,6 +29,7 @@ class User
 
   key :language,                  String, :default => "en"
   key :timezone,                  String
+  key :language_filter,           String, :default => "user", :in => LANGUAGE_FILTERS
 
   key :ip,                        String
   key :country_code,              String
@@ -149,6 +151,30 @@ class User
 
   def preferred_tags_on(group)
     @group_preferred_tags ||= (config_for(group).preferred_tags || []).to_a
+  end
+
+  def update_language_filter(filter)
+    if LANGUAGE_FILTERS.include? filter
+      User.set({:_id => self.id}, {:language_filter => filter}  )
+      true
+    else
+      false
+    end
+  end
+
+  def languages_to_filter
+    @languages_to_filter ||= begin
+      languages = nil
+      case self.language_filter
+      when "any"
+        languages = AVAILABLE_LANGUAGES
+      when "user"
+        languages = self.preferred_languages
+      else
+        languages = self.language_filter
+      end
+      languages
+    end
   end
 
   def is_preferred_tag?(group, *tags)

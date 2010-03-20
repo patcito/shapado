@@ -14,7 +14,7 @@
           %li
             = t("errors.go_to", :link =>link_to(t("layouts.application.home"), domain_url(:custom => current_group.domain)))
           %li
-            = t("errors.help_us_answer", :link => link_to(t("layouts.application.questions"), questions_path(current_languages)))
+            = t("errors.help_us_answer", :link => link_to(t("layouts.application.questions"), questions_path))
           %li
             -form_tag search_path, :class => "form", :method => :get do
               =t("errors.search")

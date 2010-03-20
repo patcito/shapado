@@ -30,4 +30,4 @@
           -@search_tags.each do |tag|
             %li
               %span.tag
-                =link_to h(tag), url_for(:language => current_languages, :tags => tag)
+                =link_to h(tag), url_for(:tags => tag)

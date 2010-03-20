@@ -4,18 +4,18 @@
 
 -counter = @answer.versions.count
 
--form_tag diff_question_answer_path(current_languages, @question, @answer), :method => "GET", :class => "form" do
+-form_tag diff_question_answer_path(@question, @answer), :method => "GET", :class => "form" do
   #answers
     .answer
       %h2
-        =link_to h(@question.title), question_path(current_languages, @question)
+        =link_to h(@question.title), question_path(@question)
       %h2.version_title
         = radio_button_tag("prev", :current, :checked => @prev == "current")
         = radio_button_tag("curr", :current, :checked => @curr == "current")
         =t("wiki.history.current_version")
         .diff_actions
           -if @answer.versions.count > 0
-            =link_to t("global.previous"), diff_question_answer_path(current_languages, @question, @answer, :curr => :current, :prev => @question.versions.count-1), :class => "diff_prev"
+            =link_to t("global.previous"), diff_question_answer_path(@question, @answer, :curr => :current, :prev => @question.versions.count-1), :class => "diff_prev"
 
       -if !@answer.body.blank?
         %h2=t(:body, :scope => "activerecord.attributes.answer")
@@ -30,4 +30,4 @@
   .group.navform
     = submit_tag t("wiki.actions.show_diff"), :value => "diff", :name => "show"
     = t("global.or")
-    = link_to(t("scaffold.back"), question_path(current_languages, @question))
+    = link_to(t("scaffold.back"), question_path(@question))

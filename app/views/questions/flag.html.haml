@@ -3,4 +3,4 @@
   .navtitle
     = t(".title")
 
-= render :partial => "flags/form", :locals => {:flag => @flag, :source => question_path(current_languages, @question)}
+= render :partial => "flags/form", :locals => {:flag => @flag, :source => question_path(@question)}

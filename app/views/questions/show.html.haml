@@ -4,20 +4,20 @@
   .navtitle
     &= @question.title
 
--source = question_path(current_languages, @question)
+-source = question_path(@question)
 
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
-    = link_to image_tag("layer-visible-on.png"), unwatch_question_path(current_languages, @question)
+    = link_to image_tag("layer-visible-on.png"), unwatch_question_path(@question)
   -else
-    = link_to image_tag("layer-visible-off.png"), watch_question_path(current_languages, @question), :title => t(".watch_tooltip")
+    = link_to image_tag("layer-visible-off.png"), watch_question_path(@question), :title => t(".watch_tooltip")
 
-  =vote_box(@question, question_path(current_languages,@question))
+  =vote_box(@question, question_path(@question))
 
   -if logged_in? && favorite = current_user.favorite(@question)
-    =link_to image_tag("favorites.png"), unfavorite_question_path(current_languages, @question), :id => "unfavorite-link"
+    =link_to image_tag("favorites.png"), unfavorite_question_path(@question), :id => "unfavorite-link"
   -else
-    =link_to image_tag("unfavorites.png"), favorite_question_path(current_languages, @question), :id => "favorite-link"
+    =link_to image_tag("unfavorites.png"), favorite_question_path(@question), :id => "favorite-link"
   .favorites_count
     &= @question.favorites_count
 
@@ -31,7 +31,7 @@
   .tag-list
     -@question.tags.each do |tag|
       %span.tag
-        = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
+        = link_to h(tag), questions_path(:tags => tag)
   .user_info
     .gravatar
       = gravatar(@question.user.email.to_s, :size => 32)
@@ -50,13 +50,13 @@
     .clear
   .controls
     .actions
-      =link_to t(".flag"), flag_question_path(current_languages, @question), :class => "flag-link", :rel => 'nofollow'
+      =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :rel => 'nofollow'
       -if logged_in?
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
-          = link_to t('scaffold.edit'), edit_question_path(current_languages, @question), :class => "button"
+          = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
         =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if @question.versions.count > 0
-          = link_to t(".history", :default => "history"), history_question_path(current_languages, @question)
+          = link_to t(".history", :default => "history"), history_question_path(@question)
 
         -if current_user.mod_of?(@question.group)
           %br
@@ -86,11 +86,11 @@
 
     %ul
       %li.newest
-        = link_to t("questions.index.newest"), question_path(current_languages, @question, :sort=>"newest", :anchor => "answers")
+        = link_to t("questions.index.newest"), question_path(@question, :sort=>"newest", :anchor => "answers")
       %li.votes
-        = link_to t("questions.index.votes"), question_path(current_languages, @question, :sort=>"votes", :anchor => "answers")
+        = link_to t("questions.index.votes"), question_path(@question, :sort=>"votes", :anchor => "answers")
       %li.oldest
-        = link_to t("questions.index.oldest"), question_path(current_languages, @question, :sort=>"oldest", :anchor => "answers")
+        = link_to t("questions.index.oldest"), question_path(@question, :sort=>"oldest", :anchor => "answers")
     .clear
   .block
     -if @question.answered
@@ -101,7 +101,7 @@
     =will_paginate(@answers)
 
 %a{:name=>"to_answer"}
--form_for @answer, :url => question_answers_path(current_languages, @question.id), :html => {:class => "form mainAnswerForm"} do |f|
+-form_for @answer, :url => question_answers_path(@question.id), :html => {:class => "form mainAnswerForm"} do |f|
   = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
   .group.navform
     .right
@@ -169,4 +169,4 @@
         %ul.list
           -related_questions.each do |rq|
             %li
-              =link_to h(rq.title), question_path(current_languages, rq), :title => truncate(rq.body, :length => 200)
+              =link_to h(rq.title), question_path(rq), :title => truncate(rq.body, :length => 200)

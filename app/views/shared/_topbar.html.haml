@@ -1,11 +1,11 @@
 #top-bar
   -current_group.default_tags[0,5].each do |tag|
     .entry
-      = link_to(tag, questions_url(:language => current_languages, :tags => tag))
+      = link_to(tag, questions_url(:tags => tag))
       ==-
   -if current_group.default_tags.size > 5
     .entry
-      = link_to t("scaffold.more"), tags_questions_path(:language => current_languages)
+      = link_to t("scaffold.more"), tags_questions_path
   %div.right
     -if logged_in?
       -if !current_group.isolate && AppConfig.enable_groups

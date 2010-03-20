@@ -102,7 +102,7 @@ class UsersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html {redirect_to questions_path(current_languages)}
+      format.html {redirect_to questions_path}
     end
   end
 

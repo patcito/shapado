@@ -13,7 +13,7 @@
 %div
   #quick_question
     -@question = Question.new
-    -form_for(@question, :url => questions_url(current_languages), :html=>{:class => "form", :id => "ask_question"}) do |f|
+    -form_for(@question, :url => questions_url, :html=>{:class => "form", :id => "ask_question"}) do |f|
       -# TODO: refactor this
       -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
       -lang = logged_in? ? current_user.language : lang
@@ -56,7 +56,7 @@
 
   #help_us
     = t("questions.index.help_to_answer")
-    = link_to t("questions.index.unanswered_questions"), unanswered_questions_path(:language => current_languages)
+    = link_to t("questions.index.unanswered_questions"), unanswered_questions_path
 
   .clear
 

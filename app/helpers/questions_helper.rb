@@ -2,7 +2,7 @@ module QuestionsHelper
   def microblogging_message(question)
     message = "#{h(question.title)}"
     message += " "
-    message +=  without_language_question_path(question, :only_path =>false)
+    message +=  question_path(question, :only_path =>false)
     message
   end
 

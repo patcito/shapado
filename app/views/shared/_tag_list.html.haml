@@ -4,7 +4,7 @@
       -unless current_tags.include? tag["name"]
         %li
           %span.tag
-            =link_to h(tag["name"]), url_for(:language => current_languages, :tags => (current_tags + [tag["name"]]).join("+"))
+            =link_to h(tag["name"]), url_for(:tags => (current_tags + [tag["name"]]).join("+"))
           .tag-multiplier
             x
             = tag["count"].to_i

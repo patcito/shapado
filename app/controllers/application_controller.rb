@@ -84,12 +84,8 @@ class ApplicationController < ActionController::Base
       if languages = current_group.language
         languages = [languages]
       else
-        if params[:language] && !params[:language].empty?
-          languages = params[:language].split('+').select{ |lang| AVAILABLE_LANGUAGES.include?(lang) }
-        elsif current_user && !current_user.preferred_languages.empty?
-          languages = current_user.preferred_languages
-        elsif params[:language]
-          languages = params[:language].kind_of?(Array) ? params[:language] : [params[:language]]
+        if logged_in?
+          languages = current_user.languages_to_filter
         else
           languages = [I18n.locale.to_s.split("-").first]
         end

@@ -5,12 +5,11 @@
     .tag-list{:style => "margin-bottom: 3px"}
       -current_user.preferred_tags_on(current_group).each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(:language => current_languages, :tags => tag)
-          = link_to "-", change_preferred_tags_user_path(current_user, :language => current_languages, :opt => "remove", :tags => [tag]), :class => "remove_tag"
+          = link_to h(tag), questions_path(:tags => tag)
+          = link_to "-", change_preferred_tags_user_path(current_user, :opt => "remove", :tags => [tag]), :class => "remove_tag"
 
     - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
       .fields
-        = hidden_field_tag :language, current_languages
         = hidden_field_tag :opt, "add"
         = text_field_tag "tags", "", :class => "text_field", :style => "width: 70%", :class => "autocomplete_for_tags", :id => 'tags_autocomplete'
         = submit_tag t("scaffold.add"), :class => "button"

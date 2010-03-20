@@ -44,7 +44,7 @@ class AnswersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to history_question_answer_path(current_languages, @question, @answer) }
+      format.html { redirect_to history_question_answer_path(@question, @answer) }
     end
   end
 
@@ -112,7 +112,7 @@ class AnswersController < ApplicationController
           end
 
           flash[:notice] = t(:flash_notice, :scope => "answers.create")
-          format.html{redirect_to question_path(current_languages, @question)}
+          format.html{redirect_to question_path(@question)}
           format.json { render :json => @answer.to_json(:except => %w[_keywords]) }
           format.js do
             render(:json => {:success => true, :message => flash[:notice],
@@ -122,7 +122,7 @@ class AnswersController < ApplicationController
           end
         else
           flash[:error] = t(:flash_error, :scope => "answers.create")
-          format.html{redirect_to question_path(current_languages, @question)}
+          format.html{redirect_to question_path(@question)}
           format.json { render :json => @answer.errors, :status => :unprocessable_entity }
           format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
         end
@@ -144,7 +144,7 @@ class AnswersController < ApplicationController
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
 
         Magent.push("actors.judge", :on_update_answer, @answer.id)
-        format.html { redirect_to(question_path(current_languages, @answer.question)) }
+        format.html { redirect_to(question_path(@answer.question)) }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
@@ -162,7 +162,7 @@ class AnswersController < ApplicationController
     Magent.push("actors.judge", :on_destroy_answer, current_user.id, @answer.attributes)
 
     respond_to do |format|
-      format.html { redirect_to(question_path(current_languages, @question)) }
+      format.html { redirect_to(question_path(@question)) }
       format.json  { head :ok }
     end
   end
@@ -183,7 +183,7 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     if @answer.nil? || !current_user.can_modify?(@answer)
       flash[:error] = t("global.permission_denied")
-      redirect_to questions_path(current_languages)
+      redirect_to questions_path
     end
   end
 
@@ -198,7 +198,7 @@ class AnswersController < ApplicationController
       flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                                     :min_reputation => reputation,
                                     :action => I18n.t("users.actions.edit_others_posts"))
-      redirect_to questions_path(current_languages)
+      redirect_to questions_path
     end
   end
 end

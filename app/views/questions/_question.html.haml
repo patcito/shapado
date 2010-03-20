@@ -34,14 +34,14 @@
             .fields
               = hidden_field_tag "voteable_type", question.class.name, :id => "voteable_type_#{question.id}"
               = hidden_field_tag "voteable_id", question.id, :id =>  "voteable_id_#{question.id}"
-              = hidden_field_tag "source", questions_path(:language => current_languages), :id =>  "source_#{question.id}"
+              = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
               = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"))
 
-      %h3= link_to title, question_path(current_languages, question), :title => truncate(h(question.body), :length => 200)
+      %h3= link_to title, question_path(question), :title => truncate(h(question.body), :length => 200)
       .tag-list
         -question.tags.each do |tag|
           %span.tag
-            = link_to h(tag), questions_path(current_languages, :tags => tag)
+            = link_to h(tag), questions_path(:tags => tag)
       .owner-data
         = link_to h(owner.login), user_path(owner)
         %span.reputation
@@ -63,5 +63,5 @@
             =t(:answers, :scope => "activerecord.attributes.question")
     .summary
       %h3
-        = link_to title, question_path(current_languages, question)
+        = link_to title, question_path(question)
     .clear

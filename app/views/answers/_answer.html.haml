@@ -13,5 +13,5 @@
   / Question Summary
   .summary
     %h3
-      = link_to title, question_path(current_languages, question), :title => truncate(h(answer.body), :length => 200)
+      = link_to title, question_path(question), :title => truncate(h(answer.body), :length => 200)
   .clear

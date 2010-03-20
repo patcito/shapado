@@ -8,12 +8,12 @@
 
   -unless current_group.default_tags.empty?
     %li
-      = link_to "tags", questions_url(:language => current_languages)
+      = link_to "tags", questions_url
       ▼
       %ul
         -current_group.default_tags.each do |tag|
           %li
-            = link_to(tag, questions_url(:language => current_languages, :tags => tag))
+            = link_to(tag, questions_url(:tags => tag))
 
   -if !logged_in?
     %li
