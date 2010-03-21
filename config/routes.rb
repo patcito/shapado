@@ -13,7 +13,9 @@ ActionController::Routing::Routes.draw do |map|
   map.settings '/settings', :controller => 'users', :action => 'edit'
   map.tos '/tos', :controller => 'doc', :action => 'tos'
   map.privacy '/privacy', :controller => 'doc', :action => 'privacy'
-  map.resources :users, :member => { :change_preferred_tags => :any, :follow => :any, :unfollow => :any},
+  map.resources :users, :member => { :change_preferred_tags => :any,
+                                     :change_language_filter => :any,
+                                     :follow => :any, :unfollow => :any},
                         :collection => {:autocomplete_for_user_login => :get}
   map.resource :session
   map.resources :ads

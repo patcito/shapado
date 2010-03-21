@@ -171,7 +171,7 @@ class User
       when "user"
         languages = self.preferred_languages
       else
-        languages = self.language_filter
+        languages = [self.language_filter]
       end
       languages
     end
