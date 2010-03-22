@@ -6,7 +6,7 @@ require File.dirname(__FILE__)+"/../config/environment"
 $stderr.puts "Processing #{Group.count} groups.."
 
 Group.find_each(:state => "active") do |group|
-  owners = group.memberships.all(:role => 'owner').map { |m| m.user_id }
+  owners = group.users("membership_list.#{group.id}.role" => 'owner').map { |m| m.id }
   owners << group.owner_id if group.owner_id && !owners.include?(group.owner_id)
 
   @report = Report.new(group, Time.now.utc.at_beginning_of_week)
