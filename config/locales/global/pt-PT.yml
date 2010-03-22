@@ -13,6 +13,7 @@ pt-PT:
     more: "mais ..."
     add: adicionar
     send: send
+    save: save
   time:
     today: hoje
     ago: "{{time}} atrás"

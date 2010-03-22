@@ -13,6 +13,7 @@ en:
     more: "more ..."
     add: add
     send: send
+    save: save
   time:
     today: today
     ago: "{{time}} ago"
@@ -48,6 +49,8 @@ en:
     fr:      french
     pt:      portuguese
     pt-PT:   portuguese
+    any:     any
+    user:    my preferred languages
   number:
     x_time:
       zero: "never"

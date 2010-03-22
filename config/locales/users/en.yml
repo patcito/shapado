@@ -62,3 +62,4 @@ en:
         reputation: reputation
         avatar: Profile image
         hide_country: Do not display my country
+        language_filter: filter by language

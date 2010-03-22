@@ -18,6 +18,7 @@ base: &common
   application_name: Shapado
   is_shapadocom: false
   enable_groups: false
+  enable_i18n: true
 
 development:
   <<: *common
