@@ -30,6 +30,7 @@ development:
 production:
   <<: *common
   domain: example.com
+  googlean_domain: .shapado.com
 test:
   <<: *common
   domain: test.loc

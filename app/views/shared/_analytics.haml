@@ -1,4 +1,4 @@
 - if RAILS_ENV == "production" && !AppConfig.analytics_id.blank? && (!current_group.has_custom_analytics || current_group.analytics_id.blank?)
-  %a#googlean{:href => AppConfig.analytics_id, :style => "display: none", :rel=>"nofollow" }
--elsif RAILS_ENV == "production" && current_group.has_custom_analytics && current_group.analytics_vendor == 'googlean'
-  %a#googlean{:href => current_group.analytics_id, :style => "display: none", :rel=>"nofollow" }
+  = googlean_script(AppConfig.analytics_id, AppConfig.googlean_domain)
+- elsif RAILS_ENV == "production" && current_group.has_custom_analytics && current_group.analytics_vendor == 'googlean'
+  = googlean_script(analytics_id, domain)

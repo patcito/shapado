@@ -166,5 +166,20 @@ module ApplicationHelper
 
     klass
   end
+
+  def googlean_script(analytics_id, domain)
+    "<script type=\"text/javascript\">
+       var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', '#{analytics_id}']);
+       _gaq.push(['_trackPageview'],['_setDomainName', '#{domain}']);
+
+       (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+       })();
+    </script>"
+  end
+
 end
 
