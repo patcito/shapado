@@ -2,12 +2,14 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include AuthenticatedSystem
+  include Subdomains
 
   if AppConfig.exception_notification['activate']
     include ExceptionNotifiable
     include SuperExceptionNotifier
     include ExceptionNotifierHelper
-    self.error_layout = 'application'
+
     local_addresses.clear
 
     exception_data :additional_data
@@ -15,18 +17,9 @@ class ApplicationController < ActionController::Base
       { :group => find_group}
     end
     protected :additional_data
-  else
-
-    # This method is override from Rails API
-    # so see if allways works in next Rails version
-    def render_optional_error_file(status_code)
-      status = interpret_status(status_code)
-      render "error/#{status[0,3]}"
-    end
   end
 
-  include AuthenticatedSystem
-  include Subdomains
+  self.error_layout = 'application'
 
   protect_from_forgery
 

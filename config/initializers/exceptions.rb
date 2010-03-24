@@ -5,6 +5,5 @@ if AppConfig.exception_notification['activate']
       config[:sender_address] = AppConfig.exception_notification['exception_sender_address']
     end
     config[:view_path]  = 'app/views/error'
-
   end
 end
