@@ -81,16 +81,20 @@ class ApplicationController < ActionController::Base
 
   def find_languages
     @languages ||= begin
-      if languages = current_group.language
-        languages = [languages]
-      else
-        if logged_in?
-          languages = current_user.languages_to_filter
+      if AppConfig.enable_i18n
+        if languages = current_group.language
+          languages = [languages]
         else
-          languages = [I18n.locale.to_s.split("-").first]
+          if logged_in?
+            languages = current_user.languages_to_filter
+          else
+            languages = [I18n.locale.to_s.split("-").first]
+          end
         end
+        languages
+      else
+        [current_group.language || AppConfig.default_language]
       end
-      languages
     end
   end
   helper_method :find_languages

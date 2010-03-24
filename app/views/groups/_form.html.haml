@@ -69,12 +69,15 @@
   .description
     = t('.default_tags_legend')
 
-.group
-  = form.label :language, t(:language, :scope => "activerecord.attributes.group"), :class => "label"
-  -AVAILABLE_LANGUAGES.each do |lang|
-    = form.radio_button :language, lang, :checked => @group.language == lang
-    = language_desc(lang)
-  = form.radio_button :language, "none", :checked => @group.language.nil?
-  = t(".any_language")
+-if AppConfig.enable_i18n
+  .group
+    = form.label :language, t(:language, :scope => "activerecord.attributes.group"), :class => "label"
+    -AVAILABLE_LANGUAGES.each do |lang|
+      = form.radio_button :language, lang, :checked => @group.language == lang
+      = language_desc(lang)
+    = form.radio_button :language, "none", :checked => @group.language.nil?
+    = t(".any_language")
+-else
+  = form.hidden_field :language, :value => (AppConfig.default_language || 'en')
 
 

@@ -23,7 +23,7 @@
   #markdown_preview.markdown
     =markdown(@question.body)
 
--if current_group.language.nil?
+-if current_group.language.nil? && AppConfig.enable_i18n
   .group
     = f.label :language, t(:language, :scope => "activerecord.attributes.question"), :class => "label"
     -lang = @question.new? ? current_user.main_language : @question.language
@@ -31,5 +31,5 @@
     .description
       = t(".language_tip")
 -else
-  = f.hidden_field :language, :value => current_group.language
+  = f.hidden_field :language, :value => (current_group.language || AppConfig.default_language)
 

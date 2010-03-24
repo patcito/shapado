@@ -14,8 +14,33 @@ class QuestionsController < ApplicationController
           :show => [[:votes, "votes_average desc"], [:oldest, "created_at asc"], [:newest, "created_at desc"]]
   helper :votes
 
+  # GET /questions
+  # GET /questions.xml
+  def index
+    set_page_title(t("questions.index.title"))
+    conditions = scoped_conditions(:banned => false)
 
-  helper :votes
+    @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
+                                   :order => current_order,
+                                   :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
+                                               merge(conditions))
+
+    @langs_conds = scoped_conditions[:language][:$in]
+
+    add_feeds_url(url_for(:format => "atom", :language=>current_languages), t("feeds.questions"))
+    if params[:tags]
+      add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>current_languages),
+                    "#{t("feeds.tag")} #{params[:tags].inspect}")
+    end
+    @tag_cloud = Question.tag_cloud(scoped_conditions, 25)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
+      format.atom
+    end
+  end
+
 
   def history
     @question = current_group.questions.find_by_slug_or_id(params[:id])
@@ -55,33 +80,6 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to history_question_path(@question) }
-    end
-  end
-
-  # GET /questions
-  # GET /questions.xml
-  def index
-    set_page_title(t("questions.index.title"))
-    conditions = scoped_conditions(:banned => false)
-
-    @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
-                                   :order => current_order,
-                                   :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
-                                               merge(conditions))
-
-    @langs_conds = scoped_conditions[:language][:$in]
-
-    add_feeds_url(url_for(:format => "atom", :language=>current_languages), t("feeds.questions"))
-    if params[:tags]
-      add_feeds_url(url_for(:format => "atom", :tags => params[:tags], :language=>current_languages),
-                    "#{t("feeds.tag")} #{params[:tags].inspect}")
-    end
-    @tag_cloud = Question.tag_cloud(scoped_conditions, 25)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
-      format.atom
     end
   end
 
