@@ -68,7 +68,8 @@
 
   -if logged_in?
     = render :partial => "shared/preferred_tags"
-    = render :partial => "shared/language_filter"
+    -if AppConfig.enable_i18n
+      = render :partial => "shared/language_filter"
   .block
     %h3
       = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
