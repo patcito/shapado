@@ -14,9 +14,6 @@ class User
   key :bio,                       String, :limit => 200
 
   key :identity_url,              String
-#   key :crypted_password,          String, :limit => 40 # encrypted_password
-#   key :salt,                      String, :limit => 40 # password_salt
-
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 

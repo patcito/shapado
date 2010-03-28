@@ -120,6 +120,18 @@ namespace :fixdb do
       user.collection.save(user_atts)
       UserStat.collection.save(stats_atts)
     end
+
+    desc "migrate to devise"
+    task :devise => [:environment] do
+      User.find_each do |user|
+        if user["crypted_password"]
+          atts = user.attributes
+          atts["encrypted_password"] = atts.delete("crypted_password")
+          atts["password_salt"] = atts.delete("salt")
+          user.collection.save(atts)
+        end
+      end
+    end
   end
 end
 
