@@ -33,6 +33,8 @@ Rails::Initializer.run do |config|
   config.gem "magent", :version => "0.3"
   config.gem "differ", :version => "0.1.1"
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
+  config.gem "warden", :version => "0.9.7"
+  config.gem "devise", :version => "1.0.4"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
