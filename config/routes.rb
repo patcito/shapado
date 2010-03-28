@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
+
+#   map.logout '/logout', :controller => 'users', :action => 'logout'
+#   map.login '/login', :controller => 'users', :action => 'login'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'

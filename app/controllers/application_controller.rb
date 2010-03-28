@@ -27,19 +27,9 @@ class ApplicationController < ActionController::Base
   before_filter :check_group_access
   before_filter :find_languages
   before_filter :set_locale
-  layout 'application'
+  layout :set_layout
 
   protected
-
-  def access_denied
-    store_location
-    if logged_in?
-      flash[:error] = t("global.permission_denied")
-    else
-      flash[:error] = t("global.please_login")
-    end
-    redirect_to login_path
-  end
 
   def check_group_access
     if @current_group &&
@@ -151,6 +141,10 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :find_valid_locale
+
+  def set_layout
+    devise_controller? ? 'sessions' : 'application'
+  end
 
   def set_page_title(title)
     @page_title = title

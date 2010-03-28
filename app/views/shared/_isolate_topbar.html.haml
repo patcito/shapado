@@ -34,10 +34,10 @@
         %li
           =link_to t("layouts.application.settings"), settings_path
         %li
-          =link_to t("layouts.application.logout"), logout_path
+          =link_to t("layouts.application.logout"), destroy_user_session_path
       -else
         %li
-          =link_to t("layouts.application.log_in"), login_path
+          =link_to t("layouts.application.log_in"), new_user_session_path
       %li
         =link_to t(".about", :default => :"groups.index.about"), about_path
       %li.last

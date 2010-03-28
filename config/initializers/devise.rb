@@ -47,7 +47,7 @@ Devise.setup do |config|
   # config.timeout_in = 10.minutes
 
   # ==> Configuration for :lockable
-  Number of authentication tries before locking an account.
+  # Number of authentication tries before locking an account.
   config.maximum_attempts = 5
 
   # Defines which strategy will be used to unlock an account.
@@ -66,7 +66,7 @@ Devise.setup do |config|
   # ==> General configuration
   # Load and configure the ORM. Supports :active_record (default), :mongo_mapper
   # (requires mongo_ext installed) and :data_mapper (experimental).
-  # require 'devise/orm/mongo_mapper'
+  require 'devise/orm/mongo_mapper'
   config.orm = :mongo_mapper
 
   # Turn scoped views on. Before rendering "sessions/new", it will first check for

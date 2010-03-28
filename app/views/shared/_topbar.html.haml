@@ -26,7 +26,7 @@
         =link_to t("layouts.application.settings"), settings_path
         |
       .entry
-        =link_to t("layouts.application.logout"), logout_path
+        =link_to t("layouts.application.logout"), destroy_user_session_path
         |
     -else
       -if AppConfig.is_shapadocom
@@ -34,7 +34,7 @@
           =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
           |
       .entry
-        =link_to t("layouts.application.log_in"), login_path
+        =link_to t("layouts.application.log_in"), new_user_session_path
         |
     .entry
       =link_to t("layouts.application.search"), search_path

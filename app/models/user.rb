@@ -2,10 +2,7 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-
-  include Authentication
-  include Authentication::ByPassword
-  include Authentication::ByCookieToken
+  devise :authenticatable, :recoverable, :registarable, :rememberable, :validatable
 
   ROLES = %w[user moderator admin]
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
@@ -14,12 +11,11 @@ class User
   key :login,                     String, :limit => 40, :index => true
   key :name,                      String, :limit => 100, :default => '', :null => true
   key :bio,                       String, :limit => 200
-  key :email,                     String, :limit => 100
+
   key :identity_url,              String
-  key :crypted_password,          String, :limit => 40
-  key :salt,                      String, :limit => 40
-  key :remember_token,            String, :limit => 40
-  key :remember_token_expires_at, Time
+  key :crypted_password,          String, :limit => 40 # encrypted_password
+  key :salt,                      String, :limit => 40 # password_salt
+
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
@@ -61,35 +57,11 @@ class User
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
   validates_inclusion_of :role,  :within => ROLES
 
-  validates_presence_of     :login
-  validates_length_of       :login,    :within => 3..40
-  validates_uniqueness_of   :login
-  validates_format_of       :login,    :with => /\w+/, :message => Authentication.bad_login_message
-
-  validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
-  validates_length_of       :name,     :maximum => 100
-
-  validates_presence_of     :email, :if => lambda { |e| !e.openid_login? }
-  validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? } #r@a.wk
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
-
   before_save :update_languages
   before_create :logged!
 
   attr_accessor :password, :password_confirmation, :roles
   before_validation :add_email_validation
-
-  # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
-  #
-  # uff.  this is really an authorization, not authentication routine.
-  # We really need a Dispatch Chain here or something.
-  # This will also let us return a human error message.
-  #
-  def self.authenticate(login, password)
-    return nil if login.blank? || password.blank?
-    u = User.first(:login => login.downcase) # need to get the salt
-    u && u.authenticated?(password) ? u : nil
-  end
 
   def login=(value)
     write_attribute :login, (value ? value.downcase : nil)
@@ -426,7 +398,7 @@ class User
   def password_required?
     return false if openid_login?
 
-    (crypted_password.blank? || !password.blank?)
+    (encrypted_password.blank? || !password.blank?)
   end
 
   def create_friend_list

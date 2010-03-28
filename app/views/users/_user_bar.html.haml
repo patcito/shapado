@@ -4,13 +4,13 @@
     = link_to_current_user :content_method => :login
   #user-bar-action
     (
-    = link_to "Log out", logout_path, { :title => "Log out" }
+    = link_to "Log out", destroy_user_session_path, { :title => "Log out" }
     )
 - else
   #user-bar-greeting
     = link_to_login_with_IP 'Not logged in', :style => 'border: none;'
   #user-bar-action
-    = link_to "Log in",  login_path,  { :title => "Log in" }
+    = link_to "Log in",  new_user_session_path,  { :title => "Log in" }
     \/
     = link_to "Sign up", signup_path, { :title => "Create an account" }
 

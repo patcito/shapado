@@ -468,11 +468,11 @@ class QuestionsController < ApplicationController
       flash[:error] = t(:unauthenticated, :scope => "favorites.create")
       respond_to do |format|
         format.html do
-          flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
+          flash[:error] += ", [#{t("global.please_login")}](#{new_user_session_path})"
           redirect_to question_path(@question)
         end
         format.json do
-          flash[:error] += ", <a href='#{login_path}'> #{t("global.please_login")} </a>"
+          flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
         end
       end

@@ -81,7 +81,7 @@ class VotesController < ApplicationController
       flash[:error] = t(:unauthenticated, :scope => "votes.create")
       respond_to do |format|
         format.html do
-          flash[:error] += ", [#{t("global.please_login")}](#{login_path})"
+          flash[:error] += ", [#{t("global.please_login")}](#{new_user_session_path})"
           redirect_to params[:source]
         end
         format.json do
