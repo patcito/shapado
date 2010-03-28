@@ -2,7 +2,8 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-  devise :authenticatable, :recoverable, :registarable, :rememberable, :validatable
+  devise :authenticatable, :recoverable, :registarable, :rememberable,
+         :validatable, :lockable, :token_authenticatable
 
   ROLES = %w[user moderator admin]
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
@@ -13,8 +14,8 @@ class User
   key :bio,                       String, :limit => 200
 
   key :identity_url,              String
-  key :crypted_password,          String, :limit => 40 # encrypted_password
-  key :salt,                      String, :limit => 40 # password_salt
+#   key :crypted_password,          String, :limit => 40 # encrypted_password
+#   key :salt,                      String, :limit => 40 # password_salt
 
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
@@ -60,8 +61,9 @@ class User
   before_save :update_languages
   before_create :logged!
 
-  attr_accessor :password, :password_confirmation, :roles
-  before_validation :add_email_validation
+  def self.find_for_authentication(conditions={})
+    first(conditions) || first(:login => conditions["email"])
+  end
 
   def login=(value)
     write_attribute :login, (value ? value.downcase : nil)
@@ -381,16 +383,6 @@ class User
   end
 
   protected
-  def add_email_validation
-    if !self.email.blank?
-      doc = User.first(:email => self.email)
-      valid = doc.nil? || self.id == doc.id
-      if !valid
-        self.errors.add(:email, 'Email has already been taken')
-      end
-    end
-  end
-
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
   end

@@ -64,6 +64,7 @@ namespace :setup do
                                         :password_confirmation => "admins",
                                         :email => "shapado@example.com",
                                         :role => "admin")
+
     admin.save!
   end
 
