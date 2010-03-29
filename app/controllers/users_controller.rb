@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       # protection if visitor resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
       # reset session
-      current_user.localize(request.remote_ip)
+      @user.localize(request.remote_ip)
       flash[:notice] = t("flash_notice", :scope => "users.create")
       sign_in_and_redirect(:user, @user) # !! now logged in
     else
