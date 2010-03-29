@@ -35,6 +35,8 @@ Rails::Initializer.run do |config|
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
   config.gem "warden", :version => "0.10.2"
   config.gem "devise", :version => "1.0.5"
+  config.gem "devise_facebook_connectable"
+  config.gem "facebooker"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

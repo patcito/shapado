@@ -1,0 +1,18 @@
+= stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
+- if logged_in?
+  = render :partial=>"shared/error", :locals => {:title=> t("errors.forbidden.title", :default => :"global.permission_denied"), :explanation => t("explanation", :scope => "errors.forbidden"), :error_image => "application-pgp-keys.png"}
+- else
+  .subtitle
+    = t("sessions.new.with_openid")
+  .box.highlight
+    = t("layouts.application.openid.explaination")
+    - form_tag session_path, :id => 'openid' do
+      #nojsopenid
+        = text_field_tag "openid_identifier", "", :id => "openid_username"
+        = submit_tag t("sessions.new.log_in")
+  .subtitle
+    = t("sessions.new.with_authentication")
+  %h2
+    = t("sessions.new.registered")
+  = render :partial => "sessions/login"
+
