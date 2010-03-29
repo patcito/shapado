@@ -13,7 +13,11 @@ module AuthenticatedSystem
   # but does not redirect in case of failures. Overrode from devise.
   def authenticate(scope)
     user = if using_open_id?
-      open_id_authentication(params["openid.identity"], false)
+      user = open_id_authentication(params["openid.identity"], false)
+      if user
+        warden.set_user(user, :scope => scope)
+      end
+      user
     else
       warden.authenticate(:scope => scope)
     end
