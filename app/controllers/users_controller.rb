@@ -19,7 +19,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    logout_keeping_session!
     @user = User.new
     @user.safe_update(%w[login email name password_confirmation password
                          language timezone identity_url bio hide_country], params[:user])
@@ -74,7 +73,7 @@ class UsersController < ApplicationController
     @user = current_user
 
     if params[:current_password] && User.authenticate(@user.login, params[:current_password])
-      @user.crypted_password = ""
+      @user.encrypted_password = ""
       @user.password = params[:user][:password]
       @user.password_confirmation = params[:user][:password_confirmation]
     end
