@@ -18,7 +18,7 @@ namespace :setup do
   desc "Reset admin password"
   task :reset_password => :environment do
     admin = User.find_by_login("admin")
-    admin.crypted_password = nil
+    admin.encrypted_password = nil
     admin.password = "admins"
     admin.password_confirmation = "admins"
     admin.save
