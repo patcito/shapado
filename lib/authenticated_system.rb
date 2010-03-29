@@ -25,6 +25,7 @@ module AuthenticatedSystem
     if user
       user.localize(request.remote_ip)
       user.logged!(current_group)
+      check_draft
     end
 
     user
@@ -42,6 +43,7 @@ module AuthenticatedSystem
     if user
       user.localize(request.remote_ip)
       user.logged!(current_group)
+      check_draft
     end
 
     user
@@ -117,4 +119,26 @@ module AuthenticatedSystem
 
     @user
   end
+
+  def check_draft
+    if draft_id = session[:draft]
+      session[:draft] = nil
+      draft = Draft.find(draft_id)
+      if !draft.nil?
+        if !draft.question.nil?
+          question = draft.question
+          question.user = current_user
+          session[:"user.return_to"] = new_question_path(:question => {:body => question.body, :language => question.language,
+                                        :title => question.title, :tags => question.tags})
+        elsif !draft.answer.nil?
+          answer = draft.answer
+          answer.user = current_user
+          session[:"user.return_to"] = question_path(answer.question, :answer => {:body => answer.body},
+                                              :anchor => "to_answer")
+        end
+        draft.destroy
+      end
+    end
+  end
+
 end
