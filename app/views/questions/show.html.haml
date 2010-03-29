@@ -111,6 +111,13 @@
   .clear
 
 -content_for :sidebar do
+  -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))
+    .block
+      %h3
+        = t(:flags, :scope => "activerecord.models")
+      .content
+        = render :partial => "flags/list", :locals => {:flaggeable => @question}
+
   .block
     %h3
       = t('.tags', :default => [:"layouts.application.tags", :"activerecord.attributes.user.tags", "tags"])

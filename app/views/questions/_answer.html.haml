@@ -10,6 +10,10 @@
   .body-col
     .markdown
       =find_and_preserve(shapado_auto_link(markdown(answer.body)))
+    -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))
+      %h3
+        = t(:flags, :scope => "activerecord.models")
+      = render :partial => "flags/list", :locals => {:flaggeable => answer}
     -if !answer.updated_by.nil?
       .user_data
         .time_ago
