@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   skip_before_filter :check_group_access, :only => [:logo, :css, :favicon]
-  before_filter :login_required, :except => [:index, :show, :logo, :css, :favicon]
+  before_filter :authenticate_user!, :except => [:index, :show, :logo, :css, :favicon]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups

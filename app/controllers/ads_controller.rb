@@ -1,5 +1,5 @@
 class AdsController < ApplicationController
-  before_filter :login_required
+  before_filter :authenticate_user!
   before_filter :check_permissions
   before_filter :check_has_custom_ads
   layout "manage"

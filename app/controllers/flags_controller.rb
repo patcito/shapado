@@ -1,5 +1,5 @@
 class FlagsController < ApplicationController
-  before_filter :login_required
+  before_filter :authenticate_user!
 
   def create
     flag = Flag.new

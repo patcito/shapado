@@ -1,5 +1,5 @@
 class Admin::ModerateController < ApplicationController
-  before_filter :login_required
+  before_filter :authenticate_user!
   before_filter :moderator_required
 
   def index
