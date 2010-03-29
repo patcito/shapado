@@ -10,7 +10,6 @@
 
 -form_tag ban_path do
   -if @questions
-    %h2.title= t(:questions, :scope => "activerecord.models")
     %table.table
       %tr
         %th
@@ -24,8 +23,8 @@
         %tr
           %th
             = check_box_tag "question_ids[]", question.id
-          %td.numeric
-            =question.flags_count
+          %td
+            = render :partial => "flags/list", :locals=> {:flaggeable => question}
           %td
             = link_to h(question.title), question_path(current_languages, question)
           %td
@@ -33,7 +32,6 @@
     = will_paginate @questions, :param_name => "questions_page"
 
   -if @answers
-    %h2.title= t(:answers, :scope => "activerecord.models")
     %table.table
       %tr
         %th
@@ -47,8 +45,8 @@
         %tr
           %th
             = check_box_tag "answer_ids[]", answer.id
-          %td.numeric
-            =answer.flags_count
+          %td
+            = render :partial => "flags/list", :locals=> {:flaggeable => answer}
           %td
             = link_to h(answer.question.title), question_path(current_languages, answer.question)
           %td

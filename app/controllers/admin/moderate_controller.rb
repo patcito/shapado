@@ -5,9 +5,11 @@ class Admin::ModerateController < ApplicationController
   def index
     @active_subtab = params.fetch(:tab, "questions")
 
+    @banned = !!params[:banned]
+
     options = {:order => "flags_count desc",
                :flags_count.gt => 0,
-               :banned => false,
+               :banned => @banned,
                :group_id => current_group.id}
 
     case @active_subtab
