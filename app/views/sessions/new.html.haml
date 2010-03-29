@@ -1,0 +1,35 @@
+= stylesheet_link_tag '/javascripts/openid/css/style.css', :media => 'screen, projection'
+
+%h2
+  = t(".with_openid")
+
+-if !logged_in?
+  .inner
+    = t("layouts.application.openid.explaination")
+    %br
+    %br
+    -form_tag session_path(resource_name), :id => 'openid' do
+      #nojsopenid
+        = text_field_tag "openid_identifier", "", :id => "openid_username"
+        = submit_tag t(".log_in")
+
+%h2
+  Sign in
+
+-form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form"} do |f|
+  .group
+    =f.label :email, "email", :class => "label"
+    =f.text_field :email, :class => "text_field"
+  .group
+    =f.label :password, "password", :class => "label"
+    =f.password_field :password, :class => "password"
+
+  -if devise_mapping.rememberable?
+    .group
+      =f.label :remember_me, "remember me"
+      =f.check_box :remember_me
+
+  .group.navform
+    =f.submit "Sign in"
+
+- render :partial => "shared/devise_links"
