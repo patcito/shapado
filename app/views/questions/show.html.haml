@@ -72,7 +72,7 @@
         .group.navform
           = submit_tag t("comments.shared.comment_submit"), :class => "button"
   .comments
-    -@question.comments.each do |comment|
+    -@question.comments(:order => "created_at desc").each do |comment|
       = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
 .clear
 
