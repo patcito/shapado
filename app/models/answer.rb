@@ -32,7 +32,7 @@ class Answer < Comment
   filterable_keys :body
 
   validate :disallow_spam
-  validate :check_unique_answer
+  validate :check_unique_answer, :if => lambda { |a| !a.group.forum }
 
   def check_unique_answer
     check_answer = Answer.first(:question_id => self.question_id,
