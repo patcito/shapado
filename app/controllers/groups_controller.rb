@@ -66,8 +66,8 @@ class GroupsController < ApplicationController
   # POST /groups.xml
   def create
     @group = Group.new
-    @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
-                          language theme], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo forum
+                          custom_favicon language theme], params[:group])
 
     if custom_css = params[:group][:custom_css]
       @group.custom_css = StringIO.new(custom_css)
@@ -105,8 +105,8 @@ class GroupsController < ApplicationController
       end
     end
 
-    @group.safe_update(%w[name legend description default_tags subdomain logo custom_favicon
-                          language theme reputation_rewards reputation_constrains], params[:group])
+    @group.safe_update(%w[name legend description default_tags subdomain logo forum
+                          custom_favicon language theme reputation_rewards reputation_constrains], params[:group])
     if custom_css = params[:group][:custom_css]
       @group.custom_css = StringIO.new(custom_css)
     end
