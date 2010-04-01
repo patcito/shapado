@@ -1,5 +1,5 @@
 class Admin::ManageController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :login_required
   before_filter :check_permissions
   layout "manage"
   tabs :dashboard => :dashboard,

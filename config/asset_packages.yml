@@ -1,6 +1,6 @@
---- 
-javascripts: 
-- base: 
+---
+javascripts:
+- base:
   - jquery
   - parseuri
   - jquery-ui
@@ -27,20 +27,20 @@ javascripts:
   - components/search
   - highlight/prettify
   - application
-  - modules/googlean      
-  - modules/index_welcome  
-  - modules/move_group   
-  - modules/sessions     
+  - modules/googlean
+  - modules/index_welcome
+  - modules/move_group
+  - modules/sessions
   - modules/themes
   - modules/index_question
-  - modules/members      
+  - modules/members
   - modules/new_question
   - modules/show_question
   - openid/js/jquery.openid
   - openid/js/jquery.openid.min
 
-stylesheets: 
-- base: 
+stylesheets:
+- base:
   - jquery-ui
   - compiled/application
   - prettify

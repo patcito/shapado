@@ -21,7 +21,7 @@ $(document).ready(function() {
       } else {
         showMessage(data.message, "error")
         if(data.status == "unauthenticate") {
-          window.location="/login"
+          window.location="/users/login"
         }
       }
     }, "json");
@@ -50,7 +50,7 @@ $(document).ready(function() {
                   } else {
                     showMessage(data.message, "error")
                     if(data.status == "unauthenticate") {
-                      window.location="/login"
+                      window.location="/users/login"
                     }
                   }
                 },
@@ -84,7 +84,7 @@ $(document).ready(function() {
                           } else {
                             showMessage(data.message, "error")
                             if(data.status == "unauthenticate") {
-                              window.location="/login"
+                              window.location="/users/login"
                             }
                           }
                       },
@@ -133,7 +133,7 @@ $(document).ready(function() {
                               } else {
                                 showMessage(data.message, "error")
                                 if(data.status == "unauthenticate") {
-                                  window.location="/login"
+                                  window.location="/users/login"
                                 }
                               }
                             },

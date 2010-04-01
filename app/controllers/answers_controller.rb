@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :create]
+  before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
 
@@ -72,7 +72,7 @@ class AnswersController < ApplicationController
     if !logged_in?
       draft = Draft.create(:answer => @answer)
       session[:draft] = draft.id
-      authenticate_user!
+      login_required
     else # TODO: put a return statement and remove this else block
       @answer.user = current_user
       respond_to do |format|

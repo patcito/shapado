@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create, :index, :show, :tags, :unanswered]
+  before_filter :login_required, :except => [:create, :index, :show, :tags, :unanswered]
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
@@ -202,7 +202,7 @@ class QuestionsController < ApplicationController
     if !logged_in?
       draft = Draft.create!(:question => @question)
       session[:draft] = draft.id
-      return authenticate_user!
+      return login_required
     end
 
     respond_to do |format|
