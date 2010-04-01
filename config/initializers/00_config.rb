@@ -39,7 +39,7 @@ REPUTATION_REWARDS = YAML.load_file(RAILS_ROOT+"/config/default_reputation.yml")
 
 
 REST_AUTH_SITE_KEY         = AppConfig.rest_auth_key
-REST_AUTH_DIGEST_STRETCHES = AppConfig.rest_aut_digest_stretches
+REST_AUTH_DIGEST_STRETCHES = AppConfig.rest_auth_digest_stretches
 
 ActionController::Base.session_options[:domain] = ".#{AppConfig.domain}"
 ActionController::Base.session_options[:key] = AppConfig.session_key
