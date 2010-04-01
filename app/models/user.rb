@@ -118,7 +118,7 @@ class User
   end
 
   def to_param
-    if self.login.blank? || self.login.match(/\W/)
+    if self.login.blank? || !self.login.match(/^\w[\w\s]*$/)
       self.id
     else
       self.login
@@ -217,7 +217,7 @@ class User
   end
 
   def openid_login?
-    !identity_url.blank?
+    !identity_url.blank? || !facebook_uid.blank?
   end
 
   def has_voted?(voteable)
@@ -401,9 +401,8 @@ class User
   end
 
   def before_facebook_connect(fb_session)
-
     fb_session.user.populate(:locale, :username, :name, :first_name, :last_name,
-                              :birthday_date)
+                              :birthday_date, :email)
 
     self.language = case fb_session.user.locale.to_s
     when /^es/
@@ -417,12 +416,16 @@ class User
     end
 
     self.timezone = fb_session.user.current_location.try(:city)
-    self.login = fb_session.user.username
+
+    self.login = fb_session.user.username || fb_session.user.name
+    self.email = fb_session.user.email
 
     self.name  = fb_session.user.name
     self.birthday  = fb_session.user.birthday_date.try(:to_date)
 
     self.location       = fb_session.user.hometown_location.try(:city)
+
+    self.save
   end
 
   protected

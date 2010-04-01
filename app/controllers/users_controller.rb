@@ -75,6 +75,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    if params[:id] == 'login' && params[:user].nil? # HACK for facebook-connectable
+      redirect_to root_path
+      return
+    end
+
     @user = current_user
 
     if params[:current_password] && User.authenticate(@user.login, params[:current_password])
