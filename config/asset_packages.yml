@@ -42,7 +42,7 @@ javascripts:
 stylesheets: 
 - base: 
   - jquery-ui
-  - prettify
-  - compoments/dialog
   - compiled/application
-  - ../javascripts/openid/css/style
+  - prettify
+  - /javascripts/openid/css/style.css
+
