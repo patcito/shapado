@@ -27,6 +27,7 @@ class Group
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
+  key :forum, Boolean, :default => false
 
   #custom html
   key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",

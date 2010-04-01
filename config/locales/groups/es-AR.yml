@@ -45,6 +45,7 @@
         owner: "esta grupo fue creado por {{login}}"
         group_created_by: created by
         language: idioma
-        logo: logo
         default_tags: "etiquetas por omision"
+        logo: logo
+        forum: permitir más de una respuesta por usuario
 

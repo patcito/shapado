@@ -58,6 +58,10 @@
 
 
 .group
+  = form.check_box :forum, :class => "checkbox"
+  = form.label :forum, t('forum', :scope => "activerecord.attributes.group"), :class => "radio"
+
+.group
   = form.label :legend, t('legend', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_field :legend, :class => "text_field"
   .description
