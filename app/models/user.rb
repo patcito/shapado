@@ -3,7 +3,7 @@ require 'digest/sha1'
 class User
   include MongoMapper::Document
   devise :authenticatable, :recoverable, :registarable, :rememberable,
-         :validatable, :lockable, :token_authenticatable, :facebook_connectable
+         :lockable, :token_authenticatable, :facebook_connectable
 
   ROLES = %w[user moderator admin]
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
@@ -11,7 +11,11 @@ class User
   key :_id,                       String
   key :login,                     String, :limit => 40, :index => true
   key :name,                      String, :limit => 100, :default => '', :null => true
+
   key :bio,                       String, :limit => 200
+  key :website,                   String, :limit => 200
+  key :location,                  String, :limit => 200
+  key :birthday,                  Time
 
   key :identity_url,              String
   key :role,                      String, :default => "user"
@@ -54,6 +58,23 @@ class User
 
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
   validates_inclusion_of :role,  :within => ROLES
+
+  validates_presence_of     :login
+  validates_length_of       :login,    :within => 3..40
+  validates_uniqueness_of   :login
+  validates_format_of       :login,    :with => /\w+/
+
+  validates_length_of       :name,     :maximum => 100
+
+  validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? }
+  validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
+  validates_format_of       :email,    :with => Devise::EMAIL_REGEX, :allow_blank => true
+
+  with_options :if => :password_required? do |v|
+    v.validates_presence_of     :password
+    v.validates_confirmation_of :password
+    v.validates_length_of       :password, :within => 6..20, :allow_blank => true
+  end
 
   before_save :update_languages
   before_create :logged!

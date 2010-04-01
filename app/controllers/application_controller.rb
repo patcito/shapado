@@ -32,9 +32,17 @@ class ApplicationController < ActionController::Base
   protected
 
   def check_group_access
-    if @current_group &&
-       (@current_group.private && (!logged_in? || !current_user.user_of?(@current_group)))
-      access_denied
+    return if !current_group.private || params[:controller] == "sessions"
+
+    if logged_in?
+      if !current_user.user_of?(@current_group)
+        access_denied
+      end
+    else
+      respond_to do |format|
+        format.json { render :json => {:message => "Permission denied" }}
+        format.html { redirect_to new_user_session_path }
+      end
     end
   end
 
