@@ -217,7 +217,7 @@ class User
   end
 
   def openid_login?
-    !identity_url.blank? || !facebook_uid.blank?
+    !identity_url.blank? || (AppConfig.enable_facebook_auth && !facebook_uid.blank?)
   end
 
   def has_voted?(voteable)
