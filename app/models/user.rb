@@ -209,7 +209,7 @@ class User
   end
 
   def user_of?(group)
-    mod_of?(group) || role_on(group) == "user"
+    mod_of?(group) || self.membership_list.has_key?(group.id)
   end
 
   def main_language
