@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.json { render :json => @users.to_json(:except => [:password, :password_confirmation, :crypted_password, :encrypted_password, :password_salt, :salt, :email, :identity_url])}
     end
 
   end
@@ -62,6 +63,11 @@ class UsersController < ApplicationController
     add_feeds_url(url_for(:format => "atom"), t("feeds.user"))
 
     @user.viewed_on!(current_group) if @user != current_user && !is_bot?
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @user.to_json(:except => [:password, :password_confirmation, :crypted_password, :encrypted_password, :password_salt, :salt, :email, :identity_url]) }
+    end
   end
 
   def edit
