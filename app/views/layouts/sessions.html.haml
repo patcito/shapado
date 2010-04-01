@@ -8,14 +8,7 @@
     = render :partial => "shared/layout/javascript"
     = render :partial => "shared/layout/css"
 
-    -if AppConfig.enable_facebook_auth
-      =fb_connect_javascript_tag(:lang => ::I18n.locale)
-      =javascript_include_tag 'devise.facebook_connectable'
-
   %body
-    -if AppConfig.enable_facebook_auth
-      =init_fb_connect :XFBML, :js => :jquery
-
     #container
       #header
         #main-bar
@@ -34,3 +27,8 @@
               .inner
                 = yield
                 .clear
+
+    -if AppConfig.enable_facebook_auth
+      ==  <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/#{I18n.locale}" type="text/javascript"></script><script type="text/javascript">FB.init("#{Facebooker.api_key}");</script>
+      =javascript_include_tag 'devise.facebook_connectable'
+      =init_fb_connect :XFBML, :js => :jquery

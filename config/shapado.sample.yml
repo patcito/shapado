@@ -16,6 +16,7 @@ base: &common
   enable_groups: false
   default_language: en
   enable_i18n: false
+  enable_facebook_auth: true
 
   exception_notification:
     activate: true
