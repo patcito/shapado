@@ -44,5 +44,5 @@ stylesheets:
   - jquery-ui
   - compiled/application
   - prettify
-  - /javascripts/openid/css/style.css
+  - ../javascripts/openid/css/style
 
