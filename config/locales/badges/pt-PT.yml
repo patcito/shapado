@@ -100,6 +100,9 @@
       citizen_patrol:
         name: citizen patrol
         description: First flagged post
+      self-learner:
+        name: self learner
+        description: Answered your own question with at least 3 up votes
 
   activerecord:
     models:

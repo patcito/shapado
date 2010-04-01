@@ -52,6 +52,10 @@ module JudgeActions
           create_badge(vuser, group, {:token => "necromancer", :source => answer}, {:unique => true, :source_id => answer.id})
         end
 
+        if vuser.id == answer.question.user_id && answer.votes_average >= 3
+          create_badge(vuser, group, {:token => "self-learner", :source => answer, :unique => true})
+        end
+
         if vote.value == 1
           stats = vuser.stats(:tag_votes)
           tags = answer.question.tags

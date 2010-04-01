@@ -130,6 +130,9 @@ es-AR:
       citizen_patrol:
         name: citizen patrol
         description: primer post reportado
+      self-learner:
+        name: self learner
+        description: Contesto su propia pregunta con al menos 3 votos positivos
 
   activerecord:
     models:

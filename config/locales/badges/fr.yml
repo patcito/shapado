@@ -132,6 +132,9 @@ fr:
       citizen_patrol:
         name: patrouille civile
         description: Premier rapport de poste
+      self-learner:
+        name: self learner
+        description: Answered your own question with at least 3 up votes
 
   activerecord:
     models:
