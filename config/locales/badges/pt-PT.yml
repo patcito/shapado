@@ -106,6 +106,9 @@
       scholar:
         name: scholar
         description: First accepted answer on your own question
+      autobiographer:
+        name: autobiographer
+        description: Completed all user profile fields
 
   activerecord:
     models:
