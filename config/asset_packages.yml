@@ -2,42 +2,23 @@
 javascripts:
 - base:
   - jquery
-  - parseuri
   - jquery-ui
-  - jquery.autovideo
-  - jquery.json
-  - jquery.treeTable
-  - jquery.localscroll
-  - jquery.textarea
+  - prettify
   - showdown
+  - jquery.textarea
   - jquery.notifyBar
-  - jquery.mousewheel
-  - jquery.autogrow
-  - jquery.scrollTo
-  - jquery.form
-  - jquery.dynatree.min
-  - jquery.cookie
-  - jquery.dimensions.min
-  - jquery.sprintf
-  - jquery.treeview.async
-  - jquery.wysiwyg
-  - jquery.geekga-1.1.min
-  - jquery.treeview
-  - jquery.autocomplete
-  - components/search
-  - highlight/prettify
   - application
-  - modules/googlean
-  - modules/index_welcome
-  - modules/move_group
-  - modules/sessions
-  - modules/themes
-  - modules/index_question
-  - modules/members
-  - modules/new_question
-  - modules/show_question
-  - openid/js/jquery.openid
+  - jquery.autovideo
+  - jquery.autocomplete
   - openid/js/jquery.openid.min
+  - components/search
+  - modules/sessions
+  - modules/index_question
+  - modules/show_question
+  - modules/new_question
+  - modules/index_welcome
+  - modules/members
+  - modules/move_group
 
 stylesheets:
 - base:
