@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!, :only => [:edit, :update, :follow]
+  before_filter :login_required, :only => [:edit, :update, :follow]
   tabs :default => :users
   def index
     set_page_title(t("users.index.title"))
