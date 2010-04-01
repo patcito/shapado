@@ -400,6 +400,31 @@ class User
     self.membership_list[group] ||= Membership.new(:group_id => group)
   end
 
+  def before_facebook_connect(fb_session)
+
+    fb_session.user.populate(:locale, :username, :name, :first_name, :last_name,
+                              :birthday_date)
+
+    self.language = case fb_session.user.locale.to_s
+    when /^es/
+      'es-AR'
+    when /^fr/
+      'fr'
+    when /^pt/
+      'pt-PT'
+    else
+      'en'
+    end
+
+    self.timezone = fb_session.user.current_location.try(:city)
+    self.login = fb_session.user.username
+
+    self.name  = fb_session.user.name
+    self.birthday  = fb_session.user.birthday_date.try(:to_date)
+
+    self.location       = fb_session.user.hometown_location.try(:city)
+  end
+
   protected
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
