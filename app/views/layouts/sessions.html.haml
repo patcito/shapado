@@ -1,5 +1,5 @@
 !!! Strict
-%html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml" }
+%html{ "xml:lang" => I18n.locale, :lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml", "xmlns:fb" => "http://www.facebook.com/2008/fbml" }
   %head
     %title
       &= page_title
@@ -8,7 +8,12 @@
     = render :partial => "shared/layout/javascript"
     = render :partial => "shared/layout/css"
 
+    =fb_connect_javascript_tag(:lang => ::I18n.locale)
+    =javascript_include_tag 'devise.facebook_connectable'
+
   %body
+    =init_fb_connect :XFBML, :js => :jquery
+
     #container
       #header
         #main-bar
