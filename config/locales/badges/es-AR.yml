@@ -133,6 +133,9 @@ es-AR:
       self-learner:
         name: self learner
         description: Contesto su propia pregunta con al menos 3 votos positivos
+      scholar:
+        name: scholar
+        description: First accepted answer on your own question
 
   activerecord:
     models:

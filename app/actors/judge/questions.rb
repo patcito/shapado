@@ -22,6 +22,10 @@ module JudgeActions
         answer.user.stats.add_expert_tags(*question.tags)
         create_badge(answer.user, group, :token => "tutor", :source => answer, :unique => true)
       end
+
+      if question.user_id == answer.user_id
+        create_badge(answer.user, group, :token => "scholar", :source => answer, :unique => true)
+      end
     end
 
     def on_question_unsolved(payload)
