@@ -8,11 +8,13 @@
     = render :partial => "shared/layout/javascript"
     = render :partial => "shared/layout/css"
 
-    =fb_connect_javascript_tag(:lang => ::I18n.locale)
-    =javascript_include_tag 'devise.facebook_connectable'
+    -if AppConfig.enable_facebook_auth
+      =fb_connect_javascript_tag(:lang => ::I18n.locale)
+      =javascript_include_tag 'devise.facebook_connectable'
 
   %body
-    =init_fb_connect :XFBML, :js => :jquery
+    -if AppConfig.enable_facebook_auth
+      =init_fb_connect :XFBML, :js => :jquery
 
     #container
       #header
