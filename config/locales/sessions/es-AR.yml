@@ -7,6 +7,7 @@ es-AR:
       flash_notice: "usted ha cerrado la sesión."
     new:
       with_openid: acceda usando openid
+      with_facebook: accesa usando facebook
       with_authentication: acceda con nuestro propio sistema de usuarios
       registered: "¿ya esta registrado?"
       not_registered: "todavía no esta registrado?"

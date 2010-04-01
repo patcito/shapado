@@ -14,6 +14,8 @@
         = submit_tag t(".log_in")
 
 -if AppConfig.enable_facebook_auth
+  %h2
+    = t(".with_facebook")
   =facebook_link :user
 
 %h2
