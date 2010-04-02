@@ -33,7 +33,7 @@ Rails::Initializer.run do |config|
   config.gem "magent", :version => "0.3"
   config.gem "differ", :version => "0.1.1"
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
-  config.gem "warden", :version => "0.10.2"
+  config.gem "warden", :version => "0.10.3"
   config.gem "devise", :version => "1.0.5"
 
   if File.exist?(RAILS_ROOT+"/config/facebooker.yml")
