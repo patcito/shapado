@@ -18,23 +18,25 @@
     = t(".with_facebook")
   =facebook_link :user
 
-%h2
-  Sign in
 
--form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form"} do |f|
-  .group
-    =f.label :email, "email", :class => "label"
-    =f.text_field :email, :class => "text_field"
-  .group
-    =f.label :password, "password", :class => "label"
-    =f.password_field :password, :class => "password"
+-unless current_group.openid_only
+  %h2
+    Sign in
 
-  -if devise_mapping.rememberable?
+  -form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form"} do |f|
     .group
-      =f.label :remember_me, "remember me"
-      =f.check_box :remember_me
+      =f.label :email, "email", :class => "label"
+      =f.text_field :email, :class => "text_field"
+    .group
+      =f.label :password, "password", :class => "label"
+      =f.password_field :password, :class => "password"
 
-  .group.navform
-    =f.submit "Sign in"
+    -if devise_mapping.rememberable?
+      .group
+        =f.label :remember_me, "remember me"
+        =f.check_box :remember_me
 
-- render :partial => "shared/devise_links"
+    .group.navform
+      =f.submit "Sign in"
+
+  - render :partial => "shared/devise_links"
