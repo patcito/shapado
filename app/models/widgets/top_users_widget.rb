@@ -2,7 +2,7 @@ class TopUsersWidget < Widget
   before_validation_on_create :set_name
 
   def top_users(group)
-    group.users(:order => "reputation.#{group.id} desc",
+    group.users(:order => "membership_list.#{group.id}.reputation desc",
                 :per_page => 5,
                 :page => 1)
   end
