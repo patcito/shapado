@@ -3,7 +3,7 @@ javascripts:
 - base:
   - jquery
   - jquery-ui
-  - prettify
+  - highlight/prettify
   - showdown
   - jquery.textarea
   - jquery.notifyBar
