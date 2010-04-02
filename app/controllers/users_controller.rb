@@ -9,7 +9,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @users.to_json(:except => [:password, :password_confirmation, :crypted_password, :encrypted_password, :password_salt, :salt, :email, :identity_url])}
+      format.json {
+        except = [:password, :password_confirmation, :crypted_password,
+                  :encrypted_password, :password_salt, :salt, :email, :identity_url,
+                  :default_subtab, :ip, :language_filter ]
+        render :json => @users.to_json(:except => except)
+      }
     end
 
   end
@@ -66,7 +71,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @user.to_json(:except => [:password, :password_confirmation, :crypted_password, :encrypted_password, :password_salt, :salt, :email, :identity_url]) }
+      format.json {
+        except = [:password, :password_confirmation, :crypted_password,
+                  :encrypted_password, :password_salt, :salt, :email, :identity_url,
+                  :default_subtab, :ip, :language_filter ]
+        render :json => @user.to_json(:except => except)
+      }
     end
   end
 

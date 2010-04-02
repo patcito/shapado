@@ -3,10 +3,10 @@
   = f.label :login, t(:login, :scope => "activerecord.attributes.user"), :class => "label"
   = f.text_field :login, :class => "text_field"
 
--if @user.new? || !@user.openid_login?
-  .group
-    = f.label :email, t(:email, :scope => "activerecord.attributes.user"), :class => "label"
-    = f.text_field :email, :class => "text_field"
+
+.group
+  = f.label :email, t(:email, :scope => "activerecord.attributes.user"), :class => "label"
+  = f.text_field :email, :class => "text_field"
 
 -if !@user.openid_login?
   -if !@user.new?
