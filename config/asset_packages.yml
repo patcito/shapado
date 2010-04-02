@@ -3,15 +3,14 @@ javascripts:
 - base:
   - jquery
   - jquery-ui
-  - highlight/prettify
-  - showdown
-  - jquery.textarea
-  - jquery.notifyBar
-  - application
   - jquery.autovideo
   - jquery.autocomplete
-  - openid/js/jquery.openid.min
+  - jquery.textarea
+  - showdown
+  - jquery.notifyBar
   - components/search
+  - application
+  - highlight/prettify
   - modules/sessions
   - modules/index_question
   - modules/show_question
@@ -19,6 +18,7 @@ javascripts:
   - modules/index_welcome
   - modules/members
   - modules/move_group
+  - openid/js/jquery.openid.min
 
 stylesheets:
 - base:
