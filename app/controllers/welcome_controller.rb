@@ -14,8 +14,7 @@ class WelcomeController < ApplicationController
     end
 
     @langs_conds = scoped_conditions[:language][:$in]
-    add_feeds_url(url_for(:format => "atom", :languages => @langs_conds),
-                                                    t("feeds.questions"))
+    add_feeds_url(url_for(:format => "atom"), t("feeds.questions"))
 
     @questions = Question.paginate({:per_page => 15,
                                    :page => params[:page] || 1,
