@@ -44,5 +44,17 @@ class WelcomeController < ApplicationController
   def facts
   end
 
+
+  def change_language_filter
+    if logged_in? && params["language_filter"]
+      current_user.update_language_filter(params["language_filter"].first)
+    elsif params["language_filter"]
+      session["user.language_filter"] =  params["language_filter"].first
+    end
+    respond_to do |format|
+      format.html {redirect_to(params[:source] || questions_path)}
+    end
+  end
+
 end
 

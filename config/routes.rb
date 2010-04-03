@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
+  map.change_language_filter '/change_language_filter', :controller => 'welcome', :action => 'change_language_filter'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'
@@ -14,7 +15,6 @@ ActionController::Routing::Routes.draw do |map|
   map.tos '/tos', :controller => 'doc', :action => 'tos'
   map.privacy '/privacy', :controller => 'doc', :action => 'privacy'
   map.resources :users, :member => { :change_preferred_tags => :any,
-                                     :change_language_filter => :any,
                                      :follow => :any, :unfollow => :any},
                         :collection => {:autocomplete_for_user_login => :get}
   map.resource :session

@@ -25,8 +25,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :find_group
   before_filter :check_group_access
-  before_filter :find_languages
   before_filter :set_locale
+  before_filter :find_languages
   layout :set_layout
 
   protected
@@ -90,6 +90,10 @@ class ApplicationController < ActionController::Base
         else
           if logged_in?
             languages = current_user.languages_to_filter
+          elsif session["user.language_filter"] == 'any'
+            languages = AVAILABLE_LANGUAGES
+         elsif session["user.language_filter"]
+            languages = [session["user.language_filter"]]
           else
             languages = [I18n.locale.to_s.split("-").first]
           end
@@ -122,17 +126,16 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     locale = AppConfig.default_language || 'en'
-    if logged_in?
-      locale = current_user.language
-      Time.zone = current_user.timezone || "UTC"
-    elsif params[:lang] =~ /^(\w\w)/
-      locale = find_valid_locale($1)
-    elsif !AppConfig.default_language
-      if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
+    if AppConfig.enable_i18n
+      if logged_in?
+        locale = current_user.language
+        Time.zone = current_user.timezone || "UTC"
+      elsif params[:lang] =~ /^(\w\w)/
+        locale = find_valid_locale($1)
+      elsif request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
         locale = find_valid_locale($1)
       end
     end
-
     I18n.locale = locale.to_s
   end
 

@@ -7,6 +7,7 @@ class User
 
   ROLES = %w[user moderator admin]
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
+  LOGGED_OUT_LANGUAGE_FILTERS = %w[any] + AVAILABLE_LANGUAGES
 
   key :_id,                       String
   key :login,                     String, :limit => 40, :index => true
@@ -21,7 +22,7 @@ class User
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
-  key :preferred_languages,       Array
+  key :preferred_languages,       Array, :default => []
 
   key :notification_opts,         NotificationConfig
 
@@ -161,7 +162,7 @@ class User
       when "any"
         languages = AVAILABLE_LANGUAGES
       when "user"
-        languages = self.preferred_languages
+        languages = (self.preferred_languages.empty?)? self.preferred_languages : AVAILABLE_LANGUAGES
       else
         languages = [self.language_filter]
       end

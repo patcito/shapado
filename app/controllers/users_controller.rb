@@ -71,6 +71,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.atom
       format.json {
         except = [:password, :password_confirmation, :crypted_password,
                   :encrypted_password, :password_salt, :salt, :email, :identity_url,
@@ -122,16 +123,6 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html {redirect_to questions_path}
-    end
-  end
-
-  def change_language_filter
-    @user = current_user
-    if params[:user]
-      @user.update_language_filter(params[:user][:language_filter])
-    end
-    respond_to do |format|
-      format.html {redirect_to(params[:source] || questions_path)}
     end
   end
 

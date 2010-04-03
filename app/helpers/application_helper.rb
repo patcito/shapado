@@ -181,5 +181,15 @@ module ApplicationHelper
     </script>"
   end
 
+  def logged_out_language_filter
+    custom_lang = session["user.language_filter"]
+    case custom_lang
+    when "any"
+      languages = "any"
+    else
+      languages = session["user.language_filter"] || I18n.locale.to_s.split('-').first
+    end
+    languages
+  end
 end
 
