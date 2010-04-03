@@ -66,6 +66,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.atom
       format.json { render :json => @user.to_json(:except => [:password, :password_confirmation, :crypted_password, :encrypted_password, :password_salt, :salt, :email, :identity_url]) }
     end
   end
