@@ -115,16 +115,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def change_language_filter
-    @user = current_user
-    if params[:user]
-      @user.update_language_filter(params[:user][:language_filter])
-    end
-    respond_to do |format|
-      format.html {redirect_to(params[:source] || questions_path)}
-    end
-  end
-
   def follow
     @user = User.find_by_login_or_id(params[:id])
     current_user.add_friend(@user)

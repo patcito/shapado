@@ -90,6 +90,10 @@ class ApplicationController < ActionController::Base
         else
           if logged_in?
             languages = current_user.languages_to_filter
+          elsif session["user.language_filter"] == 'any'
+            languages = AVAILABLE_LANGUAGES
+         elsif session["user.language_filter"]
+            languages = [session["user.language_filter"]]
           else
             languages = [I18n.locale.to_s.split("-").first]
           end
@@ -128,10 +132,8 @@ class ApplicationController < ActionController::Base
         Time.zone = current_user.timezone || "UTC"
       elsif params[:lang] =~ /^(\w\w)/
         locale = find_valid_locale($1)
-      else
-        if request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
-          locale = find_valid_locale($1)
-        end
+      elsif request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/
+        locale = find_valid_locale($1)
       end
     end
     I18n.locale = locale.to_s
