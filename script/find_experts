@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+ENV['RAILS_ENV'] ||= 'development'
+require File.dirname(__FILE__)+"/../config/environment"
+
+group = Group.find_by_subdomain(ARGV.first) || Group.find_by_id(ARGV.first)
+
+Question.find_each(:group_id => group.id, :answered => true) do |question|
+  answer = question.answer
+
+  tags = question.tags
+  user = answer.user
+
+  puts "#{user.login} -> #{tags.inspect}"
+  user.stats.add_expert_tags(*tags)
+end
+
