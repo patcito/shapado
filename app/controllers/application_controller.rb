@@ -90,10 +90,12 @@ class ApplicationController < ActionController::Base
         else
           if logged_in?
             languages = current_user.languages_to_filter
-          elsif session["user.language_filter"] == 'any'
-            languages = AVAILABLE_LANGUAGES
-         elsif session["user.language_filter"]
-            languages = [session["user.language_filter"]]
+          elsif session["user.language_filter"]
+            if session["user.language_filter"] == 'any'
+              languages = AVAILABLE_LANGUAGES
+            else
+              languages = [session["user.language_filter"]]
+            end
           else
             languages = [I18n.locale.to_s.split("-").first]
           end
