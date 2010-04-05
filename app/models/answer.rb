@@ -23,7 +23,7 @@ class Answer < Comment
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 
-  has_many :comments, :foreign_key => "commentable_id", :class_name => "Comment", :dependent => :destroy
+  has_many :comments, :foreign_key => "commentable_id", :class_name => "Comment", :order => "created_at asc", :dependent => :destroy
 
   validates_presence_of :user_id
   validates_presence_of :question_id
