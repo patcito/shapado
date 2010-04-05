@@ -143,8 +143,8 @@ class QuestionsController < ApplicationController
       format.js do
         result = []
         if q =params[:prefix]
-          result = Question.find_tags(/^#{q}/,
-                             :group_id => current_group.id)
+          result = Question.find_tags(/^#{Regexp.escape(q)}/,
+                                      :group_id => current_group.id)
         end
         render :text => result.join("\n")
       end
