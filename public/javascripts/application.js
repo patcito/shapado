@@ -67,6 +67,7 @@ function setupEditor() {
 
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
+
     $('#markdown_preview.markdown p code').addClass("prettyprint");
     if(timer_id)
       clearTimeout(timer_id);
@@ -161,6 +162,12 @@ function setupEditor() {
     });
   },{
     id: 'markdown_code_button'
+  });
+
+  toolbar.addButton('Latex', function(event) {
+    this.wrapSelection('$$','$$');
+  }, {
+    id: 'markdown_latex_button'
   });
 
   toolbar.addButton('Help',function(){
