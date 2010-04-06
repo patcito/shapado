@@ -16,14 +16,14 @@ class MembersController < ApplicationController
 
   def create
     @member = User.find_by_login(params[:user_id])
-    if @member
+    unless @member.nil?
       ok = @group.add_member(@member, params[:role])
       if ok
         return redirect_to(members_path)
       end
     else
       flash[:error] = "Sorry, the user **#{params[:user_id]}** does not exists" # TODO: i18n
-      @membership = Membership.new
+      @member = Membership.new(:login => params[:user_id])
     end
 
     @members = @group.users(:page => params[:page] || 1,

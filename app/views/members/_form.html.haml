@@ -1,6 +1,6 @@
 .group
   = label_tag :user_id, t(:login, :scope => "activerecord.attributes.user"), :class => "label"
-  = text_field_tag :name => :user_id, :value => @member.login, :class => "text_field"
+  = text_field_tag :user_id, @member.login, :class => "text_field"
   .description
     = t(".login_tip")
 
