@@ -62,6 +62,14 @@
   = form.label :forum, t('forum', :scope => "activerecord.attributes.group"), :class => "radio"
 
 .group
+  = form.check_box :openid_only, :class => "checkbox"
+  = form.label :openid_only, t('openid_only', :scope => "activerecord.attributes.group"), :class => "radio"
+
+.group
+  = form.check_box :adult_only, :class => "checkbox"
+  = form.label :adult_only, t('adult_only', :scope => "activerecord.attributes.group"), :class => "radio"
+
+.group
   = form.label :legend, t('legend', :scope => "activerecord.attributes.group"), :class => "label"
   = form.text_field :legend, :class => "text_field"
   .description
