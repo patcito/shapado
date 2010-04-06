@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
   before_filter :check_group_access
   before_filter :set_locale
   before_filter :find_languages
+#   before_filter :check_age            
   layout :set_layout
 
   protected
@@ -220,4 +221,26 @@ class ApplicationController < ActionController::Base
   def is_bot?
     request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler|StatusNet)\b/i
   end
+  
+  def check_age
+    if current_group.adult_only
+      
+      if logged_in?
+        if current_user.birthday.nil?
+          
+        else
+          if (Date.today.year.to_i - current_user.birthday.year.to_i) <  18
+#             access_denied
+            respond_to do |format|
+#               format.json { render :json => {:message => "Permission denied" }}
+              
+#               format.html { redirect_to questions_path }
+            end
+          end
+        end
+      end
+    end
+  end
+  helper_method :check_age
+  
 end
