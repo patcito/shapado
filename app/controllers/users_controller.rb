@@ -93,14 +93,13 @@ class UsersController < ApplicationController
 
     @user = current_user
 
-    if params[:current_password] && User.authenticate(@user.login, params[:current_password])
+    if params[:current_password] && @user.valid_password?(params[:current_password])
       @user.encrypted_password = ""
       @user.password = params[:user][:password]
       @user.password_confirmation = params[:user][:password_confirmation]
     end
 
-    @user.safe_update(%w[login email name password_confirmation password
-                         language timezone preferred_languages
+    @user.safe_update(%w[login email name language timezone preferred_languages
                          notification_opts bio hide_country], params[:user])
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
