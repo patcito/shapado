@@ -9,7 +9,7 @@ class MembersController < ApplicationController
     @group = current_group
     @members = @group.users(:page => params[:page] || 1,
                             :per_page => params[:per_page] || 25,
-                            :order => "membership_list.#{@group.id}.role asc, membership_list.#{@group.id}.reputation desc")
+                            :order => "membership_list.#{@group.id}.reputation desc, membership_list.#{@group.id}.role asc")
     @member = User.new
     @membership = Membership.new
   end
