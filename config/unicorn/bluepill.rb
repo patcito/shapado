@@ -1,4 +1,4 @@
-RAILS_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+RAILS_ROOT = ENV["RAILS_ROOT"] || ENV["PWD"] || File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
 rails_env = ENV["RAILS_ENV"] || 'production'
 
 Bluepill.application("shapado", :log_file => RAILS_ROOT+"/log/bluepill.log") do |app|
