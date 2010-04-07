@@ -153,11 +153,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   end
 
   def is_member?(user)
-    if user.kind_of?(User)
-      !memberships.first(:user_id => user.id).nil?
-    else
-      false
-    end
+    user.member_of?(self)
   end
 
   def add_member(user, role)
