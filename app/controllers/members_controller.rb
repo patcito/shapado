@@ -23,7 +23,7 @@ class MembersController < ApplicationController
       end
     else
       flash[:error] = "Sorry, the user **#{params[:user_id]}** does not exists" # TODO: i18n
-      @member = Membership.new(:login => params[:user_id])
+      @member = User.new(:login => params[:user_id])
     end
 
     @members = @group.users(:page => params[:page] || 1,
