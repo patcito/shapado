@@ -65,7 +65,7 @@ class Notifier < ActionMailer::Base
   end
 
   def new_feedback(user, subject, content, email, ip)
-    recipients AppConfig.exception_recipients
+    recipients AppConfig.exception_notification.exception_recipients
     from "Shapado[feedback] <#{AppConfig.notification_email}>"
     subject "feedback: #{subject}"
     sent_on Time.now
