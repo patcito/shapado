@@ -162,7 +162,7 @@ class User
       when "any"
         languages = AVAILABLE_LANGUAGES
       when "user"
-        languages = (self.preferred_languages.empty?)? self.preferred_languages : AVAILABLE_LANGUAGES
+        languages = (self.preferred_languages.empty?) ? AVAILABLE_LANGUAGES : self.preferred_languages
       else
         languages = [self.language_filter]
       end

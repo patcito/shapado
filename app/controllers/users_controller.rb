@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new
-    @user.safe_update(%w[login email name password_confirmation password
+    @user.safe_update(%w[login email name password_confirmation password preferred_languages
                          language timezone identity_url bio hide_country], params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
