@@ -191,10 +191,10 @@ class User
 
   def member_of?(group)
     if group.kind_of?(Group)
-      group.is_member?(self)
-    else
-      false
+      group = group.id
     end
+
+    self.membership_list.has_key?(group)
   end
 
   def role_on(group)
