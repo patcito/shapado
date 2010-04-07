@@ -1,7 +1,7 @@
 "pt-PT":
   ads:
-    ad_links: ad a new {{type}} ad
-    title: ad a new {{type}} ad
+    ad_links: add a new {{type}} ad
+    title: add a new {{type}} ad
     name: "name:"
     position: "position:"
     index:

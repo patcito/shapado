@@ -10,7 +10,7 @@ es-AR:
       ask_question: pregunte
       empty: "nadie ha preguntado aun, ¡se el primero!"
       help_to_answer: ayudanos a responder
-      unanswered_questions: preguntas aun no contestadas
+      unanswered_questions: preguntas sin contestadar
     show:
       answers: respuestas
       another_answers: otras respuestas
@@ -43,7 +43,7 @@ es-AR:
     unanswered:
       title: preguntas no contestadas
       tags: etiquetas sin respuesta
-      empty: "este grupo no tiene preguntas no contestadas."
+      empty: "este grupo no tiene preguntas no contestar."
       my_tags: mis etiquetas
       expert: expertos
     tags:

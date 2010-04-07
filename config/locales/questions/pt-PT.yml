@@ -9,7 +9,7 @@ pt-PT:
       oldest:  mais antigas
       ask_question: fazer pergunta
       empty: "ainda ninguém fez nenhuma pergunta, seja o primeiro!"
-      help_to_answer: help us to answer
+      help_to_answer: help us answer
       unanswered_questions: unanswered questions
     show:
       answers: respostas

@@ -9,7 +9,7 @@ en:
       oldest:  oldest
       ask_question: ask question
       empty: "no one has asked any questions yet, be the first!"
-      help_to_answer: help us to answer
+      help_to_answer: help us answer
       unanswered_questions: unanswered questions
     show:
       answers: answers

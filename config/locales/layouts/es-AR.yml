@@ -9,7 +9,7 @@ es-AR:
       tags: etiquetas
       users: usuarios
       badges: insignias
-      unanswered: aun no contestadas
+      unanswered: sin contestar
       logout: salir
       logged: conectado como {{login}}
       search: buscar

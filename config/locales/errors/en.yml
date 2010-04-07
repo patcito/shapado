@@ -2,7 +2,7 @@ en:
   errors:
     options_label: "other things to try:"
     go_to: "go to {{link}} page"
-    help_us_answer: help us to answer {{link}}
+    help_us_answer: help us answer {{link}}
     search: "search"
     forbidden:
       title: "access denied"
