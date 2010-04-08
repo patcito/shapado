@@ -159,6 +159,14 @@ class ApplicationController < ActionController::Base
     devise_controller? ? 'sessions' : 'application'
   end
 
+  def after_sign_in_path_for(resource)
+    if return_to = session.delete("return_to")
+      return_to
+    else
+      super
+    end
+  end
+
   def set_page_title(title)
     @page_title = title
   end
