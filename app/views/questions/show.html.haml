@@ -1,5 +1,8 @@
 -require_js 'jsMath/easy/load.js'
 
+-content_for :head do
+  %meta{:name => "keywords", :content => clean_seo_keywords(@question.tags, @question.title)}
+
 -content_for :subtabs do
   %h1.navtitle
     &= @question.title

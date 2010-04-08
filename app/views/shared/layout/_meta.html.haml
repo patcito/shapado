@@ -1,4 +1,7 @@
 %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+
+=yield :head
+
 -if current_group.has_custom_favicon?
   %link{:rel=>"icon", :type=>"image/png", :href=>favicon_group_path(current_group)}
 -else

@@ -196,5 +196,21 @@ module ApplicationHelper
     end
     languages
   end
+
+  def clean_seo_keywords(tags, text = "")
+    if tags.size < 5
+
+      text.scan(/(\S+)/) do |s|
+        word = s.to_s
+        if word.length > 3
+          tags << word.downcase
+        end
+
+        break if tags.size >= 5
+      end
+    end
+
+    tags.join(', ')
+  end
 end
 
