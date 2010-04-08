@@ -10,7 +10,7 @@
       -tags.each do |tag|
         %td{:style => "line-height: 14px"}
           %span.tag
-            =link_to h(tag["name"]), questions_path(:tags => tag["name"])
+            =link_to h(tag["name"]), questions_path(:tags => tag["name"]), :rel => "tag"
           %span{:style => "padding-left: 4px; clear:both"}
             %b
               x

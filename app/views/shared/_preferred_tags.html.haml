@@ -5,7 +5,7 @@
     .tag-list{:style => "margin-bottom: 3px"}
       -current_user.preferred_tags_on(current_group).each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(:tags => tag)
+          = link_to h(tag), questions_path(:tags => tag), :rel => "tag"
           = link_to "-", change_preferred_tags_user_path(current_user, :opt => "remove", :tags => [tag]), :class => "remove_tag"
 
     - form_tag change_preferred_tags_user_path(current_user), :class => "form" do
