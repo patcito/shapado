@@ -10,7 +10,7 @@ es-AR:
       ask_question: pregunte
       empty: "nadie ha preguntado aun, ¡se el primero!"
       help_to_answer: ayudanos a responder
-      unanswered_questions: preguntas sin contestadar
+      unanswered_questions: preguntas sin contestar
     show:
       answers: respuestas
       another_answers: otras respuestas
