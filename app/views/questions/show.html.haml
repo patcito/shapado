@@ -1,7 +1,7 @@
 -require_js 'jsMath/easy/load.js'
 
 -content_for :subtabs do
-  .navtitle
+  %h1.navtitle
     &= @question.title
 
 -source = question_path(@question)
