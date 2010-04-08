@@ -77,6 +77,8 @@ class AnswersController < ApplicationController
       @answer.user = current_user
       respond_to do |format|
         if @question && @answer.save
+          Question.update_last_target(@question.id, @answer)
+
           current_user.stats.add_answer_tags(*@question.tags)
 
           @question.answer_added!

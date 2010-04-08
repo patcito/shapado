@@ -43,6 +43,10 @@ class Question
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
+  key :last_target_type, String
+  key :last_target_id, String
+  belongs_to :last_target, :polymorphic => true
+
   has_many :answers, :dependent => :destroy
   has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
@@ -232,6 +236,13 @@ class Question
     if !valid
       self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
     end
+  end
+
+  def self.update_last_target(question_id, target)
+    self.collection.update({:_id => question_id},
+                           {:$set => {:last_target_id => target.id,
+                                      :last_target_type => target.class.to_s}},
+                           :upsert => true)
   end
 
   protected

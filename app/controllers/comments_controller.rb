@@ -13,6 +13,11 @@ class CommentsController < ApplicationController
     if saved = @comment.save
       current_user.on_activity(:comment_question, current_group)
       Magent.push("actors.judge", :on_comment, @comment.id)
+
+      if question_id = @comment.question_id
+        Question.update_last_target(question_id, @comment)
+      end
+
       flash[:notice] = t("comments.create.flash_notice")
     else
       flash[:error] = @comment.errors.full_messages.join(", ")

@@ -254,6 +254,8 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       @question.safe_update(%w[title body language tags wiki], params[:question])
       @question.updated_by = current_user
+      @question.last_target = @question
+
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(@question)) }

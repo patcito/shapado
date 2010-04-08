@@ -60,6 +60,20 @@ class Comment
     question
   end
 
+  def question_id
+    question_id = nil
+
+    if self.commentable_type == "Question"
+      question_id = self.commentable_id
+    elsif self.commentable_type == "Answer"
+      question_id = self.commentable.question
+    elsif self.commentable.respond_to?(:question)
+      question_id = self.commentable.question.id
+    end
+
+    question_id
+  end
+
   def find_recipient
     if self.commentable.respond_to?(:user)
       self.commentable.user
