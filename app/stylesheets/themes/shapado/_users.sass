@@ -23,6 +23,18 @@ a.unfollow_link
   &:active, &:link, &:visited
     color: white
 
+a.follow_link
+  +fancy-button-structure
+  +fancy-button-colors-matte(#528C54)
+  +fancy-button-size(24px, 18px, 1px, 15px)
+  float: right
+  &:active, &:link
+    color: white
+
+a.continue
+  display: inline
+  float: right
+  padding: 6px
 
 .friend_list
   margin: 3px

@@ -22,6 +22,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adsenses
   map.resources :adbards
   map.resources :badges
+  map.continue '/continue', :controller => 'welcome', :action => 'continue'
+
 
   def build_questions_routes(router, options ={})
     router.with_options(options) do |route|
@@ -68,6 +70,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :votes
   map.resources :flags
+  map.resources :welcome, :collection =>  {:confirm => :get}
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.resources :members, :path_prefix => "/manage"

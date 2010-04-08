@@ -27,7 +27,6 @@ class ApplicationController < ActionController::Base
   before_filter :check_group_access
   before_filter :set_locale
   before_filter :find_languages
-#   before_filter :check_age            
   layout :set_layout
 
   protected
@@ -86,7 +85,7 @@ class ApplicationController < ActionController::Base
   def find_languages
     @languages ||= begin
       if AppConfig.enable_i18n
-        if languages = current_group.language
+        if languages = cuindexrrent_group.language
           languages = [languages]
         else
           if logged_in?
@@ -224,23 +223,29 @@ class ApplicationController < ActionController::Base
   
   def check_age
     if current_group.adult_only
-      
-      if logged_in?
-        if current_user.birthday.nil?
-          
-        else
-          if (Date.today.year.to_i - current_user.birthday.year.to_i) <  18
-#             access_denied
+      if !session[:age_confirmed]
+        if logged_in?
+          if current_user.birthday.nil?
+            flash[:error] = "Advertencia: Contenido no apto para todo público"
             respond_to do |format|
-#               format.json { render :json => {:message => "Permission denied" }}
-              
-#               format.html { redirect_to questions_path }
+              format.html { redirect_to continue_path }
             end
+          else
+            if (Date.today.year.to_i - current_user.birthday.year.to_i) <  18
+              flash[:error] = "El contenido de esta pregunta es solo para mayores de edad."
+              respond_to do |format|
+                format.html { redirect_to welcome_path }
+              end
+            end
+          end
+        else
+          flash[:error] = "Advertencia: Contenido no apto para todo público"
+          respond_to do |format|
+            format.html { redirect_to continue_path }
           end
         end
       end
     end
   end
   helper_method :check_age
-  
 end

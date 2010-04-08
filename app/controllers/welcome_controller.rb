@@ -56,5 +56,15 @@ class WelcomeController < ApplicationController
     end
   end
 
+#   def continue
+#     
+#   end
+
+  def confirm
+    session[:age_confirmed] = false
+    redirect_to root_path
+  end
+ 
+
 end
 
