@@ -48,6 +48,10 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
+
+  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index
+  map.connect 'questions/unanswered/tags/:tags', :controller => :questions, :action => :unanswered
+
   build_questions_routes(map)
   build_questions_routes(map, :path_prefix => '/:language', :name_prefix => "with_language_") #deprecated route
 

@@ -30,4 +30,4 @@
           -@search_tags.each do |tag|
             %li
               %span.tag
-                =link_to h(tag), url_for(:tags => tag), :rel => "tag"
+                =link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
