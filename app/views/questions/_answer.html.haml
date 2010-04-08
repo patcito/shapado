@@ -9,7 +9,7 @@
       =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
   .body-col
     .markdown
-      =find_and_preserve(shapado_auto_link(markdown(answer.body)))
+      =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
     -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags_count > 0
       %h3
         = t(:flags, :scope => "activerecord.models")

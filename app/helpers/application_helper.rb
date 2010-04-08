@@ -129,8 +129,13 @@ module ApplicationHelper
     end
   end
 
-  def shapado_auto_link(text)
-    auto_link(text, :all,  { "rel" => 'nofollow', :class => 'auto-link' })
+  def shapado_auto_link(text, options = {})
+    text = auto_link(text, :all,  { "rel" => 'nofollow', :class => 'auto-link' })
+    if options[:link_users]
+      text = TwitterRenderer.auto_link_usernames_or_lists(text, :username_url_base => "#{users_path}/", :suppress_lists => true)
+    end
+
+    text
   end
 
   def require_js(*files)

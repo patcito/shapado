@@ -35,6 +35,7 @@ Rails::Initializer.run do |config|
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
   config.gem "warden", :version => "0.10.3"
   config.gem "devise", :version => "1.0.5"
+  config.gem "twitter-text", :version => "1.0.4"
 
   if File.exist?(RAILS_ROOT+"/config/facebooker.yml")
     config.gem "devise_facebook_connectable", :version => "0.1.9"
