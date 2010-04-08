@@ -27,6 +27,7 @@
     &= @question.favorites_count
 
 #question-body-col.commentable.markdown
+  %a{:name => @question.id}
   #body
     = question_body
 

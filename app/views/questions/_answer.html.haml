@@ -2,7 +2,7 @@
 -solution = question.answered && question.answer_id == answer.id
 -source = question_path(@question)
 .answer.commentable{:class => solution ? "solution" : ""}
-  %a{:name=>"#{answer.id}"}
+  %a{:name=>answer.id}
   .vote-col
     =vote_box(answer, question_path(question))
     -if solution

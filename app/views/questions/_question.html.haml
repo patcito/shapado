@@ -1,7 +1,13 @@
 -title = h(question.title)
 
 -if !local_assigns[:mini]
-  -owner = question.user
+  -owner = nil
+  -if question.last_target.present?
+    -last_target = question.last_target
+    -owner= last_target.user
+  -else
+    -last_target = question
+    -owner = question.user
 
   %li.item{:class => class_for_question(question)}
     / Question Stats
@@ -47,7 +53,7 @@
         %span.reputation
           ==(#{owner.reputation_on(question.group)})
         %strong
-          = t("time.ago", :time => time_ago_in_words(question.created_at))
+          = link_to t("time.ago", :time => time_ago_in_words(last_target.updated_at)), question_path(question)+"##{last_target.id}"
         -if question.wiki
           %span.wiki_flag
             wiki

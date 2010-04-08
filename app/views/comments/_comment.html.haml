@@ -1,6 +1,8 @@
 
 -if !local_assigns[:mini]
   .comment.list-item
+    %a{:name => comment.id}
+
     %span.left{:style => "padding: 2px; width: 64px; margin-right: 10px"}
       .gravatar
         = gravatar(comment.user.email.to_s)
@@ -18,6 +20,7 @@
           = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
 -else
   .comment
+    %a{:name => comment.id}
     %strong
       = t("time.ago", :time => time_ago_in_words(comment.created_at))
     =link_to comment.user.login, user_path(comment.user)
