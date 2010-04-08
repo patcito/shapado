@@ -244,7 +244,7 @@ class User
 
     if new?
       self.last_logged_at = now
-    elsif group && member_of?(group)
+    elsif group && (member_of?(group) || !group.private)
       on_activity(:login, group)
     end
   end
