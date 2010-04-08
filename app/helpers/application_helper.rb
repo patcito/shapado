@@ -201,9 +201,9 @@ module ApplicationHelper
     if tags.size < 5
 
       text.scan(/(\S+)/) do |s|
-        word = s.to_s
-        if word.length > 3
-          tags << word.downcase
+        word = s.to_s.downcase
+        if word.length > 3 && !tags.include?(word)
+          tags << word
         end
 
         break if tags.size >= 5
