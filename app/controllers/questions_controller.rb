@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
   before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite]
   before_filter :set_active_tag
+  before_filter :check_age, :only => [:show]
 
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question
@@ -486,4 +487,11 @@ class QuestionsController < ApplicationController
     @active_tag
   end
 
+  def check_age
+    return if session[:age_confirmed]
+
+    if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) <  18
+      render :template => "welcome/confirm_age"
+    end
+  end
 end

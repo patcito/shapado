@@ -33,3 +33,7 @@
 -else
   = f.hidden_field :language, :value => (current_group.language || AppConfig.default_language)
 
+-if current_group.has_adult_content
+  .group
+    = f.check_box :adult_content, :class => "checkbox"
+    = f.label :adult_content, t(".adult_content"), :class => "radio"

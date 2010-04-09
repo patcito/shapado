@@ -69,7 +69,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :votes
   map.resources :flags
-  map.resources :welcome, :collection =>  {:confirm => :get}
+  map.resources :welcome, :collection =>  {:confirm_age => :any}
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.resources :members, :path_prefix => "/manage"

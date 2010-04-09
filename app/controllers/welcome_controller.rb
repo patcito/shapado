@@ -56,15 +56,12 @@ class WelcomeController < ApplicationController
     end
   end
 
-#   def continue
-#     
-#   end
+  def confirm_age
+    if request.post?
+      session[:age_confirmed] = true
+    end
 
-  def confirm
-    session[:age_confirmed] = false
-    redirect_to root_path
+    redirect_to params[:source].to_s[0,1]=="/" ? params[:source] : root_path
   end
- 
-
 end
 

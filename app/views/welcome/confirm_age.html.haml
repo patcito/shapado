@@ -1,0 +1,6 @@
+%h1
+  Esta pagina puede contener información no apta para menores de edad. Si es usted mayor de edad, por favor de click en continuar.
+
+
+=link_to "Soy menor de edad", root_path, :class => "cancel"
+=link_to "Soy mayor de edad", confirm_age_welcome_path(:source => url_for), :method => "post", :class => "continue_link", :rel => "nofollow"
