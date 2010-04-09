@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :login_required, :only => [:edit, :update, :follow]
   tabs :default => :users
+
   def index
     set_page_title(t("users.index.title"))
     @users = current_group.users(:per_page => params[:per_page]||24,

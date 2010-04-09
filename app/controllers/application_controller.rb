@@ -32,7 +32,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def check_group_access
-    return if !current_group.private || params[:controller] == "sessions"
+    if (!current_group.registered_only && !current_group.private) || devise_controller? || (params[:controller] == "users" && action_name == "new" )
+      return
+    end
 
     if logged_in?
       if !current_user.user_of?(@current_group)
@@ -156,7 +158,7 @@ class ApplicationController < ActionController::Base
   helper_method :find_valid_locale
 
   def set_layout
-    devise_controller? ? 'sessions' : 'application'
+    devise_controller? || (action_name == "new" && controller_name == "users") ? 'sessions' : 'application'
   end
 
   def after_sign_in_path_for(resource)
