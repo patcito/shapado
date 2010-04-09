@@ -22,7 +22,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adsenses
   map.resources :adbards
   map.resources :badges
-  map.continue '/continue', :controller => 'welcome', :action => 'continue'
 
 
   def build_questions_routes(router, options ={})

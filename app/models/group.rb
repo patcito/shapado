@@ -30,7 +30,7 @@ class Group
   key :activity_rate, Float, :default => 0.0
   key :logo_ext, String, :default => 'png'
   key :openid_only, Boolean, :default => false
-  key :adult_only, Boolean, :default => false
+  key :registered_only, Boolean, :default => false
 
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS

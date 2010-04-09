@@ -85,7 +85,7 @@ class ApplicationController < ActionController::Base
   def find_languages
     @languages ||= begin
       if AppConfig.enable_i18n
-        if languages = cuindexrrent_group.language
+        if languages = current_group.language
           languages = [languages]
         else
           if logged_in?
@@ -220,9 +220,9 @@ class ApplicationController < ActionController::Base
   def is_bot?
     request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler|StatusNet)\b/i
   end
-  
+
   def check_age
-    if current_group.adult_only
+    if current_group.registered_only
       if !session[:age_confirmed]
         if logged_in?
           if current_user.birthday.nil?
@@ -247,5 +247,4 @@ class ApplicationController < ActionController::Base
       end
     end
   end
-  helper_method :check_age
 end
