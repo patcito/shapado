@@ -155,8 +155,6 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
-    @question = current_group.questions.find_by_slug_or_id(params[:id])
-
     raise PageNotFound  unless @question
 
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
@@ -497,7 +495,9 @@ class QuestionsController < ApplicationController
   end
 
   def check_age
-    return if session[:age_confirmed] || is_bot?
+    @question = current_group.questions.find_by_slug_or_id(params[:id])
+
+    return if session[:age_confirmed] || is_bot? || !@question.adult_content
 
     if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) <  18
       render :template => "welcome/confirm_age"
