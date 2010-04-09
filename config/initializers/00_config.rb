@@ -45,4 +45,6 @@ ActionController::Base.session_options[:domain] = ".#{AppConfig.domain}"
 ActionController::Base.session_options[:key] = AppConfig.session_key
 ActionController::Base.session_options[:secret] = AppConfig.session_secret
 
+ActionMailer::Base.default_url_options[:host] = AppConfig.domain
+
 AppConfig.enable_facebook_auth = File.exist?(RAILS_ROOT+"/config/facebooker.yml")
