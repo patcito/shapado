@@ -29,6 +29,7 @@ fr:
       default_tags_legend: "séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés."
       logo_legend: "vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb."
       any_language: "n'importe qu'elle"
+      access: Access Settings
   activerecord:
     models:
       groups: groupes

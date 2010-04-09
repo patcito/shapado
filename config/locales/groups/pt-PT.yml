@@ -29,6 +29,7 @@ pt-PT:
       default_tags_legend: "separate tags by commas. only 10 default tags allowed."
       logo_legend: "you can upload the group logo. the maximum file size is 2mb."
       any_language: any
+      access: Access Settings
   activerecord:
     models:
       groups: grupos

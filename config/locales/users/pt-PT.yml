@@ -63,3 +63,5 @@ pt-PT:
         avatar: Profile image
         hide_country: Do not display my country
         language_filter: filter by language
+        website: Website
+        birthday: Birthday

@@ -29,6 +29,7 @@
       default_tags_legend: "separate tags by commas. only 10 default tags allowed."
       logo_legend: "you can upload the group logo. the maximum file size is 2mb."
       any_language: cualquiera
+      access: Configuración de Acceso
   activerecord:
     models:
       groups: grupos
@@ -48,4 +49,7 @@
         default_tags: "etiquetas por omision"
         logo: logo
         forum: permitir más de una respuesta por usuario
+        openid_only: solo las personas que usan openid pueden entrar a este sitio
+        registered_only: solo las personas registradas pueden entrar a este sitio
+        may_contain_adult_content: este sitio podria tener contenido para adultos
 
