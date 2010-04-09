@@ -13,7 +13,7 @@
       %ul
         -current_group.default_tags.each do |tag|
           %li
-            = link_to(tag, questions_url(:tags => tag), :rel => "tag")
+            = link_to(tag, url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag")
 
   -if !logged_in?
     %li

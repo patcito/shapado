@@ -1,7 +1,7 @@
 #top-bar
   -current_group.default_tags[0,5].each do |tag|
     .entry
-      = link_to(tag, questions_url(:tags => tag), :rel => "tag")
+      = link_to(tag, url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag")
       ==-
   -if current_group.default_tags.size > 5
     .entry

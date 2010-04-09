@@ -34,7 +34,7 @@
     .tag-list.left
       -question.tags.each do |tag|
         %span.tag
-          = link_to h(tag), questions_path(:tags => tag), :rel => "tag"
+          = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
     .right
       = t(:asked_by, :scope => "activerecord.attributes.question")
       = link_to h(question.user.login), user_path(question.user)

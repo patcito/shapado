@@ -7,5 +7,9 @@
       -self.current_tags.each do |tag|
         %span.tag
           = link_to h(tag), url_for(:tags => tag), :rel => "tag"
-          = link_to "-", url_for(:tags => (self.current_tags - [tag]).join("+")), :class => "remove_tag"
+          -tags = (self.current_tags - [tag])
+          -if tags.empty?
+            = link_to "-", url_for, :class => "remove_tag"
+          -else
+            = link_to "-", url_for(:tags => tags.join("+")), :class => "remove_tag"
     .clear
