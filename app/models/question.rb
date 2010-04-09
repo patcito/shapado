@@ -22,6 +22,7 @@ class Question
   key :flags_count, Integer, :default => 0
   key :favorites_count, Integer, :default => 0
 
+  key :adult_content, Boolean, :default => false
   key :banned, Boolean, :default => false
   key :answered, Boolean, :default => false
   key :wiki, Boolean, :default => false
