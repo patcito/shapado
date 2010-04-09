@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def check_group_access
-    if (!current_group.registered_only && !current_group.private) || devise_controller? || (params[:controller] == "users" && action_name == "new" )
+    if ((!current_group.registered_only || is_bot?) && !current_group.private) || devise_controller? || (params[:controller] == "users" && action_name == "new" )
       return
     end
 
