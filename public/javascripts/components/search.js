@@ -12,7 +12,7 @@
     }, settings)
 
     if(typeof settings.fields == "undefined") {
-      settings.fields = $(this).find("input[type=text]")
+      settings.fields = $(this).find("input[type=text],textarea")
     }
 
     self = $(this)
@@ -40,24 +40,36 @@
       });
     }
 
+    live = function() {
+      $.each(settings.fields, function(){
+        $(this).keyup(function() {
+        if((this.value.length > 0) && this.value != last) {
+            if (timer) clearTimeout(timer);
+            last = this.value;
+            timer = setTimeout(query, settings.timeout);
+          }
+        });
+      });
+    }
+
+    focusout = function() {
+      $.each(settings.fields, function(){
+        $(this).blur(function() {
+          console.log("HERE")
+          if((this.value.length > 0) && this.value != last) {
+            query
+          }
+        });
+      });
+    }
+
     switch(settings.behaviour) {
       case "live":
-        settings.fields.keyup(function() {
-          if (this.value != last) {
-            if (timer) clearTimeout(timer);
-            last = this.value;
-            timer = setTimeout(query, settings.timeout);
-          }
-        });
+        live()
         break;
       case "focusout":
-        settings.fields.blur(function() {
-          if ((this.value.length > 0) && this.value != last) {
-            if (timer) clearTimeout(timer);
-            last = this.value;
-            timer = setTimeout(query, settings.timeout);
-          }
-        });
+        focusout();
+        live();
         break;
     }
   }
