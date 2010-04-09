@@ -4,6 +4,12 @@ class Group
   include MongoMapperExt::Storage
   timestamps!
 
+  BLACKLIST_GROUP_NAME = ["www", "net", "org", "admin", "ftp", "mail", "test", "blog",
+                 "bug", "bugs", "dev", "ftp", "forum", "community", "mail", "email",
+                 "webmail", "pop", "pop3", "imap", "smtp", "stage", "stats", "status",
+                 "support", "survey", "download", "downloads", "faqs", "wiki",
+                 "assets1", "assets2", "assets3", "assets4"]
+
   key :_id, String
   key :name, String, :required => true
   key :subdomain, String
@@ -89,6 +95,11 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   before_save :disallow_javascript
   before_save :downcase_domain
   validate :check_reputation_configs
+
+  validates_exclusion_of      :subdomain,
+                              :within => BLACKLIST_GROUP_NAME,
+                              :message => "Sorry, this group subdomain is reserved by"+
+                                          " our system, please choose another one"
 
   def downcase_domain
     domain.downcase!
