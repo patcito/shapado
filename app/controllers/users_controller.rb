@@ -101,7 +101,12 @@ class UsersController < ApplicationController
     end
 
     @user.safe_update(%w[login email name language timezone preferred_languages
-                         notification_opts bio hide_country], params[:user])
+                         notification_opts bio hide_country website], params[:user])
+
+    if params[:user]["birthday(1i)"]
+      @user.birthday = Time.parse("#{params[:user]["birthday(1i)"]}-#{params[:user]["birthday(2i)"]}-#{params[:user]["birthday(3i)"]}") rescue nil
+    end
+
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
       @user.add_preferred_tags(preferred_tags, current_group) if preferred_tags

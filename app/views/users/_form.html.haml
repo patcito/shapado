@@ -27,7 +27,7 @@
 
 .group
   = f.label :birthday, t(:birthday, :scope => "activerecord.attributes.user"), :class => "label"
-  = f.date_select :birthday, :start_year => 1920
+  = f.date_select :birthday, :start_year => 1920, :include_blank => true, :end_year => Time.now.year
 
 .group
   = f.label :website, t(:website, :scope => "activerecord.attributes.user"), :class => "label"
