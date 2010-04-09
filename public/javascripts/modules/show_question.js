@@ -185,5 +185,33 @@ $(document).ready(function() {
     $("#add_comment_form").slideToggle();
     return false;
   });
+
+  $("#watch-question, #unwatch-question").live("click", function(event) {
+    var link = $(this);
+    if(!link.hasClass('busy')){
+      link.addClass('busy');
+      var href = link.attr("href");
+      var dataUndo = link.attr("data-undo");
+      var title = link.attr("title");
+      var dataTitle = link.attr("data-title");
+      var img = link.children('img');
+      $.getJSON(href+'.js', function(data){
+        if(data.success){
+          link.attr({href: dataUndo, 'data-undo': href, title: dataTitle, 'data-title': title });
+          img.attr({src: img.attr('data-src'), 'data-src': img.attr('src')});
+          showMessage(data.message, "notice");
+        } else {
+          showMessage(data.message, "error");
+
+          if(data.status == "unauthenticate") {
+            window.location="/users/login";
+          }
+        }
+        link.removeClass('busy');
+        }, "json");
+      }
+    return false;
+  });
+
 });
 

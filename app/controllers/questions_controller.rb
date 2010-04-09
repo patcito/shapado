@@ -405,6 +405,10 @@ class QuestionsController < ApplicationController
     flash[:notice] = t("questions.watch.success")
     respond_to do |format|
       format.html {redirect_to question_path(@question)}
+      format.js {
+        render(:json => {:success => true,
+                 :message => flash[:notice] }.to_json)
+      }
       format.json { head :ok }
     end
   end
@@ -412,8 +416,13 @@ class QuestionsController < ApplicationController
   def unwatch
     @question = Question.find_by_slug_or_id(params[:id])
     @question.remove_watcher(current_user)
+    flash[:notice] = t("questions.unwatch.success")
     respond_to do |format|
       format.html {redirect_to question_path(@question)}
+      format.js {
+        render(:json => {:success => true,
+                 :message => flash[:notice] }.to_json)
+      }
       format.json { head :ok }
     end
   end

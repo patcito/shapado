@@ -22,6 +22,7 @@ pt-PT:
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
+      unwatch_tooltip: "stop watching this question"
       asked_on: "asked on"
       last_activity: last activity
       answers_title:
@@ -62,6 +63,8 @@ pt-PT:
       flash_notice: "pergunta agora não está resolvida."
     watch:
       success:      "you will now receive notifications by mail for every new answer to this question"
+    unwatch:
+      success:      "you will not receive notifications by mail for every new answer to this question anymore"
     move:
       title:        "move question: {{title}}"
       group_label:  "move to the group with slug:"

@@ -22,6 +22,7 @@ es-AR:
       viewed: visto
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
+      unwatch_tooltip: "dejar de seguir esta pregunta"
       asked_on: "preguntado en"
       last_activity: última actividad
       answers_title:
@@ -62,6 +63,8 @@ es-AR:
       flash_notice: "la pregunta ahora no esta resuelta."
     watch:
       success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
+    unwatch:
+      success:      "ya no recibirá usted notificaciones via email por cada respuesta a esta pregunta."
     move:
       title:        "mover la pregunta: {{title}}"
       group_label:  "mover la pregunta a el group con slug:"

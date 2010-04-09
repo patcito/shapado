@@ -13,9 +13,9 @@
 
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
-    = link_to image_tag("layer-visible-on.png"), unwatch_question_path(@question)
+    = link_to image_tag("layer-visible-on.png", 'data-src' => "/images/layer-visible-off.png"), unwatch_question_path(@question), :id => 'unwatch-question', "data-undo" =>  watch_question_path(@question), "data-title" => t(".watch_tooltip"), :title => t(".unwatch_tooltip")
   -else
-    = link_to image_tag("layer-visible-off.png"), watch_question_path(@question), :title => t(".watch_tooltip")
+    = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :id => 'watch-question', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip")
 
   =vote_box(@question, question_path(@question))
 
