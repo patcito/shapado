@@ -48,6 +48,7 @@
           = f.hidden_field :language, :value => lang
           =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
       .clear
+  %ul.items#related_questions
 %ul.items#questions
   -if @questions.empty?
     .box.highlight
