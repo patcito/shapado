@@ -6,6 +6,7 @@ javascripts:
   - jquery.autovideo
   - jquery.autocomplete
   - jquery.textarea
+  - jquery.wysiwyg
   - showdown
   - jquery.notifyBar
   - components/search

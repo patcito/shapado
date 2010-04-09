@@ -33,6 +33,8 @@ class Group
   key :registered_only, Boolean, :default => false
   key :has_adult_content, Boolean, :default => false
 
+  key :wysiwyg_editor, Boolean, :default => false
+
   key :has_reputation_constrains, Boolean, :default => true
   key :reputation_rewards, Hash, :default => REPUTATION_REWARDS
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS

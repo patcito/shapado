@@ -105,7 +105,7 @@ module ApplicationHelper
   end
 
   def markdown(txt)
-    txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike], :attributes => %w[href src title alt style])
+    txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style])
     RDiscount.new(txt, :smart).to_html
   end
 

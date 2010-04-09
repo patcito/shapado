@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
+  setupWysiwygEditor();
   $('.confirm-domain').submit(function(){
       var bool = confirm($(this).attr('data-confirm'));
       if(bool==false) return false;
@@ -55,6 +56,14 @@ function highlightEffect(object) {
       object.fadeIn(400)
     });
   }
+}
+
+function setupWysiwygEditor() {
+  var editor = $("#wysiwyg_editor");
+  if(!editor || editor.length == 0)
+    return;
+
+  editor.wysiwyg();
 }
 
 function setupEditor() {
