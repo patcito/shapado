@@ -49,3 +49,4 @@ pt-PT:
         default_tags: "default tags"
         logo: logo
         forum: allow more than one answer by user
+        wysiwyg_editor: Enable user-friendly editor

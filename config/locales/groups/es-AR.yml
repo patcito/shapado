@@ -52,4 +52,5 @@
         openid_only: solo las personas que usan openid pueden entrar a este sitio
         registered_only: solo las personas registradas pueden entrar a este sitio
         may_contain_adult_content: este sitio podria tener contenido para adultos
+        wysiwyg_editor: habilitar un editor mas amigable para el usuario
 

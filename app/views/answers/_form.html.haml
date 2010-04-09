@@ -4,11 +4,16 @@
     = t('.answer_label')
 
   -opts = {:class => "text_area", :rows => 'auto', :cols => 'auto'}
-  -opts[:id] = "markdown_editor" if local_assigns[:markdown]
+  -if local_assigns[:markdown]
+    -if current_group.wysiwyg_editor
+      -opts[:id] = "wysiwyg_editor"
+      -opts[:value] = markdown(@answer.body)
+    -else
+      -opts[:id] = "markdown_editor"
 
   = f.text_area :body, opts
 
-  -if local_assigns[:markdown]
+  -if local_assigns[:markdown] && !current_group.wysiwyg_editor
     %label.label
       = t("global.preview")
     #markdown_preview.markdown

@@ -52,3 +52,4 @@ en:
         openid_only: only people using openid can access the site
         registered_only: only registered people can access the site
         may_contain_adult_content: this site may contain adult content
+        wysiwyg_editor: Enable user-friendly editor
