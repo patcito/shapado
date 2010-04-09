@@ -45,3 +45,9 @@ pt-PT:
       recent_questions: perguntas recentes
       quick_question: ask a question, we will find someone to answer
       create_own_site: "Create your own Q&A site in 8 seconds for free"
+
+    confirm_age:
+      warning: "WARNING: This page may contain explicit adult material."
+      notice: You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
+      under_18: "I am under 18"
+      over_18: "I am over 18"

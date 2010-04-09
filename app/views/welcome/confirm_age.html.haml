@@ -1,12 +1,12 @@
 %h1
-  WARNING: This page may contain explicit adult material.
+  =t(".warning")
 
-You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
+=t(".notice")
 
 %br
 %br
 
 
 .confirm_box{:style => "text-align: center; width: 100%"}
-  =link_to "I am under 18", root_path, :class => "big_cancel_button"
-  =link_to "I am over 18", confirm_age_welcome_path(:source => url_for), :method => "post", :class => "big_confirm_button", :rel => "nofollow", :style => "margin-left: 20%"
+  =link_to t(".under_18"), root_path, :class => "big_cancel_button"
+  =link_to t(".over_18"), confirm_age_welcome_path(:source => url_for), :method => "post", :class => "big_confirm_button", :rel => "nofollow", :style => "margin-left: 20%"
