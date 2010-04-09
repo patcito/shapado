@@ -37,43 +37,43 @@
     .description
       The group will be able to use its own tracking code
 
-- if @group.has_custom_analytics
-  .group
-    = form.label :analytics_engine, "Analytics Engine", :class => "label"
-    =  select("group", "analytics_vendor", [['Google Analytics', 'googlean']])
+-if !@group.new?
+  - if @group.has_custom_analytics
+    .group
+      = form.label :analytics_engine, "Analytics Engine", :class => "label"
+      =  select("group", "analytics_vendor", [['Google Analytics', 'googlean']])
+
+    .group
+      = form.label :analytics_id, "Website Analytics ID", :class => "label"
+      = form.text_field :analytics_id, :class=> "text_field"
 
   .group
-    = form.label :analytics_id, "Website Analytics ID", :class => "label"
-    = form.text_field :analytics_id, :class=> "text_field"
+    = form.label :description,  t('description', :scope => "activerecord.attributes.group"), :class => "label"
+    = form.text_area :description, :class => "text_area", :id => "markdown_editor"
+    .description
+      = t('.description_legend')
+    %label.label
+      = t("global.preview")
+    #markdown_preview.markdown
+      =markdown(@group.description)
 
-.group
-  = form.label :description,  t('description', :scope => "activerecord.attributes.group"), :class => "label"
-  = form.text_area :description, :class => "text_area", :id => "markdown_editor"
-  .description
-    = t('.description_legend')
-  %label.label
-    = t("global.preview")
-  #markdown_preview.markdown
-    =markdown(@group.description)
+  .group
+    = form.check_box :forum, :class => "checkbox"
+    = form.label :forum, t('forum', :scope => "activerecord.attributes.group"), :class => "radio"
 
+  .group
+    = form.check_box :openid_only, :class => "checkbox"
+    = form.label :openid_only, t('openid_only', :scope => "activerecord.attributes.group"), :class => "radio"
 
-.group
-  = form.check_box :forum, :class => "checkbox"
-  = form.label :forum, t('forum', :scope => "activerecord.attributes.group"), :class => "radio"
+  .group
+    = form.check_box :registered_only, :class => "checkbox"
+    = form.label :registered_only, t('registered_only', :scope => "activerecord.attributes.group"), :class => "radio"
 
-.group
-  = form.check_box :openid_only, :class => "checkbox"
-  = form.label :openid_only, t('openid_only', :scope => "activerecord.attributes.group"), :class => "radio"
-
-.group
-  = form.check_box :registered_only, :class => "checkbox"
-  = form.label :registered_only, t('registered_only', :scope => "activerecord.attributes.group"), :class => "radio"
-
-.group
-  = form.label :legend, t('legend', :scope => "activerecord.attributes.group"), :class => "label"
-  = form.text_field :legend, :class => "text_field"
-  .description
-    = t('.legend_legend')
+  .group
+    = form.label :legend, t('legend', :scope => "activerecord.attributes.group"), :class => "label"
+    = form.text_field :legend, :class => "text_field"
+    .description
+      = t('.legend_legend')
 
 .group
   = form.label :default_tags, t('default_tags', :scope => "activerecord.attributes.group"), :class => "label"
