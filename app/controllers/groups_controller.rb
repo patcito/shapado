@@ -106,7 +106,8 @@ class GroupsController < ApplicationController
     end
 
     @group.safe_update(%w[name legend description default_tags subdomain logo forum
-                          custom_favicon language theme reputation_rewards reputation_constrains], params[:group])
+                          custom_favicon language theme reputation_rewards reputation_constrains
+                          has_adult_content registered_only openid_only], params[:group])
     if custom_css = params[:group][:custom_css]
       @group.custom_css = StringIO.new(custom_css)
     end
