@@ -488,7 +488,7 @@ class QuestionsController < ApplicationController
   end
 
   def check_age
-    return if session[:age_confirmed]
+    return if session[:age_confirmed] || is_bot?
 
     if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) <  18
       render :template => "welcome/confirm_age"
