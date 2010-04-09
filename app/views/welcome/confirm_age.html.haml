@@ -1,6 +1,12 @@
 %h1
-  Esta pagina puede contener información no apta para menores de edad. Si es usted mayor de edad, por favor de click en continuar.
+  WARNING: This page may contain explicit adult material.
+
+You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
+
+%br
+%br
 
 
-=link_to "Soy menor de edad", root_path, :class => "cancel"
-=link_to "Soy mayor de edad", confirm_age_welcome_path(:source => url_for), :method => "post", :class => "continue_link", :rel => "nofollow"
+.confirm_box{:style => "text-align: center; width: 100%"}
+  =link_to "I am under 18", root_path, :class => "big_cancel_button"
+  =link_to "I am over 18", confirm_age_welcome_path(:source => url_for), :method => "post", :class => "big_confirm_button", :rel => "nofollow", :style => "margin-left: 20%"
