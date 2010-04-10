@@ -21,6 +21,10 @@ class QuestionsController < ApplicationController
     set_page_title(t("questions.index.title"))
     conditions = scoped_conditions(:banned => false)
 
+    if params[:sort] == "hot"
+      conditions[:updated_at] = {"$gt" => 5.days.ago}
+    end
+
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
                                    :order => current_order,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
