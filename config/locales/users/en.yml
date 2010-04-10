@@ -8,6 +8,10 @@ en:
       newest: newest
       oldest: oldest
       name: name
+      reputation_tooltip: users sorted by higher reputation
+      newest_tooltip: users who just joined
+      oldest_tooltip: users who were the first to join
+      name_tooltip: users sorted alphabetically
     new:
       title: sign up as a new user
       submit: sign up
