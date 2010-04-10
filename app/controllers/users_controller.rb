@@ -147,6 +147,10 @@ class UsersController < ApplicationController
       format.html do
         redirect_to user_path(@user)
       end
+      format.js {
+        render(:json => {:success => true,
+                 :message => flash[:notice] }.to_json)
+      }
     end
   end
 
@@ -162,6 +166,10 @@ class UsersController < ApplicationController
       format.html do
         redirect_to user_path(@user)
       end
+      format.js {
+        render(:json => {:success => true,
+                 :message => flash[:notice] }.to_json)
+      }
     end
   end
 
