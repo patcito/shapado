@@ -9,7 +9,7 @@ namespace :fixdb do
     files = Group.database["#{cname}.files"]
     chunks = Group.database["#{cname}.chunks"]
 
-    fname = group["_#{key}"]
+    fname = group["_#{key}"] rescue nil
     return if fname.blank?
 
     puts ">> Migrating #{group.name}##{key}"
