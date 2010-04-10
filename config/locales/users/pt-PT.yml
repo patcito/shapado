@@ -3,6 +3,11 @@ pt-PT:
     index:
       title: todos os utilizadores
       empty: "este grupo não tem nenhum membro, participa para te juntares a este grupo."
+      filter: "search for users"
+      reputation: reputation
+      newest: newest
+      oldest: oldest
+      name: name
     new:
       title: registar-se como novo utlizador
       submit: registar

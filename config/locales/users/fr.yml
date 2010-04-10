@@ -3,6 +3,11 @@ fr:
     index:
       title: tous les utilisateurs
       empty: "ce groupe n'a pas de membres pour l'instant, participer pour en devenir un."
+      filter: "Recherchez des utilisateurs"
+      reputation: reputation
+      newest: newest
+      oldest: oldest
+      name: name
     new:
       title: se connecter en tant que nouvel utilisateur
       submit: ouvrir un compte

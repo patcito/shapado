@@ -18,6 +18,7 @@ javascripts:
   - modules/new_question
   - modules/index_welcome
   - modules/show_user
+  - modules/index_user
   - modules/members
   - modules/move_group
   - openid/js/jquery.openid.min
