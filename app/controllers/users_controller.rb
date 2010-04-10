@@ -4,9 +4,11 @@ class UsersController < ApplicationController
 
   def index
     set_page_title(t("users.index.title"))
-    @users = current_group.users(:per_page => params[:per_page]||24,
-                                 :order => "membership_list.#{current_group.id}.reputation desc",
-                                 :page => params[:page] || 1)
+    options =  {:per_page => params[:per_page]||24,
+               :order => "membership_list.#{current_group.id}.reputation desc",
+               :page => params[:page] || 1}
+    options[:login] = /^#{Regexp.escape(params[:q])}/ if params[:q]
+    @users = current_group.users(options)
 
     respond_to do |format|
       format.html
@@ -15,6 +17,12 @@ class UsersController < ApplicationController
                   :encrypted_password, :password_salt, :salt, :email, :identity_url,
                   :default_subtab, :ip, :language_filter ]
         render :json => @users.to_json(:except => except)
+      }
+      format.js {
+        html = render_to_string(:partial => "user", :collection  => @users)
+        pagination = render_to_string(:partial => "shared/pagination", :object => @users,
+                                      :format => "html")
+        render :json => {:html => html, :pagination => pagination }
       }
     end
 

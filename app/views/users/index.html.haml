@@ -5,6 +5,11 @@
     -if @users
       == (#{format_number(@users.total_entries)})
 
+-form_tag "/users", :class => "form", :id => "filter_users", :method => "get" do
+  = label_tag :q, t(".filter"), :class => "label"
+  = text_field_tag "q", params[:q], :class => "text_field filter_field"
+  = submit_tag("filter")
+
 /Users
 %ul.items#users
   -@users.each do |user|
