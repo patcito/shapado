@@ -15,4 +15,11 @@ $(document).ready(function() {
                                 $("label#rqlabel").show();
                               }
   });
+
+  $("#ask_question").bind("keypress", function(e) {
+    if (e.keyCode == 13) {
+       return false;
+     }
+  });
+
 });
