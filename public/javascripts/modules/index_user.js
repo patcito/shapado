@@ -5,7 +5,7 @@ $(document).ready(function() {
   $("#filter_users").searcher({ url : "/users.js",
                               target : $("#users"),
                               behaviour : "live",
-                              timeout : 100,
+                              timeout : 500,
                               extraParams : { 'format' : 'js' },
                               success: function(data) {
                                 $('#additional_info .pagination').html(data.pagination)

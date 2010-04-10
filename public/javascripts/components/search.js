@@ -43,9 +43,12 @@
 
        live = function() {
          $.each(settings.fields, function(){
+           var timer = null
            $(this).keyup(function() {
              if(this.value != last) {
-               if (timer) clearTimeout(timer);
+               if (timer){
+                 clearTimeout(timer)
+               }
                last = this.value;
                timer = setTimeout(query, settings.timeout);
              }

@@ -4,6 +4,10 @@ en:
       title: all users
       empty: "this group doesn't have any members, participate to join this group."
       filter: "search for users"
+      reputation: reputation
+      newest: newest
+      oldest: oldest
+      name: name
     new:
       title: sign up as a new user
       submit: sign up

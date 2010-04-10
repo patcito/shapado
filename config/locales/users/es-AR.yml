@@ -4,6 +4,10 @@
       title: todos los usuarios
       empty: "este grupo no tiene miembros, participe para unirse a este grupo."
       filter: "Busca usuarios"
+      reputation: reputación
+      newest: recientes
+      oldest: antiguos
+      name: por nombre de usuario
     new:
       title: registrar un nuevo usuario
       submit: registrar
