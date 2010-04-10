@@ -11,8 +11,8 @@ es-AR:
       empty: "nadie ha preguntado aun, ¡se el primero!"
       help_to_answer: ayudanos a responder
       unanswered_questions: preguntas sin contestar
-      hot_tooltip:     preguntas calientes
-      active_tooltip:  preguntas más activas
+      hot_tooltip: preguntas con más actividad en los ultimos 5 dias
+      active_tooltip:  preguntas que se han actualizado recientemente
       votes_tooltip:   preguntas más votadas
       newest_tooltip:  preguntas más recientes
     show:

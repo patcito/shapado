@@ -11,10 +11,10 @@ fr:
       empty: "aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
       help_to_answer: aidez-nous
       unanswered_questions: questions sans réponses
-      hot_tooltip:     hot questions
-      active_tooltip: active questions
-      votes_tooltip:   votes questions
-      newest_tooltip:  newest questions
+      hot_tooltip:  questions with the most activity over the last 5 days
+      active_tooltip: questions that have been updated recently
+      votes_tooltip:  questions with the most votes
+      newest_tooltip: the most recently asked questions
     show:
       answers: réponses
       another_answers: autres réponses

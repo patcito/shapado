@@ -11,10 +11,10 @@ pt-PT:
       empty: "ainda ninguém fez nenhuma pergunta, seja o primeiro!"
       help_to_answer: help us answer
       unanswered_questions: unanswered questions
-      hot_tooltip:     hot questions
-      active_tooltip: active questions
-      votes_tooltip:   votes questions
-      newest_tooltip:  newest questions
+      hot_tooltip: questions with the most activity over the last 5 days
+      active_tooltip: questions that have been updated recently
+      votes_tooltip:  questions with the most votes
+      newest_tooltip: the most recently asked questions
     show:
       answers: respostas
       another_answers: outras respostas

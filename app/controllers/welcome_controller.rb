@@ -5,22 +5,24 @@ class WelcomeController < ApplicationController
   def index
     @active_subtab = params.fetch(:tab, "activity")
 
+    conditions = scoped_conditions({:banned => false})
+
     order = "activity_at desc"
     case @active_subtab
       when "activity"
         order = "activity_at desc"
       when "hot"
         order = "hotness desc"
+        conditions[:updated_at] = {:$gt => 5.days.ago}
     end
 
-    @langs_conds = scoped_conditions[:language][:$in]
+    @langs_conds = conditions[:language][:$in]
     add_feeds_url(url_for(:format => "atom"), t("feeds.questions"))
 
     @questions = Question.paginate({:per_page => 15,
                                    :page => params[:page] || 1,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
-                                   :order => order}.merge(
-                                   scoped_conditions({:banned => false})))
+                                   :order => order}.merge(conditions))
   end
 
   def feedback
