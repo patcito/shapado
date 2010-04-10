@@ -11,6 +11,10 @@ pt-PT:
       empty: "ainda ninguém fez nenhuma pergunta, seja o primeiro!"
       help_to_answer: help us answer
       unanswered_questions: unanswered questions
+      hot_tooltip:     hot questions
+      active_tooltip: active questions
+      votes_tooltip:   votes questions
+      newest_tooltip:  newest questions
     show:
       answers: respostas
       another_answers: outras respostas
@@ -22,6 +26,7 @@ pt-PT:
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
+      answered_tooltip: "one of the answers was accepted as the correct answer"
       unwatch_tooltip: "stop watching this question"
       favorite_tooltip: "add this question to your favorites"
       unfavorite_tooltip: "remove this question from your favorites"
@@ -52,6 +57,7 @@ pt-PT:
       expert: expert
     tags:
       title: etiquetas
+      tooltip: show questions tagged {{tag}}
     new:
       title: fazer pergunta
       how_to_ask: how to ask

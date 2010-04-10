@@ -11,6 +11,10 @@ fr:
       empty: "aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
       help_to_answer: aidez-nous
       unanswered_questions: questions sans réponses
+      hot_tooltip:     hot questions
+      active_tooltip: active questions
+      votes_tooltip:   votes questions
+      newest_tooltip:  newest questions
     show:
       answers: réponses
       another_answers: autres réponses
@@ -22,6 +26,7 @@ fr:
       viewed: lues
       to_answer_question: to answer this question
       watch_tooltip: "suivre cette question"
+      answered_tooltip: "one of the answers was accepted as the correct answer"
       unwatch_tooltip: "arreter de suivre cette question"
       favorite_tooltip: "ajouter cette question à vos favorites"
       unfavorite_tooltip: "retirer cette question de vos favorites"
@@ -52,6 +57,7 @@ fr:
       expert: expert
     tags:
       title: tags
+      tooltip: show questions tagged {{tag}}
     new:
       title: posez une question
       how_to_ask: comment poser une question
