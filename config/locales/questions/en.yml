@@ -40,6 +40,8 @@ en:
       unset_answer: unset as solution?
       flag: flag
       add_comment: add comment...
+    question:
+      answered_tooltip: This question has been answered
     form:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.

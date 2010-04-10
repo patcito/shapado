@@ -40,6 +40,8 @@ es-AR:
       unset_answer: "¿quitar como solución?"
       flag: "reportar abuso"
       add_comment: añadir comentario...
+    question:
+      answered_tooltip: Esta pregunta ha sido contestada
     form:
       body_tip: ¿cual es tu pregunta? por favor se descriptivo.
       language_tip: selecciona el idioma de tu pregunta.

@@ -40,6 +40,8 @@ pt-PT:
       unset_answer: retirar como solução?
       flag: reporte
       add_comment: adicionar comentário...
+    question:
+      answered_tooltip: This question has been answered
     form:
       body_tip: qual é a sua pergunta? seja descritivo.
       language_tip: seleccione o idioma da questão.

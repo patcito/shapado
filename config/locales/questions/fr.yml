@@ -40,6 +40,8 @@ fr:
       unset_answer: annuler solution?
       flag: reporter un abus
       add_comment: ajouter un commentaire...
+    question:
+      answered_tooltip: This question has been answered
     form:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.
