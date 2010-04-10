@@ -186,7 +186,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $("#watch-question, #unwatch-question").live("click", function(event) {
+  $(".question-action").live("click", function(event) {
     var link = $(this);
     if(!link.hasClass('busy')){
       link.addClass('busy');
@@ -195,10 +195,14 @@ $(document).ready(function() {
       var title = link.attr("title");
       var dataTitle = link.attr("data-title");
       var img = link.children('img');
+      var counter = $(link.attr('data-counter'));
       $.getJSON(href+'.js', function(data){
         if(data.success){
           link.attr({href: dataUndo, 'data-undo': href, title: dataTitle, 'data-title': title });
           img.attr({src: img.attr('data-src'), 'data-src': img.attr('src')});
+          if(typeof(data.increment)!='undefined'){
+            counter.text(parseFloat($.trim(counter.text()))+data.increment);
+          }
           showMessage(data.message, "notice");
         } else {
           showMessage(data.message, "error");

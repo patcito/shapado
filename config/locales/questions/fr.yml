@@ -23,6 +23,8 @@ fr:
       to_answer_question: to answer this question
       watch_tooltip: "suivre cette question"
       unwatch_tooltip: "arreter de suivre cette question"
+      favorite_tooltip: "ajouter cette question à vos favorites"
+      unfavorite_tooltip: "retirer cette question de vos favorites"
       asked_on: "posée dans"
       last_activity: last activity
       answers_title:

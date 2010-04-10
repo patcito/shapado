@@ -373,9 +373,17 @@ class QuestionsController < ApplicationController
         flash[:notice] = t("favorites.create.success")
         format.html { redirect_to(question_path(@question)) }
         format.json { head :ok }
+        format.js {
+          render(:json => {:success => true,
+                   :message => flash[:notice], :increment => 1 }.to_json)
+        }
       else
         flash[:error] = @favorite.errors.full_messages.join("**")
         format.html { redirect_to(question_path(@question)) }
+        format.js {
+          render(:json => {:success => false,
+                   :message => flash[:error], :increment => 0 }.to_json)
+        }
         format.json { render :json => @favorite.errors, :status => :unprocessable_entity }
       end
     end
@@ -393,6 +401,10 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
+      format.js {
+        render(:json => {:success => true,
+                 :message => flash[:notice], :increment => -1 }.to_json)
+      }
       format.json  { head :ok }
     end
   end

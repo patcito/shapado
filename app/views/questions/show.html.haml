@@ -13,16 +13,16 @@
 
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
-    = link_to image_tag("layer-visible-on.png", 'data-src' => "/images/layer-visible-off.png"), unwatch_question_path(@question), :id => 'unwatch-question', "data-undo" =>  watch_question_path(@question), "data-title" => t(".watch_tooltip"), :title => t(".unwatch_tooltip")
+    = link_to image_tag("layer-visible-on.png", 'data-src' => "/images/layer-visible-off.png"), unwatch_question_path(@question), :class => 'question-action', "data-undo" =>  watch_question_path(@question), "data-title" => t(".watch_tooltip"), :title => t(".unwatch_tooltip")
   -else
-    = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :id => 'watch-question', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip")
+    = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :class => 'question-action', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip")
 
   =vote_box(@question, question_path(@question))
 
   -if logged_in? && favorite = current_user.favorite(@question)
-    =link_to image_tag("favorites.png"), unfavorite_question_path(@question), :id => "unfavorite-link"
+    = link_to image_tag("favorites.png", 'data-src' => "/images/unfavorites.png"), unfavorite_question_path(@question), :id => "unfavorite-link", :title => t(".unfavorite_tooltip"), :class => 'question-action', "data-undo" =>  favorite_question_path(@question), "data-title" => t(".favorite_tooltip"), 'data-counter' => '.favorites_count'
   -else
-    =link_to image_tag("unfavorites.png"), favorite_question_path(@question), :id => "favorite-link"
+    = link_to image_tag("unfavorites.png", 'data-src' => "/images/favorites.png"), favorite_question_path(@question), :id => "favorite-link", :title => t(".favorite_tooltip"), :class => 'question-action', "data-undo" =>  unfavorite_question_path(@question), "data-title" => t(".unfavorite_tooltip"), 'data-counter' => '.favorites_count'
   .favorites_count
     &= @question.favorites_count
 
