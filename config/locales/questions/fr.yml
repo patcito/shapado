@@ -88,6 +88,7 @@ fr:
       messages:
         too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"
         too_many_tags: Désolé, vous ne pouvez utiliser que 6 tags maximum.
+        empty_tags: Désolé, vous devez utiliser au moins un tag.
 
   activerecord:
     models:
