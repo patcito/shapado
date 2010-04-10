@@ -28,7 +28,6 @@ class Group
   key :has_custom_analytics, Boolean, :default => true
   key :language, String
   key :activity_rate, Float, :default => 0.0
-  key :logo_ext, String, :default => 'png'
   key :openid_only, Boolean, :default => false
   key :registered_only, Boolean, :default => false
   key :has_adult_content, Boolean, :default => false
@@ -40,7 +39,7 @@ class Group
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
   key :forum, Boolean, :default => false
 
-  #custom html
+  #custom html: FIXME !! move to an embedded doc
   key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
                                            "es" => "¿cual es tu pregunta? por favor se descriptivo.",
                                            "fr" => "quelle est votre question? soyez descriptif.",

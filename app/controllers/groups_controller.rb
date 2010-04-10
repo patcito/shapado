@@ -154,17 +154,18 @@ class GroupsController < ApplicationController
   end
 
   def logo
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo, :logo_ext])
-    unless @group.nil?
-      send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo_ext}",  :disposition => 'inline')
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_logo?
+      puts @group.logo.content_type.inspect
+      send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo.extension}", :type => @group.logo.content_type,  :disposition => 'inline')
     else
-      redirect_to root_path
+      render :text => ""
     end
   end
 
   def css
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_css])
-    if @group._custom_css
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_custom_css?
       send_data(@group.custom_css.read, :filename => "custom_theme.css", :type => "text/css")
     else
       render :text => ""
@@ -172,8 +173,12 @@ class GroupsController < ApplicationController
   end
 
   def favicon
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_favicon])
-    send_data(@group.custom_favicon.read, :filename => "favicon.ico")
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_custom_favicon?
+      send_data(@group.custom_favicon.read, :filename => "favicon.ico", :type => @group.custom_favicon.content_type)
+    else
+      render :text => ""
+    end
   end
 
   def autocomplete_for_group_slug
