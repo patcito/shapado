@@ -11,10 +11,10 @@ fr:
       empty: "aucune question n'a été posé pour le moment, soyez le premier à en poser une!"
       help_to_answer: aidez-nous
       unanswered_questions: questions sans réponses
-      hot_tooltip:  questions with the most activity over the last 5 days
-      active_tooltip: questions that have been updated recently
-      votes_tooltip:  questions with the most votes
-      newest_tooltip: the most recently asked questions
+      hot_tooltip:  "les questions les plus active de ces 5 derniers jours"
+      active_tooltip: "les questions actualisées le plus récemment"
+      votes_tooltip:  "les questions les plus votées"
+      newest_tooltip: "les questions les plus récentes"
     show:
       answers: réponses
       another_answers: autres réponses
@@ -24,14 +24,14 @@ fr:
       flag: reporter un abus
       flags: reporter en tant que
       viewed: lues
-      to_answer_question: to answer this question
+      to_answer_question: "pour répondre à cette question"
       watch_tooltip: "suivre cette question"
-      answered_tooltip: "one of the answers was accepted as the correct answer"
+      answered_tooltip: "l'une des réponses a été accepté comme solution"
       unwatch_tooltip: "arreter de suivre cette question"
       favorite_tooltip: "ajouter cette question à vos favorites"
       unfavorite_tooltip: "retirer cette question de vos favorites"
       asked_on: "posée dans"
-      last_activity: last activity
+      last_activity: dernières activités
       answers_title:
         one: "{{count}} réponse"
         other: "{{count}} réponses"
@@ -41,12 +41,12 @@ fr:
       flag: reporter un abus
       add_comment: ajouter un commentaire...
     question:
-      answered_tooltip: This question has been answered
+      answered_tooltip: Cette question a été répondu correctement
     form:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.
       tags_tip:  utilisez les tags pour ajouter plus d'information à question.
-      adult_content: this question contains adult content.
+      adult_content: cette question possède du contenu pour adultes.
     flag:
       title: reporter un abus
     edit:
@@ -59,7 +59,7 @@ fr:
       expert: expert
     tags:
       title: tags
-      tooltip: show questions tagged {{tag}}
+      tooltip: montrer les questions avec le tag {{tag}}
     new:
       title: posez une question
       how_to_ask: comment poser une question

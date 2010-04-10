@@ -47,7 +47,7 @@ fr:
       create_own_site: "Créez votre propre site de QR en 8 secondes gratuitement"
 
     confirm_age:
-      warning: "WARNING: This page may contain explicit adult material."
-      notice: You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
-      under_18: "I am under 18"
-      over_18: "I am over 18"
+      warning: "ATTENTION: Cette page peux contenir du matériel explicite pour adultes."
+      notice: "Vous ne pouvez entrer sur ce site internet seulement si vous avez au moins 18 ans, ou au moins l'age de la majorité de la juridiction dans laquelle vous résidez ou de laquelle vous accedez cette page internet"
+      under_18: "J'ai moins de 18 ans"
+      over_18: "J'ai plus de 18 ans"

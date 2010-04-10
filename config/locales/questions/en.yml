@@ -46,7 +46,7 @@ en:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.
       tags_tip:  use tags to add more information about your question.
-      adult_content: this question contains adult content.
+      adult_content: this question contains adult material.
     flag:
       title:   flag question
     edit:

@@ -29,7 +29,7 @@ fr:
       default_tags_legend: "séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés."
       logo_legend: "vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb."
       any_language: "n'importe qu'elle"
-      access: Access Settings
+      access: Configuration de l'accès
   activerecord:
     models:
       groups: groupes
@@ -49,4 +49,4 @@ fr:
         default_tags: "tags par défaut"
         logo: logo
         forum: permettre plus d'une réponse par utilisateur
-        wysiwyg_editor: Enable user-friendly editor
+        wysiwyg_editor: "Activer l'éditeur de texte convivial (présente à l'écran tel qu'à l'écrit)"
