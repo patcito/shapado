@@ -17,7 +17,7 @@
           =format_number(question.votes_average)
         .text
           =t(:votes, :scope => "activerecord.attributes.question")
-      .box.answers{:class => question.answered ? "answered" : "" }
+      .box.answers{:class => question.answered ? "answered" : "", :title => question.answered ? t(".answered_tooltip") : "" }
         .counter
           =format_number(question.answers_count)
         .text
@@ -47,7 +47,7 @@
       .tag-list
         -question.tags.each do |tag|
           %span.tag
-            = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
+            = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
       .owner-data
         = link_to h(owner.login), user_path(owner)
         %span.reputation

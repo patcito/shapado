@@ -6,7 +6,7 @@
     .content.tag-list
       -self.current_tags.each do |tag|
         %span.tag
-          = link_to h(tag), url_for(:tags => tag), :rel => "tag"
+          = link_to h(tag), url_for(:tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
           -tags = (self.current_tags - [tag])
           -if tags.empty?
             = link_to "-", url_for, :class => "remove_tag"
