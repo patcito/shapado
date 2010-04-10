@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups
-  # GET /groups.xml
+  # GET /groups.json
   def index
     case params.fetch(:tab, "actives")
       when "actives"
@@ -21,12 +21,12 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @groups }
+      format.json  { render :json => @groups }
     end
   end
 
   # GET /groups/1
-  # GET /groups/1.xml
+  # GET /groups/1.json
   def show
     @active_subtab = "about"
 
@@ -43,18 +43,18 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @group }
+      format.json  { render :json => @group }
     end
   end
 
   # GET /groups/new
-  # GET /groups/new.xml
+  # GET /groups/new.json
   def new
     @group = Group.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @group }
+      format.json  { render :json => @group }
     end
   end
 
@@ -63,7 +63,7 @@ class GroupsController < ApplicationController
   end
 
   # POST /groups
-  # POST /groups.xml
+  # POST /groups.json
   def create
     @group = Group.new
     @group.safe_update(%w[name legend description default_tags subdomain logo forum
@@ -87,24 +87,17 @@ class GroupsController < ApplicationController
         @group.add_member(current_user, "owner")
         flash[:notice] = I18n.t("groups.create.flash_notice")
         format.html { redirect_to(domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")) }
-        format.xml  { render :json => @group.to_json, :status => :created, :location => @group }
+        format.json  { render :json => @group.to_json, :status => :created, :location => @group }
       else
         format.html { render :action => "new" }
-        format.xml  { render :json => @group.errors, :status => :unprocessable_entity }
+        format.json { render :json => @group.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # PUT /groups/1
-  # PUT /groups/1.xml
+  # PUT /groups/1.json
   def update
-    logo = params[:group][:logo]
-    if logo && logo.respond_to?(:original_filename)
-      if logo.original_filename =~ /\.(\w+)$/
-        @group.logo_ext = $1
-      end
-    end
-
     @group.safe_update(%w[name legend description default_tags subdomain logo forum
                           custom_favicon language theme reputation_rewards reputation_constrains
                           has_adult_content registered_only openid_only], params[:group])
@@ -119,23 +112,23 @@ class GroupsController < ApplicationController
       if @group.save
         flash[:notice] = 'Group was successfully updated.' # TODO: i18n
         format.html { redirect_to(params[:source] ? params[:source] : group_path(@group)) }
-        format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @group.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # DELETE /groups/1
-  # DELETE /groups/1.xml
+  # DELETE /groups/1.json
   def destroy
     @group = Group.find_by_slug_or_id(params[:id])
     @group.destroy
 
     respond_to do |format|
       format.html { redirect_to(groups_url) }
-      format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 
