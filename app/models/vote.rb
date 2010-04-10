@@ -23,6 +23,7 @@ class Vote
 
   validate :should_be_unique
   validate :check_reputation
+  validate :check_owner
 
   protected
   def should_be_unique
@@ -53,6 +54,16 @@ class Vote
                                             :action => I18n.t("users.actions.vote_down")))
         return false
       end
+    end
+    return true
+  end
+
+  def check_owner
+    if self.voteable.user == self.user
+      error = I18n.t(:flash_error, :scope => "votes.create") + " "
+      error += I18n.t(self.voteable_type.downcase, :scope => "activerecord.models").downcase
+      self.errors.add(:user, error)
+      return false
     end
     return true
   end
