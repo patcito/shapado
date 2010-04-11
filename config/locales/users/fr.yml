@@ -8,6 +8,10 @@ fr:
       newest: newest
       oldest: oldest
       name: name
+      reputation_tooltip: utilisateurs par ordre de réputation
+      newest_tooltip: utilisateurs vennant d'ouvrir un compte
+      oldest_tooltip: utilisateurs ayant ouvert leur compte en premier
+      name_tooltip: utilisateurs par ordre alphabétique
     new:
       title: se connecter en tant que nouvel utilisateur
       submit: ouvrir un compte
