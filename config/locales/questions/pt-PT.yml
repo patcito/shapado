@@ -88,6 +88,7 @@ pt-PT:
       messages:
         too_short: "seems too short. Please use more words than {{count}} to be more specific."
         too_many_tags: Sorry, you can only enter 6 tags maximum.
+        empty_tags: Sorry, you need to use at least one tag.
 
   activerecord:
     models:
