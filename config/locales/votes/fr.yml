@@ -7,6 +7,8 @@ fr:
     control:
       to_vote_up: "click to vote up"
       to_vote_down: "click to vote down"
+    destroy:
+      flash_notice: "votre vote a été annulé avec succès."
   activerecord:
     models:
       votes: votes

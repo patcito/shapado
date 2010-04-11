@@ -3,7 +3,9 @@ class VotesController < ApplicationController
 
   # TODO: refactor
   def create
-    vote = Vote.new
+    vote = Vote.new(:voteable_type => params[:voteable_type],
+                    :voteable_id => params[:voteable_id],
+                    :user => current_user)
     vote_type = ""
     if params[:vote_up]
       vote_type = "vote_up"
@@ -12,31 +14,11 @@ class VotesController < ApplicationController
       vote_type = "vote_down"
       vote.value = -1
     end
-
-    vote.voteable_type = params[:voteable_type]
-    vote.voteable_id = params[:voteable_id]
     vote.group = vote.voteable.group
-    vote.user_ip = request.remote_ip
-    vote.user = current_user
 
-    voted = false
-    if vote.voteable.user != current_user
-      voted = change_vote(vote)
-      if !voted
-        if vote.save
-          vote.voteable.add_vote!(vote.value, current_user)
-          voted = true
-          flash[:notice] = t("votes.create.flash_notice")
-        else
-          flash[:error] = vote.errors.full_messages.join(", ")
-        end
-      end
-    else
-      flash[:error] = "#{t(:flash_error, :scope => "votes.create")} "
-      flash[:error] += t(params[:voteable_type].downcase, :scope => "activerecord.models").downcase
-    end
+    vote_state = push_vote(vote)
 
-    if voted && !vote.new?
+    if vote_state == :created && !vote.new?
       if vote.voteable_type == "Question"
         Magent.push("actors.judge", :on_vote_question, vote.id)
       elsif vote.voteable_type == "Answer"
@@ -48,11 +30,12 @@ class VotesController < ApplicationController
       format.html{redirect_to params[:source]}
 
       format.json do
-        if voted
+        if vote_state != :error
           average = vote.voteable.reload.votes_average
           render(:json => {:success => true,
                            :message => flash[:notice],
                            :vote_type => vote_type,
+                           :vote_state => vote_state,
                            :average => average}.to_json)
         else
           render(:json => {:success => true, :message => flash[:error] }.to_json)
@@ -92,19 +75,34 @@ class VotesController < ApplicationController
     end
   end
 
-  def change_vote(vote)
+  def push_vote(vote)
     user_vote = current_user.vote_on(vote.voteable)
     voteable = vote.voteable
 
-    if user_vote && (user_vote.value != vote.value)
+    state = :error
+    if user_vote.nil?
+      if vote.save
+        vote.voteable.add_vote!(vote.value, current_user)
+        flash[:notice] = t("votes.create.flash_notice")
+        state = :created
+      else
+        flash[:error] = vote.errors.full_messages.join(", ")
+      end
+    elsif(user_vote.value != vote.value)
       voteable.remove_vote!(user_vote.value, current_user)
       voteable.add_vote!(vote.value, current_user)
 
       user_vote.value = vote.value
       user_vote.save!
       flash[:notice] = t("votes.create.flash_notice")
-
-      true
+      state = :updated
+    elsif(user_vote.value == vote.value)
+      value = vote.value
+      user_vote.destroy
+      voteable.remove_vote!(value, current_user)
+      flash[:notice] = t("votes.destroy.flash_notice")
+      state = :deleted
     end
+    state
   end
 end
