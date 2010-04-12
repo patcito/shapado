@@ -4,6 +4,8 @@ es-AR:
       flash_notice: "gracias por su voto"
       flash_error:  "usted no puede votar esta"
       unauthenticated: "los usuarios anónimos no puede votar"
+    destroy:
+      flash_notice: "tu voto ha sido revocado exitosamente."
     control:
       to_vote_up: "click to vote up"
       to_vote_down: "click to vote down"
