@@ -46,7 +46,7 @@
       %h3= link_to title, question_path(question), :title => truncate(h(question.body), :length => 200)
       .tag-list
         -question.tags.each do |tag|
-          %span.tag
+          %span.tag{:class => "tag_#{h(tag)}"}
             = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
       .owner-data
         = link_to h(owner.login), user_path(owner)

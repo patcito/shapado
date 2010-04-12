@@ -4,7 +4,7 @@
   .content
     .tag-list{:style => "margin-bottom: 3px"}
       -current_user.preferred_tags_on(current_group).each do |tag|
-        %span.tag
+        %span.tag{:class => "tag_#{h(tag)}"}
           = link_to h(tag), url_for(:controller => (controller_name == "welcome" ? "questions" : controller_name), :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
           = link_to "-", change_preferred_tags_user_path(current_user, :opt => "remove", :tags => [tag]), :class => "remove_tag"
 
