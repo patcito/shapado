@@ -4,20 +4,46 @@
     &= @user.login
 
 #users_show
+  .follow-info
+    -if current_user != @user
+      -if logged_in? && current_user.following?(@user)
+        =link_to "- #{t(".unfollow")}", unfollow_user_path(@user), :class => "unfollow_link", 'data-class' => "follow_link", 'data-title' => t(".follow"), 'data-undo' => follow_user_path(@user)
+      -else
+        =link_to "+ #{t(".follow")}", follow_user_path(@user), :class => "follow_link", 'data-class' => "unfollow_link", 'data-title' => t(".unfollow"), 'data-undo' => unfollow_user_path(@user)
+      .clear
+
   -if current_user == @user
     %span
       =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
   .general-info
     .avatar
       = gravatar @user.email.to_s, :size => 128
-    -if current_user != @user
-      -if logged_in? && current_user.following?(@user)
-        =link_to "- #{t(".unfollow")}", unfollow_user_path(@user), :class => "unfollow_link", 'data-class' => "follow_link", 'data-title' => t(".follow"), 'data-undo' => follow_user_path(@user)
-      -else
-        =link_to "+ #{t(".follow")}", follow_user_path(@user), :class => "follow_link", 'data-class' => "unfollow_link", 'data-title' => t(".unfollow"), 'data-undo' => unfollow_user_path(@user)
-    -if @user.bio.present?
-      .user-info
-        = auto_link(@user.bio)
+      .reputation
+        =format_number(@user.reputation_on(current_group))
+      .text
+        = t(:reputation, :scope => "activerecord.attributes.user")
+      =format_number(@user.config_for(current_group).views_count.to_i)
+      views
+    .user-info
+      %table
+        %tr
+          %td.user-field
+            Name
+          %td.user-field-value
+            =h(@user.name)
+        %tr
+          %td.user-field
+            Website
+          %td.user-field-value
+            -if @user.website
+              =link_to h(@user.website), h(@user.website), :rel => "nofollow"
+        %tr
+          %td.user-field
+            Age
+          %td.user-field-value
+            =@user.age
+    .bio-info
+      = markdown(@user.bio)
   .clear
 
   -if @user.following.count > 0

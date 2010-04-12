@@ -179,6 +179,13 @@ class User
     self.role == "admin"
   end
 
+  def age
+    return if self.birthday.blank?
+
+    Time.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.now.year) >
+Time.now ? 1 : 0)
+  end
+
   def can_modify?(model)
     return false unless model.respond_to?(:user)
     self.admin? || self == model.user
