@@ -55,7 +55,7 @@ class Question
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
 
   validates_presence_of :user_id
-  validates_uniqueness_of :slug, :scope => :group_id
+  validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
 
   validates_length_of       :title,    :within => 5..100
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
