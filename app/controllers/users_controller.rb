@@ -71,6 +71,7 @@ class UsersController < ApplicationController
                                           :group_id => current_group.id,
                                           :banned => false)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
+                                      :order => "votes_average desc, created_at desc",
                                       :group_id => current_group.id,
                                       :per_page => 10,
                                       :banned => false)
