@@ -66,6 +66,7 @@ class UsersController < ApplicationController
     @user = User.find_by_login_or_id(params[:id])
     raise PageNotFound unless @user
     @questions = @user.questions.paginate(:page=>params[:questions_page],
+                                          :order => "votes_average desc, created_at desc",
                                           :per_page => 10,
                                           :group_id => current_group.id,
                                           :banned => false)
