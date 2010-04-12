@@ -159,8 +159,6 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
-    raise PageNotFound  unless @question
-
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
@@ -512,6 +510,7 @@ class QuestionsController < ApplicationController
 
   def check_age
     @question = current_group.questions.find_by_slug_or_id(params[:id])
+    raise PageNotFound  unless @question
 
     return if session[:age_confirmed] || is_bot? || !@question.adult_content
 
