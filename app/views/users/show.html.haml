@@ -73,6 +73,7 @@
 
   %ul.items#answers
     -@answers.each do |answer|
+      -next if answer.question.banned
       = render :partial => "answers/answer", :object => answer
   .additional_info
     = will_paginate @answers, :param_name => "answers_page"

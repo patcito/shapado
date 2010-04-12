@@ -37,18 +37,7 @@ namespace :fixdb do
 
   desc "files"
   task :files => [:environment] do
-    cname = Group.collection_name
-
-    Group.find_each do |group|
-      migrate_file(group, "logo")
-      migrate_file(group, "custom_css")
-      migrate_file(group, "custom_favicon")
-
-      group.save(:validate => false)
-    end
-
-    Group.database.drop_collection(cname+".files")
-    Group.database.drop_collection(cname+".chunks")
+    Group.upgrade_file_keys("logo", "custom_css", "custom_favicon")
 
     puts " -------------------------- "
     Group.find_each do |group|
