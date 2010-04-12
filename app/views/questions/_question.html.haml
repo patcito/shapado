@@ -52,7 +52,7 @@
         = link_to h(owner.login), user_path(owner)
         %span.reputation
           ==(#{owner.reputation_on(question.group)})
-        %strong
+        %strong.time_ago
           = link_to t("time.ago", :time => time_ago_in_words(last_target.updated_at)), question_path(question)+"##{last_target.id}"
         -if question.wiki
           %span.wiki_flag
