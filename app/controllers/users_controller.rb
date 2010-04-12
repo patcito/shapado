@@ -125,6 +125,8 @@ class UsersController < ApplicationController
       @user.birthday = Time.parse("#{params[:user]["birthday(1i)"]}-#{params[:user]["birthday(2i)"]}-#{params[:user]["birthday(3i)"]}") rescue nil
     end
 
+    Magent.push("actors.judge", :on_update_user, @user.id, current_group.id)
+
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save
       @user.add_preferred_tags(preferred_tags, current_group) if preferred_tags

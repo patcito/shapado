@@ -2,6 +2,7 @@ require File.dirname(__FILE__)+"/env"
 require File.dirname(__FILE__)+"/judge/questions"
 require File.dirname(__FILE__)+"/judge/activities"
 require File.dirname(__FILE__)+"/judge/votes"
+require File.dirname(__FILE__)+"/judge/users"
 
 module Actors
   # /actors/judge
@@ -10,6 +11,7 @@ module Actors
     include JudgeActions::Questions
     include JudgeActions::Activities
     include JudgeActions::Votes
+    include JudgeActions::Users
 
     expose :on_question_solved
     expose :on_question_unsolved
@@ -17,6 +19,8 @@ module Actors
     expose :on_ask_question
     expose :on_destroy_question
     expose :on_question_favorite
+
+    expose :on_update_user
 
     expose :on_activity
     expose :on_comment
