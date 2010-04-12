@@ -75,6 +75,8 @@ es-AR:
       success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
     unwatch:
       success:      "ya no recibirá usted notificaciones via email por cada respuesta a esta pregunta."
+    revert:
+      title: "revertir la pregunta"
     move:
       title:        "mover la pregunta: {{title}}"
       group_label:  "mover la pregunta a el group con slug:"

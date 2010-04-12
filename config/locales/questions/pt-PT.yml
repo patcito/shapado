@@ -75,6 +75,8 @@ pt-PT:
       success:      "you will now receive notifications by mail for every new answer to this question"
     unwatch:
       success:      "you will not receive notifications by mail for every new answer to this question anymore"
+    revert:
+      title: "revert question"
     move:
       title:        "move question: {{title}}"
       group_label:  "move to the group with slug:"

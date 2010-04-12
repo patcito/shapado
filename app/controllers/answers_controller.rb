@@ -1,7 +1,7 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
+  before_filter :check_update_permissions, :only => [:edit, :update, :revert]
 
   helper :votes
 
@@ -34,18 +34,9 @@ class AnswersController < ApplicationController
     end
   end
 
-  def rollback
+  def revert
     @question = @answer.question
-    @question.updated_by = current_user
-
-    if @answer.rollback!(params[:version].to_i)
-      flash[:notice] = t(:flash_notice, :scope => "answers.update")
-      Magent.push("actors.judge", :on_rollback, @answer.id)
-    end
-
-    respond_to do |format|
-      format.html { redirect_to history_question_answer_path(@question, @answer) }
-    end
+    @answer.load_version(params[:version].to_i)
   end
 
   def show

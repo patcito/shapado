@@ -5,4 +5,4 @@
   =link_to t("global.previous"), diff_question_path(post, :curr => number, :prev => number-1 ), :class => "diff_prev"
 -if logged_in? && current_user.can_modify?(post)
   |
-  =link_to t("wiki.actions.set_as_current"), rollback_question_path(post, :version => number), :method => :put
+  =link_to t("wiki.actions.revert"), revert_question_path(post, :version => number)

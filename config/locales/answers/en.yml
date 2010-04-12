@@ -16,6 +16,8 @@ en:
   \n - you can only post one answer by question."
     update:
       flash_notice: "answer was successfully updated."
+    revert:
+      title: "revert answer"
 
   activerecord:
     models:

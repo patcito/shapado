@@ -16,6 +16,8 @@ fr:
 \n - vous ne pouvez poster qu'une réponse par question"
     update:
       flash_notice: "la réponse a été créée avec succès."
+    revert:
+      title: "revert answer"
 
   activerecord:
     models:
