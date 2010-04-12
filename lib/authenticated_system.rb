@@ -16,6 +16,7 @@ module AuthenticatedSystem
       user = open_id_authentication(params["openid.identity"], false)
       if user
         warden.set_user(user, :scope => scope)
+        user.remember_me!
       end
       user
     else
