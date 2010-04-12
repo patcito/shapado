@@ -143,6 +143,8 @@ class AnswersController < ApplicationController
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save
+        Question.update_last_target(@question.id, @answer)
+
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
 
         Magent.push("actors.judge", :on_update_answer, @answer.id)

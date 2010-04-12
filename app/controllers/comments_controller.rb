@@ -69,6 +69,10 @@ class CommentsController < ApplicationController
       @comment = Comment.find(params[:id])
       @comment.body = params[:body]
       if @comment.valid? && @comment.save
+        if question_id = @comment.question_id
+          Question.update_last_target(question_id, @comment)
+        end
+
         flash[:notice] = t(:flash_notice, :scope => "comments.update")
         format.html { redirect_to(params[:source]) }
         format.json { render :json => @comment.to_json, :status => :ok}
