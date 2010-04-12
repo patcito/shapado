@@ -151,7 +151,8 @@ class QuestionsController < ApplicationController
           result = Question.find_tags(/^#{Regexp.escape(q)}/,
                                       :group_id => current_group.id)
         end
-        render :text => result.join("\n")
+        results = result.map do |t| t["name"] end.join("\n")
+        render :text => results
       end
     end
   end
