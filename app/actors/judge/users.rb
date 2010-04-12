@@ -4,7 +4,7 @@ module JudgeActions
       user = User.find!(payload.shift)
       group = Group.find!(payload.shift)
 
-      if !user.birthday.blank? && !user.website.blank? && !user.bio.blank?
+      if !user.birthday.blank? && !user.website.blank? && !user.bio.blank? && !user.name.blank?
         create_badge(user, group, :token => "autobiographer", :unique => true)
       end
     end
