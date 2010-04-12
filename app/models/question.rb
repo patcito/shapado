@@ -13,7 +13,7 @@ class Question
   key :_id, String
   key :title, String, :required => true
   key :body, String
-  slug_key :title, :unique => true
+  slug_key :title, :unique => true, :min_length => 8
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
   key :votes_count, Integer, :default => 0
