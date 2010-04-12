@@ -8,6 +8,10 @@
       newest: recientes
       oldest: antiguos
       name: por nombre de usuario
+      reputation_tooltip: usuarios ordenados por reputación
+      newest_tooltip: usuarios que se acaban de unir
+      oldest_tooltip: usuarios que se unieron primero
+      name_tooltip: usuarios ordenados alfabéticamente
     new:
       title: registrar un nuevo usuario
       submit: registrar

@@ -14,9 +14,10 @@ class UsersController < ApplicationController
                :page => params[:page] || 1}
     options[:login] = /^#{Regexp.escape(params[:q])}/ if params[:q]
 
-    if params[:sort] == "reputation"
+    if options[:order] == "reputation"
       options[:order] = "membership_list.#{current_group.id}.reputation desc"
     end
+
     @users = current_group.users(options)
 
     respond_to do |format|
