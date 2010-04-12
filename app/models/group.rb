@@ -64,9 +64,9 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   key :head_tag, String
 
-  file_key :logo
-  file_key :custom_css
-  file_key :custom_favicon
+  file_key :logo, :max_length => 2.megabytes
+  file_key :custom_css, :max_length => 256.kilobytes
+  file_key :custom_favicon, :max_length => 256.kilobytes
 
   slug_key :name, :unique => true
 
