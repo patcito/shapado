@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:files"] do
+task :fixall => [:environment, "fixdb:files", "fixdb:orphan_answers"] do
 end
 
 namespace :fixdb do
@@ -53,6 +53,13 @@ namespace :fixdb do
       if group.has_custom_favicon?
         puts group.custom_favicon.mime_type rescue nil
       end
+    end
+  end
+
+  desc "orphan answers"
+  task :orphan_answers => [:environment] do
+    Question.find_each(:select => [:_id, :group_id]) do |question|
+      Answer.set({"question_id" => question.id}, {"group_id" => question.group_id})
     end
   end
 end

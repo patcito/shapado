@@ -447,9 +447,14 @@ class QuestionsController < ApplicationController
   def move_to
     @group = Group.find_by_slug_or_id(params[:question][:group])
     @question = Question.find_by_slug_or_id(params[:id])
+
     if @group
       @question.group = @group
-      @question.save
+
+      if @question.save
+        Answer.set({"question_id" => @question.id}, {"group_id" => @group.id})
+      end
+
       flash[:notice] = t("questions.move_to.success", :group => @group.name)
       redirect_to question_path(@question)
     else
