@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
-
+  map.confirm_age_welcome 'confirm_age_welcome', :controller => 'welcome', :action => 'confirm_age'
   map.change_language_filter '/change_language_filter', :controller => 'welcome', :action => 'change_language_filter'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
@@ -69,7 +69,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :votes
   map.resources :flags
-  map.resources :welcome, :collection =>  {:confirm_age => :any}
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.resources :members, :path_prefix => "/manage"
