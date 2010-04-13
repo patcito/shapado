@@ -117,9 +117,9 @@ class QuestionsController < ApplicationController
 
     if logged_in?
       if @active_subtab.to_s == "expert"
-        conditions[:tags] = {:$in => current_user.stats(:expert_tags).expert_tags}
+        @current_tags = current_user.stats(:expert_tags).expert_tags
       elsif @active_subtab.to_s == "mytags"
-        conditions[:tags] = {:$in => current_user.preferred_tags_on(current_group)}
+        @current_tags = current_user.preferred_tags_on(current_group)
       end
     end
 
