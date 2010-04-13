@@ -2,7 +2,7 @@
 -question_body = find_and_preserve(shapado_auto_link(markdown(@question.body.present? ? @question.body : @question.title)))
 
 -content_for :head do
-  %meta{:name => "keywords", :content => clean_seo_keywords(@question.tags, @question.title)}
+  %meta{:name => "keywords", :content => clean_seo_keywords(@question.tags.dup, @question.title)}
   %meta{:name => "description", :content => question_body.gsub(/<\/?[^>]*>/, "")[0, 255] }
 
 -content_for :subtabs do
