@@ -7,7 +7,8 @@
 
 -content_for :subtabs do
   %h1.navtitle
-    &= @question.title
+    .entry-title
+      &= @question.title
 
 -source = question_path(@question)
 
@@ -26,58 +27,60 @@
   .favorites_count
     &= @question.favorites_count
 
-#question-body-col.commentable.markdown
-  %a{:name => @question.id}
-  #body
-    = question_body
+.entry-content
+  #question-body-col.commentable.markdown
+    %a{:name => @question.id}
+    #body
+      = question_body
+    .tag-list
+      -@question.tags.each do |tag|
+        %span.tag
+          = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
+    .user_info
+      .gravatar
+        = gravatar(@question.user.email.to_s, :size => 32)
+      .user_data
+        %span.asked_by
+          = t('activerecord.attributes.question.asked_by')
+        = link_to h(@question.user.login), user_path(@question.user)
+        .post-info
+          .updated{:title => @question.created_at}
+            %span.time_ago
+          = t("time.ago", :time => time_ago_in_words(@question.created_at))
+        -if !@question.user.hide_country
+          = t("global.from", :site => @question.user.country_name)
+          = country_flag(@question.user.country_code, @question.user.country_name)
+      -if @question.wiki
+        .wiki_flag
+          wiki
+      .clear
+    .controls
+      .actions
+        =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :rel => 'nofollow'
+        -if logged_in?
+          -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
+            = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
+          =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
+          -if @question.versions.count > 0
+            = link_to t(".history", :default => "history"), history_question_path(@question)
 
-  .tag-list
-    -@question.tags.each do |tag|
-      %span.tag
-        = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
-  .user_info
-    .gravatar
-      = gravatar(@question.user.email.to_s, :size => 32)
-    .user_data
-      %span.asked_by
-        = t('activerecord.attributes.question.asked_by')
-      = link_to h(@question.user.login), user_path(@question.user)
-      %span.time_ago
-        = t("time.ago", :time => time_ago_in_words(@question.created_at))
-      -if !@question.user.hide_country
-        = t("global.from", :site => @question.user.country_name)
-        = country_flag(@question.user.country_code, @question.user.country_name)
-    -if @question.wiki
-      .wiki_flag
-        wiki
-    .clear
-  .controls
-    .actions
-      =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :rel => 'nofollow'
-      -if logged_in?
-        -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
-          = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
-        =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
-        -if @question.versions.count > 0
-          = link_to t(".history", :default => "history"), history_question_path(@question)
+          -if current_user.mod_of?(@question.group)
+            %br
+            = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+      .forms
+        -flag = Flag.new
+        - flag.flaggeable = @question
+        = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
 
-        -if current_user.mod_of?(@question.group)
-          %br
-          = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
-    .forms
-      -flag = Flag.new
-      - flag.flaggeable = @question
-      = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
-
-      -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do
-        -@comment = Comment.new
-        = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
-        .group.navform
-          = submit_tag t("comments.shared.comment_submit"), :class => "button"
-  .comments
-    -@question.comments.each do |comment|
-      = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
-.clear
+        -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do
+          -@comment = Comment.new
+          = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
+          .group.navform
+            = submit_tag t("comments.shared.comment_submit"), :class => "button"
+    .comments
+      -@question.comments.each do |comment|
+        = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
+  .clear
 
 
 %a{:name=>"answers"}
@@ -99,6 +102,7 @@
     -if @question.answered
       -solution = @question.answer
       =render :partial=> "answer", :locals=> {:question => @question, :answer => solution} unless solution.nil?
+    .hentry
     -@answers.each do |answer|
       =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
     =will_paginate(@answers)
@@ -145,8 +149,8 @@
     .entry
       .text.asked
         = t('activerecord.attributes.question.created_at')
-      .data
-        = t("time.ago", :time => time_ago_in_words(@question.created_at))
+        .data
+          = t("time.ago", :time => time_ago_in_words(@question.created_at))
     .entry
       .text.viewed
         = t('.viewed')

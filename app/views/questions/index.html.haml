@@ -42,7 +42,8 @@
     %li.highlight
       = t(".empty")
   -@questions.each do |question|
-    = render :partial => "question", :object => question
+    .entry
+      = render :partial => "question", :object => question
 
 #additional_info
   =will_paginate @questions

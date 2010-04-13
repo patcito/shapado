@@ -9,17 +9,20 @@
       =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
   .body-col
     .markdown
-      =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
+      .entry-content
+        =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
     -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags_count > 0
       %h3
         = t(:flags, :scope => "activerecord.models")
       = render :partial => "flags/list", :locals => {:flaggeable => answer}
     -if !answer.updated_by.nil?
       .user_data
-        .time_ago
-          = t('activerecord.attributes.answer.updated_at', :default => "updated")
-          %strong
-            = t("time.ago", :time => time_ago_in_words(answer.updated_at))
+        .com-meta
+          .time_ago
+            = t('activerecord.attributes.answer.updated_at', :default => "updated")
+            %strong
+            .updated[:title => answer.updated_at]
+              = t("time.ago", :time => time_ago_in_words(answer.updated_at))
         .avatar
           = gravatar(answer.updated_by.email.to_s, :size => 32)
         .user
@@ -30,10 +33,13 @@
             = country_flag(answer.updated_by.country_code, answer.updated_by.country_name)
 
     .user_data
+      .com-meta
+        .updated[:title => answer.updated_at]
       .time_ago
         = t('activerecord.attributes.answer.created_at')
         %strong
           = t("time.ago", :time => time_ago_in_words(answer.created_at))
+      
       .avatar
         = gravatar(answer.user.email.to_s, :size => 32)
       .user
