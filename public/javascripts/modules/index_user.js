@@ -11,5 +11,4 @@ $(document).ready(function() {
                                 $('#additional_info .pagination').html(data.pagination)
                               }
   });
-
 });

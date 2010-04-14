@@ -60,6 +60,7 @@ en:
     tags:
       title: tags
       tooltip: show questions tagged {{tag}}
+      filter: search for tags
     new:
       title: ask question
       how_to_ask: how to ask

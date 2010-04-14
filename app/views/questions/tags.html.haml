@@ -3,15 +3,10 @@
   .navtitle
     = t(".title")
 
+-form_tag "/questions/tags", :class => "form", :id => "filter_tags", :method => "get" do
+  = label_tag :q, t(".filter"), :class => "label"
+  = text_field_tag "q", params[:q], :class => "text_field filter_field"
+  = submit_tag("filter")
 
-%table.tag-list{:style => "width: 100%"}
-  -@tag_cloud.each_slice(4) do |tags|
-    %tr
-      -tags.each do |tag|
-        %td{:style => "line-height: 14px"}
-          %span.tag{:class => "tag_#{h(tag)}"}
-            =link_to h(tag["name"]), url_for(:controller => "questions", :action => "index", :tags => tag["name"]), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag["name"])
-          %span{:style => "padding-left: 4px; clear:both"}
-            %b
-              x
-              = h(tag["count"].to_i)
+#tag_table
+  = render :partial => "tag_table", :object => @tag_cloud

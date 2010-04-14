@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:create, :index, :show, :tags, :unanswered, :related_questions]
+  before_filter :login_required, :except => [:create, :index, :show, :tags, :unanswered, :related_questions, :tags_for_autocomplete]
   before_filter :admin_required, :only => [:move, :move_to]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
@@ -139,19 +139,32 @@ class QuestionsController < ApplicationController
   end
 
   def tags
+    conditions ={:group_id => current_group.id}.merge(language_conditions)
+    if params[:q].blank?
+      @tag_cloud = Question.tag_cloud(conditions)
+    else
+      @tag_cloud = Question.find_tags(/^#{Regexp.escape(params[:q])}/, conditions)
+    end
     respond_to do |format|
       format.html do
         set_page_title(t("layouts.application.tags"))
-        @tag_cloud = Question.tag_cloud({:group_id => current_group.id}.
-                        merge(language_conditions.merge(language_conditions)))
       end
+      format.js do
+        html = render_to_string(:partial => "tag_table", :object => @tag_cloud)
+        render :json => {:html => html}
+      end
+    end
+  end
+
+  def tags_for_autocomplete
+    respond_to do |format|
       format.js do
         result = []
         if q =params[:prefix]
           result = Question.find_tags(/^#{Regexp.escape(q)}/,
                                       :group_id => current_group.id)
         end
-        results = result.map do |t| t["name"] end.join("\n")
+        results = result.map do |t| "#{t["name"]};#{t["count"]}" end.join("\n")
         render :text => results
       end
     end

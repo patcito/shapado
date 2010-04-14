@@ -60,6 +60,7 @@ es-AR:
     tags:
       title: etiquetas
       tooltip: muestra las preguntas etiquetadas con {{tag}}
+      filter: buscar tags
     new:
       title: pregunte
       how_to_ask: como preguntar
