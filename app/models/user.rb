@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-  devise :authenticatable, :recoverable, :registarable, :rememberable,
+  devise :authenticatable, :http_authenticatable, :recoverable, :registarable, :rememberable,
          :lockable, :token_authenticatable, :facebook_connectable
 
   ROLES = %w[user moderator admin]
