@@ -33,26 +33,29 @@
       #question-body-col.commentable.markdown
         %a{:name => @question.id}
         #body
-          = question_body
+          .content.post-text
+            = question_body
         .tag-list
           -@question.tags.each do |tag|
             %span.tags
               = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
         .post-info
-          .user_info
-            .gravatar
+          .user_info.vcard
+            .gravatar.logo
               = gravatar(@question.user.email.to_s, :size => 32)
             .user_data
               %span.asked_by
                 = t('activerecord.attributes.question.asked_by')
-              = link_to h(@question.user.login), user_path(@question.user)
+              .fn.nickname
+                = link_to h(@question.user.login), user_path(@question.user)
               .post-info
                 .updated{:title => @question.created_at}
                   %span.time_ago
                 = t("time.ago", :time => time_ago_in_words(@question.created_at))
               -if !@question.user.hide_country
-                = t("global.from", :site => @question.user.country_name)
-                = country_flag(@question.user.country_code, @question.user.country_name)
+                .country-name
+                  = t("global.from", :site => @question.user.country_name)
+                  = country_flag(@question.user.country_code, @question.user.country_name)
             -if @question.wiki
               .wiki_flag
                 wiki
