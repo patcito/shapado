@@ -40,7 +40,7 @@
             %span.tags
               = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
         .post-info
-          .user_info.vcard
+          .author.user_info.vcard
             .gravatar.logo
               = gravatar(@question.user.email.to_s, :size => 32)
             .user_data
