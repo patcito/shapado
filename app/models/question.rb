@@ -195,6 +195,19 @@ class Question
                                                      :upsert => true)
   end
 
+  def unban
+    self.collection.update({:_id => self._id}, {:$set => {:banned => false}},
+                                               :upsert => true)
+  end
+
+  def self.unban(ids)
+    ids = ids.map do |id| id end
+
+    self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => false}},
+                                                     :multi => true,
+                                                     :upsert => true)
+  end
+
   def favorite_for?(user)
     user.favorite(self)
   end

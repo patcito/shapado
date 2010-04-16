@@ -7,3 +7,6 @@ en:
         content: content
         item_title: title
         all: all
+        questions:
+        flaged: flaged questions
+        banned: banned questions

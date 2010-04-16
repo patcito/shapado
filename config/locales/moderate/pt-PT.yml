@@ -7,3 +7,5 @@ pt-PT:
         content: conteúdo
         item_title: título
         all: todas
+        flaged: flaged questions
+        banned: banned questions
