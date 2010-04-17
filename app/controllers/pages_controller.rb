@@ -2,6 +2,10 @@ class PagesController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   before_filter :check_page_permissions, :only => [:new, :create, :edit, :update, :destroy]
 
+  layout :set_layout
+
+  tabs :default => :pages
+
   # GET /pages
   # GET /pages.json
   def index
@@ -138,6 +142,14 @@ class PagesController < ApplicationController
                               :action => I18n.t("users.actions.edit_wiki_post"))
       redirect_to root_path
       return false
+    end
+  end
+
+  def set_layout
+    if action_name == "index"
+      "manage"
+    else
+      "application"
     end
   end
 end
