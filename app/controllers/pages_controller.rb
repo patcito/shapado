@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
+  before_filter :check_page_permissions, :only => [:new, :create, :edit, :update, :destroy]
+
   # GET /pages
   # GET /pages.json
   def index
@@ -13,6 +16,8 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    return if self.check_page_permissions == false
+
     @page = current_group.pages.by_slug(params[:id])
 
     respond_to do |format|
@@ -115,6 +120,24 @@ class PagesController < ApplicationController
       send_data(@page.js.try(:read).to_s, :filename => "#{params[:id]}.js", :type => "text/javascript",  :disposition => 'inline')
     else
       render :text => ""
+    end
+  end
+
+  protected
+  def check_page_permissions
+    if !logged_in?
+      login_required
+      return false
+    end
+
+    if !current_user.can_edit_wiki_post_on?(current_group)
+      reputation = current_group.reputation_constrains["edit_wiki_post"]
+
+      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                              :min_reputation => reputation,
+                              :action => I18n.t("users.actions.edit_wiki_post"))
+      redirect_to root_path
+      return false
     end
   end
 end

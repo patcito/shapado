@@ -44,6 +44,7 @@ fr:
       vote_down: voter négatif
       flag: flag
       edit_others_posts: "modifier les postes des autres"
+      edit_wiki_post: "edit wiki posts"
   activerecord:
     models:
       users: utilisateurs

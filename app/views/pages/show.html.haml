@@ -16,6 +16,6 @@
 
 .markdown
   -if safe_page?(@page)
-    = RDiscount.new(@page.body).to_html
+    = RDiscount.new(render_page_links(@page.body)).to_html
   -else
     = markdown(@page.body)
