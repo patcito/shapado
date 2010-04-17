@@ -9,13 +9,23 @@ class Page
   key :_id, String
   key :title, String
   key :body, String
-  key :public, Boolean, :default => true
+  key :wiki, Boolean, :default => false
+  key :language, String
+  key :adult_content, Boolean, :default => false
+
+  key :user_id, String
+  belongs_to :user
 
   key :group_id, String, :required => true
   belongs_to :group
 
-  slug_key :title
+  key :updated_by_id, String
+  belongs_to :updated_by, :class_name => "User"
+
+  slug_key :title, :unique => true, :min_length => 3
 
   file_key :js
   file_key :css
+
+  versionable_keys :title, :body, :tags
 end

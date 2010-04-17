@@ -40,7 +40,10 @@ class PagesController < ApplicationController
   # POST /pages
   # POST /pages.json
   def create
-    @page = Page.new(params[:page])
+    @page = Page.new
+    @page.safe_update(%w[title body tags wiki language adult_content css js], params[:page])
+    @page.group = current_group
+    @page.user = current_user
 
     respond_to do |format|
       if @page.save
@@ -58,9 +61,11 @@ class PagesController < ApplicationController
   # PUT /pages/1.json
   def update
     @page = current_group.pages.find(params[:id])
+    @page.safe_update(%w[title body tags wiki language adult_content css js], params[:page])
+    @page.updated_by = current_user
 
     respond_to do |format|
-      if @page.update_attributes(params[:page])
+      if @page.save
         flash[:notice] = 'Page was successfully updated.'
         format.html { redirect_to(@page) }
         format.json  { head :ok }
