@@ -66,7 +66,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        flash[:notice] = 'Page was successfully created.'
+        flash[:notice] = I18n.t("pages.create.success")
         format.html { redirect_to(@page) }
         format.json  { render :json => @page, :status => :created, :location => @page }
       else
@@ -85,7 +85,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        flash[:notice] = 'Page was successfully updated.'
+        flash[:notice] = I18n.t("pages.update.success")
         format.html { redirect_to(@page) }
         format.json  { head :ok }
       else

@@ -4,10 +4,12 @@ en:
     index:
       title: list of pages
       create_page: create new page
+    edit:
+      title: Editing page
     create:
-      success: "fixme"
+      success: 'Page was successfully created.'
     update:
-      success: "fixme"
+      success: 'Page was successfully updated.'
     new:
       title: new page
     form:
@@ -17,3 +19,9 @@ en:
       title: Actions
       create_page: "Create new page"
       edit_page: "Edit page"
+
+  activerecord:
+    attributes:
+      page:
+        js: javascript
+        css: stylesheets
