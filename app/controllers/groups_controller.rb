@@ -143,7 +143,6 @@ class GroupsController < ApplicationController
   def logo
     @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
     if @group && @group.has_logo?
-      puts @group.logo.content_type.inspect
       send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo.extension}", :type => @group.logo.content_type,  :disposition => 'inline')
     else
       render :text => ""

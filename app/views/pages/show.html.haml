@@ -1,0 +1,20 @@
+-content_for :head do
+  -if @page.has_css?
+    %link{:href => css_page_path(@page),  :rel => "stylesheet", :media => "screen", :type => "text/css"}
+
+  -if current_group.has_custom_js && @page.has_js?
+    %script{:src => js_page_path(@page), :type => "text/javascript"}
+
+-content_for :subtabs do
+  %h1.navtitle.title
+    &= @page.title
+
+-content_for :sidebar do
+  %ul
+    %li
+      = link_to "Edit page", edit_page_path(@page)
+
+-if @page.wiki || @page.user.role_on(current_group) != "owner"
+  = markdown(@page.body)
+-else
+  = RDiscount.new(@page.body).to_html

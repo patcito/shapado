@@ -87,4 +87,24 @@ class PagesController < ApplicationController
       format.json  { head :ok }
     end
   end
+
+  def css
+    @page = current_group.pages.by_slug(params[:id])
+
+    if @page.has_css?
+      send_data(@page.css.try(:read).to_s, :filename => "#{params[:id]}.css", :type => "text/css",  :disposition => 'inline')
+    else
+      render :text => ""
+    end
+  end
+
+  def js
+    @page = current_group.pages.by_slug(params[:id])
+
+    if current_group.has_custom_js && @page.has_js?
+      send_data(@page.js.try(:read).to_s, :filename => "#{params[:id]}.js", :type => "text/javascript",  :disposition => 'inline')
+    else
+      render :text => ""
+    end
+  end
 end
