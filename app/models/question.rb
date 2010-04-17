@@ -137,7 +137,7 @@ class Question
       voter.on_activity(:vote_down_question, self.group)
       self.user.downvote!(self.group)
     end
-    on_activity
+    on_activity(false)
   end
 
   def remove_vote!(v, voter)
@@ -155,22 +155,24 @@ class Question
       voter.on_activity(:undo_vote_down_question, self.group)
       self.user.downvote!(self.group, -1)
     end
-    on_activity
+    on_activity(false)
   end
 
   def add_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
                                                           :upsert => true)
+    on_activity(false)
   end
 
 
   def remove_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
                                                           :upsert => true)
+    on_activity(false)
   end
 
-  def on_activity
-    update_activity_at
+  def on_activity(bring_to_front = true)
+    update_activity_at if bring_to_front
     self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},
                                                          :upsert => true)
   end
