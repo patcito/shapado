@@ -22,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adsenses
   map.resources :adbards
   map.resources :badges
+  map.resources :pages
 
 
   def build_questions_routes(router, options ={})
