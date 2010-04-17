@@ -24,8 +24,8 @@ class Admin::ModerateController < ApplicationController
       when "answers"
         @answers = Answer.paginate(options.merge({:per_page => params[:per_page] || 25,
                                        :page => params[:answers_page] || 1}))
-      when "banneds"
-        @banneds = Question.paginate(banned.merge({:per_page => params[:per_page] || 25,
+      when "banned"
+        @banned = Question.paginate(banned.merge({:per_page => params[:per_page] || 25,
                                        :page => params[:questions_page] || 1}))
     end
   end
