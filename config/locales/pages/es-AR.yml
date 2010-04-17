@@ -1,0 +1,17 @@
+es-AR:
+  pages:
+    title: fixme
+    index:
+      title: List of pages
+      create_page: create new page
+    create:
+      success: "fixme"
+    new:
+      title: new page
+    form:
+      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
+      language_tip: page language
+    actions:
+      title: Actions
+      create_page: "Create new page"
+      edit_page: "Edit page"

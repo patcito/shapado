@@ -13,13 +13,13 @@
   -if @page.wiki || current_user.mod_of?(current_group)
     .block
       %h3
-        Actions
+        =t("pages.actions.title")
       .content
         %ul.navigation
           %li
-            = link_to "Create new page", new_page_path
+            = link_to t("pages.actions.create_page"), new_page_path
           %li
-            = link_to "Edit page", edit_page_path(@page)
+            = link_to t("pages.actions.edit_page"), edit_page_path(@page)
 
 .markdown
   -if safe_page?(@page)
