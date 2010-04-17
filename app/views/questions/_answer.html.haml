@@ -1,82 +1,93 @@
 
 -solution = question.answered && question.answer_id == answer.id
 -source = question_path(@question)
-.answer.commentable{:class => solution ? "solution" : ""}
-  %a{:name=>answer.id}
-  .vote-col
-    =vote_box(answer, question_path(question))
-    -if solution
-      =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
-  .body-col
-    .markdown
-      =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
-    -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags_count > 0
-      %h3
-        = t(:flags, :scope => "activerecord.models")
-      = render :partial => "flags/list", :locals => {:flaggeable => answer}
-    -if !answer.updated_by.nil?
-      .user_data
+#comment.hentry
+  .answer.commentable{:class => solution ? "solution" : ""}
+    %a{:name=>answer.id}
+    .vote-col
+      =vote_box(answer, question_path(question))
+      -if solution
+        =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
+    .body-col
+      .markdown
+        .entry-content
+          =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
+      -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags_count > 0
+        %h3
+          = t(:flags, :scope => "activerecord.models")
+        = render :partial => "flags/list", :locals => {:flaggeable => answer}
+      -if !answer.updated_by.nil?
+        .author.vcard.user_data
+          .com-meta
+            .time_ago
+              = t('activerecord.attributes.answer.updated_at', :default => "updated")
+              %strong
+              .updated[:title => answer.updated_at]
+                = t("time.ago", :time => time_ago_in_words(answer.updated_at))
+          .avatar.logo
+            = gravatar(answer.updated_by.email.to_s, :size => 32)
+          .user
+            %span.fn.nickname
+              = link_to h(answer.updated_by.login), user_path(answer.updated_by)
+            == (#{answer.updated_by.reputation_on(current_group)})
+            -unless answer.updated_by.hide_country
+              .country-name
+                = t("global.from", :site => answer.updated_by.country_name)
+              = country_flag(answer.updated_by.country_code, answer.updated_by.country_name)
+
+      .author.user_data.vcard
+        .com-meta
+          .updated[:title => answer.updated_at]
         .time_ago
-          = t('activerecord.attributes.answer.updated_at', :default => "updated")
+          = t('activerecord.attributes.answer.created_at')
           %strong
-            = t("time.ago", :time => time_ago_in_words(answer.updated_at))
-        .avatar
-          = gravatar(answer.updated_by.email.to_s, :size => 32)
+            = t("time.ago", :time => time_ago_in_words(answer.created_at))
+
+        .avatar.logo
+          = gravatar(answer.user.email.to_s, :size => 32)
         .user
-          = link_to h(answer.updated_by.login), user_path(answer.updated_by)
-          == (#{answer.updated_by.reputation_on(current_group)})
-          -unless answer.updated_by.hide_country
-            = t("global.from", :site => answer.updated_by.country_name)
-            = country_flag(answer.updated_by.country_code, answer.updated_by.country_name)
+          %span.fn.nickname
+            = link_to h(answer.user.login), user_path(answer.user)
+          == (#{answer.user.reputation_on(current_group)})
+          -unless answer.user.hide_country
+            .country-name
+              = t("global.from", :site => answer.user.country_name)
+              = country_flag(answer.user.country_code, answer.user.country_name)
+      .controls
+        .actions
+          = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question, answer)
+          -if logged_in?
+            -if answer.wiki || current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
+              = link_to t("scaffold.edit"), edit_question_answer_path(@question, answer)
+            -if current_user.can_modify?(answer)
+              = link_to t("scaffold.destroy"), question_answer_path(@question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
+            = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
+            -if current_user != answer.user
+              = link_to t(".flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
+            -if logged_in? && current_user.can_modify?(@question)
+              -unless @question.answered
+                = link_to t(".pick_answer"), solve_question_path(@question, :answer_id => answer)
+              -if solution
+                = link_to t(".unset_answer"),  unsolve_question_path(@question)
+          -if answer.versions.count > 0
+            = link_to t(".history", :default => "history"), history_question_answer_path(@question, answer)
+        .clear
+        .forms
+          -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
+            -@comment = Comment.new
+            = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
+            .group.navform
+              = submit_tag t("comments.shared.comment_submit"), :class => "button"
 
-    .user_data
-      .time_ago
-        = t('activerecord.attributes.answer.created_at')
-        %strong
-          = t("time.ago", :time => time_ago_in_words(answer.created_at))
-      .avatar
-        = gravatar(answer.user.email.to_s, :size => 32)
-      .user
-        = link_to h(answer.user.login), user_path(answer.user)
-        == (#{answer.user.reputation_on(current_group)})
-        -unless answer.user.hide_country
-          = t("global.from", :site => answer.user.country_name)
-          = country_flag(answer.user.country_code, answer.user.country_name)
-    .controls
-      .actions
-        = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question, answer)
-        -if logged_in?
-          -if answer.wiki || current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
-            = link_to t("scaffold.edit"), edit_question_answer_path(@question, answer)
-          -if current_user.can_modify?(answer)
-            = link_to t("scaffold.destroy"), question_answer_path(@question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
-          = link_to t("comments.shared.add_comment"), "#", :class => "addNestedAnswer"
+
           -if current_user != answer.user
-            = link_to t(".flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
-          -if logged_in? && current_user.can_modify?(@question)
-            -unless @question.answered
-              = link_to t(".pick_answer"), solve_question_path(@question, :answer_id => answer)
-            -if solution
-              = link_to t(".unset_answer"),  unsolve_question_path(@question)
-        -if answer.versions.count > 0
-          = link_to t(".history", :default => "history"), history_question_answer_path(@question, answer)
+            -flag = Flag.new
+            -flag.flaggeable = answer
+            = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
       .clear
-      .forms
-        -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
-          -@comment = Comment.new
-          = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
-          .group.navform
-            = submit_tag t("comments.shared.comment_submit"), :class => "button"
 
-
-        -if current_user != answer.user
-          -flag = Flag.new
-          -flag.flaggeable = answer
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
+      / Nested Answers
+      .children.comments
+        -answer.comments.each do |comment|
+          = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
     .clear
-
-    / Nested Answers
-    .children.comments
-      -answer.comments.each do |comment|
-        = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
-  .clear
