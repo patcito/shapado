@@ -161,14 +161,12 @@ class Question
   def add_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
                                                           :upsert => true)
-    on_activity
   end
 
 
   def remove_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
                                                           :upsert => true)
-    on_activity
   end
 
   def on_activity

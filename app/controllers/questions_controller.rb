@@ -373,7 +373,7 @@ class QuestionsController < ApplicationController
 
   def favorite
     @favorite = Favorite.new
-    @favorite.question_id = @question.id
+    @favorite.question = @question
     @favorite.user = current_user
     @favorite.group = @question.group
 
