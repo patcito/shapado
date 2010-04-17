@@ -1,0 +1,11 @@
+%table.tag-list{:style => "width: 100%"}
+  -tag_table.each_slice(4) do |tags|
+    %tr
+      -tags.each do |tag|
+        %td{:style => "line-height: 14px"}
+          %span.tag{:class => "tag_#{h(tag)}"}
+            =link_to h(tag["name"]), url_for(:controller => "questions", :action => "index", :tags => tag["name"]), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag["name"])
+          %span{:style => "padding-left: 4px; clear:both"}
+            %b
+              x
+              = h(tag["count"].to_i)

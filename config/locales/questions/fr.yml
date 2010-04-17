@@ -60,6 +60,7 @@ fr:
     tags:
       title: tags
       tooltip: montrer les questions avec le tag {{tag}}
+      filter: recherchez des tags
     new:
       title: posez une question
       how_to_ask: comment poser une question

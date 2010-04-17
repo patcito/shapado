@@ -57,6 +57,7 @@ pt-PT:
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
       expert: expert
+      filter: search for tags
     tags:
       title: etiquetas
       tooltip: show questions tagged {{tag}}

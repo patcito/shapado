@@ -93,7 +93,7 @@ class VotesController < ApplicationController
       voteable.add_vote!(vote.value, current_user)
 
       user_vote.value = vote.value
-      user_vote.save!
+      user_vote.save
       flash[:notice] = t("votes.create.flash_notice")
       state = :updated
     elsif(user_vote.value == vote.value)
