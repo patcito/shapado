@@ -2,9 +2,9 @@ en:
   mailers:
     notifications:
       new_answer:
-        subject_owner: "{{login}} answered your question {{title}}"
-        subject_friend: "your friend {{login}} answered the question {{title}}"
-        subject_other: "{{login}} answered the question {{title}}"
+        subject_owner: "{{login}} accepted your question {{title}}"
+        subject_friend: "your friend {{login}} accepted the question {{title}}"
+        subject_other: "{{login}} accepted the question {{title}}"
       new_comment:
         subject: "{{login}} commented on {{group}}"
       give_advice:

@@ -1,5 +1,5 @@
 
--solution = question.answered && question.answer_id == answer.id
+-solution = question.accepted && question.answer_id == answer.id
 -source = question_path(@question)
 
 .answer.commentable{:class => "post-#{answer.id} #{solution ? "solution" : ""}" }
@@ -63,7 +63,7 @@
           -if current_user != answer.user
             = link_to t(".flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
           -if logged_in? && current_user.can_modify?(@question)
-            -unless @question.answered
+            -unless @question.accepted
               = link_to t(".pick_answer"), solve_question_path(@question, :answer_id => answer)
             -if solution
               = link_to t(".unset_answer"),  unsolve_question_path(@question)

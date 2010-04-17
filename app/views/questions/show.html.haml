@@ -91,7 +91,7 @@
 #answers
   .secondary-navigation{:class => @active_subtab.to_s}
     .navtitle
-      = t(".answers_title", :count => @answers.total_entries + (@question.answered ? 1 : 0))
+      = t(".answers_title", :count => @answers.total_entries + (@question.accepted ? 1 : 0))
 
     %ul
       %li.newest
@@ -102,7 +102,7 @@
         = link_to t("questions.index.oldest"), question_path(@question, :sort=>"oldest", :anchor => "answers")
     .clear
   .block
-    -if @question.answered
+    -if @question.accepted
       -solution = @question.answer
       =render :partial=> "answer", :locals=> {:question => @question, :answer => solution} unless solution.nil?
     .hentry

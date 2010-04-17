@@ -26,7 +26,7 @@ fr:
       viewed: lues
       to_answer_question: "pour répondre à cette question"
       watch_tooltip: "suivre cette question"
-      answered_tooltip: "l'une des réponses a été accepté comme solution"
+      accepted_tooltip: "l'une des réponses a été accepté comme solution"
       unwatch_tooltip: "arreter de suivre cette question"
       favorite_tooltip: "ajouter cette question à vos favorites"
       unfavorite_tooltip: "retirer cette question de vos favorites"
@@ -41,7 +41,7 @@ fr:
       flag: reporter un abus
       add_comment: ajouter un commentaire...
     question:
-      answered_tooltip: Cette question a été répondu correctement
+      accepted_tooltip: Cette question a été répondu correctement
     form:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.

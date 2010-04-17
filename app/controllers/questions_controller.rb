@@ -286,7 +286,7 @@ class QuestionsController < ApplicationController
   def solve
     @answer = @question.answers.find(params[:answer_id])
     @question.answer = @answer
-    @question.answered = true
+    @question.accepted = true
 
     respond_to do |format|
       if @question.save
@@ -319,7 +319,7 @@ class QuestionsController < ApplicationController
     @answer_owner = @question.answer.user
 
     @question.answer = nil
-    @question.answered = false
+    @question.accepted = false
 
     respond_to do |format|
       if @question.save

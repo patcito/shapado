@@ -24,5 +24,5 @@
     attributes:
       answer:
         link: ligação
-        created_at: answered
+        created_at: accepted
         body: conteúdo

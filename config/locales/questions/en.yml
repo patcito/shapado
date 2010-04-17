@@ -26,7 +26,7 @@ en:
       viewed: viewed
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
-      answered_tooltip: "one of the answers was accepted as the correct answer"
+      accepted_tooltip: "one of the answers was accepted as the correct answer"
       unwatch_tooltip: "stop watching this question"
       favorite_tooltip: "add this question to your favorites"
       unfavorite_tooltip: "remove this question from your favorites"
@@ -41,7 +41,7 @@ en:
       flag: flag
       add_comment: add comment...
     question:
-      answered_tooltip: This question has been answered
+      accepted_tooltip: This question has been accepted
     form:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.

@@ -26,7 +26,7 @@ pt-PT:
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
-      answered_tooltip: "one of the answers was accepted as the correct answer"
+      accepted_tooltip: "one of the answers was accepted as the correct answer"
       unwatch_tooltip: "stop watching this question"
       favorite_tooltip: "add this question to your favorites"
       unfavorite_tooltip: "remove this question from your favorites"
@@ -41,7 +41,7 @@ pt-PT:
       flag: reporte
       add_comment: adicionar comentário...
     question:
-      answered_tooltip: This question has been answered
+      accepted_tooltip: This question has been accepted
     form:
       body_tip: qual é a sua pergunta? seja descritivo.
       language_tip: seleccione o idioma da questão.

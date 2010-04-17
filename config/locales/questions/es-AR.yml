@@ -26,7 +26,7 @@ es-AR:
       viewed: visto
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
-      answered_tooltip: "una de las respuestas fue aceptada como correcta"
+      accepted_tooltip: "una de las respuestas fue aceptada como correcta"
       unwatch_tooltip: "dejar de seguir esta pregunta"
       favorite_tooltip: "agregar esta pregunta a tus favoritas"
       unfavorite_tooltip: "remover esta pregunta de tus favoritas"
@@ -41,7 +41,7 @@ es-AR:
       flag: "reportar abuso"
       add_comment: añadir comentario...
     question:
-      answered_tooltip: Esta pregunta ha sido contestada
+      accepted_tooltip: Esta pregunta ha sido contestada
     form:
       body_tip: ¿cual es tu pregunta? por favor se descriptivo.
       language_tip: selecciona el idioma de tu pregunta.

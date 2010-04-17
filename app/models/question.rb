@@ -25,6 +25,8 @@ class Question
   key :adult_content, Boolean, :default => false
   key :banned, Boolean, :default => false
   key :answered, Boolean, :default => false
+  key :accepted, Boolean, :default => false
+
   key :wiki, Boolean, :default => false
   key :language, String, :default => "en"
 

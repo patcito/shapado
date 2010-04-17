@@ -153,8 +153,8 @@ module ApplicationHelper
   def class_for_question(question)
     klass = ""
 
-    if question.answered
-      klass << "answered"
+    if question.accepted
+      klass << "accepted"
     else
       klass << "unanswered"
     end
