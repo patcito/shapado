@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = current_group.pages.find(params[:id])
+    @page = current_group.pages.by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.haml
@@ -34,7 +34,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
-    @page = current_group.pages.find(params[:id])
+    @page = current_group.pages.by_slug(params[:id])
   end
 
   # POST /pages
@@ -60,7 +60,7 @@ class PagesController < ApplicationController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = current_group.pages.find(params[:id])
+    @page = current_group.pages.by_slug(params[:id])
     @page.safe_update(%w[title body tags wiki language adult_content css js], params[:page])
     @page.updated_by = current_user
 
