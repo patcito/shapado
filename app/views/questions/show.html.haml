@@ -162,7 +162,7 @@
     .entry
       .text.last_activity
         = t(".last_activity")
-      .data.updated{title => @question.activity_at, :class => "relativetime"}
+      .data.updated{:title => @question.activity_at, :class => "relativetime"}
         = t("time.ago", :time => time_ago_in_words(@question.activity_at))
   -if AppConfig.enable_sharing
     .block
