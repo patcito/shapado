@@ -14,7 +14,8 @@
     %li
       = link_to "Edit page", edit_page_path(@page)
 
--if safe_page?(@page)
-  = RDiscount.new(@page.body).to_html
--else
-  = markdown(@page.body)
+.markdown
+  -if safe_page?(@page)
+    = RDiscount.new(@page.body).to_html
+  -else
+    = markdown(@page.body)
