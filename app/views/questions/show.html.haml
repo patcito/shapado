@@ -186,4 +186,4 @@
         %ul.list
           -related_questions.each do |rq|
             %li
-              =link_to h(rq.title), question_path(rq), :title => truncate(rq.body, :length => 200)
+              =link_to h(rq.title), question_path(rq), :title => truncate(strip_tags(rq.body), :length => 200)

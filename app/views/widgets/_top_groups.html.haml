@@ -6,7 +6,7 @@
     -widget.top_groups.each do |group|
       %li
         = link_to h(group.name), domain_url(:custom => group.domain)
-        &= truncate(group.description, :length => 35)
+        &= truncate(strip_tags(group.description), :length => 35)
   .more
     =link_to t("scaffold.more"), groups_path
   .clear

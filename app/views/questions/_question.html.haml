@@ -46,7 +46,7 @@
               = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
               = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "quick-vote-button")
 
-      %h3= link_to title, question_path(question), :title => truncate(h(question.body), :length => 200)
+      %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
       .tag-list
         -question.tags.each do |tag|
           %span.tag{:class => "tag_#{h(tag)}"}
