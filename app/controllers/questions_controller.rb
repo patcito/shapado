@@ -113,7 +113,7 @@ class QuestionsController < ApplicationController
 
   def unanswered
     set_page_title(t("questions.unanswered.title"))
-    conditions = scoped_conditions({:answered => false, :banned => false})
+    conditions = scoped_conditions({:answered_with_id => nil, :banned => false})
 
     if logged_in?
       if @active_subtab.to_s == "expert"

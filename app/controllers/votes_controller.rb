@@ -103,6 +103,16 @@ class VotesController < ApplicationController
       flash[:notice] = t("votes.destroy.flash_notice")
       state = :deleted
     end
+
+    if vote.voteable_type == "Answer"
+      question = voteable.question
+      if vote.value == 1
+        Question.set(question.id, {:answered_with_id => voteable.id}) if !question.answered
+      elsif question.answered_with_id == voteable.id && voteable.votes_average <= 1
+        Question.set(question.id, {:answered_with_id => nil})
+      end
+    end
+
     state
   end
 end

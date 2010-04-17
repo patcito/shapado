@@ -24,8 +24,10 @@ class Question
 
   key :adult_content, Boolean, :default => false
   key :banned, Boolean, :default => false
-  key :answered, Boolean, :default => false
   key :accepted, Boolean, :default => false
+
+  key :answered_with_id, String
+  belongs_to :answered_with, :class_name => "Answer"
 
   key :wiki, Boolean, :default => false
   key :language, String, :default => "en"
@@ -241,6 +243,10 @@ class Question
     if !valid
       self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
     end
+  end
+
+  def answered
+    self.answered_with_id.present?
   end
 
   def self.update_last_target(question_id, target)
