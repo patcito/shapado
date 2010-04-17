@@ -41,7 +41,10 @@ class PagesController < ApplicationController
   # POST /pages.json
   def create
     @page = Page.new
-    @page.safe_update(%w[title body tags wiki language adult_content css js], params[:page])
+    @page.safe_update(%w[title body tags wiki language adult_content css], params[:page])
+    if (js = params[:page][:js]) && current_group.has_custom_js && current_user.role_on(current_group) == "owner"
+      @page.js = js
+    end
     @page.group = current_group
     @page.user = current_user
 

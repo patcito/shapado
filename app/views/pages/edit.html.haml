@@ -13,9 +13,10 @@
     = f.label :css, t(:css, :scope => "activerecord.attributes.page"), :class => "label"
     = f.text_area :css, :class => "text_area", :value => @page.has_css? ? @page.css.read : ""
 
-  .group
-    = f.label :js, t(:js, :scope => "activerecord.attributes.page"), :class => "label"
-    = f.text_area :js, :class => "text_area", :value => @page.has_js? ? @page.js.read : ""
+  -if current_group.has_custom_js && current_user.role_on(current_group) == "owner"
+    .group
+      = f.label :js, t(:js, :scope => "activerecord.attributes.page"), :class => "label"
+      = f.text_area :js, :class => "text_area", :value => @page.has_js? ? @page.js.read : ""
 
   .group.navform
     .right
