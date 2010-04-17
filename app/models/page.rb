@@ -9,6 +9,7 @@ class Page
   key :_id, String
   key :title, String
   key :body, String
+  key :public, Boolean, :default => true
 
   key :group_id, String, :required => true
   belongs_to :group
