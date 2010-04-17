@@ -1,0 +1,31 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+    -if @pages
+      == (#{@pages.total_entries})
+
+-content_for :sidebar do
+  -if current_user.mod_of?(current_group)
+    .block
+      %h3
+        Actions
+      .content
+        %ul.navigation
+          %li
+            = link_to "Create new page", new_page_path
+
+%ul.items#pages
+  -@pages.each do |page|
+    %li.item
+      .stats
+        .box
+          =link_to "View", page_path(page)
+        .box
+          =link_to "Edit", edit_page_path(page)
+      .summary
+        %h3
+          = link_to h(page.title), page_path(page)
+        &= truncate(strip_tags(page.body), :length => 200)
+
+
+

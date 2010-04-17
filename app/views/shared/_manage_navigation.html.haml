@@ -15,6 +15,8 @@
   -if @group.has_custom_html
     %li.content
       =link_to t("layouts.manage.content"), manage_content_path
+  %li.pages
+    = link_to t("layouts.manage.pages"), pages_path
 
   %li.theme
     =link_to t("layouts.manage.theme"), manage_theme_path

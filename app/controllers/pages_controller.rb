@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = current_group.pages
+    @pages = current_group.pages.paginate(:page => params[:page], :per_page => params[:per_page] || 25)
 
     respond_to do |format|
       format.html # index.html.haml
