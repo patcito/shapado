@@ -10,16 +10,16 @@
     &= @page.title
 
 -content_for :sidebar do
-  .block
-    %h3
-      Actions
-    .content
-      %ul.navigation
-        %li
-          = link_to "Create new page", new_page_path
-        %li
-          = link_to "Edit page", edit_page_path(@page)
-
+  -if @page.wiki
+    .block
+      %h3
+        Actions
+      .content
+        %ul.navigation
+          %li
+            = link_to "Create new page", new_page_path
+          %li
+            = link_to "Edit page", edit_page_path(@page)
 
 .markdown
   -if safe_page?(@page)
