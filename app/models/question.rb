@@ -97,6 +97,7 @@ class Question
     opts[:per_page] ||= 10
     opts[:page]     ||= 1
     opts[:group_id] = question.group_id
+    opts[:banned] = false
 
     Question.paginate(opts.merge(:_keywords => {:$in => question.tags}, :_id => {:$ne => question.id}))
   end
