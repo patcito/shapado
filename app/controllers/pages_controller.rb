@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html do
         if @page.nil? && params[:create]
-          @page = Page.new(:title => params[:id])
+          @page = Page.new(:title => params[:title], :slug => params[:id])
           render :action => "new"
         else
           render

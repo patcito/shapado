@@ -28,4 +28,8 @@ class Page
   file_key :css
 
   versionable_keys :title, :body, :tags
+
+  def self.by_title(title, options)
+    self.first(options.merge(:title => title)) || self.by_slug(title, options)
+  end
 end
