@@ -10,7 +10,7 @@
 
   %body
     = render :partial => "shared/analytics"
-    #container
+    #container{:class => @current_class}
       = render :partial => "shared/topbar"
       #header
         = current_group.head

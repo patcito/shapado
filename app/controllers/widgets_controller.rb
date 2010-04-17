@@ -56,14 +56,14 @@ class WidgetsController < ApplicationController
   end
 
   private
-    def check_permissions
-      @group = current_group
+  def check_permissions
+    @group = current_group
 
-      if @group.nil?
-        redirect_to groups_path
-      elsif !current_user.owner_of?(@group)
-        flash[:error] = t("global.permission_denied")
-        redirect_to ads_path
-      end
+    if @group.nil?
+      redirect_to groups_path
+    elsif !current_user.owner_of?(@group)
+      flash[:error] = t("global.permission_denied")
+      redirect_to ads_path
     end
+  end
 end
