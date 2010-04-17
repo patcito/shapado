@@ -109,7 +109,20 @@ module ApplicationHelper
       txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style])
     end
 
-    RDiscount.new(txt, :smart).to_html
+    RDiscount.new(render_page_links(txt), :smart).to_html
+  end
+
+  def render_page_links(text)
+    text.gsub(/\[\[(.+)\]\]/) do |m|
+      link = $1.split("|", 2)
+      page = Page.by_slug(link.last, :select => [:title])
+
+      if page
+        %@<a href="/pages/#{link.last}" class="page_link">#{link.first}</a>@
+      else
+        %@<a href="/pages/#{link.last}?create=true" class="missing_page">#{link.first}</a>@
+      end
+    end
   end
 
   def format_number(number)

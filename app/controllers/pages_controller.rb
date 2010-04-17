@@ -16,7 +16,14 @@ class PagesController < ApplicationController
     @page = current_group.pages.by_slug(params[:id])
 
     respond_to do |format|
-      format.html # show.html.haml
+      format.html do
+        if @page.nil? && params[:create]
+          @page = Page.new(:title => params[:id])
+          render :action => "new"
+        else
+          render
+        end
+      end
       format.json  { render :json => @page }
     end
   end
