@@ -2,13 +2,15 @@
   / User Stats
   .stats
     .box.votes
-      .counter{:class => class_for_number(user.questions.count) }
-        =format_number(user.questions.count)
+      -count = user.questions.count(:group_id => current_group.id)
+      .counter{:class => class_for_number(count) }
+        =format_number(count)
       .text
         = t(:questions, :scope => "activerecord.models")
     .box.answers
-      .counter
-        =format_number(user.answers.count)
+      -count = user.answers.count(:group_id => current_group.id)
+      .counter{:class => class_for_number(count) }
+        =format_number(count)
       .text
         = t(:answers, :scope => "activerecord.models")
     .box.views
