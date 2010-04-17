@@ -392,7 +392,7 @@ Time.now ? 1 : 0)
       group = args.first
       if group.reputation_constrains.include?(key.to_s)
         if group.has_reputation_constrains
-          return self.owner_of?(group) || (self.reputation_on(group) >= group.reputation_constrains[key].to_i)
+          return self.owner_of?(group) || self.mod_of?(group) || (self.reputation_on(group) >= group.reputation_constrains[key].to_i)
         else
           return true
         end
