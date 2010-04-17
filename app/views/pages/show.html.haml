@@ -14,7 +14,7 @@
     %li
       = link_to "Edit page", edit_page_path(@page)
 
--if @page.wiki || @page.user.role_on(current_group) != "owner"
-  = markdown(@page.body)
--else
+-if safe_page?(@page)
   = RDiscount.new(@page.body).to_html
+-else
+  = markdown(@page.body)

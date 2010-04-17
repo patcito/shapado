@@ -9,6 +9,14 @@
 - form_for(@page, :url => page_path(@page), :html => {:class => "form"}) do |f|
   =render :partial => "form", :locals => {:f => f}
 
+  .group
+    = f.label :css, t(:css, :scope => "activerecord.attributes.page"), :class => "label"
+    = f.text_area :css, :class => "text_area", :value => @page.has_css? ? @page.css.read : ""
+
+  .group
+    = f.label :js, t(:js, :scope => "activerecord.attributes.page"), :class => "label"
+    = f.text_area :js, :class => "text_area", :value => @page.has_js? ? @page.js.read : ""
+
   .group.navform
     .right
       = f.label :wiki, "Wiki", :class => "radio"
