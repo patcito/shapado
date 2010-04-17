@@ -230,17 +230,12 @@ class QuestionsController < ApplicationController
         Magent.push("actors.judge", :on_ask_question, @question.id)
 
         flash[:notice] = t(:flash_notice, :scope => "questions.create")
+
         # TODO: move to magent
-        users = []; followers = []
-        if current_group.private || current_group.isolate
-          users = User.find_experts(@question.tags, [@question.language],
-                                                    :except => [current_user.id],
-                                                    :group_id => current_group.id)
-          followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
-        else
-          User.find_experts(@question.tags, [@question.language], :except => [current_user.id])
-          followers = @question.user.followers(:languages => [@question.language])
-        end
+        users = User.find_experts(@question.tags, [@question.language],
+                                                  :except => [current_user.id],
+                                                  :group_id => current_group.id)
+        followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
 
         (users - followers).each do |u|
           if !u.email.blank?
