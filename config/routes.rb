@@ -24,7 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adbards
   map.resources :badges
   map.resources :pages, :member => {:css => :get, :js => :get}
-  map.resources :announcements
+  map.resources :announcements, :collection => {:hide => :any }
 
 
   def build_questions_routes(router, options ={})

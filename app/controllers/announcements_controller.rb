@@ -85,7 +85,7 @@ class AnnouncementsController < ApplicationController
   end
 
   def hide
-    session[:announcement_hide_time] = Time.now.to_i
+    session[:announcement_hide_time] = Time.now
 
     respond_to do |format|
       format.html { redirect_to root_path }

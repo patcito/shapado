@@ -62,6 +62,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $("a.hide_announcement").click(function() {
+    $.post($(this).attr("href"), "format=js", function(data){
+      $("#announcement").hide();
+    })
+    return false;
+  });
 })
 
 function manageAjaxError(XMLHttpRequest, textStatus, errorThrown) {

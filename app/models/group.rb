@@ -192,7 +192,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
                   :order => "starts_at desc",
                   :group_id.in => [self.id, nil]}
     if hide_time
-      conditions[:updated_at] = {:$gt => hide_time.to_i}
+      conditions[:updated_at] = {:$gt => hide_time}
     end
     Announcement.all(conditions)
   end

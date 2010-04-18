@@ -17,6 +17,7 @@
           -announcements.each do |announcement|
             %p
               =markdown(announcement.message)
+          =link_to "Close", hide_announcements_path, :id => "hide_announcement"
 
       = render :partial => "shared/topbar"
       #header
