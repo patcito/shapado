@@ -1,9 +1,16 @@
 class AnnouncementsController < ApplicationController
+  before_filter :login_required
+  before_filter :check_permissions
+  layout "manage"
+
   # GET /announcements
   # GET /announcements.json
   def index
     @announcements = current_group.announcements.paginate(:page => params[:page],
-                                                          :per_page => params[:per_page])
+                                                          :per_page => params[:per_page],
+                                                          :order => "updated_at desc")
+
+    @announcement = Announcement.new
 
     respond_to do |format|
       format.html # index.html.haml
@@ -11,62 +18,24 @@ class AnnouncementsController < ApplicationController
     end
   end
 
-  # GET /announcements/1
-  # GET /announcements/1.json
-  def show
-    @announcement = current_group.announcements.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.haml
-      format.json  { render :json => @announcement }
-    end
-  end
-
-  # GET /announcements/new
-  # GET /announcements/new.json
-  def new
-    @announcement = Announcement.new
-
-    respond_to do |format|
-      format.html # new.html.haml
-      format.json  { render :json => @announcement }
-    end
-  end
-
-  # GET /announcements/1/edit
-  def edit
-    @announcement = current_group.announcements.find(params[:id])
-  end
-
   # POST /announcements
   # POST /announcements.json
   def create
-    @announcement = Announcement.new(params[:announcement])
+    @announcement = Announcement.new
+    @announcement.safe_update(%w[message], params[:announcement])
+
+    @announcement.starts_at = build_datetime(params[:announcement], "starts_at")
+    @announcement.ends_at = build_datetime(params[:announcement], "ends_at")
+
+    @announcement.group = current_group
 
     respond_to do |format|
       if @announcement.save
-        flash[:notice] = 'Announcement was successfully created.'
-        format.html { redirect_to(@announcement) }
+        flash[:notice] = I18n.t("announcements.create.success")
+        format.html { redirect_to announcements_url }
         format.json  { render :json => @announcement, :status => :created, :location => @announcement }
       else
-        format.html { render :action => "new" }
-        format.json  { render :json => @announcement.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /announcements/1
-  # PUT /announcements/1.json
-  def update
-    @announcement = current_group.announcements.find(params[:id])
-
-    respond_to do |format|
-      if @announcement.update_attributes(params[:announcement])
-        flash[:notice] = 'Announcement was successfully updated.'
-        format.html { redirect_to(@announcement) }
-        format.json  { head :ok }
-      else
-        format.html { render :action => "edit" }
+        format.html { render :action => "index" }
         format.json  { render :json => @announcement.errors, :status => :unprocessable_entity }
       end
     end
@@ -90,6 +59,16 @@ class AnnouncementsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { render :json => {:status => "ok"} }
+    end
+  end
+
+  protected
+  def check_permissions
+    if current_group.nil?
+      redirect_to root_path
+    elsif !current_user.owner_of?(current_group) && !current_user.admin?
+      flash[:error] = t("global.permission_denied")
+      redirect_to domain_url(:custom => current_group.domain)
     end
   end
 end

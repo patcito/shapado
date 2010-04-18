@@ -1,0 +1,15 @@
+en:
+  pages:
+    title: fixme
+    index:
+      title: list of announcements
+    create:
+      success: 'Page was successfully created.'
+    form:
+    actions:
+      title: Actions
+      delete: remove
+
+  activerecord:
+    attributes:
+      announcement:
