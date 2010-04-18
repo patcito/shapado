@@ -5,9 +5,4 @@
 .description
   =t(".reputation_rewards_description")
 
-#reputation_form{:style => "width: 30%"}
-  -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
-    = f.error_messages
-    = render :partial => "groups/reputation_rewards_form", :object => f
-    .group.navform
-      = f.submit t('scaffold.update')
+= render :partial => "groups/reputation_rewards_form", :object => f
