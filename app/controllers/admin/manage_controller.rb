@@ -11,6 +11,10 @@ class Admin::ManageController < ApplicationController
        :widgets => :widgets,
        :reputation => :reputation
 
+  subtabs :properties => [[:general, "general"],
+                          [:rewards, "rewards"],
+                          [:constrains, "constrains"],
+                          [:theme, "theme"]]
   subtabs :content => [[:question_prompt, "question_prompt"],
                        [:question_help, "question_help"],
                        [:head_tag, "head_tag"],
@@ -20,13 +24,10 @@ class Admin::ManageController < ApplicationController
   end
 
   def properties
+    @active_subtab ||= "general"
   end
 
   def actions
-  end
-
-  def reputation
-    @active_subtab = params[:tab] || "rewards"
   end
 
   def stats
@@ -41,9 +42,6 @@ class Admin::ManageController < ApplicationController
       redirect_to domain_url(:custom => @group.domain, :controller => "manage",
                              :action => "properties")
     end
-  end
-
-  def theme
   end
 
   protected

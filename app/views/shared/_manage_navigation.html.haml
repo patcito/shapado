@@ -18,11 +18,6 @@
   %li.pages
     = link_to t("layouts.manage.pages"), pages_path
 
-  %li.theme
-    =link_to t("layouts.manage.theme"), manage_theme_path
-  %li.reputation
-    =link_to t("layouts.manage.reputation"), manage_reputation_path
-
   -if current_group.has_custom_ads
     %li.ads
       =link_to t("layouts.application.manage_ads"), ads_path
