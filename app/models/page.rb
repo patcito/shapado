@@ -29,7 +29,8 @@ class Page
 
   versionable_keys :title, :body, :tags
 
-  validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
+  validates_uniqueness_of :title, :scope => [:group_id, :language]
+  validates_uniqueness_of :slug, :scope => [:group_id, :language], :allow_blank => true
 
   def self.by_title(title, options)
     self.first(options.merge(:title => title)) || self.by_slug(title, options)
