@@ -10,14 +10,14 @@ en:
       properties:
         general:
           title: group properties
-        reputation:
-          title: setup reputation's properties
-          constrains: constrains
-          rewards: rewards
-          reputation_rewards_subtitle: list of reputations rewards
-          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+        constrains:
+          title: constrains
           reputation_constrains_subtitle: list of reputations constrains for each action
           reputation_constrains_description: this formular allows you to configure how much reputation points users to be able to do a given action
+        rewards:
+          title: rewards
+          reputation_rewards_subtitle: list of reputations rewards
+          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
         theme:
           title: setup the group's theme
         domain:
