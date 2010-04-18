@@ -228,5 +228,21 @@ module ApplicationHelper
 
     tags.join(', ')
   end
+
+  def current_announcements(hide_time = nil)
+    conditions = {:starts_at.lte => Time.now.to_i,
+                  :ends_at.gte => Time.now.to_i,
+                  :order => "starts_at desc",
+                  :group_id.in => [current_group.id, nil]}
+    if hide_time
+      conditions[:updated_at] = {:$gt => hide_time}
+    end
+
+    if logged_in?
+      conditions[:only_anonymous] = false
+    end
+
+    Announcement.all(conditions)
+  end
 end
 

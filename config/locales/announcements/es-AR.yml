@@ -15,3 +15,4 @@ es-AR:
         message: message
         starts_at: starts at
         ends_at: ends at
+        only_anonymous: only for anonymous users

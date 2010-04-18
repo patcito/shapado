@@ -22,7 +22,7 @@
               = link_to image_tag("default_logo.png", :class => "group_logo"), domain_url(:custom => current_group.domain)
           = render :partial => "shared/user_navigation"
           .clear
-          -announcements = current_group.current_announcements(session[:announcement_hide_time])
+          -announcements = current_announcements(session[:announcement_hide_time])
           -unless announcements.empty?
             #announcement
               #announcement_message

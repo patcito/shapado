@@ -1,15 +1,18 @@
 en:
-  pages:
-    title: fixme
+  announcements:
     index:
-      title: list of announcements
+      title: announcements
     create:
-      success: 'Page was successfully created.'
+      success: 'announcement was successfully created.'
     form:
     actions:
-      title: Actions
+      title: actions
       delete: remove
 
   activerecord:
     attributes:
       announcement:
+        message: message
+        starts_at: starts at
+        ends_at: ends at
+        only_anonymous: only for anonymous users

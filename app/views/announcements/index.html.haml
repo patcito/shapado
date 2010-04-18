@@ -20,4 +20,7 @@
         %h3
           = markdown(announcement.message)
         = "#{announcement.starts_at.strftime("<b>%x</b> %X")} - #{announcement.ends_at.strftime("<b>%x</b> %X")}"
+        -if announcement.only_anonymous
+          %strong
+            = "[#{t("activerecord.attributes.announcement.only_anonymous")}]"
 

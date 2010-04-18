@@ -8,6 +8,8 @@ class Announcement
   key :starts_at, Timestamp, :required => true
   key :ends_at, Timestamp, :required => true
 
+  key :only_anonymous, Boolean, :default => false
+
   key :group_id, String
   belongs_to :group
 

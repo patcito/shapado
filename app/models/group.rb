@@ -186,17 +186,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     User.paginate(conditions.merge("membership_list.#{self.id}.reputation" => {:$exists => true}))
   end
 
-  def current_announcements(hide_time = nil)
-    conditions = {:starts_at.lte => Time.now.to_i,
-                  :ends_at.gte => Time.now.to_i,
-                  :order => "starts_at desc",
-                  :group_id.in => [self.id, nil]}
-    if hide_time
-      conditions[:updated_at] = {:$gt => hide_time}
-    end
-    Announcement.all(conditions)
-  end
-
   def pending?
     state == "pending"
   end

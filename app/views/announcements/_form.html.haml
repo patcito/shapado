@@ -15,3 +15,7 @@
 .group
   = f.label :ends_at, t(:ends_at, :scope => "activerecord.attributes.announcement"), :class => "label"
   = f.datetime_select :ends_at, :default => Time.zone.now.at_midnight.tomorrow
+
+.group
+  = f.check_box :only_anonymous, :class => "checkbox"
+  = f.label :only_anonymous, t(:only_anonymous, :scope => "activerecord.attributes.announcement"), :class => "radio"

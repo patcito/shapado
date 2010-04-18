@@ -22,7 +22,7 @@ class AnnouncementsController < ApplicationController
   # POST /announcements.json
   def create
     @announcement = Announcement.new
-    @announcement.safe_update(%w[message], params[:announcement])
+    @announcement.safe_update(%w[message only_anonymous], params[:announcement])
 
     @announcement.starts_at = build_datetime(params[:announcement], "starts_at")
     @announcement.ends_at = build_datetime(params[:announcement], "ends_at")
