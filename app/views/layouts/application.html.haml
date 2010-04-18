@@ -11,10 +11,12 @@
   %body
     = render :partial => "shared/analytics"
     #container{:class => @current_class}
-      #announcement
-        -current_group.current_announcements.each do |announcement|
-          %p
-            =markdown(announcement.message)
+      -announcements = current_group.current_announcements(session[:announcement_hide_time])
+      -unless announcements.empty?
+        #announcement
+          -announcements.each do |announcement|
+            %p
+              =markdown(announcement.message)
 
       = render :partial => "shared/topbar"
       #header

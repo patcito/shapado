@@ -1,6 +1,7 @@
 class Announcement
   include MongoMapper::Document
 
+  timestamps!
   key :_id, String
 
   key :message, String, :required => true
@@ -14,7 +15,7 @@ class Announcement
 
   protected
   def check_dates
-    if self.starts_at <= Time.now
+    if self.starts_at < Time.now.yesterday
       self.errors.add(:starts_at, "Starting date should be setted to a future date")
     end
 

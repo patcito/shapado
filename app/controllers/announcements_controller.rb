@@ -83,4 +83,13 @@ class AnnouncementsController < ApplicationController
       format.json  { head :ok }
     end
   end
+
+  def hide
+    session[:announcement_hide_time] = Time.now.to_i
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { render :json => {:status => "ok"} }
+    end
+  end
 end
