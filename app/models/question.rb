@@ -25,6 +25,7 @@ class Question
   key :adult_content, Boolean, :default => false
   key :banned, Boolean, :default => false
   key :accepted, Boolean, :default => false
+  key :closed, Boolean, :default => false
 
   key :answered_with_id, String
   belongs_to :answered_with, :class_name => "Answer"
@@ -48,6 +49,10 @@ class Question
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
+  key :close_reason_id, String
+  belongs_to :close_reason, :class_name => "CloseRequest"
+
+
   key :last_target_type, String
   key :last_target_id, String
   belongs_to :last_target, :polymorphic => true
@@ -57,6 +62,7 @@ class Question
   has_many :flags, :as => "flaggeable", :dependent => :destroy
   has_many :badges, :as => "source"
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
+  has_many :close_requests
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
@@ -65,8 +71,7 @@ class Question
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { !tags.empty? && tags.size <= 6},
                      :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6
-                                          I18n.t("questions.model.messages.empty_tags") if tags.empty?
-                                         }
+                                          I18n.t("questions.model.messages.empty_tags") if tags.empty? }
 
   versionable_keys :title, :body, :tags
   filterable_keys :title, :body
@@ -268,6 +273,11 @@ class Question
                            {:$set => {:last_target_id => target.id,
                                       :last_target_type => target.class.to_s}},
                            :upsert => true)
+  end
+
+  def can_be_requested_to_close_by?(user)
+    ((self.user_id == user.id) && user.can_vote_to_close_own_question_on?(self.group)) ||
+    user.can_vote_to_close_any_question_on?(self.group)
   end
 
   protected

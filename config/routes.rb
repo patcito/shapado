@@ -46,11 +46,13 @@ ActionController::Routing::Routes.draw do |map|
                                             :move => :get,
                                             :move_to => :put,
                                             :retag => :get,
-                                            :retag_to => :put} do |questions|
+                                            :retag_to => :put,
+                                            :close => :get} do |questions|
         questions.resources :answers, :member => {:flag => :get,
                                                   :history => :get,
                                                   :diff => :get,
                                                   :revert => :get}
+        questions.resources :close_requests
       end
     end
   end

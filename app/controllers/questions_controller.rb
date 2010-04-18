@@ -1,9 +1,10 @@
 class QuestionsController < ApplicationController
   before_filter :login_required, :except => [:create, :index, :show, :tags, :unanswered, :related_questions, :tags_for_autocomplete, :retag, :retag_to]
   before_filter :admin_required, :only => [:move, :move_to]
+  before_filter :moderator_required, :only => [:close]
   before_filter :check_permissions, :only => [:solve, :unsolve, :destroy, :revert]
   before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
-  before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite]
+  before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite] #TODO remove this
   before_filter :set_active_tag
   before_filter :check_age, :only => [:show]
   before_filter :check_retag_permissions, :only => [:retag, :retag_to]
@@ -348,6 +349,21 @@ class QuestionsController < ApplicationController
 
         format.html { render :action => "show" }
         format.json  { render :json => @question.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def close
+    @question = Question.find_by_slug_or_id(params[:id])
+    @question.closed = true
+    respond_to do |format|
+      if @question.save
+        format.html { redirect_to question_path(@question) }
+        format.json { head :ok }
+      else
+        flash[:error] = @question.errors.full_messages.join(", ")
+        format.html { redirect_to question_path(@question) }
+        format.json { render :json => @question.errors, :status => :unprocessable_entity  }
       end
     end
   end

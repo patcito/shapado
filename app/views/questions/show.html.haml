@@ -1,5 +1,12 @@
 -@current_class = 'question hentry entry post'
 
+
+-show_close_request_form = !@question.closed && logged_in? &&@question.can_be_requested_to_close_by?(current_user)
+
+-if show_close_request_form
+  -@close_request = @question.close_requests.detect{ |rq| rq.user_id == current_user.id } || CloseRequest.new(:reason => "dupe")
+
+
 -require_js 'jsMath/easy/load.js'
 -question_body = find_and_preserve(shapado_auto_link(markdown(@question.body.present? ? @question.body : @question.title)))
 
@@ -12,6 +19,7 @@
     &= @question.title
 
 -source = question_path(@question)
+=error_messages_for 'answer'
 
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
@@ -63,7 +71,10 @@
       .clear
   .controls
     .actions
-      =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :rel => 'nofollow'
+      =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
+      -if show_close_request_form
+        =link_to t(".request_close"), new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow'
+
       -if logged_in?
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
@@ -74,10 +85,20 @@
         -if current_user.mod_of?(@question.group)
           %br
           = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+          = link_to "close", close_question_path(@question), :class => "button", :confirm => "are you sure?"
     .forms
       -flag = Flag.new
       - flag.flaggeable = @question
-      = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
+      = render :partial => "flags/form", :locals => {:flag => flag, :source => source, :form_id => "question_flag_form" }
+
+      -if show_close_request_form
+        -if !@close_request.new?
+          = link_to t("scaffold.delete"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
+        -form_for [@question, @close_request], :html => {:class => "form hide", :id => "request_close_question_form"} do |form|
+          = render :partial => "close_requests/form", :object => form
+          .group.navform
+            = submit_tag t(".request_close"), :class => "button"
+
 
       -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do
         -@comment = Comment.new
@@ -113,15 +134,16 @@
         =render :partial=> "answer", :locals=> {:question => @question, :answer => answer}
     =will_paginate(@answers)
 
-%a{:name=>"to_answer"}
--form_for @answer, :url => question_answers_path(@question.id), :html => {:class => "form mainAnswerForm"} do |f|
-  = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
-  .group.navform
-    .right
-      = f.label :wiki, "Wiki", :class => "radio"
-      = f.check_box :wiki, :class => "checkbox"
-    = submit_tag t('answers.form.submit'), :class => "button"
-  .clear
+-unless @question.closed
+  %a{:name=>"to_answer"}
+  -form_for @answer, :url => question_answers_path(@question.id), :html => {:class => "form mainAnswerForm"} do |f|
+    = render :partial => "answers/form", :locals => {:f => f, :markdown => true}
+    .group.navform
+      .right
+        = f.label :wiki, "Wiki", :class => "radio"
+        = f.check_box :wiki, :class => "checkbox"
+      = submit_tag t('answers.form.submit'), :class => "button"
+    .clear
 
 -content_for :sidebar do
   -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))

@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   $("form.nestedAnswerForm").hide();
-  $("form.flag_form").hide();
+  $(".forms form.flag_form").hide();
   $("#add_comment_form").hide();
 
   $("form.vote_form button").live("click", function(event) {
@@ -102,6 +102,35 @@ $(document).ready(function() {
     return false;
   });
 
+  $("#request_close_question_form").submit(function() {
+    var button = $(this).find("input.button")
+    button.attr('disabled', true)
+    form = $(this)
+
+    $.ajax({
+      url: $(this).attr("action"),
+      data: $(this).serialize()+"&format=js",
+      dataType: "json",
+      type: "POST",
+      success: function(data, textStatus, XMLHttpRequest) {
+        if(data.success) {
+          form.slideUp()
+          showMessage(data.message, "notice")
+        } else {
+          showMessage(data.message, "error")
+          if(data.status == "unauthenticate") {
+            window.location="/users/login"
+          }
+        }
+      },
+      error: manageAjaxError,
+      complete: function(XMLHttpRequest, textStatus) {
+        button.attr('disabled', false)
+      }
+    });
+    return false;
+  });
+
   $(".edit_comment").live("click", function() {
     var comment = $(this).parents(".comment")
     var link = $(this)
@@ -171,14 +200,15 @@ $(document).ready(function() {
     return false;
   });
 
-  $(".flag-link").live("click", function() {
+  $(".answer .flag-link").live("click", function() {
     var controls = $(this).parents(".controls")
     controls.find(".forms form.nestedAnswerForm").slideUp();
     controls.find(".forms .flag_form").slideToggle();
     return false;
   });
 
-  $("#question_flag_link").click(function() {
+  $("#question_flag_link.flag-link").click(function() {
+    $("#request_close_question_form").slideUp();
     $("#add_comment_form").slideUp();
     $("#question_flag_form").slideToggle();
     return false;
@@ -186,9 +216,17 @@ $(document).ready(function() {
 
   $("#add_comment_link").click(function() {
     var controls = $(this).parents(".controls")
-    controls.find(".forms form.nestedAnswerForm").slideUp();
-    controls.find(".forms .flag_form").slideUp();
+    $("#request_close_question_form").slideUp();
+    $("#question_flag_form").slideUp();
     $("#add_comment_form").slideToggle();
+    return false;
+  });
+
+  $("#request-close-link").click(function() {
+    var controls = $(this).parents(".controls")
+    $("#add_comment_form").slideUp();
+    $("#question_flag_form").slideUp();
+    $("#request_close_question_form").slideToggle();
     return false;
   });
 
