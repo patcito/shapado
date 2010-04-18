@@ -36,3 +36,6 @@ es-AR:
       theme: tema
       domain: dominio
       pages: paginas
+      constrains: restricciones
+      rewards: premios
+      general: general

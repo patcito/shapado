@@ -36,3 +36,6 @@ fr:
       theme: thème
       domain: domaine
       pages: pages
+      constrains: constrains
+      rewards: rewards
+      general: general
