@@ -7,5 +7,5 @@ en:
         content: content
         item_title: title
         all: all
-        flaged: flagged questions
+        flagged: flagged questions
         banned: banned questions

@@ -4,7 +4,7 @@
     = t(".title")
   %ul
     %li.questions
-      = link_to t(".flaged", :default => :"activerecord.models"), moderate_path(:tab=>"questions")
+      = link_to t(".flagged", :default => :"activerecord.models"), moderate_path(:tab=>"questions")
     %li.answers
       = link_to t(".answers", :default => :"activerecord.models.answers"), moderate_path(:tab=>"answers")
     %li.banneds

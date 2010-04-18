@@ -29,7 +29,7 @@ class Flag
 
     valid = (flag.nil? || flag.id == self.id)
     if !valid
-      self.errors.add(:flagged, "You already flaged this #{self.flaggeable_type}")
+      self.errors.add(:flagged, "You already flagged this #{self.flaggeable_type}")
     end
   end
 
