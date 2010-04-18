@@ -213,7 +213,7 @@ Time.now ? 1 : 0)
   end
 
   def mod_of?(group)
-    owner_of?(group) || role_on(group) == "moderator" || self.can_moderate_on?(group)
+    owner_of?(group) || role_on(group) == "moderator" || self.reputation_on(group) >= group.reputation_constrains["moderate"].to_i
   end
 
   def user_of?(group)
