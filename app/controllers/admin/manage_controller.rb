@@ -8,13 +8,13 @@ class Admin::ManageController < ApplicationController
        :theme => :theme,
        :actions => :actions,
        :stats => :stats,
-       :widgets => :widgets,
-       :reputation => :reputation
+       :widgets => :widgets
 
   subtabs :properties => [[:general, "general"],
                           [:rewards, "rewards"],
                           [:constrains, "constrains"],
-                          [:theme, "theme"]]
+                          [:theme, "theme"],
+                          [:domain, "domain"]]
   subtabs :content => [[:question_prompt, "question_prompt"],
                        [:question_help, "question_help"],
                        [:head_tag, "head_tag"],
