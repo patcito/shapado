@@ -3,6 +3,8 @@ class AnnouncementsController < ApplicationController
   before_filter :check_permissions
   layout "manage"
 
+  tabs :default => :announcements
+
   # GET /announcements
   # GET /announcements.json
   def index
