@@ -11,25 +11,25 @@
   %body
     = render :partial => "shared/analytics"
     #container{:class => @current_class}
-      -announcements = current_group.current_announcements(session[:announcement_hide_time])
-      -unless announcements.empty?
-        #announcement
-          -announcements.each do |announcement|
-            %p
-              =markdown(announcement.message)
-          =link_to "Close", hide_announcements_path, :id => "hide_announcement"
-
       = render :partial => "shared/topbar"
       #header
         = current_group.head
         #main-bar{:class => @active_tab}
-          #logo
+          #logo{:style => "min-height: 63px"}
             -if current_group.has_logo?
               =link_to image_tag(logo_group_path(current_group), :class => "group_logo"), domain_url(:custom => current_group.domain)
             -else
               = link_to image_tag("default_logo.png", :class => "group_logo"), domain_url(:custom => current_group.domain)
           = render :partial => "shared/user_navigation"
           .clear
+          -announcements = current_group.current_announcements(session[:announcement_hide_time])
+          -unless announcements.empty?
+            #announcement
+              #announcement_message
+                -announcements.each do |announcement|
+                  =markdown(announcement.message)
+              =link_to "Close", hide_announcements_path, :id => "hide_announcement"
+              .clear
       #wrapper
         #main
           = render :partial => "shared/ads/header_ads"

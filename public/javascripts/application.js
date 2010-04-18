@@ -62,10 +62,9 @@ $(document).ready(function() {
     return false;
   });
 
-  $("a.hide_announcement").click(function() {
-    $.post($(this).attr("href"), "format=js", function(data){
-      $("#announcement").hide();
-    })
+  $("a#hide_announcement").click(function() {
+    $("#announcement").hide();
+    $.post($(this).attr("href"), "format=js");
     return false;
   });
 })
