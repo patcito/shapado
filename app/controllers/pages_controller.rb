@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:show]
+  before_filter :moderator_required, :only => [:index]
+
   before_filter :check_page_permissions, :only => [:new, :create, :edit, :update, :destroy]
 
   layout :set_layout

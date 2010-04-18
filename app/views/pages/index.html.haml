@@ -5,7 +5,7 @@
       == (#{@pages.total_entries})
 
 -content_for :sidebar do
-  -if current_user.mod_of?(current_group)
+  -if logged_in? && current_user.mod_of?(current_group)
     .block
       %h3
         Actions
