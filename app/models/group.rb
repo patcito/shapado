@@ -77,6 +77,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
   has_many :pages, :dependent => :destroy
+  has_many :announcements, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
@@ -183,6 +184,13 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
 
   def users(conditions = {})
     User.paginate(conditions.merge("membership_list.#{self.id}.reputation" => {:$exists => true}))
+  end
+
+  def current_announcements
+    Announcement.all(:starts_at.lte => Time.now.to_i,
+                     :ends_at.gte => Time.now.to_i,
+                     :order => "starts_at desc",
+                     :group_id.in => [self.id, nil])
   end
 
   def pending?
