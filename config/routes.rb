@@ -41,7 +41,9 @@ ActionController::Routing::Routes.draw do |map|
                                             :diff => :get,
                                             :rollback => :put,
                                             :move => :get,
-                                            :move_to => :put} do |questions|
+                                            :move_to => :put,
+                                            :retag => :get,
+                                            :retag_to => :put} do |questions|
         questions.resources :answers, :member => {:flag => :get,
                                                   :history => :get,
                                                   :diff => :get,
