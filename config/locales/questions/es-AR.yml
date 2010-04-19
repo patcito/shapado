@@ -33,6 +33,10 @@ es-AR:
       asked_on: "preguntado en"
       last_activity: última actividad
       retag: re-etiquetar
+      request_closing: pedir cierre
+      request_closing_details: pide cerrar esta pregunta
+      close: close
+      ban: ban
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"

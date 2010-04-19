@@ -73,7 +73,7 @@
     .actions
       =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
       -if show_close_request_form
-        =link_to t(".request_close"), new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow'
+        =link_to t(".request_closing"), new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
 
       -if logged_in?
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
@@ -84,8 +84,8 @@
 
         -if current_user.mod_of?(@question.group)
           %br
-          = link_to "ban", ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
-          = link_to "close", close_question_path(@question), :class => "button", :confirm => "are you sure?"
+          = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
+          = link_to t(".close"), close_question_path(@question), :class => "button", :confirm => "are you sure?"
     .forms
       -flag = Flag.new
       - flag.flaggeable = @question
@@ -97,7 +97,7 @@
         -form_for [@question, @close_request], :html => {:class => "form hide", :id => "request_close_question_form"} do |form|
           = render :partial => "close_requests/form", :object => form
           .group.navform
-            = submit_tag t(".request_close"), :class => "button"
+            = submit_tag t(".request_closing_details"), :class => "button"
 
 
       -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do

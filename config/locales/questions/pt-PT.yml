@@ -33,6 +33,10 @@ pt-PT:
       asked_on: "asked on"
       last_activity: last activity
       retag: retag
+      request_closing: request closing
+      request_closing_details: request to close this question
+      close: close
+      ban: ban
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
