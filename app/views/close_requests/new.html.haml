@@ -3,4 +3,4 @@
 -form_for [@question, @close_request], :html => {:class => "form"} do |form|
   = render :partial => "form", :object => form
   .group.navform
-    = submit_tag t(".request_close"), :class => "button"
+    = submit_tag t("questions.show.request_closing_details"), :class => "button"

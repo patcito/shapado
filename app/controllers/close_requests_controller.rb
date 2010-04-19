@@ -1,5 +1,6 @@
 class CloseRequestsController < ApplicationController
   before_filter :login_required
+  before_filter :check_permissions, :except => [:create, :new]
 
   def create
     @question = current_group.questions.find_by_slug_or_id(params[:question_id])
@@ -58,5 +59,22 @@ class CloseRequestsController < ApplicationController
   def new
     @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = CloseRequest.new(:resource => "dupe")
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def check_permissions
+    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
+    @close_request = @question.close_requests.find(params[:id])
+    if !(@close_request.user_id == current_user.id) ||
+          !@question.can_be_requested_to_close_by?(current_user)
+      flash[:error] = t("global.permission_denied")
+      respond_to do |format|
+        format.html {redirect_to question_path(@question)}
+        format.js {render :json => {:success => false, :message => flash[:error]}}
+      end
+      return
+    end
   end
 end

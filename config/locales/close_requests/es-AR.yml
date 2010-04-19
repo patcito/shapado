@@ -7,3 +7,12 @@
      not_relevant: No es pertinente
      spam: Spam
      request_closing_details: pedir el cierre de esta pregunta
+    create:
+      flash_notice: Close request created successfully
+    update:
+      flash_notice: Close request updated successfully
+    destroy:
+      flash_notice: Close request deleted successfully
+    model:
+      messages:
+        already_requested: "You have already requested to close this question"

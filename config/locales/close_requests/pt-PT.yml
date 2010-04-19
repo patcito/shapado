@@ -1,4 +1,4 @@
-en:
+pt-PT:
   close_requests:
     form:
      dupe: Dupe
@@ -7,3 +7,12 @@ en:
      not_relevant: Not relevant
      spam: Spam
      request_closing_details: request to close this question
+    create:
+      flash_notice: Close request created successfully
+    update:
+      flash_notice: Close request updated successfully
+    destroy:
+      flash_notice: Close request deleted successfully
+    model:
+      messages:
+        already_requested: "You have already requested to close this question"
