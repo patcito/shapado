@@ -76,6 +76,8 @@ fr:
       success:      "vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
     unwatch:
       success:      "vous n'allez plus recevoir de notifications par email pour chaque réponse à cette question."
+    revert:
+      title: "revert question"
     move:
       title:        "transférer la question: {{title}}"
       group_label:  "transférer au groupe du nom:"

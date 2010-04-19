@@ -33,6 +33,17 @@ module Versionable
       save!
     end
 
+    def load_version(pos = nil)
+      pos = self.versions.count-1 if pos.nil?
+      version = self.versions[pos]
+
+      if version
+        version.data.each do |key, value|
+          self.send("#{key}=", value)
+        end
+      end
+    end
+
     def diff(key, pos1, pos2, format = :html)
       version1 = self.version_at(pos1)
       version2 = self.version_at(pos2)

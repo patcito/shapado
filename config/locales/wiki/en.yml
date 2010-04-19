@@ -8,7 +8,7 @@ en:
     diff:
       title: differences between {{prev}} and {{curr}}
     actions:
-      set_as_current: set as current
+      revert: revert to this version
       show_diff: compare selected versions
       all_history: back to history
       back_to_question: back to question
