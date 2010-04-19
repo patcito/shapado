@@ -115,12 +115,14 @@ module ApplicationHelper
   def render_page_links(text)
     text.gsub(/\[\[(.+)\]\]/) do |m|
       link = $1.split("|", 2)
-      page = Page.by_title(link.first, :select => [:title, :slug])
+      page = Page.by_title(link.first, :group_id => current_group.id, :select => [:title, :slug])
+
+      page_name = link[1] ? link[1] : page.title
 
       if page
-        %@<a href="/pages/#{page.slug}" class="page_link">#{link.last}</a>@
+        %@<a href="/pages/#{page.slug}" class="page_link">#{page_name}</a>@
       else
-        %@<a href="/pages/#{link.first.parameterize.to_s}?create=true&title=#{link.first}" class="missing_page">#{link.last}</a>@
+        %@<a href="/pages/#{link.first.parameterize.to_s}?create=true&title=#{link.first}" class="missing_page">#{page_name}</a>@
       end
     end
   end

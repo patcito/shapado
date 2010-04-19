@@ -4,6 +4,7 @@ en:
     index:
       title: list of pages
       create_page: create new page
+      written_in: written in {{language}}
     edit:
       title: Editing page
     create:
