@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
   before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite]
   before_filter :set_active_tag
   before_filter :check_age, :only => [:show]
+  before_filter :check_retag_permissions, :only => [:retag, :retag_to]
 
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question
@@ -476,32 +477,18 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
 
     @question.tags = params[:question][:tags]
-    if current_user.can_retag_others_questions_on?(current_group) || current_user.can_modify?(@question)
-     if @question.save
-       flash[:notice] = t("questions.retag_to.success", :group => @question.group.name)
-       respond_to do |format|
-         format.html {redirect_to question_path(@question)}
-         format.js {
-         render(:json => {:success => true,
-                  :message => flash[:notice], :tags => @question.tags }.to_json)
-         }
-       end
-     else
-       flash[:error] = t("questions.retag_to.failure",
-                         :group => params[:question][:group])
-       respond_to do |format|
-         format.html {render :retag}
-         format.js {
-         render(:json => {:success => false,
-                  :message => flash[:error] }.to_json)
-         }
-       end
-     end
+    if @question.save
+      flash[:notice] = t("questions.retag_to.success", :group => @question.group.name)
+      respond_to do |format|
+        format.html {redirect_to question_path(@question)}
+        format.js {
+          render(:json => {:success => true,
+                   :message => flash[:notice], :tags => @question.tags }.to_json)
+        }
+      end
     else
-      reputation = @question.group.reputation_constrains["retag_others_questions"]
-      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
-                                    :min_reputation => reputation,
-                                    :action => I18n.t("users.actions.retag_others_questions"))
+      flash[:error] = t("questions.retag_to.failure",
+                        :group => params[:question][:group])
       respond_to do |format|
         format.html {render :retag}
         format.js {
@@ -564,6 +551,24 @@ class QuestionsController < ApplicationController
           flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
         end
+      end
+    end
+  end
+
+
+  def check_retag_permissions
+    @question = Question.find_by_slug_or_id(params[:id])
+    unless current_user.can_retag_others_questions_on?(current_group) ||  current_user.can_modify?(@question)
+      reputation = @question.group.reputation_constrains["retag_others_questions"]
+      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                    :min_reputation => reputation,
+                                    :action => I18n.t("users.actions.retag_others_questions"))
+      respond_to do |format|
+        format.html {render :retag}
+        format.js {
+          render(:json => {:success => false,
+                   :message => flash[:error] }.to_json)
+        }
       end
     end
   end

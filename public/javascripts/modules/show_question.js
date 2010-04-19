@@ -10,7 +10,6 @@ $(document).ready(function() {
     $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.success){
         form.find(".votes_average").text(data.average)
-        console.log(data)
         if(data.vote_state == "deleted") {
           form.find("button[name=vote_down] img").attr("src", "/images/to_vote_down.png")
           form.find("button[name=vote_up] img").attr("src", "/images/to_vote_up.png")
@@ -227,15 +226,22 @@ $(document).ready(function() {
 $('#retag').live('click',function(){
   var link = $(this);
   $.ajax({
-      dataType: "json",
-      type: "GET",
-                 url : link.attr('href'),
-                              extraParams : { 'format' : 'js'},
-                              success: function(data) {
-                                 link.parents(".tag-list").find('.tag').hide();
-                                 $('.retag').hide();
-                                 link.parents(".tag-list").prepend(data.html);
-                              }
+    dataType: "json",
+    type: "GET",
+    url : link.attr('href'),
+    extraParams : { 'format' : 'js'},
+    success: function(data) {
+      if(data.success){
+        link.parents(".tag-list").find('.tag').hide();
+        $('.retag').hide();
+        link.parents(".tag-list").prepend(data.html);
+      } else {
+          showMessage(data.message, "error");
+          if(data.status == "unauthenticate") {
+            window.location="/users/login"
+          }
+      }
+    }
   });
   return false;
 })
