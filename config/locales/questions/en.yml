@@ -84,9 +84,16 @@ en:
       submit:       "move!"
     move_to:
       success:      "question moved to {{group}}"
-      group_dont_exists: "the group {{group}} don't exists"
+      group_dont_exists: "the group {{group}} doesn't exist"
     shared:
       flag: flag
+    retag_form:
+      title:  "Update tags"
+      submit: "update tags!"
+      cancel: "cancel"
+    retag_to:
+      success: "The tags have been updated successfully."
+      failure: "Sorry, the tags could not be updated."
     model:
       messages:
         too_short: "seems too short. Please use more words than {{count}} to be more specific."

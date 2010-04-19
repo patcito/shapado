@@ -87,6 +87,13 @@ fr:
       group_dont_exists: "le groupe {{group}} n'éxiste pas"
     shared:
       title: reporter un abus
+    retag_form:
+      title:  "Actualiser les tags"
+      submit: "actualizer las tags!"
+      cancel: "annuler"
+    retag_to:
+      success: "Les tags ont été actualisé avec succès."
+      failure: "Désolé, les tags n'ont pas pu être actualisé."
     model:
       messages:
         too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"

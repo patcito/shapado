@@ -45,6 +45,7 @@
       flag: reportar como abuso
       edit_others_posts: "editar preguntas o respuestas de otros usuarios"
       edit_wiki_post: "editar wikis"
+      retag_others_questions: "cambiar las etiquetas de las preguntas de otros usuarios"
   activerecord:
     models:
       users: usuarios

@@ -1,0 +1,19 @@
+
+-content_for :subtabs do
+  .navtitle
+    = t(".title", :title => h(@question.title))
+
+#move_question
+  .markdown{:style => "width: 92%"}
+    = markdown(@question.body)
+
+  .tag-list
+    -@question.tags.each do |tag|
+      %span.tag
+        = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
+  %div
+    %b
+      = t("questions.show.asked_on")
+      = link_to h(@question.group.name), domain_url(:custom => @question.group.domain)
+
+  = render :partial => "questions/retag_form"

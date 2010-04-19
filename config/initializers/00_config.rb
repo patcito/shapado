@@ -33,7 +33,8 @@ REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "remove_advertising" => 200, "vote_to_open_own_question" => 250, "vote_to_close_own_question" => 250,
 "retag_others_questions" => 500, "delete_comments_on_own_questions" => 750,
 "edit_others_posts" => 2000, "view_offensive_counts" => 2000, "vote_to_open_any_question" => 3000,
-"vote_to_close_any_question" => 3000, "delete_closed_questions" => 10000, "moderate" => 10000}
+"vote_to_close_any_question" => 3000, "delete_closed_questions" => 10000, "moderate" => 10000,
+"retag_others_tags" => 60}
 
 REPUTATION_REWARDS = YAML.load_file(RAILS_ROOT+"/config/default_reputation.yml")
 
