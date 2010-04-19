@@ -16,7 +16,7 @@ $(document).ready(function() {
         type: "POST",
         success: function(data){
           if(data.success){
-            link.attr({href: dataUndo, 'data-undo': href, 'data-title': title, class: dataClass, 'data-class': linkClass });
+            link.attr({href: dataUndo, 'data-undo': href, 'data-title': title, 'class': dataClass, 'data-class': linkClass });
             showMessage(data.message, "notice");
           } else {
             showMessage(data.message, "error");
