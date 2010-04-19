@@ -15,7 +15,7 @@ class CloseRequest
     request = self._root_document.close_requests.detect{ |rq| rq.user_id == self.user_id }
     valid = (request.nil? || request.id == self.id)
     unless valid
-      self.errors.add(:user, "You have already requested to close this question")
+      self.errors.add(:user, I18n.t("close_requests.model.messages.already_requested"))
     end
     return valid
   end
