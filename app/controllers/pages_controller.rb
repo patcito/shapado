@@ -24,7 +24,7 @@ class PagesController < ApplicationController
   def show
     return if self.check_page_permissions == false
 
-    @page = current_group.pages.by_slug(params[:id])
+    @page = current_group.pages.by_slug(params[:id], :language => I18n.locale) || current_group.pages.by_slug(params[:id])
 
     respond_to do |format|
       format.html do
