@@ -355,6 +355,7 @@ class QuestionsController < ApplicationController
 
   def close
     @question = Question.find_by_slug_or_id(params[:id])
+
     @question.closed = true
     respond_to do |format|
       if @question.save

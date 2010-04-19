@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("form.nestedAnswerForm").hide();
   $(".forms form.flag_form").hide();
   $("#add_comment_form").hide();
+  $("#close_question_form").hide();
 
   $("form.vote_form button").live("click", function(event) {
     var btn_name = $(this).attr("name")
@@ -103,8 +104,10 @@ $(document).ready(function() {
   });
 
   $("#request_close_question_form").submit(function() {
-    var button = $(this).find("input.button")
-    button.attr('disabled', true)
+    var request_button = $(this).find("input.button")
+    request_button.attr('disabled', true)
+    var close_button = $(this).find("button")
+    close_button.attr('disabled', true)
     form = $(this)
 
     $.ajax({
@@ -125,7 +128,8 @@ $(document).ready(function() {
       },
       error: manageAjaxError,
       complete: function(XMLHttpRequest, textStatus) {
-        button.attr('disabled', false)
+        request_button.attr('disabled', false)
+        close_button.attr('disabled', false)
       }
     });
     return false;
@@ -207,9 +211,18 @@ $(document).ready(function() {
     return false;
   });
 
+  $("#close_question_link").click(function() {
+    $("#request_close_question_form").slideUp();
+    $("#add_comment_form").slideUp();
+    $("#question_flag_form").slideUp();
+    $("#close_question_form").slideToggle();
+    return false;
+  });
+
   $("#question_flag_link.flag-link").click(function() {
     $("#request_close_question_form").slideUp();
     $("#add_comment_form").slideUp();
+    $("#close_question_form").slideUp();
     $("#question_flag_form").slideToggle();
     return false;
   });
@@ -218,6 +231,7 @@ $(document).ready(function() {
     var controls = $(this).parents(".controls")
     $("#request_close_question_form").slideUp();
     $("#question_flag_form").slideUp();
+    $("#close_question_form").slideUp();
     $("#add_comment_form").slideToggle();
     return false;
   });
@@ -226,6 +240,7 @@ $(document).ready(function() {
     var controls = $(this).parents(".controls")
     $("#add_comment_form").slideUp();
     $("#question_flag_form").slideUp();
+    $("#close_question_form").slideUp();
     $("#request_close_question_form").slideToggle();
     return false;
   });

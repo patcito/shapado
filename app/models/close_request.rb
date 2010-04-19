@@ -9,6 +9,8 @@ class CloseRequest
   key :user_id, String
   belongs_to :user
 
+  key :comment, String
+
   validate :should_be_unique
   validate :check_reputation
 

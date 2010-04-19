@@ -3,6 +3,9 @@
 
 -show_close_request_form = !@question.closed && logged_in? &&@question.can_be_requested_to_close_by?(current_user)
 
+-if logged_in? && current_user.mod_of?(current_group) && @question.closed
+  show_close_request_form = current_user.close_reason_id == current_user.id
+
 -if show_close_request_form
   -@close_request = @question.close_requests.detect{ |rq| rq.user_id == current_user.id } || CloseRequest.new(:reason => "dupe")
 
@@ -73,7 +76,8 @@
     .actions
       =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
       -if show_close_request_form
-        =link_to t(".request_closing"), new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
+        -close_link_label = current_user.mod_of?(current_group) ?  t(".close") : t(".request_closing")
+        =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
 
       -if logged_in?
         -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
@@ -81,11 +85,9 @@
         =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if @question.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_path(@question)
-
         -if current_user.mod_of?(@question.group)
           %br
           = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
-          = link_to t(".close"), close_question_path(@question), :class => "button", :confirm => "are you sure?"
     .forms
       -flag = Flag.new
       - flag.flaggeable = @question

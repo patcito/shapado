@@ -52,7 +52,6 @@ class Question
   key :close_reason_id, String
   belongs_to :close_reason, :class_name => "CloseRequest"
 
-
   key :last_target_type, String
   key :last_target_id, String
   belongs_to :last_target, :polymorphic => true
