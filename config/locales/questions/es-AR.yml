@@ -32,6 +32,7 @@ es-AR:
       unfavorite_tooltip: "remover esta pregunta de tus favoritas"
       asked_on: "preguntado en"
       last_activity: última actividad
+      retag: re-etiquetar
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"

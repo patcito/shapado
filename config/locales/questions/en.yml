@@ -32,6 +32,7 @@ en:
       unfavorite_tooltip: "remove this question from your favorites"
       asked_on: "asked on"
       last_activity: last activity
+      retag: retag
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"

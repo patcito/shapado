@@ -472,6 +472,10 @@ class QuestionsController < ApplicationController
 
     @question.tags = params[:question][:tags]
     if @question.save
+      if (Time.now - @question.created_at) < 8.days
+        @question.on_activity(true)
+      end
+
       flash[:notice] = t("questions.retag_to.success", :group => @question.group.name)
       respond_to do |format|
         format.html {redirect_to question_path(@question)}
