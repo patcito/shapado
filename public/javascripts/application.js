@@ -34,7 +34,7 @@ $(document).ready(function() {
       },
       formatItem: function(data, i, n, value) {
         row = data[0].split(";")
-        return row[0]+" "+row[1]
+        return row[0]+" ("+row[1]+")"
       }
   });
 
