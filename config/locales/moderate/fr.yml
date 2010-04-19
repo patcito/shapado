@@ -7,5 +7,5 @@ fr:
         content: contenu
         item_title: titre
         all: tous
-        flagged: flagged questions
-        banned: banned questions
+        flagged: questions reportées
+        banned: questions banée

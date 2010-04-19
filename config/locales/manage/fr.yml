@@ -11,13 +11,13 @@ fr:
         general:
           title: propriétés du groupe
         constrains:
-          title: constrains
-          reputation_constrains_subtitle: list of reputations constrains for each action
-          reputation_constrains_description: this formular allows you to configure how much reputation points users to be able to do a given action
+          title: constraintes
+          reputation_constrains_subtitle: liste des contraintes pour chaque action
+          reputation_constrains_description: ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action.
         rewards:
-          title: rewards
-          reputation_rewards_subtitle: list of reputations rewards
-          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+          title: récompenses
+          reputation_rewards_subtitle: liste des récompenses de reputation
+          reputation_rewards_description: "ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action."
         theme:
           title: configurez le thème du groupe
           logo_legend: Vous pouvez télécharger le logo du groupe. La taille maximum est de 2mb.

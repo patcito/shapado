@@ -17,7 +17,7 @@ fr:
     update:
       flash_notice: "la réponse a été créée avec succès."
     revert:
-      title: "revert answer"
+      title: "revenir à cette réponse"
 
   activerecord:
     models:
