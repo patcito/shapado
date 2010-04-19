@@ -1,0 +1,9 @@
+fr:
+  close_requests:
+    form:
+     dupe: Double
+     ot: Hors sujet
+     no_question: N'est pas une question
+     not_relevant: N'est pas pertinente
+     spam: Spam
+     request_closing_details: demander de fermer cette question

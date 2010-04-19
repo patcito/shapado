@@ -93,7 +93,7 @@
 
       -if show_close_request_form
         -if !@close_request.new?
-          = link_to t("scaffold.delete"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
+          = link_to t("scaffold.destroy"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
         -form_for [@question, @close_request], :html => {:class => "form hide", :id => "request_close_question_form"} do |form|
           = render :partial => "close_requests/form", :object => form
           .group.navform

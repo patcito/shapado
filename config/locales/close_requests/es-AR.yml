@@ -1,0 +1,9 @@
+"es-AR":
+  close_requests:
+    form:
+     dupe: Duplicado
+     ot: Fuera de tema
+     no_question: No es pregunta
+     not_relevant: No es pertinente
+     spam: Spam
+     request_closing_details: pedir el cierre de esta pregunta
