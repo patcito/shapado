@@ -7,8 +7,10 @@ es-AR:
     destroy:
       flash_notice: "tu voto ha sido revocado exitosamente."
     control:
-      to_vote_up: "click to vote up"
-      to_vote_down: "click to vote down"
+      to_vote_up: "click para aprovar"
+      to_vote_down: "click para desaprovar"
+      have_voted_up: "click para deshacer tu aprobación"
+      have_voted_down: "click para deshacer tu desaprobación"
   activerecord:
     models:
       votes: votos

@@ -9,6 +9,8 @@ en:
     control:
       to_vote_up: "click to vote up"
       to_vote_down: "click to vote down"
+      have_voted_up: "click to undo your up vote"
+      have_voted_down: "click to undo your down vote"
 
   activerecord:
     models:

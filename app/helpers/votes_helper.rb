@@ -14,9 +14,9 @@ module VotesHelper
           #{hidden_field_tag "source", source, :id => "source_#{class_name}_#{voteable.id}"}
           <button type="submit" name="vote_up" value="1" class="arrow">
             #{if vote && vote.value > 0
-                image_tag("vote_up.png", :width => 30, :height => 22)
+                image_tag("vote_up.png", :width => 30, :height => 22, :title => I18n.t("votes.control.have_voted_up"))
               else
-                image_tag("to_vote_up.png", :width => 30, :height => 22)
+                image_tag("to_vote_up.png", :width => 30, :height => 22, :title => I18n.t("votes.control.to_vote_up"))
               end
              }
           </button>
@@ -25,9 +25,9 @@ module VotesHelper
           </div>
           <button type="submit" name="vote_down" value="-1" class="arrow">
             #{if vote && vote.value < 0
-                image_tag("vote_down.png", :width => 30, :height => 22)
+                image_tag("vote_down.png", :width => 30, :height => 22, :title => I18n.t("votes.control.have_voted_down"))
               else
-                image_tag("to_vote_down.png", :width => 30, :height => 22)
+                image_tag("to_vote_down.png", :width => 30, :height => 22, :title => I18n.t("votes.control.to_vote_down"))
               end}
           </button>
         </div>
