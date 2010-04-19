@@ -12,7 +12,7 @@ namespace :fixdb do
         question[:accepted] = true
       end
 
-      if question.accepted && question.answer.votes_average > 0
+      if question.accepted
         question.answered_with = question.answer
       else
         question.answered_with = question.answers.first(:votes_average.gt => 0)

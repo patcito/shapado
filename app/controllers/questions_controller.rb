@@ -290,6 +290,7 @@ class QuestionsController < ApplicationController
     @answer = @question.answers.find(params[:answer_id])
     @question.answer = @answer
     @question.accepted = true
+    @question.answered_with = @answer if @question.answered_with.nil?
 
     respond_to do |format|
       if @question.save
@@ -323,6 +324,7 @@ class QuestionsController < ApplicationController
 
     @question.answer = nil
     @question.accepted = false
+    @question.answered_with = nil if @question.answered_with == @question.answer
 
     respond_to do |format|
       if @question.save
