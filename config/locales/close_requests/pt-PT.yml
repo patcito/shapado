@@ -1,18 +1,20 @@
 pt-PT:
   close_requests:
     form:
-     dupe: Dupe
-     ot: Off topic
-     no_question: Not a question
-     not_relevant: Not relevant
-     spam: Spam
-     request_closing_details: request to close this question
+      dupe: duplicate
+      ot: off topic
+      no_question: not a question
+      not_relevant: not relevant
+      spam: spam
+      request_closing_details: request to close this question
     create:
-      flash_notice: Close request created successfully
+      flash_notice: close request created successfully
     update:
-      flash_notice: Close request updated successfully
+      flash_notice: close request updated successfully
     destroy:
-      flash_notice: Close request deleted successfully
+      flash_notice: close request deleted successfully
     model:
+      name: close request
+      prural_name: close requests
       messages:
-        already_requested: "You have already requested to close this question"
+        already_requested: "you have already requested to close this question"

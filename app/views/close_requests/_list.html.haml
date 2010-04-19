@@ -1,0 +1,7 @@
+%ul.close_requests.list
+  -question.close_requests.group_by{|f| f.reason}.each do |reason, close_requests|
+    %li
+      = close_requests.size
+      x
+      %strong
+        = t(reason, :scope=>"close_requests.form")

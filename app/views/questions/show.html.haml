@@ -152,6 +152,11 @@
         = t(:flags, :scope => "activerecord.models")
       .content
         = render :partial => "flags/list", :locals => {:flaggeable => @question}
+    .block
+      %h3
+        = t(:prural_name, :scope => "close_requests.model")
+      .content
+        = render :partial => "close_requests/list", :locals => {:question => @question}
 
   .block
     %h3
