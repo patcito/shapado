@@ -278,7 +278,7 @@ Time.now ? 1 : 0)
                         {:$set => {"membership_list.#{group.id}.last_activity_at" => day}},
                         {:upsert => true})
       if last_day
-        if last_day.utc == day.yesterday
+        if last_day.utc.between?(day.yesterday - 12.hours, day.tomorrow)
           collection.update({:_id => self.id},
                             {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
                             {:upsert => true})
