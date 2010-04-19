@@ -232,9 +232,9 @@ $('#retag').live('click',function(){
                  url : link.attr('href'),
                               extraParams : { 'format' : 'js'},
                               success: function(data) {
-                                 $(".tag-list").find('.tag').hide();
+                                 link.parents(".tag-list").find('.tag').hide();
                                  $('.retag').hide();
-                                 $(".tag-list").prepend(data.html);
+                                 link.parents(".tag-list").prepend(data.html);
                               }
   });
   return false;
