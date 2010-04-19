@@ -2,8 +2,8 @@
 javascripts:
 - base:
   - jquery
+  - jquery.tools.min
   - jquery-ui
-  - jquery.tools.min.js
   - jquery.autovideo
   - jquery.autocomplete
   - jquery.textarea
