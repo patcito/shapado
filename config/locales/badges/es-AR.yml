@@ -132,13 +132,16 @@ es-AR:
         description: primer post reportado
       self-learner:
         name: self learner
-        description: Contesto su propia pregunta con al menos 3 votos positivos
+        description: contesto su propia pregunta con al menos 3 votos positivos
       scholar:
         name: scholar
-        description: First accepted answer on your own question
+        description: first accepted answer on your own question
       autobiographer:
         name: autobiographer
-        description: Completed all user profile fields
+        description: completed all user profile fields
+      organizer:
+        name: organizador
+        description: primer re-etiquetado
 
   activerecord:
     models:

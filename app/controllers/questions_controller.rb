@@ -478,6 +478,8 @@ class QuestionsController < ApplicationController
         @question.on_activity(true)
       end
 
+      Magent.push("actors.judge", :on_retag_question, @question.id, current_user.id)
+
       flash[:notice] = t("questions.retag_to.success", :group => @question.group.name)
       respond_to do |format|
         format.html {redirect_to question_path(@question)}

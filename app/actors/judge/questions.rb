@@ -105,5 +105,11 @@ module JudgeActions
       end
     end
 
+    def on_retag_question(payload)
+      question = Question.find(payload[0])
+      user = User.find(payload[1])
+
+      create_badge(user, question.group, {:token => "organizer", :source => question, :unique => true})
+    end
   end
 end

@@ -19,6 +19,7 @@ module Actors
     expose :on_ask_question
     expose :on_destroy_question
     expose :on_question_favorite
+    expose :on_retag_question
 
     expose :on_update_user
 
@@ -47,6 +48,10 @@ module Actors
       return unless ok
 
       badge = user.badges.create!(opts.merge({:group_id => group.id}))
+      if !badge.valid?
+        puts "Cannot create the #{badge.token} badge: #{badge.errors.full_messages}"
+      end
+
       if !badge.new? && !user.email.blank? && user.notification_opts.activities
         Notifier.deliver_earned_badge(user, group, badge)
       end

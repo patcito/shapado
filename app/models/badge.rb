@@ -9,7 +9,8 @@ class Badge
   BRONZE = %w[pioneer supporter critic inquirer troubleshooter commentator
               merit_medal effort_medal student shapado editor popular_question
               friendly interesting_person citizen_patrol cleanup disciplined
-              nice_answer nice_question peer_pressure self-learner scholar autobiographer]
+              nice_answer nice_question peer_pressure self-learner scholar autobiographer
+              organizer]
 
   def self.TOKENS
     @tokens ||= GOLD + SILVER + BRONZE
