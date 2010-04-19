@@ -24,5 +24,23 @@ namespace :fixdb do
       $stdout.flush if rand(10) < 5
     end
   end
+
+  desc "update last activity"
+  task :update_dates => [:environment] do
+    Question.find_each(:updated_at.gte => 2.hour.ago) do |q|
+      if q.last_target.nil? && q.created_at.present?
+        if q.answers.count > 0
+          answer = q.answers.first(:order => "updated_at desc")
+          if answer.comments.count > 0
+            Question.update_last_target(q.id, answer.comments.first(:order => "updated_at desc"))
+          else
+            Question.update_last_target(q.id, answer)
+          end
+        else
+          q.set(:updated_at => q.created_at.utc)
+        end
+      end
+    end
+  end
 end
 
