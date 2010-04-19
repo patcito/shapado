@@ -37,6 +37,10 @@ class AnswersController < ApplicationController
   def revert
     @question = @answer.question
     @answer.load_version(params[:version].to_i)
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def show

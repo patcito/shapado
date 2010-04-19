@@ -76,6 +76,10 @@ class QuestionsController < ApplicationController
 
   def revert
     @question.load_version(params[:version].to_i)
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def related_questions
