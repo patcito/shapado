@@ -122,4 +122,5 @@ pt-PT:
         votes: votos
         language: idioma
         created_at: asked
+        closed: closed
 

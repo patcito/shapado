@@ -122,3 +122,4 @@ es-AR:
         votes: votos
         language: idioma
         created_at: preguntado
+        closed: cerrada

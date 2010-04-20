@@ -122,3 +122,4 @@ en:
         votes: votes
         language: language
         created_at: asked
+        closed: closed
