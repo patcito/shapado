@@ -46,6 +46,8 @@ fr:
       edit_others_posts: "modifier les postes des autres"
       edit_wiki_post: "editer les postes wiki"
       retag others questions: "modifier les tags des questions d'autres utilisateurs"
+      vote_to_close_own_question: "request closing own question"
+      vote_to_close_any_question: "request closing any question"
   activerecord:
     models:
       users: utilisateurs

@@ -45,7 +45,9 @@ pt-PT:
       flag: flag
       edit_others_posts: "edit other's posts"
       edit_wiki_post: "edit wiki posts"
-      retag others questions: "retag others questions"
+      retag_others_questions: "retag others questions"
+      vote_to_close_own_question: "request closing own question"
+      vote_to_close_any_question: "request closing any question"
   activerecord:
     models:
       users: utilizadores

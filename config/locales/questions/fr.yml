@@ -38,6 +38,7 @@ fr:
       close: close
       ban: ban
       retract_request: vous avez déjà fait une demande, voulez-vous vous rétracter?
+      close_reason: "the question has been closed for the following reason:"
       answers_title:
         one: "{{count}} réponse"
         other: "{{count}} réponses"
