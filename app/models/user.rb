@@ -182,8 +182,8 @@ class User
   def age
     return if self.birthday.blank?
 
-    Time.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.now.year) >
-Time.now ? 1 : 0)
+    Time.zone.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.zone.now.year) >
+Time.zone.now ? 1 : 0)
   end
 
   def can_modify?(model)
@@ -247,7 +247,7 @@ Time.now ? 1 : 0)
   end
 
   def logged!(group = nil)
-    now = Time.now
+    now = Time.zone.now
 
     if new?
       self.last_logged_at = now
@@ -260,13 +260,13 @@ Time.now ? 1 : 0)
     if activity == :login
       if !self.last_logged_at.today?
         self.collection.update({:_id => self._id},
-                               {:$set => {:last_logged_at => Time.now}},
+                               {:$set => {:last_logged_at => Time.zone.now.utc}},
                                {:upsert => true})
       end
     else
       self.update_reputation(activity, group) if activity != :login
     end
-    activity_on(group, Time.now)
+    activity_on(group, Time.zone.now)
   end
 
   def activity_on(group, date)

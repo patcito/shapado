@@ -232,8 +232,8 @@ module ApplicationHelper
   end
 
   def current_announcements(hide_time = nil)
-    conditions = {:starts_at.lte => Time.now.to_i,
-                  :ends_at.gte => Time.now.to_i,
+    conditions = {:starts_at.lte => Time.zone.now.to_i,
+                  :ends_at.gte => Time.zone.now.to_i,
                   :order => "starts_at desc",
                   :group_id.in => [current_group.id, nil]}
     if hide_time
