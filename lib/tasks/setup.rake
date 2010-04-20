@@ -77,6 +77,21 @@ namespace :setup do
     user.save!
   end
 
+  desc "Create pages"
+  task :create_pages => [:environment] do
+    Dir.glob(RAILS_ROOT+"/db/fixtures/pages/*.markdown") do |page_path|
+      basename = File.basename(page_path, ".markdown")
+      title = basename.gsub(/\.(\w\w)/, "").titleize
+      language = $1
+
+      Group.find_each do |group|
+        if group.pages.count(:title => title, :language => language) == 0
+          group.pages.create!(:title => title, :language => language, :body => body, :user_id => group.owner)
+        end
+      end
+    end
+  end
+
   desc "Reindex data"
   task :reindex => [:environment] do
     Question.find_each do |question|
