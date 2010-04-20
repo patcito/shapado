@@ -68,7 +68,7 @@ class User
   validates_length_of       :name,     :maximum => 100
 
   validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? }
-  validates_uniqueness_of   :email,    :if => lambda { |e| !e.open_id_login? }
+  validates_uniqueness_of   :email,    :if => lambda { |e| !e.openid_login? }
   validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
   validates_format_of       :email,    :with => Devise::EMAIL_REGEX, :allow_blank => true
 
