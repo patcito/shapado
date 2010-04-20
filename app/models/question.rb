@@ -50,7 +50,6 @@ class Question
   belongs_to :updated_by, :class_name => "User"
 
   key :close_reason_id, String
-  belongs_to :close_reason, :class_name => "CloseRequest"
 
   key :last_target_type, String
   key :last_target_id, String
@@ -277,6 +276,10 @@ class Question
   def can_be_requested_to_close_by?(user)
     ((self.user_id == user.id) && user.can_vote_to_close_own_question_on?(self.group)) ||
     user.can_vote_to_close_any_question_on?(self.group)
+  end
+
+  def close_reason
+    self.close_requests.detect{ |rq| rq.id == close_reason_id }
   end
 
   protected

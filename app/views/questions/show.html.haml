@@ -4,11 +4,10 @@
 -show_close_request_form = !@question.closed && logged_in? &&@question.can_be_requested_to_close_by?(current_user)
 
 -if logged_in? && current_user.mod_of?(current_group) && @question.closed
-  show_close_request_form = current_user.close_reason_id == current_user.id
+  -show_close_request_form = (@question.close_reason.user_id == current_user.id)
 
 -if show_close_request_form
   -@close_request = @question.close_requests.detect{ |rq| rq.user_id == current_user.id } || CloseRequest.new(:reason => "dupe")
-
 
 -require_js 'jsMath/easy/load.js'
 -question_body = find_and_preserve(shapado_auto_link(markdown(@question.body.present? ? @question.body : @question.title)))
@@ -30,7 +29,7 @@
   -else
     = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :class => 'question-action', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip")
 
-  =vote_box(@question, question_path(@question))
+  =vote_box(@question, question_path(@question), @question.closed)
 
   -if logged_in? && favorite = current_user.favorite(@question)
     = link_to image_tag("favorites.png", 'data-src' => "/images/unfavorites.png"), unfavorite_question_path(@question), :id => "unfavorite-link", :title => t(".unfavorite_tooltip"), :class => 'question-action', "data-undo" =>  favorite_question_path(@question), "data-title" => t(".favorite_tooltip"), 'data-counter' => '.favorites_count'

@@ -18,7 +18,7 @@ class CloseRequestsController < ApplicationController
     if current_user.mod_of?(current_group)
       @question.closed = Boolean.to_mongo(params[:close]||false)
       if @question.closed
-        @question.close_reason = @close_request
+        @question.close_reason_id = @close_request.id
       else
         @question.close_reason_id = nil
       end
@@ -51,11 +51,11 @@ class CloseRequestsController < ApplicationController
     @question.close_requests << @close_request
 
     close_question = Boolean.to_mongo(params[:close]||false)
-    if current_user.current_user.mod_of?(current_group)
+    if current_user.mod_of?(current_group)
       @question.closed = close_question
       if @question.closed_changed?
         if @question.closed
-          @question.close_reason = @close_request
+          @question.close_reason_id = @close_request.id
         else
           @question.close_reason_id = nil
         end
@@ -107,7 +107,7 @@ class CloseRequestsController < ApplicationController
     @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = @question.close_requests.find(params[:id])
     if (@close_request && @close_request.user_id != current_user.id) ||
-       (@question.closed && !current_user.mod_of?(current_user)) ||
+       (@question.closed && !current_user.mod_of?(current_group)) ||
        !@question.can_be_requested_to_close_by?(current_user)
       flash[:error] = t("global.permission_denied")
       respond_to do |format|
