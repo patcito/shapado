@@ -125,6 +125,19 @@ module ApplicationHelper
         %@<a href="/pages/#{link.first.parameterize.to_s}?create=true&title=#{link.first}" class="missing_page">#{page_name}</a>@
       end
     end
+
+    text.gsub(/%(\S+)%/) do |m|
+      case $1
+        when 'site'
+          current_group.domain
+        when 'site_name'
+          current_group.name
+        when 'current_user'
+          current_user.login
+        else
+          m
+      end
+    end
   end
 
   def format_number(number)
