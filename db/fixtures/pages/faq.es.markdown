@@ -30,13 +30,13 @@ Así funciona: Si haces una buena pregunta o das una respuesta útil, esta sera 
 
 De acuerdo con su reputacion en %site% usted podra realizar las siguientes actividades:
 
-> 50  comentar
-> 100 voto negativo
-> 250 abrir y cerrar preguntas propias
-> 500 re-etiquetar preguntas
-> 750 editar preguntas wiki
-> 2000  editar cualquier respuesta
-> 3000  abrir y cerrar preguntas
-> 5000  eliminar cualquier comentario
-> 10000 eliminar cualquier pregunta y respuesta, y agregar otras tareas de moderación
+> 50  comentar  
+> 100 voto negativo  
+> 250 abrir y cerrar preguntas propias  
+> 500 re-etiquetar preguntas  
+> 750 editar preguntas wiki  
+> 2000  editar cualquier respuesta  
+> 3000  abrir y cerrar preguntas  
+> 5000  eliminar cualquier comentario  
+> 10000 eliminar cualquier pregunta y respuesta, y agregar otras tareas de moderación  
 

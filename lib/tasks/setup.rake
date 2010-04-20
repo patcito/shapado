@@ -84,6 +84,7 @@ namespace :setup do
       title = basename.gsub(/\.(\w\w)/, "").titleize
       language = $1
 
+      body = File.read(page_path)
       Group.find_each do |group|
         if group.pages.count(:title => title, :language => language) == 0
           group.pages.create!(:title => title, :language => language, :body => body, :user_id => group.owner)

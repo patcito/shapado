@@ -30,16 +30,16 @@ Here's how it works: if you post a good question or helpful answer, it will be v
 
 Amass enough reputation points and %site% will allow you to go beyond simply asking and answering questions:
 
-> 15  Vote up
-> 15  Flag offensive
-> 50  Leave comments
-> 100 Vote down (costs 1 rep), edit community wiki posts
-> 200 Reduced advertising
-> 250 Vote to close or reopen your questions, create new tags
-> 500 Retag questions
-> 2000  Edit other people's posts
-> 3000  Vote to close or reopen any questions
-> 10000 Delete closed questions, access to moderation tools
-> At the high end of this reputation spectrum there is little difference between users with high reputation and moderators. That is very much intentional. We don't run %site_name%. The community does.
+> 15  Vote up  
+> 15  Flag offensive  
+> 50  Leave comments  
+> 100 Vote down (costs 1 rep), edit community wiki posts  
+> 200 Reduced advertising  
+> 250 Vote to close or reopen your questions, create new tags  
+> 500 Retag questions  
+> 2000  Edit other people's posts  
+> 3000  Vote to close or reopen any questions  
+> 10000 Delete closed questions, access to moderation tools  
+> At the high end of this reputation spectrum there is little difference between users with high reputation and moderators. That is very much intentional. We don't run %site_name%. The community does.  
 
 
