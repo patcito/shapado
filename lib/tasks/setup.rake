@@ -96,6 +96,16 @@ namespace :setup do
 
   desc "Reindex data"
   task :reindex => [:environment] do
+    class Question
+      def update_timestamps
+      end
+    end
+
+    class Answer
+      def update_timestamps
+      end
+    end
+
     Question.find_each do |question|
       question._keywords = []
       question.save(:validate => false)

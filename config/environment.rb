@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
   config.gem "fancy-buttons", :version => "0.4.1", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
   config.gem "ruby-stemmer", :version => ">=0.5.3", :lib => "lingua/stemmer"
-  config.gem "mongomapper_ext", :version => "0.2.1", :source => "http://gemcutter.org"
+  config.gem "mongomapper_ext", :version => "0.2.2", :source => "http://gemcutter.org"
   config.gem "geoip"
   config.gem "whatlanguage", :version => "1.0.0"
   config.gem "uuidtools", :version => "2.1.1"
