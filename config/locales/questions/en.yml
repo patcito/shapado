@@ -37,6 +37,7 @@ en:
       request_closing_details: request to close this question
       close: close
       ban: ban
+      retract_request: you have already made a request, would you line to retract it?
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"

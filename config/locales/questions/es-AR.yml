@@ -37,6 +37,7 @@ es-AR:
       request_closing_details: pide cerrar esta pregunta
       close: close
       ban: ban
+      retract_request: ya has hecho una peticion, deseas retractarla?
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"

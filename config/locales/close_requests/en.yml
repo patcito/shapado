@@ -7,6 +7,7 @@ en:
       not_relevant: not relevant
       spam: spam
       request_closing_details: request to close this question
+      close_with_reason: close this question using this reason
     create:
       flash_notice: close request created successfully
     update:

@@ -7,6 +7,7 @@
      not_relevant: no es pertinente
      spam: spam
      request_closing_details: pedir el cierre de esta pregunta
+     close_with_reason: cerrar esta pregunta usando esta razon
     create:
       flash_notice: close request created successfully
     update:
