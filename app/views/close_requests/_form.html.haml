@@ -1,6 +1,6 @@
 .group
   = form.label :type, t(:type, :scope=>"activerecord.attributes.flag"), :class => "label"
-  -CloseRequest::TYPES.each do |type|
+  -CloseRequest::REASONS.each do |type|
     = form.radio_button :reason, type, :class => "radio_button"
     = t(type, :scope=>"close_requests.form")
     %br

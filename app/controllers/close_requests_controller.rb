@@ -93,7 +93,7 @@ class CloseRequestsController < ApplicationController
   end
 
   def new
-    @close_request = CloseRequest.new(:resource => "dupe")
+    @close_request = CloseRequest.new(:reason => "dupe")
     respond_to do |format|
       format.html
     end
