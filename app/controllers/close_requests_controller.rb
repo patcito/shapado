@@ -46,7 +46,6 @@ class CloseRequestsController < ApplicationController
   def update
     @close_request = @question.close_requests.find(params[:id])
     @close_request.reason = params[:close_request][:reason]
-    @question.close_requests << @close_request
 
     close_question = Boolean.to_mongo(params[:close]||false)
     if current_user.mod_of?(current_group)

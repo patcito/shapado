@@ -3,7 +3,8 @@
   .navtitle
     = t(".title")
 
-=link_to h(@question.title), question_path(@question)
+%h2.title
+  =link_to h(@question.title), question_path(@question)
 
 %table.table
   %tr

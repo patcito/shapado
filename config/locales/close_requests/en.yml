@@ -1,5 +1,7 @@
 en:
   close_requests:
+    index:
+      title: list of close requests
     form:
       dupe: duplicate
       ot: off topic
@@ -19,3 +21,7 @@ en:
       prural_name: close requests
       messages:
         already_requested: "you have already requested to close this question"
+      attributes:
+        user: user
+        reason: reason
+        comment: comment
