@@ -1,5 +1,7 @@
 fr:
   close_requests:
+    index:
+      title: list of close requests
     form:
      dupe: double
      ot: hors sujet

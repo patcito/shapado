@@ -1,5 +1,7 @@
 "es-AR":
   close_requests:
+    index:
+      title: lista de peticiones de cierre
     form:
      dupe: duplicado
      ot: fuera de tema

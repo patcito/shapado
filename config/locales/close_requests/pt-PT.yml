@@ -1,5 +1,7 @@
 pt-PT:
   close_requests:
+    index:
+      title: list of close requests
     form:
       dupe: duplicate
       ot: off topic
