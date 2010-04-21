@@ -5,7 +5,7 @@
 .answer.commentable{:class => "post-#{answer.id} #{solution ? "solution" : ""}" }
   %a{:name=>answer.id}
   .vote-col
-    =vote_box(answer, question_path(question))
+    =vote_box(answer, question_path(question), question.closed)
     -if solution
       =image_tag "correct.png", :width => 48, :alt => "correct_answer", :title => "chose as answer by the author"
   .body-col

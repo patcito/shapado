@@ -46,6 +46,8 @@
       edit_others_posts: "editar preguntas o respuestas de otros usuarios"
       edit_wiki_post: "editar wikis"
       retag_others_questions: "cambiar las etiquetas de las preguntas de otros usuarios"
+      vote_to_close_own_question: "request closing own question"
+      vote_to_close_any_question: "request closing any question"
   activerecord:
     models:
       users: usuarios

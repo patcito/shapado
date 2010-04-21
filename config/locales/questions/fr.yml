@@ -33,6 +33,12 @@ fr:
       asked_on: "posée dans"
       last_activity: dernières activités
       retag: modifier les tags
+      request_closing: demande de fermeture
+      request_closing_details: demander de fermer cette question
+      close: close
+      ban: ban
+      retract_request: vous avez déjà fait une demande, voulez-vous vous rétracter?
+      close_reason: "the question has been closed for the following reason:"
       answers_title:
         one: "{{count}} réponse"
         other: "{{count}} réponses"
@@ -116,3 +122,4 @@ fr:
         votes: votes
         language: langue
         created_at: posée
+        closed: closed

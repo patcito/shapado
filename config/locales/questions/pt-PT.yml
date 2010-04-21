@@ -33,6 +33,12 @@ pt-PT:
       asked_on: "asked on"
       last_activity: last activity
       retag: retag
+      request_closing: request closing
+      request_closing_details: request to close this question
+      close: close
+      ban: ban
+      retract_request: you have already made a request, would you line to retract it?
+      close_reason: "the question has been closed for the following reason:"
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
@@ -116,4 +122,5 @@ pt-PT:
         votes: votos
         language: idioma
         created_at: asked
+        closed: closed
 

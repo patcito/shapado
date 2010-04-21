@@ -1,0 +1,21 @@
+"es-AR":
+  close_requests:
+    form:
+     dupe: duplicado
+     ot: fuera de tema
+     no_question: no es pregunta
+     not_relevant: no es pertinente
+     spam: spam
+     request_closing_details: pedir el cierre de esta pregunta
+     close_with_reason: cerrar esta pregunta usando esta razon
+    create:
+      flash_notice: close request created successfully
+    update:
+      flash_notice: close request updated successfully
+    destroy:
+      flash_notice: close request deleted successfully
+    model:
+      name: petición de cierre
+      prural_name: peticiónes de cierre
+      messages:
+        already_requested: "you have already requested to close this question"

@@ -1,7 +1,7 @@
 module VotesHelper
-  def vote_box(voteable, source)
+  def vote_box(voteable, source, closed = false)
     class_name = voteable.class.name
-    if (logged_in? && voteable.user != current_user) || !logged_in?
+    if !closed && (logged_in? && voteable.user != current_user) || !logged_in?
       vote = current_user.vote_on(voteable) if logged_in?
       %@
       <form action='#{votes_path}' method='post' class='vote_form' >

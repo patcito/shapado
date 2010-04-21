@@ -24,6 +24,7 @@ class Vote
   validate :should_be_unique
   validate :check_reputation
   validate :check_owner
+  validate :check_voteable
 
   protected
   def should_be_unique
@@ -66,5 +67,18 @@ class Vote
       return false
     end
     return true
+  end
+
+  def check_voteable
+    valid = true
+    if self.voteable_type == "Question"
+      valid = !self.voteable.closed
+    elsif self.voteable_type == "Answer"
+      valid = !self.voteable.question.closed
+    end
+    if !valid
+      self.errors.add(:question, I18n.t("votes.model.messages.closed_question"))
+    end
+    return valid
   end
 end
