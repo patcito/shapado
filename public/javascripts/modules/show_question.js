@@ -288,6 +288,7 @@ $('#retag').live('click',function(){
         link.parents(".tag-list").find('.tag').hide();
         $('.retag').hide();
         link.parents(".tag-list").prepend(data.html);
+        initAutocomplete();
       } else {
           showMessage(data.message, "error");
           if(data.status == "unauthenticate") {
