@@ -48,7 +48,7 @@ en:
       flag: flag
       add_comment: add comment...
     question:
-      accepted_tooltip: This question has been accepted
+      accepted_tooltip: This question has an answer that has been accepted
     form:
       body_tip: what's your question? be descriptive.
       language_tip: select the language's question.

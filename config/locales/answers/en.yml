@@ -26,5 +26,5 @@ en:
     attributes:
       answer:
         link: link
-        created_at: accepted
+        created_at: answered
         body: body
