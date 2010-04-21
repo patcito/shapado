@@ -157,16 +157,19 @@
 
 -content_for :sidebar do
   -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))
-    .block
-      %h3
-        = t(:flags, :scope => "activerecord.models")
-      .content
-        = render :partial => "flags/list", :locals => {:flaggeable => @question}
-    .block
-      %h3
-        = t(:prural_name, :scope => "close_requests.model")
-      .content
-        = render :partial => "close_requests/list", :locals => {:question => @question}
+    -unless @question.flags.count == 0
+      .block
+        %h3
+          = t(:flags, :scope => "activerecord.models")
+        .content
+          = render :partial => "flags/list", :locals => {:flaggeable => @question}
+
+    -unless @question.close_requests.size == 0
+      .block
+        %h3
+          = t(:prural_name, :scope => "close_requests.model")
+        .content
+          = render :partial => "close_requests/list", :locals => {:question => @question}
 
   .block
     %h3
