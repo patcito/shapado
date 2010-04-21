@@ -14,6 +14,7 @@ fr:
     add: ajouter
     send: envoyer
     save: save
+    details: details
   time:
     today: aujourd'hui
     ago: "il y a {{time}}"
