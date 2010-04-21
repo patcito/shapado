@@ -23,20 +23,7 @@ $(document).ready(function() {
   })
   $(".markdown code").addClass("prettyprint")
 
-  $('.autocomplete_for_tags').autocomplete('/questions/tags_for_autocomplete.js', {
-      multiple: true,
-      delay: 200,
-      max: 10,
-      selectFirst: false,
-      extraParams: {'format' : 'js'},
-      formatResult: function(data, value) {
-        return value.split(";")[0];
-      },
-      formatItem: function(data, i, n, value) {
-        row = data[0].split(";")
-        return row[0]+" "+row[1]
-      }
-  });
+  initAutocomplete();
 
   $(".quick-vote-button").live("click", function(event) {
     var btn = $(this);
@@ -68,6 +55,23 @@ $(document).ready(function() {
     return false;
   });
 })
+
+function initAutocomplete(){
+  $('.autocomplete_for_tags').autocomplete('/questions/tags_for_autocomplete.js', {
+      multiple: true,
+      delay: 200,
+      max: 10,
+      selectFirst: false,
+      extraParams: {'format' : 'js'},
+      formatResult: function(data, value) {
+        return value.split(";")[0];
+      },
+      formatItem: function(data, i, n, value) {
+        row = data[0].split(";")
+        return row[0]+" "+row[1]
+      }
+  });
+}
 
 function manageAjaxError(XMLHttpRequest, textStatus, errorThrown) {
   showMessage("sorry, something went wrong.", "error");
