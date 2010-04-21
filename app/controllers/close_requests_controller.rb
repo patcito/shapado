@@ -1,15 +1,14 @@
 class CloseRequestsController < ApplicationController
   before_filter :login_required
   before_filter :moderator_required, :only => [:index]
+  before_filter :find_question
   before_filter :check_permissions, :except => [:create, :new, :index]
 
   def index
-    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_requests = @question.close_requests
   end
 
   def create
-    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = CloseRequest.new(:reason => params[:close_request][:reason],
                                       :comment => params[:close_request][:comment])
     @close_request.user = current_user
@@ -45,7 +44,6 @@ class CloseRequestsController < ApplicationController
   end
 
   def update
-    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = @question.close_requests.find(params[:id])
     @close_request.reason = params[:close_request][:reason]
     @question.close_requests << @close_request
@@ -79,7 +77,6 @@ class CloseRequestsController < ApplicationController
   end
 
   def destroy
-    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = @question.close_requests.find(params[:id])
     if @question.closed && @question.close_reason_id == @close_request.id
       @question.closed = false
@@ -96,15 +93,18 @@ class CloseRequestsController < ApplicationController
   end
 
   def new
-    @question = current_group.questions.find_by_slug_or_id(params[:question_id])
     @close_request = CloseRequest.new(:resource => "dupe")
     respond_to do |format|
       format.html
     end
   end
 
-  def check_permissions
+  protected
+  def find_question
     @question = current_group.questions.find_by_slug_or_id(params[:question_id])
+  end
+
+  def check_permissions
     @close_request = @question.close_requests.find(params[:id])
     if (@close_request && @close_request.user_id != current_user.id) ||
        (@question.closed && !current_user.mod_of?(current_group)) ||
