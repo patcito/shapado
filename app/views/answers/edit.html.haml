@@ -6,6 +6,9 @@
   =render :partial => "form", :locals => {:f => f, :markdown => true}
   .group
     .group.navform
+      .right
+        = f.label :wiki, "Wiki", :class => "radio"
+        = f.check_box :wiki, :class => "checkbox"
       = f.submit t("scaffold.update"), :class => "buttton"
       = t("global.or")
       = link_to t('scaffold.cancel'), question_path(@question), :class => "button cancel"
