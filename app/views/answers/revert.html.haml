@@ -7,4 +7,5 @@
   .field-group
     .buttons
       = f.submit t("scaffold.update")
-      = link_to t("scaffold.cancel"), history_question_path(@question), :class => "button cancel"
+      = t("global.or")
+      = link_to t("scaffold.cancel"), history_question_answer_path(@question, @answer), :class => "button cancel"

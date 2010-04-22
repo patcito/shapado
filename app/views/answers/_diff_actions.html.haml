@@ -3,6 +3,6 @@
 -if (number-1) >= 0
   |
   =link_to t("global.previous"), diff_question_answer_path(post.question, post, :curr => number, :prev => number-1 ), :class => "diff_prev"
--if logged_in? && current_user.can_modify?(post)
+-if logged_in? && ((post.wiki && current_user.can_edit_wiki_post_on?(post.group)) || current_user.can_edit_others_posts_on?(post.group) || current_user.can_modify?(post))
   |
   =link_to t("wiki.actions.revert"), revert_question_answer_path(post.question, post, :version => number)
