@@ -4,7 +4,11 @@
 
 - form_for(@question, :url => question_path(@question), :html => {:class => "form"}) do |f|
   =render :partial => "form", :locals => {:f => f}
-  .field-group
-    .buttons
-      = f.submit t("scaffold.update")
-      = link_to t("scaffold.cancel"), question_path(@question), :class => "button cancel"
+  .group.navform
+    .right
+      = f.label :wiki, "Wiki", :class => "radio"
+      = f.check_box :wiki, :class => "checkbox"
+
+    = f.submit t("scaffold.update")
+    = t("global.or")
+    = link_to t('scaffold.cancel'), questions_path, :class => "button cancel"

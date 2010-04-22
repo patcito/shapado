@@ -88,7 +88,7 @@
         =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
 
       -if logged_in?
-        -if current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
+        -if (@question.wiki && current_user.can_edit_wiki_post_on?(@question.group)) || current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
         =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if @question.versions.count > 0
