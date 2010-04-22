@@ -15,6 +15,8 @@
       = country_flag(comment.user.country_code, comment.user.country_name)
     .controls
       .actions
+        - if logged_in? && current_user != comment.user
+          = link_to t("comments.shared.reply"), "#", :class => "addNestedAnswer reply", 'data-author' => comment.user.login
         -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
           = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source)
           = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
@@ -29,6 +31,8 @@
       = shapado_auto_link(markdown(comment.body), :link_users => true)
     .controls
       .actions
+        - if logged_in? && current_user != comment.user
+          = link_to t("comments.shared.reply"), "#", :class => "addNestedAnswer reply", 'data-author' => comment.user.login
         -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
           = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source), :class => "edit_comment"
           = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete

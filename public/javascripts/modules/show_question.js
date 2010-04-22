@@ -193,10 +193,22 @@ $(document).ready(function() {
   });
 
   $(".addNestedAnswer").live("click", function() {
-    var controls = $(this).parents(".controls")
+    var link = $(this);
+    var user = link.attr('data-author');
+    var isreply = link.hasClass('reply');
+    var controls = link.parents(".controls");
+    var form = controls.parents(".answer").find("form.nestedAnswerForm");
+    var textarea = form.find('textarea');
+    var isHidden = !form.is(':visible');
     controls.find(".forms form.flag_form").slideUp();
-    controls.find("form.nestedAnswerForm").slideToggle();
-    return false;
+    form.slideToggle();
+    if(isreply){
+      textarea.text('@'+user+' ').focus();
+    } else { textarea.text('').focus();  }
+    if(isHidden){
+      var top = textarea.offset().top;
+      $('html,body').animate({scrollTop: top-50}, 1000);
+    } else { return false; }
   });
 
   $(".flag_form .cancel").live("click", function() {
@@ -205,9 +217,11 @@ $(document).ready(function() {
   });
 
   $(".answer .flag-link").live("click", function() {
-    var controls = $(this).parents(".controls")
+    var link = $(this);
+    var controls = link.parents(".controls")
     controls.find(".forms form.nestedAnswerForm").slideUp();
-    controls.find(".forms .flag_form").slideToggle();
+    controls.parents(".answer").find(".forms .flag_form").slideToggle();
+
     return false;
   });
 
