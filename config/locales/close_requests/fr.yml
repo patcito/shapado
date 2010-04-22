@@ -11,13 +11,13 @@ fr:
      request_closing_details: demander de fermer cette question
      close_with_reason: fermer cette question en utilisant cette raison
     create:
-      flash_notice: close request created successfully
+      flash_notice: demande de fermeture créée avec succès
     update:
-      flash_notice: close request updated successfully
+      flash_notice: demande de fermeture actualisée avec succès
     destroy:
-      flash_notice: close request deleted successfully
+      flash_notice: demande de fermeture retirée avec succès
     model:
-      name: close request
-      prural_name: close requests
+      name: demande de fermeture
+      prural_name: demandes de fermeture
       messages:
-        already_requested: "you have already requested to close this question"
+        already_requested: "vous avez déjà fait une demande de fermeture sur cette question"
