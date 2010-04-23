@@ -7,5 +7,7 @@
     =t("wiki.history.version")
     %span.version
       &=number
+  %h3.version_message
+    = version.message
   .changes
     = render :partial => "wiki/changes", :locals => {:post => post, :version => version, :scope => scope}

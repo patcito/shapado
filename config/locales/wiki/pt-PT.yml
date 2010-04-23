@@ -12,3 +12,6 @@ pt-PT:
       show_diff: compare selected versions
       all_history: back to history
       back_to_question: back to question
+    model:
+      attributes:
+        message: summary
