@@ -2,8 +2,7 @@ fr:
   shared:
     topbar:
       logged_as: "connecté en tant que {{login}}"
+      admin: administrer
+      user_page: my page
     current_tags:
       title: selected tags
-    layout:
-      notice:
-        manage: administrer
