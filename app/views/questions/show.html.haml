@@ -108,18 +108,19 @@
           = render :partial => "close_requests/form", :object => form
           .group.navform
             = submit_tag t(".request_closing_details"), :class => "button"
-
-
-      -form_tag comments_path, :class => "form commentForm", :id => "add_comment_form" do
+  .comments
+    -@question.comments.each do |comment|
+      = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
+  .clear
+  .forms
+    .comment-form-question
+      -form_tag comments_path, :class => "form commentForm nestedAnswerForm", :id => "add_comment_form" do
         -@comment = Comment.new
         = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
         .group.navform
           = submit_tag t("comments.shared.comment_submit"), :class => "button"
-  .comments
-    -@question.comments.each do |comment|
-      = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
-.clear
-
+          = t("global.or")
+          = link_to t('scaffold.cancel'), '', :class => 'cancel_comment'
 
 %a{:name=>"answers"}
 #answers

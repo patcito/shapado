@@ -198,17 +198,42 @@ $(document).ready(function() {
     var isreply = link.hasClass('reply');
     var controls = link.parents(".controls");
     var form = controls.parents(".answer").find("form.nestedAnswerForm");
+    if(form.length == 0) // if comment is child of a question
+      form = controls.parents("#question-body-col").find("form.commentForm");
     var textarea = form.find('textarea');
     var isHidden = !form.is(':visible');
     controls.find(".forms form.flag_form").slideUp();
-    form.slideToggle();
+    form.slideDown();
     if(isreply){
-      textarea.text('@'+user+' ').focus();
+      textarea.focus();
+      textarea.text('@'+user+' ')
     } else { textarea.text('').focus();  }
-    if(isHidden){
-      var top = textarea.offset().top;
-      $('html,body').animate({scrollTop: top-50}, 1000);
-    } else { return false; }
+
+    var top = textarea.offset().top;
+    $('html,body').animate({scrollTop: top-50}, 1000);
+    return false;
+  });
+
+  $("#add_comment_link").live('click', function() {
+    var link = $(this);
+    var user = link.attr('data-author');
+    var isreply = link.hasClass('reply');
+    var controls = link.parents(".controls");
+    var form = controls.parents("#question-body-col").find("form.commentForm");
+    var textarea = form.find('textarea');
+    $("#request_close_question_form").slideUp();
+    $("#question_flag_form").slideUp();
+    $("#close_question_form").slideUp();
+    $("#add_comment_form").slideDown();
+    textarea.text('').focus();
+    var top = textarea.offset().top;
+    $('html,body').animate({scrollTop: top-50}, 1000);
+    return false;
+  });
+
+  $('.cancel_comment').live('click', function(){
+    $(this).parents('form').slideUp();
+    return false;
   });
 
   $(".flag_form .cancel").live("click", function() {
@@ -238,15 +263,6 @@ $(document).ready(function() {
     $("#add_comment_form").slideUp();
     $("#close_question_form").slideUp();
     $("#question_flag_form").slideToggle();
-    return false;
-  });
-
-  $("#add_comment_link").click(function() {
-    var controls = $(this).parents(".controls")
-    $("#request_close_question_form").slideUp();
-    $("#question_flag_form").slideUp();
-    $("#close_question_form").slideUp();
-    $("#add_comment_form").slideToggle();
     return false;
   });
 
