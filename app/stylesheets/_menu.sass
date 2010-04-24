@@ -19,13 +19,17 @@ ul.combobox
       background-color: #EBEBEB
       display: block
       position: absolute
-      width: 10em
+      border: 1px solid #DCDCDC
       left: -999em
       list-style: none
       li
+        clear: both
         margin-left: 0
-        padding: 3px 2px
         width: 100%
+        padding: 4px
+        &:hover
+          background-color: #E0E0E0
+          padding: 4px
         a
           color: #666666
           text-decoration: none
