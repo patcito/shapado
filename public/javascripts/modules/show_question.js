@@ -164,11 +164,11 @@ $(document).ready(function() {
                   data: form.serialize()+"&format=js",
                   success: function(data, textStatus) {
                               if(data.success) {
-                                comment.find(".markdown p").html(data.body);
+                                comment.find(".markdown").html('<p>'+data.body+'</p>');
                                 form.remove();
                                 link.show();
-                                highlightEffect(comment)
-                                showMessage(data.message, "notice")
+                                highlightEffect(comment);
+                                showMessage(data.message, "notice");
                               } else {
                                 showMessage(data.message, "error")
                                 if(data.status == "unauthenticate") {
@@ -193,9 +193,46 @@ $(document).ready(function() {
   });
 
   $(".addNestedAnswer").live("click", function() {
-    var controls = $(this).parents(".controls")
+    var link = $(this);
+    var user = link.attr('data-author');
+    var isreply = link.hasClass('reply');
+    var controls = link.parents(".controls");
+    var form = controls.parents(".answer").find("form.nestedAnswerForm");
+    if(form.length == 0) // if comment is child of a question
+      form = controls.parents("#question-body-col").find("form.commentForm");
+    var textarea = form.find('textarea');
+    var isHidden = !form.is(':visible');
     controls.find(".forms form.flag_form").slideUp();
-    controls.find("form.nestedAnswerForm").slideToggle();
+    form.slideDown();
+    if(isreply){
+      textarea.focus();
+      textarea.text('@'+user+' ')
+    } else { textarea.text('').focus();  }
+
+    var top = textarea.offset().top;
+    $('html,body').animate({scrollTop: top-50}, 1000);
+    return false;
+  });
+
+  $("#add_comment_link").live('click', function() {
+    var link = $(this);
+    var user = link.attr('data-author');
+    var isreply = link.hasClass('reply');
+    var controls = link.parents(".controls");
+    var form = controls.parents("#question-body-col").find("form.commentForm");
+    var textarea = form.find('textarea');
+    $("#request_close_question_form").slideUp();
+    $("#question_flag_form").slideUp();
+    $("#close_question_form").slideUp();
+    $("#add_comment_form").slideDown();
+    textarea.text('').focus();
+    var top = textarea.offset().top;
+    $('html,body').animate({scrollTop: top-50}, 1000);
+    return false;
+  });
+
+  $('.cancel_comment').live('click', function(){
+    $(this).parents('form').slideUp();
     return false;
   });
 
@@ -205,9 +242,11 @@ $(document).ready(function() {
   });
 
   $(".answer .flag-link").live("click", function() {
-    var controls = $(this).parents(".controls")
+    var link = $(this);
+    var controls = link.parents(".controls")
     controls.find(".forms form.nestedAnswerForm").slideUp();
-    controls.find(".forms .flag_form").slideToggle();
+    controls.parents(".answer").find(".forms .flag_form").slideToggle();
+
     return false;
   });
 
@@ -224,15 +263,6 @@ $(document).ready(function() {
     $("#add_comment_form").slideUp();
     $("#close_question_form").slideUp();
     $("#question_flag_form").slideToggle();
-    return false;
-  });
-
-  $("#add_comment_link").click(function() {
-    var controls = $(this).parents(".controls")
-    $("#request_close_question_form").slideUp();
-    $("#question_flag_form").slideUp();
-    $("#close_question_form").slideUp();
-    $("#add_comment_form").slideToggle();
     return false;
   });
 

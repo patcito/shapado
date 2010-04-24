@@ -71,13 +71,6 @@
           = link_to t(".history", :default => "history"), history_question_answer_path(@question, answer)
       .clear
       .forms
-        -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
-          -@comment = Comment.new
-          = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
-          .group.navform
-            = submit_tag t("comments.shared.comment_submit"), :class => "button"
-
-
         -if current_user != answer.user
           -flag = Flag.new
           -flag.flaggeable = answer
@@ -89,3 +82,11 @@
       -answer.comments.each do |comment|
         = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
   .clear
+  .forms.comment-form
+    -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
+      -@comment = Comment.new
+      = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
+      .group.navform
+        = submit_tag t("comments.shared.comment_submit"), :class => "button"
+        = t("global.or")
+        = link_to t('scaffold.cancel'), '', :class => 'cancel_comment'
