@@ -263,6 +263,9 @@ class QuestionsController < ApplicationController
 
       if (Time.now - @question.created_at) < 12.hours
         @question.send(:generate_slug)
+      else
+        @question.slugs << @question.slug
+        @question.send(:generate_slug)
       end
 
       if @question.valid? && @question.save
@@ -602,11 +605,20 @@ class QuestionsController < ApplicationController
 
   def check_age
     @question = current_group.questions.find_by_slug_or_id(params[:id])
-    raise PageNotFound  unless @question
+
+    if @question.nil?
+      @question = current_group.questions.first(:slugs => params[:id])
+      if @question.present?
+        head :moved_permanently, :location => question_url(@question)
+        return
+      else
+        raise PageNotFound
+      end
+    end
 
     return if session[:age_confirmed] || is_bot? || !@question.adult_content
 
-    if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) <  18
+    if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) < 18
       render :template => "welcome/confirm_age"
     end
   end
