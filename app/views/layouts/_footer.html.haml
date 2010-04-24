@@ -26,9 +26,6 @@
       = render :partial => "welcome/feedback"
 
 -unless current_group.isolate || current_group.private
-  %div.center
-    %p
-      = link_to current_group.domain, domain_url(:custom => current_group.domain)
-      == is a multi-topic and multi-language question-and-answer website service brought to you by #{link_to "Ricodigo.com", "http://ricodigo.com"}.
-      == It runs the #{link_to 'Shapado', 'http://gitorious.org/shapado'} question-and-answer software, version #{AppConfig.version || 'unknown'}, available under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}.
+  #default_footer.center
+    == Powered by #{link_to 'Shapado', 'http://gitorious.org/shapado'} #{AppConfig.version} under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}
 
