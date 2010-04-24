@@ -15,6 +15,10 @@
         .entry
           =link_to t(".admin"), manage_path, :class => "manage_link"
           |
+      -if current_user.mod_of?(current_group)
+        .entry
+          =link_to t("layouts.application.moderate"), moderate_path, :class => "moderate_link"
+          |
       .entry
         %ul.combobox
           %li
