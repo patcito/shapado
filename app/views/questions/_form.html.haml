@@ -40,3 +40,8 @@
   .group
     = f.check_box :adult_content, :class => "checkbox"
     = f.label :adult_content, t(".adult_content"), :class => "radio"
+
+-if !@question.new?
+  .group
+    = f.label :version_message, t("wiki.model.attributes.message"), :class => "label"
+    = f.text_field :version_message, :class => "text_field"

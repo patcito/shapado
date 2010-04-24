@@ -130,7 +130,7 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       @question = @answer.question
-      @answer.safe_update(%w[body wiki], params[:answer])
+      @answer.safe_update(%w[body wiki version_message], params[:answer])
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save

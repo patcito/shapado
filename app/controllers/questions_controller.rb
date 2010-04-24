@@ -257,7 +257,7 @@ class QuestionsController < ApplicationController
   # PUT /questions/1.xml
   def update
     respond_to do |format|
-      @question.safe_update(%w[title body language tags wiki adult_content], params[:question])
+      @question.safe_update(%w[title body language tags wiki adult_content version_message], params[:question])
       @question.updated_by = current_user
       @question.last_target = @question
 
@@ -496,6 +496,9 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
 
     @question.tags = params[:question][:tags]
+    @question.updated_by = current_user
+    @question.last_target = @question
+
     if @question.save
       if (Time.now - @question.created_at) < 8.days
         @question.on_activity(true)

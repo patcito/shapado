@@ -12,3 +12,6 @@ fr:
       show_diff: comparer les versions sélectionnées
       all_history: retourner à l'historique
       back_to_question: retourner à la question
+    model:
+      attributes:
+        message: summary
