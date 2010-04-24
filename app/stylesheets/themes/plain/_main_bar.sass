@@ -1,0 +1,44 @@
+#main-bar
+  width: 100%
+  float: left
+  margin: 0
+
+  #logo
+    float: left
+    margin-right: 10px
+
+#main-bar ul
+  list-style-type: none
+
+#main-bar ul li
+  margin-top: 18px
+  background: #2A5FB3
+  margin-right: 5px
+  color: #F8F0E6
+  float: left
+
+  &:hover
+    background: #F67620
+    color: #fff
+
+  &.active
+    border-top: 1px solid #fff
+    background-color: #FF9900 !important
+    color: #333
+    a
+      &:link, &:visited, &:hover, &:active
+        color: #364b69
+
+#main-bar ul li
+  a
+    display: block
+    font-size: 16px
+    font-weight: bold
+    padding: 5px 10px
+
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: #FFF
+
+  &.ask_question
+    float: right

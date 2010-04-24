@@ -186,7 +186,7 @@ module ApplicationHelper
 
     if question.accepted
       klass << "accepted"
-    else
+    elsif !question.answered
       klass << "unanswered"
     end
 

@@ -22,7 +22,7 @@
           =format_number(question.votes_average)
         .text
           =t(:votes, :scope => "activerecord.attributes.question")
-      .box.answers{:class => question.accepted ? "accepted" : "", :title => question.accepted ? t(".accepted_tooltip") : "" }
+      .box.answers{:class => class_for_question(question), :title => question.accepted ? t(".accepted_tooltip") : "" }
         .counter
           =format_number(question.answers_count)
         .text
