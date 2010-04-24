@@ -261,6 +261,10 @@ class QuestionsController < ApplicationController
       @question.updated_by = current_user
       @question.last_target = @question
 
+      if (Time.now - @question.created_at) < 12.hours
+        @question.send(:generate_slug)
+      end
+
       if @question.valid? && @question.save
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(@question)) }
