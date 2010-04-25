@@ -5,6 +5,7 @@ fr:
       previous_versions: versions précédentes
       current_version: version actuelle
       version: version
+      version_summary: résumé de cette version
     diff:
       title: différences entre {{prev}} et {{curr}}
     actions:
