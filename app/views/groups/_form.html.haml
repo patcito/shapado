@@ -19,6 +19,8 @@
     %span.description
       =request.protocol
     = form.text_field :domain, :class=> "text_field", :style => "width: 20%"
+
+-if true
   .group
     = form.check_box :isolate, :class => "checkbox"
     = form.label :isolate, "isolate the group form other groups", :class => "radio"
