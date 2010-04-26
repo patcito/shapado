@@ -73,7 +73,6 @@ module Versionable
   module ClassMethods
     def versionable_keys(*keys)
       define_method(:save_version) do
-        p "HERE"
         data = {}
         message = ""
         keys.each do |key|

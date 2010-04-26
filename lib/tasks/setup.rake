@@ -87,8 +87,8 @@ namespace :setup do
 
       body = File.read(page_path)
       Group.find_each do |group|
-        if group.pages.count(:title => title, :language => language) == 0
-          group.pages.create!(:title => title, :language => language, :body => body, :user_id => group.owner)
+        if Page.count(:title => title, :language => language, :group_id => group.id) == 0
+          Page.create(:title => title, :language => language, :body => body, :user_id => group.owner, :group_id => group.id)
         end
       end
     end
@@ -106,13 +106,17 @@ namespace :setup do
       end
     end
 
+    $stderr.puts "Reindexing #{Question.count} questions..."
     Question.find_each do |question|
       question._keywords = []
+      question.rolling_back = true
       question.save(:validate => false)
     end
 
+    $stderr.puts "Reindexing #{Answer.count} answers..."
     Answer.find_each do |answer|
       answer._keywords = []
+      answer.rolling_back = true
       answer.save(:validate => false)
     end
   end
