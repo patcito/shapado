@@ -22,8 +22,6 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    return if self.check_page_permissions == false
-
     @page = current_group.pages.by_slug(params[:id], :language => Page.current_language) || current_group.pages.by_slug(params[:id])
 
     respond_to do |format|
@@ -52,7 +50,6 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
-    @page = current_group.pages.by_slug(params[:id])
   end
 
   # POST /pages
@@ -81,7 +78,6 @@ class PagesController < ApplicationController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = current_group.pages.by_slug(params[:id])
     @page.safe_update(%w[title body tags wiki language adult_content css js], params[:page])
     @page.updated_by = current_user
 
@@ -136,13 +132,15 @@ class PagesController < ApplicationController
       return false
     end
 
+    @page = current_group.pages.by_slug(params[:id])
+
     if !current_user.can_edit_wiki_post_on?(current_group)
       reputation = current_group.reputation_constrains["edit_wiki_post"]
 
       flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                               :min_reputation => reputation,
                               :action => I18n.t("users.actions.edit_wiki_post"))
-      redirect_to root_path
+      redirect_to @page.present? ? page_path(@page) : root_path
       return false
     end
   end
