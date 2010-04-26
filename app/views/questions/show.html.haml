@@ -93,6 +93,8 @@
         =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if @question.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_path(@question)
+        -if (current_user.can_modify?(@question) || current_user.owner_of?(@question.group))
+          = link_to t("scaffold.destroy"), question_path(@question.id), :confirm => "are you sure?", :method => :delete
         -if current_user.mod_of?(@question.group)
           %br
           = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"

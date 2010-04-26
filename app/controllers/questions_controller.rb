@@ -282,7 +282,9 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
-    @question.user.update_reputation(:delete_question, current_group)
+    if @question.user_id == current_user.id
+      @question.user.update_reputation(:delete_question, current_group)
+    end
     @question.destroy
 
     Magent.push("actors.judge", :on_destroy_question, current_user.id, @question.attributes)
@@ -545,7 +547,9 @@ class QuestionsController < ApplicationController
 
     if @question.nil?
       redirect_to questions_path
-    elsif !(current_user.mod_of?(@question.group) || current_user.can_modify?(@question))
+    elsif !(current_user.can_modify?(@question) ||
+           (params[:action] != 'destroy' && current_user.mod_of?(@question.group)) ||
+           current_user.owner_of?(@question.group))
       flash[:error] = t("global.permission_denied")
       redirect_to question_path(@question)
     end
