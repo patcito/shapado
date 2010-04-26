@@ -106,7 +106,7 @@ class PagesController < ApplicationController
   end
 
   def css
-    @page = current_group.pages.by_slug(params[:id])
+    @page = current_group.pages.by_slug(params[:id], :language => Page.current_language) || current_group.pages.by_slug(params[:id])
 
     if @page.has_css?
       send_data(@page.css.try(:read).to_s, :filename => "#{params[:id]}.css", :type => "text/css",  :disposition => 'inline')
@@ -116,7 +116,7 @@ class PagesController < ApplicationController
   end
 
   def js
-    @page = current_group.pages.by_slug(params[:id])
+    @page = current_group.pages.by_slug(params[:id], :language => Page.current_language) || current_group.pages.by_slug(params[:id])
 
     if current_group.has_custom_js && @page.has_js?
       send_data(@page.js.try(:read).to_s, :filename => "#{params[:id]}.js", :type => "text/javascript",  :disposition => 'inline')
@@ -132,7 +132,7 @@ class PagesController < ApplicationController
       return false
     end
 
-    @page = current_group.pages.by_slug(params[:id])
+    @page = current_group.pages.by_slug(params[:id], :language => Page.current_language) || current_group.pages.by_slug(params[:id])
 
     if !current_user.can_edit_wiki_post_on?(current_group)
       reputation = current_group.reputation_constrains["edit_wiki_post"]
