@@ -1,0 +1,29 @@
+@import mixins
+
+=active_tab
+  background-color: #27B3EA
+  color: #fff
+  +rounded(4px, 4px, 4px, 4px)
+
+=active_subtab
+  border-top: 1px solid #222
+  border-left: 1px solid #222
+  border-right: 1px solid #222
+  border-bottom: 1px solid transparent
+
+  +rounded(6px, 6px, 0px, 0px)
+  margin-bottom: -1px
+  background-color: #fff
+  color: #333
+
+  &:hover
+    background: #fff !important
+    border-top: 1px solid #ccc
+    border-right: 1px solid #ccc
+    border-left: 1px solid #ccc
+    +rounded(6px, 6px, 0px, 0px)
+
+  a, a:active, a:visited, a:link
+    color: #333
+
+@import navigation

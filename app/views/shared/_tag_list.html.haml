@@ -4,7 +4,7 @@
     -(tag_list).each do |tag|
       -unless current_tags.include? tag["name"]
         %li
-          %span.tag{:class => "tag_#{h(tag)}"}
+          %span.tag{:class => "tag_#{h(tag["name"])}"}
             =link_to h(tag["name"]), url_for(extra_params.merge(:tags => (current_tags + [tag["name"]]).join("+"))), :rel => "tag",:title => t("questions.tags.tooltip", :tag => tag["name"])
           .tag-multiplier
             x

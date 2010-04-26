@@ -6,11 +6,6 @@ ul.items
     padding-bottom: 10px
     padding-top: 10px
 
-    h3
-      margin-top: 0
-      font-size: 16px
-      font-weight: bold
-
     .logo
       float: left
       padding: 0px 10px
@@ -18,7 +13,7 @@ ul.items
 
     .box
       float: left
-      padding: 5px 5px
+      padding: 5px 6px
       margin-right: 2px
       text-align: center
       vertical-align: baseline
@@ -30,6 +25,8 @@ ul.items
       color: #666
 
 
+      .text
+        margin-left: -4px
       .counter
         padding: 2px
         font-size: 22px
@@ -50,14 +47,16 @@ ul.items
     .answers
       color: #2A61B3
       &.accepted
+        border: 2px dotted #337816
         color: #337816
+        +rounded(4px, 2px, 4px, 2px)
       &.unanswered
         color: #B82312
     .views
       color: #898989
 
     .stats
-      width: 21%
+      width: 22%
       float: left
 
     .summary
@@ -82,6 +81,17 @@ ul.items
         .reputation
           font-weight: bold
           color: #666
+
+      h3
+        margin-top: 0
+        font-size: 1.2em
+        font-weight: bold
+        a
+          &:active, &:link, &:visited
+            color: #14273B
+            font-weight: bold
+          &:hover
+            text-decoration: underline
 
     .actions
       padding: 5px

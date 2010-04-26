@@ -1,0 +1,63 @@
+#users
+  .badges
+    line-height: 25px
+    width: 80%
+
+#users_show
+  #badges
+    width: 40%
+
+.general-info
+  margin-top: 20px
+  .avatar
+    float: left
+    width: 20%
+    text-align: center
+    .reputation
+      margin-top: 20px
+      font-size: 400%
+      font-weight: bold
+    .text
+      font-weight: bold
+      margin-bottom: 10px
+
+  .user-info
+    float: left
+    width: 34%
+    .user-field
+      font-weight: bold
+      font-size: 120%
+      width: 45%
+    .user-field-value
+      width: 40%
+
+  .bio-info
+    float: left
+    width: 40%
+    padding: 8px
+    margin: 4px
+    background: #eee
+    height: 200px
+
+
+a.follow_link
+  +fancy-button-structure
+  +fancy-button-colors-matte(#E76400)
+  +fancy-button-size(24px, 18px, 1px, 15px)
+  float: right
+  &:active, &:link
+    color: white
+
+a.unfollow_link
+  +fancy-button-structure
+  +fancy-button-colors-matte(#FF0000)
+  +fancy-button-size(24px, 18px, 1px, 15px)
+  float: right
+  &:active, &:link, &:visited
+    color: white
+
+
+.friend_list
+  margin: 3px
+  span
+    padding: 1px 2px
