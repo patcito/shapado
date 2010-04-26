@@ -30,12 +30,20 @@
             %li
               =link_to t("layouts.application.settings"), settings_path
       |
+    -top_bar_links.each do |link|
+      .entry
+        =link
+        |
     .entry
       =link_to t("layouts.application.logout"), destroy_user_session_path
   -else
     -if AppConfig.is_shapadocom && !current_group.isolate
       .entry
         =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
+        |
+    -top_bar_links.each do |link|
+      .entry
+        =link
         |
     .entry
       =link_to t("layouts.application.log_in"), new_user_session_path

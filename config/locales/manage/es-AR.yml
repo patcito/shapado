@@ -7,6 +7,8 @@ es-AR:
         question_help: question help
         head: cabecera
         footer: pie de página
+        top_bar: barra superior
+        top_bar_tip: entre un vinculo por linea
 
       properties:
         general:

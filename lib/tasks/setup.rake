@@ -86,6 +86,8 @@ namespace :setup do
       language = $1
 
       body = File.read(page_path)
+
+      puts "Loading: #{title.inspect} [lang=#{language}]"
       Group.find_each do |group|
         if Page.count(:title => title, :language => language, :group_id => group.id) == 0
           Page.create(:title => title, :language => language, :body => body, :user_id => group.owner, :group_id => group.id)

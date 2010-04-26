@@ -11,6 +11,8 @@
       = link_to t(".question_prompt"), manage_content_path(:tab=>"question_prompt")
     %li.head
       = link_to t(".head"), manage_content_path(:tab=>"head")
+    %li.top_bar
+      = link_to t(".top_bar"), manage_content_path(:tab=>"top_bar")
     %li.footer
       = link_to t(".footer"), manage_content_path(:tab=>"footer")
 
@@ -41,6 +43,12 @@
       .group
         = form.label "head_tag", h("<head>"), :class => "label"
         = form.text_area "head_tag", :class => "text_area"
+    -when :top_bar
+      .group
+        =form.label "top_bar", t(".top_bar"), :class => "label"
+        .description
+          =t(".top_bar_tip")
+        =text_area_tag "group[custom_html][top_bar]", @group.custom_html.top_bar, :class => "text_area"
 
   .navform.group
     = form.submit t("scaffold.update")

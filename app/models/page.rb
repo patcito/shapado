@@ -33,6 +33,11 @@ class Page
   validates_uniqueness_of :slug, :scope => [:group_id, :language], :allow_blank => true
 
   def self.by_title(title, options)
-    self.first(options.merge(:title => title, :language => I18n.locale)) || self.first(options.merge(:title => title)) || self.by_slug(title, options, :language => I18n.locale) || self.by_slug(title, options)
+    self.first(options.merge(:title => title, :language => current_language)) || self.first(options.merge(:title => title)) || self.by_slug(title, options.merge(:language => current_language)) || self.by_slug(title, options)
+  end
+
+  private
+  def self.current_language
+    @current_language ||= I18n.locale.to_s.split("-",2).first
   end
 end

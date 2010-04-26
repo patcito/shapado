@@ -7,6 +7,8 @@ fr:
         question_help: question help
         head: en-tête
         footer: pied de page
+        top_bar: top bar
+        top_bar_tip: enter one link per line
       properties:
         general:
           title: propriétés du groupe

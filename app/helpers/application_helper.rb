@@ -113,9 +113,9 @@ module ApplicationHelper
   end
 
   def render_page_links(text)
-    text.gsub(/\[\[(.+)\]\]/) do |m|
+    text.gsub!(/\[\[(.+)\]\]/) do |m|
       link = $1.split("|", 2)
-      page = Page.by_title(link.first, :group_id => current_group.id, :select => [:title, :slug])
+      page = Page.by_title(link.first, {:group_id => current_group.id, :select => [:title, :slug]})
 
       page_name = link[1] ? link[1] : page.title
 
@@ -258,6 +258,15 @@ module ApplicationHelper
     end
 
     Announcement.all(conditions)
+  end
+
+  def top_bar_links
+    top_bar = current_group.custom_html.top_bar
+    return [] if top_bar.blank?
+
+    top_bar.split("\n").map do |line|
+      render_page_links(line.strip)
+    end
   end
 end
 

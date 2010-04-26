@@ -100,7 +100,7 @@ class GroupsController < ApplicationController
 
     @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) #if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
-    @group.safe_update(%w[footer _head _question_help _question_prompt head_tag], params[:group]) if @group.has_custom_html
+    @group.safe_update(%w[footer _head _question_help _question_prompt head_tag custom_html], params[:group]) if @group.has_custom_html
 
     respond_to do |format|
       if @group.save

@@ -57,7 +57,10 @@ Donnez autants de détails que possible afin d'avoir plus de chance
 d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
 "pt" => ""}
 
-  key :_head, Hash, :default => { }
+  key :_head, Hash, :default => {}
+  key :custom_html, CustomHtml, :default => CustomHtml.new
+
+
   key :has_custom_html, Boolean, :default => true
   key :has_custom_js, Boolean, :default => true
   key :footer, String
