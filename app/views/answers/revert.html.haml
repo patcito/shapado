@@ -3,7 +3,7 @@
     = t(".title")
 
 -form_for(:answer, :url => question_answer_path(@question, @answer), :html => {:method => :put, :class => "form"}) do |f|
-  =render :partial => "form", :locals => {:f => f}
+  =render :partial => "form", :locals => {:f => f, :markdown => true}
   .field-group
     .buttons
       = f.submit t("scaffold.update")
