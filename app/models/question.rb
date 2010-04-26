@@ -7,8 +7,6 @@ class Question
 
   ensure_index :tags
   ensure_index :language
-  ensure_index :title
-  ensure_index :body
 
   key :_id, String
   key :title, String, :required => true
