@@ -284,7 +284,7 @@ Time.zone.now ? 1 : 0)
                             {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
                             {:upsert => true})
           Magent.push("actors.judge", :on_activity, group.id, self.id)
-        elsif !last_day.utc.today?
+        elsif !last_day.utc.today? && (last_day.utc != Time.now.utc.yesterday)
           Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
           reset_activity_days!(group)
         end
