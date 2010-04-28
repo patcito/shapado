@@ -259,6 +259,7 @@ Time.zone.now ? 1 : 0)
 
   def on_activity(activity, group)
     if activity == :login
+      self.last_logged_at ||= Time.now
       if !self.last_logged_at.today?
         self.collection.update({:_id => self._id},
                                {:$set => {:last_logged_at => Time.zone.now.utc}},
