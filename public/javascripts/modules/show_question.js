@@ -8,7 +8,7 @@ $(document).ready(function() {
   $("form.vote_form button").live("click", function(event) {
     var btn_name = $(this).attr("name")
     var form = $(this).parents("form");
-    $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
+    $.post(form.attr("action")+'.js', form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.success){
         form.find(".votes_average").text(data.average)
         if(data.vote_state == "deleted") {

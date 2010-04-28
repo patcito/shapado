@@ -29,6 +29,19 @@ class VotesController < ApplicationController
     respond_to do |format|
       format.html{redirect_to params[:source]}
 
+      format.js do
+        if vote_state != :error
+          average = vote.voteable.reload.votes_average
+          render(:json => {:success => true,
+                           :message => flash[:notice],
+                           :vote_type => vote_type,
+                           :vote_state => vote_state,
+                           :average => average}.to_json)
+        else
+          render(:json => {:success => false, :message => flash[:error] }.to_json)
+        end
+      end
+
       format.json do
         if vote_state != :error
           average = vote.voteable.reload.votes_average
@@ -68,6 +81,10 @@ class VotesController < ApplicationController
           redirect_to params[:source]
         end
         format.json do
+          flash[:error] = t("global.please_login")
+          render(:json => {:status => :unauthenticate, :success => false, :message => flash[:error] }.to_json)
+        end
+        format.js do
           flash[:error] = t("global.please_login")
           render(:json => {:status => :unauthenticate, :success => false, :message => flash[:error] }.to_json)
         end
