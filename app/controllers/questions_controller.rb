@@ -431,7 +431,7 @@ class QuestionsController < ApplicationController
         @question.remove_watcher(current_user)
       end
     end
-
+    flash[:notice] = t("unfavorites.create.success")
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
       format.js {
@@ -592,6 +592,10 @@ class QuestionsController < ApplicationController
         format.html do
           flash[:error] += ", [#{t("global.please_login")}](#{new_user_session_path})"
           redirect_to question_path(@question)
+        end
+        format.js do
+          flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"
+          render(:json => {:status => :error, :message => flash[:error] }.to_json)
         end
         format.json do
           flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"

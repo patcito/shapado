@@ -62,7 +62,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.load_path += Dir[File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,yml}')]
   config.i18n.default_locale = :en
-
+  config.action_controller.use_accept_header = false
   # middlewares
   config.middleware.use "DynamicDomain", "shapado.com"
 end
