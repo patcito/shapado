@@ -23,7 +23,6 @@
 
 -content_for :sidebar do
   -if logged_in?
-    = render :partial => "shared/preferred_tags"
     = render :partial => "shared/language_filter"
 
   = render :partial => "shared/current_tags"

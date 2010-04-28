@@ -68,10 +68,12 @@
   .clear
 
 -content_for :sidebar do
-  -if !current_group.isolate && AppConfig.enable_groups
-    .block{:style => "background: transparent"}
-      .content
-        = link_to t(".create_own_site"), new_group_path, :id => "create_own_site"
+  .block.notice
+    = render :partial => "shared/layout/notice"
+
+  -current_group.widgets.all(:order => "position asc", :_type.in => Widget.types).each do |widget|
+    .widget.block{:id => widget.name}
+      = render :partial => widget.partial_name, :locals => {:widget => widget}
 
   -if logged_in?
     = render :partial => "shared/preferred_tags"
@@ -81,3 +83,8 @@
     %h3
       = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
     = tag_cloud
+
+  -if !current_group.isolate && AppConfig.enable_groups
+    .block{:style => "background: transparent"}
+      .content
+        = link_to t(".create_own_site"), new_group_path, :id => "create_own_site"

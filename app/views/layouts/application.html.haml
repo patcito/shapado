@@ -45,15 +45,10 @@
                 = yield
                 .clear
         #sidebar
-          .block.notice
-            = render :partial => "shared/layout/notice"
-
           = yield :sidebar
 
           = render :partial => "shared/ads/context_panel_ads"
-          -current_group.widgets.all(:order => "position asc", :_type.in => Widget.types).each do |widget|
-            .widget.block{:id => widget.name}
-              = render :partial => widget.partial_name, :locals => {:widget => widget}
+
           -unless feed_urls.empty?
             .block
               %h3
