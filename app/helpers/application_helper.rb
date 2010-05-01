@@ -2,20 +2,26 @@
 module ApplicationHelper
 
   def context_panel_ads(group)
+    if AppConfig.enable_adbard && request.domain == AppConfig.domain &&
+        !Adbard.find_by_group_id(current_group.id)
+      adbard = "<!--Ad Bard advertisement snippet, begin -->
+        <script type='text/javascript'>
+        var ab_h = '#{AppConfig.adbard_host_id}';
+        var ab_s = '#{AppConfig.adbard_site_key}';
+        </script>
+        <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
+        <!--Ad Bard, end -->"
+    else
+      adbard = ""
+    end
     if group.has_custom_ads == true
       ads = []
       Ad.find_all_by_group_id_and_position(group.id,'context_panel').each do |ad|
         ads << ad.code
       end
-      return ads.join unless (ads.empty? && AppConfig.domain==request.domain)
+      ads << adbard
+      return ads.join unless ads.empty?
     end
-    "<!--Ad Bard advertisement snippet, begin -->
-      <script type='text/javascript'>
-      var ab_h = '#{AppConfig.adbard_host_id}';
-      var ab_s = '#{AppConfig.adbard_site_key}';
-      </script>
-      <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
-      <!--Ad Bard, end -->"
   end
 
   def header_ads(group)
@@ -24,7 +30,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'header').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
@@ -34,7 +40,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'content').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
@@ -44,7 +50,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'footer').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
