@@ -20,6 +20,8 @@ class VotesController < ApplicationController
 
     if vote_state == :created && !vote.new?
       if vote.voteable_type == "Question"
+        sweep_question(vote.voteable)
+
         Magent.push("actors.judge", :on_vote_question, vote.id)
       elsif vote.voteable_type == "Answer"
         Magent.push("actors.judge", :on_vote_answer, vote.id)
@@ -63,6 +65,9 @@ class VotesController < ApplicationController
     value = @vote.value
     if  @vote && current_user == @vote.user
       @vote.destroy
+      if voteable.kind_of?(Question)
+        sweep_question(voteable)
+      end
       voteable.remove_vote!(value, current_user)
     end
     respond_to do |format|
@@ -128,6 +133,8 @@ class VotesController < ApplicationController
 
     if vote.voteable_type == "Answer"
       question = voteable.question
+      sweep_question(question)
+
       if vote.value == 1
         Question.set(question.id, {:answered_with_id => voteable.id}) if !question.answered
       elsif question.answered_with_id == voteable.id && voteable.votes_average <= 1

@@ -1,5 +1,6 @@
-%h3
-  = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
-.content
-  = self.tag_cloud
-.clear
+-cache("tag_cloud_#{current_group.id}") do
+  %h3
+    = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
+  .content
+    = self.tag_cloud
+  .clear

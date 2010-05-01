@@ -72,6 +72,8 @@ class AnswersController < ApplicationController
       @answer.user = current_user
       respond_to do |format|
         if @question && @answer.save
+          sweep_question(@question)
+
           Question.update_last_target(@question.id, @answer)
 
           current_user.stats.add_answer_tags(*@question.tags)
@@ -134,6 +136,8 @@ class AnswersController < ApplicationController
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save
+        sweep_question(@question)
+
         Question.update_last_target(@question.id, @answer)
 
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
@@ -153,6 +157,7 @@ class AnswersController < ApplicationController
     @answer.user.update_reputation(:delete_answer, current_group)
     @answer.destroy
     @question.answer_removed!
+    sweep_question(@question)
 
     Magent.push("actors.judge", :on_destroy_answer, current_user.id, @answer.attributes)
 

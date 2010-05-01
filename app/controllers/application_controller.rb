@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include Subdomains
+  include Sweepers
 
   if AppConfig.exception_notification['activate']
     include ExceptionNotifiable

@@ -175,7 +175,14 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.paginate(options)
 
     @answer = Answer.new(params[:answer])
-    @question.viewed! if @question.user != current_user && !is_bot?
+
+    if @question.user != current_user && !is_bot?
+      @question.viewed!
+
+      if (@question.views_count % 10) == 0
+        sweep_question(@question)
+      end
+    end
 
     set_page_title(@question.title)
     add_feeds_url(url_for(:format => "atom"), t("feeds.question"))
@@ -217,6 +224,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question_views
+
         current_user.stats.add_question_tags(*@question.tags)
 
         current_user.on_activity(:ask_question, current_group)
@@ -269,6 +278,9 @@ class QuestionsController < ApplicationController
       end
 
       if @question.valid? && @question.save
+        sweep_question_views
+        sweep_question(@question)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(@question)) }
         format.json  { head :ok }
@@ -285,6 +297,8 @@ class QuestionsController < ApplicationController
     if @question.user_id == current_user.id
       @question.user.update_reputation(:delete_question, current_group)
     end
+    sweep_question(@question)
+    sweep_question_views
     @question.destroy
 
     Magent.push("actors.judge", :on_destroy_question, current_user.id, @question.attributes)
@@ -303,6 +317,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         current_user.on_activity(:close_question, current_group)
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
@@ -337,6 +353,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
         current_user.on_activity(:reopen_question, current_group)
         if current_user != @answer_owner
@@ -367,6 +385,8 @@ class QuestionsController < ApplicationController
     @question.closed = true
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         format.html { redirect_to question_path(@question) }
         format.json { head :ok }
       else
@@ -483,6 +503,8 @@ class QuestionsController < ApplicationController
       @question.group = @group
 
       if @question.save
+        sweep_question(@question)
+
         Answer.set({"question_id" => @question.id}, {"group_id" => @group.id})
       end
       flash[:notice] = t("questions.move_to.success", :group => @group.name)
@@ -502,6 +524,8 @@ class QuestionsController < ApplicationController
     @question.last_target = @question
 
     if @question.save
+      sweep_question(@question)
+
       if (Time.now - @question.created_at) < 8.days
         @question.on_activity(true)
       end
