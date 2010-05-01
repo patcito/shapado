@@ -10,7 +10,7 @@
     display: block
     font-weight: bold
     font-size: 32px
-    line-height: 0.85em
+    line-height: 0.9em
     color: #222
 
     padding: 0
@@ -21,6 +21,17 @@
     border: 0px
     padding: 0px
     width: 100%
+
+    &.arrow
+      height: 18px
+
+      &.vote_up
+        img:hover
+          border-bottom: 1px solid #f00
+      &.vote_down
+        img:hover
+          border-top: 1px solid #f00
+
 
   .arrow
     border: 0px

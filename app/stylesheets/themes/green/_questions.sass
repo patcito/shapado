@@ -1,24 +1,29 @@
 #question-vote-col
   float: left
+  width: 4%
   text-align: center
-  margin-right: 4px
+  margin-right: 5px
 
+  .question-action
+    img
+      width: 25px
+      height: 25px
   .favorites_count
     color: #666
     font-weight: bold
     font-size: 15px
 
 #question-body-col
-  width: 90%
+  width: 95%
   float: left
 
   #body
-    min-height: 90px
+    min-height: 100px
 
   .user_info
-    font-size: 13px
-    padding: 12px 8px
-    margin: 20px 0px
+    font-size: 12px
+    padding: 8px 4px
+    margin: 10px 2px
     color: #666
 
     background: #C7F1C8
@@ -31,7 +36,7 @@
     .gravatar
       float: left
     .user_data
-      margin-left: 10px
+      margin-left: 2px
       float: left
 
       .user_reputation
@@ -40,20 +45,15 @@
       .time_ago
         display: block
         font-weight: bold
-        font-size: 13px
   .actions
     padding: 5px
-    margin: 6px
+    margin: 6px 0px
     a
-      font-size: 12px
+      font-size: 10px
       font-weight: bold
-      margin-right: 10px
-
-.comments
-  .comment
-    border-top: 2px dotted #ccc
-    padding-top: 6px
-    margin-top: 4px
+      margin-right: 2px
+  a.add_comment_link
+    margin-bottom: 2px
 
 #answers, #questions
   margin-top: 20px
@@ -62,7 +62,6 @@
     font-weight: bold
     color: #E55B00
     font-size: 130%
-
   .secondary-navigation
     background: #FFFFFF
     border-bottom: 1px solid #666
@@ -104,6 +103,11 @@
         .avatar
           float: left
           margin: 4px
+
+    .comment
+      border-top: 2px dotted #ccc
+      padding-top: 6px
+      margin-top: 4px
 
 .version_message
   background: #EEEEFF
