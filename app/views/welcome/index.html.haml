@@ -79,10 +79,6 @@
     = render :partial => "shared/preferred_tags"
   -if AppConfig.enable_i18n
     = render :partial => "shared/language_filter"
-  .block
-    %h3
-      = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
-    = tag_cloud
 
   -if !current_group.isolate && AppConfig.enable_groups
     .block{:style => "background: transparent"}
