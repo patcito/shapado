@@ -656,10 +656,12 @@ class QuestionsController < ApplicationController
     @question = current_group.questions.find_by_slug_or_id(params[:id])
 
     if @question.nil?
-      @question = current_group.questions.first(:slugs => params[:id])
+      @question = current_group.questions.first(:slugs => params[:id], :select => [:_id, :slug])
       if @question.present?
         head :moved_permanently, :location => question_url(@question)
         return
+      elsif params[:id] =~ /^(\d+)/ && (@question = current_group.questions.first(:se_id => $1, :select => [:_id, :slug]))
+        head :moved_permanently, :location => question_url(@question)
       else
         raise PageNotFound
       end
