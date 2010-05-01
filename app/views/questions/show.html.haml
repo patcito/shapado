@@ -43,6 +43,13 @@
 #question-body-col.commentable.markdown
   %a{:name => @question.id}
   #body
+    #close_reason
+      -if @question.closed && @question.close_reason
+        = t(".close_reason")
+        = t(@question.close_reason.reason, :scope=>"close_requests.form")
+        -if !@question.close_reason.comment.empty?
+          .comment
+            =find_and_preserve(shapado_auto_link(@question.close_reason.comment))
     .post-text.entry-content
       = question_body
   .tag-list
@@ -53,13 +60,6 @@
       %span.retag
         = link_to t('.retag'), retag_question_path(@question), :id => 'retag'
   .post-info
-    .question_closed
-      -if @question.closed && @question.close_reason
-        = t(".close_reason")
-        = t(@question.close_reason.reason, :scope=>"close_requests.form")
-        -if !@question.close_reason.comment.empty?
-          .comment
-            =find_and_preserve('"'+@question.close_reason.comment+'"')
     .author.user_info.vcard
       .gravatar.logo
         = gravatar(@question.user.email.to_s, :size => 32)

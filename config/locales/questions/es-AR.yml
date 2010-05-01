@@ -35,10 +35,10 @@ es-AR:
       retag: re-etiquetar
       request_closing: pedir cierre
       request_closing_details: pide cerrar esta pregunta
-      close: close
+      close: cerrar
       ban: ban
       retract_request: ya has hecho una petición, deseas retractarla?
-      close_reason: "the question has been closed for the following reason:"
+      close_reason: "la pregunta ha sido cerrada por la siguiente razón:"
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"
