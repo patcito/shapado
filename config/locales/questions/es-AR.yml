@@ -100,7 +100,7 @@ es-AR:
       cancel: "cancelar"
     retag_to:
       success: "Las etiquetas han sido actualizados con exito."
-      failure: "Discula, las etiquetas no han podido ser actualizadas."
+      failure: "Disculpa, las etiquetas no han podido ser actualizadas."
     model:
       messages:
         too_short: "demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico."

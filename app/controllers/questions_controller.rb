@@ -543,6 +543,7 @@ class QuestionsController < ApplicationController
     else
       flash[:error] = t("questions.retag_to.failure",
                         :group => params[:question][:group])
+
       respond_to do |format|
         format.html {render :retag}
         format.js {

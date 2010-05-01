@@ -90,9 +90,7 @@ class Question
     if t.kind_of?(String)
       t = t.downcase.split(",").join(" ").split(" ")
     end
-    t = t.collect do |tag|
-      tag.gsub("#", "sharp").gsub(".", "dot").gsub("www", "w3")
-    end
+
     self[:tags] = t
   end
 

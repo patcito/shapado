@@ -58,7 +58,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
 
-  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index
+  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index,:requirements => {:tags => /\S+/}
   map.connect 'questions/unanswered/tags/:tags', :controller => :questions, :action => :unanswered
 
   build_questions_routes(map)
