@@ -24,6 +24,14 @@ module AuthenticatedSystem
     end
 
     if user
+      user.remember_me!
+
+      cookies["remember_user_token"] = {
+        :value => User.serialize_into_cookie(user),
+        :expires => user.remember_expires_at,
+        :path => "/"
+      }
+
       user.localize(request.remote_ip)
       user.logged!(current_group)
       check_draft
