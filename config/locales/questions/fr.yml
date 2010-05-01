@@ -122,4 +122,6 @@ fr:
         votes: votes
         language: langue
         created_at: posée
+        updated_at: updated
+        updated_by: updated by
         closed: fermée

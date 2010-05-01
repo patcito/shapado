@@ -122,4 +122,6 @@ es-AR:
         votes: votos
         language: idioma
         created_at: preguntado
+        updated_at: actualizado
+        updated_by: actualizado por
         closed: cerrada

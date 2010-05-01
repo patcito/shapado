@@ -9,7 +9,6 @@
 -if show_close_request_form
   -@close_request = @question.close_requests.detect{ |rq| rq.user_id == current_user.id } || CloseRequest.new(:reason => "dupe")
 
--require_js 'jsMath/easy/load.js'
 -question_body = find_and_preserve(shapado_auto_link(markdown(@question.body.present? ? @question.body : @question.title)))
 
 -content_for :head do
@@ -27,9 +26,9 @@
 
 #question-vote-col
   -if current_user && @question.watch_for?(current_user)
-    = link_to image_tag("layer-visible-on.png", 'data-src' => "/images/layer-visible-off.png"), unwatch_question_path(@question), :class => 'question-action', "data-undo" =>  watch_question_path(@question), "data-title" => t(".watch_tooltip"), :title => t(".unwatch_tooltip")
+    = link_to image_tag("layer-visible-on.png", 'data-src' => "/images/layer-visible-off.png"), unwatch_question_path(@question), :class => 'question-action', "data-undo" =>  watch_question_path(@question), "data-title" => t(".watch_tooltip"), :title => t(".unwatch_tooltip"), :id => "watch-question"
   -else
-    = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :class => 'question-action', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip")
+    = link_to image_tag("layer-visible-off.png", 'data-src' => "/images/layer-visible-on.png"), watch_question_path(@question), :title => t(".watch_tooltip"), :class => 'question-action', "data-undo" =>  unwatch_question_path(@question), "data-title" => t(".unwatch_tooltip"), :id => "watch-question"
 
   =vote_box(@question, question_path(@question), @question.closed)
 
@@ -61,6 +60,22 @@
         -if !@question.close_reason.comment.empty?
           .comment
             =find_and_preserve('"'+@question.close_reason.comment+'"')
+    -if @question.updated_by.present?
+      .user_info
+        .gravatar.logo
+          = gravatar(@question.updated_by.email.to_s, :size => 32)
+        .user_data
+          %span.asked_by
+            = t('activerecord.attributes.question.updated_by')
+          %span.fn.nickname
+            = link_to h(@question.updated_by.login), user_path(@question.updated_by)
+          %span.time_ago.published{:title => @question.updated_at, :class => "relativetime"}
+            = t("time.ago", :time => time_ago_in_words(@question.updated_at))
+          %span.adr
+            -if !@question.updated_by.hide_country
+              %span.country-name
+                = t("global.from", :site => @question.updated_by.country_name)
+                = country_flag(@question.user.country_code, @question.updated_by.country_name)
     .author.user_info.vcard
       .gravatar.logo
         = gravatar(@question.user.email.to_s, :size => 32)
@@ -90,13 +105,11 @@
       -if logged_in?
         -if (@question.wiki && current_user.can_edit_wiki_post_on?(@question.group)) || current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
-        =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
         -if @question.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_path(@question)
         -if (current_user.can_modify?(@question) || current_user.owner_of?(@question.group))
           = link_to t("scaffold.destroy"), question_path(@question.id), :confirm => "are you sure?", :method => :delete
         -if current_user.mod_of?(@question.group)
-          %br
           = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
     .forms
       -flag = Flag.new
@@ -110,6 +123,9 @@
           = render :partial => "close_requests/form", :object => form
           .group.navform
             = submit_tag t(".request_closing_details"), :class => "button"
+
+  =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
+
   .comments
     -@question.comments.each do |comment|
       = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
@@ -233,3 +249,6 @@
           -related_questions.each do |rq|
             %li
               =link_to h(rq.title), question_path(rq), :title => truncate(strip_tags(rq.body), :length => 200)
+
+
+= javascript_include_tag 'jsMath/easy/load.js'
