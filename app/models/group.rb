@@ -99,7 +99,7 @@ class Group
   def disallow_javascript
     unless self.has_custom_js
        %w[footer _head _question_help _question_prompt head_tag].each do |key|
-         value = self[key]
+         value = self.custom_html[key]
          if value.kind_of?(Hash)
            value.each do |k,v|
              value[k] = v.gsub(/<*.?script.*?>/, "")
@@ -107,21 +107,29 @@ class Group
          elsif value.kind_of?(String)
            value = value.gsub(/<*.?script.*?>/, "")
          end
-         self[key] = value
+         self.custom_html[key] = value
        end
     end
   end
 
   def question_prompt
-    self._question_prompt[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.question_prompt[I18n.locale.to_s.split("-").first] || ""
   end
 
   def question_help
-    self._question_help[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.question_help[I18n.locale.to_s.split("-").first] || ""
   end
 
   def head
-    self._head[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.head[I18n.locale.to_s.split("-").first] || ""
+  end
+
+  def head_tag
+    self.custom_html.head_tag
+  end
+
+  def footer
+    self.custom_html.footer
   end
 
   def default_tags=(c)
@@ -131,21 +139,6 @@ class Group
     self[:default_tags] = c
   end
   alias :user :owner
-
-  def members(opts={})
-    members_ids = memberships.paginate(opts.merge({:fields => "user_id"})).map do |member|
-      member.user_id
-    end
-
-    if members_ids.empty?
-      page = MongoMapper::Pagination::PaginationProxy.new(0, 1, 25);
-      page.subject = []
-      return page
-    end
-
-    default_opts = {:conditions => {:_id => {:$in => members_ids}}}
-    User.paginate(opts.merge(default_opts))
-  end
 
   def is_member?(user)
     user.member_of?(self)
@@ -164,6 +157,7 @@ class Group
   def users(conditions = {})
     User.paginate(conditions.merge("membership_list.#{self.id}.reputation" => {:$exists => true}))
   end
+  alias_method :members, :users
 
   def pending?
     state == "pending"
