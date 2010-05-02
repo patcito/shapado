@@ -75,49 +75,52 @@ en:
         description: getting more than 100 followers
       necromancer:
         name: necromancer
-        description: Answered a question more than 60 days later with at least 5 votes
+        description: answered a question more than 60 days later with at least 5 votes
       stellar_question:
         name: stellar question
-        description: Question favorited by 100 users
+        description: question favorited by 100 users
       nice_question:
         name: nice question
-        description: Question voted up 10 times
+        description: question voted up 10 times
       nice_answer:
         name: nice answer
-        description: Answer voted up 10 times
+        description: answer voted up 10 times
       great_question:
         name: great question
-        description: Question voted up 100 times
+        description: question voted up 100 times
       great_answer:
         name: great answer
-        description: Answer voted up 100 times
+        description: answer voted up 100 times
       peer_pressure:
         name: peer pressure
-        description: Deleted own post with score of -3 or lower
+        description: deleted own post with score of -3 or lower
       enlightened:
         name: enlightened
-        description: First answer was accepted with at least 10 up votes
+        description: first answer was accepted with at least 10 up votes
       disciplined:
         name: disciplined
-        description: Deleted own post with score of 3 or higher
+        description: deleted own post with score of 3 or higher
       cleanup:
         name: cleanup
-        description: First rollback
+        description: first rollback
       civic_duty:
         name: civic duty
-        description: Voted 300 times
+        description: voted 300 times
       citizen_patrol:
         name: citizen patrol
-        description: First flagged post
+        description: first flagged post
       self-learner:
         name: self learner
-        description: Answered your own question with at least 3 up votes
+        description: answered your own question with at least 3 up votes
       scholar:
         name: scholar
-        description: First accepted answer on your own question
+        description: first accepted answer on your own question
       autobiographer:
         name: autobiographer
-        description: Completed all user profile fields
+        description: completed all user profile fields
+      organizer:
+        name: organizer
+        description: first retag
 
   activerecord:
     models:

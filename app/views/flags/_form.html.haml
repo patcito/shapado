@@ -1,5 +1,6 @@
 - flaggeable_class_name = flag.flaggeable.class.name
--form_for flag, :html => {:class=>"form flag_form"} do |f|
+
+-form_for flag, :html => {:class=>"form flag_form", :id => local_assigns[:form_id]} do |f|
   .fields
     =f.hidden_field "flaggeable_type", :value => flaggeable_class_name, :id => "flaggeable_type_#{flaggeable_class_name}_#{flag.flaggeable.id}"
     =f.hidden_field "flaggeable_id", :value => flag.flaggeable.id, :id => "flaggeable_id_#{flaggeable_class_name}_#{flag.flaggeable.id}"

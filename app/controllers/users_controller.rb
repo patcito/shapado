@@ -66,10 +66,12 @@ class UsersController < ApplicationController
     @user = User.find_by_login_or_id(params[:id])
     raise PageNotFound unless @user
     @questions = @user.questions.paginate(:page=>params[:questions_page],
+                                          :order => "votes_average desc, created_at desc",
                                           :per_page => 10,
                                           :group_id => current_group.id,
                                           :banned => false)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
+                                      :order => "votes_average desc, created_at desc",
                                       :group_id => current_group.id,
                                       :per_page => 10,
                                       :banned => false)
@@ -122,8 +124,10 @@ class UsersController < ApplicationController
                          notification_opts bio hide_country website], params[:user])
 
     if params[:user]["birthday(1i)"]
-      @user.birthday = Time.parse("#{params[:user]["birthday(1i)"]}-#{params[:user]["birthday(2i)"]}-#{params[:user]["birthday(3i)"]}") rescue nil
+      @user.birthday = build_date(params[:user], "birthday")
     end
+
+    Magent.push("actors.judge", :on_update_user, @user.id, current_group.id)
 
     preferred_tags = params[:user][:preferred_tags]
     if @user.valid? && @user.save

@@ -1,0 +1,52 @@
+.tag-list
+  font-size: .785em
+  overflow: hidden
+  line-height: 25px
+
+  ul
+    list-style-type: none
+
+  .tag
+    margin-left: 3px
+    display: inline
+    overflow: hidden
+    float: left
+    a
+      &:link, &:active, &:visited
+        color: #613C24
+        background: #F7F7F7
+        cursor: pointer
+        font-size: 100%
+        font-weight: bold
+        margin-bottom: 5px
+        padding: 2px 8px
+        text-align: center
+        text-decoration: none
+        text-transform: lowercase
+        white-space: nowrap
+        line-height: 20px
+      &:hover
+        color: #613C24
+        background: #F7F7F7
+      &.remove_tag
+        background: #E55252 !important
+        padding: 0px 2px
+        font-weight: bold
+
+        border: none
+        &:hover
+          color: #ffdede
+          background: #810000 !important
+
+.tag-multiplier
+  font-size: 125%
+  color: #555
+  font-weight: bold
+  margin-left: 5px
+  display: inline
+  font-family: Helvetica
+
+.tag_cloud
+  a.tag
+    text-decoration: none
+    line-height: 26px

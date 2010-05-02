@@ -4,6 +4,7 @@
   = hidden_field_tag "source", source, :id => "source_#{commentable.id}"
 
   -if current_group.wysiwyg_editor
-    = text_area_tag "body", @comment.body, :class => "text_area wysiwyg_editor", :id => "comment_#{commentable.id}", :rows => 'auto', :cols => 'auto', :value => markdown(@comment.body)
+    = text_area_tag "body", @comment.body, :class => "comment_text_area wysiwyg_editor", :id => "comment_#{commentable.id}", :rows => 'auto', :cols => 'auto', :value => markdown(@comment.body)
   -else
-    = text_area_tag "body", @comment.body, :class => "text_area markdown_editor", :id => "comment_#{commentable.id}", :rows => 'auto', :cols => 'auto'
+    = text_area_tag "body", @comment.body, :class => "comment_text_area markdown_editor", :id => "comment_#{commentable.id}", :rows => 'auto', :cols => 'auto'
+  %br.clear

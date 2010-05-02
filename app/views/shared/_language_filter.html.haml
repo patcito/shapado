@@ -5,13 +5,11 @@
     .content
       -if logged_in?
         -form_tag change_language_filter_path, :class => "form" do
-          %p
-            = hidden_field_tag :source, request.path
-            = select :language, :filter, languages_options(User::LANGUAGE_FILTERS), {:selected => current_user.language_filter}, :class => "select"
-            = submit_tag t('scaffold.save'), :class => "button"
+          = hidden_field_tag :source, request.path
+          = select :language, :filter, languages_options(User::LANGUAGE_FILTERS), {:selected => current_user.language_filter}, :class => "select"
+          = submit_tag t('scaffold.save'), :class => "button"
       -else
         -form_tag change_language_filter_path, :class => "form" do
-          %p
-            = hidden_field_tag :source, request.path
-            = select :language, :filter, languages_options(User::LOGGED_OUT_LANGUAGE_FILTERS), {:selected => logged_out_language_filter},  :class => "select"
-            = submit_tag  t('scaffold.save'), :class => "button"
+          = hidden_field_tag :source, request.path
+          = select :language, :filter, languages_options(User::LOGGED_OUT_LANGUAGE_FILTERS), {:selected => logged_out_language_filter},  :class => "select"
+          = submit_tag  t('scaffold.save'), :class => "button"

@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class User
   include MongoMapper::Document
-  devise :authenticatable, :recoverable, :registarable, :rememberable,
+  devise :authenticatable, :http_authenticatable, :recoverable, :registarable, :rememberable,
          :lockable, :token_authenticatable, :facebook_connectable
 
   ROLES = %w[user moderator admin]
@@ -68,6 +68,7 @@ class User
   validates_length_of       :name,     :maximum => 100
 
   validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? }
+  validates_uniqueness_of   :email,    :if => lambda { |e| !e.openid_login? }
   validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
   validates_format_of       :email,    :with => Devise::EMAIL_REGEX, :allow_blank => true
 
@@ -179,6 +180,13 @@ class User
     self.role == "admin"
   end
 
+  def age
+    return if self.birthday.blank?
+
+    Time.zone.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.zone.now.year) >
+Time.zone.now ? 1 : 0)
+  end
+
   def can_modify?(model)
     return false unless model.respond_to?(:user)
     self.admin? || self == model.user
@@ -206,7 +214,7 @@ class User
   end
 
   def mod_of?(group)
-    owner_of?(group) || role_on(group) == "moderator" || self.can_moderate_on?(group)
+    owner_of?(group) || role_on(group) == "moderator" || self.reputation_on(group) >= group.reputation_constrains["moderate"].to_i
   end
 
   def user_of?(group)
@@ -240,7 +248,7 @@ class User
   end
 
   def logged!(group = nil)
-    now = Time.now
+    now = Time.zone.now
 
     if new?
       self.last_logged_at = now
@@ -251,15 +259,16 @@ class User
 
   def on_activity(activity, group)
     if activity == :login
+      self.last_logged_at ||= Time.now
       if !self.last_logged_at.today?
         self.collection.update({:_id => self._id},
-                               {:$set => {:last_logged_at => Time.now}},
+                               {:$set => {:last_logged_at => Time.zone.now.utc}},
                                {:upsert => true})
       end
     else
       self.update_reputation(activity, group) if activity != :login
     end
-    activity_on(group, Time.now)
+    activity_on(group, Time.zone.now)
   end
 
   def activity_on(group, date)
@@ -271,12 +280,12 @@ class User
                         {:$set => {"membership_list.#{group.id}.last_activity_at" => day}},
                         {:upsert => true})
       if last_day
-        if last_day.utc == day.yesterday
+        if last_day.utc.between?(day.yesterday - 12.hours, day.tomorrow)
           collection.update({:_id => self.id},
                             {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
                             {:upsert => true})
           Magent.push("actors.judge", :on_activity, group.id, self.id)
-        elsif !last_day.utc.today?
+        elsif !last_day.utc.today? && (last_day.utc != Time.now.utc.yesterday)
           Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
           reset_activity_days!(group)
         end
@@ -385,7 +394,7 @@ class User
       group = args.first
       if group.reputation_constrains.include?(key.to_s)
         if group.has_reputation_constrains
-          return self.owner_of?(group) || (self.reputation_on(group) >= group.reputation_constrains[key].to_i)
+          return self.owner_of?(group) || self.mod_of?(group) || (self.reputation_on(group) >= group.reputation_constrains[key].to_i)
         else
           return true
         end

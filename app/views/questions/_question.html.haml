@@ -1,15 +1,20 @@
 -title = h(question.title)
+-if question.closed
+  -title += " [#{t("closed", :scope => "activerecord.attributes.question").upcase}]"
 
 -if !local_assigns[:mini]
   -owner = nil
   -if question.last_target.present?
     -last_target = question.last_target
-    -owner= last_target.user
+    -if last_target.respond_to?(:updated_by) && last_target.updated_by.present?
+      -owner= last_target.updated_by
+    -else
+      -owner= last_target.user
   -else
     -last_target = question
     -owner = question.user
 
-  %li.item{:class => class_for_question(question)}
+  %li.entry.item{:class => class_for_question(question)}
     / Question Stats
     .stats
       .box.votes
@@ -17,7 +22,7 @@
           =format_number(question.votes_average)
         .text
           =t(:votes, :scope => "activerecord.attributes.question")
-      .box.answers{:class => question.answered ? "answered" : "", :title => question.answered ? t(".answered_tooltip") : "" }
+      .box.answers{:class => class_for_question(question), :title => question.accepted ? t(".accepted_tooltip") : "" }
         .counter
           =format_number(question.answers_count)
         .text
@@ -30,44 +35,48 @@
     / Question Summary
     .summary
       .left.vote-icon
-        -if logged_in? && (vote = current_user.vote_on(question))
-          -if vote.value < 0
-            = image_tag "edit-delete.png"
-          -else
-            = image_tag "dialog-ok-apply.png"
-        -elsif current_user != question.user
-          -form_tag votes_path, :class => "vote-up-form" do
-            .fields
-              = hidden_field_tag "voteable_type", question.class.name, :id => "voteable_type_#{question.id}"
-              = hidden_field_tag "voteable_id", question.id, :id =>  "voteable_id_#{question.id}"
-              = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
-              = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "quick-vote-button")
+        -unless question.closed
+          -if logged_in? && (vote = current_user.vote_on(question))
+            -if vote.value < 0
+              = image_tag "edit-delete.png"
+            -else
+              = image_tag "dialog-ok-apply.png"
+          -elsif current_user != question.user
+            -form_tag votes_path, :class => "vote-up-form" do
+              .fields
+                = hidden_field_tag "voteable_type", question.class.name, :id => "voteable_type_#{question.id}"
+                = hidden_field_tag "voteable_id", question.id, :id =>  "voteable_id_#{question.id}"
+                = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
+                = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "quick-vote-button")
 
-      %h3= link_to title, question_path(question), :title => truncate(h(question.body), :length => 200)
-      .tag-list
-        -question.tags.each do |tag|
-          %span.tag
-            = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
+      -cache("question_on_index_#{question.id}") do
+        %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
+        .tag-list
+          -question.tags.each do |tag|
+            %span.tag{:class => "tag_#{h(tag)}"}
+              = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
+
       .owner-data
         = link_to h(owner.login), user_path(owner)
         %span.reputation
-          ==(#{owner.reputation_on(question.group)})
-        %strong
+          ==(#{owner.reputation_on(question.group_id)})
+        %strong.time_ago
           = link_to t("time.ago", :time => time_ago_in_words(last_target.updated_at)), question_path(question)+"##{last_target.id}"
         -if question.wiki
           %span.wiki_flag
             wiki
     .clear
 -else
-  %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}
-    .stats
-      .box.answers{:class => question.answered ? "answered" : "" }
-        .counter
-          =format_number(question.answers_count)
-        -if !local_assigns[:lite]
-          .text
-            =t(:answers, :scope => "activerecord.attributes.question")
-    .summary
-      %h3
-        = link_to title, question_path(question)
-    .clear
+  -cache("mini_question_on_index_#{question.id}") do
+    %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}
+      .stats
+        .box.answers{:class => question.accepted ? "accepted" : "" }
+          .counter
+            =format_number(question.answers_count)
+          -if !local_assigns[:lite]
+            .text
+              =t(:answers, :scope => "activerecord.attributes.question")
+      .summary
+        %h3
+          = link_to title, question_path(question)
+      .clear

@@ -26,12 +26,19 @@ pt-PT:
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
-      answered_tooltip: "one of the answers was accepted as the correct answer"
+      accepted_tooltip: "one of the answers was accepted as the correct answer"
       unwatch_tooltip: "stop watching this question"
       favorite_tooltip: "add this question to your favorites"
       unfavorite_tooltip: "remove this question from your favorites"
       asked_on: "asked on"
       last_activity: last activity
+      retag: retag
+      request_closing: request closing
+      request_closing_details: request to close this question
+      close: close
+      ban: ban
+      retract_request: you have already made a request, would you line to retract it?
+      close_reason: "the question has been closed for the following reason:"
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
@@ -41,7 +48,7 @@ pt-PT:
       flag: reporte
       add_comment: adicionar comentário...
     question:
-      answered_tooltip: This question has been answered
+      accepted_tooltip: This question has been accepted
     form:
       body_tip: qual é a sua pergunta? seja descritivo.
       language_tip: seleccione o idioma da questão.
@@ -57,6 +64,7 @@ pt-PT:
       empty: "this group doesn't have any unanswered questions."
       my_tags: "my tags"
       expert: expert
+      filter: search for tags
     tags:
       title: etiquetas
       tooltip: show questions tagged {{tag}}
@@ -75,6 +83,8 @@ pt-PT:
       success:      "you will now receive notifications by mail for every new answer to this question"
     unwatch:
       success:      "you will not receive notifications by mail for every new answer to this question anymore"
+    revert:
+      title: "revert question"
     move:
       title:        "move question: {{title}}"
       group_label:  "move to the group with slug:"
@@ -84,6 +94,13 @@ pt-PT:
       group_dont_exists: "the group {{group}} don't exists"
     shared:
       flag: reportar
+    retag_form:
+      title:  "Update tags"
+      submit: "update tags!"
+      cancel: "cancel"
+    retag_to:
+      success: "The tags have been updated successfully."
+      failure: "Sorry, the tags could not be updated."
     model:
       messages:
         too_short: "seems too short. Please use more words than {{count}} to be more specific."
@@ -105,4 +122,7 @@ pt-PT:
         votes: votos
         language: idioma
         created_at: asked
+        updated_at: updated
+        updated_by: updated by
+        closed: closed
 

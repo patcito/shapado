@@ -16,7 +16,9 @@
         .diff_actions
           -if @answer.versions.count > 0
             =link_to t("global.previous"), diff_question_answer_path(@question, @answer, :curr => :current, :prev => @question.versions.count-1), :class => "diff_prev"
-
+      -if !@answer.version_message.blank?
+        %h3.version_message
+          = @answer.version_message
       -if !@answer.body.blank?
         %h2=t(:body, :scope => "activerecord.attributes.answer")
         .markdown

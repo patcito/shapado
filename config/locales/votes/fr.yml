@@ -5,10 +5,12 @@ fr:
       flash_error:  "vous ne pouvez pas voter"
       unauthenticated: "les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait"
     control:
-      to_vote_up: "click to vote up"
-      to_vote_down: "click to vote down"
+      to_vote_up: "cliquez si vous approuvez"
+      to_vote_down: "cliquez si vous désapprouvez"
+      have_voted_up: "cliquez pour annuler votre approuvement"
+      have_voted_down: "cliquez pour annuler votre désapprouvement"
     destroy:
-      flash_notice: "votre vote a été annulé avec succès."
+      flash_notice: "votre vote a été annulé avec succès"
   activerecord:
     models:
       votes: votes

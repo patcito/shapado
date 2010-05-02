@@ -1,0 +1,23 @@
+fr:
+  close_requests:
+    index:
+      title: list of close requests
+    form:
+     dupe: double
+     ot: hors sujet
+     no_question: N'est pas une question
+     not_relevant: N'est pas pertinente
+     spam: spam
+     request_closing_details: demander de fermer cette question
+     close_with_reason: fermer cette question en utilisant cette raison
+    create:
+      flash_notice: demande de fermeture créée avec succès
+    update:
+      flash_notice: demande de fermeture actualisée avec succès
+    destroy:
+      flash_notice: demande de fermeture retirée avec succès
+    model:
+      name: demande de fermeture
+      prural_name: demandes de fermeture
+      messages:
+        already_requested: "vous avez déjà fait une demande de fermeture sur cette question"

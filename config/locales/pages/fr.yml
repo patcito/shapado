@@ -1,0 +1,28 @@
+fr:
+  pages:
+    title: fixme
+    index:
+      title: Liste de pages
+      create_page: créer une nouvelle page
+      written_in: écrite en {{language}}
+    edit:
+      title: Editer la page
+    create:
+      success: 'La page a été crée avec succès.'
+    update:
+      success: 'La page a été actualisé avec succès.'
+    new:
+      title: nouvelle page
+    form:
+      title_tip: "Titre de la page, utilisez cecir afin de créer une référence à cette page. Par exemple: [[FAQ|lire cette faq]]"
+      language_tip: lange de la page
+    actions:
+      title: Actions
+      create_page: "Créer une nouvelle page"
+      edit_page: "Editer la page"
+
+  activerecord:
+    attributes:
+      page:
+        js: javascript
+        css: feuille de style

@@ -11,6 +11,7 @@ base: &common
   default_language: en
   adbard_host_id: 2746b6d24c93f71df12503ec2ab667e5
   adbard_site_key: e8e24a6b2cba51145dc0c874e1b2f4a4
+  enable_adbard: false
   application_name: Shapado
   is_shapadocom: false
   enable_groups: false

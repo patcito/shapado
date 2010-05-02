@@ -8,25 +8,27 @@ class Admin::ManageController < ApplicationController
        :theme => :theme,
        :actions => :actions,
        :stats => :stats,
-       :widgets => :widgets,
-       :reputation => :reputation
+       :widgets => :widgets
 
+  subtabs :properties => [[:general, "general"],
+                          [:rewards, "rewards"],
+                          [:constrains, "constrains"],
+                          [:theme, "theme"],
+                          [:domain, "domain"]]
   subtabs :content => [[:question_prompt, "question_prompt"],
                        [:question_help, "question_help"],
                        [:head_tag, "head_tag"],
-                       [:head, "head"], [:footer, "footer"]]
+                       [:head, "head"], [:footer, "footer"],
+                       [:top_bar, "top_bar"]]
 
   def dashboard
   end
 
   def properties
+    @active_subtab ||= "general"
   end
 
   def actions
-  end
-
-  def reputation
-    @active_subtab = params[:tab] || "rewards"
   end
 
   def stats
@@ -41,9 +43,6 @@ class Admin::ManageController < ApplicationController
       redirect_to domain_url(:custom => @group.domain, :controller => "manage",
                              :action => "properties")
     end
-  end
-
-  def theme
   end
 
   protected

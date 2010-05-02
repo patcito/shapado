@@ -1,10 +1,7 @@
--content_for :subtabs do
-  .navtitle
-    =t(".title")
-
 -form_for(@group, :html => {:class => "form", :multipart => true}) do |f|
   = f.error_messages
-  =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")
-  = render :partial => "groups/form", :object => f
+  =hidden_field_tag :source, domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties", :tab => @active_subtab)
+  =render :partial => "admin/manage/properties/subtabs"
+  =render :partial => "admin/manage/properties/#{@active_subtab||'general'}", :locals => {:f => f}
   .group.navform
     = f.submit t('scaffold.update')

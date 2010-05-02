@@ -9,9 +9,5 @@
     =link_to t("layouts.application.badges"), badges_path
   %li.unanswered.last
     =link_to t("layouts.application.unanswered"), unanswered_questions_path
-  -if logged_in?
-    -if current_user.mod_of?(current_group) || current_user.admin?
-      %li.moderate.last
-        =link_to t("layouts.application.moderate"), moderate_path, :style => "background: #E55353; color: #fff"
   %li.ask_question
     =link_to t("layouts.application.ask_question"), new_question_path, :rel => 'nofollow'

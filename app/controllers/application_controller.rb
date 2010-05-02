@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include Subdomains
+  include Sweepers
 
   if AppConfig.exception_notification['activate']
     include ExceptionNotifiable
@@ -54,6 +55,13 @@ class ApplicationController < ActionController::Base
       subdomains.delete("www") if request.host == "www.#{AppConfig.domain}"
       _current_group = Group.first(:state => "active", :domain => request.host)
       unless _current_group
+        if subdomain = subdomains.first
+          _current_group = Group.first(:state => "active", :subdomain => subdomain)
+          unless _current_group.nil?
+            redirect_to domain_url(:custom => _current_group.domain)
+            return
+          end
+        end
         flash[:warn] = t("global.group_not_found", :url => request.host)
         redirect_to domain_url(:custom => AppConfig.domain)
         return
@@ -221,5 +229,13 @@ class ApplicationController < ActionController::Base
 
   def is_bot?
     request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler|StatusNet)\b/i
+  end
+
+  def build_date(params, name)
+    Time.zone.parse("#{params["#{name}(1i)"]}-#{params["#{name}(2i)"]}-#{params["#{name}(3i)"]}") rescue nil
+  end
+
+  def build_datetime(params, name)
+    Time.zone.parse("#{params["#{name}(1i)"]}-#{params["#{name}(2i)"]}-#{params["#{name}(3i)"]} #{params["#{name}(4i)"]}:#{params["#{name}(5i)"]}") rescue nil
   end
 end

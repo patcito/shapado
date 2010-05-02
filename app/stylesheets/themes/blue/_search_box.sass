@@ -1,0 +1,63 @@
+#search_box
+  background: #EBEBEB
+  margin-bottom: 30px
+  color: #222
+  padding: 20px
+
+  h4
+    font-size: 15px
+    font-weight: normal
+    margin: 0
+  .columns
+    margin-top: 15px
+    .column_info
+      float: left
+      width: 10%
+      .avatar
+        float: right
+        margin: 5px 5px 20px 0px
+        width: 50%
+        text-align: center
+      .reputation
+        color: #ccc
+        font-size: 38px
+        font-weight: bold
+        float: right
+        margin-right: 5px
+        text-align: center
+        width: 50%
+
+        &.big_number
+          font-size: 33px
+          margin-right: 20px
+    .column_form
+      float: right
+      width: 85%
+      .pointer
+        background: transparent url(/images/pointer.png) no-repeat
+        width: 20px
+        height: 40px
+        float: left
+        margin-top: 12px
+        margin-right: -1px
+      textarea
+        padding: 4px
+        width: 95%
+        background: white
+
+        color: black
+        font-weight: bold
+        border-style: none
+        outline-style: none
+        overflow: hidden
+        overflow-y: hidden
+        &:focus
+          outline: 0px
+
+  .ask_question
+    +fancy-button-structure
+    +fancy-button-colors(#FF6600)
+    +fancy-button-size(18px, 4px, 2px)
+    float: right
+.search_field
+  margin-top: 1em

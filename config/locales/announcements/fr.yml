@@ -1,0 +1,18 @@
+fr:
+  announcements:
+    index:
+      title: annonces
+    create:
+      success: 'announce créée avec succès.'
+    form:
+    actions:
+      title: actions
+      delete: retirer
+
+  activerecord:
+    attributes:
+      announcement:
+        message: message
+        starts_at: "débute le"
+        ends_at: "termine le"
+        only_anonymous: "juste pour les utilisateurs anonymes"

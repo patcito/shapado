@@ -141,6 +141,9 @@ fr:
       autobiographer:
         name: autobiographer
         description: Completed all user profile fields
+      organizer:
+        name: organizer
+        description: First retag
 
   activerecord:
     models:

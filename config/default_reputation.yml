@@ -1,9 +1,9 @@
 ask_question:                     2
-delete_question:                 -3
+delete_question:                  0
 answer_question:                  2
 delete_answer:                   -3
 close_question:                   1
-reopen_question:                 -1
+reopen_question:                  0
 comment_question:                 0
 comment_answer:                   0
 answer_picked_as_solution:       15

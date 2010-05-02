@@ -1,7 +1,7 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => [:show, :create]
   before_filter :check_permissions, :only => [:destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update, :rollback]
+  before_filter :check_update_permissions, :only => [:edit, :update, :revert]
 
   helper :votes
 
@@ -34,17 +34,12 @@ class AnswersController < ApplicationController
     end
   end
 
-  def rollback
+  def revert
     @question = @answer.question
-    @question.updated_by = current_user
-
-    if @answer.rollback!(params[:version].to_i)
-      flash[:notice] = t(:flash_notice, :scope => "answers.update")
-      Magent.push("actors.judge", :on_rollback, @answer.id)
-    end
+    @answer.load_version(params[:version].to_i)
 
     respond_to do |format|
-      format.html { redirect_to history_question_answer_path(@question, @answer) }
+      format.html
     end
   end
 
@@ -77,6 +72,8 @@ class AnswersController < ApplicationController
       @answer.user = current_user
       respond_to do |format|
         if @question && @answer.save
+          sweep_question(@question)
+
           Question.update_last_target(@question.id, @answer)
 
           current_user.stats.add_answer_tags(*@question.tags)
@@ -95,11 +92,7 @@ class AnswersController < ApplicationController
           users.push(@question.user) if @question.user != current_user
           followers = []
 
-          if current_group.private || current_group.isolate
-            followers = @answer.user.followers(:group_id => current_group.id, :languages => [@question.language])
-          else
-            followers = @answer.user.followers(:languages => [@question.language])
-          end
+          followers = @answer.user.followers(:languages => [@question.language])
 
           (users - followers).each do |u|
             if !u.email.blank? && u.notification_opts.new_answer
@@ -139,10 +132,14 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       @question = @answer.question
-      @answer.safe_update(%w[body], params[:answer])
+      @answer.safe_update(%w[body wiki version_message], params[:answer])
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save
+        sweep_question(@question)
+
+        Question.update_last_target(@question.id, @answer)
+
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
 
         Magent.push("actors.judge", :on_update_answer, @answer.id)
@@ -160,6 +157,7 @@ class AnswersController < ApplicationController
     @answer.user.update_reputation(:delete_answer, current_group)
     @answer.destroy
     @question.answer_removed!
+    sweep_question(@question)
 
     Magent.push("actors.judge", :on_destroy_answer, current_user.id, @answer.attributes)
 
@@ -189,18 +187,34 @@ class AnswersController < ApplicationController
     end
   end
 
-  def check_update_permissions
+
+    def check_update_permissions
     @answer = Answer.find(params[:id])
 
-    if @answer.nil?
-      redirect_to questions_path
-    elsif !((current_user.can_edit_others_posts_on?(@answer.group)) ||
-          current_user.can_modify?(@answer) || @answer.wiki)
-      reputation = @answer.group.reputation_constrains["edit_others_posts"]
-      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
-                                    :min_reputation => reputation,
-                                    :action => I18n.t("users.actions.edit_others_posts"))
-      redirect_to questions_path
+    allow_update = true
+    unless @answer.nil?
+      if !current_user.can_modify?(@answer)
+        if @answer.wiki
+          if !current_user.can_edit_wiki_post_on?(@answer.group)
+            allow_update = false
+            reputation = @question.group.reputation_constrains["edit_wiki_post"]
+            flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                        :min_reputation => reputation,
+                                        :action => I18n.t("users.actions.edit_wiki_post"))
+          end
+        else
+          if !current_user.can_edit_others_posts_on?(@answer.group)
+            allow_update = false
+            reputation = @answer.group.reputation_constrains["edit_others_posts"]
+            flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                                        :min_reputation => reputation,
+                                        :action => I18n.t("users.actions.edit_others_posts"))
+          end
+        end
+        return redirect_to question_path(@answer.question) if !allow_update
+      end
+    else
+      return redirect_to questions_path
     end
   end
 end

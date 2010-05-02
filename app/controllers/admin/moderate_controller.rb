@@ -12,6 +12,11 @@ class Admin::ModerateController < ApplicationController
                :banned => @banned,
                :group_id => current_group.id}
 
+    banned = {:order => "flags_count desc",
+               :flags_count.gt => 0,
+               :banned => true,
+               :group_id => current_group.id}
+
     case @active_subtab
       when "questions"
         @questions = Question.paginate(options.merge({:per_page => params[:per_page] || 25,
@@ -19,12 +24,23 @@ class Admin::ModerateController < ApplicationController
       when "answers"
         @answers = Answer.paginate(options.merge({:per_page => params[:per_page] || 25,
                                        :page => params[:answers_page] || 1}))
+      when "banned"
+        @banned = Question.paginate(banned.merge({:per_page => params[:per_page] || 25,
+                                       :page => params[:questions_page] || 1}))
     end
   end
 
   def ban
     Question.ban(params[:question_ids] || [])
     Answer.ban(params[:answer_ids] || [])
+
+    respond_to do |format|
+      format.html{redirect_to :action => "index"}
+    end
+  end
+
+  def unban
+    Question.unban(params[:question_ids] || [])
 
     respond_to do |format|
       format.html{redirect_to :action => "index"}

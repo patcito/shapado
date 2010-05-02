@@ -3,11 +3,8 @@ ul.combobox
   padding: 0
   margin: 0
   list-style: none
-  list-style-image: none
   list-style-position: outside
-  list-style-type: none
   display: inline
-
   li
     float: left
     margin-right: 0.7em
@@ -16,16 +13,20 @@ ul.combobox
       z-index: 2
 
     ul
-      background-color: black
-      display: block
       position: absolute
-      width: 10em
+      background-color: #EBEBEB
+      display: block
+      border: 1px solid #DCDCDC
       left: -999em
       list-style: none
       li
-        margin-left: 0
         width: 100%
+        display: block
+        clear: both
+        &:hover
+          background-color: #E0E0E0
         a
+          padding: 4px
           color: #666666
           text-decoration: none
           display: block

@@ -1,0 +1,28 @@
+-content_for :head do
+  -if @page.has_css?
+    %link{:href => css_page_path(@page),  :rel => "stylesheet", :media => "screen", :type => "text/css"}
+
+  -if current_group.has_custom_js && @page.has_js?
+    %script{:src => js_page_path(@page), :type => "text/javascript"}
+
+-content_for :subtabs do
+  %h1.navtitle.title
+    &= @page.title
+
+-content_for :sidebar do
+  -if @page.wiki || (logged_in? && current_user.mod_of?(current_group) )
+    .block
+      %h3
+        =t("pages.actions.title")
+      .content
+        %ul.navigation
+          %li
+            = link_to t("pages.actions.create_page"), new_page_path
+          %li
+            = link_to t("pages.actions.edit_page"), edit_page_path(@page)
+
+.markdown
+  -if safe_page?(@page)
+    = RDiscount.new(render_page_links(@page.body)).to_html
+  -else
+    = markdown(@page.body)

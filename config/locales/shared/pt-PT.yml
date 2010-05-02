@@ -2,8 +2,7 @@ pt-PT:
   shared:
     topbar:
       logged_as: "logged in as {{login}}"
+      admin: gerir
+      user_page: my page
     current_tags:
       title: selected tags
-    layout:
-      notice:
-        manage: gerir

@@ -2,7 +2,8 @@ desc "Setup application"
 task :bootstrap => [:environment, "setup:reset",
                     "setup:create_admin",
                     "setup:default_group",
-                    "setup:create_widgets"] do
+                    "setup:create_widgets",
+                    "setup:create_pages"] do
 end
 
 desc "Upgrade"
@@ -77,15 +78,47 @@ namespace :setup do
     user.save!
   end
 
+  desc "Create pages"
+  task :create_pages => [:environment] do
+    Dir.glob(RAILS_ROOT+"/db/fixtures/pages/*.markdown") do |page_path|
+      basename = File.basename(page_path, ".markdown")
+      title = basename.gsub(/\.(\w\w)/, "").titleize
+      language = $1
+
+      body = File.read(page_path)
+
+      puts "Loading: #{title.inspect} [lang=#{language}]"
+      Group.find_each do |group|
+        if Page.count(:title => title, :language => language, :group_id => group.id) == 0
+          Page.create(:title => title, :language => language, :body => body, :user_id => group.owner, :group_id => group.id)
+        end
+      end
+    end
+  end
+
   desc "Reindex data"
   task :reindex => [:environment] do
+    class Question
+      def update_timestamps
+      end
+    end
+
+    class Answer
+      def update_timestamps
+      end
+    end
+
+    $stderr.puts "Reindexing #{Question.count} questions..."
     Question.find_each do |question|
       question._keywords = []
+      question.rolling_back = true
       question.save(:validate => false)
     end
 
+    $stderr.puts "Reindexing #{Answer.count} answers..."
     Answer.find_each do |answer|
       answer._keywords = []
+      answer.rolling_back = true
       answer.save(:validate => false)
     end
   end

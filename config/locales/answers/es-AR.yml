@@ -16,6 +16,9 @@ es-AR:
 \n - solo puede hacer una sola respuesta por cada pregunta."
     update:
       flash_notice: "la respuesta fue actualizada exitosamente."
+    revert:
+      title: "revert answer"
+
   activerecord:
     models:
       answers: respuestas

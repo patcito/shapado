@@ -1,0 +1,42 @@
+= f.error_messages
+.group
+  = f.label :title, "#{t(:title, :scope => "activerecord.attributes.question")}*", :class => "label"
+  = f.text_field :title, :class => "text_field"
+  .description
+    = t(".title_tip")
+
+.group
+  = f.label :body, t(:body, :scope => "activerecord.attributes.question"), :class => "label"
+  -if current_group.wysiwyg_editor
+    = f.text_area :body, :class => "text_area", :id => "wysiwyg_editor", :value => markdown(@page.body)
+  -else
+    = f.text_area :body, :class => "text_area", :id => "markdown_editor"
+
+    #markdown_preview.markdown
+      =markdown(@page.body)
+
+-if !@page.new?
+  .group
+    = f.label :css, t(:css, :scope => "activerecord.attributes.page"), :class => "label"
+    = f.text_area :css, :class => "text_area", :value => @page.has_css? ? @page.css.read : ""
+
+  -if current_group.has_custom_js && current_user.role_on(current_group) == "owner"
+    .group
+      = f.label :js, t(:js, :scope => "activerecord.attributes.page"), :class => "label"
+      = f.text_area :js, :class => "text_area", :value => @page.has_js? ? @page.js.read : ""
+
+
+-if current_group.language.nil? && AppConfig.enable_i18n
+  .group
+    = f.label :language, t(:language, :scope => "activerecord.attributes.question"), :class => "label"
+    -lang = @page.new? ? current_user.main_language : @page.language
+    = f.select :language, languages_options(current_user.preferred_languages)+[[t("languages.any"), ""]], {:selected => lang}, :class => "select"
+    .description
+      = t(".language_tip")
+-else
+  = f.hidden_field :language, :value => (current_group.language || AppConfig.default_language)
+
+-if current_group.has_adult_content
+  .group
+    = f.check_box :adult_content, :class => "checkbox"
+    = f.label :adult_content, t("questions.form.adult_content"), :class => "radio"

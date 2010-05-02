@@ -29,5 +29,5 @@
         %ul
           -@search_tags.each do |tag|
             %li
-              %span.tag
+              %span.tag{:class => "tag_#{h(tag)}"}
                 =link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"

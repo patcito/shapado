@@ -7,3 +7,5 @@ es-AR:
         content: contenido
         item_title: titulo
         all: todas
+        flagged: preguntas reportadas
+        banned: preguntas baneadas

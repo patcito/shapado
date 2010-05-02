@@ -14,13 +14,25 @@
    height="20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47pre4 r22446"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="to_vote_up.svg"
-   inkscape:export-filename="/home/kuadrosx/Projects/ricodigo/shapado/public/images/to_vote_up.png"
+   inkscape:export-filename="/home/krawek/Proyectos/shapado/public/images/to_vote_up.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <linearGradient
+       id="linearGradient3609"
+       inkscape:collect="always">
+      <stop
+         id="stop3611"
+         offset="0"
+         style="stop-color:#666666;stop-opacity:1" />
+      <stop
+         id="stop3613"
+         offset="1"
+         style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
     <linearGradient
        id="linearGradient3958">
       <stop
@@ -87,14 +99,14 @@
          id="stop3612" />
     </linearGradient>
     <linearGradient
-       y2="-2.0383451"
-       x2="1.4371289"
-       y1="5.4935069"
-       x1="-0.3527725"
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient3606"
        gradientUnits="userSpaceOnUse"
-       id="linearGradient3633"
-       xlink:href="#linearGradient3958"
-       inkscape:collect="always" />
+       x1="1.4371289"
+       y1="-2.0383451"
+       x2="-0.3527725"
+       y2="5.4935069" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -104,14 +116,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="3.9065856"
-     inkscape:cy="9.5000219"
+     inkscape:cx="12.459238"
+     inkscape:cy="14.284174"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1039"
      inkscape:window-height="672"
-     inkscape:window-x="319"
+     inkscape:window-x="232"
      inkscape:window-y="67"
      inkscape:window-maximized="0" />
   <metadata
@@ -133,7 +145,7 @@
      transform="translate(2.5609987,-1028.5339)">
     <path
        sodipodi:type="star"
-       style="fill:url(#linearGradient3633);fill-opacity:1;stroke:none"
+       style="fill:url(#linearGradient3606);fill-opacity:1;stroke:none"
        id="path2818-0"
        sodipodi:sides="3"
        sodipodi:cx="0.44642857"
@@ -146,7 +158,7 @@
        inkscape:rounded="0.04"
        inkscape:randomized="0.072"
        d="m 4.1495808,6.3085415 c -0.2532449,0.26455 -8.8307634,-1.747683 -8.89477,-2.1028428 -0.064007,-0.3551599 5.9135164,-6.3297703 6.2613319,-6.225218 0.3478155,0.1045523 2.8866831,8.0635108 2.6334381,8.3280608 z"
-       transform="matrix(3.180277,-0.57915269,0.75577463,2.437057,9.3977402,1034.3341)"
+       transform="matrix(3.180277,-0.60848465,0.75577463,2.560485,9.3977402,1034.6278)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>

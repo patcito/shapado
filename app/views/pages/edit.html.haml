@@ -1,0 +1,18 @@
+
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+
+-content_for :sidebar do
+  = ""
+
+- form_for(@page, :url => page_path(@page), :html => {:class => "form"}) do |f|
+  =render :partial => "form", :locals => {:f => f}
+  .group.navform
+    .right
+      = f.label :wiki, "Wiki", :class => "radio"
+      = f.check_box :wiki, :class => "checkbox"
+
+    = f.submit t('scaffold.update')
+    = t("global.or")
+    = link_to t('scaffold.cancel'), page_path(@page), :class => "button cancel"

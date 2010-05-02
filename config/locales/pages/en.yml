@@ -1,0 +1,28 @@
+en:
+  pages:
+    title: fixme
+    index:
+      title: list of pages
+      create_page: create new page
+      written_in: written in {{language}}
+    edit:
+      title: Editing page
+    create:
+      success: 'Page was successfully created.'
+    update:
+      success: 'Page was successfully updated.'
+    new:
+      title: new page
+    form:
+      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
+      language_tip: page language
+    actions:
+      title: Actions
+      create_page: "Create new page"
+      edit_page: "Edit page"
+
+  activerecord:
+    attributes:
+      page:
+        js: javascript
+        css: stylesheets

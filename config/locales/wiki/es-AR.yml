@@ -5,10 +5,14 @@ es-AR:
       previous_versions: versiónes antériores
       current_version: versión actual
       version: versión
+      version_summary: resume de esta versión
     diff:
       title: diferencias entre las versiones {{prev}} y {{curr}}
     actions:
-      set_as_current: poner como la versión actual
+      revert: revertir a esta versión
       show_diff: comparar versiones seleccionadas
       all_history: regresar al historial
       back_to_question: volver a la pregunta
+    model:
+      attributes:
+        message: resumen

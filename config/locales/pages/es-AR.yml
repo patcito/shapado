@@ -1,0 +1,28 @@
+es-AR:
+  pages:
+    title: fixme
+    index:
+      title: Lista de paginas
+      create_page: crear una nueva pagina
+      written_in: escrita en {{language}}
+    edit:
+      title: Editando pagina
+    create:
+      success: 'La pagina ha sido creada con exito.'
+    update:
+      success: 'La pagina ha sido actualizada con exito.'
+    new:
+      title: nueva pagina
+    form:
+      title_tip: "Titulo de la pagina, utiliza eso para hacer una referencia a esta pagina. Por ejemplo: [[FAQ|leer este faq]]"
+      language_tip: idioma de la pagina
+    actions:
+      title: Acciones
+      create_page: "Crear una nueva pagina"
+      edit_page: "Editar pagina"
+
+  activerecord:
+    attributes:
+      page:
+        js: javascript
+        css: hojas de estilo

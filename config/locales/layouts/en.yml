@@ -35,3 +35,8 @@ en:
       content: content
       theme: theme
       domain: domain
+      pages: pages
+      constrains: constrains
+      rewards: rewards
+      general: general
+      announcements: announcements

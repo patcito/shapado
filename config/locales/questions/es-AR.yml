@@ -26,12 +26,19 @@ es-AR:
       viewed: visto
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"
-      answered_tooltip: "una de las respuestas fue aceptada como correcta"
+      accepted_tooltip: "una de las respuestas fue aceptada como correcta"
       unwatch_tooltip: "dejar de seguir esta pregunta"
       favorite_tooltip: "agregar esta pregunta a tus favoritas"
       unfavorite_tooltip: "remover esta pregunta de tus favoritas"
       asked_on: "preguntado en"
       last_activity: última actividad
+      retag: re-etiquetar
+      request_closing: pedir cierre
+      request_closing_details: pide cerrar esta pregunta
+      close: cerrar
+      ban: ban
+      retract_request: ya has hecho una petición, deseas retractarla?
+      close_reason: "la pregunta ha sido cerrada por la siguiente razón:"
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"
@@ -41,7 +48,7 @@ es-AR:
       flag: "reportar abuso"
       add_comment: añadir comentario...
     question:
-      answered_tooltip: Esta pregunta ha sido contestada
+      accepted_tooltip: Esta pregunta ha sido contestada
     form:
       body_tip: ¿cual es tu pregunta? por favor se descriptivo.
       language_tip: selecciona el idioma de tu pregunta.
@@ -60,6 +67,7 @@ es-AR:
     tags:
       title: etiquetas
       tooltip: muestra las preguntas etiquetadas con {{tag}}
+      filter: buscar tags
     new:
       title: pregunte
       how_to_ask: como preguntar
@@ -75,6 +83,8 @@ es-AR:
       success:      "ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta."
     unwatch:
       success:      "ya no recibirá usted notificaciones via email por cada respuesta a esta pregunta."
+    revert:
+      title: "revertir la pregunta"
     move:
       title:        "mover la pregunta: {{title}}"
       group_label:  "mover la pregunta a el group con slug:"
@@ -84,6 +94,13 @@ es-AR:
       group_dont_exists: "el group {{group}} no existe"
     shared:
       flag: reportar abuso
+    retag_form:
+      title:  "Actualizar las etiquetas"
+      submit: "actualizar las etiquetas!"
+      cancel: "cancelar"
+    retag_to:
+      success: "Las etiquetas han sido actualizados con exito."
+      failure: "Disculpa, las etiquetas no han podido ser actualizadas."
     model:
       messages:
         too_short: "demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico."
@@ -105,3 +122,6 @@ es-AR:
         votes: votos
         language: idioma
         created_at: preguntado
+        updated_at: actualizado
+        updated_by: actualizado por
+        closed: cerrada

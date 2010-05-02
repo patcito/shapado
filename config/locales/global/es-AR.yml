@@ -14,6 +14,7 @@ es-AR:
     add: añadir
     send: enviar
     save: guardar
+    details: detalles
   time:
     today: hoy
     ago: "hace {{time}}"

@@ -1,25 +1,15 @@
 %ul
-  -#
-    %li.dashboard
-      =link_to t("layouts.manage.dashboard"), manage_dashboard_path
-    %li.actions
-      =link_to t("layouts.manage.actions"), manage_actions_path
-    %li.stats
-      =link_to t("layouts.manage.stats"), manage_stats_path
   %li.properties
     =link_to t("layouts.manage.properties"), manage_properties_path
-  %li.domain
-    =link_to t("layouts.manage.domain"), manage_domain_path
   %li.widgets
     =link_to t("layouts.manage.widgets"), widgets_path
-  -if @group.has_custom_html
+  -if current_group.has_custom_html
     %li.content
       =link_to t("layouts.manage.content"), manage_content_path
-
-  %li.theme
-    =link_to t("layouts.manage.theme"), manage_theme_path
-  %li.reputation
-    =link_to t("layouts.manage.reputation"), manage_reputation_path
+  %li.pages
+    = link_to t("layouts.manage.pages"), pages_path
+  %li.announcements
+    = link_to t("layouts.manage.announcements"), announcements_path
 
   -if current_group.has_custom_ads
     %li.ads

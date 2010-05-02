@@ -2,8 +2,7 @@ en:
   shared:
     topbar:
       logged_as: "logged in as {{login}}"
+      admin: admin
+      user_page: my page
     current_tags:
       title: selected tags
-    layout:
-      notice:
-        manage: manage

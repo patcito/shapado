@@ -28,7 +28,6 @@ class Group
   key :has_custom_analytics, Boolean, :default => true
   key :language, String
   key :activity_rate, Float, :default => 0.0
-  key :logo_ext, String, :default => 'png'
   key :openid_only, Boolean, :default => false
   key :registered_only, Boolean, :default => false
   key :has_adult_content, Boolean, :default => false
@@ -40,7 +39,7 @@ class Group
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
   key :forum, Boolean, :default => false
 
-  #custom html
+  #custom html: FIXME !! move to an embedded doc
   key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
                                            "es" => "¿cual es tu pregunta? por favor se descriptivo.",
                                            "fr" => "quelle est votre question? soyez descriptif.",
@@ -58,16 +57,19 @@ Donnez autants de détails que possible afin d'avoir plus de chance
 d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
 "pt" => ""}
 
-  key :_head, Hash, :default => { }
+  key :_head, Hash, :default => {}
+  key :custom_html, CustomHtml, :default => CustomHtml.new
+
+
   key :has_custom_html, Boolean, :default => true
   key :has_custom_js, Boolean, :default => true
   key :footer, String
 
   key :head_tag, String
 
-  file_key :logo
-  file_key :custom_css
-  file_key :custom_favicon
+  file_key :logo, :max_length => 2.megabytes
+  file_key :custom_css, :max_length => 256.kilobytes
+  file_key :custom_favicon, :max_length => 256.kilobytes
 
   slug_key :name, :unique => true
 
@@ -77,12 +79,14 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :votes, :dependent => :destroy
+  has_many :pages, :dependent => :destroy
+  has_many :announcements, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
 
   validates_length_of       :name,           :within => 3..40
-  validates_length_of       :description,    :within => 3..500, :allow_blank => true
+  validates_length_of       :description,    :within => 3..1000, :allow_blank => true
   validates_length_of       :legend,         :maximum => 50
   validates_length_of       :default_tags,   :within => 0..15,
       :message =>  I18n.t('activerecord.models.default_tags_message')

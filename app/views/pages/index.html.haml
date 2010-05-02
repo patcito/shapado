@@ -1,0 +1,34 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+    -if @pages
+      == (#{@pages.total_entries})
+
+-content_for :sidebar do
+  -if logged_in? && current_user.mod_of?(current_group)
+    .block
+      %h3
+        =t("pages.actions.title")
+      .content
+        %ul.navigation
+          %li
+            = link_to t("pages.actions.create_page"), new_page_path
+
+%ul.items#pages
+  -@pages.each do |page|
+    %li.item
+      .stats
+        .box
+          =link_to t("scaffold.show"), page_path(page)
+        .box
+          =link_to t("scaffold.edit"), edit_page_path(page)
+      .summary
+        %h3
+          = link_to h(page.title), page_path(page)
+        &= truncate(strip_tags(page.body), :length => 200)
+        -if page.language
+          .language
+            %i=t(".written_in", :language => t("languages.#{page.language}"))
+
+
+= link_to t(".create_page"), new_page_path, :class => "request_group"

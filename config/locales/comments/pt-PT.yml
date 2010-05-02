@@ -10,5 +10,7 @@ pt-PT:
       add_comment: "add comment..."
       comment_submit: "comment"
       said: said
+      reply: reply
   models:
     comments: comments
+    comment: comment

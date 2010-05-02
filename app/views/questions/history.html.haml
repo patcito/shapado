@@ -16,7 +16,11 @@
         .diff_actions
           -if @question.versions.count > 0
             =link_to t("global.previous"), diff_question_path(@question, :curr => :current, :prev => @question.versions.count-1 ), :class => "diff_prev"
-
+      -if !@question.version_message.blank?
+        %h2
+          = t('wiki.history.version_summary')
+        %h3.version_message
+          = @question.version_message
       %h2=t(:title, :scope => "activerecord.attributes.question")
       =h(@question.title)
       -if !@question.body.blank?

@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
   # GET /groups
-  # GET /groups.xml
+  # GET /groups.json
   def index
     case params.fetch(:tab, "actives")
       when "actives"
@@ -21,12 +21,12 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @groups }
+      format.json  { render :json => @groups }
     end
   end
 
   # GET /groups/1
-  # GET /groups/1.xml
+  # GET /groups/1.json
   def show
     @active_subtab = "about"
 
@@ -43,18 +43,18 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @group }
+      format.json  { render :json => @group }
     end
   end
 
   # GET /groups/new
-  # GET /groups/new.xml
+  # GET /groups/new.json
   def new
     @group = Group.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @group }
+      format.json  { render :json => @group }
     end
   end
 
@@ -63,15 +63,11 @@ class GroupsController < ApplicationController
   end
 
   # POST /groups
-  # POST /groups.xml
+  # POST /groups.json
   def create
     @group = Group.new
     @group.safe_update(%w[name legend description default_tags subdomain logo forum
-                          custom_favicon language theme], params[:group])
-
-    if custom_css = params[:group][:custom_css]
-      @group.custom_css = StringIO.new(custom_css)
-    end
+                          custom_favicon language theme custom_css wysiwyg_editor], params[:group])
 
     @group.safe_update(%w[isolate domain private], params[:group]) if current_user.admin?
 
@@ -87,55 +83,46 @@ class GroupsController < ApplicationController
         @group.add_member(current_user, "owner")
         flash[:notice] = I18n.t("groups.create.flash_notice")
         format.html { redirect_to(domain_url(:custom => @group.domain, :controller => "admin/manage", :action => "properties")) }
-        format.xml  { render :json => @group.to_json, :status => :created, :location => @group }
+        format.json  { render :json => @group.to_json, :status => :created, :location => @group }
       else
         format.html { render :action => "new" }
-        format.xml  { render :json => @group.errors, :status => :unprocessable_entity }
+        format.json { render :json => @group.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # PUT /groups/1
-  # PUT /groups/1.xml
+  # PUT /groups/1.json
   def update
-    logo = params[:group][:logo]
-    if logo && logo.respond_to?(:original_filename)
-      if logo.original_filename =~ /\.(\w+)$/
-        @group.logo_ext = $1
-      end
-    end
-
     @group.safe_update(%w[name legend description default_tags subdomain logo forum
                           custom_favicon language theme reputation_rewards reputation_constrains
-                          has_adult_content registered_only openid_only], params[:group])
-    if custom_css = params[:group][:custom_css]
-      @group.custom_css = StringIO.new(custom_css)
-    end
-    @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) if current_user.admin?
+                          has_adult_content registered_only openid_only custom_css wysiwyg_editor], params[:group])
+
+    @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) #if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
-    @group.safe_update(%w[footer _head _question_help _question_prompt head_tag], params[:group]) if @group.has_custom_html
+    @group.safe_update(%w[footer _head _question_help _question_prompt head_tag custom_html], params[:group]) if @group.has_custom_html
 
     respond_to do |format|
       if @group.save
         flash[:notice] = 'Group was successfully updated.' # TODO: i18n
         format.html { redirect_to(params[:source] ? params[:source] : group_path(@group)) }
-        format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @group.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # DELETE /groups/1
-  # DELETE /groups/1.xml
+  # DELETE /groups/1.json
   def destroy
     @group = Group.find_by_slug_or_id(params[:id])
     @group.destroy
 
     respond_to do |format|
       format.html { redirect_to(groups_url) }
-      format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 
@@ -154,17 +141,17 @@ class GroupsController < ApplicationController
   end
 
   def logo
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_logo, :logo_ext])
-    unless @group.nil?
-      send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo_ext}",  :disposition => 'inline')
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_logo?
+      send_data(@group.logo.try(:read), :filename => "logo.#{@group.logo.extension}", :type => @group.logo.content_type,  :disposition => 'inline')
     else
-      redirect_to root_path
+      render :text => ""
     end
   end
 
   def css
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_css])
-    if @group._custom_css
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_custom_css?
       send_data(@group.custom_css.read, :filename => "custom_theme.css", :type => "text/css")
     else
       render :text => ""
@@ -172,8 +159,12 @@ class GroupsController < ApplicationController
   end
 
   def favicon
-    @group = Group.find_by_slug_or_id(params[:id], :select => [:_custom_favicon])
-    send_data(@group.custom_favicon.read, :filename => "favicon.ico")
+    @group = Group.find_by_slug_or_id(params[:id], :select => [:file_list])
+    if @group && @group.has_custom_favicon?
+      send_data(@group.custom_favicon.read, :filename => "favicon.ico", :type => @group.custom_favicon.content_type)
+    else
+      render :text => ""
+    end
   end
 
   def autocomplete_for_group_slug

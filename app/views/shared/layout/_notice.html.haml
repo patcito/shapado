@@ -1,7 +1,5 @@
 %h4
   = link_to h(current_group.name), about_path
-  -if logged_in? && current_user.owner_of?(current_group)
-    ==(#{link_to t(".manage"), manage_path, :class => "manage_link"})
 
 .markdown
   = auto_link(markdown(current_group.description))

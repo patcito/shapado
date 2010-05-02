@@ -2,8 +2,7 @@
   shared:
     topbar:
       logged_as: "conectado como {{login}}"
+      admin: administrar
+      user_page: mi página
     current_tags:
       title: etiquetas seleccionadas
-    layout:
-      notice:
-        manage: administrar

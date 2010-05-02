@@ -1,0 +1,10 @@
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+
+-form_for(@question, :url => question_path(@question), :html => {:class => "form"}) do |f|
+  =render :partial => "form", :locals => {:f => f}
+  .group.navform
+    = f.submit t('scaffold.update')
+    = t("global.or")
+    = link_to t("scaffold.cancel"), history_question_path(@question), :class => "button cancel"

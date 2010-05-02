@@ -1,0 +1,106 @@
+ul.items
+  list-style-type: none
+
+  li.item
+    border-bottom: 1px dotted #ddd
+    padding-bottom: 10px
+    padding-top: 10px
+
+    h3
+      margin-top: 0
+      font-size: 16px
+      font-weight: bold
+
+    .logo
+      float: left
+      padding: 0px 10px
+      margin-right: 4px
+
+    .box
+      float: left
+      padding: 5px 5px
+      margin-right: 2px
+      text-align: center
+      vertical-align: baseline
+      width: 38px
+      height: 38px
+      display: block
+      font-size: 10px
+      font-family: Helvetica Neue, Arial, sans-serif
+      color: #666
+
+
+      .counter
+        padding: 2px
+        font-size: 22px
+        font-weight: bold
+        &.medium_number
+          font-size: 20px
+          color: orange
+        &.big_number
+          padding: 1px
+          font-size: 19px
+          color: red
+        &.negative_number
+          font-size: 19px
+          color: #EE3746
+
+    .votes
+      color: #898989
+    .answers
+      color: #2A61B3
+      &.accepted
+        color: #337816
+      &.unanswered
+        color: #B82312
+    .views
+      color: #898989
+
+    .stats
+      width: 21%
+      float: left
+
+    .summary
+      width: 78%
+      float: left
+
+      a:link, a:active, a:visited
+        color: #2A5FB3
+        font-weight: bold
+      a:hover
+        color: #F67620
+
+      .tag-list
+        float: left
+        margin-top: 0px
+      .owner-data
+        float: right
+        padding-top: 4px
+        .time_ago
+          a
+            color: black
+        .reputation
+          font-weight: bold
+          color: #666
+
+    .actions
+      padding: 5px
+      margin: 6px
+      background: #eee
+      a
+        margin: 2px 5px
+        font-size: 15px
+        font-weight: bold
+
+    .vote-up-form
+      display: inline
+      vertical-align: middle
+
+    &.lite
+      .box
+        width: 20px
+        height: 20px
+        padding: 2px
+        .counter
+          font-size: 18px
+          padding: 1px

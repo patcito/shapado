@@ -1,7 +1,7 @@
-@import compass/utilities/tables.sass
-@import compass/utilities/lists/horizontal_list.sass
-@import compass/utilities/general/tag_cloud.sass
-@import fancy_buttons.sass
+@import "compass/utilities/tables"
+@import "compass/utilities/lists/horizontal-list"
+@import "compass/utilities/general/tag-cloud"
+@import "fancy_buttons"
 
 @import mixins
 
@@ -23,11 +23,22 @@
 
 @import jwysiwyg
 
+@import announcements
+@import tag_cloud
+
 #messages li
   list-style: none
 
 textarea.text_area
   height: 120px
+
+textarea.comment_text_area
+  height: 60px
+  border-bottom: 1px solid #DDD
+  border-left: 2px solid #CCC
+  border-right: 1px solid #DDD
+  border-top: 2px solid #CCC
+  width: 99%
 
 #container #header h1 img
   vertical-align: middle
@@ -69,3 +80,25 @@ a.big_confirm_button
   +fancy-button-size(15px, 6px, 1px)
   color: #00527E
 
+a.missing_page
+  &:link, &:visited, &:hover, &:active
+    color: red
+
+#retag
+  margin-left: 1em
+
+.comment-form
+  width: 91%
+  margin-left: 51px
+
+.comment-form-question
+  width: 100%
+
+
+#default_footer
+  margin: 10px 0
+  font-size: 9px
+
+.widget
+  &#badges, &#users
+    white-space: nowrap

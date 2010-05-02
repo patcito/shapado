@@ -9,6 +9,8 @@ fr:
     shared:
       add_comment: "ajouter un commentaire..."
       comment_submit: "commenter"
-      said: said
+      said: a dit
+      reply: répondre
   models:
     comments: commentaire
+    comment: comment

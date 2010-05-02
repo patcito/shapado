@@ -1,0 +1,16 @@
+.description
+  %h2
+    =t(".description")
+
+%ol.manage-domain
+  %li=t(".instruction1", :subdomain => @group.domain)
+  %li=t(".instruction2")
+  %li=t(".instruction3")
+  %li=t(".instruction4", :domain=> "#{@group.subdomain}.#{AppConfig.domain}")
+  %li=t(".instruction5", :appdomain => AppConfig.domain, :subdomain => @group.domain)
+  %li=t(".instruction6", :subdomain => @group.domain, :chat_url => link_to("chat", chat_path))
+
+.group.center
+  %span.description
+    =request.protocol
+  = f.text_field :domain, :class=> "text_field", :style => "width: 20%"

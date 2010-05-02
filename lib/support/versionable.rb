@@ -5,6 +5,7 @@ module Versionable
       extend ClassMethods
       include InstanceMethods
       attr_accessor :rolling_back
+      key :version_message
       many :versions
       before_save :save_version, :if => Proc.new { |d| !d.rolling_back }
 
@@ -31,6 +32,17 @@ module Versionable
 
       @rolling_back = true
       save!
+    end
+
+    def load_version(pos = nil)
+      pos = self.versions.count-1 if pos.nil?
+      version = self.versions[pos]
+
+      if version
+        version.data.each do |key, value|
+          self.send("#{key}=", value)
+        end
+      end
     end
 
     def diff(key, pos1, pos2, format = :html)
@@ -62,6 +74,7 @@ module Versionable
     def versionable_keys(*keys)
       define_method(:save_version) do
         data = {}
+        message = ""
         keys.each do |key|
           if change = changes[key.to_s]
             data[key.to_s] = change.first
@@ -70,11 +83,18 @@ module Versionable
           end
         end
 
+        if message_changes = self.changes["version_message"]
+          message = message_changes.first
+        else
+          version_message = ""
+        end
+
         if !self.new? && !data.empty? && self.updated_by_id
           e = Time.now
           self.versions << Version.new({'data' => data,
                                         'user_id' => (self.updated_by_id_was || self.updated_by_id),
-                                        'date' => e.kind_of?(ActiveSupport::TimeWithZone) ? e.utc : e })
+                                        'date' => e.kind_of?(ActiveSupport::TimeWithZone) ? e.utc : e,
+                                        'message' => message})
         end
       end
 

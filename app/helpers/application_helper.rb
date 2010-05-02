@@ -2,20 +2,26 @@
 module ApplicationHelper
 
   def context_panel_ads(group)
+    if AppConfig.enable_adbard && request.domain == AppConfig.domain &&
+        !Adbard.find_by_group_id(current_group.id)
+      adbard = "<!--Ad Bard advertisement snippet, begin -->
+        <script type='text/javascript'>
+        var ab_h = '#{AppConfig.adbard_host_id}';
+        var ab_s = '#{AppConfig.adbard_site_key}';
+        </script>
+        <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
+        <!--Ad Bard, end -->"
+    else
+      adbard = ""
+    end
     if group.has_custom_ads == true
       ads = []
       Ad.find_all_by_group_id_and_position(group.id,'context_panel').each do |ad|
         ads << ad.code
       end
-      return ads.join unless (ads.empty? && AppConfig.domain==request.domain)
+      ads << adbard
+      return ads.join unless ads.empty?
     end
-    "<!--Ad Bard advertisement snippet, begin -->
-      <script type='text/javascript'>
-      var ab_h = '#{AppConfig.adbard_host_id}';
-      var ab_s = '#{AppConfig.adbard_site_key}';
-      </script>
-      <script type='text/javascript' src='http://cdn1.adbard.net/js/ab1.js'></script>
-      <!--Ad Bard, end -->"
   end
 
   def header_ads(group)
@@ -24,7 +30,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'header').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
@@ -34,7 +40,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'content').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
@@ -44,7 +50,7 @@ module ApplicationHelper
       Ad.find_all_by_group_id_and_position(group.id,'footer').each do |ad|
         ads << ad.code
       end
-      return ads.join  unless (ads.empty? && AppConfig.domain==request.domain)
+      return ads.join  unless ads.empty?
     end
   end
 
@@ -75,8 +81,10 @@ module ApplicationHelper
 
     return '' if tags.size <= 2
 
-    max_size = options.delete(:max_size) || 35
-    min_size = options.delete(:min_size) || 12
+    # Sizes: xxs xs s l xl xxl
+    css = {1 => "xxs", 2 => "xs", 3 => "s", 4 => "l", 5 => "xl" }
+    max_size = 5
+    min_size = 1
 
     tag_class = options.delete(:tag_class) || "tag"
 
@@ -91,8 +99,7 @@ module ApplicationHelper
     tags.each do |tag|
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
       url = url_for(:controller => "questions", :action => "index", :tags => tag["name"])
-      cloud << "<span>#{link_to(tag["name"], url,
-          :style => "font-size:#{size}px;line-height:#{size.to_i+12}px;", :class => "#{tag_class}")}</span> "
+      cloud << "<span>#{link_to(tag["name"], url, :class => "#{tag_class} #{css[size.round]}")}</span> "
     end
     cloud += "</div>"
     cloud
@@ -104,9 +111,39 @@ module ApplicationHelper
     end
   end
 
-  def markdown(txt)
-    txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style])
-    RDiscount.new(txt, :smart).to_html
+  def markdown(txt, options = {})
+    if options[:sanitize] != false
+      txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style])
+    end
+
+    RDiscount.new(render_page_links(txt), :smart).to_html
+  end
+
+  def render_page_links(text)
+    text.gsub!(/\[\[([^\,\'\"]+)\]\]/) do |m|
+      link = $1.split("|", 2)
+      page = Page.by_title(link.first, {:group_id => current_group.id, :select => [:title, :slug]})
+
+
+      if page.present?
+        %@<a href="/pages/#{page.slug}" class="page_link">#{link[1] || page.title}</a>@
+      else
+        %@<a href="/pages/#{link.first.parameterize.to_s}?create=true&title=#{link.first}" class="missing_page">#{link.last}</a>@
+      end
+    end
+
+    text.gsub(/%(\S+)%/) do |m|
+      case $1
+        when 'site'
+          current_group.domain
+        when 'site_name'
+          current_group.name
+        when 'current_user'
+          current_user.login
+        else
+          m
+      end
+    end
   end
 
   def format_number(number)
@@ -153,9 +190,9 @@ module ApplicationHelper
   def class_for_question(question)
     klass = ""
 
-    if question.answered
-      klass << "answered"
-    else
+    if question.accepted
+      klass << "accepted"
+    elsif !question.answered
       klass << "unanswered"
     end
 
@@ -211,6 +248,31 @@ module ApplicationHelper
     end
 
     tags.join(', ')
+  end
+
+  def current_announcements(hide_time = nil)
+    conditions = {:starts_at.lte => Time.zone.now.to_i,
+                  :ends_at.gte => Time.zone.now.to_i,
+                  :order => "starts_at desc",
+                  :group_id.in => [current_group.id, nil]}
+    if hide_time
+      conditions[:updated_at] = {:$gt => hide_time}
+    end
+
+    if logged_in?
+      conditions[:only_anonymous] = false
+    end
+
+    Announcement.all(conditions)
+  end
+
+  def top_bar_links
+    top_bar = current_group.custom_html.top_bar
+    return [] if top_bar.blank?
+
+    top_bar.split("\n").map do |line|
+      render_page_links(line.strip)
+    end
   end
 end
 

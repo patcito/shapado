@@ -5,7 +5,7 @@
       =t(".title")
     .content.tag-list
       -self.current_tags.each do |tag|
-        %span.tag
+        %span.tag{:class => "tag_#{h(tag)}"}
           = link_to h(tag), url_for(:tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
           -tags = (self.current_tags - [tag])
           -if tags.empty?

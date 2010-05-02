@@ -1,11 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
-
+  map.confirm_age_welcome 'confirm_age_welcome', :controller => 'welcome', :action => 'confirm_age'
   map.change_language_filter '/change_language_filter', :controller => 'welcome', :action => 'change_language_filter'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.moderate '/moderate', :controller => 'admin/moderate', :action => 'index'
   map.ban '/moderate/ban', :controller => 'admin/moderate', :action => 'ban'
+  map.unban '/moderate/unban', :controller => 'admin/moderate', :action => 'unban'
   map.facts '/facts', :controller => 'welcome', :action => 'facts'
   map.plans '/plans', :controller => 'doc', :action => 'plans'
   map.chat '/chat', :controller => 'doc', :action => 'chat'
@@ -22,11 +23,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :adsenses
   map.resources :adbards
   map.resources :badges
+  map.resources :pages, :member => {:css => :get, :js => :get}
+  map.resources :announcements, :collection => {:hide => :any }
 
 
   def build_questions_routes(router, options ={})
     router.with_options(options) do |route|
       route.resources :questions, :collection => {:tags => :get,
+                                                  :tags_for_autocomplete => :get,
                                                   :unanswered => :get,
                                                   :related_questions => :get},
                                 :member => {:solve => :get,
@@ -37,20 +41,24 @@ ActionController::Routing::Routes.draw do |map|
                                             :watch => :any,
                                             :unwatch => :any,
                                             :history => :get,
+                                            :revert => :get,
                                             :diff => :get,
-                                            :rollback => :put,
                                             :move => :get,
-                                            :move_to => :put} do |questions|
+                                            :move_to => :put,
+                                            :retag => :get,
+                                            :retag_to => :put,
+                                            :close => :post} do |questions|
         questions.resources :answers, :member => {:flag => :get,
                                                   :history => :get,
                                                   :diff => :get,
-                                                  :rollback => :put}
+                                                  :revert => :get}
+        questions.resources :close_requests
       end
     end
   end
 
 
-  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index
+  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index,:requirements => {:tags => /\S+/}
   map.connect 'questions/unanswered/tags/:tags', :controller => :questions, :action => :unanswered
 
   build_questions_routes(map)
@@ -69,11 +77,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :votes
   map.resources :flags
-  map.resources :welcome, :collection =>  {:confirm_age => :any}
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.resources :members, :path_prefix => "/manage"
-  map.manage '/manage', :controller => 'admin/manage', :action => 'properties'
 
   map.with_options :controller => 'admin/manage', :name_prefix => "manage_",
                    :path_prefix => "/manage" do |manage|

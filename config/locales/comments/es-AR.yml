@@ -10,5 +10,7 @@ es-AR:
       add_comment: "añadir comentario..."
       comment_submit: "comentar"
       said: dijo
+      reply: contestar
   models:
     comments: comentarios
+    comment: comentario

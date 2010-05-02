@@ -1,7 +1,6 @@
 
 -@group.reputation_constrains.sort.each do |key, value|
   .group
-    =hidden_field_tag :source, manage_reputation_path(:tab => "constrains")
     -name = "group[reputation_constrains[#{key}]]"
     =label_tag name, Group.humanize_reputation_constrain(key), :class => "label"
     =text_field_tag name, value, :class => "text_field"

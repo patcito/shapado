@@ -1,42 +1,53 @@
 #top-bar
-  -current_group.default_tags[0,5].each do |tag|
+  -if logged_in?
+    -if !current_group.isolate && AppConfig.enable_groups
+      .entry
+        %ul.combobox
+          %li
+            =link_to h(current_group.name), groups_path
+            %ul
+              -current_user.groups(:select => [:name, :domain]).each do |group|
+                %li
+                  =link_to h(group.name), domain_url(:custom => group.domain)
+        |
+    -if current_user.owner_of?(current_group)
+      .entry
+        =link_to t(".admin"), manage_properties_path, :class => "manage_link"
+        |
+    -if current_user.mod_of?(current_group)
+      .entry
+        =link_to t("layouts.application.moderate"), moderate_path, :class => "moderate_link"
+        |
     .entry
-      = link_to(tag, url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag")
-      ==-
-  -if current_group.default_tags.size > 5
-    .entry
-      = link_to t("scaffold.more"), tags_questions_path
-  %div.right
-    -if logged_in?
-      -if !current_group.isolate && AppConfig.enable_groups
-        .entry
-          %ul.combobox
+      %ul.combobox
+        %li
+          = gravatar(current_user.email.to_s, :size => 18)
+          = link_to(h(current_user.login), user_path(current_user))
+          %span.reputation{:title => t("activerecord.attributes.user.reputation")}=format_number(current_user.reputation_on(current_group))
+          %ul
             %li
-              =link_to h(current_group.name), groups_path
-              %ul
-                -current_user.groups(:select => [:name, :domain]).each do |group|
-                  %li
-                    =link_to h(group.name), domain_url(:custom => group.domain)
-          |
+              =link_to t(".user_page"), user_path(current_user)
+            %li
+              =link_to t("layouts.application.settings"), settings_path
+      |
+    -top_bar_links.each do |link|
       .entry
-        = t(".logged_as", :login => link_to(h(current_user.login), user_path(current_user)))
-        ==(#{format_number(current_user.reputation_on(current_group))})
-        |
-      .entry
-        =link_to t("layouts.application.settings"), settings_path
-        |
-      .entry
-        =link_to t("layouts.application.logout"), destroy_user_session_path
-        |
-    -else
-      -if AppConfig.is_shapadocom && !current_group.isolate
-        .entry
-          =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
-          |
-      .entry
-        =link_to t("layouts.application.log_in"), new_user_session_path
+        =link
         |
     .entry
-      =link_to t("layouts.application.search"), search_path
-
-  .clear
+      =link_to t("layouts.application.logout"), destroy_user_session_path
+  -else
+    -if AppConfig.is_shapadocom && !current_group.isolate
+      .entry
+        =link_to t("doc.plans.plans"), domain_url(:custom => AppConfig.domain, :controller=>"doc",:action=>"plans")
+        |
+    -top_bar_links.each do |link|
+      .entry
+        =link
+        |
+    .entry
+      =link_to t("layouts.application.log_in"), new_user_session_path
+  .entry
+    - form_tag search_path, :method => :get, :style => "margin-left: 20px; max-width: 10%; display: inline" do
+      = text_field_tag :q, params[:q], :id => "search-field"
+.clear

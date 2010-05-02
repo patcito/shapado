@@ -8,6 +8,7 @@ class SearchesController < ApplicationController
       options[:tags] = {:$all => @search_tags} unless @search_tags.empty?
       options[:group_id] = current_group.id
       options[:order] = params[:sort_by] if params[:sort_by]
+      options[:banned] = false
 
       if !@search_text.blank?
         q = @search_text.split.map do |k|

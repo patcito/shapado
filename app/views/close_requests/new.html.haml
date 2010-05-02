@@ -1,0 +1,6 @@
+-if !@close_request.new?
+  = link_to t("scaffold.delete"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
+-form_for [@question, @close_request], :html => {:class => "form"} do |form|
+  = render :partial => "form", :object => form
+  .group.navform
+    = submit_tag t("questions.show.request_closing_details"), :class => "button"

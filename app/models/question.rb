@@ -7,13 +7,13 @@ class Question
 
   ensure_index :tags
   ensure_index :language
-  ensure_index :title
-  ensure_index :body
 
   key :_id, String
   key :title, String, :required => true
   key :body, String
-  slug_key :title, :unique => true
+  slug_key :title, :unique => true, :min_length => 8
+  key :slugs, Array, :index => true
+
   key :answers_count, Integer, :default => 0, :required => true
   key :views_count, Integer, :default => 0
   key :votes_count, Integer, :default => 0
@@ -24,7 +24,12 @@ class Question
 
   key :adult_content, Boolean, :default => false
   key :banned, Boolean, :default => false
-  key :answered, Boolean, :default => false
+  key :accepted, Boolean, :default => false
+  key :closed, Boolean, :default => false
+
+  key :answered_with_id, String
+  belongs_to :answered_with, :class_name => "Answer"
+
   key :wiki, Boolean, :default => false
   key :language, String, :default => "en"
 
@@ -44,6 +49,8 @@ class Question
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
+  key :close_reason_id, String
+
   key :last_target_type, String
   key :last_target_id, String
   belongs_to :last_target, :polymorphic => true
@@ -53,16 +60,16 @@ class Question
   has_many :flags, :as => "flaggeable", :dependent => :destroy
   has_many :badges, :as => "source"
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
+  has_many :close_requests
 
   validates_presence_of :user_id
-  validates_uniqueness_of :slug, :scope => :group_id
+  validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
 
   validates_length_of       :title,    :within => 5..100
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { !tags.empty? && tags.size <= 6},
                      :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6
-                                          I18n.t("questions.model.messages.empty_tags") if tags.empty?
-                                         }
+                                          I18n.t("questions.model.messages.empty_tags") if tags.empty? }
 
   versionable_keys :title, :body, :tags
   filterable_keys :title, :body
@@ -83,9 +90,7 @@ class Question
     if t.kind_of?(String)
       t = t.downcase.split(",").join(" ").split(" ")
     end
-    t = t.collect do |tag|
-      tag.gsub("#", "sharp").gsub(".", "dot").gsub("www", "w3")
-    end
+
     self[:tags] = t
   end
 
@@ -93,6 +98,7 @@ class Question
     opts[:per_page] ||= 10
     opts[:page]     ||= 1
     opts[:group_id] = question.group_id
+    opts[:banned] = false
 
     Question.paginate(opts.merge(:_keywords => {:$in => question.tags}, :_id => {:$ne => question.id}))
   end
@@ -132,7 +138,7 @@ class Question
       voter.on_activity(:vote_down_question, self.group)
       self.user.downvote!(self.group)
     end
-    on_activity
+    on_activity(false)
   end
 
   def remove_vote!(v, voter)
@@ -150,24 +156,24 @@ class Question
       voter.on_activity(:undo_vote_down_question, self.group)
       self.user.downvote!(self.group, -1)
     end
-    on_activity
+    on_activity(false)
   end
 
   def add_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
                                                           :upsert => true)
-    on_activity
+    on_activity(false)
   end
 
 
   def remove_favorite!(fav, user)
     self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
                                                           :upsert => true)
-    on_activity
+    on_activity(false)
   end
 
-  def on_activity
-    update_activity_at
+  def on_activity(bring_to_front = true)
+    update_activity_at if bring_to_front
     self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},
                                                          :upsert => true)
   end
@@ -191,6 +197,19 @@ class Question
     ids = ids.map do |id| id end
 
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
+                                                     :multi => true,
+                                                     :upsert => true)
+  end
+
+  def unban
+    self.collection.update({:_id => self._id}, {:$set => {:banned => false}},
+                                               :upsert => true)
+  end
+
+  def self.unban(ids)
+    ids = ids.map do |id| id end
+
+    self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => false}},
                                                      :multi => true,
                                                      :upsert => true)
   end
@@ -221,12 +240,12 @@ class Question
   end
 
   def check_useful
-    if !self.title.blank? && (self.title.split.count < 5)
+    if !self.title.blank? && (self.title.split.count < 4)
       self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 4))
     end
 
-    if !self.body.blank? && (self.body.split.count < 5)
-      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 4))
+    if !self.body.blank? && (self.body.split.count < 4)
+      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 3))
     end
   end
 
@@ -241,11 +260,24 @@ class Question
     end
   end
 
+  def answered
+    self.answered_with_id.present?
+  end
+
   def self.update_last_target(question_id, target)
     self.collection.update({:_id => question_id},
                            {:$set => {:last_target_id => target.id,
                                       :last_target_type => target.class.to_s}},
                            :upsert => true)
+  end
+
+  def can_be_requested_to_close_by?(user)
+    ((self.user_id == user.id) && user.can_vote_to_close_own_question_on?(self.group)) ||
+    user.can_vote_to_close_any_question_on?(self.group)
+  end
+
+  def close_reason
+    self.close_requests.detect{ |rq| rq.id == close_reason_id }
   end
 
   protected

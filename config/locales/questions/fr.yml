@@ -26,12 +26,19 @@ fr:
       viewed: lues
       to_answer_question: "pour répondre à cette question"
       watch_tooltip: "suivre cette question"
-      answered_tooltip: "l'une des réponses a été accepté comme solution"
+      accepted_tooltip: "l'une des réponses a été accepté comme solution"
       unwatch_tooltip: "arreter de suivre cette question"
       favorite_tooltip: "ajouter cette question à vos favorites"
       unfavorite_tooltip: "retirer cette question de vos favorites"
       asked_on: "posée dans"
       last_activity: dernières activités
+      retag: modifier les tags
+      request_closing: demande de fermeture
+      request_closing_details: demander de fermer cette question
+      close: fermer
+      ban: ban
+      retract_request: vous avez déjà fait une demande, voulez-vous vous rétracter?
+      close_reason: "cette question a été fermée pour la raison suivante:"
       answers_title:
         one: "{{count}} réponse"
         other: "{{count}} réponses"
@@ -41,7 +48,7 @@ fr:
       flag: reporter un abus
       add_comment: ajouter un commentaire...
     question:
-      answered_tooltip: Cette question a été répondu correctement
+      accepted_tooltip: Cette question a été répondu correctement
     form:
       body_tip: quelle est votre question? soyez descriptif.
       language_tip: sélectionnez la langue de votre question.
@@ -60,6 +67,7 @@ fr:
     tags:
       title: tags
       tooltip: montrer les questions avec le tag {{tag}}
+      filter: recherchez des tags
     new:
       title: posez une question
       how_to_ask: comment poser une question
@@ -75,6 +83,8 @@ fr:
       success:      "vous allez maintenant recevoir des notifications par email pour chaque réponse à cette question."
     unwatch:
       success:      "vous n'allez plus recevoir de notifications par email pour chaque réponse à cette question."
+    revert:
+      title: "revert question"
     move:
       title:        "transférer la question: {{title}}"
       group_label:  "transférer au groupe du nom:"
@@ -84,6 +94,13 @@ fr:
       group_dont_exists: "le groupe {{group}} n'éxiste pas"
     shared:
       title: reporter un abus
+    retag_form:
+      title:  "Actualiser les tags"
+      submit: "actualizer las tags!"
+      cancel: "annuler"
+    retag_to:
+      success: "Les tags ont été actualisé avec succès."
+      failure: "Désolé, les tags n'ont pas pu être actualisé."
     model:
       messages:
         too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"
@@ -105,3 +122,6 @@ fr:
         votes: votes
         language: langue
         created_at: posée
+        updated_at: updated
+        updated_by: updated by
+        closed: fermée

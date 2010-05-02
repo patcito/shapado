@@ -1,0 +1,23 @@
+pt-PT:
+  close_requests:
+    index:
+      title: list of close requests
+    form:
+      dupe: duplicate
+      ot: off topic
+      no_question: not a question
+      not_relevant: not relevant
+      spam: spam
+      request_closing_details: request to close this question
+      close_with_reason: close this question using this reason
+    create:
+      flash_notice: close request created successfully
+    update:
+      flash_notice: close request updated successfully
+    destroy:
+      flash_notice: close request deleted successfully
+    model:
+      name: close request
+      prural_name: close requests
+      messages:
+        already_requested: "you have already requested to close this question"

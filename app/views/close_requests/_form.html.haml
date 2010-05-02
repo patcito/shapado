@@ -1,0 +1,15 @@
+.group
+  = form.label :type, t(:type, :scope=>"activerecord.attributes.flag"), :class => "label"
+  -CloseRequest::REASONS.each do |type|
+    = form.radio_button :reason, type, :class => "radio_button"
+    = t(type, :scope=>"close_requests.form")
+    %br
+
+.group
+  = form.label :comment, t(:comment, :scope=>"models"), :class => "label"
+  = form.text_field :comment, :class => "text_field"
+
+-if current_user.mod_of?(current_group)
+  .group
+    = check_box_tag "close"
+    = t('.close_with_reason')

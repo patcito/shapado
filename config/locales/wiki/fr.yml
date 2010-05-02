@@ -5,10 +5,14 @@ fr:
       previous_versions: versions précédentes
       current_version: version actuelle
       version: version
+      version_summary: résumé de cette version
     diff:
       title: différences entre {{prev}} et {{curr}}
     actions:
-      set_as_current: établir comme version actuelle
+      revert: retourner à cette version
       show_diff: comparer les versions sélectionnées
       all_history: retourner à l'historique
       back_to_question: retourner à la question
+    model:
+      attributes:
+        message: summary

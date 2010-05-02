@@ -1,0 +1,26 @@
+.group
+  = f.label :logo, t('logo', :scope => "activerecord.attributes.group"), :class => "label"
+  -unless @group.new?
+    = image_tag(logo_group_path(@group))
+  %br
+  = f.file_field :logo
+  .description
+    = t('.logo_legend')
+
+.group
+  = f.label :custom_favicon, "Favicon", :class => "label"
+  -if @group.has_custom_favicon?
+    = image_tag(favicon_group_path(@group))
+  -else
+    = image_tag("/favicon.ico")
+  = f.file_field :custom_favicon
+
+.group
+  = f.label :theme, t(:theme, :scope => "activerecord.attributes.group", :default => "Theme" ), :class => "label"
+  = f.select :theme, AVAILABLE_THEMES, {}, :class => "choose_theme"
+
+.group
+  = f.label :custom_css, "Custom css", :class => "label"
+  -custom_css = ""
+  -@group.has_custom_css? ? custom_css = @group.custom_css.read : custom_css = ""
+  = f.text_area :custom_css, :value => custom_css, :class => "text_area"
