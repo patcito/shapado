@@ -39,33 +39,9 @@ class Group
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
   key :forum, Boolean, :default => false
 
-  #custom html: FIXME !! move to an embedded doc
-  key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
-                                           "es" => "¿cual es tu pregunta? por favor se descriptivo.",
-                                           "fr" => "quelle est votre question? soyez descriptif.",
-                                           "pt" => "qual é a sua pergunta? seja descritivo."}
-  key :_question_help, Hash, :default => {
-"en" => "Provide as much details as possible so that it will have more
-chance to be answered instead of being endlessly discussed.
-Try to be clear and simple.",
-"es" => "Sobre que es tu pregunta?
-provee tantos detalles como puedas para tener más suerte
-de conseguir una respuesta y no una discusion sin fin.
-intenta ser claro y simple",
-"fr" => "Sur quoi porte votre question?
-Donnez autants de détails que possible afin d'avoir plus de chance
-d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
-"pt" => ""}
-
-  key :_head, Hash, :default => {}
   key :custom_html, CustomHtml, :default => CustomHtml.new
-
-
   key :has_custom_html, Boolean, :default => true
   key :has_custom_js, Boolean, :default => true
-  key :footer, String
-
-  key :head_tag, String
 
   file_key :logo, :max_length => 2.megabytes
   file_key :custom_css, :max_length => 256.kilobytes
