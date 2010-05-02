@@ -8,7 +8,7 @@ class Group
                  "bug", "bugs", "dev", "ftp", "forum", "community", "mail", "email",
                  "webmail", "pop", "pop3", "imap", "smtp", "stage", "stats", "status",
                  "support", "survey", "download", "downloads", "faqs", "wiki",
-                 "assets1", "assets2", "assets3", "assets4"]
+                 "assets1", "assets2", "assets3", "assets4", "staging"]
 
   key :_id, String
   key :name, String, :required => true
