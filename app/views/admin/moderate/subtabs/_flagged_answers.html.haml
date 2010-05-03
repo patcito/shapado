@@ -5,9 +5,9 @@
       %th
         =t(:flags, :scope => "activerecord.models")
       %th
-        =t(".item_title")
+        =t(:title, :scope => "activerecord.attributes.question")
       %th
-        =t(".content")
+        =t(:body, :scope => "activerecord.attributes.answer")
     -@answers.each do |answer|
       %tr
         %th

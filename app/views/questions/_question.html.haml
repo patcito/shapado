@@ -52,6 +52,9 @@
       -cache("question_on_index_#{question.id}") do
         %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
         .tag-list
+          -if question.tags.empty? && logged_in? && (current_user.can_modify?(@question) || current_user.can_retag_others_questions_on?(current_group))
+            %span.retag
+              = link_to t('questions.show.retag'), retag_question_path(question), :id => 'retag', :class => "important"
           -question.tags.each do |tag|
             %span.tag{:class => "tag_#{h(tag)}"}
               = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
