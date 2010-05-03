@@ -5,9 +5,7 @@ class Admin::ModerateController < ApplicationController
   def index
     @active_subtab = params.fetch(:tab, "retag")
 
-    options = {:order => "flags_count desc",
-               :flags_count.gt => 0,
-               :banned => false,
+    options = {:banned => false,
                :group_id => current_group.id,
                :per_page => params[:per_page] || 25,
                :page => params[:questions_page] || 1}
@@ -15,9 +13,9 @@ class Admin::ModerateController < ApplicationController
 
     case @active_subtab
       when "flagged_questions"
-        @questions = Question.paginate(options)
+        @questions = Question.paginate(options.merge(:order => "flags_count desc", :flags_count.gt => 0))
       when "flagged_answers"
-        @answers = Answer.paginate(options)
+        @answers = Answer.paginate(options.merge(:order => "flags_count desc", :flags_count.gt => 0))
       when "banned"
         @banned = Question.paginate(options.merge(:banned => true))
       when "retag"
