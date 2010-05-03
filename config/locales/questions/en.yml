@@ -23,6 +23,7 @@ en:
       related_questions: related questions
       flags: reported as
       flag: flag
+      flagged_as: flagged as
       viewed: viewed
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"

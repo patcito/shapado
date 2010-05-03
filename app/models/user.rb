@@ -438,6 +438,10 @@ Time.zone.now ? 1 : 0)
     self.save
   end
 
+  def has_flagged?(flaggeable)
+    flaggeable.flags.first(:user_id=>self.id)
+  end
+
   protected
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
