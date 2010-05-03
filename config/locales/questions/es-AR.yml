@@ -106,6 +106,7 @@ es-AR:
         too_short: "demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico."
         too_many_tags: Disculpa, solo puedes entrar 6 etiquetas maximo.
         empty_tags: Disculpa, debes usar al menos una etiqueta.
+        title_too_long: "El titulo es demasiado largo. No puede tener mas de 100 letras"
 
   activerecord:
     models:

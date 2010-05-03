@@ -106,6 +106,7 @@ en:
         too_short: "seems too short. Please use more words than {{count}} to be more specific."
         too_many_tags: Sorry, you can only enter 6 tags maximum.
         empty_tags: Sorry, you need to use at least one tag.
+        title_too_long: "The title is too long. it should not contain more than 100 characters"
 
   activerecord:
     models:

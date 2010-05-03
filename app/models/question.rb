@@ -65,7 +65,7 @@ class Question
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
 
-  validates_length_of       :title,    :within => 5..100
+  validates_length_of       :title,    :within => 5..100, :message => lambda { I18n.t("questions.model.messages.title_too_long") }
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
   validates_true_for :tags, :logic => lambda { tags.size <= 6},
                      :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6 }
