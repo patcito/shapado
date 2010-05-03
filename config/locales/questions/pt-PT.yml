@@ -23,6 +23,7 @@ pt-PT:
       related_questions: related questions
       flags: reportado como
       flag: reportar
+      flagged_as: flagged as
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
