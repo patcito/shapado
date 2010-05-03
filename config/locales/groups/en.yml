@@ -4,11 +4,13 @@ en:
       title: groups
       actives: active
       pendings: pending
+      most_active: most active
+      request_group: request a new group
+    group:
       about: about
       close: close
       accept_group: accept this group
       close_group: close this group
-      request_group: request a new group
       allow_ads: allow ads
       disallow_ads: disallow ads
     show:

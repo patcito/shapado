@@ -4,11 +4,13 @@ pt-PT:
       title: grupos
       actives: activos
       pendings: pendentes
+      most_active: mais ativos
+      request_group: pedir um novo grupo
+    group:
       about: sobre
       close: fechar
       accept_group: aceitar este grupo
       close_group: fechar este grupo
-      request_group: pedir um novo grupo
       allow_ads: permitir a propaganda
       disallow_ads: proibir a propaganda
       accept_group_with_custom_ads: aceitar este grupo e permitir propaganda personalizada

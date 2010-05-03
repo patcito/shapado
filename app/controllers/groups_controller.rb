@@ -3,12 +3,12 @@ class GroupsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :logo, :css, :favicon]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
+  subtabs :index => [ [:most_active, "activity_rate desc"], [:newest, "created_at desc"], [:oldest, "created_at asc"]]
   # GET /groups
   # GET /groups.json
   def index
-    case params.fetch(:tab, "actives")
-      when "actives"
-        @state = "active"
+    @state = "active"
+    case params.fetch(:tab, "active")
       when "pendings"
         @state = "pending"
     end
@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     @groups = Group.paginate(:per_page => 15,
                              :page => params[:page],
                              :state => @state,
-                             :order => "created_at desc",
+                             :order => current_order,
                              :private => false)
 
     respond_to do |format|
