@@ -92,9 +92,9 @@ module AuthenticatedSystem
         if @user = User.find_by_identity_url(identity_url)
           if @user.identity_url  =~ %r{//me.yahoo.com}
             nickname = registration["http://axschema.org/contact/email"][0].split('@')[0]
-            if @user.login != "#{nickname}_yahooid" && @user.login.size > 30
+            if @user.login != "#{nickname}_yahooid" && @user.login.size > 25
               @user.login = "#{nickname}_yahooid"
-              @user.save
+              @user.set(:login => @user.login)
             end
           end
           @user
