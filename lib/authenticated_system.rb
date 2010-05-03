@@ -118,7 +118,8 @@ module AuthenticatedSystem
 
   def create_openid_user(registration, identity_url)
     google_id = false
-    if identity_url =~ /google_id_/ || identity_url =~ %r{//me.yahoo.com}
+    yahoo_id = false
+    if identity_url =~ /google_id_/
       google_id = true
     elsif identity_url =~ %r{//me.yahoo.com}
       yahoo_id = true
