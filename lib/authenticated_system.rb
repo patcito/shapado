@@ -90,6 +90,13 @@ module AuthenticatedSystem
         end
 
         if @user = User.find_by_identity_url(identity_url)
+          if @user.identity_url  =~ %r{//me.yahoo.com}
+            nickname = registration["http://axschema.org/contact/email"][0].split('@')[0]
+            if @user.login != "#{nickname}_yid" && @user.login.size > 25
+              @user.login = "#{nickname}_yid"
+              @user.set(:login => @user.login)
+            end
+          end
           @user
         elsif (@user = create_openid_user(registration, identity_url)) && @user.valid?
           @user
@@ -111,8 +118,14 @@ module AuthenticatedSystem
 
   def create_openid_user(registration, identity_url)
     google_id = false
+    yahoo_id = false
     if identity_url =~ /google_id_/
       google_id = true
+    elsif identity_url =~ %r{//me.yahoo.com}
+      yahoo_id = true
+    end
+
+    if google_id || yahoo_id
       registration["email"] = registration["http://axschema.org/contact/email"][0]
       registration["nickname"] = registration["email"].split(/@/)[0]
     end
@@ -120,7 +133,9 @@ module AuthenticatedSystem
     @user = User.find_by_login(registration["nickname"]) # FIXME: find by email?
     if registration["nickname"].blank? || @user
       if google_id
-        login = registration["nickname"]+"_google_id"
+        login = registration["nickname"]+"_gid"
+      elsif
+        login = registration["nickname"]+"_yid"
       else
         o =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
         string  =  (0..50).map{ o[rand(o.length)]  }.join
