@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:custom_html"] do
+task :fixall => [:environment, "fixdb:custom_html", "fixdb:reindex"] do
 end
 
 namespace :fixdb do
@@ -20,6 +20,15 @@ namespace :fixdb do
       modifiers[key] = 1
     end
     Group.collection.update({}, {:$unset => modifiers}, :multi => true)
+  end
+
+  task "reindex groups"
+  task :reindex => :environment do
+    $stderr.puts "Reindexing #{Group.count} groups..."
+    Group.find_each do |group|
+      group._keywords = []
+      group.save(:validate => false)
+    end
   end
 end
 
