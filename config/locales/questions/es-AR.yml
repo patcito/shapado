@@ -23,6 +23,7 @@ es-AR:
       related_questions: preguntas relacionadas
       flags: reportado como
       flag: "reportar abuso"
+      flagged_as: reportado como
       viewed: visto
       to_answer_question: para responder esta pregunta
       watch_tooltip: "seguir esta pregunta"

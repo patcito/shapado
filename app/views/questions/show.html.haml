@@ -98,7 +98,10 @@
         .clear
   .controls
     .actions
-      =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
+      - if flag = current_user.has_flagged?(@question)
+        %span.flagged= "#{t('.flagged_as')} #{t(flag.type, :scope=>'flags.form')}"
+      - else
+        =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
       -if show_close_request_form
         -close_link_label = current_user.mod_of?(current_group) ?  t(".close") : t(".request_closing")
         =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')

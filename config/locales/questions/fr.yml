@@ -23,6 +23,7 @@ fr:
       related_questions: questions en relation
       flag: reporter un abus
       flags: reporter en tant que
+      flagged_as: reporté comme
       viewed: lues
       to_answer_question: "pour répondre à cette question"
       watch_tooltip: "suivre cette question"
