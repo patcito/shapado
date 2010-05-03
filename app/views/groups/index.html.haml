@@ -5,7 +5,7 @@
       == (#{format_number(@groups.total_entries)})
 
   %ul
-    -if current_user.admin?
+    -if logged_in? && current_user.admin?
       %li.active
         = link_to t(".actives"), groups_path(:tab=>"actives")
       %li.pending
@@ -14,14 +14,22 @@
       = link_to t(".newest", :default => :"questions.index.newest"), groups_path(:tab=>"newest")
     %li.oldest
       = link_to t(".oldest", :default => :"questions.index.oldest"), groups_path(:tab=>"oldest")
+    %li.name
+      = link_to t(".name", :default => :"questions.index.name"), groups_path(:tab=>"name")
     %li.most_active
       = link_to t(".most_active"), groups_path(:tab=>"most_active")
+
+-form_tag groups_path, :class => "form", :id => "filter_groups", :method => "get" do
+  = label_tag :q, t(".filter"), :class => "label"
+  = text_field_tag "q", params[:q], :class => "text_field filter_field"
+  = submit_tag("filter")
 
 %ul.items#groups
   = render :partial => "group", :collection => @groups
 
-=will_paginate @groups
-.clear
+#additional_info
+  =will_paginate @groups
+  .clear
 
 = link_to t(".request_group"), new_group_path, :class => "request_group"
 .clear

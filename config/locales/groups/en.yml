@@ -2,10 +2,12 @@ en:
   groups:
     index:
       title: groups
+      filter: "search for groups"
       actives: active
       pendings: pending
       most_active: most active
       request_group: request a new group
+      name: name
     group:
       about: about
       close: close

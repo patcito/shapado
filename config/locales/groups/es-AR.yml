@@ -2,11 +2,13 @@
   groups:
     index:
       title: grupos
+      filter: "buscar grupos"
       actives: activos
       pendings: pendientes
       oldest: antiguos
       most_active: más activos
       request_group: pedir un nuevo grupo
+      name: nombre
     group:
       about: acerca de
       close: cerrar

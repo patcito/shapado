@@ -2,10 +2,12 @@ pt-PT:
   groups:
     index:
       title: grupos
+      filter: "search for groups"
       actives: activos
       pendings: pendentes
       most_active: mais ativos
       request_group: pedir um novo grupo
+      name: name
     group:
       about: sobre
       close: fechar
