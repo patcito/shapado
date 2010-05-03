@@ -210,24 +210,21 @@ $(document).ready(function() {
     } else { textarea.text('').focus();  }
 
     var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    $('html,body').animate({scrollTop: top-550}, 1000);
     return false;
   });
 
   $("#add_comment_link").live('click', function() {
     var link = $(this);
-    var user = link.attr('data-author');
     var isreply = link.hasClass('reply');
-    var controls = link.parents(".controls");
-    var form = controls.parents("#question-body-col").find("form.commentForm");
-    var textarea = form.find('textarea');
+    var textarea = $("#add_comment_form").find('textarea');
     $("#request_close_question_form").slideUp();
     $("#question_flag_form").slideUp();
     $("#close_question_form").slideUp();
     $("#add_comment_form").slideDown();
     textarea.text('').focus();
     var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    $('html,body').animate({scrollTop: top-550}, 1000);
     return false;
   });
 
