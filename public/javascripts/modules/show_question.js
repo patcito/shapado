@@ -213,8 +213,10 @@ $(document).ready(function() {
       textarea.text('@'+user+' ')
     } else { textarea.text('').focus();  }
 
-    var top = form.offset().top;
-    $('html,body').animate({scrollTop: top-200}, 1000);
+    var viewportHeight = window.innerHeight ? window.innerHeight : $(window).height();
+    var top = form.offset().top - viewportHeight/2;
+
+    $('html,body').animate({scrollTop: top}, 1000);
     return false;
   });
 
@@ -228,8 +230,10 @@ $(document).ready(function() {
     $("#close_question_form").slideUp();
     $("#add_comment_form").slideDown();
     textarea.text('').focus();
-    var top = form.offset().top;
-    $('html,body').animate({scrollTop: top-300}, 1000);
+    var viewportHeight = window.innerHeight ? window.innerHeight : $(window).height();
+    var top = form.offset().top - viewportHeight/2;
+
+    $('html,body').animate({scrollTop: top}, 1000);
     return false;
   });
 
