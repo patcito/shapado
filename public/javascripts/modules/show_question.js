@@ -214,7 +214,7 @@ $(document).ready(function() {
     } else { textarea.text('').focus();  }
 
     var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-550}, 1000);
+    $('html,body').animate({scrollTop: top-50}, 1000);
     return false;
   });
 
@@ -228,7 +228,7 @@ $(document).ready(function() {
     $("#add_comment_form").slideDown();
     textarea.text('').focus();
     var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-550}, 1000);
+    $('html,body').animate({scrollTop: top-50}, 1000);
     return false;
   });
 
