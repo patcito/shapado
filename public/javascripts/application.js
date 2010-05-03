@@ -104,7 +104,16 @@ function setupWysiwygEditor() {
   if(!editor || editor.length == 0)
     return;
 
-  editor.wysiwyg();
+  editor.wysiwyg({
+    events: {
+      click: function(e) {
+        if(!window.onbeforeunload) {
+          //I18n.on_leave_page
+          window.onbeforeunload = function() {return I18n.on_leave_page;};
+        }
+      }
+    }
+  });
 }
 
 function setupEditor() {

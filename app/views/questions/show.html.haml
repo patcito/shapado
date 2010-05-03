@@ -1,7 +1,9 @@
+= javascript_include_tag "modules/single/question"
+
 -@current_class = 'question hentry entry post'
 
 
--show_close_request_form = !@question.closed && logged_in? &&@question.can_be_requested_to_close_by?(current_user)
+-show_close_request_form = !@question.closed && logged_in? && @question.can_be_requested_to_close_by?(current_user)
 
 -if logged_in? && current_user.mod_of?(current_group) && @question.closed
   -show_close_request_form = (@question.close_reason.user_id == current_user.id)
