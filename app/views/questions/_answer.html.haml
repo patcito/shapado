@@ -69,6 +69,11 @@
               = link_to t(".unset_answer"),  unsolve_question_path(@question)
         -if answer.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_answer_path(@question, answer)
+        -if logged_in?
+          -if(current_user.can_modify?(@question) || current_user.mod_of?(@question.group))
+            = link_to t("scaffold.destroy"), question_answer_path(@question.id, answer.id), :confirm => "are you sure?", :method => :delete
+          -if current_user.mod_of?(@question.group)
+            = link_to "ban", ban_path(:answer_ids => [answer.id]), :confirm => "are you sure?"
       .clear
       .forms
         -if current_user != answer.user
