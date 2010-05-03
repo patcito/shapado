@@ -113,7 +113,7 @@ module ApplicationHelper
 
   def markdown(txt, options = {})
     if options[:sanitize] != false
-      txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style])
+      txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style border])
     end
 
     RDiscount.new(render_page_links(txt), :smart).to_html
