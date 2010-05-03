@@ -213,8 +213,8 @@ $(document).ready(function() {
       textarea.text('@'+user+' ')
     } else { textarea.text('').focus();  }
 
-    var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    var top = form.offset().top;
+    $('html,body').animate({scrollTop: top-200}, 1000);
     return false;
   });
 
