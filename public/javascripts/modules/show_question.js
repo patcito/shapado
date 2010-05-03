@@ -200,7 +200,7 @@ $(document).ready(function() {
     var link = $(this);
     var user = link.attr('data-author');
     var isreply = link.hasClass('reply');
-    var controls = link.parents(".controls");
+    var controls = link.parents(".body-col");
     var form = controls.parents(".answer").find("form.nestedAnswerForm");
     if(form.length == 0) // if comment is child of a question
       form = controls.parents("#question-body-col").find("form.commentForm");
