@@ -1,23 +1,25 @@
 desc "Fix all"
-task :fixall => [:environment] do
+task :fixall => [:environment, "fixdb:custom_html"] do
 end
 
 namespace :fixdb do
   desc "move custom html keys to embedded doc"
   task :custom_html => :environment do
-    Group.find_each do |group|
-      group.set("custom_html.question_prompt" => group._question_prompt)
-      group.set("custom_html.question_help" => group._question_help)
-      group.set("custom_html.head" => group._head)
-      group.set("custom_html.footer" => group.footer)
-      group.set("custom_html.head_tag" => group.head_tag)
+    $stderr.puts "Updating #{Group.count} groups..."
 
-      atts = group.attributes
-      %[_question_prompt _question_help _head footer head_tag].each do |key|
-        atts.delete(key)
-      end
-      group.collection.save(atts)
+    Group.find_each do |group|
+      group.set({"custom_html.question_prompt" => group[:_question_prompt],
+                 "custom_html.question_help" => group[:_question_help],
+                 "custom_html.head" => group[:_head],
+                 "custom_html.footer" => group[:footer],
+                 "custom_html.head_tag" => group[:head_tag]})
     end
+
+    modifiers = {}
+    %w[_question_prompt _question_help _head footer head_tag].each do |key|
+      modifiers[key] = 1
+    end
+    Group.collection.update({}, {:$unset => modifiers}, :multi => true)
   end
 end
 
