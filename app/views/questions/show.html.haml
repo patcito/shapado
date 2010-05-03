@@ -100,15 +100,15 @@
         .clear
   .controls
     .actions
-      - if flag = current_user.has_flagged?(@question)
-        %span.flagged= "#{t('.flagged_as')} #{t(flag.type, :scope=>'flags.form')}"
-      - else
-        =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
-      -if show_close_request_form
-        -close_link_label = current_user.mod_of?(current_group) ?  t(".close") : t(".request_closing")
-        =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
-
       -if logged_in?
+        - if flag = current_user.has_flagged?(@question)
+          %span.flagged= "#{t('.flagged_as')} #{t(flag.type, :scope=>'flags.form')}"
+        - else
+          =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
+        -if show_close_request_form
+          -close_link_label = current_user.mod_of?(current_group) ?  t(".close") : t(".request_closing")
+          =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
+
         -if (@question.wiki && current_user.can_edit_wiki_post_on?(@question.group)) || current_user.can_edit_others_posts_on?(@question.group) || current_user.can_modify?(@question)
           = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
         -if @question.versions.count > 0
@@ -130,7 +130,8 @@
           .group.navform
             = submit_tag t(".request_closing_details"), :class => "button"
 
-  =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
+  -if logged_in?
+    =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
 
   .comments
     -@question.comments.each do |comment|
