@@ -2,6 +2,11 @@ $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
   setupWysiwygEditor();
+
+  $("form").submit(function() {
+    window.onbeforeunload = null;
+  });
+
   $('.confirm-domain').submit(function(){
       var bool = confirm($(this).attr('data-confirm'));
       if(bool==false) return false;

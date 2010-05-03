@@ -47,6 +47,8 @@ $(document).ready(function() {
       type: "POST",
       success: function(data, textStatus, XMLHttpRequest) {
                   if(data.success) {
+                    window.onbeforeunload = null;
+
                     var answer = $(data.html)
                     answer.find("form.commentForm").hide();
                     answers.append(answer)
@@ -82,6 +84,8 @@ $(document).ready(function() {
              type: "POST",
              success: function(data, textStatus, XMLHttpRequest) {
                           if(data.success) {
+                            window.onbeforeunload = null;
+
                             var comment = $(data.html)
                             comments.append(comment)
                             highlightEffect(comment)
