@@ -221,14 +221,15 @@ $(document).ready(function() {
   $("#add_comment_link").live('click', function() {
     var link = $(this);
     var isreply = link.hasClass('reply');
-    var textarea = $("#add_comment_form").find('textarea');
+    var form = $("#add_comment_form");
+    var textarea = form.find('textarea');
     $("#request_close_question_form").slideUp();
     $("#question_flag_form").slideUp();
     $("#close_question_form").slideUp();
     $("#add_comment_form").slideDown();
     textarea.text('').focus();
-    var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    var top = form.offset().top;
+    $('html,body').animate({scrollTop: top-300}, 1000);
     return false;
   });
 
