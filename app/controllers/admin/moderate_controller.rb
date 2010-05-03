@@ -3,30 +3,25 @@ class Admin::ModerateController < ApplicationController
   before_filter :moderator_required
 
   def index
-    @active_subtab = params.fetch(:tab, "questions")
-
-    @banned = !!params[:banned]
+    @active_subtab = params.fetch(:tab, "retag")
 
     options = {:order => "flags_count desc",
                :flags_count.gt => 0,
-               :banned => @banned,
-               :group_id => current_group.id}
+               :banned => false,
+               :group_id => current_group.id,
+               :per_page => params[:per_page] || 25,
+               :page => params[:questions_page] || 1}
 
-    banned = {:order => "flags_count desc",
-               :flags_count.gt => 0,
-               :banned => true,
-               :group_id => current_group.id}
 
     case @active_subtab
-      when "questions"
-        @questions = Question.paginate(options.merge({:per_page => params[:per_page] || 25,
-                                       :page => params[:questions_page] || 1}))
-      when "answers"
-        @answers = Answer.paginate(options.merge({:per_page => params[:per_page] || 25,
-                                       :page => params[:answers_page] || 1}))
+      when "flagged_questions"
+        @questions = Question.paginate(options)
+      when "flagged_answers"
+        @answers = Answer.paginate(options)
       when "banned"
-        @banned = Question.paginate(banned.merge({:per_page => params[:per_page] || 25,
-                                       :page => params[:questions_page] || 1}))
+        @banned = Question.paginate(options.merge(:banned => true))
+      when "retag"
+        @questions = Question.paginate(options.merge(:tags => {:$size => 0}))
     end
   end
 

@@ -9,3 +9,4 @@ en:
         all: all
         flagged: flagged questions
         banned: banned questions
+        need_tags: retag

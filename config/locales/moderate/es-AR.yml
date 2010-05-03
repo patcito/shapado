@@ -9,3 +9,4 @@ es-AR:
         all: todas
         flagged: preguntas reportadas
         banned: preguntas baneadas
+        need_tags: necesita etiquetas

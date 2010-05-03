@@ -9,3 +9,4 @@ pt-PT:
         all: todas
         flagged: flagged questions
         banned: banned questions
+        need_tags: retag
