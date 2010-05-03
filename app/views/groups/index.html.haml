@@ -5,40 +5,31 @@
       == (#{format_number(@groups.total_entries)})
 
   %ul
-    %li.active
-      = link_to t(".actives"), groups_path(:tab=>"actives")
-    %li.pending
-      = link_to t(".pendings"), groups_path(:tab=>"pendings")
+    -if logged_in? && current_user.admin?
+      %li.active
+        = link_to t(".actives"), groups_path(:tab=>"actives")
+      %li.pending
+        = link_to t(".pendings"), groups_path(:tab=>"pendings")
+    %li.newest
+      = link_to t(".newest", :default => :"questions.index.newest"), groups_path(:tab=>"newest")
+    %li.oldest
+      = link_to t(".oldest", :default => :"questions.index.oldest"), groups_path(:tab=>"oldest")
+    %li.name
+      = link_to t(".name", :default => :"questions.index.name"), groups_path(:tab=>"name")
+    %li.most_active
+      = link_to t(".most_active"), groups_path(:tab=>"most_active")
+
+-form_tag groups_path, :class => "form", :id => "filter_groups", :method => "get" do
+  = label_tag :q, t(".filter"), :class => "label"
+  = text_field_tag "q", params[:q], :class => "text_field filter_field"
+  = submit_tag("filter")
 
 %ul.items#groups
-  -@groups.each do |group|
-    %li.item
-      .logo
-        -if group.has_logo?
-          = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), domain_url(:custom => group.domain)
-        -else
-          = image_tag("default_logo.png", :style => "height: 64px; width: 128px; vertical-align: top", :class => "group_logo")
-      .summary
-        %h3
-          = link_to h(group.name), domain_url(:custom => group.domain)
-        .markdown.group_description
-          = auto_link(markdown(group.description))
-      .actions
-        = link_to t(".about"), group, :class => "button"
-        -if logged_in?
-          -if current_user.can_modify?(group)
-            = link_to t("shared.layout.notice.manage"), domain_url(:controller => "manage", :custom => group.domain), :class => "button"
-            -if group.state == "active"
-              = link_to t(".close"), close_group_path(group), :class => "cancel button"
-          -if current_user.admin?
-            = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete
-            - if group.has_custom_ads
-              = link_to t(".disallow_ads"), disallow_custom_ads_group_path(group)
-            -else
-              = link_to t(".allow_ads"), allow_custom_ads_group_path(group)
-      .clear
-=will_paginate @groups
-.clear
+  = render :partial => "group", :collection => @groups
+
+#additional_info
+  =will_paginate @groups
+  .clear
 
 = link_to t(".request_group"), new_group_path, :class => "request_group"
 .clear

@@ -3,25 +3,38 @@ class GroupsController < ApplicationController
   before_filter :login_required, :except => [:index, :show, :logo, :css, :favicon]
   before_filter :check_permissions, :only => [:edit, :update, :close]
   before_filter :moderator_required , :only => [:accept, :destroy]
+  subtabs :index => [ [:most_active, "activity_rate desc"], [:newest, "created_at desc"],
+                      [:oldest, "created_at asc"], [:name, "name asc"]]
   # GET /groups
   # GET /groups.json
   def index
-    case params.fetch(:tab, "actives")
-      when "actives"
-        @state = "active"
+    @state = "active"
+    case params.fetch(:tab, "active")
       when "pendings"
         @state = "pending"
     end
 
-    @groups = Group.paginate(:per_page => 15,
-                             :page => params[:page],
-                             :state => @state,
-                             :order => "created_at desc",
-                             :private => false)
+    options = {:per_page => params[:per_page] || 15,
+               :page => params[:page],
+               :state => @state,
+               :order => current_order,
+               :private => false}
+
+    if params[:q].blank?
+      @groups = Group.paginate(options)
+    else
+      @groups = Group.filter(params[:q], options)
+    end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json  { render :json => @groups }
+      format.js do
+        html = render_to_string(:partial => "group", :collection  => @groups)
+        pagination = render_to_string(:partial => "shared/pagination", :object => @groups,
+                                      :format => "html")
+        render :json => {:html => html, :pagination => pagination }
+      end
     end
   end
 

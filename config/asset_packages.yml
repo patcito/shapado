@@ -20,6 +20,7 @@ javascripts:
   - modules/new_question
   - modules/index_welcome
   - modules/show_user
+  - modules/index_group
   - modules/index_user
   - modules/tags_question
   - modules/members

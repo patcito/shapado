@@ -108,6 +108,11 @@ namespace :setup do
       end
     end
 
+    class Group
+      def update_timestamps
+      end
+    end
+
     $stderr.puts "Reindexing #{Question.count} questions..."
     Question.find_each do |question|
       question._keywords = []
@@ -120,6 +125,12 @@ namespace :setup do
       answer._keywords = []
       answer.rolling_back = true
       answer.save(:validate => false)
+    end
+
+    $stderr.puts "Reindexing #{Group.count} groups..."
+    Group.find_each do |group|
+      group._keywords = []
+      group.save(:validate => false)
     end
   end
 end

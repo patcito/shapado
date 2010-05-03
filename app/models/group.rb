@@ -2,6 +2,8 @@ class Group
   include MongoMapper::Document
   include MongoMapperExt::Slugizer
   include MongoMapperExt::Storage
+  include MongoMapperExt::Filter
+
   timestamps!
 
   BLACKLIST_GROUP_NAME = ["www", "net", "org", "admin", "ftp", "mail", "test", "blog",
@@ -48,6 +50,7 @@ class Group
   file_key :custom_favicon, :max_length => 256.kilobytes
 
   slug_key :name, :unique => true
+  filterable_keys :name
 
   has_many :ads, :dependent => :destroy
   has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
