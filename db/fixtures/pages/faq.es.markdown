@@ -1,42 +1,64 @@
-# Preguntas Frecuentes (FAQ)
-
-## Que típo de preguntas puedo hacer aquí?
-** Preguntas referentes a %site_name%!** Tu pregunta debe ser:
-
-* especifíca y detallada
-* escrita simple y claramentente
-* de interes para alguna persona
-
-... asi sera bienvenidad. Ninguna pregunta es muy trivial o de principiante y puede ser acerca de  **%site_name%**.
+#Frequently Asked Questions#
 
 
-Antes de preguntar, busca en las preguntas para ver si tu pregunta ya ha sido propuesta y dei pronto resuelta. Si realizaste una pregunta antes formulada, no hay problema, esta sera almacenada, tal vez algun usuario adjunte los links de las preguntas similares y ayuden a futuros visitantes.
+##What should my questions be about?##
 
-Tambien esta permitido preguntar y resolver tu pregunta, pero actua como si estubieras en [Jeopardy](http://es.wikipedia.org/wiki/Jeopardy "Jeopardy"): frases en forma de preguntas.
 
-## Que preguntas no debo formular aquí?
-**Evita hacer preguntas subjetivas, argumentativas o que requieran una larga discucion.** Esto no es un foro o similar, este es un lugar para preguntar y contestar!
+Your questions should be about %site_name%, of course! Make sure your question is:
 
-## Se amable.
-**Trata a los demás como quieras que te traten a tí.** Todos estamos para aprender, se tolerante con los que no saben todo lo que tu sabes. Tener un poco de sentido del humor no esta mal.
 
-## Se honesto.
-Sobre todo se honesto. Si tu información es incorrecta, tu votación bajara. Has com entarios indicando especificamente que esta mal. Trata de mejorar - Edita y mejora la informacion proveyendo respuestas rapidas, contundentes y superiores
+* to the point, so that others users can answer you the more precisely they can
 
-## Que es la reputación?
-Los sitios %site% funcionan por tí. Si quieres ayudar un sitio debe tener tu reputacion, la cual indica **que tanto confia la comunidad de %site% en tí.** La reputación no se da, se gana segun el criterio de otros usuarios que saben de lo que tu estas hablando.
+* clear and concise, to avoid confusion
 
-Así funciona: Si haces una buena pregunta o das una respuesta útil, esta sera votada positivamente por tus compañeros y tu obtendras **10** puntos de reputación. Si tu posteas algo fuera del topico o incorrecto perderas  **2** puntos de reputación. La reputación ganada por día será de máximo **200** puntos.
+* relevant
 
-De acuerdo con su reputacion en %site% usted podra realizar las siguientes actividades:
 
-> 50  comentar  
-> 100 voto negativo  
-> 250 abrir y cerrar preguntas propias  
-> 500 re-etiquetar preguntas  
-> 750 editar preguntas wiki  
-> 2000  editar cualquier respuesta  
-> 3000  abrir y cerrar preguntas  
-> 5000  eliminar cualquier comentario  
-> 10000 eliminar cualquier pregunta y respuesta, y agregar otras tareas de moderación  
+##What kind of questions should I avoid?##
 
+* Try to avoid provocative questions asked in a subjective way
+
+* Post questions, not arguments
+
+
+For example: Obama is trying to drill oil all over our coasts which will be an ecological disaster, what can we do about it?
+
+
+Instead: Is drilling oil on our coast really necessary, what are the dangers for the ecology? What can be done about it?
+
+
+Be a model netizen:
+
+Be honest, helpful, keep a sense of humor and humility (it's ok to be wrong) and if you find somebody to be wrong, explain why in a comment, vote the post down and try to edit the post to improve it.
+
+
+##How does reputation work?##
+
+The goal of reputation is to create confidence among users, and reward our best netizens. A user who will be very useful to the community will gain reputation points and be granted more editing power. However, don't make gaining reputation an end, just try to be the best netizen possible and reputation points will come to you.
+
+
+**More precisely, this is how it works:**
+
+
+If your question is appreciated by other users, they will vote it up and you will gain 10 reputation points. If they don't like your post, they will vote it down and you will lose 2 points. As you gain points, you will be able to do more. Here is a non-exhaustive list of action and points you need execute them:
+
+* 5 points: Leave comments
+
+* 15 points: Vote up
+
+* 15 points: Flag posts as spam, offensive or offtopic
+
+* 100 points: Vote down (costs 1 rep), edit community wiki posts
+
+* 250 points: Vote to close or reopen your questions
+
+* 500 points: Retag questions
+
+* 2000 points: Edit other people’s posts
+
+* 3000 points: Vote to close or reopen any questions
+
+* 10000 points: Delete closed questions, access to moderation pages.
+
+
+Users that reach 10000 points or more have almost the same rights as the site admins. This is because Shapado is a participative platform and follows the Wikipedia example where users run the site. %site_name% belongs to you.
