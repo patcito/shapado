@@ -47,7 +47,9 @@ namespace :fixdb do
 
       puts "Loading: #{title.inspect} [lang=#{language}]"
 
-      Page.set({:language => language, :body => "", :slug => "faq"}, {:body => body})
+      Page.find_each({:language => language, :body => "", :slug => "faq", :select => [:_id]}) do |page|
+        page.set({:body => body})
+      end
     end
   end
 end
