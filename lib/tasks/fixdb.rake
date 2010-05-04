@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:custom_html", "fixdb:reindex"] do
+task :fixall => [:environment, "fixdb:custom_html", "fixdb:reindex", "fixdb:faq"] do
 end
 
 namespace :fixdb do
@@ -22,12 +22,32 @@ namespace :fixdb do
     Group.collection.update({}, {:$unset => modifiers}, :multi => true)
   end
 
-  task "reindex groups"
+  desc "reindex groups"
   task :reindex => :environment do
+    class Group
+      def update_timestamps
+      end
+    end
+
     $stderr.puts "Reindexing #{Group.count} groups..."
     Group.find_each do |group|
       group._keywords = []
       group.save(:validate => false)
+    end
+  end
+
+  desc "load faq pages"
+  task :faq => :environment do
+    Dir.glob(RAILS_ROOT+"/db/fixtures/pages/*.markdown") do |page_path|
+      basename = File.basename(page_path, ".markdown")
+      title = basename.gsub(/\.(\w\w)/, "").titleize
+      language = $1
+
+      body = File.read(page_path)
+
+      puts "Loading: #{title.inspect} [lang=#{language}]"
+
+      Page.set({:language => language, :body => "", :slug => "faq"}, {:body => body})
     end
   end
 end
