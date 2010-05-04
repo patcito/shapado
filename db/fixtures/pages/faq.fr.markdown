@@ -1,64 +1,58 @@
-#Frequently Asked Questions#
+#Foire Aux Questions#
 
 
-##What should my questions be about?##
+##Sur quel sujet devrait porter mes questions?##
 
 
-Your questions should be about %site_name%, of course! Make sure your question is:
+Vos questions doivent porter sur le thème de %site_name%, évidement! Assurez vous que votre question est:
 
 
-* to the point, so that others users can answer you the more precisely they can
+* spécifique, à fin que d'autres puissent y répondre avec précision
 
-* clear and concise, to avoid confusion
+* claire et concise, pour éviter toute confusion
 
-* relevant
-
-
-##What kind of questions should I avoid?##
-
-* Try to avoid provocative questions asked in a subjective way
-
-* Post questions, not arguments
+* pertinente
 
 
-For example: Obama is trying to drill oil all over our coasts which will be an ecological disaster, what can we do about it?
+##Quelle type de question dois-je éviter?##
+
+* Essayez d'éviter les questions provocantes posées de manière trop suggestive
+
+* Posez des questions, pas des affirmations
+
+Par exemple: Sarkozy veux fliquer tout l'internet avec HADOPI, c'est n'importe quoi, qu'est-ce qu'on peut y faire?
+
+Plutôt: L'HADOPI de Sarkozy me semble liberticide, que peut-on faire pour lutter contre?
+
+Soyez un citoyen exemplaire du web:
+
+Soyez honnête, utile, gardez votre sens de l'humour et d'humilité (ce n'est pas un tord de se tromper) et si vous trouvez une fausse réponse, expliquez pourquoi dans un commentaire, votez négativement et si vous le pouvez éditer le poste.
+
+##Comment marche la réputation?##
+
+Le but de la réputation est de créer un sens de confiance entre les utilisateurs et de récompenser nos meilleurs participants. Un utilisateur très utile envers la communauté gagnera en réputation et pourra effectuer plus d'édition. Cependant, gagner en réputation ne doit pas être une fin en soi. Essayez d'être le plus utile possible et les points de réputation viendront tout seul.
+
+**Plus précisément, voilà comment ça marche:**
 
 
-Instead: Is drilling oil on our coast really necessary, what are the dangers for the ecology? What can be done about it?
+Si votre question est apprécié par les autres utilisateurs, ils la voteront positivement et vous gagnerez 10 points de réputation par vote. S'ils n'apprécient pas votre question, ils la voteront négativement et vous perdrez 2 points. En gagnant des points, vous aurez la possibilité de gagner plus. Voici une liste non-exhaustive des actions et points dont vous aurez besoin pour les exécuter:
 
+* 5 points: Laisser un commentaire
 
-Be a model netizen:
+* 15 points: Voter positivement
 
-Be honest, helpful, keep a sense of humor and humility (it's ok to be wrong) and if you find somebody to be wrong, explain why in a comment, vote the post down and try to edit the post to improve it.
+* 15 points: Reporter un poste comme spam ou hors sujet
 
+* 100 points: Voter négativement (vous coûtera 1 point), éditer les postes communautaires wiki
 
-##How does reputation work?##
+* 250 points: Voter pour la fermeture ou réouverture de vos questions
 
-The goal of reputation is to create confidence among users, and reward our best netizens. A user who will be very useful to the community will gain reputation points and be granted more editing power. However, don't make gaining reputation an end, just try to be the best netizen possible and reputation points will come to you.
+* 500 points: Retagger des questions
 
+* 2000 points: Éditer les postes des autres
 
-**More precisely, this is how it works:**
+* 3000 points: Voter pour la fermeture ou réouverture de toute question
 
+* 10000 points: Effacer des questions fermées, gagner l'accès aux pages de modération.
 
-If your question is appreciated by other users, they will vote it up and you will gain 10 reputation points. If they don't like your post, they will vote it down and you will lose 2 points. As you gain points, you will be able to do more. Here is a non-exhaustive list of action and points you need execute them:
-
-* 5 points: Leave comments
-
-* 15 points: Vote up
-
-* 15 points: Flag posts as spam, offensive or offtopic
-
-* 100 points: Vote down (costs 1 rep), edit community wiki posts
-
-* 250 points: Vote to close or reopen your questions
-
-* 500 points: Retag questions
-
-* 2000 points: Edit other people’s posts
-
-* 3000 points: Vote to close or reopen any questions
-
-* 10000 points: Delete closed questions, access to moderation pages.
-
-
-Users that reach 10000 points or more have almost the same rights as the site admins. This is because Shapado is a participative platform and follows the Wikipedia example where users run the site. %site_name% belongs to you.
+Les utilisateurs avec plus de 10000 points auront presque les mêmes droits que les administrateurs. %site_name% est une plate forme participative et suit l'exemple de Wikipedia où les utilisateurs font tourner le site. %site_name% vous appartient.

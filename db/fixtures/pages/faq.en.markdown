@@ -61,4 +61,4 @@ If your question is appreciated by other users, they will vote it up and you wil
 * 10000 points: Delete closed questions, access to moderation pages.
 
 
-Users that reach 10000 points or more have almost the same rights as the site admins. This is because Shapado is a participative platform and follows the Wikipedia example where users run the site. %site_name% belongs to you.
+Users that reach 10000 points or more have almost the same rights as the site admins. This is because %site_name% is a participative platform and follows the Wikipedia example where users run the site. %site_name% belongs to you.
