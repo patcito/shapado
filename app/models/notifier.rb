@@ -114,8 +114,8 @@ class Notifier < ActionMailer::Base
       subject I18n.t("mailers.notifications.report.subject", :group => report.group.name, :app => AppConfig.application_name)
       sent_on Time.now
 
-      body :user => user, :report => report
       content_type    "text/plain"
+      body :user => user, :report => report
     end
   end
 
