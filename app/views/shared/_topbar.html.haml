@@ -4,7 +4,7 @@
       .entry
         %ul.combobox
           %li
-            =link_to h(current_group.name), groups_path
+            =link_to t("activerecord.models.groups"), groups_path
             %ul
               -current_user.groups(:select => [:name, :domain]).each do |group|
                 %li
