@@ -47,7 +47,7 @@ es-AR:
       pick_answer: escoger como solución
       unset_answer: "¿quitar como solución?"
       flag: "reportar abuso"
-      add_comment: añadir comentario...
+      add_comment: comentar esta respuesta...
     question:
       accepted_tooltip: Esta pregunta ha sido contestada
     form:
