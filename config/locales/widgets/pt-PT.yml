@@ -21,3 +21,6 @@ pt-PT:
     tag_cloud:
       title: tag cloud
       description: "this widget displays a tag cloud"
+    pages:
+      title: wiki pages
+      description: "this widget displays the list of wiki pages"

@@ -21,3 +21,6 @@ es-AR:
     tag_cloud:
       title: nube de etiquetas
       description: "este widget muestra una nube de etiquetas"
+    pages:
+      title: paginas wiki
+      description: "este widget muestra las paginas wiki"
