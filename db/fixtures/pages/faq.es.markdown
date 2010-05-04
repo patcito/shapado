@@ -1,64 +1,65 @@
-#Frequently Asked Questions#
+#Preguntas Frecuentes#
 
 
-##What should my questions be about?##
+##Sobre que debo preguntar?##
 
 
-Your questions should be about %site_name%, of course! Make sure your question is:
+Tus preguntas deben ser sobre %site_name%, por supuesto! asegurate que tu pregunta:
 
 
-* to the point, so that others users can answer you the more precisely they can
+* objetiva, así los otros usuarios pueden contestarte lo mas preciso que puedan.
 
-* clear and concise, to avoid confusion
+* clara y consiza, para evitar confusión.
 
-* relevant
-
-
-##What kind of questions should I avoid?##
-
-* Try to avoid provocative questions asked in a subjective way
-
-* Post questions, not arguments
+* relevante
 
 
-For example: Obama is trying to drill oil all over our coasts which will be an ecological disaster, what can we do about it?
+##Que tipo de preguntas debo evitar?##
+
+* Trata de evitar preguntas provocativas, formuladas de forma subjetivas.
+
+* No hagas afirmaciones en tus preguntas
 
 
-Instead: Is drilling oil on our coast really necessary, what are the dangers for the ecology? What can be done about it?
+Por ejemplo: Obama esta tratando de extraer aceite sobre nuestras costas y sera un desastre ambiental, que podemos hacer sobre eso?
 
 
-Be a model netizen:
-
-Be honest, helpful, keep a sense of humor and humility (it's ok to be wrong) and if you find somebody to be wrong, explain why in a comment, vote the post down and try to edit the post to improve it.
+En lugar de eso: sacar aceite de nuestras costas es necesario?, cuales son los peligros para el medio ambiente? que podemos hacer?
 
 
-##How does reputation work?##
+Se un internauta modelo:
 
-The goal of reputation is to create confidence among users, and reward our best netizens. A user who will be very useful to the community will gain reputation points and be granted more editing power. However, don't make gaining reputation an end, just try to be the best netizen possible and reputation points will come to you.
-
-
-**More precisely, this is how it works:**
+Se honesto, colaborador, manten el sentido del humor y humildad (esta bien equivocarse) y si encuentras a alguien que se ha equivocado expliquele porque en un comentario, vota las preguntas o respuestas negativamente y trata de editarlos para mejorarlos.
 
 
-If your question is appreciated by other users, they will vote it up and you will gain 10 reputation points. If they don't like your post, they will vote it down and you will lose 2 points. As you gain points, you will be able to do more. Here is a non-exhaustive list of action and points you need execute them:
+##Como funciona la reputación?##
 
-* 5 points: Leave comments
-
-* 15 points: Vote up
-
-* 15 points: Flag posts as spam, offensive or offtopic
-
-* 100 points: Vote down (costs 1 rep), edit community wiki posts
-
-* 250 points: Vote to close or reopen your questions
-
-* 500 points: Retag questions
-
-* 2000 points: Edit other people’s posts
-
-* 3000 points: Vote to close or reopen any questions
-
-* 10000 points: Delete closed questions, access to moderation pages.
+La meta de la reputación es crear seguridad entre los usuarios y premiar nuestros mejores usuarios. Un usuario que es muy colaborador con la comunidad ganara mas puntos de reputación y tendrá mas poder. Sin embargo, ganar reputación no es un fin, solo trata de ser lo mejor posible y los puntos de reputación estarán garantizados.
 
 
-Users that reach 10000 points or more have almost the same rights as the site admins. This is because Shapado is a participative platform and follows the Wikipedia example where users run the site. %site_name% belongs to you.
+**Mas precisamente, así es como funciona:**
+
+
+Si tu pregunta o respuesta es apreciada por otros usuarios, ellos votaran positivamente y tu ganaras puntos de reputación. Si ellos do les gusta tu pregunta o respuesta, ellos la votaran negativamente y perderás puntos de reputación. Mientras ganas puntos, seras capaz de hacer mas cosas dentro de la plataforma.
+Aquí hay una no muy exhaustiva lista de acciones y puntos:
+
+
+* 5 puntos: Puedes hacer comentarios
+
+* 15 puntos: Puedes votar positivamente
+
+* 15 puntos: Puedes reportar preguntas o respuestas.
+
+* 100 puntos: Votar negativamente (cuesta un punto de reputación), editar preguntas de otros usuarios.
+
+* 250 puntos: Puedes votar para cerrar o re-abrir tus preguntas
+
+* 500 puntos: Puedes re-etiquetar preguntas
+
+* 2000 puntos: Editar preguntas o respuestas de otros usuarios
+
+* 3000 puntos: Votar para cerrar o reabrir cualquier pregunta
+
+* 10000 puntos: Borrar preguntas cerradas, acceder a paginas de moderación.
+
+Los usuarios que alcanzan 10000 puntos o mas de reputación tienen casi los mismos permisos de los administradores del sitio. Esto es porque %site_name% es una plataforma participativa y sigue el ejemplo wikipedia donde los usuarios mantienen el sitio. %site_name% te pertenece!
