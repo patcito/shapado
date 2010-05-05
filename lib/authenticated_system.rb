@@ -50,6 +50,8 @@ module AuthenticatedSystem
     end
 
     if user
+      cookies.delete(:reset_openid_token)
+
       user.localize(request.remote_ip)
       user.logged!(current_group)
       check_draft
@@ -128,6 +130,16 @@ module AuthenticatedSystem
     if google_id || yahoo_id
       registration["email"] = registration["http://axschema.org/contact/email"][0]
       registration["nickname"] = registration["email"].split(/@/)[0]
+    end
+
+    if cookies[:reset_openid_token].present? &&
+        (@user = User.find_by_reset_password_token(cookies[:reset_openid_token]))
+      cookies.delete(:reset_openid_token)
+      @user.reset_password_token = nil
+      @user.identity_url = identity_url
+      @user.save
+
+      return @user
     end
 
     @user = User.find_by_login(registration["nickname"]) # FIXME: find by email?
