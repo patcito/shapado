@@ -383,6 +383,8 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
 
     @question.closed = true
+    @question.closed_at = Time.zone.now
+
     respond_to do |format|
       if @question.save
         sweep_question(@question)

@@ -26,6 +26,7 @@ class Question
   key :banned, Boolean, :default => false
   key :accepted, Boolean, :default => false
   key :closed, Boolean, :default => false
+  key :closed_at, Time
 
   key :answered_with_id, String
   belongs_to :answered_with, :class_name => "Answer"
