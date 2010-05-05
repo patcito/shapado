@@ -7,7 +7,9 @@ class ImportsController < ApplicationController
                        ]
 
   def index
-    case @active_subtab
+    @active_subtab ||= 'need_confirmation'
+
+    case @active_subtab.to_s
     when 'need_confirmation'
       @users = current_group.users(:needs_confirmation => true, :order => "created_at desc", :select => [:name, :login, :email])
     end
