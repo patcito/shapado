@@ -1,0 +1,6 @@
+es-AR:
+  imports:
+    subtabs:
+      need_confirmation:
+        name: necesitan confirmación
+        title: Enviar emails de confirmación

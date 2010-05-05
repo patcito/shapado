@@ -1,9 +1,9 @@
 %table.table
   %tr
     %th
-      User name
+      =t("activerecord.attributes.user.login")
     %th
-      Email
+      =t("activerecord.attributes.user.email")
     %th
   -@users.each do |user|
     %tr
@@ -14,5 +14,6 @@
       %td
         = link_to "send confirmation email", send_confirmation_imports_path(:user_id => user.id), :method => :post
 
-%strong
-  = link_to "send confirmation email to all", send_confirmation_imports_path(:all => true), :method => :post
+-unless @users.empty?
+  %strong
+    = link_to "send confirmation email to all", send_confirmation_imports_path(:all => true), :method => :post

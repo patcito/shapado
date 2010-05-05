@@ -1,0 +1,6 @@
+pt-PT:
+  imports:
+    subtabs:
+      need_confirmation:
+        name: need confirmation
+        title: send confirmation emails
