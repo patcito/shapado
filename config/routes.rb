@@ -25,6 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :badges
   map.resources :pages, :member => {:css => :get, :js => :get}
   map.resources :announcements, :collection => {:hide => :any }
+  map.resources :imports, :collection => {:send_confirmation => :post}
 
 
   def build_questions_routes(router, options ={})

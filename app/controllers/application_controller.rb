@@ -227,6 +227,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def owner_required
+    unless current_user.owner_of?(current_group)
+      access_denied
+    end
+  end
+
   def is_bot?
     request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler|StatusNet)\b/i
   end

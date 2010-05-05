@@ -1,0 +1,18 @@
+%table.table
+  %tr
+    %th
+      User name
+    %th
+      Email
+    %th
+  -@users.each do |user|
+    %tr
+      %td
+        = link_to "#{h(user.name.present? ? user.name : user.login)}", user_path(user)
+      %td
+        = user.email
+      %td
+        = link_to "send confirmation email", send_confirmation_imports_path(:user_id => user.id), :method => :post
+
+%strong
+  = link_to "send confirmation email to all", send_confirmation_imports_path(:all => true), :method => :post
