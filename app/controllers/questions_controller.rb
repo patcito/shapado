@@ -635,13 +635,17 @@ class QuestionsController < ApplicationController
 
   def check_retag_permissions
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_retag_others_questions_on?(current_group) ||  current_user.can_modify?(@question)
+    unless logged_in? && (current_user.can_retag_others_questions_on?(current_group) ||  current_user.can_modify?(@question))
       reputation = @question.group.reputation_constrains["retag_others_questions"]
-      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
-                                    :min_reputation => reputation,
-                                    :action => I18n.t("users.actions.retag_others_questions"))
+      if !logged_in?
+        flash[:error] = t("questions.show.unauthenticated_retag")
+      else
+        flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                               :min_reputation => reputation,
+                               :action => I18n.t("users.actions.retag_others_questions"))
+      end
       respond_to do |format|
-        format.html {render :retag}
+        format.html {redirect_to @question}
         format.js {
           render(:json => {:success => false,
                    :message => flash[:error] }.to_json)

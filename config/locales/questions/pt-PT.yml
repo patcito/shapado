@@ -33,6 +33,7 @@ pt-PT:
       unfavorite_tooltip: "remove this question from your favorites"
       asked_on: "asked on"
       last_activity: last activity
+      unauthenticated_retag: you need an account to retag questions
       retag: retag
       request_closing: request closing
       request_closing_details: request to close this question
@@ -43,6 +44,8 @@ pt-PT:
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
+    retag:
+      title: retag
     answer:
       pick_answer: escolher como solução
       unset_answer: retirar como solução?
