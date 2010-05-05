@@ -30,7 +30,8 @@ ActionController::Routing::Routes.draw do |map|
 
   def build_questions_routes(router, options ={})
     router.with_options(options) do |route|
-      route.se_url "/questions/:id/:slug", :controller => "questions", :action => "show"
+      route.se_url "/questions/:id/:slug", :controller => "questions", :action => "show", :id => /\d+/,
+ :conditions => { :method => :get }
       route.resources :questions, :collection => {:tags => :get,
                                                   :tags_for_autocomplete => :get,
                                                   :unanswered => :get,
