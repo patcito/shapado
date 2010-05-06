@@ -1,17 +1,18 @@
-%h3
-  =t(".title")
-.content
-  %ul.list
-    -widget.recent_users(current_group).each do |user|
-      %li
-        .gravatar
-          =gravatar(user.email.to_s, :size => 32)
-        .item
-          =link_to h(user.login), user_path(user)
-          .joined
-            = t(:created_at, :scope => "activerecord.attributes.user")
-            =t("time.ago", :time => time_ago_in_words(user.created_at))
-  .more
-    =link_to t("scaffold.more"), users_path
-    .clear
-.clear
+-cache("new_users_#{current_group.id}") do
+  %h3
+    =t(".title")
+  .content
+    %ul.list
+      -widget.recent_users(current_group).each do |user|
+        %li
+          .gravatar
+            =gravatar(user.email.to_s, :size => 32)
+          .item
+            =link_to h(user.login), user_path(user)
+            .joined
+              = t(:created_at, :scope => "activerecord.attributes.user")
+              =t("time.ago", :time => time_ago_in_words(user.created_at))
+    .more
+      =link_to t("scaffold.more"), users_path
+      .clear
+  .clear

@@ -2,13 +2,17 @@ fr:
   groups:
     index:
       title: groups
+      filter: "search for groups"
       actives: actifs
       pendings: en attente
+      most_active: most active
+      request_group: demander un nouveau groupe
+      name: name
+    group:
       about: À propos
       close: fermer
       accept_group: accepter ce groupe
       close_group: fermer ce groupe
-      request_group: demander un nouveau groupe
       allow_ads: permettre publicité
       disallow_ads: interdir publicité
       accept_group_with_custom_ads: accepter ce groupe et autoriser publicité personnalisée

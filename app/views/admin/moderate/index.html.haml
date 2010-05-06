@@ -3,81 +3,14 @@
   .navtitle
     = t(".title")
   %ul
+    %li.retag
+      = link_to t(".need_tags"), moderate_path(:tab=>"retag")
     %li.questions
-      = link_to t(".flagged", :default => :"activerecord.models"), moderate_path(:tab=>"questions")
+      = link_to t(".flagged", :default => :"activerecord.models"), moderate_path(:tab=>"flagged_questions")
     %li.answers
-      = link_to t(".answers", :default => :"activerecord.models.answers"), moderate_path(:tab=>"answers")
+      = link_to t(".answers", :default => :"activerecord.models.answers"), moderate_path(:tab=>"flagged_answers")
     %li.banneds
       = link_to t(".banned", :default => :"activerecord.models"), moderate_path(:tab=>"banned")
 
+= render :partial => "admin/moderate/subtabs/#{@active_subtab}"
 
--if @questions
-  -form_tag ban_path do
-    %table.table
-      %tr
-        %th
-        %th
-          =t(:flags, :scope => "activerecord.models")
-        %th
-          =t(".item_title")
-        %th
-          =t(".content")
-      -@questions.each do |question|
-        %tr
-          %th
-            = check_box_tag "question_ids[]", question.id
-          %td
-            = render :partial => "flags/list", :locals=> {:flaggeable => question}
-          %td
-            = link_to h(question.title), question_path(question)
-          %td
-            = truncate(question.body, :length => 100)
-    = will_paginate @questions, :param_name => "questions_page"
-    = submit_tag "ban"
-
--if @answers
-  -form_tag ban_path do
-    %table.table
-      %tr
-        %th
-        %th
-          =t(:flags, :scope => "activerecord.models")
-        %th
-          =t(".item_title")
-        %th
-          =t(".content")
-      -@answers.each do |answer|
-        %tr
-          %th
-            = check_box_tag "answer_ids[]", answer.id
-          %td
-            = render :partial => "flags/list", :locals=> {:flaggeable => answer}
-          %td
-            = link_to h(answer.question.title), question_path(answer.question)
-          %td
-            = truncate(answer.body, :length => 100)
-    = will_paginate @answers, :param_name => "answers_page"
-    = submit_tag "ban"
--if @banned
-  -form_tag unban_path do
-    %table.table
-      %tr
-        %th
-        %th
-          =t(:flags, :scope => "activerecord.models")
-        %th
-          =t(".item_title")
-        %th
-          =t(".content")
-      -@banned.each do |question|
-        %tr
-          %th
-            = check_box_tag "question_ids[]", question.id
-          %td
-            = render :partial => "flags/list", :locals=> {:flaggeable => question}
-          %td
-            = link_to h(question.title), question_path(question)
-          %td
-            = truncate(question.body, :length => 100)
-    = will_paginate @banned, :param_name => "questions_page"
-    = submit_tag "unban"

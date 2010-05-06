@@ -2,13 +2,15 @@ class Group
   include MongoMapper::Document
   include MongoMapperExt::Slugizer
   include MongoMapperExt::Storage
+  include MongoMapperExt::Filter
+
   timestamps!
 
   BLACKLIST_GROUP_NAME = ["www", "net", "org", "admin", "ftp", "mail", "test", "blog",
                  "bug", "bugs", "dev", "ftp", "forum", "community", "mail", "email",
                  "webmail", "pop", "pop3", "imap", "smtp", "stage", "stats", "status",
                  "support", "survey", "download", "downloads", "faqs", "wiki",
-                 "assets1", "assets2", "assets3", "assets4"]
+                 "assets1", "assets2", "assets3", "assets4", "staging"]
 
   key :_id, String
   key :name, String, :required => true
@@ -39,39 +41,16 @@ class Group
   key :reputation_constrains, Hash, :default => REPUTATION_CONSTRAINS
   key :forum, Boolean, :default => false
 
-  #custom html: FIXME !! move to an embedded doc
-  key :_question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
-                                           "es" => "¿cual es tu pregunta? por favor se descriptivo.",
-                                           "fr" => "quelle est votre question? soyez descriptif.",
-                                           "pt" => "qual é a sua pergunta? seja descritivo."}
-  key :_question_help, Hash, :default => {
-"en" => "Provide as much details as possible so that it will have more
-chance to be answered instead of being endlessly discussed.
-Try to be clear and simple.",
-"es" => "Sobre que es tu pregunta?
-provee tantos detalles como puedas para tener más suerte
-de conseguir una respuesta y no una discusion sin fin.
-intenta ser claro y simple",
-"fr" => "Sur quoi porte votre question?
-Donnez autants de détails que possible afin d'avoir plus de chance
-d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
-"pt" => ""}
-
-  key :_head, Hash, :default => {}
   key :custom_html, CustomHtml, :default => CustomHtml.new
-
-
   key :has_custom_html, Boolean, :default => true
   key :has_custom_js, Boolean, :default => true
-  key :footer, String
-
-  key :head_tag, String
 
   file_key :logo, :max_length => 2.megabytes
   file_key :custom_css, :max_length => 256.kilobytes
   file_key :custom_favicon, :max_length => 256.kilobytes
 
   slug_key :name, :unique => true
+  filterable_keys :name
 
   has_many :ads, :dependent => :destroy
   has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
@@ -123,7 +102,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   def disallow_javascript
     unless self.has_custom_js
        %w[footer _head _question_help _question_prompt head_tag].each do |key|
-         value = self[key]
+         value = self.custom_html[key]
          if value.kind_of?(Hash)
            value.each do |k,v|
              value[k] = v.gsub(/<*.?script.*?>/, "")
@@ -131,21 +110,29 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
          elsif value.kind_of?(String)
            value = value.gsub(/<*.?script.*?>/, "")
          end
-         self[key] = value
+         self.custom_html[key] = value
        end
     end
   end
 
   def question_prompt
-    self._question_prompt[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.question_prompt[I18n.locale.to_s.split("-").first] || ""
   end
 
   def question_help
-    self._question_help[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.question_help[I18n.locale.to_s.split("-").first] || ""
   end
 
   def head
-    self._head[I18n.locale.to_s.split("-").first] || ""
+    self.custom_html.head[I18n.locale.to_s.split("-").first] || ""
+  end
+
+  def head_tag
+    self.custom_html.head_tag
+  end
+
+  def footer
+    self.custom_html.footer
   end
 
   def default_tags=(c)
@@ -155,21 +142,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
     self[:default_tags] = c
   end
   alias :user :owner
-
-  def members(opts={})
-    members_ids = memberships.paginate(opts.merge({:fields => "user_id"})).map do |member|
-      member.user_id
-    end
-
-    if members_ids.empty?
-      page = MongoMapper::Pagination::PaginationProxy.new(0, 1, 25);
-      page.subject = []
-      return page
-    end
-
-    default_opts = {:conditions => {:_id => {:$in => members_ids}}}
-    User.paginate(opts.merge(default_opts))
-  end
 
   def is_member?(user)
     user.member_of?(self)
@@ -188,6 +160,7 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   def users(conditions = {})
     User.paginate(conditions.merge("membership_list.#{self.id}.reputation" => {:$exists => true}))
   end
+  alias_method :members, :users
 
   def pending?
     state == "pending"

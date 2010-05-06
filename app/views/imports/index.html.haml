@@ -1,0 +1,8 @@
+-content_for :subtabs do
+  .navtitle
+    =t("imports.subtabs.#{@active_subtab}.title")
+  %ul
+    %li.need_confirmation
+      = link_to t("imports.subtabs.#{@active_subtab}.name"), imports_path(:tab => "need_confirmation")
+
+= render :partial => "imports/subtabs/#{@active_subtab}"

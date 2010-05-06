@@ -1,5 +1,7 @@
 %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
 
+=javascript_include_tag "i18n/#{I18n.locale}"
+
 =yield :head
 
 -if current_group.has_custom_favicon?

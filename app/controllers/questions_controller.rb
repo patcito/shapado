@@ -20,6 +20,12 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
+    if params[:language] || request.query_string =~ /tags=/
+      params.delete(:language)
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     set_page_title(t("questions.index.title"))
     conditions = scoped_conditions(:banned => false)
 
@@ -108,8 +114,14 @@ class QuestionsController < ApplicationController
   end
 
   def unanswered
+    if params[:language] || request.query_string =~ /tags=/
+      params.delete(:language)
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     set_page_title(t("questions.unanswered.title"))
-    conditions = scoped_conditions({:answered_with_id => nil, :banned => false})
+    conditions = scoped_conditions({:answered_with_id => nil, :banned => false, :closed => false})
 
     if logged_in?
       if @active_subtab.to_s == "expert"
@@ -168,6 +180,12 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
+    if params[:language]
+      params.delete(:language)
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
@@ -175,7 +193,14 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.paginate(options)
 
     @answer = Answer.new(params[:answer])
-    @question.viewed! if @question.user != current_user && !is_bot?
+
+    if @question.user != current_user && !is_bot?
+      @question.viewed!
+
+      if (@question.views_count % 10) == 0
+        sweep_question(@question)
+      end
+    end
 
     set_page_title(@question.title)
     add_feeds_url(url_for(:format => "atom"), t("feeds.question"))
@@ -217,6 +242,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question_views
+
         current_user.stats.add_question_tags(*@question.tags)
 
         current_user.on_activity(:ask_question, current_group)
@@ -269,6 +296,9 @@ class QuestionsController < ApplicationController
       end
 
       if @question.valid? && @question.save
+        sweep_question_views
+        sweep_question(@question)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.update")
         format.html { redirect_to(question_path(@question)) }
         format.json  { head :ok }
@@ -285,6 +315,8 @@ class QuestionsController < ApplicationController
     if @question.user_id == current_user.id
       @question.user.update_reputation(:delete_question, current_group)
     end
+    sweep_question(@question)
+    sweep_question_views
     @question.destroy
 
     Magent.push("actors.judge", :on_destroy_question, current_user.id, @question.attributes)
@@ -303,6 +335,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         current_user.on_activity(:close_question, current_group)
         if current_user != @answer.user
           @answer.user.update_reputation(:answer_picked_as_solution, current_group)
@@ -337,6 +371,8 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         flash[:notice] = t(:flash_notice, :scope => "questions.unsolve")
         current_user.on_activity(:reopen_question, current_group)
         if current_user != @answer_owner
@@ -365,8 +401,12 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_slug_or_id(params[:id])
 
     @question.closed = true
+    @question.closed_at = Time.zone.now
+
     respond_to do |format|
       if @question.save
+        sweep_question(@question)
+
         format.html { redirect_to question_path(@question) }
         format.json { head :ok }
       else
@@ -431,7 +471,7 @@ class QuestionsController < ApplicationController
         @question.remove_watcher(current_user)
       end
     end
-
+    flash[:notice] = t("unfavorites.create.success")
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
       format.js {
@@ -483,6 +523,8 @@ class QuestionsController < ApplicationController
       @question.group = @group
 
       if @question.save
+        sweep_question(@question)
+
         Answer.set({"question_id" => @question.id}, {"group_id" => @group.id})
       end
       flash[:notice] = t("questions.move_to.success", :group => @group.name)
@@ -502,6 +544,8 @@ class QuestionsController < ApplicationController
     @question.last_target = @question
 
     if @question.save
+      sweep_question(@question)
+
       if (Time.now - @question.created_at) < 8.days
         @question.on_activity(true)
       end
@@ -519,6 +563,7 @@ class QuestionsController < ApplicationController
     else
       flash[:error] = t("questions.retag_to.failure",
                         :group => params[:question][:group])
+
       respond_to do |format|
         format.html {render :retag}
         format.js {
@@ -593,6 +638,10 @@ class QuestionsController < ApplicationController
           flash[:error] += ", [#{t("global.please_login")}](#{new_user_session_path})"
           redirect_to question_path(@question)
         end
+        format.js do
+          flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"
+          render(:json => {:status => :error, :message => flash[:error] }.to_json)
+        end
         format.json do
           flash[:error] += ", <a href='#{new_user_session_path}'> #{t("global.please_login")} </a>"
           render(:json => {:status => :error, :message => flash[:error] }.to_json)
@@ -628,10 +677,12 @@ class QuestionsController < ApplicationController
     @question = current_group.questions.find_by_slug_or_id(params[:id])
 
     if @question.nil?
-      @question = current_group.questions.first(:slugs => params[:id])
+      @question = current_group.questions.first(:slugs => params[:id], :select => [:_id, :slug])
       if @question.present?
         head :moved_permanently, :location => question_url(@question)
         return
+      elsif params[:id] =~ /^(\d+)/ && (@question = current_group.questions.first(:se_id => $1, :select => [:_id, :slug]))
+        head :moved_permanently, :location => question_url(@question)
       else
         raise PageNotFound
       end

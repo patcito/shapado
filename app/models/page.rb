@@ -6,6 +6,8 @@ class Page
   include MongoMapperExt::Storage
   include Support::Versionable
 
+  timestamps!
+
   key :_id, String
   key :title, String
   key :body, String

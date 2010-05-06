@@ -49,11 +49,16 @@
                 = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
                 = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "quick-vote-button")
 
-      %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
-      .tag-list
-        -question.tags.each do |tag|
-          %span.tag{:class => "tag_#{h(tag)}"}
-            = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
+      -cache("question_on_index_#{question.id}") do
+        %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
+        .tag-list
+          -if question.tags.empty? && logged_in? && (current_user.can_modify?(@question) || current_user.can_retag_others_questions_on?(current_group))
+            %span.retag
+              = link_to t('questions.show.retag'), retag_question_path(question), :id => 'retag', :class => "important"
+          -question.tags.each do |tag|
+            %span.tag{:class => "tag_#{h(tag)}"}
+              = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
+
       .owner-data
         = link_to h(owner.login), user_path(owner)
         %span.reputation
@@ -65,15 +70,16 @@
             wiki
     .clear
 -else
-  %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}
-    .stats
-      .box.answers{:class => question.accepted ? "accepted" : "" }
-        .counter
-          =format_number(question.answers_count)
-        -if !local_assigns[:lite]
-          .text
-            =t(:answers, :scope => "activerecord.attributes.question")
-    .summary
-      %h3
-        = link_to title, question_path(question)
-    .clear
+  -cache("mini_question_on_index_#{question.id}") do
+    %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}
+      .stats
+        .box.answers{:class => question.accepted ? "accepted" : "" }
+          .counter
+            =format_number(question.answers_count)
+          -if !local_assigns[:lite]
+            .text
+              =t(:answers, :scope => "activerecord.attributes.question")
+      .summary
+        %h3
+          = link_to title, question_path(question)
+      .clear

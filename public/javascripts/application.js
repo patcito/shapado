@@ -2,6 +2,11 @@ $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
   setupWysiwygEditor();
+
+  $("form").submit(function() {
+    window.onbeforeunload = null;
+  });
+
   $('.confirm-domain').submit(function(){
       var bool = confirm($(this).attr('data-confirm'));
       if(bool==false) return false;
@@ -104,7 +109,16 @@ function setupWysiwygEditor() {
   if(!editor || editor.length == 0)
     return;
 
-  editor.wysiwyg();
+  editor.wysiwyg({
+    events: {
+      click: function(e) {
+        if(!window.onbeforeunload) {
+          //I18n.on_leave_page
+          window.onbeforeunload = function() {return I18n.on_leave_page;};
+        }
+      }
+    }
+  });
 }
 
 function setupEditor() {

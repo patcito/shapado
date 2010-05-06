@@ -1,26 +1,42 @@
 .vote_box
   display: block
 
+  padding: 5px 0px
   font-size: 24px
   text-align: center
   vertical-align: middle
-  margin: 5px 1%
-  padding: 2px 4px
 
   .votes_average
     display: block
     font-weight: bold
-    font-size: 30px
-    color: #666
+    font-size: 32px
+    line-height: 0.9em
+    color: #222
+
+    padding: 0
+    margin: 0
 
   button
     cursor: pointer
+    border: 0px
+    padding: 0px
+    width: 100%
+
+    &.arrow
+      height: 18px
+
+      &.vote_up
+        img:hover
+          border-bottom: 1px solid #f00
+      &.vote_down
+        img:hover
+          border-top: 1px solid #f00
+
 
   .arrow
     border: 0px
     background: transparent
     display: block
-    padding: 5px 2px
 
   a
     font-size: 25px

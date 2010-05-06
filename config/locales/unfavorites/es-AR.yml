@@ -1,0 +1,10 @@
+es-AR:
+  unfavorites:
+    create:
+      unauthenticated: "necesitas tener una cuenta para remover favoritos"
+      success:         "la pregunta ha sido removida de tus favoritas"
+
+  activerecord:
+    models:
+      favorites: favorites
+      favorite: favorite

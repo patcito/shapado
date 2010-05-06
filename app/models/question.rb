@@ -26,6 +26,7 @@ class Question
   key :banned, Boolean, :default => false
   key :accepted, Boolean, :default => false
   key :closed, Boolean, :default => false
+  key :closed_at, Time
 
   key :answered_with_id, String
   belongs_to :answered_with, :class_name => "Answer"
@@ -65,11 +66,10 @@ class Question
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
 
-  validates_length_of       :title,    :within => 5..100
+  validates_length_of       :title,    :within => 5..100, :message => lambda { I18n.t("questions.model.messages.title_too_long") }
   validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
-  validates_true_for :tags, :logic => lambda { !tags.empty? && tags.size <= 6},
-                     :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6
-                                          I18n.t("questions.model.messages.empty_tags") if tags.empty? }
+  validates_true_for :tags, :logic => lambda { tags.size <= 6},
+                     :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6 }
 
   versionable_keys :title, :body, :tags
   filterable_keys :title, :body
@@ -90,9 +90,7 @@ class Question
     if t.kind_of?(String)
       t = t.downcase.split(",").join(" ").split(" ")
     end
-    t = t.collect do |tag|
-      tag.gsub("#", "sharp").gsub(".", "dot").gsub("www", "w3")
-    end
+
     self[:tags] = t
   end
 

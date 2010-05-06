@@ -1,0 +1,22 @@
+-form_tag ban_path do
+  %table.table
+    %tr
+      %th
+      %th
+        =t(:flags, :scope => "activerecord.models")
+      %th
+        =t(:title, :scope => "activerecord.attributes.question")
+      %th
+        =t(:body, :scope => "activerecord.attributes.answer")
+    -@answers.each do |answer|
+      %tr
+        %th
+          = check_box_tag "answer_ids[]", answer.id
+        %td
+          = render :partial => "flags/list", :locals=> {:flaggeable => answer}
+        %td
+          = link_to h(answer.question.title), question_path(answer.question)+"##{answer.id}"
+        %td
+          = truncate(h(answer.body), :length => 100)
+  = will_paginate @answers, :param_name => "answers_page"
+  = submit_tag "ban"

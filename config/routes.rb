@@ -25,10 +25,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :badges
   map.resources :pages, :member => {:css => :get, :js => :get}
   map.resources :announcements, :collection => {:hide => :any }
+  map.resources :imports, :collection => {:send_confirmation => :post}
 
 
   def build_questions_routes(router, options ={})
     router.with_options(options) do |route|
+      route.se_url "/questions/:id/:slug", :controller => "questions", :action => "show", :id => /\d+/,
+ :conditions => { :method => :get }
       route.resources :questions, :collection => {:tags => :get,
                                                   :tags_for_autocomplete => :get,
                                                   :unanswered => :get,
@@ -58,7 +61,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
 
-  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index
+  map.connect 'questions/tags/:tags', :controller => :questions, :action => :index,:requirements => {:tags => /\S+/}
   map.connect 'questions/unanswered/tags/:tags', :controller => :questions, :action => :unanswered
 
   build_questions_routes(map)

@@ -2,26 +2,29 @@ es-AR:
   pages:
     title: fixme
     index:
-      title: Lista de paginas
-      create_page: crear una nueva pagina
+      title: Lista de páginas
+      create_page: crear una nueva página
       written_in: escrita en {{language}}
     edit:
-      title: Editando pagina
+      title: Editando página
     create:
-      success: 'La pagina ha sido creada con exito.'
+      success: 'La página ha sido creada con exito.'
     update:
-      success: 'La pagina ha sido actualizada con exito.'
+      success: 'La página ha sido actualizada con exito.'
     new:
-      title: nueva pagina
+      title: nueva página
     form:
-      title_tip: "Titulo de la pagina, utiliza eso para hacer una referencia a esta pagina. Por ejemplo: [[FAQ|leer este faq]]"
-      language_tip: idioma de la pagina
+      title_tip: "Titulo de la página, utiliza eso para hacer una referencia a esta página. Por ejemplo: [[FAQ|leer este faq]]"
+      language_tip: idioma de la página
     actions:
       title: Acciones
-      create_page: "Crear una nueva pagina"
-      edit_page: "Editar pagina"
+      create_page: "Crear una nueva página"
+      edit_page: "Editar página"
 
   activerecord:
+    models:
+      page: página
+      pages: páginas
     attributes:
       page:
         js: javascript

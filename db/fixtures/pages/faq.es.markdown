@@ -1,42 +1,65 @@
-# Preguntas Frecuentes (FAQ)
-
-## Que típo de preguntas puedo hacer aquí?
-** Preguntas referentes a %site_name%!** Tu pregunta debe ser:
-
-* especifíca y detallada
-* escrita simple y claramentente
-* de interes para alguna persona
-
-... asi sera bienvenidad. Ninguna pregunta es muy trivial o de principiante y puede ser acerca de  **%site_name%**.
+#Preguntas Frecuentes#
 
 
-Antes de preguntar, busca en las preguntas para ver si tu pregunta ya ha sido propuesta y dei pronto resuelta. Si realizaste una pregunta antes formulada, no hay problema, esta sera almacenada, tal vez algun usuario adjunte los links de las preguntas similares y ayuden a futuros visitantes.
+##Sobre que debo preguntar?##
 
-Tambien esta permitido preguntar y resolver tu pregunta, pero actua como si estubieras en [Jeopardy](http://es.wikipedia.org/wiki/Jeopardy "Jeopardy"): frases en forma de preguntas.
 
-## Que preguntas no debo formular aquí?
-**Evita hacer preguntas subjetivas, argumentativas o que requieran una larga discucion.** Esto no es un foro o similar, este es un lugar para preguntar y contestar!
+Tus preguntas deben ser sobre %site_name%, por supuesto! asegurate que tu pregunta:
 
-## Se amable.
-**Trata a los demás como quieras que te traten a tí.** Todos estamos para aprender, se tolerante con los que no saben todo lo que tu sabes. Tener un poco de sentido del humor no esta mal.
 
-## Se honesto.
-Sobre todo se honesto. Si tu información es incorrecta, tu votación bajara. Has com entarios indicando especificamente que esta mal. Trata de mejorar - Edita y mejora la informacion proveyendo respuestas rapidas, contundentes y superiores
+* objetiva, así los otros usuarios pueden contestarte lo mas preciso que puedan.
 
-## Que es la reputación?
-Los sitios %site% funcionan por tí. Si quieres ayudar un sitio debe tener tu reputacion, la cual indica **que tanto confia la comunidad de %site% en tí.** La reputación no se da, se gana segun el criterio de otros usuarios que saben de lo que tu estas hablando.
+* clara y consiza, para evitar confusión.
 
-Así funciona: Si haces una buena pregunta o das una respuesta útil, esta sera votada positivamente por tus compañeros y tu obtendras **10** puntos de reputación. Si tu posteas algo fuera del topico o incorrecto perderas  **2** puntos de reputación. La reputación ganada por día será de máximo **200** puntos.
+* relevante
 
-De acuerdo con su reputacion en %site% usted podra realizar las siguientes actividades:
 
-> 50  comentar  
-> 100 voto negativo  
-> 250 abrir y cerrar preguntas propias  
-> 500 re-etiquetar preguntas  
-> 750 editar preguntas wiki  
-> 2000  editar cualquier respuesta  
-> 3000  abrir y cerrar preguntas  
-> 5000  eliminar cualquier comentario  
-> 10000 eliminar cualquier pregunta y respuesta, y agregar otras tareas de moderación  
+##Que tipo de preguntas debo evitar?##
 
+* Trata de evitar preguntas provocativas, formuladas de forma subjetivas.
+
+* No hagas afirmaciones en tus preguntas
+
+
+Por ejemplo: Obama esta tratando de extraer aceite sobre nuestras costas y sera un desastre ambiental, que podemos hacer sobre eso?
+
+
+En lugar de eso: sacar aceite de nuestras costas es necesario?, cuales son los peligros para el medio ambiente? que podemos hacer?
+
+
+Se un internauta modelo:
+
+Se honesto, colaborador, manten el sentido del humor y humildad (esta bien equivocarse) y si encuentras a alguien que se ha equivocado expliquele porque en un comentario, vota las preguntas o respuestas negativamente y trata de editarlos para mejorarlos.
+
+
+##Como funciona la reputación?##
+
+La meta de la reputación es crear seguridad entre los usuarios y premiar nuestros mejores usuarios. Un usuario que es muy colaborador con la comunidad ganara mas puntos de reputación y tendrá mas poder. Sin embargo, ganar reputación no es un fin, solo trata de ser lo mejor posible y los puntos de reputación estarán garantizados.
+
+
+**Mas precisamente, así es como funciona:**
+
+
+Si tu pregunta o respuesta es apreciada por otros usuarios, ellos votaran positivamente y tu ganaras puntos de reputación. Si ellos do les gusta tu pregunta o respuesta, ellos la votaran negativamente y perderás puntos de reputación. Mientras ganas puntos, seras capaz de hacer mas cosas dentro de la plataforma.
+Aquí hay una no muy exhaustiva lista de acciones y puntos:
+
+
+* 5 puntos: Puedes hacer comentarios
+
+* 15 puntos: Puedes votar positivamente
+
+* 15 puntos: Puedes reportar preguntas o respuestas.
+
+* 100 puntos: Votar negativamente (cuesta un punto de reputación), editar preguntas de otros usuarios.
+
+* 250 puntos: Puedes votar para cerrar o re-abrir tus preguntas
+
+* 500 puntos: Puedes re-etiquetar preguntas
+
+* 2000 puntos: Editar preguntas o respuestas de otros usuarios
+
+* 3000 puntos: Votar para cerrar o reabrir cualquier pregunta
+
+* 10000 puntos: Borrar preguntas cerradas, acceder a paginas de moderación.
+
+Los usuarios que alcanzan 10000 puntos o mas de reputación tienen casi los mismos permisos de los administradores del sitio. Esto es porque %site_name% es una plataforma participativa y sigue el ejemplo wikipedia donde los usuarios mantienen el sitio. %site_name% te pertenece!

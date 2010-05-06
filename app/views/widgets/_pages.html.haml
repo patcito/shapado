@@ -1,0 +1,14 @@
+%h3
+  =t(".title")
+.content
+  %ul.list
+    -widget.recent_pages(current_group).each do |page|
+      %li
+        =link_to h(page.title), page_path(page)
+  .more
+    -if logged_in? && current_user.mod_of?(current_group)
+      =link_to t("scaffold.new", :model => t("activerecord.models.page")), new_page_path
+      |
+      =link_to t("scaffold.more"), pages_path
+    .clear
+.clear

@@ -259,6 +259,7 @@ Time.zone.now ? 1 : 0)
 
   def on_activity(activity, group)
     if activity == :login
+      self.last_logged_at ||= Time.now
       if !self.last_logged_at.today?
         self.collection.update({:_id => self._id},
                                {:$set => {:last_logged_at => Time.zone.now.utc}},
@@ -284,7 +285,7 @@ Time.zone.now ? 1 : 0)
                             {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
                             {:upsert => true})
           Magent.push("actors.judge", :on_activity, group.id, self.id)
-        elsif !last_day.utc.today?
+        elsif !last_day.utc.today? && (last_day.utc != Time.now.utc.yesterday)
           Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
           reset_activity_days!(group)
         end
@@ -435,6 +436,10 @@ Time.zone.now ? 1 : 0)
     self.location       = fb_session.user.hometown_location.try(:city)
 
     self.save
+  end
+
+  def has_flagged?(flaggeable)
+    flaggeable.flags.first(:user_id=>self.id)
   end
 
   protected

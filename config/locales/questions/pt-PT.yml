@@ -23,6 +23,7 @@ pt-PT:
       related_questions: related questions
       flags: reportado como
       flag: reportar
+      flagged_as: flagged as
       viewed: visto
       to_answer_question: to answer this question
       watch_tooltip: "watch this question"
@@ -106,6 +107,7 @@ pt-PT:
         too_short: "seems too short. Please use more words than {{count}} to be more specific."
         too_many_tags: Sorry, you can only enter 6 tags maximum.
         empty_tags: Sorry, you need to use at least one tag.
+        title_too_long: "The title is too long. it should not contain more than 100 characters"
 
   activerecord:
     models:
@@ -122,5 +124,7 @@ pt-PT:
         votes: votos
         language: idioma
         created_at: asked
+        updated_at: updated
+        updated_by: updated by
         closed: closed
 

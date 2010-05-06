@@ -19,9 +19,11 @@ AppConfig = OpenStruct.new(options[RAILS_ENV])
 # check config
 begin
   known_options = YAML.load_file(RAILS_ROOT+"/config/shapado.sample.yml")[RAILS_ENV]
-  known_options.each do |k, v|
-    if AppConfig.send(k).nil?
-      $stderr.puts "Warning: missing config option: '#{k}'"
+  if known_options
+    known_options.each do |k, v|
+      if AppConfig.send(k).nil?
+        $stderr.puts "Warning: missing config option: '#{k}'"
+      end
     end
   end
 end

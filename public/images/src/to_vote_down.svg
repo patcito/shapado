@@ -14,9 +14,9 @@
    height="20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47pre4 r22446"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="to_vote_down.svg"
-   inkscape:export-filename="/home/kuadrosx/Projects/ricodigo/shapado/public/images/to_vote_down.png"
+   inkscape:export-filename="/home/krawek/Proyectos/shapado/public/images/to_vote_down.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -24,11 +24,11 @@
     <linearGradient
        id="linearGradient3608">
       <stop
-         style="stop-color:#ececec;stop-opacity:1"
+         style="stop-color:#808080;stop-opacity:1"
          offset="0"
          id="stop3610" />
       <stop
-         style="stop-color:#b3b3b3;stop-opacity:0.6901961;"
+         style="stop-color:#666666;stop-opacity:1"
          offset="1"
          id="stop3612" />
     </linearGradient>
@@ -68,15 +68,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="-11.004129"
+     inkscape:cx="12.678571"
      inkscape:cy="9.5000219"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1358"
-     inkscape:window-height="672"
+     inkscape:window-width="1272"
+     inkscape:window-height="708"
      inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:window-y="32"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -110,7 +110,7 @@
        inkscape:rounded="0.04"
        inkscape:randomized="0.072"
        d="m 4.1495808,6.3085415 c -0.2532449,0.26455 -8.8307634,-1.747683 -8.89477,-2.1028428 -0.064007,-0.3551599 5.9135164,-6.3297703 6.2613319,-6.225218 0.3478155,0.1045523 2.8866831,8.0635108 2.6334381,8.3280608 z"
-       transform="matrix(3.180277,0.57915269,0.75577463,-2.437057,9.3977402,1042.7337)"
+       transform="matrix(3.180277,0.6111512,0.75577463,-2.5717057,9.3977402,1042.4133)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>

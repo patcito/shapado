@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include Subdomains
+  include Sweepers
 
   if AppConfig.exception_notification['activate']
     include ExceptionNotifiable
@@ -222,6 +223,12 @@ class ApplicationController < ActionController::Base
 
   def moderator_required
     unless current_user.mod_of?(current_group)
+      access_denied
+    end
+  end
+
+  def owner_required
+    unless current_user.owner_of?(current_group)
       access_denied
     end
   end

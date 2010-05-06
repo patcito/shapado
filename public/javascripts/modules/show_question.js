@@ -8,7 +8,7 @@ $(document).ready(function() {
   $("form.vote_form button").live("click", function(event) {
     var btn_name = $(this).attr("name")
     var form = $(this).parents("form");
-    $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
+    $.post(form.attr("action")+'.js', form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.success){
         form.find(".votes_average").text(data.average)
         if(data.vote_state == "deleted") {
@@ -47,6 +47,8 @@ $(document).ready(function() {
       type: "POST",
       success: function(data, textStatus, XMLHttpRequest) {
                   if(data.success) {
+                    window.onbeforeunload = null;
+
                     var answer = $(data.html)
                     answer.find("form.commentForm").hide();
                     answers.append(answer)
@@ -82,6 +84,8 @@ $(document).ready(function() {
              type: "POST",
              success: function(data, textStatus, XMLHttpRequest) {
                           if(data.success) {
+                            window.onbeforeunload = null;
+
                             var comment = $(data.html)
                             comments.append(comment)
                             highlightEffect(comment)
@@ -196,10 +200,10 @@ $(document).ready(function() {
     var link = $(this);
     var user = link.attr('data-author');
     var isreply = link.hasClass('reply');
-    var controls = link.parents(".controls");
+    var controls = link.parents(".body-col");
     var form = controls.parents(".answer").find("form.nestedAnswerForm");
     if(form.length == 0) // if comment is child of a question
-      form = controls.parents("#question-body-col").find("form.commentForm");
+      form = link.parents("#question-body-col").find("form.commentForm");
     var textarea = form.find('textarea');
     var isHidden = !form.is(':visible');
     controls.find(".forms form.flag_form").slideUp();
@@ -209,25 +213,27 @@ $(document).ready(function() {
       textarea.text('@'+user+' ')
     } else { textarea.text('').focus();  }
 
-    var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    var viewportHeight = window.innerHeight ? window.innerHeight : $(window).height();
+    var top = form.offset().top - viewportHeight/2;
+
+    $('html,body').animate({scrollTop: top}, 1000);
     return false;
   });
 
   $("#add_comment_link").live('click', function() {
     var link = $(this);
-    var user = link.attr('data-author');
     var isreply = link.hasClass('reply');
-    var controls = link.parents(".controls");
-    var form = controls.parents("#question-body-col").find("form.commentForm");
+    var form = $("#add_comment_form");
     var textarea = form.find('textarea');
     $("#request_close_question_form").slideUp();
     $("#question_flag_form").slideUp();
     $("#close_question_form").slideUp();
     $("#add_comment_form").slideDown();
     textarea.text('').focus();
-    var top = textarea.offset().top;
-    $('html,body').animate({scrollTop: top-50}, 1000);
+    var viewportHeight = window.innerHeight ? window.innerHeight : $(window).height();
+    var top = form.offset().top - viewportHeight/2;
+
+    $('html,body').animate({scrollTop: top}, 1000);
     return false;
   });
 
@@ -305,71 +311,5 @@ $(document).ready(function() {
       }
     return false;
   });
-
-$('#retag').live('click',function(){
-  var link = $(this);
-  $.ajax({
-    dataType: "json",
-    type: "GET",
-    url : link.attr('href'),
-    extraParams : { 'format' : 'js'},
-    success: function(data) {
-      if(data.success){
-        link.parents(".tag-list").find('.tag').hide();
-        $('.retag').hide();
-        link.parents(".tag-list").prepend(data.html);
-        initAutocomplete();
-      } else {
-          showMessage(data.message, "error");
-          if(data.status == "unauthenticate") {
-            window.location="/users/login"
-          }
-      }
-    }
-  });
-  return false;
-})
-
-$('.retag-form').live('submit', function() {
-    form = $(this);
-    var button = form.find('input[type=submit]');
-    button.attr('disabled', true)
-    $.ajax({url: form.attr("action")+'.js',
-            dataType: "json",
-            type: "POST",
-            data: form.serialize()+"&format=js",
-            success: function(data, textStatus) {
-                if(data.success) {
-                    var tags = $.map(data.tags, function(n){
-                        return '<span class="tag"><a rel="tag" href="/questions/tags/'+n+'">'+n+'</a></span>'
-                    })
-                    form.parents('.tag-list').find('.tag').remove();
-                    form.before(tags.join(''));
-                    form.remove();
-                    $('.retag').show();
-                    showMessage(data.message, "notice")
-                } else {
-                    showMessage(data.message, "error")
-                    if(data.status == "unauthenticate") {
-                        window.location="/users/login"
-                    }
-                }
-            },
-            error: manageAjaxError,
-            complete: function(XMLHttpRequest, textStatus) {
-                button.attr('disabled', false)
-            }
-});
-           return false
-        });
-
-  $('.cancel-retag').live('click', function(){
-      var link = $(this);
-      link.parents('.tag-list').find('.tag').show();
-      link.parents('.tag-list').find('.retag').show();
-      link.parents('.tag-list').find('form').remove();
-      return false;
-  })
-
 });
 

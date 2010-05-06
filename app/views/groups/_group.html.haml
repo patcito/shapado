@@ -1,0 +1,25 @@
+%li.item
+  .logo
+    -if group.has_logo?
+      = link_to image_tag(logo_group_path(group), :style => "height: 64px; width: 128px; vertical-align: top"), domain_url(:custom => group.domain)
+    -else
+      = image_tag("default_logo.png", :style => "height: 64px; width: 128px; vertical-align: top", :class => "group_logo")
+  .summary
+    %h3
+      = link_to h(group.name), domain_url(:custom => group.domain)
+    .markdown.group_description
+      = auto_link(markdown(group.description))
+  .actions
+    = link_to t(".about"), group, :class => "button"
+    -if logged_in?
+      -if current_user.can_modify?(group) || current_user.owner_of?(group)
+        = link_to t(".admin", :default => :"shared.topbar.admin"), domain_url(:controller => "manage", :action => "properties", :custom => group.domain)
+        -if group.state == "active"
+          = link_to t(".close"), close_group_path(group), :class => "cancel"
+      -if current_user.admin?
+        = link_to t("scaffold.destroy"), group, :confirm => 'Are you sure?', :method => :delete
+        - if group.has_custom_ads
+          = link_to t(".disallow_ads"), disallow_custom_ads_group_path(group)
+        -else
+          = link_to t(".allow_ads"), allow_custom_ads_group_path(group)
+  .clear

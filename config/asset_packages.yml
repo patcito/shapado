@@ -16,9 +16,11 @@ javascripts:
   - modules/sessions
   - modules/index_question
   - modules/show_question
+  - modules/retag
   - modules/new_question
   - modules/index_welcome
   - modules/show_user
+  - modules/index_group
   - modules/index_user
   - modules/tags_question
   - modules/members

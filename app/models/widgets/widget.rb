@@ -13,7 +13,7 @@ class Widget
   validates_uniqueness_of :name, :scope => :group_id
 
   def self.types
-    types = %w[UsersWidget BadgesWidget TopUsersWidget]
+    types = %w[UsersWidget BadgesWidget TopUsersWidget TagCloudWidget PagesWidget]
     if AppConfig.enable_groups
       types += %w[GroupsWidget TopGroupsWidget]
     end

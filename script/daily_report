@@ -11,7 +11,7 @@ Group.find_each(:state => "active") do |group|
 
   @report = Report.new(group, Time.now.utc.at_beginning_of_week)
 
-  User.find_each(:_id => {:$in => owners}, "notification_opts.reports" => "1") do |user|
+  User.find_each(:_id => {:$in => owners}, "notification_opts.reports" => true) do |user|
     next if user.email.blank?
 
     Notifier.deliver_report(user, @report)

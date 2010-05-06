@@ -22,6 +22,9 @@ en:
       edit_page: "Edit page"
 
   activerecord:
+    models:
+      page: page
+      pages: pages
     attributes:
       page:
         js: javascript

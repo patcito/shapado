@@ -23,6 +23,7 @@ fr:
       related_questions: questions en relation
       flag: reporter un abus
       flags: reporter en tant que
+      flagged_as: reporté comme
       viewed: lues
       to_answer_question: "pour répondre à cette question"
       watch_tooltip: "suivre cette question"
@@ -106,6 +107,7 @@ fr:
         too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"
         too_many_tags: Désolé, vous ne pouvez utiliser que 6 tags maximum.
         empty_tags: Désolé, vous devez utiliser au moins un tag.
+        title_too_long: "The title is too long. it should not contain more than 100 characters"
 
   activerecord:
     models:
@@ -122,4 +124,6 @@ fr:
         votes: votes
         language: langue
         created_at: posée
+        updated_at: updated
+        updated_by: updated by
         closed: fermée

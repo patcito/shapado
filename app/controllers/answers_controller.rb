@@ -72,6 +72,8 @@ class AnswersController < ApplicationController
       @answer.user = current_user
       respond_to do |format|
         if @question && @answer.save
+          sweep_question(@question)
+
           Question.update_last_target(@question.id, @answer)
 
           current_user.stats.add_answer_tags(*@question.tags)
@@ -134,6 +136,8 @@ class AnswersController < ApplicationController
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save
+        sweep_question(@question)
+
         Question.update_last_target(@question.id, @answer)
 
         flash[:notice] = t(:flash_notice, :scope => "answers.update")
@@ -150,15 +154,18 @@ class AnswersController < ApplicationController
 
   def destroy
     @question = @answer.question
-    @answer.user.update_reputation(:delete_answer, current_group)
+    if @answer.user_id == current_user.id
+      @answer.user.update_reputation(:delete_answer, current_group)
+    end
     @answer.destroy
     @question.answer_removed!
+    sweep_question(@question)
 
     Magent.push("actors.judge", :on_destroy_answer, current_user.id, @answer.attributes)
 
     respond_to do |format|
       format.html { redirect_to(question_path(@question)) }
-      format.json  { head :ok }
+      format.json { head :ok }
     end
   end
 
@@ -176,14 +183,18 @@ class AnswersController < ApplicationController
   protected
   def check_permissions
     @answer = Answer.find(params[:id])
-    if @answer.nil? || !current_user.can_modify?(@answer)
-      flash[:error] = t("global.permission_denied")
+    p current_user.mod_of?(@answer.group)
+    if !@answer.nil?
+      unless (current_user.can_modify?(@answer) || current_user.mod_of?(@answer.group))
+        flash[:error] = t("global.permission_denied")
+        redirect_to question_path(@answer.question)
+      end
+    else
       redirect_to questions_path
     end
   end
 
-
-    def check_update_permissions
+  def check_update_permissions
     @answer = Answer.find(params[:id])
 
     allow_update = true

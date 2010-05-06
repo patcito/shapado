@@ -1,0 +1,10 @@
+fr:
+  unfavorites:
+    create:
+      unauthenticated: "vous devez créer un compte pour retirer des favorits"
+      success:         "la question a été retiré de vos favorits"
+
+  activerecord:
+    models:
+      favorites: favorites
+      favorite: favorite

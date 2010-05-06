@@ -1,7 +1,7 @@
-@import compass/utilities/tables.sass
-@import compass/utilities/lists/horizontal_list.sass
-@import compass/utilities/general/tag_cloud.sass
-@import fancy_buttons.sass
+@import "compass/utilities/tables"
+@import "compass/utilities/lists/horizontal-list"
+@import "compass/utilities/general/tag-cloud"
+@import "fancy_buttons"
 
 @import mixins
 
@@ -24,6 +24,7 @@
 @import jwysiwyg
 
 @import announcements
+@import tag_cloud
 
 #messages li
   list-style: none
@@ -85,6 +86,12 @@ a.missing_page
 
 #retag
   margin-left: 1em
+  font-size: 16px
+  font-weight: bold
+
+a.important
+  color: #CE0000 !important
+  font-weight: bold
 
 .comment-form
   width: 91%
@@ -97,3 +104,12 @@ a.missing_page
 #default_footer
   margin: 10px 0
   font-size: 9px
+
+.widget
+  &#badges, &#users
+    white-space: nowrap
+
+.add_answer_comment_link
+  font-weight: bold
+  font-size: 14px
+  margin-left: 1.2em
