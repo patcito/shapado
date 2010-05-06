@@ -54,7 +54,7 @@ en:
       user: user
     attributes:
       user:
-        login: login
+        login: username
         email: email
         name: real name
         current_password: current password
