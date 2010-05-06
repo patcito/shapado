@@ -67,7 +67,7 @@ class Question
   validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
 
   validates_length_of       :title,    :within => 5..100, :message => lambda { I18n.t("questions.model.messages.title_too_long") }
-  validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true
+  validates_length_of       :body,     :minimum => 5, :allow_blank => true, :allow_nil => true, :if => lambda { |q| !q.disable_limits? }
   validates_true_for :tags, :logic => lambda { tags.size <= 6},
                      :message => lambda { I18n.t("questions.model.messages.too_many_tags") if tags.size > 6 }
 
@@ -239,24 +239,32 @@ class Question
     watchers.include?(user._id)
   end
 
-  def check_useful
-    if !self.title.blank? && (self.title.split.count < 4)
-      self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 4))
-    end
+  def disable_limits?
+    self.user.present? && self.user.can_post_whithout_limits_on?(self.group)
+  end
 
-    if !self.body.blank? && (self.body.split.count < 4)
-      self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 3))
+  def check_useful
+    unless disable_limits?
+      if !self.title.blank? && (self.title.split.count < 4)
+        self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 4))
+      end
+
+      if !self.body.blank? && (self.body.split.count < 4)
+        self.errors.add(:body, I18n.t("questions.model.messages.too_short", :count => 3))
+      end
     end
   end
 
   def disallow_spam
-    last_question = Question.first( :user_id => self.user_id,
-                                    :group_id => self.group_id,
-                                    :order => "created_at desc")
+    unless disable_limits?
+      last_question = Question.first( :user_id => self.user_id,
+                                      :group_id => self.group_id,
+                                      :order => "created_at desc")
 
-    valid = ((last_question.nil?) || (Time.now - last_question.created_at) > 20)
-    if !valid
-      self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
+      valid = (last_question.nil? || (new? && (Time.now - last_question.created_at) > 20))
+      if !valid
+        self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
+      end
     end
   end
 
