@@ -108,9 +108,9 @@ fr:
     model:
       messages:
         too_short: "parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific"
-        too_many_tags: Désolé, vous ne pouvez utiliser que 6 tags maximum.
-        empty_tags: Désolé, vous devez utiliser au moins un tag.
-        title_too_long: "The title is too long. it should not contain more than 100 characters"
+        too_many_tags: désolé, vous ne pouvez utiliser que 6 tags maximum.
+        empty_tags: désolé, vous devez utiliser au moins un tag.
+        title_too_long: "le titre est trop long, il ne doit pas contenir plus de 100 caractères"
 
   activerecord:
     models:
@@ -127,6 +127,6 @@ fr:
         votes: votes
         language: langue
         created_at: posée
-        updated_at: updated
-        updated_by: updated by
+        updated_at: actualisée
+        updated_by: actualisée par
         closed: fermée

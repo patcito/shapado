@@ -15,4 +15,4 @@ fr:
       back_to_question: retourner à la question
     model:
       attributes:
-        message: summary
+        message: résumé
