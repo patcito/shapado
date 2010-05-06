@@ -88,7 +88,7 @@ class Question
 
   def tags=(t)
     if t.kind_of?(String)
-      t = t.downcase.split(",").join(" ").split(" ")
+      t = t.downcase.split(",").join(" ").split(" ").uniq
     end
 
     self[:tags] = t
