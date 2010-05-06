@@ -20,6 +20,11 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
+    if request.query_string =~ /tags=/
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     set_page_title(t("questions.index.title"))
     conditions = scoped_conditions(:banned => false)
 
@@ -108,6 +113,11 @@ class QuestionsController < ApplicationController
   end
 
   def unanswered
+    if request.query_string =~ /tags=/
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     set_page_title(t("questions.unanswered.title"))
     conditions = scoped_conditions({:answered_with_id => nil, :banned => false, :closed => false})
 
