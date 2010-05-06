@@ -593,7 +593,7 @@ class QuestionsController < ApplicationController
     if @question.nil?
       redirect_to questions_path
     elsif !(current_user.can_modify?(@question) ||
-           (params[:action] != 'destroy' && current_user.mod_of?(@question.group)) ||
+           (params[:action] != 'destroy' && @question.can_be_deleted_by?(current_user)) ||
            current_user.owner_of?(@question.group))
       flash[:error] = t("global.permission_denied")
       redirect_to question_path(@question)

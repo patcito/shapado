@@ -276,6 +276,10 @@ class Question
     user.can_vote_to_close_any_question_on?(self.group)
   end
 
+  def can_be_deleted_by?(user)
+    (self.user_id == user.id) || (self.closed && user.can_delete_closed_questions_on?(self.group))
+  end
+
   def close_reason
     self.close_requests.detect{ |rq| rq.id == close_reason_id }
   end
