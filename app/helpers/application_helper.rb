@@ -75,7 +75,7 @@ module ApplicationHelper
 
   def tag_cloud(tags = [], options = {})
     if tags.empty?
-      tags = Question.tag_cloud({:group_id => current_group.id}.
+      tags = Question.tag_cloud({:group_id => current_group.id, :banned => false}.
                         merge(language_conditions.merge(language_conditions)))
     end
 
