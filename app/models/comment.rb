@@ -37,16 +37,8 @@ class Comment
     end
   end
 
-  def disallow_spam
-    eq_comment = Comment.first({ :body => self.body,
-                                  :commentable_id => self.commentable_id
-                                })
-
-
-    valid = (eq_comment.nil? || eq_comment.id == self.id)
-    if !valid
-      self.errors.add(:body, "Your comment looks like spam.")
-    end
+  def can_be_deleted_by?(user)
+    (self.user_id == user.id && user.can_delete_own_comments_on?(self.group)) || user.mod_of?(self.group)
   end
 
   def find_question
@@ -77,6 +69,19 @@ class Comment
   def find_recipient
     if self.commentable.respond_to?(:user)
       self.commentable.user
+    end
+  end
+
+  protected
+  def disallow_spam
+    eq_comment = Comment.first({ :body => self.body,
+                                  :commentable_id => self.commentable_id
+                                })
+
+
+    valid = (eq_comment.nil? || eq_comment.id == self.id)
+    if !valid
+      self.errors.add(:body, "Your comment looks like spam.")
     end
   end
 end

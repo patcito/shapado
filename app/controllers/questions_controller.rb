@@ -594,7 +594,7 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     elsif !(current_user.can_modify?(@question) ||
            (params[:action] != 'destroy' && @question.can_be_deleted_by?(current_user)) ||
-           current_user.owner_of?(@question.group))
+           current_user.owner_of?(@question.group)) # FIXME: refactor
       flash[:error] = t("global.permission_denied")
       redirect_to question_path(@question)
     end
