@@ -34,6 +34,7 @@ en:
       asked_on: "asked on"
       last_activity: last activity
       retag: retag
+      unauthenticated_retag: you need an account to retag questions
       request_closing: request closing
       request_closing_details: request to close this question
       close: close
@@ -43,6 +44,8 @@ en:
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
+    retag:
+      title: retag
     answer:
       pick_answer: pick as solution
       unset_answer: unset as solution?

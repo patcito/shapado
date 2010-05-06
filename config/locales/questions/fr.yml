@@ -33,6 +33,7 @@ fr:
       unfavorite_tooltip: "retirer cette question de vos favorites"
       asked_on: "posée dans"
       last_activity: dernières activités
+      unauthenticated_retag: vous devez avoir un compte utilisateur por modifier les tags
       retag: modifier les tags
       request_closing: demande de fermeture
       request_closing_details: demander de fermer cette question
@@ -43,6 +44,8 @@ fr:
       answers_title:
         one: "{{count}} réponse"
         other: "{{count}} réponses"
+    retag:
+      title: modifier les tags
     answer:
       pick_answer: choisir comme solution
       unset_answer: annuler solution?
