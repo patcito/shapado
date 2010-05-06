@@ -20,7 +20,8 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    if request.query_string =~ /tags=/
+    if params[:language] || request.query_string =~ /tags=/
+      params.delete(:language)
       head :moved_permanently, :location => url_for(params)
       return
     end
@@ -113,7 +114,8 @@ class QuestionsController < ApplicationController
   end
 
   def unanswered
-    if request.query_string =~ /tags=/
+    if params[:language] || request.query_string =~ /tags=/
+      params.delete(:language)
       head :moved_permanently, :location => url_for(params)
       return
     end
@@ -178,6 +180,12 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
+    if params[:language]
+      params.delete(:language)
+      head :moved_permanently, :location => url_for(params)
+      return
+    end
+
     @tag_cloud = Question.tag_cloud(:_id => @question.id)
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
