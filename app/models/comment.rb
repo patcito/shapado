@@ -38,7 +38,12 @@ class Comment
   end
 
   def can_be_deleted_by?(user)
-    (self.user_id == user.id && user.can_delete_own_comments_on?(self.group)) || user.mod_of?(self.group)
+    ok = (self.user_id == user.id && user.can_delete_own_comments_on?(self.group)) || user.mod_of?(self.group)
+    if !ok && user.can_delete_comments_on_own_questions_on?(self.group) && (q = self.find_question)
+      ok = (q.user_id == user.id)
+    end
+
+    ok
   end
 
   def find_question

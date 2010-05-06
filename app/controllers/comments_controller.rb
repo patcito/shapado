@@ -109,7 +109,7 @@ class CommentsController < ApplicationController
       valid = current_user.can_modify?(@comment)
     end
 
-    if !current_user.owner_of?(current_group) || !valid
+    if !valid
       respond_to do |format|
         format.html do
           flash[:error] = t("global.permission_denied")
