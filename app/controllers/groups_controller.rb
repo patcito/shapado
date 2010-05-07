@@ -87,7 +87,7 @@ class GroupsController < ApplicationController
     @group.owner = current_user
     @group.state = "active"
 
-    @group.widgets << TopGroupsWidget.create(:position => 0)
+    @group.widgets << TagCloudWidget.create(:position => 0)
     @group.widgets << TopUsersWidget.create(:position => 1)
     @group.widgets << BadgesWidget.create(:position => 2)
 
