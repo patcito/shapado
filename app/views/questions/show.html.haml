@@ -113,7 +113,7 @@
           = link_to t('scaffold.edit'), edit_question_path(@question), :class => "button"
         -if @question.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_path(@question)
-        -if @question.can_be_deleted_by?(current_user)
+        -if (current_user.can_modify?(@question) || current_user.owner_of?(@question.group))
           = link_to t("scaffold.destroy"), question_path(@question.id), :confirm => "are you sure?", :method => :delete
         -if current_user.mod_of?(@question.group)
           = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
@@ -182,6 +182,7 @@
     .clear
 
 -content_for :sidebar do
+
   -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))
     -unless @question.flags.count == 0
       .block
@@ -233,18 +234,26 @@
         = t(".last_activity")
       .data.updated{:title => @question.activity_at, :class => "relativetime"}
         = t("time.ago", :time => time_ago_in_words(@question.activity_at))
+
   -if AppConfig.enable_sharing
     .block
       %h3
         = t(".share")
       .content
-        %ul.navigation
-          %li
-            = render :partial => "twitter"
+        %ul.share
           %li
             = render :partial => "identica"
           %li
+            = render :partial => "shapado"
+          %li
+            = render :partial => "twitter"
+          %li
             = render :partial => "facebook"
+          %li
+            = render :partial => "linkedin"
+          %li
+            = render :partial => "think"
+      .clear
 
   -related_questions = Question.related_questions(@question, :language => find_languages)
   -if !related_questions.empty?
