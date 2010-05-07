@@ -2,13 +2,13 @@ fr:
   admin:
     manage:
       content:
-        title: custom content
-        question_prompt: question prompt
-        question_help: question help
+        title: contenu personalisé
+        question_prompt: titre du formulaire question
+        question_help: aide aux questions
         head: en-tête
         footer: pied de page
-        top_bar: top bar
-        top_bar_tip: enter one link per line
+        top_bar: barre supérieure
+        top_bar_tip: saisissez un lien par ligne
       properties:
         general:
           title: propriétés du groupe

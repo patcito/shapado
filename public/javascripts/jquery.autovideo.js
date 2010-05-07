@@ -1,44 +1,46 @@
 (function($) {
   $.fn.autoVideo = function(){
       this.each(function(){
-          var url = new String($(this).attr('href'));
-          var video = false;
-          var playButton = '<img src="/images/play_button.png" class="play_button">';
-          if (video = url.match(/http:\/\/www\.dailymotion\.com.*\/video\/(.+)_*/)){
-              var thumb = $('<div class="thumb"><img src="http://www.dailymotion.com/thumbnail/160x120/video/'+video[1]+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"dailymotion", "data-videoid": video[1]}).append(playButton);
-              $(this).after(thumb)
-              thumb.one("click", function(){showPlayer(thumb)});
-              $(this).remove();
-          } else if (video = url.match(/http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?/)){
-              var thumb = $('<div class="thumb"><img src="http://i.ytimg.com/vi/'+video[2]+'/1.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"youtube", "data-videoid": video[2]}).append(playButton);
-        $(this).after(thumb)
-              thumb.one("click", function(){showPlayer(thumb)});
-              $(this).remove();
-          } else if (video = url.match(/^(https?:\/\/[^\/]*metacafe.com\/)watch\/([\w-]+)\/([^\/]*)/i)){
-              var thumb = $('<div class="thumb"><img src="http://www.metacafe.com/thumb/'+video[2]+'.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"metacafe", "data-videoid": video[2]+'/'+video[3]}).append(playButton);
-              $(this).after(thumb)
-              thumb.one("click", function(){showPlayer(thumb)});
-              $(this).remove();
-          } else if (video = url.match(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/)){
-              var thisurl = this;
-              $.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+video[2]+'&callback=?', function(data){
-                  var thumb = $('<div class="thumb"><img src="'+data.thumbnail_url+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"vimeo", "data-videoid": video[2], "data-html": data.html}).append(playButton);
-                  $(thisurl).after(thumb);
-                  thumb.one("click", function(){showPlayer(thumb)});
-                  $(thisurl).remove();
-              })
+          var isInCode = $(this).parents('code').length
+          if(!isInCode){
+            var url = new String($(this).attr('href'));
+            var video = false;
+            var playButton = '<img src="/images/play_button.png" class="play_button">';
+            if (video = url.match(/http:\/\/www\.dailymotion\.com.*\/video\/(.+)_*/)){
+                var thumb = $('<div class="thumb"><img src="http://www.dailymotion.com/thumbnail/160x120/video/'+video[1]+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"dailymotion", "data-videoid": video[1]}).append(playButton);
+                $(this).after(thumb)
+                thumb.one("click", function(){showPlayer(thumb)});
+                $(this).remove();
+            } else if (video = url.match(/http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?/)){
+                var thumb = $('<div class="thumb"><img src="http://i.ytimg.com/vi/'+video[2]+'/1.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"youtube", "data-videoid": video[2]}).append(playButton);
+          $(this).after(thumb)
+                thumb.one("click", function(){showPlayer(thumb)});
+                $(this).remove();
+            } else if (video = url.match(/^(https?:\/\/[^\/]*metacafe.com\/)watch\/([\w-]+)\/([^\/]*)/i)){
+                var thumb = $('<div class="thumb"><img src="http://www.metacafe.com/thumb/'+video[2]+'.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"metacafe", "data-videoid": video[2]+'/'+video[3]}).append(playButton);
+                $(this).after(thumb)
+                thumb.one("click", function(){showPlayer(thumb)});
+                $(this).remove();
+            } else if (video = url.match(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/)){
+                var thisurl = this;
+                $.getJSON('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'+video[2]+'&callback=?', function(data){
+                    var thumb = $('<div class="thumb"><img src="'+data.thumbnail_url+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"vimeo", "data-videoid": video[2], "data-html": data.html}).append(playButton);
+                    $(thisurl).after(thumb);
+                    thumb.one("click", function(){showPlayer(thumb)});
+                    $(thisurl).remove();
+                })
 
-          } else if (video = url.match(/^(https?:\/\/[^\/]*blip.tv\/)file\/([\w-]+).*/i)){
-              var thisurl = this;
-              $.getJSON('http://blip.tv/file?id='+video[2]+'&skin=json&version=2&callback=?', function(data){
-                  var thumb = $('<div class="thumb"><img src="'+data[0].thumbnailUrl+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"bliptv", "data-videoid": video[2], "data-html": data[0].embedCode}).append(playButton);
-                  $(thisurl).after(thumb);
-                  thumb.one("click", function(){showPlayer(thumb)});
-                  $(thisurl).remove();
-              })
+            } else if (video = url.match(/^(https?:\/\/[^\/]*blip.tv\/)file\/([\w-]+).*/i)){
+                var thisurl = this;
+                $.getJSON('http://blip.tv/file?id='+video[2]+'&skin=json&version=2&callback=?', function(data){
+                    var thumb = $('<div class="thumb"><img src="'+data[0].thumbnailUrl+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"bliptv", "data-videoid": video[2], "data-html": data[0].embedCode}).append(playButton);
+                    $(thisurl).after(thumb);
+                    thumb.one("click", function(){showPlayer(thumb)});
+                    $(thisurl).remove();
+                })
 
-          }
-
+            }
+        }
       })
 
           function showPlayer(thumb){

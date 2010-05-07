@@ -593,8 +593,8 @@ class QuestionsController < ApplicationController
     if @question.nil?
       redirect_to questions_path
     elsif !(current_user.can_modify?(@question) ||
-           (params[:action] != 'destroy' && current_user.mod_of?(@question.group)) ||
-           current_user.owner_of?(@question.group))
+           (params[:action] != 'destroy' && @question.can_be_deleted_by?(current_user)) ||
+           current_user.owner_of?(@question.group)) # FIXME: refactor
       flash[:error] = t("global.permission_denied")
       redirect_to question_path(@question)
     end
@@ -653,13 +653,17 @@ class QuestionsController < ApplicationController
 
   def check_retag_permissions
     @question = Question.find_by_slug_or_id(params[:id])
-    unless current_user.can_retag_others_questions_on?(current_group) ||  current_user.can_modify?(@question)
+    unless logged_in? && (current_user.can_retag_others_questions_on?(current_group) ||  current_user.can_modify?(@question))
       reputation = @question.group.reputation_constrains["retag_others_questions"]
-      flash[:error] = I18n.t("users.messages.errors.reputation_needed",
-                                    :min_reputation => reputation,
-                                    :action => I18n.t("users.actions.retag_others_questions"))
+      if !logged_in?
+        flash[:error] = t("questions.show.unauthenticated_retag")
+      else
+        flash[:error] = I18n.t("users.messages.errors.reputation_needed",
+                               :min_reputation => reputation,
+                               :action => I18n.t("users.actions.retag_others_questions"))
+      end
       respond_to do |format|
-        format.html {render :retag}
+        format.html {redirect_to @question}
         format.js {
           render(:json => {:success => false,
                    :message => flash[:error] }.to_json)

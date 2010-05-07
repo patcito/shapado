@@ -146,7 +146,7 @@ module AuthenticatedSystem
     if registration["nickname"].blank? || @user
       if google_id
         login = registration["nickname"]+"_gid"
-      elsif
+      elsif yahoo_id
         login = registration["nickname"]+"_yid"
       else
         o =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten

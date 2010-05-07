@@ -32,7 +32,7 @@ class Answer < Comment
   filterable_keys :body
 
   validate :disallow_spam
-  validate :check_unique_answer, :if => lambda { |a| !a.group.forum }
+  validate :check_unique_answer, :if => lambda { |a| (!a.group.forum && !a.disable_limits?) }
 
   def check_unique_answer
     check_answer = Answer.first(:question_id => self.question_id,
@@ -98,21 +98,27 @@ class Answer < Comment
     Maruku.new(self.body).to_html
   end
 
+  def disable_limits?
+    self.user.present? && self.user.can_post_whithout_limits_on?(self.group)
+  end
+
   def disallow_spam
-    eq_answer = Answer.first({:body => self.body,
-                                :question_id => self.question_id,
-                                :group_id => self.group_id
-                              })
+    unless disable_limits?
+      eq_answer = Answer.first({:body => self.body,
+                                  :question_id => self.question_id,
+                                  :group_id => self.group_id
+                                })
 
-    last_answer  = Answer.first(:user_id => self.user_id,
-                                 :question_id => self.question_id,
-                                 :group_id => self.group_id,
-                                 :order => "created_at desc")
+      last_answer  = Answer.first(:user_id => self.user_id,
+                                   :question_id => self.question_id,
+                                   :group_id => self.group_id,
+                                   :order => "created_at desc")
 
-    valid = (eq_answer.nil? || eq_answer.id == self.id) &&
-            ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
-    if !valid
-      self.errors.add(:body, "Your answer looks like spam.")
+      valid = (eq_answer.nil? || eq_answer.id == self.id) &&
+              ((last_answer.nil?) || (new? && (Time.now - last_answer.created_at) > 20))
+      if !valid
+        self.errors.add(:body, "Your answer looks like spam.")
+      end
     end
   end
 

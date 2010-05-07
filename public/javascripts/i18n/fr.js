@@ -1,3 +1,3 @@
 var I18n = {
-  on_leave_page: "You may lost your changes"
+  on_leave_page: "Vous pourriez perdre des modifications faits à cette page"
 };

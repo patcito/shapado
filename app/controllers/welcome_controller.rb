@@ -29,8 +29,22 @@ class WelcomeController < ApplicationController
   end
 
   def send_feedback
-    if params[:result].blank? ||
-       (params[:result].to_i != (params[:n1].to_i * params[:n2].to_i))
+    ok = !params[:result].blank? &&
+         (params[:result].to_i == (params[:n1].to_i * params[:n2].to_i))
+
+    if ok && params[:feedback][:title].split(" ").size < 3
+      links = words = 0
+      params[:feedback][:description].split("http").map do |w|
+        words += w.split(" ").size
+        links += 1
+      end
+
+      if links > 0 && words > 3
+        ok = ((words-links) > 2)
+      end
+    end
+
+    if !ok
       flash[:error] = I18n.t("welcome.feedback.captcha_error")
       flash[:error] += ". Domo arigato, Mr. Roboto. "
       redirect_to feedback_path(:feedback => params[:feedback])

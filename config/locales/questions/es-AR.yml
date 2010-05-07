@@ -33,6 +33,7 @@ es-AR:
       unfavorite_tooltip: "remover esta pregunta de tus favoritas"
       asked_on: "preguntado en"
       last_activity: última actividad
+      unauthenticated_retag: se necesita una cuenta para re-etiquetar
       retag: re-etiquetar
       request_closing: pedir cierre
       request_closing_details: pide cerrar esta pregunta
@@ -43,6 +44,8 @@ es-AR:
       answers_title:
         one: "{{count}} respuesta"
         other: "{{count}} respuestas"
+    retag:
+      title: re-etiquetar
     answer:
       pick_answer: escoger como solución
       unset_answer: "¿quitar como solución?"

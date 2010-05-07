@@ -101,12 +101,22 @@ class CommentsController < ApplicationController
   protected
   def check_permissions
     @comment = Comment.find!(params[:id])
-    if !(current_user.owner_of?(current_group) || current_user.can_modify?(@comment))
-      format.html do
-        flash[:error] = t("global.permission_denied")
-        redirect_to params[:source]
+
+    valid = false
+    if params[:action] == "destroy"
+      valid = @comment.can_be_deleted_by?(current_user)
+    else
+      valid = current_user.can_modify?(@comment)
+    end
+
+    if !valid
+      respond_to do |format|
+        format.html do
+          flash[:error] = t("global.permission_denied")
+          redirect_to params[:source] || questions_path
+        end
+        format.json { render :json => {:message => t("global.permission_denied")}, :status => :unprocessable_entity }
       end
-      format.json { render :json => {:message => t("global.permission_denied")}, :status => :unprocessable_entity }
     end
   end
 end

@@ -1,9 +1,9 @@
 fr:
   close_requests:
     index:
-      title: list of close requests
+      title: liste des demandes de fermeture
     form:
-     dupe: double
+     dupe: doublon
      ot: hors sujet
      no_question: N'est pas une question
      not_relevant: N'est pas pertinente
