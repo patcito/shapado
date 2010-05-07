@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     include SuperExceptionNotifier
     include ExceptionNotifierHelper
 
+    self.exception_notifiable_silent_exceptions = []
+    self.exception_notifiable_silent_exceptions << SuperExceptionNotifier::CustomExceptionClasses::PageNotFound
+    self.exception_notifiable_silent_exceptions << ActionController::InvalidAuthenticityToken
+
     local_addresses.clear
 
     exception_data :additional_data
