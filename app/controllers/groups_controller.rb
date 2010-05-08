@@ -48,6 +48,9 @@ class GroupsController < ApplicationController
     else
       @group = current_group
     end
+
+    raise PageNotFound if @group.nil?
+
     @comments = @group.comments.paginate(:page => params[:page].to_i,
                                          :per_page => params[:per_page] || 10 )
 
