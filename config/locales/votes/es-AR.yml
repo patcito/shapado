@@ -7,10 +7,14 @@ es-AR:
     destroy:
       flash_notice: "tu voto ha sido revocado exitosamente."
     control:
-      to_vote_up: "click para aprovar"
-      to_vote_down: "click para desaprovar"
-      have_voted_up: "click para deshacer tu aprobación"
-      have_voted_down: "click para deshacer tu desaprobación"
+      to_vote_up: "clic para aprobar"
+      to_vote_down: "clic para desaprobar"
+      have_voted_up: "clic para deshacer tu aprobación"
+      have_voted_down: "clic para deshacer tu desaprobación"
+    model:
+      messages:
+        closed_question: "usted no puede votar en cualquier entrada que pertenezcan a una pregunta cerrada"
+        vote_down_comment: "los comentarios no pueden ser votados negativamente"
   activerecord:
     models:
       votes: votos

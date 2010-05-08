@@ -30,6 +30,7 @@
     == #{t("comments.shared.said")}:
     .markdown
       = shapado_auto_link(markdown(comment.body), :link_users => true)
+
     .controls
       .actions
         - if logged_in? && current_user != comment.user

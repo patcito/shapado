@@ -71,13 +71,31 @@ class Vote
 
   def check_voteable
     valid = true
-    if self.voteable_type == "Question"
-      valid = !self.voteable.closed
-    elsif self.voteable_type == "Answer"
-      valid = !self.voteable.question.closed
+    error_message = ""
+    case self.voteable_type
+      when "Question"
+        valid = !self.voteable.closed
+        error_message = I18n.t("votes.model.messages.closed_question")
+      when "Answer"
+        valid = !self.voteable.question.closed
+        error_message = I18n.t("votes.model.messages.closed_question")
+      when "Comment"
+        valid = self.value > 0
+        unless valid
+          error_message = I18n.t("votes.model.messages.vote_down_comment")
+        else
+          case self.voteable.commentable_type
+            when "Question"
+              valid = !self.voteable.commentable.closed
+              error_message = I18n.t("votes.model.messages.closed_question")
+            when "Answer"
+              valid = !self.voteable.commentable.question.closed
+              error_message = I18n.t("votes.model.messages.closed_question")
+          end
+        end
     end
     if !valid
-      self.errors.add(:question, I18n.t("votes.model.messages.closed_question"))
+      self.errors.add(self.voteable_type.tableize.singularize, error_message)
     end
     return valid
   end
