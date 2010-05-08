@@ -2,7 +2,8 @@ $(document).ready(function() {
   $('.auto-link').autoVideo();
   setupEditor();
   setupWysiwygEditor();
-
+  $("form.nestedAnswerForm").hide();
+  $("#add_comment_form").hide();
   $("form").submit(function() {
     window.onbeforeunload = null;
   });
@@ -59,6 +60,19 @@ $(document).ready(function() {
     $.post($(this).attr("href"), "format=js");
     return false;
   });
+
+  $('textarea').live('keyup',function(){
+      var value = $(this).val();
+      var id = $(this).attr('id');
+      addToLocalStorage(location.href, id, value);
+  })
+
+  initStorageMethods();
+  fillTextareas();
+
+  $('#ask_question').submit(function(){
+    removeFromLocalStorage(location.href, 'question_title')
+  })
 })
 
 function initAutocomplete(){
@@ -112,13 +126,82 @@ function setupWysiwygEditor() {
   editor.wysiwyg({
     events: {
       click: function(e) {
-        if(!window.onbeforeunload) {
+        if(!window.onbeforeunload && !hasStorage()) {
           //I18n.on_leave_page
           window.onbeforeunload = function() {return I18n.on_leave_page;};
         }
       }
     }
   });
+}
+
+function hasStorage(){
+  return window.localStorage;
+}
+
+function initStorageMethods(){
+  if(hasStorage()){
+    Storage.prototype.setObject = function(key, value) {
+        this.setItem(key, JSON.stringify(value));
+    }
+
+    Storage.prototype.getObject = function(key) {
+        return JSON.parse(this.getItem(key));
+    }
+  }
+}
+
+function fillTextareas(){
+   if(hasStorage() && localStorage[location.href]!=null && localStorage[location.href]!='null'){
+       localStorageArr = localStorage.getObject(location.href);
+       $.each(localStorageArr, function(i, n){
+           $("#"+n.id).val(n.value);
+           $("#"+n.id).parents('form.commentForm').show();
+           $("#"+n.id).parents('form.nestedAnswerForm').show();
+       })
+    }
+}
+
+function addToLocalStorage(key, id, value){
+  if(hasStorage()){
+    var ls = localStorage[key];
+    if($.trim(value)!=""){
+      if(ls == null || ls == "null" || typeof(ls)=="undefined"){
+          localStorage.setObject(key,[{id: id, value: value}]);
+      } else {
+          var storageArr = localStorage.getObject(key);
+          var isIn = false;
+          storageArr = $.map(storageArr, function(n, i){
+              if(n.id == id){
+                n.value = value;
+                isIn = true;
+              }
+          return n;
+        })
+      if(!isIn)
+        storageArr = $.merge(storageArr, [{id: id, value: value}]);
+      localStorage.setObject(key, storageArr);
+    }
+    } else {removeFromLocalStorage(key, id);}
+  }
+}
+
+function removeFromLocalStorage(key, id){
+  if(hasStorage()){
+    var ls = localStorage[key];
+    if(typeof(ls)=='string'){
+      var storageArr = localStorage.getObject(key);
+
+      storageArr = $.map(storageArr, function(n, i){
+          if(n.id == id){
+            return null;
+          } else {
+              return n;
+          }
+      })
+      localStorage.setObject(key, storageArr);
+    }
+  }
 }
 
 function setupEditor() {
@@ -131,7 +214,7 @@ function setupEditor() {
 
   var converter_callback = function(value) {
     $('#markdown_preview')[0].innerHTML = converter.makeHtml(value);
-
+    //addToLocalStorage(location.href, 'markdown_editor', value);
     $('#markdown_preview.markdown p code').addClass("prettyprint");
     if(timer_id)
       clearTimeout(timer_id);
