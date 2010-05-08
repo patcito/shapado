@@ -12,9 +12,13 @@ Disallow: /users/login
 Disallow: /users/login/
 Disallow: /users/logout
 Disallow: /users/logout/
+Disallow: /register
+Disallow: /register/
+Disallow: /signup
+Disallow: /signup/
 
-Disallow: /*flag/
-Disallow: /*flag
+Disallow: /*flags/
+Disallow: /*flags
 Disallow: /votes
 Disallow: /votes/
 Disallow: /settings
