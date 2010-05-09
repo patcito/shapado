@@ -11,10 +11,11 @@ namespace :fixdb do
 
   desc "initialize values to become comments as voteable"
   task :comment_voteable => :environment do
-    Comment.collection.update({:_type => "Comment"}, {:$set => {:votes_count => 0}},
-                                                        :upsert => true,
-                                                        :safe => true,
-                                                        :multi => true)
+    Comment.collection.update({:_type => "Comment"}, {:$set => {:votes_count => 0,
+                                                                :votes_average => 0}},
+                               :upsert => true,
+                               :safe => true,
+                               :multi => true)
   end
 end
 
