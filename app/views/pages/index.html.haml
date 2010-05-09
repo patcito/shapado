@@ -5,7 +5,7 @@
       == (#{@pages.total_entries})
 
 -content_for :sidebar do
-  -if logged_in? && current_user.mod_of?(current_group)
+  -if logged_in? && current_user.can_edit_wiki_post_on?(current_group)
     .block
       %h3
         =t("pages.actions.title")

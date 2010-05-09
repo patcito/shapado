@@ -11,8 +11,9 @@
 
   .group.navform
     .right
-      = f.label :wiki, "Wiki", :class => "radio"
-      = f.check_box :wiki, :class => "checkbox"
+      -if current_user.mod_of?(current_group)
+        = f.label :wiki, "Wiki", :class => "radio"
+        = f.check_box :wiki, :class => "checkbox"
 
     = f.submit t('scaffold.create')
     = t("global.or")
