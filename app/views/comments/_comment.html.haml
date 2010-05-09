@@ -24,12 +24,27 @@
 -else
   .comment
     %a{:name => comment.id}
-    %strong
-      = t("time.ago", :time => time_ago_in_words(comment.created_at))
-    =link_to comment.user.login, user_path(comment.user)
-    == #{t("comments.shared.said")}:
-    .markdown
+    .comment-info
+      %strong
+        = t("time.ago", :time => time_ago_in_words(comment.created_at))
+      =link_to comment.user.login, user_path(comment.user)
+      == #{t("comments.shared.said")}:
+    .comment-content.markdown
       = shapado_auto_link(markdown(comment.body), :link_users => true)
+    .comment-votes
+      .votes_average
+        &= comment.votes_average
+      -if logged_in? && current_user.can_vote_up_on?(current_group) && current_user != comment.user
+        -form_tag votes_path, :class => "vote-up-comment-form" do
+          .fields
+            = hidden_field_tag "voteable_type", comment.class.name, :id => "voteable_type_#{comment.id}"
+            = hidden_field_tag "voteable_id", comment.id, :id =>  "voteable_id_#{comment.id}"
+            = hidden_field_tag "source", request.path, :id =>  "source_#{comment.id}"
+            -if vote = current_user.vote_on(comment)
+              = image_submit_tag("dialog-ok-apply.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "comment-voteup-button")
+            -else
+              = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "comment-voteup-button")
+
     .controls
       .actions
         - if logged_in? && current_user != comment.user

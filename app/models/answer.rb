@@ -6,8 +6,6 @@ class Answer < Comment
 
   key :body, String, :required => true
   key :language, String, :default => "en"
-  key :votes_count, Integer, :default => 0
-  key :votes_average, Integer, :default => 0
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
   key :wiki, Boolean, :default => false
@@ -20,7 +18,6 @@ class Answer < Comment
   key :question_id, String
   belongs_to :question
 
-  has_many :votes, :as => "voteable", :dependent => :destroy
   has_many :flags, :as => "flaggeable", :dependent => :destroy
 
   has_many :comments, :foreign_key => "commentable_id", :class_name => "Comment", :order => "created_at asc", :dependent => :destroy
@@ -44,34 +41,20 @@ class Answer < Comment
     end
   end
 
-  def add_vote!(v, voter)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1,
-                                                          :votes_average => v}},
-                                                         :upsert => true)
-
+  def on_add_vote(v, voter)
     if v > 0
       self.user.update_reputation(:answer_receives_up_vote, self.group)
       voter.on_activity(:vote_up_answer, self.group)
-      self.user.upvote!(self.group)
     else
       self.user.update_reputation(:answer_receives_down_vote, self.group)
       voter.on_activity(:vote_down_answer, self.group)
-      self.user.downvote!(self.group)
     end
   end
 
-  def remove_vote!(v, voter)
-    self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1,
-                                                          :votes_average => (-v)}},
-                                                         :upsert => true)
-
+  def on_remove_vote(v, voter)
     if v > 0
-      self.user.update_reputation(:answer_undo_up_vote, self.group)
-      voter.on_activity(:undo_vote_up_answer, self.group)
       self.user.upvote!(self.group, -1)
     else
-      self.user.update_reputation(:answer_undo_down_vote, self.group)
-      voter.on_activity(:undo_vote_down_answer, self.group)
       self.user.downvote!(self.group, -1)
     end
   end
