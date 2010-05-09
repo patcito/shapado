@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:custom_html", "fixdb:reindex", "fixdb:faq"] do
+task :fixall => [:environment, "fixdb:custom_html", "fixdb:reindex", "fixdb:faq", "fixdb:comment_voteable"] do
 end
 
 namespace :fixdb do
@@ -52,5 +52,12 @@ namespace :fixdb do
       end
     end
   end
-end
 
+  desc "initialize values to become comments as voteable"
+  task :comment_voteable => :environment do
+    Comment.collection.update({:_type => "Comment"}, {:$set => {:votes_count => 0}},
+                                                        :upsert => true,
+                                                        :safe => true,
+                                                        :multi => true)
+  end
+end
