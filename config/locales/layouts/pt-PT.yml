@@ -10,6 +10,7 @@ pt-PT:
       users: utilizadores
       badges: badges
       unanswered: sem resposta
+      pages: pages
       logout: desligar sessão
       logged: ligado como {{login}}
       search: search

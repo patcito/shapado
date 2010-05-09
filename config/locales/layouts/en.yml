@@ -10,6 +10,7 @@ en:
       users: users
       badges: badges
       unanswered: unanswered
+      pages: pages
       logout: logout
       logged: logged in as {{login}}
       search: search
