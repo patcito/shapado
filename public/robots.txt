@@ -4,14 +4,38 @@
 # User-Agent: *
 # Disallow: /
 # robots.txt
+
 User-agent: *
-Disallow: /questions/new/
-Disallow: /*flag/
-Disallow: /votes/
-Disallow: /questions/new
-Disallow: /*flag
+Allow: /
+
+Disallow: /users/login
+Disallow: /users/login/
+Disallow: /users/logout
+Disallow: /users/logout/
+Disallow: /register
+Disallow: /register/
+Disallow: /signup
+Disallow: /signup/
+
+Disallow: /*flags/
+Disallow: /*flags
 Disallow: /votes
+Disallow: /votes/
 Disallow: /settings
+Disallow: /settings/
 Disallow: /feedback
 Disallow: /feedback/
 
+Disallow: /questions/new
+Disallow: /questions/new/
+Disallow: /questions/unanswered
+Disallow: /questions/unanswered/
+Disallow: /questions/tags
+Disallow: /questions/tags/
+Disallow: /badges
+Disallow: /badges/
+Disallow: /search
+Disallow: /search/
+
+User-agent: Mediapartners-Google
+Disallow:

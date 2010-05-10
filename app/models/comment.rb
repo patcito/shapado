@@ -1,6 +1,7 @@
 
 class Comment
   include MongoMapper::Document
+  include Support::Voteable
 
   key :_id, String
   key :_type, String
@@ -15,7 +16,6 @@ class Comment
 
   key :group_id, String, :index => true
   belongs_to :group
-
 
   key :commentable_id, String
   key :commentable_type, String

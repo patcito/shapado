@@ -11,7 +11,10 @@ en:
       to_vote_down: "click to vote down"
       have_voted_up: "click to undo your up vote"
       have_voted_down: "click to undo your down vote"
-
+    model:
+      messages:
+        closed_question: "you cannot vote on any posts belonging to a closed question"
+        vote_down_comment: "comments cannot be voted down"
   activerecord:
     models:
       votes: votes

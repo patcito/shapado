@@ -45,6 +45,8 @@ class AnswersController < ApplicationController
 
   def show
     @answer = Answer.find(params[:id])
+    raise PageNotFound if @answer.nil?
+
     @question = @answer.question
     respond_to do |format|
       format.html

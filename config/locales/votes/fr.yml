@@ -11,6 +11,10 @@ fr:
       have_voted_down: "cliquez pour annuler votre désapprouvement"
     destroy:
       flash_notice: "votre vote a été annulé avec succès"
+    model:
+      messages:
+        closed_question: "vous ne pouvez pas voter sur les entées qui appartienent à une question fermée."
+        vote_down_comment: "comments cannot be voted down"
   activerecord:
     models:
       votes: votes

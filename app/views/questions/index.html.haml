@@ -14,11 +14,11 @@
     %li.newest
       = link_to t("questions.index.newest"), questions_path(:sort=>"newest"), :title => t("questions.index.newest_tooltip")
     %li.hot
-      = link_to t("questions.index.hot"), questions_path(:sort=>"hot"), :title => t("questions.index.hot_tooltip")
+      = link_to t("questions.index.hot"), questions_path(:sort=>"hot"), :title => t("questions.index.hot_tooltip"), :rel => "nofollow"
     %li.votes
-      = link_to t("questions.index.votes"), questions_path(:sort=>"votes"), :title =>  t("questions.index.votes_tooltip")
+      = link_to t("questions.index.votes"), questions_path(:sort=>"votes"), :title =>  t("questions.index.votes_tooltip"), :rel => "nofollow"
     %li.activity
-      = link_to t("questions.index.active"), questions_path(:sort=>"activity"), :title => t("questions.index.active_tooltip")
+      = link_to t("questions.index.active"), questions_path(:sort=>"activity"), :title => t("questions.index.active_tooltip"), :rel => "nofollow"
 
 
 -content_for :sidebar do

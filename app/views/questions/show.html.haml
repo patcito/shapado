@@ -157,9 +157,9 @@
       %li.newest
         = link_to t("questions.index.newest"), question_path(@question, :sort=>"newest", :anchor => "answers")
       %li.votes
-        = link_to t("questions.index.votes"), question_path(@question, :sort=>"votes", :anchor => "answers")
+        = link_to t("questions.index.votes"), question_path(@question, :sort=>"votes", :anchor => "answers"), :rel => "nofollow"
       %li.oldest
-        = link_to t("questions.index.oldest"), question_path(@question, :sort=>"oldest", :anchor => "answers")
+        = link_to t("questions.index.oldest"), question_path(@question, :sort=>"oldest", :anchor => "answers"), :rel => "nofollow"
     .clear
   .block
     -if @question.accepted

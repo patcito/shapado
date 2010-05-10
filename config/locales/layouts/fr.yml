@@ -10,6 +10,7 @@ fr:
       users: utilisateurs
       badges: insignes
       unanswered: sans réponses
+      pages: pages
       logout: se déconnecter
       logged: connecté {{login}}
       search: chercher

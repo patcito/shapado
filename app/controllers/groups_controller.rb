@@ -48,6 +48,9 @@ class GroupsController < ApplicationController
     else
       @group = current_group
     end
+
+    raise PageNotFound if @group.nil?
+
     @comments = @group.comments.paginate(:page => params[:page].to_i,
                                          :per_page => params[:per_page] || 10 )
 
@@ -113,7 +116,7 @@ class GroupsController < ApplicationController
 
     @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) #if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics
-    @group.safe_update(%w[custom_html], params[:group]) if @group.has_custom_html
+    @group.custom_html.update_attributes(params[:group][:custom_html] || {}) if @group.has_custom_html
 
     respond_to do |format|
       if @group.save

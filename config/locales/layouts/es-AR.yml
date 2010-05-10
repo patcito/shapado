@@ -10,6 +10,7 @@ es-AR:
       users: usuarios
       badges: insignias
       unanswered: sin contestar
+      pages: paginas
       logout: salir
       logged: conectado como {{login}}
       search: buscar
