@@ -116,13 +116,16 @@ module ApplicationHelper
       txt = sanitize(txt.to_s, :tags => %w[b h1 h2 h3 i img sup sub strong br hr ul li ol em table tr td pre code blockquote a span font strike s div u span], :attributes => %w[href src title alt style border])
     end
 
-    RDiscount.new(render_page_links(txt), :smart).to_html
+    RDiscount.new(render_page_links(txt, options), :smart).to_html
   end
 
-  def render_page_links(text)
-    text.gsub!(/\[\[([^\,\'\"]+)\]\]/) do |m|
+  def render_page_links(text, options = {})
+    group = options[:group]
+    group = current_group if group.nil?
+
+    text.gsub!(/\[\[([^\,\[\'\"]+)\]\]/) do |m|
       link = $1.split("|", 2)
-      page = Page.by_title(link.first, {:group_id => current_group.id, :select => [:title, :slug]})
+      page = Page.by_title(link.first, {:group_id => group.id, :select => [:title, :slug]})
 
 
       if page.present?
