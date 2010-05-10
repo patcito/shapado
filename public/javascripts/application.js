@@ -4,7 +4,9 @@ $(document).ready(function() {
   setupWysiwygEditor();
   $("form.nestedAnswerForm").hide();
   $("#add_comment_form").hide();
-  $("form").submit(function() {
+  $("form").live('submit', function() {
+    var textarea = $(this).find('textarea');
+    removeFromLocalStorage(location.href, textarea.attr('id'));
     window.onbeforeunload = null;
   });
 
@@ -70,9 +72,6 @@ $(document).ready(function() {
   initStorageMethods();
   fillTextareas();
 
-  $('#ask_question').submit(function(){
-    removeFromLocalStorage(location.href, 'question_title')
-  })
 })
 
 function initAutocomplete(){
