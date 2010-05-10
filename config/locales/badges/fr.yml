@@ -2,7 +2,7 @@ fr:
   badges:
     index:
       title: insignes
-      description: "Liste des insignes que vous pouvez gagner. Partager votre connaissance, gagner des insignes."
+      description: "Liste des insignes que vous pouvez gagner. Partagez votre connaissance, gagnez des insignes."
     show:
       title: insigne {{type}}
       description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
@@ -70,10 +70,10 @@ fr:
         name: commentateur
         description: Recevoir 100 votes positifs
       merit_medal:
-        name: "médaille de l'éffort"
+        name: "médaille de l'effort"
         description: recevoir 200 votes positifs
       effort_medal:
-        name: "Médaille de l'éffort"
+        name: "Médaille de l'effort"
         description: recevoir 100 votes positifs
       student:
         name: "Étudiant"
@@ -116,7 +116,7 @@ fr:
         description: Réponse votée positivement 100 fois
       peer_pressure:
         name: influence des pairs
-        description: A supprimé un poste avec un score de -3 ou moins
+        description: A supprimé un post avec un score de -3 ou moins
       enlightened:
         name: éclairé
         description: Première réponse acceptée avec au moins 10 votes positifs
@@ -133,17 +133,17 @@ fr:
         name: patrouille civile
         description: Premier rapport de poste
       self-learner:
-        name: self learner
-        description: Answered your own question with at least 3 up votes
+        name: autodidacte
+        description: A répondu à sa propre question avec un score de 3 ou plus
       scholar:
-        name: scholar
-        description: First accepted answer on your own question
+        name: érudit
+        description: Réponse acceptée à votre propre question
       autobiographer:
-        name: autobiographer
-        description: Completed all user profile fields
+        name: autobiographe
+        description: a complété tous ses champs utilisateurs
       organizer:
-        name: organizer
-        description: First retag
+        name: organisateur
+        description: premier retag
 
   activerecord:
     models:
