@@ -33,6 +33,8 @@
       .votes_average
         -if comment.votes_average > 0
           &= comment.votes_average
+        -else
+          &nbsp;
       -if logged_in? && current_user.can_vote_up_on?(current_group) && current_user != comment.user
         -form_tag votes_path, :class => "vote-up-comment-form" do
           .fields
