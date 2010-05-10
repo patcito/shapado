@@ -230,6 +230,10 @@ class Question
 
   def check_useful
     unless disable_limits?
+      if !self.title.blank? && self.title.gsub(/[^\x00-\x7F]/, "").size < 5
+        return
+      end
+
       if !self.title.blank? && (self.title.split.count < 4)
         self.errors.add(:title, I18n.t("questions.model.messages.too_short", :count => 4))
       end
