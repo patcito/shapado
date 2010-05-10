@@ -33,6 +33,27 @@ $(document).ready(function() {
     return false;
   });
 
+  $(".comment .comment-votes form.vote-up-comment-form input[name=vote_up]").live("click", function(event) {
+    var btn = $(this)
+    var form = $(this).parents("form");
+    btn.hide();
+    $.post(form.attr("action"), form.serialize()+"&"+btn.attr("name")+"=1", function(data){
+      if(data.success){
+        if(data.vote_state == "deleted") {
+          btn.attr("src", "/images/dialog-ok.png" )
+        } else {
+          btn.attr("src", "/images/dialog-ok-apply.png" )
+        }
+        btn.parents(".comment-votes").children(".votes_average").html(data.average);
+        showMessage(data.message, "notice")
+      } else {
+        showMessage(data.message, "error")
+      }
+      btn.show();
+    }, "json");
+    return false;
+  });
+
   $("form.mainAnswerForm .button").live("click", function(event) {
     var form = $(this).parents("form");
     var answers = $("#answers .block");
