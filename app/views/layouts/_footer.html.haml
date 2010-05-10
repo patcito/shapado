@@ -25,7 +25,6 @@
     #feedbackform.hide
       = render :partial => "welcome/feedback"
 
--unless current_group.isolate || current_group.private
-  #default_footer.center
-    == Powered by #{link_to 'Shapado', 'http://gitorious.org/shapado'} #{AppConfig.version} under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}
+#default_footer.center
+  == Powered by #{link_to 'Shapado', 'http://gitorious.org/shapado'} #{AppConfig.version} under the #{link_to 'GNU Affero General Public License','http://www.fsf.org/licensing/licenses/agpl-3.0.html'}
 
