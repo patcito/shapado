@@ -14,7 +14,12 @@ module QuestionsHelper
       when :identica
         url = "http://identi.ca/notice/new?status_textarea=#{microblogging_message(question)}"
       when :facebook
-        url = "http://www.facebook.com/sharer.php?u=#{microblogging_message(question)}&t=TEXTO"
+        if current_group.fb_button
+          url = %@<iframe src="http://www.facebook.com/plugins/like.php?href=http%253A%252F%252F#{question_path(question, :only_path =>false)}&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>@
+        else
+          fb_url = "http://www.facebook.com/sharer.php?u=#{question_path(question, :only_path =>false)}&t=#{question.title}"
+          url = %@#{image_tag('/images/hi16-app-facebook_microblog.png', :class => 'microblogging')} #{link_to("facebook", fb_url, :rel=>"nofollow external")}@
+        end
     end
     url
   end

@@ -54,3 +54,4 @@ pt-PT:
         logo: logo
         forum: allow more than one answer by user
         wysiwyg_editor: Enable user-friendly editor
+        fb_button: Enable Facebook Like button (not privacy friendly)
