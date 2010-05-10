@@ -54,6 +54,7 @@ $(document).ready(function() {
                     showMessage(data.message, "notice")
                     form.find("textarea").val("");
                     form.find("#markdown_preview").html("");
+                    $("#wysiwyg_editor").wysiwyg('clear');
                     removeFromLocalStorage(location.href, "markdown_editor");
                   } else {
                     showMessage(data.message, "error")
