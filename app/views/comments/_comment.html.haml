@@ -29,11 +29,10 @@
         = t("time.ago", :time => time_ago_in_words(comment.created_at))
       =link_to comment.user.login, user_path(comment.user)
       == #{t("comments.shared.said")}:
-    .comment-content.markdown
-      = shapado_auto_link(markdown(comment.body), :link_users => true)
     .comment-votes
       .votes_average
-        &= comment.votes_average
+        -if comment.votes_average > 0
+          &= comment.votes_average
       -if logged_in? && current_user.can_vote_up_on?(current_group) && current_user != comment.user
         -form_tag votes_path, :class => "vote-up-comment-form" do
           .fields
@@ -44,6 +43,8 @@
               = image_submit_tag("dialog-ok-apply.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "comment-voteup-button")
             -else
               = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "comment-voteup-button")
+    .comment-content.markdown
+      = shapado_auto_link(markdown(comment.body), :link_users => true)
 
     .controls
       .actions
