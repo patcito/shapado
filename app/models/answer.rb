@@ -86,7 +86,7 @@ class Answer < Comment
   end
 
   def disallow_spam
-    unless disable_limits?
+    if new? && !disable_limits?
       eq_answer = Answer.first({:body => self.body,
                                   :question_id => self.question_id,
                                   :group_id => self.group_id
@@ -98,7 +98,7 @@ class Answer < Comment
                                    :order => "created_at desc")
 
       valid = (eq_answer.nil? || eq_answer.id == self.id) &&
-              ((last_answer.nil?) || (new? && (Time.now - last_answer.created_at) > 20))
+              ((last_answer.nil?) || (Time.now - last_answer.created_at) > 20)
       if !valid
         self.errors.add(:body, "Your answer looks like spam.")
       end
