@@ -245,12 +245,12 @@ class Question
   end
 
   def disallow_spam
-    unless disable_limits?
+    if new? && !disable_limits?
       last_question = Question.first( :user_id => self.user_id,
                                       :group_id => self.group_id,
                                       :order => "created_at desc")
 
-      valid = (last_question.nil? || (new? && (Time.now - last_question.created_at) > 20))
+      valid = (last_question.nil? || (Time.now - last_question.created_at) > 20)
       if !valid
         self.errors.add(:body, "Your question looks like spam. you need to wait 20 senconds before posting another question.")
       end

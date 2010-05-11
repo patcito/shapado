@@ -34,7 +34,7 @@ $(document).ready(function() {
     var btn_name = $(this).attr("name");
     var form = $(this).parents("form");
     $.post(form.attr("action"), form.serialize()+"&"+btn_name+"=1", function(data){
-      if(data.status == "ok"){
+      if(data.success){
         if(data.vote_type == "vote_down") {
           form.html("<img src='/images/dialog-ok-apply.png'/>")
         } else {

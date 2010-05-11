@@ -28,8 +28,6 @@ class PagesController < ApplicationController
   def show
     @page = current_group.pages.by_slug(params[:id], :language => Page.current_language) || current_group.pages.by_slug(params[:id])
 
-    set_page_title(@page.title)
-
     respond_to do |format|
       format.html do
         if @page.nil? && params[:create]
@@ -40,6 +38,7 @@ class PagesController < ApplicationController
           @page = Page.new(:title => params[:title], :slug => params[:id])
           render :action => "new"
         else
+          set_page_title(@page.title)
           render
         end
       end

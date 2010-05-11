@@ -16,6 +16,8 @@ Disallow: /register
 Disallow: /register/
 Disallow: /signup
 Disallow: /signup/
+Disallow: /welcome
+Disallow: /welcome/
 
 Disallow: /*flags/
 Disallow: /*flags
