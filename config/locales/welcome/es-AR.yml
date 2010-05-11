@@ -49,5 +49,5 @@ es-AR:
     confirm_age:
       warning: "ATENCION: Esta pagina puede contener material explicito para adultos."
       notice: Usted solo deberia entrar a esta pagina si usted tiene 18 años o más de edad, o al menos la mayoria de edad en el lugar donde usted reside o desde donde entra a esta pagina.
-      under_18: "Soy mayor de edad"
-      over_18: "Soy menor de edad"
+      under_18: "Soy menor de edad"
+      over_18: "Soy mayor de edad"
