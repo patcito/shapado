@@ -142,7 +142,9 @@ module ApplicationHelper
         when 'site_name'
           current_group.name
         when 'current_user'
-          current_user.login
+          if logged_in?
+            current_user.login
+          end
         else
           m
       end
