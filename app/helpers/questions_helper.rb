@@ -35,7 +35,7 @@ module QuestionsHelper
         url = "http://linkedin.com/shareArticle?mini=true&url="+CGI.escape(question_url(question))+"&title=#{h(question.title)}&summary=#{h(question.body)}&source=#{current_group.name}"
 
       when :think
-        url = "http://beta.think.it:3000/thoughts/new?question[title]="+(question.title)+"&question[tags]=#{current_group.name},share&question[body]=#{h(question.body)}%20|%20[More...](#{h(question_path(question, :only_path =>false))})"
+        url = "http://thnik.it/thoughts/new?question[title]="+(question.title)+"&question[tags]=#{current_group.name},share&question[body]=#{h(question.body)}%20|%20[More...](#{h(question_path(question, :only_path =>false))})"
     end
     url
   end
