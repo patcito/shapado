@@ -26,6 +26,7 @@ $(document).ready(function() {
       } else {
         showMessage(data.message, "error")
         if(data.status == "unauthenticate") {
+          window.onbeforeunload = null;
           window.location="/users/login"
         }
       }
@@ -80,6 +81,7 @@ $(document).ready(function() {
                   } else {
                     showMessage(data.message, "error")
                     if(data.status == "unauthenticate") {
+                      window.onbeforeunload = null;
                       window.location="/users/login"
                     }
                   }
@@ -117,6 +119,7 @@ $(document).ready(function() {
                           } else {
                             showMessage(data.message, "error")
                             if(data.status == "unauthenticate") {
+                              window.onbeforeunload = null;
                               window.location="/users/login"
                             }
                           }
@@ -148,6 +151,7 @@ $(document).ready(function() {
         } else {
           showMessage(data.message, "error")
           if(data.status == "unauthenticate") {
+            window.onbeforeunload = null;
             window.location="/users/login"
           }
         }
@@ -198,6 +202,7 @@ $(document).ready(function() {
                               } else {
                                 showMessage(data.message, "error")
                                 if(data.status == "unauthenticate") {
+                                  window.onbeforeunload = null;
                                   window.location="/users/login"
                                 }
                               }
@@ -325,6 +330,7 @@ $(document).ready(function() {
           showMessage(data.message, "error");
 
           if(data.status == "unauthenticate") {
+            window.onbeforeunload = null;
             window.location="/users/login";
           }
         }
