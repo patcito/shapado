@@ -66,6 +66,10 @@
     = form.check_box :wysiwyg_editor, :class => "checkbox"
     = form.label :wysiwyg_editor, t('wysiwyg_editor', :scope => "activerecord.attributes.group"), :class => "radio"
 
+  .group
+    = form.check_box :fb_button, :class => "checkbox"
+    = form.label :fb_button, t('fb_button', :scope => "activerecord.attributes.group"), :class => "radio"
+
   %h2
     = t(".access")
 

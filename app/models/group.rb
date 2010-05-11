@@ -44,6 +44,7 @@ class Group
   key :custom_html, CustomHtml, :default => CustomHtml.new
   key :has_custom_html, Boolean, :default => true
   key :has_custom_js, Boolean, :default => true
+  key :fb_button, Boolean, :default => true
 
   file_key :logo, :max_length => 2.megabytes
   file_key :custom_css, :max_length => 256.kilobytes
