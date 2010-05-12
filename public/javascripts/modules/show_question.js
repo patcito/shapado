@@ -185,7 +185,7 @@ $(document).ready(function() {
         });
 
         var button = form.find("input[type=submit]");
-
+        var textarea = form.find('textarea');
         form.submit(function() {
           button.attr('disabled', true)
           $.ajax({url: form.attr("action"),
@@ -199,6 +199,8 @@ $(document).ready(function() {
                                 link.show();
                                 highlightEffect(comment);
                                 showMessage(data.message, "notice");
+                                removeFromLocalStorage(location.href, textarea.attr('id'));
+                                window.onbeforeunload = null;
                               } else {
                                 showMessage(data.message, "error")
                                 if(data.status == "unauthenticate") {
