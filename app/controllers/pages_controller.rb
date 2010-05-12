@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :login_required, :except => [:show, :index]
+  before_filter :login_required, :except => [:show, :index, :js, :css]
   before_filter :check_page_permissions, :only => [:new, :create, :edit, :update, :destroy]
 
   tabs :default => :pages
