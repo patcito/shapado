@@ -59,8 +59,6 @@
     = render :partial => "questions/question", :object => question
 
 #additional_info
-  =will_paginate @questions
-
   #help_us
     = t("questions.index.help_to_answer")
     = link_to t("questions.index.unanswered_questions"), unanswered_questions_path
