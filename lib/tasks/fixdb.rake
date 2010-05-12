@@ -17,5 +17,12 @@ namespace :fixdb do
                                :safe => true,
                                :multi => true)
   end
+
+  task :comments => :environment do
+    Comment.find_each(:group_id => nil) do |comment|
+      group_id = comment.commentable.group_id
+      comment.set({:group_id => group_id})
+    end
+  end
 end
 
