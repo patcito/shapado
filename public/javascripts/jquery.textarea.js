@@ -479,7 +479,7 @@ $.extend(Toolbar.prototype, {
       container.container[0].appendChild(li);
     }
 
-  },
+  }
 
 });
 

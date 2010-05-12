@@ -135,7 +135,11 @@ function setupWysiwygEditor() {
 }
 
 function hasStorage(){
-  return window.localStorage;
+  if (window.localStorage && typeof(Storage)!='undefined'){
+    return true;
+  } else {
+      return false;
+  }
 }
 
 function initStorageMethods(){
