@@ -24,6 +24,9 @@ class Membership
 
   key :role, String, :default => "user"
 
+  key :bronze_badges_count,       Integer, :default => 0
+  key :silver_badges_count,       Integer, :default => 0
+  key :gold_badges_count,         Integer, :default => 0
 
   validates_inclusion_of :role,  :within => ROLES
 end
