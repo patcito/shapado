@@ -42,5 +42,16 @@ namespace :fixdb do
       end
     end
   end
+
+  task :dates => :environment do
+    Question.find_each do |question|
+      if question.last_target.present?
+        target = question.last_target
+        question.set({:last_target_date => (target.updated_at||target.created_at).utc})
+      elsif question.title.present?
+        question.set({:last_target_date => (question.activity_at || question.updated_at).utc})
+      end
+    end
+  end
 end
 

@@ -87,8 +87,7 @@
         .user_data
           %span.asked_by
             = t('activerecord.attributes.question.updated_by')
-          %span.fn.nickname
-            = link_to h(@question.updated_by.login), user_path(@question.updated_by)
+          =render :partial => "users/user_mini", :locals => {:user => @question.user}
           %span.time_ago.published{:title => @question.updated_at, :class => "relativetime"}
             = t("time.ago", :time => time_ago_in_words(@question.updated_at))
           %span.adr

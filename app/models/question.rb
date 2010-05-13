@@ -53,6 +53,8 @@ class Question
 
   key :last_target_type, String
   key :last_target_id, String
+  key :last_target_date, Time
+
   belongs_to :last_target, :polymorphic => true
 
   has_many :answers, :dependent => :destroy
@@ -264,7 +266,8 @@ class Question
   def self.update_last_target(question_id, target)
     self.collection.update({:_id => question_id},
                            {:$set => {:last_target_id => target.id,
-                                      :last_target_type => target.class.to_s}},
+                                      :last_target_type => target.class.to_s,
+                                      :last_target_date => target.updated_at}},
                            :upsert => true)
   end
 
