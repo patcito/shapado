@@ -1,0 +1,26 @@
+-bronze, silver, gold = user.badges_count_on(current_group)
+
+%span.fn.nickname
+  =link_to h(user.login), user_path(user), :class => "user-link"
+
+%span.reputation{:title => t("activerecord.attributes.user.reputation")}
+  =user.reputation_on(current_group)
+
+-if local_assigns[:with_badges] != false
+  -if gold > 0
+    %span{:title => "#{gold} gold badges"}
+      %span.gold.badgeicon
+      %span.badgecount
+        =gold
+
+  -if silver > 0
+    %span{:title => "#{silver} silver badges"}
+      %span.silver.badgeicon
+      %span.badgecount
+        =silver
+
+  -if bronze > 0
+    %span{:title => "#{bronze} bronze badges"}
+      %span.bronze.badgeicon
+      %span.badgecount
+        =bronze

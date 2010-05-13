@@ -337,6 +337,11 @@ Time.zone.now ? 1 : 0)
     UserStat.find_or_create_by_user_id(self._id, :select => fields+extra_fields)
   end
 
+  def badges_count_on(group)
+    config = config_for(group)
+    [config.bronze_badges_count, config.silver_badges_count, config.gold_badges_count]
+  end
+
   def badges_on(group, opts = {})
     self.badges.all(opts.merge(:group_id => group.id, :order => "created_at desc"))
   end
