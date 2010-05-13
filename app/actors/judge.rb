@@ -47,9 +47,11 @@ module Actors
 
       return unless ok
 
-      badge = user.badges.create!(opts.merge({:group_id => group.id}))
+      badge = user.badges.create(opts.merge({:group_id => group.id}))
       if !badge.valid?
         puts "Cannot create the #{badge.token} badge: #{badge.errors.full_messages}"
+      else
+        user.increment("membership_list.#{group.id}.#{badge.type}_badges_count" => 1)
       end
 
       if !badge.new? && !user.email.blank? && user.notification_opts.activities
