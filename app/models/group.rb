@@ -66,7 +66,7 @@ class Group
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
 
   validates_length_of       :name,           :within => 3..40
-  validates_length_of       :description,    :within => 3..1000, :allow_blank => true
+  validates_length_of       :description,    :within => 3..10000, :allow_blank => true
   validates_length_of       :legend,         :maximum => 50
   validates_length_of       :default_tags,   :within => 0..15,
       :message =>  I18n.t('activerecord.models.default_tags_message')
