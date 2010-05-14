@@ -11,9 +11,9 @@
 
   %ul{:style => "display: inline"}
     %li.activity
-      = link_to t("questions.index.active"), root_path(:tab=>"activity"), :title => t("questions.index.active_tooltip")
+      = link_to t("questions.index.active"), root_path(:tab=>"activity"), :title => t("questions.index.active_tooltip"), :rel => "nofollow"
     %li.hot
-      = link_to t("questions.index.hot"), root_path(:tab=>"hot"), :title => t("questions.index.hot_tooltip")
+      = link_to t("questions.index.hot"), root_path(:tab=>"hot"), :title => t("questions.index.hot_tooltip"), :rel => "nofollow"
 
 %div
   #quick_question

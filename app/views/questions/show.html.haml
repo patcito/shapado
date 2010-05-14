@@ -155,7 +155,7 @@
 
     %ul
       %li.newest
-        = link_to t("questions.index.newest"), question_path(@question, :sort=>"newest", :anchor => "answers")
+        = link_to t("questions.index.newest"), question_path(@question, :sort=>"newest", :anchor => "answers"), :rel => "nofollow"
       %li.votes
         = link_to t("questions.index.votes"), question_path(@question, :sort=>"votes", :anchor => "answers"), :rel => "nofollow"
       %li.oldest
