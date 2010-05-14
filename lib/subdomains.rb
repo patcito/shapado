@@ -34,12 +34,12 @@ module Subdomains
   end
 
   def domain_url(options = {})
-    options = {:controller=>"/welcome",:action=>"index"}.merge(options)
     host = options.delete(:custom)
     host = request.host.split("\.").last(2).join(".") unless host
 
     domain = request.protocol + "#{host}" + request.port_string
     if !options.empty?
+      options = {:controller=>"/welcome",:action=>"index"}.merge(options)
       domain += url_for({:only_path =>true}.merge(options))
     end
 
