@@ -38,8 +38,12 @@ module Subdomains
     host = options.delete(:custom)
     host = request.host.split("\.").last(2).join(".") unless host
 
-    request.protocol + "#{host}" + request.port_string+
-                                          url_for({:only_path =>true}.merge(options))
+    domain = request.protocol + "#{host}" + request.port_string
+    if !options.empty?
+      domain += url_for({:only_path =>true}.merge(options))
+    end
+
+    domain
   end
 
   def tag_url(tag, use_ssl = request.ssl?)
