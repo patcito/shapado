@@ -96,7 +96,7 @@
             -if !@question.updated_by.hide_country
               %span.country-name
                 = t("global.from", :site => @question.updated_by.country_name)
-                = country_flag(@question.user.country_code, @question.updated_by.country_name)
+                = country_flag(@question.updated_by.country_code, @question.updated_by.country_name)
         .clear
   .controls
     .actions
