@@ -19,10 +19,9 @@ atom_feed do |feed|
 
   for question in @questions
     next if question.nil? || question.updated_at.blank?
-    feed.entry(question, :url => question_url(question), :id =>"tag:#{question.id}") do |entry|
+    feed.entry(question, :url => question_url(question)) do |entry|
       entry.title(question.title)
       entry.content(markdown(question.body), :type => 'html')
-      entry.updated(question.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
       entry.author do |author|
         author.name(question.user.login)
       end

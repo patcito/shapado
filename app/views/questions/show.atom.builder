@@ -13,10 +13,9 @@ atom_feed do |feed|
 
   for answer in @answers
     next if answer.updated_at.blank?
-    feed.entry([@question, answer], :url => question_answer_url(@question, answer), :id =>"tag:#{answer.id}") do |entry|
+    feed.entry(answer, :url => question_answer_url(@question, answer)) do |entry|
       entry.title("answer by #{h(answer.user.login)} for #{h(@question.title)}")
       entry.content(markdown(answer.body), :type => 'html')
-      entry.updated(answer.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
       entry.author do |author|
         author.name(h(answer.user.login))
       end
