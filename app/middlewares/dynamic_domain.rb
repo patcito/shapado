@@ -6,7 +6,7 @@ class DynamicDomain
 
   def call(env)
     host = env["HTTP_HOST"].split(':').first
-    env["rack.session.options"][:domain] = custom_domain?(host) ? host : ".#{@default_domain}"
+    ActionMailer::Base.default_url_options[:host] = env["rack.session.options"][:domain] = custom_domain?(host) ? host : ".#{@default_domain}"
     @app.call(env)
   end
 
