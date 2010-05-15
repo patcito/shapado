@@ -22,6 +22,23 @@
     .counter
       font-size: 28px
 
+.badgeicon
+  +rounded(8px, 8px, 8px, 8px)
+  margin-bottom: 2px
+
+  width: 5px
+  height: 5px
+  display: inline-block
+
+  &.silver
+    background: #C0C0C0
+  &.bronze
+    background: #E1A970
+  &.gold
+    background: #FFCC00
+.badgecount
+  margin-left: -3px
+
 .badge
   background: #222
   +rounded(6px, 6px, 6px, 6px)
@@ -42,22 +59,9 @@
     background: #222 !important
     text-decoration: none !important
 
-  .icon
+  .badgeicon
     margin-left: 3px
-    margin-bottom: 2px
     margin-right: 3px
-    +rounded(20px, 20px, 20px, 20px)
-    width: 5px
-    height: 5px
-    display: inline-block
-
-    &.silver
-      background: #C0C0C0
-    &.bronze
-      background: #CC9965
-    &.gold
-      background: #FFCC00
-
   &.mini
     line-height: 15px !important
     padding: 0px 4px 0px 4px

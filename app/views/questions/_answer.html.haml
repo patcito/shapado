@@ -24,9 +24,7 @@
         .avatar.logo
           = gravatar(answer.updated_by.email.to_s, :size => 32)
         .user
-          %span.fn.nickname
-            = link_to h(answer.updated_by.login), user_path(answer.updated_by)
-          == (#{answer.updated_by.reputation_on(current_group)})
+          = render :partial => "users/user_mini", :locals => {:user => answer.updated_by}
           -unless answer.updated_by.hide_country
             .adr
               .country-name
@@ -43,9 +41,7 @@
       .avatar.logo
         = gravatar(answer.user.email.to_s, :size => 32)
       .user
-        %span.fn.nickname
-          = link_to h(answer.user.login), user_path(answer.user)
-        == (#{answer.user.reputation_on(current_group)})
+        = render :partial => "users/user_mini", :locals => {:user => answer.user}
         -unless answer.user.hide_country
           .adr
             .country-name
