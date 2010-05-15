@@ -2,6 +2,12 @@
 
 %span.fn.nickname
   =link_to h(user.login), user_path(user), :class => "user-link"
+  -if user.owner_of?(current_group)
+    %span.ownerflair{:title => "admin"}
+      &#x2747;
+  -elsif user.mod_of?(current_group)
+    %span.modflair{:title => "moderator"}
+      &#x273F;
 
 %span.reputation{:title => t("activerecord.attributes.user.reputation")}
   =user.reputation_on(current_group)
