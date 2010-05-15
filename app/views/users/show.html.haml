@@ -65,24 +65,46 @@
         %span
           =link_to gravatar(follower.email.to_s, :size => 24), user_path(follower)
 
-  /Questions
-  %h2.title
-    .counter
-      = number_with_delimiter(@questions.total_entries)
-    =t(:questions, :scope => "activerecord.models")
-
-  %ul.items#questions
-    -@questions.each do |question|
-      = render :partial => "questions/question", :object => question
-  .additional_info
-    = will_paginate @questions, :param_name => "questions_page"
+  .secondary-navigation{:class => @q_sort||"votes"}
+    .navtitle
+      %span.counter
+        = number_with_delimiter(@favorites.total_entries)
+      =t(:questions, :scope => "activerecord.models")
+    %ul
+      %li.newest
+        = link_to t("questions.index.newest"), user_path(@user, params.merge(:q_sort=>"newest")), :rel => "nofollow"
+      %li.oldest
+        = link_to t("questions.index.oldest"), user_path(@user, params.merge(:q_sort=>"oldest")), :rel => "nofollow"
+      %li.views
+        = link_to t("activerecord.attributes.question.views"), user_path(@user, params.merge(:q_sort=>"views")), :rel => "nofollow"
+      %li.votes
+        = link_to t("questions.index.votes"), user_path(@user, params.merge(:q_sort=>"votes")), :rel => "nofollow"
     .clear
+  .block
+    %ul.items#questions
+      -@questions.each do |question|
+        = render :partial => "questions/question", :object => question
+    .additional_info
+      = will_paginate @questions, :param_name => "questions_page"
+      .clear
 
   /Favorites
-  %h2.title
-    .counter
-      = number_with_delimiter(@favorites.total_entries)
-    =t(:favorites, :scope => "activerecord.models")
+  .secondary-navigation{:class => @f_sort||"votes"}
+    .navtitle
+      %span.counter
+        = number_with_delimiter(@favorites.total_entries)
+      =t(:favorites, :scope => "activerecord.models")
+    %ul
+      %li.newest
+        = link_to t("questions.index.newest"), user_path(@user, params.merge(:f_sort=>"newest")), :rel => "nofollow"
+      %li.oldest
+        = link_to t("questions.index.oldest"), user_path(@user, params.merge(:f_sort=>"oldest")), :rel => "nofollow"
+      %li.views
+        = link_to t("activerecord.attributes.question.views"), user_path(@user, params.merge(:f_sort=>"views")), :rel => "nofollow"
+      %li.votes
+        = link_to t("questions.index.votes"), user_path(@user, params.merge(:f_sort=>"votes")), :rel => "nofollow"
+    .clear
+  .block
 
   %ul.items#questions
     -@favorite_questions.each do |question|
@@ -92,10 +114,21 @@
     .clear
 
   / Answers
-  %h2.title
-    .counter
-      = number_with_delimiter(@answers.total_entries)
-    = t(:answers, :scope => "activerecord.models")
+  .secondary-navigation{:class => @a_sort||"votes"}
+    .navtitle
+      %span.counter
+        = number_with_delimiter(@answers.total_entries)
+      =t(:answers, :scope => "activerecord.models")
+
+    %ul
+      %li.newest
+        = link_to t("questions.index.newest"), user_path(@user, params.merge(:a_sort=>"newest")), :rel => "nofollow"
+      %li.oldest
+        = link_to t("questions.index.oldest"), user_path(@user, params.merge(:a_sort=>"oldest")), :rel => "nofollow"
+      %li.votes
+        = link_to t("questions.index.votes"), user_path(@user, params.merge(:a_sort=>"votes")), :rel => "nofollow"
+    .clear
+  .block
 
   %ul.items#answers
     -@answers.each do |answer|
