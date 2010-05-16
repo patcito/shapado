@@ -51,7 +51,10 @@ module Actors
       if !badge.valid?
         puts "Cannot create the #{badge.token} badge: #{badge.errors.full_messages}"
       else
-        user.increment("membership_list.#{group.id}.#{badge.type}_badges_count" => 1)
+        user.increment(:"membership_list.#{group.id}.#{badge.type}_badges_count" => 1)
+        if badge.token == "editor"
+          user.set(:"membership_list.#{group.id}.is_editor" => true)
+        end
       end
 
       if !badge.new? && !user.email.blank? && user.notification_opts.activities
