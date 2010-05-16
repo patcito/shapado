@@ -19,6 +19,7 @@ fr:
       title: configuration
       submit: sauver
     show:
+      title: "User {{user}}"
       follow: suivre
       unfollow: ne plus suivre
     follow:

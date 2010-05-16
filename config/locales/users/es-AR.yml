@@ -19,6 +19,7 @@
       title: configuración
       submit: guardar
     show:
+      title: "Usuario {{user}}"
       follow: seguir
       unfollow: dejar de seguir
     follow:

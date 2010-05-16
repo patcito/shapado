@@ -19,6 +19,7 @@ pt-PT:
       title: preferências
       submit: gravar
     show:
+      title: "User {{user}}"
       follow: follow
       unfollow: unfollow
     follow:

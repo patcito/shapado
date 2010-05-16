@@ -19,6 +19,7 @@ en:
       title: settings
       submit: save
     show:
+      title: "User {{user}}"
       follow: follow
       unfollow: unfollow
     follow:
