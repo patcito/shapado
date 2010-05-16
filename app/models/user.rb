@@ -238,7 +238,7 @@ Time.zone.now ? 1 : 0)
   end
 
   def openid_login?
-    !identity_url.blank? || (AppConfig.enable_facebook_auth && !facebook_uid.blank?)
+    !identity_url.blank? || (AppConfig.enable_facebook_auth && !facebook_id.blank?)
   end
 
   def has_voted?(voteable)

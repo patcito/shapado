@@ -18,6 +18,11 @@ base: &common
   default_language: en
   enable_i18n: false
 
+  facebook:
+    activate: true
+    key: facebook api key
+    secret: facebook secret key
+
   exception_notification:
     activate: true
     exception_sender_address:
