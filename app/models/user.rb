@@ -217,6 +217,14 @@ Time.zone.now ? 1 : 0)
     owner_of?(group) || role_on(group) == "moderator" || self.reputation_on(group) >= group.reputation_constrains["moderate"].to_i
   end
 
+  def editor_of?(group)
+    if c = config_for(group, false)
+      c.is_editor
+    else
+      false
+    end
+  end
+
   def user_of?(group)
     mod_of?(group) || self.membership_list.has_key?(group.id)
   end
@@ -408,11 +416,17 @@ Time.zone.now ? 1 : 0)
     super(method, *args, &block)
   end
 
-  def config_for(group)
+  def config_for(group, init = true)
     if group.kind_of?(Group)
       group = group.id
     end
-    self.membership_list[group] ||= Membership.new(:group_id => group)
+
+    config = self.membership_list[group]
+    if config.nil? && init
+      self.membership_list[group] ||= Membership.new(:group_id => group)
+    end
+
+    config
   end
 
   def before_facebook_connect(fb_session)

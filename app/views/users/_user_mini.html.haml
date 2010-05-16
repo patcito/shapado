@@ -8,6 +8,9 @@
   -elsif user.mod_of?(current_group)
     %span.modflair{:title => "moderator"}
       &#x273F;
+  -elsif user.editor_of?(current_group)
+    %span.editorflair{:title => "editor"}
+      &#x270E;
 
 %span.reputation{:title => t("activerecord.attributes.user.reputation")}
   =user.reputation_on(current_group)
