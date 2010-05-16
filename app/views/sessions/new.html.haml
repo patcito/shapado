@@ -18,10 +18,10 @@
         = text_field_tag "openid_identifier", "", :id => "openid_username"
         = submit_tag t(".log_in")
 
--if AppConfig.enable_facebook_auth
+-if true #AppConfig.enable_facebook_auth
   %h2
     = t(".with_facebook")
-  =facebook_link :user
+  =link_to "Facebook", oauth_authorize_path
 
 
 -unless current_group.openid_only

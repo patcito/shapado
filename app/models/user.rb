@@ -3,7 +3,7 @@ require 'digest/sha1'
 class User
   include MongoMapper::Document
   devise :authenticatable, :http_authenticatable, :recoverable, :registarable, :rememberable,
-         :lockable, :token_authenticatable, :facebook_connectable
+         :lockable, :token_authenticatable
 
   ROLES = %w[user moderator admin]
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
@@ -41,6 +41,10 @@ class User
   key :following_count,           Integer, :default => 0
 
   key :membership_list,           MembershipList
+
+  key :facebook_id,               String
+  key :facebook_token,            String
+  key :facebook_profile,          String
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
@@ -423,38 +427,10 @@ Time.zone.now ? 1 : 0)
 
     config = self.membership_list[group]
     if config.nil? && init
-      self.membership_list[group] ||= Membership.new(:group_id => group)
+      config = self.membership_list[group] = Membership.new(:group_id => group)
     end
 
     config
-  end
-
-  def before_facebook_connect(fb_session)
-    fb_session.user.populate(:locale, :username, :name, :first_name, :last_name,
-                              :birthday_date, :email)
-
-    self.language = case fb_session.user.locale.to_s
-    when /^es/
-      'es-AR'
-    when /^fr/
-      'fr'
-    when /^pt/
-      'pt-PT'
-    else
-      'en'
-    end
-
-    self.timezone = fb_session.user.current_location.try(:city)
-
-    self.login = fb_session.user.username || fb_session.user.name
-    self.email = fb_session.user.email
-
-    self.name  = fb_session.user.name
-    self.birthday  = fb_session.user.birthday_date.try(:to_date)
-
-    self.location       = fb_session.user.hometown_location.try(:city)
-
-    self.save
   end
 
   def has_flagged?(flaggeable)

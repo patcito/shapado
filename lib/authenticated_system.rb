@@ -24,20 +24,24 @@ module AuthenticatedSystem
     end
 
     if user
-      user.remember_me!
-
-      cookies["remember_user_token"] = {
-        :value => User.serialize_into_cookie(user),
-        :expires => user.remember_expires_at,
-        :path => "/"
-      }
-
-      user.localize(request.remote_ip)
-      user.logged!(current_group)
-      check_draft
+      after_authentication(user)
     end
 
     user
+  end
+
+  def after_authentication(user)
+    user.remember_me!
+
+    cookies["remember_user_token"] = {
+      :value => User.serialize_into_cookie(user),
+      :expires => user.remember_expires_at,
+      :path => "/"
+    }
+
+    user.localize(request.remote_ip)
+    user.logged!(current_group)
+    check_draft
   end
 
   # Attempts to authenticate the given scope by running authentication hooks,
