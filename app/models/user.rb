@@ -149,7 +149,7 @@ class User
 
   def update_language_filter(filter)
     if LANGUAGE_FILTERS.include? filter
-      User.set({:_id => self.id}, {:language_filter => filter}  )
+      User.set({:_id => self.id}, {:language_filter => filter})
       true
     else
       false
