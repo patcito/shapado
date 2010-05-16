@@ -38,6 +38,7 @@ Disallow: /badges
 Disallow: /badges/
 Disallow: /search
 Disallow: /search/
+Disallow: /*?
 
 User-agent: Mediapartners-Google
 Disallow:
