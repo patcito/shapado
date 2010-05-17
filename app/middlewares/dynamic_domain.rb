@@ -1,7 +1,6 @@
 class DynamicDomain
-  def initialize(app, default_domain)
+  def initialize(app)
     @app = app
-    @default_domain = default_domain
   end
 
   def call(env)
@@ -9,8 +8,8 @@ class DynamicDomain
     if custom_domain?(host)
       ActionMailer::Base.default_url_options[:host] = host
     else
-      ActionMailer::Base.default_url_options[:host] = @default_domain
-      host = ".#{@default_domain}"
+      ActionMailer::Base.default_url_options[:host] = AppConfig.domain
+      host = ".#{AppConfig.domain}"
     end
 
     env["rack.session.options"][:domain] = host
@@ -19,7 +18,7 @@ class DynamicDomain
   end
 
   def custom_domain?(host)
-    host !~ Regexp.new("#{@default_domain}$", Regexp::IGNORECASE)
+    host !~ Regexp.new("#{AppConfig.domain}$", Regexp::IGNORECASE)
   end
 end
 

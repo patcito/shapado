@@ -63,6 +63,6 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = :en
   config.action_controller.use_accept_header = false
   # middlewares
-  config.middleware.use "DynamicDomain", "shapado.com"
+  config.middleware.use "DynamicDomain"
 end
 
