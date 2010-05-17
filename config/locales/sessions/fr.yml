@@ -7,8 +7,8 @@ fr:
       flash_notice: "vous avez été déconnecté."
     new:
       with_openid: se connecter avec openid
-      with_facebook: log in with facebook
-      with_twitter: log in with twitter
+      with_facebook: "sign in with facebook"
+      with_twitter: "sign in with twitter"
       with_authentication: "se connecer avec notre système d'identification"
       registered: "déjà enregistré?"
       not_registered: "pas encore enregistré?"

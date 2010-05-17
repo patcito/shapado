@@ -7,8 +7,8 @@ pt-PT:
       flash_notice: "a sua sessão foi terminada."
     new:
       with_openid: entrar com openid
-      with_facebook: log in with facebook
-      with_twitter: log in with twitter
+      with_facebook: "sign in with facebook"
+      with_twitter: "sign in with twitter"
       with_authentication: entrar com o nosso sistema de autenticação
       registered: "já registado?"
       not_registered: "ainda não se registou?"

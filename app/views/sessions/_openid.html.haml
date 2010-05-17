@@ -5,11 +5,11 @@
   -form_tag session_path(resource_name), :id => 'openid' do
     #nojsopenid
       = text_field_tag "openid_identifier", "", :id => "openid_username"
-      = submit_tag t(".log_in")
+      = submit_tag t("sessions.new.log_in")
 
   #twitter-and-facebook
     -if AppConfig.enable_facebook_auth
-      =link_to "sign in with facebook", oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
+      =link_to t("sessions.new.with_facebook"), oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
 
     -if AppConfig.twitter["activate"]
-      =link_to "sign in with twitter", twitter_authorize_path, :title => "Twitter", :id => "twitter_auth"
+      =link_to t("sessions.new.with_facebook"), twitter_authorize_path, :title => "Twitter", :id => "twitter_auth"
