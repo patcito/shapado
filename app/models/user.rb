@@ -50,6 +50,8 @@ class User
   key :twitter_secret,            String
   key :twitter_login,             String
 
+  key :feed_token,                String
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :comments, :dependent => :destroy
@@ -62,6 +64,7 @@ class User
   belongs_to :friend_list, :dependent => :destroy
 
   before_create :create_friend_list
+  before_create :generate_uuid
 
   timestamps!
 
@@ -439,6 +442,10 @@ Time.zone.now ? 1 : 0)
 
   def has_flagged?(flaggeable)
     flaggeable.flags.first(:user_id=>self.id)
+  end
+
+  def generate_uuid
+    self.feed_token = UUIDTools::UUID.random_create.hexdigest
   end
 
   protected

@@ -44,5 +44,11 @@ namespace :fixdb do
       end
     end
   end
+
+  task :feed_token => :environment do
+    User.find_each do |user|
+      user.set({"feed_token" => UUIDTools::UUID.random_create.hexdigest})
+    end
+  end
 end
 

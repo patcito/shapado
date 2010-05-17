@@ -112,6 +112,8 @@ class ApplicationController < ActionController::Base
             end
           elsif params[:mylangs]
             languages = params[:mylangs].split(' ')
+          elsif params[:feed_token] && (feed_user = User.find_by_feed_token(params[:feed_token]))
+            languages = feed_user.languages_to_filter
           else
             languages = [I18n.locale.to_s.split("-").first]
           end
@@ -148,6 +150,8 @@ class ApplicationController < ActionController::Base
       if logged_in?
         locale = current_user.language
         Time.zone = current_user.timezone || "UTC"
+      elsif params[:feed_token] && (feed_user = User.find_by_feed_token(params[:feed_token]))
+        locale = feed_user.language
       elsif params[:lang] =~ /^(\w\w)/
         locale = find_valid_locale($1)
       elsif request.env['HTTP_ACCEPT_LANGUAGE'] =~ /^(\w\w)/

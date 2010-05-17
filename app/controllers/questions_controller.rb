@@ -40,11 +40,15 @@ class QuestionsController < ApplicationController
 
     @langs_conds = scoped_conditions[:language][:$in]
 
-    add_feeds_url(url_for(:format => "atom", :lang => I18n.locale,
-                          :mylangs => current_languages), t("feeds.questions"))
+    if logged_in?
+      feed_params = { :feed_token => current_user.feed_token }
+    else
+      feed_params = {  :lang => I18n.locale,
+                          :mylangs => current_languages }
+    end
+    add_feeds_url(url_for({:format => "atom"}.merge(feed_params)), t("feeds.questions"))
     if params[:tags]
-      add_feeds_url(url_for(:format => "atom", :tags => params[:tags],
-                            :lang => I18n.locale, :mylangs => current_languages),
+      add_feeds_url(url_for({:format => "atom", :tags => params[:tags]}.merge(feed_params)),
                     "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
     @tag_cloud = Question.tag_cloud(scoped_conditions, 25)
