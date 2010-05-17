@@ -36,6 +36,21 @@ module Actors
     expose :on_destroy_answer
     expose :on_update_answer
 
+    expose :post_to_twitter
+
+    def post_to_twitter(payload)
+      user = User.find(payload.first)
+
+      client = TwitterOAuth::Client.new(
+        :consumer_key => AppConfig.twitter["key"],
+        :consumer_secret => AppConfig.twitter["secret"],
+        :token => user.twitter_token,
+        :secret => user.twitter_secret
+      )
+
+      client.update(payload[1])
+    end
+
     private
     def create_badge(user, group, opts, check_opts = {})
       unique = opts.delete(:unique) || check_opts.delete(:unique)

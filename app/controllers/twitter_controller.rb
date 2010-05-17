@@ -58,12 +58,14 @@ class TwitterController < ApplicationController
   def share
     @question = current_group.questions.by_slug(params[:question_id], :select => [:title, :slug])
     url = question_url(@question)
-
     text = "#{@question.title} - #{url}"
 
-    puts client.update(text).inspect
+    Magent.push("actors.judge", :post_to_twitter, current_user.id, text)
 
-    redirect_to url
+    respond_to do |format|
+      format.html {redirect_to url}
+      format.js { render :json => { :ok => true }}
+    end
   end
 
   protected
