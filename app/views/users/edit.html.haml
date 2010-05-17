@@ -4,7 +4,7 @@
 
 -content_for :sidebar do
   -if AppConfig.twitter["activate"] || AppConfig.enable_facebook_auth
-    .block.notice
+    .block.notice{:style => "padding-bottom: 10px"}
       %h4
         Enable your facebook or twitter accounts
 

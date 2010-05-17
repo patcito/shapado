@@ -194,7 +194,7 @@ class QuestionsController < ApplicationController
 
     @answer = Answer.new(params[:answer])
 
-    if @question.user != current_user && !is_bot?
+    if logged_in? && @question.user != current_user && !is_bot?
       @question.viewed!
 
       if (@question.views_count % 10) == 0
