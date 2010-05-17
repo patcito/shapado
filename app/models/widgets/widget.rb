@@ -1,16 +1,11 @@
 class Widget
-  include MongoMapper::Document
+  include MongoMapper::EmbeddedDocument
 
   key :_id, String
-
-  key :name, String, :required => true, :index => true
-  key :position, Integer, :default => 0
-
+  key :name, String, :required => true
   key :_type, String
-  key :group_id, String, :index => true
-  belongs_to :group
 
-  validates_uniqueness_of :name, :scope => :group_id
+  alias :group :_root_document
 
   def self.types
     types = %w[UsersWidget BadgesWidget TopUsersWidget TagCloudWidget PagesWidget]
@@ -34,26 +29,24 @@ class Widget
   end
 
   def move_to(pos)
-    scope = {:group_id => self.group_id}
-    widget = nil
+    pos ||= "up"
+    widgets = group.widgets
+    current_pos = widgets.index(self)
     if pos == "up"
-      widget = Widget.first(scope.merge(:position => {:$lt => self.position}))
+      pos = current_pos-1
     elsif pos == "down"
-      widget = Widget.first(scope.merge(:position => {:$gt => self.position}))
-    else
-      if pos.to_i > self.position
-        widget = Widget.first(scope.merge(:position => {:$gt => self.position}))
-      else
-        widget = Widget.first(scope.merge(:position => {:$lt => self.position}))
-      end
+      pos = current_pos+1
     end
 
-    if widget
-      self.collection.update({:_id => widget._id}, {:$set => {:position => self.position}},
-                                                               :upsert => true)
-      self.collection.update({:_id => self._id}, {:$set => {:position => widget.position}},
-                                                               :upsert => true)
+    if pos >= widgets.size
+      pos = 0
+    elsif pos < 0
+      pos = widgets.size-1
     end
+
+    widgets[current_pos], widgets[pos] = widgets[pos], widgets[current_pos]
+    group.widgets = widgets
+    group.save
   end
 
   def description

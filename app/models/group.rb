@@ -54,7 +54,8 @@ class Group
   filterable_keys :name
 
   has_many :ads, :dependent => :destroy
-  has_many :widgets, :dependent => :destroy, :order => "position asc", :polymorphic => true
+  has_many :widgets, :class_name => "Widget"
+
   has_many :badges, :dependent => :destroy
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
