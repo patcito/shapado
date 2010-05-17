@@ -180,6 +180,26 @@
     .clear
 
 -content_for :sidebar do
+  -if AppConfig.enable_sharing
+    .block
+      %h3
+        = t(".share")
+      .content
+        %ul.share
+          %li
+            = render :partial => "identica"
+          -if current_group.domain != AppConfig.domain
+            %li
+              = render :partial => "shapado"
+          %li
+            = render :partial => "twitter"
+          %li
+            = render :partial => "linkedin"
+          %li
+            = render :partial => "think"
+          %li
+            = render :partial => "facebook"
+      .clear
 
   -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group))
     -unless @question.flags.count == 0
@@ -232,26 +252,6 @@
         = t(".last_activity")
       .data.updated{:title => @question.activity_at, :class => "relativetime"}
         = t("time.ago", :time => time_ago_in_words(@question.activity_at))
-
-  -if AppConfig.enable_sharing
-    .block
-      %h3
-        = t(".share")
-      .content
-        %ul.share
-          %li
-            = render :partial => "identica"
-          %li
-            = render :partial => "shapado"
-          %li
-            = render :partial => "twitter"
-          %li
-            = render :partial => "facebook"
-          %li
-            = render :partial => "linkedin"
-          %li
-            = render :partial => "think"
-      .clear
 
   -related_questions = Question.related_questions(@question, :language => find_languages)
   -if !related_questions.empty?
