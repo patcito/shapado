@@ -110,6 +110,8 @@ class ApplicationController < ActionController::Base
             else
               languages = [session["user.language_filter"]]
             end
+          elsif params[:mylangs]
+            languages = params[:mylangs].split(' ')
           else
             languages = [I18n.locale.to_s.split("-").first]
           end

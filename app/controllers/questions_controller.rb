@@ -40,9 +40,11 @@ class QuestionsController < ApplicationController
 
     @langs_conds = scoped_conditions[:language][:$in]
 
-    add_feeds_url(url_for(:format => "atom"), t("feeds.questions"))
+    add_feeds_url(url_for(:format => "atom", :lang => I18n.locale,
+                          :mylangs => current_languages), t("feeds.questions"))
     if params[:tags]
-      add_feeds_url(url_for(:format => "atom", :tags => params[:tags]),
+      add_feeds_url(url_for(:format => "atom", :tags => params[:tags],
+                            :lang => I18n.locale, :mylangs => current_languages),
                     "#{t("feeds.tag")} #{params[:tags].inspect}")
     end
     @tag_cloud = Question.tag_cloud(scoped_conditions, 25)

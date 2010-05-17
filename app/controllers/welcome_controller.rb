@@ -17,8 +17,9 @@ class WelcomeController < ApplicationController
     end
 
     @langs_conds = conditions[:language][:$in]
-    add_feeds_url(url_for(:format => "atom"), t("feeds.questions"))
-
+    add_feeds_url(url_for(:controller => 'questions', :action => 'index',
+                          :format => "atom", :lang => I18n.locale,
+                          :mylangs => current_languages), t("feeds.questions"))
     @questions = Question.paginate({:per_page => 15,
                                    :page => params[:page] || 1,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
