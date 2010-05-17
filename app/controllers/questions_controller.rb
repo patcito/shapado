@@ -245,6 +245,7 @@ class QuestionsController < ApplicationController
         sweep_question_views
 
         current_user.stats.add_question_tags(*@question.tags)
+        current_group.tag_list.add_tags(*@question.tags)
 
         current_user.on_activity(:ask_question, current_group)
         current_group.on_activity(:ask_question)

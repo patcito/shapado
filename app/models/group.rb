@@ -136,6 +136,10 @@ class Group
     self.custom_html.footer
   end
 
+  def tag_list
+    TagList.first(:group_id => self.id) || TagList.create(:group_id => self.id)
+  end
+
   def default_tags=(c)
     if c.kind_of?(String)
       c = c.downcase.split(",").join(" ").split(" ")

@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:badges", "fixdb:dates"] do
+task :fixall => [:environment, "fixdb:badges", "fixdb:questions"] do
 end
 
 namespace :fixdb do
@@ -28,13 +28,19 @@ namespace :fixdb do
     end
   end
 
-  task :dates => :environment do
-    Question.find_each do |question|
-      if question.last_target.present?
-        target = question.last_target
-        question.set({:last_target_date => (target.updated_at||target.created_at).utc})
-      elsif question.title.present?
-        question.set({:last_target_date => (question.activity_at || question.updated_at).utc})
+  task :questions => :environment do
+    Group.find_each do |group|
+      tag_list = group.tag_list
+
+      Question.find_each(:group_id => group.id) do |question|
+        if question.last_target.present?
+          target = question.last_target
+          question.set({:last_target_date => (target.updated_at||target.created_at).utc})
+        elsif question.title.present?
+          question.set({:last_target_date => (question.activity_at || question.updated_at).utc})
+        end
+
+        tag_list.add_tags(*question.tags)
       end
     end
   end
