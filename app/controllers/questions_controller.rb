@@ -186,7 +186,7 @@ class QuestionsController < ApplicationController
       return
     end
 
-    @tag_cloud = Question.tag_cloud(:_id => @question.id)
+    @tag_cloud = Question.tag_cloud(:_id => @question.id, :banned => false)
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
     options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
@@ -348,7 +348,7 @@ class QuestionsController < ApplicationController
         format.html { redirect_to question_path(@question) }
         format.json  { head :ok }
       else
-        @tag_cloud = Question.tag_cloud(:_id => @question.id)
+        @tag_cloud = Question.tag_cloud(:_id => @question.id, :banned => false)
         options = {:per_page => 25, :page => params[:page] || 1,
                    :order => current_order, :banned => false}
         options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
@@ -384,7 +384,7 @@ class QuestionsController < ApplicationController
         format.html { redirect_to question_path(@question) }
         format.json  { head :ok }
       else
-        @tag_cloud = Question.tag_cloud(:_id => @question.id)
+        @tag_cloud = Question.tag_cloud(:_id => @question.id, :banned => false)
         options = {:per_page => 25, :page => params[:page] || 1,
                    :order => current_order, :banned => false}
         options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
