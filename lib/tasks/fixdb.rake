@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets"] do
+task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets", "fixdb:tokens"] do
 end
 
 namespace :fixdb do
@@ -60,9 +60,10 @@ namespace :fixdb do
     MongoMapper.database.collection("widgets").drop
   end
 
-  task :feed_token => :environment do
+  task :tokens => :environment do
     User.find_each do |user|
-      user.set({"feed_token" => UUIDTools::UUID.random_create.hexdigest})
+      user.set({"feed_token" => UUIDTools::UUID.random_create.hexdigest,
+                "authentication_token" => UUIDTools::UUID.random_create.hexdigest})
     end
   end
 end
