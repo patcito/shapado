@@ -1,5 +1,10 @@
 class TwitterController < ApplicationController
   def start
+    if logged_in? && params[:merge]
+      merge_token = cookies[:merge_token] = ActiveSupport::SecureRandom.hex(12)
+      current_user.set({:merge_token => merge_token})
+    end
+
     request_token = client.request_token(
       :oauth_callback => twitter_callback_url
     )
@@ -26,21 +31,37 @@ class TwitterController < ApplicationController
     if client.authorized?
       user_json = JSON.parse(@access_token.response.body)
 
-      @user = User.first(:twitter_token => @access_token.token, :twitter_secret => @access_token.secret)
-      if @user.nil?
-        @user = User.create(:twitter_token => @access_token.token,
-                            :twitter_secret => @access_token.secret,
-                            :twitter_login => user_json["screen_name"],
-                            :login => user_json["screen_name"],
-                            :website => user_json["url"],
-                            :location => user_json["location"],
-                            :name => user_json["name"],
-                            :language => find_valid_locale(user_json["lang"]))
+      atts = {:twitter_token => @access_token.token, :twitter_secret => @access_token.secret}
+      @user = User.first(atts)
 
-        if @user.errors.on(:login)
-          @user.login = "#{@user.login}_twitter"
-          @user.save
+      if @user.nil?
+        if logged_in? && (token = cookies.delete("merge_token"))
+          @user = User.first(:merge_token => token)
+
+          if @user
+            atts.merge!(:twitter_login => user_json["screen_name"])
+            @user.set(atts)
+            @user.twitter_token = atts[:twitter_token]
+            @user.twitter_secret = atts[:twitter_secret]
+            @user.twitter_login = atts[:twitter_login]
+          end
         end
+
+        if @user.nil?
+          @user = User.create(:twitter_token => @access_token.token,
+                              :twitter_secret => @access_token.secret,
+                              :login => user_json["screen_name"],
+                              :website => user_json["url"],
+                              :location => user_json["location"],
+                              :name => user_json["name"],
+                              :language => find_valid_locale(user_json["lang"]))
+
+          if @user.errors.on(:login)
+            @user.login = "#{@user.login}_twitter"
+            @user.save
+          end
+        end
+
       else
         @user.set({:twitter_login => user_json["screen_name"]})
       end

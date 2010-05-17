@@ -14,6 +14,7 @@ class DynamicDomain
     end
 
     env["rack.session.options"][:domain] = host
+
     @app.call(env)
   end
 

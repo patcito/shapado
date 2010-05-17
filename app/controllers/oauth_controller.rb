@@ -1,5 +1,10 @@
 class OauthController < ApplicationController
   def start
+    if logged_in? && params[:merge]
+      merge_token = cookies[:merge_token] = ActiveSupport::SecureRandom.hex(12)
+      current_user.set({:merge_token => merge_token})
+    end
+
     redirect_to client.web_server.authorize_url(
       :redirect_uri => oauth_callback_url
     )
@@ -15,20 +20,32 @@ class OauthController < ApplicationController
     # any user info you wanted
 
     user_json = JSON.parse(user_json)
+    atts = {:facebook_id => user_json["id"],
+            :facebook_profile => user_json["link"]}
 
     @user = User.first(:facebook_id => user_json["id"])
     if @user.nil?
-      @user = User.create(:facebook_id => user_json["id"],
-                          :website => user_json["link"],
-                          :facebook_profile => user_json["link"],
-                          :birthday => Time.zone.parse(user_json["birthday"]),
-                          :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
-                          :login => user_json["name"],
-                          :timezone => ActiveSupport::TimeZone[user_json["timezone"]])
+      if logged_in? && (token = cookies.delete("merge_token"))
+        @user = User.first(:merge_token => token)
 
-      if @user.errors.on(:login)
-        @user.login = "#{@user.login}_fb"
-        @user.save
+        @user.set(atts)
+        @user.facebook_id = user_json["id"]
+        @user.facebook_profile = user_json["link"]
+      end
+
+      if @user.nil?
+        @user = User.create(atts.merge(
+                              :website => user_json["link"],
+                              :birthday => Time.zone.parse(user_json["birthday"]),
+                              :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
+                              :login => user_json["name"],
+                              :timezone => ActiveSupport::TimeZone[user_json["timezone"]]
+                            ))
+
+        if @user.errors.on(:login)
+          @user.login = "#{@user.login}_fb"
+          @user.save
+        end
       end
     end
 

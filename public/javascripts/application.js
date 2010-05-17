@@ -59,7 +59,7 @@ $(document).ready(function() {
   });
 
   $("a#hide_announcement").click(function() {
-    $("#announcement").hide();
+    $("#announcement").fadeOut();
     $.post($(this).attr("href"), "format=js");
     return false;
   });
