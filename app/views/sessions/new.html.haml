@@ -18,15 +18,12 @@
         = text_field_tag "openid_identifier", "", :id => "openid_username"
         = submit_tag t(".log_in")
 
--if AppConfig.enable_facebook_auth
-  %h2
-    = t(".with_facebook")
-  =link_to "Facebook", oauth_authorize_path
+    #twitter-and-facebook
+      -if AppConfig.enable_facebook_auth
+        =link_to "sign in with facebook", oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
 
--if AppConfig.twitter["activate"]
-  %h2
-    = t(".with_twitter")
-  =link_to "Twitter", twitter_authorize_path
+      -if AppConfig.twitter["activate"]
+        =link_to "sign in with twitter", twitter_authorize_path, :title => "Twitter", :id => "twitter_auth"
 
 
 -unless current_group.openid_only
