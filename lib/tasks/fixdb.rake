@@ -47,7 +47,8 @@ namespace :fixdb do
 
   task :update_widgets => :environment do
     Group.find_each do |group|
-      p "Updating #{group["name"]} widgets"
+      puts "Updating #{group["name"]} widgets"
+
       MongoMapper.database.collection("widgets").find({:group_id => group["_id"]},
                                                       {:sort => ["position", :asc]}).each do |w|
         w.delete("position"); w.delete("group_id")
