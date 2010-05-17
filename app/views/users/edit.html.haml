@@ -3,22 +3,25 @@
     =t(".title")
 
 -content_for :sidebar do
-  -no_twitter = AppConfig.twitter["activate"] && (@user.twitter_token.blank? || @user.twitter_secret.blank?)
-  -no_fb = AppConfig.enable_facebook_auth && @user.facebook_id.blank?
-
-  -if no_fb || no_twitter
+  -if AppConfig.twitter["activate"] || AppConfig.enable_facebook_auth
     .block.notice
       %h4
         Enable your facebook or twitter accounts
 
-      -if no_fb
+      -if AppConfig.enable_facebook_auth
         =link_to t("sessions.new.with_facebook"), oauth_authorize_path(:merge => true), :title => "Facebook", :id => "facebook_auth"
 
-      %br
-      %br
+        %br
+        %br
 
-      -if no_twitter
+      -if AppConfig.twitter["activate"]
         =link_to t("sessions.new.with_twitter"), twitter_authorize_path(:merge => true), :title => "Twitter", :id => "twitter_auth"
+  .block
+    .inner{:style => "padding-top: 10px"}
+      %ul.navigation
+        %li{:style => "text-align: center"}
+          = gravatar @user.email.to_s, :size => 128
+          =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
 
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user

@@ -2,14 +2,15 @@
   = t("layouts.application.openid.explaination")
   %br
   %br
-  -form_tag session_path(resource_name), :id => 'openid' do
+  -form_tag session_path(:user), :id => 'openid' do
     #nojsopenid
       = text_field_tag "openid_identifier", "", :id => "openid_username"
       = submit_tag t("sessions.new.log_in")
 
-  #twitter-and-facebook
-    -if AppConfig.enable_facebook_auth
-      =link_to t("sessions.new.with_facebook"), oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
+  -unless local_assigns[:only_openid]
+    #twitter-and-facebook
+      -if AppConfig.enable_facebook_auth
+        =link_to t("sessions.new.with_facebook"), oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
 
-    -if AppConfig.twitter["activate"]
-      =link_to t("sessions.new.with_twitter"), twitter_authorize_path, :title => "Twitter", :id => "twitter_auth"
+      -if AppConfig.twitter["activate"]
+        =link_to t("sessions.new.with_twitter"), twitter_authorize_path, :title => "Twitter", :id => "twitter_auth"
