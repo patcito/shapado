@@ -23,10 +23,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html
       format.json {
-        except = [:password, :password_confirmation, :crypted_password,
-                  :encrypted_password, :password_salt, :salt, :email, :identity_url,
-                  :default_subtab, :ip, :language_filter, :facebook_token, :twitter_token, :twitter_secret, :remember_token ]
-        render :json => @users.to_json(:except => except)
+        render :json => @users.to_json(:only => %w[name login membership_list bio website location language])
       }
       format.js {
         html = render_to_string(:partial => "user", :collection  => @users)
@@ -102,10 +99,7 @@ class UsersController < ApplicationController
       format.html
       format.atom
       format.json {
-        except = [:password, :password_confirmation, :crypted_password,
-                  :encrypted_password, :password_salt, :salt, :email, :identity_url,
-                  :default_subtab, :ip, :language_filter, :facebook_token, :twitter_token, :twitter_secret, :remember_token ]
-        render :json => @user.to_json(:except => except)
+        render :json => @user.to_json(:only => %w[name login membership_list bio website location language])
       }
     end
   end
