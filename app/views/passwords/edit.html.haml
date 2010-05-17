@@ -18,15 +18,7 @@
 %h2
   = t("sessions.new.with_openid")
 
-.inner
-  = t("layouts.application.openid.explaination")
-  %br
-  %br
-
-  -cookies[:reset_openid_token] = params[:reset_password_token]
-  -form_tag session_path(resource_name), :id => 'openid' do
-    #nojsopenid
-      = text_field_tag "openid_identifier", "", :id => "openid_username"
-      = submit_tag t(".log_in")
+-cookies[:reset_openid_token] = params[:reset_password_token]
+= render :partial => "sessions/openid"
 
 = render :partial => "shared/devise_links"
