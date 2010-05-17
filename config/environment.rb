@@ -39,6 +39,7 @@ Rails::Initializer.run do |config|
   config.gem "devise", :version => "1.0.5"
   config.gem "twitter-text", :version => "1.1.1"
   config.gem "oauth2", :version => "0.0.8"
+  config.gem "twitter_oauth", :version => "0.3.6"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

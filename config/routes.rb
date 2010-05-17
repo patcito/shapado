@@ -2,6 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   map.oauth_authorize '/oauth/start', :controller => 'oauth', :action => 'start'
   map.oauth_callback '/oauth/callback', :controller => 'oauth', :action => 'callback'
 
+  map.twitter_authorize '/twitter/start', :controller => 'twitter', :action => 'start'
+  map.twitter_callback '/twitter/callback', :controller => 'twitter', :action => 'callback'
+
   map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
   map.confirm_age_welcome 'confirm_age_welcome', :controller => 'welcome', :action => 'confirm_age'
   map.change_language_filter '/change_language_filter', :controller => 'welcome', :action => 'change_language_filter'

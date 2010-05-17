@@ -25,6 +25,11 @@ class OauthController < ApplicationController
                           :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
                           :login => user_json["name"],
                           :timezone => ActiveSupport::TimeZone[user_json["timezone"]])
+
+      if @user.errors.on(:login)
+        @user.login = "#{@user.login}_fb"
+        @user.save
+      end
     end
 
     warden.set_user(@user, :scope => "user")

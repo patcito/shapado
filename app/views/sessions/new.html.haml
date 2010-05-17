@@ -23,6 +23,10 @@
     = t(".with_facebook")
   =link_to "Facebook", oauth_authorize_path
 
+%h2
+  = t(".with_twitter")
+=link_to "Twitter", twitter_authorize_path
+
 
 -unless current_group.openid_only
   %h2

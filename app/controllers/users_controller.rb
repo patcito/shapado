@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       format.json {
         except = [:password, :password_confirmation, :crypted_password,
                   :encrypted_password, :password_salt, :salt, :email, :identity_url,
-                  :default_subtab, :ip, :language_filter ]
+                  :default_subtab, :ip, :language_filter, :facebook_token, :twitter_token, :twitter_secret, :remember_token ]
         render :json => @users.to_json(:except => except)
       }
       format.js {
@@ -104,7 +104,7 @@ class UsersController < ApplicationController
       format.json {
         except = [:password, :password_confirmation, :crypted_password,
                   :encrypted_password, :password_salt, :salt, :email, :identity_url,
-                  :default_subtab, :ip, :language_filter ]
+                  :default_subtab, :ip, :language_filter, :facebook_token, :twitter_token, :twitter_secret, :remember_token ]
         render :json => @user.to_json(:except => except)
       }
     end

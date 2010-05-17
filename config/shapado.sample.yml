@@ -19,9 +19,14 @@ base: &common
   enable_i18n: false
 
   facebook:
-    activate: true
+    activate: false
     key: facebook api key
     secret: facebook secret key
+
+  twitter:
+    activate: false
+    key: twitter api key
+    secret: twitter secret key
 
   exception_notification:
     activate: true
