@@ -17,8 +17,14 @@ class WelcomeController < ApplicationController
     end
 
     @langs_conds = conditions[:language][:$in]
-    add_feeds_url(url_for(:format => "atom"), t("feeds.questions"))
-
+    if logged_in?
+      feed_params = { :feed_token => current_user.feed_token }
+    else
+      feed_params = {  :lang => I18n.locale,
+                          :mylangs => current_languages }
+    end
+    add_feeds_url(url_for({:controller => 'questions', :action => 'index',
+                            :format => "atom"}.merge(feed_params)), t("feeds.questions"))
     @questions = Question.paginate({:per_page => 15,
                                    :page => params[:page] || 1,
                                    :fields => (Question.keys.keys - ["_keywords", "watchers"]),
