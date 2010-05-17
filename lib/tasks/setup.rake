@@ -53,9 +53,11 @@ namespace :setup do
   task :create_widgets => :environment do
     default_group = Group.find_by_domain(AppConfig.domain)
 
-    default_group.widgets << GroupsWidget.create(:position => 0)
-    default_group.widgets << UsersWidget.create(:position => 1)
-    default_group.widgets << BadgesWidget.create(:position => 2)
+    if AppConfig.enable_groups
+      default_group.widgets << GroupsWidget.new
+    end
+    default_group.widgets << UsersWidget.new
+    default_group.widgets << BadgesWidget.new
     default_group.save!
   end
 

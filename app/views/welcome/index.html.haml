@@ -69,7 +69,7 @@
   .block.notice
     = render :partial => "shared/layout/notice"
 
-  -current_group.widgets.all(:order => "position asc", :_type.in => Widget.types).each do |widget|
+  -current_group.widgets.each do |widget|
     .widget.block{:id => widget.name}
       = render :partial => widget.partial_name, :locals => {:widget => widget}
 

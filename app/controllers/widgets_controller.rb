@@ -8,7 +8,7 @@ class WidgetsController < ApplicationController
   # GET /widgets.json
   def index
     @widget = Widget.new
-    @widgets = @group.widgets.all(:order => "position asc", :_type.in => Widget.types)
+    @widgets = @group.widgets
   end
 
   # POST /widgets
@@ -18,17 +18,13 @@ class WidgetsController < ApplicationController
       @widget = params[:widget][:_type].constantize.new
     end
 
-    @widget.group = @group
-    @widgets = @group.widgets.all(:order => "position asc")
-    if @widgets && !@widgets.last.nil?
-      @widget.position = @widgets.last.position+1
-    end
+    @group.widgets << @widget
 
     respond_to do |format|
-      if @widget.save
+      if @widget.valid? && @group.save
         flash[:notice] = 'Widget was successfully created.'
         format.html { redirect_to widgets_path }
-        format.json  { render :json => @widget.to_json, :status => :created, :location => widget_path(@widget) }
+        format.json  { render :json => @widget.to_json, :status => :created, :location => widget_path(:id => @widget.id) }
       else
         format.html { render :action => "index" }
         format.json  { render :json => @widget.errors, :status => :unprocessable_entity }
@@ -41,7 +37,8 @@ class WidgetsController < ApplicationController
   # DELETE /ads/1.json
   def destroy
     @widget = @group.widgets.find(params[:id])
-    @widget.destroy
+    @group.widgets.delete(@widget)
+    @group.save
 
     respond_to do |format|
       format.html { redirect_to(widgets_url) }

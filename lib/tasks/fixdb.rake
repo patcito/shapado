@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:badges", "fixdb:questions"] do
+task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets"] do
 end
 
 namespace :fixdb do
@@ -43,6 +43,20 @@ namespace :fixdb do
         tag_list.add_tags(*question.tags)
       end
     end
+  end
+
+  task :update_widgets => :environment do
+    Group.find_each do |group|
+      p "Updating #{group["name"]} widgets"
+      MongoMapper.database.collection("widgets").find({:group_id => group["_id"]},
+                                                      {:sort => ["position", :asc]}).each do |w|
+        w.delete("position"); w.delete("group_id")
+        MongoMapper.database.collection("groups").update({:_id => group["_id"]},
+                                                         {:$addToSet => {:widgets => w}},
+                                                         {:upsert => true, :safe => true})
+      end
+    end
+    MongoMapper.database.collection("widgets").drop
   end
 end
 
