@@ -8,6 +8,7 @@ es-AR:
     new:
       with_openid: acceda usando openid
       with_facebook: accesa usando facebook
+      with_twitter: accesa usando twitter
       with_authentication: acceda con nuestro propio sistema de usuarios
       registered: "¿ya esta registrado?"
       not_registered: "todavía no esta registrado?"

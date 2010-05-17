@@ -8,6 +8,7 @@ en:
     new:
       with_openid: log in with openid
       with_facebook: log in with facebook
+      with_twitter: log in with twitter
       with_authentication: log in with our authentication system
       registered: "already registered?"
       not_registered: "not registered yet?"

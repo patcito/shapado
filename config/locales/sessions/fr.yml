@@ -8,6 +8,7 @@ fr:
     new:
       with_openid: se connecter avec openid
       with_facebook: log in with facebook
+      with_twitter: log in with twitter
       with_authentication: "se connecer avec notre système d'identification"
       registered: "déjà enregistré?"
       not_registered: "pas encore enregistré?"
