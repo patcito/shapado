@@ -267,7 +267,7 @@ class Question
     self.collection.update({:_id => question_id},
                            {:$set => {:last_target_id => target.id,
                                       :last_target_type => target.class.to_s,
-                                      :last_target_date => target.updated_at}},
+                                      :last_target_date => target.updated_at.utc}},
                            :upsert => true)
   end
 
