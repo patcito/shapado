@@ -20,6 +20,7 @@ fr:
       another_answers: autres réponses
       solution: solution
       share: "partager cette question"
+      share_on: "partager cette question {{site}}"
       related_questions: questions en relation
       flag: reporter un abus
       flags: reporter en tant que

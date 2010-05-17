@@ -20,6 +20,7 @@ en:
       another_answers: other answers
       solution: solution
       share: "share this question on"
+      share_on: "share this question on {{site}}"
       related_questions: related questions
       flags: reported as
       flag: flag

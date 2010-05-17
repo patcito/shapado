@@ -20,6 +20,7 @@ es-AR:
       another_answers: otras respuestas
       solution: solución
       share: "compartir esta pregunta en"
+      share_on: "compartir esta pregunta en {{site}}"
       related_questions: preguntas relacionadas
       flags: reportado como
       flag: "reportar abuso"

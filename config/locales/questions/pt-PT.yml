@@ -20,6 +20,7 @@ pt-PT:
       another_answers: outras respostas
       solution: solução
       share: "partilhar esta pergunta em"
+      share_on: "partilhar esta pergunta em {{site}}"
       related_questions: related questions
       flags: reportado como
       flag: reportar
