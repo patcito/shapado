@@ -30,6 +30,7 @@ class TwitterController < ApplicationController
       if @user.nil?
         @user = User.create(:twitter_token => @access_token.token,
                             :twitter_secret => @access_token.secret,
+                            :twitter_login => user_json["screen_name"],
                             :login => user_json["screen_name"],
                             :website => user_json["url"],
                             :location => user_json["location"],
@@ -40,6 +41,8 @@ class TwitterController < ApplicationController
           @user.login = "#{@user.login}_twitter"
           @user.save
         end
+      else
+        @user.set({:twitter_login => user_json["screen_name"]})
       end
 
       warden.set_user(@user, :scope => "user")
@@ -52,11 +55,31 @@ class TwitterController < ApplicationController
     end
   end
 
+  def share
+    @question = current_group.questions.by_slug(params[:question_id], :select => [:title, :slug])
+    url = question_url(@question)
+
+    text = "#{@question.title} - #{url}"
+
+    puts client.update(text).inspect
+
+    redirect_to url
+  end
+
   protected
   def client
-    @client ||= TwitterOAuth::Client.new(
-      :consumer_key => AppConfig.twitter["key"],
-      :consumer_secret => AppConfig.twitter["secret"]
-    )
+    @client ||= if logged_in?
+      TwitterOAuth::Client.new(
+        :consumer_key => AppConfig.twitter["key"],
+        :consumer_secret => AppConfig.twitter["secret"],
+        :token => current_user.twitter_token,
+        :secret => current_user.twitter_secret
+      )
+    else
+      TwitterOAuth::Client.new(
+        :consumer_key => AppConfig.twitter["key"],
+        :consumer_secret => AppConfig.twitter["secret"]
+      )
+    end
   end
 end

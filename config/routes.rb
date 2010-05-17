@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.twitter_authorize '/twitter/start', :controller => 'twitter', :action => 'start'
   map.twitter_callback '/twitter/callback', :controller => 'twitter', :action => 'callback'
+  map.twitter_share '/twitter/share', :controller => 'twitter', :action => 'share'
 
   map.devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
   map.confirm_age_welcome 'confirm_age_welcome', :controller => 'welcome', :action => 'confirm_age'

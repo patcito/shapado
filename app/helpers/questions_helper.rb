@@ -10,7 +10,11 @@ module QuestionsHelper
     url = ""
     case service
       when :twitter
-        url = "http://twitter.com/?status=#{microblogging_message(question)}"
+        if current_user.twitter_token.present?
+          url = twitter_share_url(:question_id => question.id)
+        else
+          url = "http://twitter.com/?status=#{microblogging_message(question)}"
+        end
       when :identica
         url = "http://identi.ca/notice/new?status_textarea=#{microblogging_message(question)}"
       when :facebook

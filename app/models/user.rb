@@ -48,6 +48,7 @@ class User
 
   key :twitter_token,             String
   key :twitter_secret,            String
+  key :twitter_login,             String
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
