@@ -7,10 +7,10 @@ class VotesController < ApplicationController
                     :voteable_id => params[:voteable_id],
                     :user => current_user)
     vote_type = ""
-    if params[:vote_up]
+    if params[:vote_up] || params['vote_up.x'] || params['vote_up.y']
       vote_type = "vote_up"
       vote.value = 1
-    elsif params[:vote_down]
+    elsif params[:vote_down] || params['vote_down.x'] || params['vote_down.y']
       vote_type = "vote_down"
       vote.value = -1
     end

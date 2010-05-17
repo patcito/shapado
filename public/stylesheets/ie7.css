@@ -1,0 +1,33 @@
+.answer .vote-col .vote_box{
+  display: block;
+  padding: 5px 0px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  width: 4%;
+  float: left;
+}
+.answer .vote-col .vote_box .votes_average{
+    display: block;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 0.9em;
+    color: #222;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: -8px;
+}
+#question-vote-col .vote_box .votes_average{
+    display: block;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 0.9em;
+    color: #222;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: -10px;
+    margin-top: -10px;
+}
+.quick-vote-button{
+/*    display: none;*/
+}
