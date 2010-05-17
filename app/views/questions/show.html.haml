@@ -16,6 +16,7 @@
 -content_for :head do
   %meta{:name => "keywords", :content => clean_seo_keywords(@question.tags.dup, @question.title)}
   %meta{:name => "description", :content => question_body.gsub(/<\/?[^>]*>/, "")[0, 255] }
+  %link{:rel => "canonical", :href => question_url(@question) }
 
 -content_for :subtabs do
   %h1.navtitle.title.entry-title
