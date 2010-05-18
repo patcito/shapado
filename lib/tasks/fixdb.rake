@@ -6,6 +6,8 @@ namespace :fixdb do
   task :badges => :environment do
     puts "Updating #{User.count} users..."
 
+    Badge.set({:token => "tutor"}, {:type => "bronze"})
+
     User.find_each do |user|
       user.membership_list.each do |group_id, membership|
         if membership["last_activity_at"].nil?
