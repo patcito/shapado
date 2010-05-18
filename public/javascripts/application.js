@@ -73,6 +73,7 @@ $(document).ready(function() {
   initStorageMethods();
   fillTextareas();
 
+  $(".highlight_for_user").effect("highlight", {}, 2000);
 })
 
 function initAutocomplete(){
@@ -100,11 +101,11 @@ $(window).load(function() {
   prettyPrint();
 });
 
-function showMessage(message, t) {
+function showMessage(message, t, delay) {
   $("#notifyBar").remove();
   $.notifyBar({
     html: "<div class='message "+t+"' style='width: 100%; height: 100%; padding: 5px'>"+message+"</div>",
-    delay: 3000,
+    delay: delay||3000,
     animationSpeed: "normal",
     barClass: "flash"
   });

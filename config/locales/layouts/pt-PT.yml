@@ -23,6 +23,8 @@ pt-PT:
       manage_ads: gerir as propaganda
       home: início
       subscribe: subscribe
+      welcome_from: welcome! you can
+      now: now!
       openid:
         explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
     manage:

@@ -23,6 +23,8 @@ es-AR:
       manage_ads: propagandas
       home: pagina principal
       subscribe: subscribirse
+      welcome_from: bienvenido! puedes
+      now: ya!
       openid:
         explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
     manage:
