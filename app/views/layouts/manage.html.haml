@@ -3,10 +3,10 @@
   %head
     %title
       &= page_title
+    = render :partial => "shared/layout/css"
     = current_group.head_tag
     = render :partial => "shared/layout/meta"
     = render :partial => "shared/layout/javascript"
-    = render :partial => "shared/layout/css"
 
   %body
     = render :partial => "shared/analytics"
