@@ -110,7 +110,7 @@ class GroupsController < ApplicationController
   # PUT /groups/1
   # PUT /groups/1.json
   def update
-    @group.safe_update(%w[name legend description default_tags subdomain logo forum
+    @group.safe_update(%w[name legend description default_tags subdomain logo logo_info forum
                           custom_favicon language theme reputation_rewards reputation_constrains
                           has_adult_content registered_only openid_only custom_css wysiwyg_editor fb_button], params[:group])
 

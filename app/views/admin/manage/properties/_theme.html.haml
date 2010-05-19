@@ -6,6 +6,9 @@
   = f.file_field :logo
   .description
     = t('.logo_legend')
+  = text_field_tag "group[logo_info][width]", @group.logo_info["width"] || 215
+  x
+  = text_field_tag "group[logo_info][height]", @group.logo_info["height"] || 60
 
 .group
   = f.label :custom_favicon, "Favicon", :class => "label"
