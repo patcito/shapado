@@ -6,7 +6,7 @@
   -if AppConfig.twitter["activate"] || AppConfig.enable_facebook_auth
     .block.notice{:style => "padding-bottom: 10px"}
       %h4
-        Enable your facebook or twitter accounts
+        =t(".enable_twitter")
 
       -if AppConfig.enable_facebook_auth
         =link_to t("sessions.new.with_facebook"), oauth_authorize_path(:merge => true), :title => "Facebook", :id => "facebook_auth"

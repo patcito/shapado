@@ -18,6 +18,7 @@ pt-PT:
     edit:
       title: preferências
       submit: gravar
+      enable_twitter: Enable your facebook or twitter accounts
     show:
       title: "User {{user}}"
       follow: follow
