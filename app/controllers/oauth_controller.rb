@@ -5,8 +5,11 @@ class OauthController < ApplicationController
       current_user.set({:merge_token => merge_token})
     end
 
+    # see http://developers.facebook.com/docs/authentication/permissions and
+    # http://developers.facebook.com/docs/authentication/
     redirect_to client.web_server.authorize_url(
-      :redirect_uri => oauth_callback_url
+      :redirect_uri => oauth_callback_url,
+      :scope=>'sms,offline_access,publish_stream,email'
     )
   end
 
@@ -23,8 +26,9 @@ class OauthController < ApplicationController
     atts = {:facebook_id => user_json["id"],
             :facebook_profile => user_json["link"]}
 
-    @user = User.first(:facebook_id => user_json["id"])
-    if @user.nil?
+    @user = User.first(:facebook_id => user_json["id"]) ||
+            User.first(:email => user_json["email"])
+    if @user.nil? || @user.facebook_id.nil?
       if logged_in? && (token = cookies.delete("merge_token"))
         @user = User.first(:merge_token => token)
 
@@ -39,13 +43,18 @@ class OauthController < ApplicationController
                               :birthday => Time.zone.parse(user_json["birthday"]),
                               :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
                               :login => user_json["name"],
-                              :timezone => ActiveSupport::TimeZone[user_json["timezone"]]
+                              :timezone => ActiveSupport::TimeZone[user_json["timezone"]],
+                              :email => user_json["email"]
                             ))
 
         if @user.errors.on(:login)
           @user.login = "#{@user.login}_fb"
           @user.save
         end
+      elsif @user.facebook_id.nil?
+        @user.set(atts)
+        @user.facebook_id = user_json["id"]
+        @user.facebook_profile = user_json["link"]
       end
     end
 
