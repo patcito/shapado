@@ -37,12 +37,14 @@ en:
     by: by
     current: current
     previous: previous
+    share: share
   feeds:
     question: subscribe to this question
     questions: subscribe to all questions
     tag: subscribe to tag
     user: subscribe to user questions
     feed: Feed
+    share_on_twitter: "post new questions to twitter, facebook and more..."
   languages:
     en:      english
     es:      spanish

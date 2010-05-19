@@ -37,12 +37,14 @@ pt-PT:
     by: by
     current: current
     previous: previous
+    share: share
   feeds:
     question: subscrever a esta pergunta
     questions: subscrever a todas as perguntas
     tag: subscrever À tag
     user: subscrever Às perguntas do utilizador
     feed: Feed
+    share_on_twitter: "post new questions to twitter, facebook and more..."
   languages:
     en:      inglês
     es:      espanhol

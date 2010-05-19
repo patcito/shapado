@@ -37,12 +37,14 @@ es-AR:
     by: por
     current: actual
     previous: anterior
+    share: compartir
   feeds:
     question: subscribirse a esta pregunta
     questions: subscribirse a todas las preguntas
     tag: subscribirse al tag
     user: subscribirse a las preguntas del usuario
     feed: Flujo
+    share_on_twitter: "publicar nuevas preguntas a twitter, facebook y mas..."
   languages:
     en:      inglés
     es:      español

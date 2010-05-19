@@ -23,6 +23,10 @@
           = gravatar @user.email.to_s, :size => 128
           =link_to t("users.form.avatar_tip"), "http://gravatar.com", :target => "_blank"
 
+  .block
+    .inner{:style => "font-weight: bold"}
+      =link_to t("feeds.share_on_twitter"), "http://dlvr.it?feedurl=#{URI.escape(user_url(@user, :format => :atom))}", :rel => "nofollow", :target => "_blank"
+
 - @user.password = @user.password_confirmation = nil
 = error_messages_for :user
 - form_for @user, :html => {:class => "form"} do |f|
