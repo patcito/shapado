@@ -8,6 +8,7 @@ javascripts:
   - jquery.autocomplete
   - jquery.textarea
   - jquery.wysiwyg
+  - jquery.fcbkcomplete
   - showdown
   - jquery.notifyBar
   - components/search

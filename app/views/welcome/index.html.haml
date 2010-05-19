@@ -42,11 +42,17 @@
           .group
             .pointer
             =f.text_area :title, :class => "text_area", :id => "question_title"
-          %span#tags.group
-            =t(:tags, :scope => "activerecord.attributes.question")
-            =f.text_field :tags, :class => "text_field autocomplete_for_tags"
+
           = f.hidden_field :language, :value => lang
-          =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
+
+          #tags
+            .group.left{:style => "width: 86%"}
+              %span
+                =t(:tags, :scope => "activerecord.attributes.question")
+              =f.text_field :tags, :class => "text_field autocomplete_for_tags", :style => "display: inline"
+            #qqsubmit.left{:style => "width: 14%"}
+              =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
+          .clear
       .clear
   %ul.items#related_questions
     %li

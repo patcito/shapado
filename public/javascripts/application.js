@@ -77,19 +77,11 @@ $(document).ready(function() {
 })
 
 function initAutocomplete(){
-  $('.autocomplete_for_tags').autocomplete('/questions/tags_for_autocomplete.js', {
-      multiple: true,
-      delay: 200,
-      max: 10,
-      selectFirst: false,
-      extraParams: {'format' : 'js'},
-      formatResult: function(data, value) {
-        return value.split(";")[0];
-      },
-      formatItem: function(data, i, n, value) {
-        row = data[0].split(";")
-        return row[0]+" "+row[1]
-      }
+  $('.autocomplete_for_tags').fcbkcomplete({
+    json_url: '/questions/tags_for_autocomplete.js',
+    firstselected: true,
+    delay: 200,
+    maxitimes: 6
   });
 }
 
