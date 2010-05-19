@@ -9,14 +9,24 @@ class OauthController < ApplicationController
     # http://developers.facebook.com/docs/authentication/
     redirect_to client.web_server.authorize_url(
       :redirect_uri => oauth_callback_url,
-      :scope=>'sms,offline_access,publish_stream,email'
+      :scope=>'offline_access,publish_stream,email'
     )
   end
 
   def callback
-    access_token = client.web_server.get_access_token(
-      params[:code], :redirect_uri => oauth_callback_url
-    )
+    access_token = nil
+    begin
+      access_token = client.web_server.get_access_token(
+        params[:code], :redirect_uri => oauth_callback_url
+      )
+    rescue OAuth2::HTTPError
+    end
+
+    if access_token.nil?
+      flash[:notice] = "Cannot authenticate you"
+      redirect_to root_path
+      return
+    end
 
     user_json = access_token.get('/me')
     # in reality you would at this point store the access_token.token value as well as
@@ -26,15 +36,16 @@ class OauthController < ApplicationController
     atts = {:facebook_id => user_json["id"],
             :facebook_profile => user_json["link"]}
 
-    @user = User.first(:facebook_id => user_json["id"]) ||
-            User.first(:email => user_json["email"])
-    if @user.nil? || @user.facebook_id.nil?
+    @user = User.first(:facebook_id => user_json["id"])
+    if @user.nil?
       if logged_in? && (token = cookies.delete("merge_token"))
         @user = User.first(:merge_token => token)
 
         @user.set(atts)
         @user.facebook_id = user_json["id"]
         @user.facebook_profile = user_json["link"]
+      else
+        @user = User.first(:email => user_json["email"])
       end
 
       if @user.nil?
