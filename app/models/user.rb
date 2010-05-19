@@ -329,12 +329,20 @@ Time.zone.now ? 1 : 0)
   def update_reputation(key, group)
     value = group.reputation_rewards[key.to_s].to_i
     value = key if key.kind_of?(Integer)
-
     Rails.logger.info "#{self.login} received #{value} points of karma by #{key} on #{group.name}"
+    current_reputation = config_for(group).reputation
 
     if value
       collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.reputation" => value}}, {:upsert => true})
     end
+
+    stats = self.reputation_stats(group, { :select => [:_id] })
+    stats.save if stats.new?
+
+    event = ReputationEvent.new(:time => Time.now, :event => key,
+                                :reputation => current_reputation,
+                                :delta => value )
+    ReputationStat.collection.update({:_id => stats.id}, {:$addToSet => {:events => event.attributes}})
   end
 
   def localize(ip)
@@ -436,8 +444,17 @@ Time.zone.now ? 1 : 0)
     if config.nil? && init
       config = self.membership_list[group] = Membership.new(:group_id => group)
     end
-
     config
+  end
+
+  def reputation_stats(group, options = {})
+    if group.kind_of?(Group)
+      group = group.id
+    end
+    default_options = { :user_id => self.id,
+                        :group_id => group}
+    stats = ReputationStat.first(default_options.merge(options)) ||
+            ReputationStat.new(default_options)
   end
 
   def has_flagged?(flaggeable)
