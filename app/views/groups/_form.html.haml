@@ -112,9 +112,3 @@
 -else
   = form.hidden_field :language, :value => (AppConfig.default_language || 'en')
 
--if !@group.new?
-  %h2
-    =t("global.share")
-  .group{:style => "font-weight: bold"}
-    =link_to t("feeds.share_on_twitter"), "http://dlvr.it?feedurl=#{URI.escape(questions_url(:format => :atom))}", :rel => "nofollow", :target => "_blank"
-

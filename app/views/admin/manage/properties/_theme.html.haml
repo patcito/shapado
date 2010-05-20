@@ -27,3 +27,6 @@
   -custom_css = ""
   -@group.has_custom_css? ? custom_css = @group.custom_css.read : custom_css = ""
   = f.text_area :custom_css, :value => custom_css, :class => "text_area"
+
+.group.navform
+  = f.submit t('scaffold.update')

@@ -13,6 +13,8 @@ es-AR:
       properties:
         general:
           title: propiedades del grupo
+        share:
+          title: compartir
         constrains:
           title: restricciónes
           reputation_constrains_subtitle: lista de las restricciónes de repotación por acción

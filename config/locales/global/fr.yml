@@ -44,7 +44,8 @@ fr:
     tag: souscrite au tag
     user:  inscrivez-vous aux questions de l'utilisateur
     feed: Flux
-    share_on_twitter: "poster les nouvelles questions à twitter, facebook et plus..."
+    post_new_questions: poster les nouvelles questions à
+    share_on_twitter: "twitter, facebook et plus..."
   languages:
     en:      anglais
     es:      espagnol

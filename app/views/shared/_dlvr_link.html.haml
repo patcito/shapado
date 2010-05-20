@@ -1,0 +1,5 @@
+-form_tag "http://app.dlvr.it/getstarted", :target => "_blank", :class => "form share_content" do
+  =hidden_field_tag "feedurl", url
+  %label.label
+    =t("feeds.post_new_questions")
+  =submit_tag t("feeds.share_on_twitter"), :class => "submit_button"

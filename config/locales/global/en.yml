@@ -44,7 +44,8 @@ en:
     tag: subscribe to tag
     user: subscribe to user questions
     feed: Feed
-    share_on_twitter: "post new questions to twitter, facebook and more..."
+    post_new_questions: post new questions to
+    share_on_twitter: "twitter, facebook and more..."
   languages:
     en:      english
     es:      spanish

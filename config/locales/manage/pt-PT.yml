@@ -12,6 +12,8 @@ pt-PT:
       properties:
         general:
           title: group properties
+        share:
+          title: share
         constrains:
           title: constrains
           reputation_constrains_subtitle: list of reputations constrains for each action

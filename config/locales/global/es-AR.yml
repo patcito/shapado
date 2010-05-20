@@ -44,7 +44,8 @@ es-AR:
     tag: subscribirse al tag
     user: subscribirse a las preguntas del usuario
     feed: Flujo
-    share_on_twitter: "publicar nuevas preguntas a twitter, facebook y mas..."
+    post_new_questions: publicar nuevas preguntas a
+    share_on_twitter: "twitter, facebook y mas..."
   languages:
     en:      inglés
     es:      español
