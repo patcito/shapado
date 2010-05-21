@@ -13,7 +13,7 @@ fr:
         general:
           title: propriétés du groupe
         share:
-          title: share
+          title: partagez
         constrains:
           title: constraintes
           reputation_constrains_subtitle: liste des contraintes pour chaque action
