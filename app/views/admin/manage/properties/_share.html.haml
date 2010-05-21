@@ -1,4 +1,6 @@
 -content_for :after_form do
+  %h1
+    Share
   = render :partial => "shared/dlvr_link", :locals => {:url => questions_url(:format => :atom)}
 
 %h1
@@ -22,22 +24,20 @@
 .group
   Start with
   .right
-    = text_field_tag 'group[share][fb_start_with]', nil, :class => "text_field", :style => "width: 25%"
+    = text_field_tag 'group[share][fb_starts_with]', @group.share.fb_starts_with, :class => "text_field", :style => "width: 25%"
   .description
-    ==ie. #shapado
+    ==ie. #qa
 .group
   End with
   .right
-    = text_field_tag 'group[share][fb_end_with]', nil, :class => "text_field", :style => "width: 25%"
+    = text_field_tag 'group[share][fb_end_with]', @group.share.fb_end_with, :class => "text_field", :style => "width: 25%"
   .description
-    ==ie. .org
+    ==ie. #shapado
 %h1
   Asking from
 .group
   question asked to @
   = text_field_tag 'group[share][fb_question_asked]', nil, :class => "text_field", :style => "width: 10%"
-%h1
-  Share
 
-
-
+.group.navform
+  = f.submit t('scaffold.update')

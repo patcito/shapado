@@ -7,5 +7,5 @@ class Share
   key :fb_starts_with, String
   key :fb_end_with, String
   key :fb_question_asked, String
-  key :fb_active, Boolean
+  key :fb_active, Boolean, :default => false
 end
