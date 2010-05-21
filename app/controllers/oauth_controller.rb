@@ -49,9 +49,9 @@ class OauthController < ApplicationController
       end
 
       if @user.nil?
+        atts[:birthday] = Time.zone.parse(user_json["birthday"]) if user_json["birthday"]
         @user = User.create(atts.merge(
                               :website => user_json["link"],
-                              :birthday => Time.zone.parse(user_json["birthday"]),
                               :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
                               :login => user_json["name"],
                               :timezone => ActiveSupport::TimeZone[user_json["timezone"]],
