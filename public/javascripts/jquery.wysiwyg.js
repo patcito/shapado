@@ -1,5 +1,5 @@
 /**
- * WYSIWYG - jQuery plugin 0.7
+ * WYSIWYG - jQuery plugin 0.8
  *
  * Copyright (c) 2008-2009 Juan M Martinez
  * http://plugins.jquery.com/project/jWYSIWYG
@@ -628,6 +628,15 @@
                 }
         });
 
+        var addHoverClass = function()
+        {
+                $(this).addClass('wysiwyg-button-hover');
+        };
+        var removeHoverClass = function()
+        {
+                $(this).removeClass('wysiwyg-button-hover');
+        };
+
         $.extend(Wysiwyg.prototype, {
                 original: null,
                 options: {
@@ -653,7 +662,7 @@
                 },
                 focus: function ()
                 {
-                        $(this.editorDoc.body).focus();
+                        this.editor.get(0).contentWindow.focus();
                 },
 
                 init: function (element, options)
@@ -1050,8 +1059,7 @@
                         var self = this;
                         args = args || [];
 
-                        $('<li></li>').append(
-                        $('<a role="menuitem" tabindex="-1" href="javascript:;">' + (className || cmd) + '</a>').addClass(className || cmd).attr('title', tooltip)).click(function ()
+                        $('<li role="menuitem" UNSELECTABLE="on">' + (className || cmd) + '</li>').addClass(className || cmd).attr('title', tooltip).hover(addHoverClass, removeHoverClass).click(function ()
                         {
                                 if (fn)
                                 {
