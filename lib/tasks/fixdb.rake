@@ -8,9 +8,9 @@ namespace :fixdb do
 
     Badge.set({:token => "tutor"}, {:type => "bronze"})
 
-    User.find_each do |user|
+    User.find_each(:select => ["membership_list"]) do |user|
       user.membership_list.each do |group_id, membership|
-        if membership["last_activity_at"].nil?
+        if membership["last_activity_at"].nil? && membership["reputation"] == 0
           user.unset(:"membership_list.#{group_id}")
         else
           gold_count = user.badges.count(:group_id => group_id, :type => "gold")
