@@ -90,9 +90,9 @@ class GroupsController < ApplicationController
     @group.owner = current_user
     @group.state = "active"
 
-    @group.widgets << TagCloudWidget.create(:position => 0)
-    @group.widgets << TopUsersWidget.create(:position => 1)
-    @group.widgets << BadgesWidget.create(:position => 2)
+    @group.widgets << TagCloudWidget.new
+    @group.widgets << TopUsersWidget.new
+    @group.widgets << BadgesWidget.new
 
     respond_to do |format|
       if @group.save
