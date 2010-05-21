@@ -1,19 +1,25 @@
 require 'mm-paginate'
 
 db_file = File.join(Rails.root, "/config/database.yml")
+ok = false
 if File.exist?(db_file)
-  db_config = YAML::load(File.read(db_file))
+  puts ">> Loading db config from #{db_file} in #{Rails.env} environment..."
+  db_config = YAML.load_file(db_file)
 
-  if mongo_config = db_config[Rails.env]
-    MongoMapper.connection = Mongo::Connection.new(mongo_config['hostname'],
+  if db_config.include?(Rails.env) && (mongo_config = db_config[Rails.env])
+    MongoMapper.connection = Mongo::Connection.new(mongo_config['host'],
                                                    mongo_config['port'] || 27017,
                                                   :logger => Rails.logger)
     MongoMapper.database = mongo_config['database']
+    ok = true
   end
-else
+end
+
+if !ok
   MongoMapper.connection = Mongo::Connection.new(nil, nil, :auto_reconnect => true, :logger => Rails.logger)
   MongoMapper.database = "shapado-#{Rails.env}"
 end
+
 
 MongoMapperExt.init
 
