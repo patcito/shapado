@@ -12,6 +12,11 @@ $(document).ready(function() {
           $('.retag').hide();
           link.parents(".tag-list").prepend(data.html);
           initAutocomplete();
+          $('.autocomplete_for_tags')
+          var tags = $('.autocomplete_for_tags').val().split(',')
+          $.each(tags, function(i,n){
+            $('.autocomplete_for_tags').trigger("addItem", {"title": $.trim(n), "value": $.trim(n)});
+          })
         } else {
             showMessage(data.message, "error");
             if(data.status == "unauthenticate") {

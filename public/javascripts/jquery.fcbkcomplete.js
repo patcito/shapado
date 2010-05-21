@@ -314,7 +314,9 @@ jQuery(function($){
 
             function addMembers(etext, data){
                 feed.html('');
-
+                if(typeof(data[0])=='undefined'){
+                    data = ([{"value":etext,"caption":etext+" (0)"}, data]);
+                }
                 if (!options.cache && data != null) {
                     cache = new Array();
                     search_string = "";
