@@ -217,7 +217,7 @@ Time.zone.now ? 1 : 0)
   end
 
   def role_on(group)
-    config_for(group).role
+    config_for(group, false).role
   end
 
   def owner_of?(group)
@@ -356,7 +356,7 @@ Time.zone.now ? 1 : 0)
   end
 
   def reputation_on(group)
-    config_for(group).reputation.to_i
+    config_for(group, false).reputation.to_i
   end
 
   def stats(*extra_fields)
@@ -441,8 +441,12 @@ Time.zone.now ? 1 : 0)
     end
 
     config = self.membership_list[group]
-    if config.nil? && init
-      config = self.membership_list[group] = Membership.new(:group_id => group)
+    if config.nil?
+      if init
+        config = self.membership_list[group] = Membership.new(:group_id => group)
+      else
+        config = Membership.new(:group_id => group)
+      end
     end
     config
   end
