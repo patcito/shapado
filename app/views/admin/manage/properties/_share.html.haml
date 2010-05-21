@@ -1,2 +1,43 @@
 -content_for :after_form do
   = render :partial => "shared/dlvr_link", :locals => {:url => questions_url(:format => :atom)}
+
+%h1
+  Facebook App
+.group
+  Application id
+  .right
+    = text_field_tag 'group[share][fb_app_id]', @group.share.fb_app_id, :class => "text_field", :style => "width: 25%"
+.group
+  Secret key
+  .right
+    = text_field_tag 'group[share][fb_secret_key]',  @group.share.fb_secret_key, :class => "text_field", :style => "width: 25%"
+.group
+  .right
+    = check_box_tag 'group[share][fb_active]', @group.share.fb_active, :class => "checkbox"
+    active
+  .clear
+
+%h1
+  Share Prefix-Suffix
+.group
+  Start with
+  .right
+    = text_field_tag 'group[share][fb_start_with]', nil, :class => "text_field", :style => "width: 25%"
+  .description
+    ==ie. #shapado
+.group
+  End with
+  .right
+    = text_field_tag 'group[share][fb_end_with]', nil, :class => "text_field", :style => "width: 25%"
+  .description
+    ==ie. .org
+%h1
+  Asking from
+.group
+  question asked to @
+  = text_field_tag 'group[share][fb_question_asked]', nil, :class => "text_field", :style => "width: 10%"
+%h1
+  Share
+
+
+
