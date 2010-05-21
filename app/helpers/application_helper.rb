@@ -122,6 +122,7 @@ module ApplicationHelper
   def render_page_links(text, options = {})
     group = options[:group]
     group = current_group if group.nil?
+    in_controller = respond_to?(:logged_in?)
 
     text.gsub!(/\[\[([^\,\[\'\"]+)\]\]/) do |m|
       link = $1.split("|", 2)
@@ -135,18 +136,22 @@ module ApplicationHelper
       end
     end
 
+    return text if !in_controller
+
     text.gsub(/%(\S+)%/) do |m|
       case $1
         when 'site'
-          current_group.domain
+          group.domain
         when 'site_name'
-          current_group.name
+          group.name
         when 'current_user'
           if logged_in?
-            current_user.login
+            link_to(current_user.login, user_path(current_user))
+          else
+            "anonymous"
           end
         when 'hottest_today'
-          question = Question.first(:activity_at.gt => Time.zone.now.yesterday, :order => "hotness desc, views_count asc", :group_id => current_group.id, :select => [:slug, :title])
+          question = Question.first(:activity_at.gt => Time.zone.now.yesterday, :order => "hotness desc, views_count asc", :group_id => group.id, :select => [:slug, :title])
           if question.present?
             link_to(question.title, question_path(question))
           end
