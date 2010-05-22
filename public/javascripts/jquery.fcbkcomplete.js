@@ -64,6 +64,7 @@
  * onremove			- fire event on item remove
  * maxitimes		- maximum items that can be added
  * delay			- delay between ajax request (bigger delay, lower server time request)
+ * width			- custom width
  */
 jQuery(function($){
     $.fn.fcbkcomplete = function(opt){
@@ -75,7 +76,7 @@ jQuery(function($){
             }
 
             function createFCBK(){
-                var elementw = element.width();
+                var elementw = options.width || element.width();
                 element.hide();
                 element.attr("multiple", "multiple");
                 if (element.attr("name").indexOf("[]") == -1) {
@@ -89,8 +90,8 @@ jQuery(function($){
 
                 complete = $(document.createElement("div"));
                 complete.addClass("facebook-auto");
+                complete.offset({left: $('ul.holder').offset().left})
                 complete.append('<div class="default">' + options.complete_text + "</div>");
-
                 if (browser_msie) {
                     complete.append('<iframe class="ie6fix" scrolling="no" frameborder="0"></iframe>');
                     browser_msie_frame = complete.children('.ie6fix');
@@ -581,12 +582,13 @@ jQuery(function($){
                 firstselected: false,
                 filter_case: false,
                 filter_hide: false,
-                complete_text: "Start to type...",
+                complete_text: "Start to typing...",
                 maxshownitems: 30,
                 maxitems: 10,
                 onselect: "",
                 onremove: "",
-				delay: 350
+		delay: 350,
+                width: null
             }, opt);
 
             //system variables
