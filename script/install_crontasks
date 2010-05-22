@@ -7,3 +7,6 @@ APP_ROOT = File.expand_path(File.dirname(__FILE__) + "/../")
 
 daily_report = "#{APP_ROOT}/script/daily_report production"
 CronEdit::Crontab.Add  'daily_report', {:hour => "2", :minute=> "50",:weekday => "7",  :command => daily_report}
+
+cleanup = "#{APP_ROOT}/script/cleanup production"
+CronEdit::Crontab.Add  'cleanup', {:hour => "2", :minute=> "50", :weekday => "4",  :command => cleanup}

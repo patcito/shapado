@@ -103,9 +103,13 @@ class Question
     Question.paginate(opts.merge(:_keywords => {:$in => question.tags}, :_id => {:$ne => question.id}))
   end
 
-  def viewed!
-    self.collection.update({:_id => self._id}, {:$inc => {:views_count => 1}},
-                                              :upsert => true)
+  def viewed!(ip)
+    view_count_id = "#{self.id}-#{ip}"
+    if ViewsCount.find(view_count_id).nil?
+      ViewsCount.create(:_id => view_count_id)
+      self.collection.update({:_id => self._id}, {:$inc => {:views_count => 1}},
+                                                :upsert => true)
+    end
   end
 
   def answer_added!
