@@ -14,7 +14,7 @@
     Secret key
   = text_field_tag 'group[share][fb_secret_key]',  @group.share.fb_secret_key, :class => "text_field"
 .group
-  = check_box_tag 'group[share][fb_active]', @group.share.fb_active, :class => "checkbox"
+  = check_box_tag 'group[share][fb_active]', true, @group.share.fb_active, :class => "checkbox"
   %label.radio
     active
 
@@ -23,23 +23,23 @@
 .group
   %label.label
     Starts with
-  = text_field_tag 'group[share][starts_with]', @group.share.fb_starts_with, :class => "text_field"
+  = text_field_tag 'group[share][starts_with]', @group.share.starts_with, :class => "text_field"
   .description
     ==ie. #qa
 .group
   %label.label
     Ends with
-  = text_field_tag 'group[share][ends_with]', @group.share.fb_end_with, :class => "text_field"
+  = text_field_tag 'group[share][ends_with]', @group.share.ends_with, :class => "text_field"
   .description
     ==ie. #shapado
-%h1
-  Asking from
 
+%h1
+  Asking from twitter
 .group
   %label.label
     question asked to
   @
-  = text_field_tag 'group[share][twitter_user]', nil, :class => "text_field", :style => "width: 10%"
+  = text_field_tag 'group[share][twitter_user]', @group.share.twitter_user, :class => "text_field", :style => "width: 10%"
   .description
     a twitter account
 

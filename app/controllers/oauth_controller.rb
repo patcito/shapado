@@ -1,5 +1,12 @@
 class OauthController < ApplicationController
   def start
+    if !current_group.share.fb_active &&
+        request.host !~ Regexp.new("#{AppConfig.domain}$", Regexp::IGNORECASE)
+      flash[:error] = "facebook integration is not enabled"
+      redirect new_session_path(:user)
+      return
+    end
+
     if logged_in? && params[:merge]
       merge_token = cookies[:merge_token] = ActiveSupport::SecureRandom.hex(12)
       current_user.set({:merge_token => merge_token})
@@ -79,8 +86,15 @@ class OauthController < ApplicationController
   protected
 
   def client
+    app_id = AppConfig.facebook["key"]
+    secret = AppConfig.facebook["secret"]
+    if current_group.share.fb_active
+      app_id = current_group.share.fb_app_id
+      secret = current_group.share.fb_secret_key
+    end
+
     @client ||= OAuth2::Client.new(
-      AppConfig.facebook["key"], AppConfig.facebook["secret"], :site => 'https://graph.facebook.com'
+      app_id, secret, :site => 'https://graph.facebook.com'
     )
   end
 end
