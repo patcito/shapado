@@ -79,7 +79,7 @@ class TwitterController < ApplicationController
   def share
     @question = current_group.questions.by_slug(params[:question_id], :select => [:title, :slug])
     url = question_url(@question)
-    text = "#{@question.title} - #{url}"
+    text = "#{current_group.share.starts_with} #{@question.title} - #{url} #{current_group.share.ends_with}"
 
     Magent.push("actors.judge", :post_to_twitter, current_user.id, text)
 
