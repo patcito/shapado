@@ -46,7 +46,7 @@ class Group
   key :has_custom_js, Boolean, :default => true
   key :fb_button, Boolean, :default => true
 
-  key :logo_info, Hash, :default => {:width => 215, :height => 60}
+  key :logo_info, Hash, :default => {"width" => 215, "height" => 60}
 
   file_key :logo, :max_length => 2.megabytes
   file_key :custom_css, :max_length => 256.kilobytes
