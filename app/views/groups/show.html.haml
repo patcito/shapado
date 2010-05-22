@@ -34,15 +34,3 @@
         = link_to t(".accept_group_with_custom_ads"), accept_group_path(@group, :has_custom_ads => true)
       -if current_user.can_modify?(@group) && @group.state == "active"
         = link_to t(".close_group"), close_group_path(@group)
-
-%h3= t("models.comments")
-.comments
-  -@comments.each do |comment|
-    = render :partial => "comments/comment", :object => comment, :locals => {:source => group_path(@group)}
-  = will_paginate @comments
-  -if logged_in?
-    -form_tag comments_path, :class => "form" do
-      = render :partial => "comments/form", :locals => {:source => group_path(@group), :commentable => @group}
-      .group.navform
-        = submit_tag t("scaffold.create")
-

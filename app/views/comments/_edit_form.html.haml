@@ -1,4 +1,5 @@
--form_for @comment, :html => {:class => "form"} do
+
+-form_for full_scope+[@comment], :html => {:class => "form"} do
   = render :partial => "comments/form", :locals => local_assigns
   .group.navform
     = submit_tag t("scaffold.update")

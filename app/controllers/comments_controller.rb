@@ -1,12 +1,12 @@
 class CommentsController < ApplicationController
   before_filter :login_required
+  before_filter :find_scope
   before_filter :check_permissions, :except => [:create]
 
   def create
     @comment = Comment.new
     @comment.body = params[:body]
-    @comment.commentable_type = params[:commentable_type]
-    @comment.commentable_id = params[:commentable_id]
+    @comment.commentable = scope
     @comment.user = current_user
     @comment.group = current_group
 
@@ -49,9 +49,8 @@ class CommentsController < ApplicationController
     end
   end
 
-
   def edit
-    @comment = Comment.find(params[:id])
+    @comment = current_scope.find(params[:id])
     respond_to do |format|
       format.html
       format.js do
@@ -89,7 +88,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
+    @comment = scope.comments.find(params[:id])
     @comment.destroy
 
     respond_to do |format|
@@ -100,8 +99,7 @@ class CommentsController < ApplicationController
 
   protected
   def check_permissions
-    @comment = Comment.find!(params[:id])
-
+    @comment = current_scope.find(params[:id])
     valid = false
     if params[:action] == "destroy"
       valid = @comment.can_be_deleted_by?(current_user)
@@ -119,4 +117,31 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def current_scope
+    scope.comments
+  end
+
+  def find_scope
+    @question = Question.by_slug(params[:question_id])
+    @answer = @question.answers.find(params[:answer_id]) unless params[:answer_id].blank?
+  end
+
+  def scope
+    unless @answer.nil?
+      @answer
+    else
+      @question
+    end
+  end
+
+  def full_scope
+    unless @answer.nil?
+      [@question, @answer]
+    else
+      [@question]
+    end
+  end
+  helper_method :full_scope
+
 end
