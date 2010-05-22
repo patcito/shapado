@@ -23,13 +23,13 @@
 .group
   %label.label
     Starts with
-  = text_field_tag 'group[share][fb_starts_with]', @group.share.fb_starts_with, :class => "text_field"
+  = text_field_tag 'group[share][starts_with]', @group.share.fb_starts_with, :class => "text_field"
   .description
     ==ie. #qa
 .group
   %label.label
     Ends with
-  = text_field_tag 'group[share][fb_end_with]', @group.share.fb_end_with, :class => "text_field"
+  = text_field_tag 'group[share][ends_with]', @group.share.fb_end_with, :class => "text_field"
   .description
     ==ie. #shapado
 %h1
@@ -39,7 +39,7 @@
   %label.label
     question asked to
   @
-  = text_field_tag 'group[share][fb_question_asked]', nil, :class => "text_field", :style => "width: 10%"
+  = text_field_tag 'group[share][twitter_user]', nil, :class => "text_field", :style => "width: 10%"
   .description
     a twitter account
 
