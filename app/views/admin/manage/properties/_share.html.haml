@@ -6,38 +6,42 @@
 %h1
   Facebook App
 .group
-  Application id
-  .right
-    = text_field_tag 'group[share][fb_app_id]', @group.share.fb_app_id, :class => "text_field", :style => "width: 25%"
+  %label.label
+    Application id
+  = text_field_tag 'group[share][fb_app_id]', @group.share.fb_app_id, :class => "text_field"
 .group
-  Secret key
-  .right
-    = text_field_tag 'group[share][fb_secret_key]',  @group.share.fb_secret_key, :class => "text_field", :style => "width: 25%"
+  %label.label
+    Secret key
+  = text_field_tag 'group[share][fb_secret_key]',  @group.share.fb_secret_key, :class => "text_field"
 .group
-  .right
-    = check_box_tag 'group[share][fb_active]', @group.share.fb_active, :class => "checkbox"
+  = check_box_tag 'group[share][fb_active]', @group.share.fb_active, :class => "checkbox"
+  %label.radio
     active
-  .clear
 
 %h1
-  Share Prefix-Suffix
+  == Share Prefix / Suffix
 .group
-  Start with
-  .right
-    = text_field_tag 'group[share][fb_starts_with]', @group.share.fb_starts_with, :class => "text_field", :style => "width: 25%"
+  %label.label
+    Starts with
+  = text_field_tag 'group[share][fb_starts_with]', @group.share.fb_starts_with, :class => "text_field"
   .description
     ==ie. #qa
 .group
-  End with
-  .right
-    = text_field_tag 'group[share][fb_end_with]', @group.share.fb_end_with, :class => "text_field", :style => "width: 25%"
+  %label.label
+    Ends with
+  = text_field_tag 'group[share][fb_end_with]', @group.share.fb_end_with, :class => "text_field"
   .description
     ==ie. #shapado
 %h1
   Asking from
+
 .group
-  question asked to @
+  %label.label
+    question asked to
+  @
   = text_field_tag 'group[share][fb_question_asked]', nil, :class => "text_field", :style => "width: 10%"
+  .description
+    a twitter account
 
 .group.navform
   = f.submit t('scaffold.update')
