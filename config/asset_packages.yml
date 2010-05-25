@@ -26,6 +26,7 @@ javascripts:
   - modules/members
   - modules/move_group
   - openid/js/jquery.openid.min
+  - modules/single/question
 stylesheets:
 - base:
   - jquery-ui
