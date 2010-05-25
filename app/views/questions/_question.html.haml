@@ -55,7 +55,7 @@
           -if question.tags.empty? && logged_in? && (current_user.can_modify?(@question) || current_user.can_retag_others_questions_on?(current_group))
             %span.retag
               = link_to t('questions.show.retag'), retag_question_path(question), :id => 'retag', :class => "important"
-          -question.tags.each do |tag|
+          -question.first_tags.each do |tag|
             %span.tag{:class => "tag_#{h(tag)}"}
               = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag", :title => t("questions.tags.tooltip", :tag => tag)
 

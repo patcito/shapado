@@ -30,7 +30,7 @@
       = link_to h(question.title), question_path(question), :title => truncate(question.body, :length => 200)
 
     .tag-list.left
-      -question.tags.each do |tag|
+      -question.first_tags.each do |tag|
         %span.tag{:class => "tag_#{h(tag)}"}
           = link_to h(tag), url_for(:controller => "questions", :action => "index", :tags => tag), :rel => "tag"
     .right
