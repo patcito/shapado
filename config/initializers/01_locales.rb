@@ -2,6 +2,7 @@ I18n.backend.store_translations 'es-AR', {}
 I18n.backend.store_translations 'en', {}
 I18n.backend.store_translations 'fr', {}
 I18n.backend.store_translations 'pt-PT', {}
+I18n.backend.store_translations 'el', {}
 
 I18n.load_path << Dir[ File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,yml}') ]
 
