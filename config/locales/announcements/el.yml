@@ -1,0 +1,18 @@
+el:
+  announcements:
+    index:
+      title: ανακοινώσεις
+    create:
+      success: 'η ανακοίνωση δημιουργήθηκε επιτυχώς.'
+    form:
+    actions:
+      title: ενέργειες
+      delete: κατάργηση
+
+  activerecord:
+    attributes:
+      announcement:
+        message: μήνυμα
+        starts_at: έναρξη
+        ends_at: λήξη
+        only_anonymous: μόνο για ανώνυμους χρήστες

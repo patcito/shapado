@@ -1,0 +1,12 @@
+el:
+  admin:
+    moderate:
+      index:
+        title: moderate
+        ban: απαγόρευση
+        content: περιεχόμενο
+        item_title: τίτλος
+        all: όλα
+        flagged: αναφερόμενες ερωτήσεις
+        banned: απαγορευμένες ερωτήσεις
+        need_tags: αλλαγή ετικετών

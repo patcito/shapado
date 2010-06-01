@@ -1,0 +1,82 @@
+el:
+  users:
+    index:
+      title: όλα τα μέλη
+      empty: "αυτή η ομάδα δεν έχει μέλη, συμμετάσχετε σ' αυτήν."
+      filter: "αναζήτηση μελών"
+      reputation: υπόληψη
+      newest: νεότερα
+      oldest: παλαιότερα
+      name: όνομα
+      reputation_tooltip: μέλη ταξινομημένα ανά υψηλότερη υπόληψη
+      newest_tooltip: μέλη που μόλις γράφτηκαν
+      oldest_tooltip: μέλη που γράφτηκαν πρώτα
+      name_tooltip: μέλη ταξινομημένα αλφαβητικά
+    new:
+      title: εγγραφείτε ως νέο μέλος
+      submit: εγγραφή
+    edit:
+      title: ρυθμίσεις
+      submit: αποθήκευση
+      enable_twitter: ενεργοποιήστε τους λογαριασμούς σας στο facebook ή στο twitter
+    show:
+      title: "Μέλος {{user}}"
+      follow: ακολουθήστε
+      unfollow: μην ακολουθείτε
+    follow:
+      flash_notice: "το μέλος {{user}} προστέθηκε στους φίλους σας"
+    unfollow:
+      flash_notice: "το μέλος {{user}} αφαιρέθηκε από τους φίλους σας"
+    form:
+      information: πληροφορίες
+      notifications: ειδοποιήσεις
+      new_answer_notification: ειδοποίηση μέσω email για νέες απαντήσεις
+      give_advice_notification: ειδοποίηση μέσω email για ερωτήσεις στους τομείς που έχετε εμπειρία
+      activities_notification: ειδοποίηση μέσω email για δραστηριότητες συστήματος όπως απόκτηση τίτλων, νέους οπαδούς, κ.τ.λ.
+      reports_notification: να λαμβάνετε αναφορά για τις πιο πρόσφατες δραστηριότητες μιας ομάδας (μόνο για διαχειριστές ομάδων)
+      avatar_tip: "αλλάξτε την εικόνα του προφίλ σας χρησιμοποιώντας το gravatar"
+    create:
+      flash_notice: "ευχαριστούμε για την εγγραφή σας!"
+      flash_error:  "δεν μπορέσαμε να δημιουργήσουμε εκείνο το λογαριασμό. Παρακαλώ δοκιμάστε ξανά ή επικοινωνήστε με τον διαχειριστή (σύνδεσμος πάνω)."
+    messages:
+      errors:
+        reputation_needed: "χρειάζεστε τουλάχιστον {{min_reputation}} υπόληψη για να {{action}}"
+    actions:
+      vote_up: υπερψηφίσετε
+      vote_down: καταψηφίσετε
+      flag: αναφέρετε
+      edit_others_posts: "επεξεργαστείτε αναρτήσεις άλλων"
+      edit_wiki_post: "επεξεργαστείτε αναρτήσεις wiki"
+      retag_others_questions: "αλλάξετε ετικέτες στις ερωτήσεις άλλων"
+      vote_to_close_own_question: "αιτηθείτε να κλειδώσει δική σας ερώτηση"
+      vote_to_close_any_question: "αιτηθείτε να κλειδώσει ερώτηση άλλων"
+  activerecord:
+    models:
+      users: μέλη
+      user: μέλος
+    attributes:
+      user:
+        login: όνομα χρήστη
+        email: email
+        name: πραγματικό όνομα
+        current_password: τωρινός κωδικός πρόσβασης
+        password: νέος κωδικός πρόσβασης
+        password_confirmation: επιβεβαίωση νέου κωδικού πρόσβασης
+        created_at: δημιουργήθηκε στις
+        updated_at: ενημερώθηκε στις
+        activation_code: κωδικός ενεργοποίησης
+        activated_at: ενεργοποιήθηκε στις
+        fullname: πλήρες όνομα
+        language: γλώσσα
+        asked_by: ερωτήθηκε από
+        timezone: ζώνη ώρας
+        preferred_tags: προτιμώμενες ετικέτες
+        preferred_languages: επιλέξτε τις γλώσσες που ξέρετε
+        last_logged_at: ειδώθηκε
+        created_at: γράφτηκε
+        reputation: υπόληψη
+        avatar: εικόνα προφίλ
+        hide_country: να μην εμφανίζεται η χώρα μου
+        language_filter: γλωσσικό φίλτρο
+        website: ιστότοπος
+        birthday: ημερομηνία γέννησης

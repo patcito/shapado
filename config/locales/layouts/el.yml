@@ -1,0 +1,45 @@
+el:
+  layouts:
+    application:
+      title: "ερωτήσεις & απαντήσεις"
+      questions: ερωτήσεις
+      questions_in: ερωτήσεις στα
+      questions_tagged: με τις ετικέτες
+      ask_question: κάντε ερώτηση
+      tags: ετικέτες
+      users: μέλη
+      badges: τίτλοι
+      unanswered: αναπάντητες
+      pages: σελίδες
+      logout: αποσύνδεση
+      logged: συνδεδεμένοι ως {{login}}
+      search: αναζήτηση
+      forgot: ξεχάσατε;
+      log_in: σύνδεση
+      signup: εγγραφή
+      settings: ρυθμίσεις
+      languages: γλώσσες
+      moderate: moderate
+      manage_ads: διαχείριση διαφημίσεων
+      home: κεντρική
+      subscribe: εγγραφή
+      welcome_from: καλώς ορίσατε! μπορείτε
+      now: τώρα!
+      openid:
+        explaination: "αν θέλετε να εγγραφείτε ή απλώς να συνδεθείτε, παρακαλώ επιλέξτε τον OpenId πάροχο σας:"
+    manage:
+      dashboard: ταμπλό
+      properties: ιδιότητες
+      widgets: widgets
+      actions: ενέργειες
+      stats: στατιστικά
+      members: μέλη
+      reputation: υπόληψη
+      content: περιεχόμενο
+      theme: θέμα
+      domain: domain
+      pages: σελίδες
+      constrains: περιορισμοί
+      rewards: ανταμοιβές
+      general: γενικά
+      announcements: ανακοινώσεις

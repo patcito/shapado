@@ -1,0 +1,12 @@
+el:
+  ads:
+    ad_links: προσθήκη νέας {{type}} διαφήμισης
+    title: προσθήκη νέας {{type}} διαφήμισης
+    name: "όνομα:"
+    position: "θέση:"
+    index:
+      title: διαφημίσεις
+      add_adsense: προσθήκη νέας διαφήμισης google adsense
+      add_adbard: προσθήκη νέας διαφήμισης adbard
+    create:
+      success: "η διαφήμιση δημιουργήθηκε επιτυχώς."

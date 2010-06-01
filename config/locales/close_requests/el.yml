@@ -1,0 +1,27 @@
+el:
+  close_requests:
+    index:
+      title: κατάλογος αιτήσεων κλειδώματος
+    form:
+      dupe: αντίγραφο
+      ot: εκτός θέματος
+      no_question: όχι ερώτηση
+      not_relevant: άσχετο
+      spam: spam
+      request_closing_details: αίτηση για να κλειδωθεί η ερώτηση
+      close_with_reason: κλείδωσε αυτή την ερώτηση με αυτό τον λόγο
+    create:
+      flash_notice: η αίτηση κλειδώματος δημιουργήθηκε επιτυχώς
+    update:
+      flash_notice: η αίτηση κλειδώματος ενημερώθηκε επιτυχώς
+    destroy:
+      flash_notice: η αίτηση κλειδώματος διαγράφηκε επιτυχώς
+    model:
+      name: αίτηση κλειδώματος
+      prural_name: αιτήσεις κλειδώματος
+      messages:
+        already_requested: "έχετε ήδη ζητήσει να κλειδωθεί αυτή η ερώτηση"
+      attributes:
+        user: μέλος
+        reason: αιτία
+        comment: σχόλιο

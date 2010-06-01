@@ -1,0 +1,18 @@
+el:
+  wiki:
+    history:
+      title: "ιστορικό ({{count}})"
+      previous_versions: προηγούμενες εκδόσεις
+      current_version: τρέχουσα έκδοση
+      version: έκδοση
+      version_summary: σύνοψη έκδοσης
+    diff:
+      title: διαφορές μεταξύ {{prev}} και {{curr}}
+    actions:
+      revert: επαναφορά σ' αυτή την έκδοση
+      show_diff: συγκρίνετε τις επιλεγμένες εκδόσεις
+      all_history: πίσω στο ιστορικό
+      back_to_question: πίσω στην ερώτηση
+    model:
+      attributes:
+        message: σύνοψη

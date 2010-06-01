@@ -1,0 +1,17 @@
+el:
+  sessions:
+    create:
+      flash_notice: "συνδεθήκατε επιτυχώς"
+      flash_error: "δεν μπορέσαμε να σας συνδέσουμε ως '{{login}}'"
+    destroy:
+      flash_notice: "έχετε αποσυνδεθεί."
+    new:
+      with_openid: συνδεθείτε με OpenId
+      with_facebook: "συνδεθείτε με το facebook"
+      with_twitter: "συνδεθείτε με το twitter"
+      with_authentication: συνδεθείτε με το δικό μας σύστημα πιστοποίησης
+      registered: "ήδη εγγεγραμμένος/η;"
+      not_registered: "δεν έχετε εγγραφεί ακόμα;"
+      log_in: σύνδεση
+      signup: εγγραφή
+

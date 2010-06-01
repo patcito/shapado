@@ -1,0 +1,10 @@
+el:
+  favorites:
+    create:
+      unauthenticated: "χρειάζεστε λογαριασμό για να προσθέσετε αγαπημένες ερωτήσεις"
+      success:         "η ερώτηση έχει προστεθεί στις αγαπημένες σας"
+
+  activerecord:
+    models:
+      favorites: αγαπημένες
+      favorite: αγαπημένη

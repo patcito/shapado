@@ -1,0 +1,8 @@
+el:
+  shared:
+    topbar:
+      logged_as: "συνδεδεμένοι ως {{login}}"
+      admin: διαχείριση
+      user_page: η σελίδα μου
+    current_tags:
+      title: επιλεγμένες ετικέτες

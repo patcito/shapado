@@ -1,0 +1,16 @@
+el:
+  comments:
+    edit:
+      title: επεξεργασία σχόλιου
+    create:
+      flash_notice: ευχαριστούμε για το σχόλιό σας
+    update:
+      flash_notice: "το σχόλιο ενημερώθηκε επιτυχώς."
+    shared:
+      add_comment: "προσθήκη σχόλιου..."
+      comment_submit: "σχολιασμός"
+      said: είπε
+      reply: απάντησε
+  models:
+    comments: σχόλια
+    comment: σχόλιο

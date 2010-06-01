@@ -1,0 +1,31 @@
+el:
+  pages:
+    title: σελίδες
+    index:
+      title: κατάλογος σελίδων
+      create_page: δημιουργία νέας σελίδας
+      written_in: γραμμένη στα {{language}}
+    edit:
+      title: επεξεργασία σελίδας
+    create:
+      success: 'η σελίδα δημιουργήθηκε επιτυχώς.'
+    update:
+      success: 'η σελίδα ενημερώθηκε επιτυχώς.'
+    new:
+      title: νέα σελίδα
+    form:
+      title_tip: "τίτλος σελίδας, χρησιμοποιήστε τον για να αναφερθείτε στη σελίδα. π.χ: [[FAQ|check out the faq]]"
+      language_tip: γλώσσα σελίδας
+    actions:
+      title: ενέργειες
+      create_page: "δημιουργία νέας σελίδας"
+      edit_page: "επεξεργασία σελίδας"
+
+  activerecord:
+    models:
+      page: σελίδα
+      pages: σελίδες
+    attributes:
+      page:
+        js: javascript
+        css: stylesheets
