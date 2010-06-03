@@ -38,7 +38,7 @@
     -when :footer
       .group
         = form.label "footer", "footer", :class => "label"
-        = text_area_tag "group[custom_html][footer[#{lang}]]", @group.custom_html.footer, :class => "text_area"
+        = text_area_tag "group[custom_html][footer[#{lang}]]", @group.custom_html.footer[lang], :class => "text_area"
     -when :head_tag
       .group
         = form.label "head_tag", h("<head>"), :class => "label"
