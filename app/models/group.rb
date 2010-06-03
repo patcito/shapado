@@ -136,7 +136,6 @@ class Group
   end
 
   def footer
-    return "" unless self.custom_html.footer
     self.custom_html.footer[I18n.locale.to_s.split("-").first] || ""
   end
 
