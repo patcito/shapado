@@ -20,19 +20,19 @@
     =user.reputation_on(current_group)
 
 -if local_assigns[:with_badges] != false
-  -if gold > 0
+  -if gold.to_i > 0
     %span{:title => "#{gold} gold badges"}
       %span.gold.badgeicon
       %span.badgecount
         =gold
 
-  -if silver > 0
+  -if silver.to_i > 0
     %span{:title => "#{silver} silver badges"}
       %span.silver.badgeicon
       %span.badgecount
         =silver
 
-  -if bronze > 0
+  -if bronze.to_i > 0
     %span{:title => "#{bronze} bronze badges"}
       %span.bronze.badgeicon
       %span.badgecount
