@@ -36,9 +36,10 @@
           =form.label "_head[#{lang}]", language_desc(lang), :class => "label"
           =text_area_tag "group[custom_html][head[#{lang}]]", @group.custom_html.head[lang], :class => "text_area"
     -when :footer
-      .group
-        = form.label "footer", "footer", :class => "label"
-        = text_area_tag "group[custom_html][footer[#{lang}]]", @group.custom_html.footer[lang], :class => "text_area"
+      -AVAILABLE_LANGUAGES.sort.each do |lang|
+        .group
+          = form.label "footer", "footer", :class => "label"
+          = text_area_tag "group[custom_html][footer[#{lang}]]", @group.custom_html.footer[lang], :class => "text_area"
     -when :head_tag
       .group
         = form.label "head_tag", h("<head>"), :class => "label"
