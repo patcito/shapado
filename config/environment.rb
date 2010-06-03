@@ -67,3 +67,4 @@ Rails::Initializer.run do |config|
   config.middleware.use "DynamicDomain"
 end
 
+require "smtp_tls"

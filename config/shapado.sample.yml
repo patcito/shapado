@@ -17,6 +17,10 @@ base: &common
   enable_groups: false
   default_language: en
   enable_i18n: false
+  default_timezone: "Tokyo"
+  mail:
+    gmail_user_name: "hogehoge@gmail.com"
+    gmail_password: "hugahuga"
 
   facebook:
     activate: false

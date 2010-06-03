@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    attributes:
+      member:
+        role: "権限"
+  members:
+    index:
+      title: "グループ{{name}}のメンバー"
+      title_isolate: "{{name}}のメンバー"
+      manage_members_title: "メンバーの管理"
+    form:
+      login_tip: "検索します"

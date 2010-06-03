@@ -136,9 +136,30 @@ class Group
   end
 
   def footer
-    self.custom_html.footer
+    return "" unless self.custom_html.footer
+    self.custom_html.footer[I18n.locale.to_s.split("-").first] || ""
   end
 
+  def question_prompt=(value)
+    self.custom_html.question_prompt[I18n.locale.to_s.split("-").first] = value
+  end
+
+  def question_help=(value)
+    self.custom_html.question_help[I18n.locale.to_s.split("-").first] = value
+  end
+
+  def head=(value)
+    self.custom_html.head[I18n.locale.to_s.split("-").first] = value
+  end
+
+  def head_tag=(value)
+    self.custom_html.head_tag = value
+  end
+
+  def footer=(value)
+    self.custom_html.footer[I18n.locale.to_s.split("-").first] = value
+  end
+  
   def tag_list
     TagList.first(:group_id => self.id) || TagList.create(:group_id => self.id)
   end

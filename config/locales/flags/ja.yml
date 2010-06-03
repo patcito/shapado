@@ -1,0 +1,18 @@
+ja:
+  flags:
+    form:
+      spam: "スパム"
+      offensive: "攻撃的または虐待的な内容"
+      attention: "管理者の注意が必要です"
+      label: "以下の報告をします"
+    create:
+      flash_notice: "報告ありがとうございます"
+      flash_error: "この質問には報告できません"
+
+  activerecord:
+    models:
+      flags: "報告"
+      flag: "報告"
+    attributes:
+      flag:
+        type: "理由"

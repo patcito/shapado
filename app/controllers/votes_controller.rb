@@ -1,5 +1,9 @@
 class VotesController < ApplicationController
-  before_filter :check_permissions
+  before_filter :check_permissions, :except => [:index]
+  
+  def index
+    redirect_to(root_path)
+  end
 
   # TODO: refactor
   def create

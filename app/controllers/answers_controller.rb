@@ -45,8 +45,10 @@ class AnswersController < ApplicationController
 
   def show
     @answer = Answer.find(params[:id])
-    raise PageNotFound if @answer.nil?
-
+    if @answer.nil?
+      flash = t("not_found", :scode => "answers.messages.errors")
+      return redirect_to(root_path)
+    end
     @question = @answer.question
     respond_to do |format|
       format.html
@@ -91,11 +93,14 @@ class AnswersController < ApplicationController
                           :select => ["email"]}
 
           users = User.find(@question.watchers, search_opts)
-          users.push(@question.user) if @question.user != current_user
+          # For deleted user.
+          users.push(@question.user) if @question.user != current_user && @question.user && @question.user.is_a?(User)
           followers = []
 
           followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
-
+          # For deleted user.
+          users = [] unless users
+          followers = [] unless followers
           (users - followers).each do |u|
             if !u.email.blank? && u.notification_opts.new_answer
               Notifier.deliver_new_answer(u, current_group, @answer, false)

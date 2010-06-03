@@ -1,0 +1,8 @@
+ja:
+  shared:
+    topbar:
+      logged_as: "{{login}}としてログイン中"
+      admin: "管理者"
+      user_page: "マイページ"
+    current_tags:
+      title: "選択しているタグ"

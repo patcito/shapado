@@ -1,0 +1,28 @@
+ja:
+  close_requests:
+    index:
+      title: "終了申請の一覧"
+    form:
+      dupe: "重複"
+      ot: "主題からずれている"
+      no_question: "質問ではない"
+      not_relevant: "適切でない"
+      spam: "スパム"
+      request_closing_details: "この質問を閉じる申請をする"
+      close_with_reason: "この質問を閉じる際の理由として使う"
+    create:
+      flash_notice: "終了申請しました"
+    update:
+      flash_notice: "終了申請を更新しました"
+    destroy:
+      flash_notice: "終了申請を破棄しました"
+    model:
+      name: "終了申請"
+      prural_name: "終了申請"
+      messages:
+        already_requested: "既に終了申請をしています"
+      attributes:
+        user: "ユーザ"
+        reason: "理由"
+        comment: "コメント"
+

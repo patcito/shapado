@@ -7,7 +7,8 @@ class CustomHtml
   key :question_prompt, Hash, :default => {"en" => "what's your question? be descriptive.",
                                            "es" => "¿cual es tu pregunta? por favor se descriptivo.",
                                            "fr" => "quelle est votre question? soyez descriptif.",
-                                           "pt" => "qual é a sua pergunta? seja descritivo."}
+                                           "pt" => "qual é a sua pergunta? seja descritivo.",
+                                           "ja" => "あなたの質問はなんですか？"}
   key :question_help, Hash, :default => {
 "en" => "Provide as much details as possible so that it will have more
 chance to be answered instead of being endlessly discussed.
@@ -19,7 +20,9 @@ intenta ser claro y simple",
 "fr" => "Sur quoi porte votre question?
 Donnez autants de détails que possible afin d'avoir plus de chance
 d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et simple.",
-"pt" => ""}
+"pt" => "",
+"ja" => "できるだけシンプルに、かつ明確にすることで論点が明確になって議論が発展します。そうすることで詳細な回答が受けられるようになります。"
+  }
 
   key :head, Hash, :default => {}
   key :footer, String

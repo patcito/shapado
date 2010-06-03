@@ -699,7 +699,8 @@ class QuestionsController < ApplicationController
       elsif params[:id] =~ /^(\d+)/ && (@question = current_group.questions.first(:se_id => $1, :select => [:_id, :slug]))
         head :moved_permanently, :location => question_url(@question)
       else
-        raise PageNotFound
+        flash[:notice] = t("not_found", :scope => "questions.messages.errors")
+        return redirect_to(root_path)
       end
     end
 

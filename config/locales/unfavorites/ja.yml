@@ -1,0 +1,10 @@
+ja:
+  unfavorites:
+    create:
+      unauthenticated: "お気に入りから取り除くにはログインが必要です"
+      success:         "この質問はあなたのお気に入りから除外されました。"
+
+  activerecord:
+    models:
+      favorites: "お気に入り"
+      favorite: "お気に入り"

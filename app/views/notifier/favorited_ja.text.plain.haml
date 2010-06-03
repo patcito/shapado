@@ -1,0 +1,16 @@
+-link = url_for(:host => @group.domain, :controller => "questions", :action => "show", :id => @question.to_param)
+-user_link= url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
+
+== #{@question.user.login}さん、
+==
+==
+
+== #{@user.login}さんがあなたの質問をお気に入りに登録しました（#{@group.name}）
+==
+
+あなたの質問の件名。
+==...     #{@question.title}
+
+==
+こちらで見ることが出来ます。
+=link

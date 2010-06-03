@@ -169,6 +169,8 @@ class ApplicationController < ActionController::Base
         'pt-PT'
       when "fr"
         'fr'
+      when "ja"
+        'ja'
       else
         'en'
     end

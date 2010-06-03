@@ -1,0 +1,12 @@
+ja:
+  admin:
+    moderate:
+      index:
+        title: "モデレート"
+        ban: "弾く"
+        content: "内容"
+        item_title: "タイトル"
+        all: "全て"
+        flagged: "報告されている質問"
+        banned: "弾かれた質問"
+        need_tags: "タグの編集"

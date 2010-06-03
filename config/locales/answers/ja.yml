@@ -1,0 +1,33 @@
+ja:
+  answers:
+    form:
+      comment_label: "質問に回答する"
+      answer_label: "回答する"
+      comment_submit: "コメント"
+      submit: "回答を投稿する"
+    edit:
+      title: "回答を編集"
+    create:
+      flash_notice: "ありがとう！"
+      flash_error:  "あなたの回答には問題があるようです。
+  <br /> -  以下にチェックしてください。
+  <br /> - 空または同じ答えの回答は許可されていません。
+  <br /> - スパム防止のため、前の回答をしてから20秒経ってからでないと回答できません。
+  <br /> - 一つの質問に対して一つの回答しかできません。"
+    update:
+      flash_notice: "あなたの回答は更新されました"
+    revert:
+      title: "回答を戻す"
+
+  activerecord:
+    models:
+      answers: "回答"
+      answer: "回答"
+    attributes:
+      answer:
+        link: "リンク"
+        created_at: "回答"
+        updated_at: "更新"
+        history: "履歴"
+        ban: "弾く"
+        body: "本文"

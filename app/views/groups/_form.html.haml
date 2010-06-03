@@ -23,30 +23,30 @@
 -if true
   .group
     = form.check_box :isolate, :class => "checkbox"
-    = form.label :isolate, "isolate the group form other groups", :class => "radio"
+    = form.label :isolate, t("isolate the group form other groups"), :class => "radio"
   .group
     = form.check_box :private, :class => "checkbox"
-    = form.label :private, "Only the group's members will be able to access this group", :class => "radio"
+    = form.label :private, t("Only the group's members will be able to access this group"), :class => "radio"
   .group
     = form.check_box :has_custom_html, :class => "checkbox"
-    = form.label :has_custom_html, "Allow custom html", :class => "radio"
+    = form.label :has_custom_html, t("Allow custom html"), :class => "radio"
   .group
     = form.check_box :has_custom_js, :class => "checkbox"
-    = form.label :has_custom_js, "Allow custom javascript", :class => "radio"
+    = form.label :has_custom_js, t("Allow custom javascript"), :class => "radio"
   .group
     = form.check_box :has_custom_analytics, :class => "checkbox"
-    = form.label :private, "Allow Custom Analytics", :class => "radio"
+    = form.label :private, t("Allow Custom Analytics"), :class => "radio"
     .description
-      The group will be able to use its own tracking code
+      t("The group will be able to use its own tracking code")
 
 -if !@group.new?
   - if @group.has_custom_analytics
     .group
-      = form.label :analytics_engine, "Analytics Engine", :class => "label"
-      =  select("group", "analytics_vendor", [['Google Analytics', 'googlean']])
+      = form.label :analytics_engine, t("Analytics Engine"), :class => "label"
+      =  select("group", "analytics_vendor", [[t('Google Analytics'), 'googlean']])
 
     .group
-      = form.label :analytics_id, "Website Analytics ID", :class => "label"
+      = form.label :analytics_id, t("Website Analytics ID"), :class => "label"
       = form.text_field :analytics_id, :class=> "text_field"
 
   .group

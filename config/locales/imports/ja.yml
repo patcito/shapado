@@ -1,0 +1,6 @@
+ja:
+  imports:
+    subtabs:
+      need_confirmation:
+        name: "メールの確認が必要です"
+        title: "確認用のメールを送信します。"

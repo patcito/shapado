@@ -28,7 +28,6 @@ begin
   end
 end
 
-
 REPUTATION_CONSTRAINS = {"vote_up" => 15, "flag" => 15, "post_images" => 15,
 "comment" => 50, "delete_own_comments" => 50, "vote_down" => 100,
 "create_new_tags" => 100, "post_whithout_limits" => 100, "edit_wiki_post" => 100,
@@ -81,3 +80,12 @@ ActionMailer::Base.default_url_options[:host] = AppConfig.domain
 AppConfig.enable_facebook_auth = AppConfig.facebook["activate"]
 
 AppConfig.version = File.read(RAILS_ROOT+"/VERSION")
+
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => "qahub.jp",
+  :authentication => :login,
+  :user_name => AppConfig.mail[:gmail_user_name],
+  :password => AppConfig.mail[:gmail_password]
+}

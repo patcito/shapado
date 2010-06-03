@@ -1,0 +1,47 @@
+ja:
+  devise:
+    sessions:
+      link: 'ログイン'
+      signed_in: 'ログインしました'
+      signed_out: 'ログアウトしました'
+      unauthenticated: '続けるにはログインまたはユーザ登録してください'
+      unconfirmed: '続ける前にアカウントを確認してください'
+      locked: 'あなたのアカウントはロックされています'
+      invalid: 'メールアドレスまたはパスワードが間違っています'
+      invalid_token: '不明な認証トークンです'
+      timeout: 'セッションの期限が切れました。再度ログインしてください'
+      inactive: 'あなたのアカウントはメールアドレス認証されていません'
+
+      facebook_invalid: "ログインできません。アカウントが間違っています。"
+      facebook_timeout: "Facebookのセッションが切れています。再度ログインしてから行ってください。"
+      facebook_authenticity_token: "セキュリティ上の問題が起こりました。再度ログインしてください。"
+      facebook_actions:
+        sign_in: "ログイン"
+        sign_out: "ログアウト"
+    passwords:
+      link: 'パスワードを忘れた場合はこちら'
+      send_instructions: '数分以内にパスワード変更用のメールが届きます。'
+      updated: 'パスワードが更新されました。変更したパスワードを使ってログインしてください。'
+    confirmations:
+      link: "アカウント承認用のメールが届いていない？"
+      send_instructions: '数分以内にアカウント承認用のメールが届きます。'
+      confirmed: 'あなたのアカウントは承認されました。ログインしてください。'
+    registrations:
+      link: '新規ユーザ登録する方はこちら'
+      signed_up: 'ユーザ登録が完了しました。'
+      updated: 'ユーザ更新が完了しました。'
+      destroyed: 'あなたの登録データは消去されました。また戻ってくることを期待しています！'
+      destroy_failed: "登録データの削除に失敗しました。フィードバックから連絡をお願いします"
+    cancel:
+      title: "退会処理"
+      linktitle: "退会処理を行う"
+      message: "本当に退会処理を行って宜しいですか？"
+    unlocks:
+      link: "アカウントロック解除メールが届かない場合はこちら"
+      send_instructions: '数分以内にアカウントロック解除用のメールが届きます。'
+      unlocked: 'あなたのアカウントのロックが解除されました。ログインしてください。'
+    mailer:
+      confirmation_instructions: 'アカウント確認手順'
+      reset_password_instructions: 'パスワードリセットの手順'
+      unlock_instructions: 'アンロックに関する手順'
+

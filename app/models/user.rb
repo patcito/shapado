@@ -78,8 +78,8 @@ class User
 
   validates_length_of       :name,     :maximum => 100
 
-  validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? }
-  validates_uniqueness_of   :email,    :if => lambda { |e| !e.openid_login? }
+  validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? && !e.twitter_login? }
+  validates_uniqueness_of   :email,    :if => lambda { |e| !e.openid_login? && !e.twitter_login? }
   validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
   validates_format_of       :email,    :with => Devise::EMAIL_REGEX, :allow_blank => true
 
@@ -247,7 +247,11 @@ Time.zone.now ? 1 : 0)
   def openid_login?
     !identity_url.blank? || (AppConfig.enable_facebook_auth && !facebook_id.blank?)
   end
-
+  
+  def twitter_login?
+    !twitter_token.blank? && !twitter_secret.blank?
+  end
+  
   def has_voted?(voteable)
     !vote_on(voteable).nil?
   end
@@ -476,7 +480,7 @@ Time.zone.now ? 1 : 0)
 
   def password_required?
     return false if openid_login?
-
+    return false if twitter_login?
     (encrypted_password.blank? || !password.blank?)
   end
 

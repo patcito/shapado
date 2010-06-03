@@ -1,0 +1,43 @@
+ja:
+  layouts:
+    application:
+      title: "Q&Aコミュニティ"
+      questions: "質問"
+      questions_in: questions in
+      questions_tagged: tagged with
+      ask_question: "質問する"
+      tags: "タグ"
+      users: "ユーザ"
+      badges: "バッジ"
+      unanswered: "未回答な質問"
+      logout: "ログアウト"
+      logged: "{{login}}としてログイン"
+      search: "検索"
+      forgot: "忘れた？"
+      log_in: "ログイン"
+      signup: "ユーザ登録する"
+      pages: "ページ"
+      settings: "設定"
+      languages: "言語"
+      moderate: "モデレート"
+      manage_ads: "広告の管理"
+      home: "ホーム"
+      subscribe: "購読する"
+      openid:
+        explaination: "外部サービスを使ってログインする場合は下のサービス一覧から選択してください"
+    manage:
+      dashboard: "ダッシュボード"
+      properties: "プロパティ"
+      widgets: "ウィジェット"
+      actions: "アクション"
+      stats: "ステータス"
+      members: "メンバー"
+      reputation: "評価"
+      content: "コンテンツ"
+      theme: "テーマ"
+      domain: "ドメイン"
+      pages: "ページ"
+      constrains: "制約"
+      rewards: "報酬"
+      general: "一般"
+      announcements: "アナウンス"

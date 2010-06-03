@@ -1,0 +1,18 @@
+ja:
+  errors:
+    options_label: "他の方法を試してください:"
+    go_to: "{{link}}ページに移動する"
+    help_us_answer: "質問に答えてみてください！{{link}}"
+    search: "検索"
+    forbidden:
+      title: "アクセスできません"
+      explanation: "このページにアクセスルための権限がありません"
+    not_found:
+      title: "ページがありません"
+      explanation: "アドレスを確認してください。またはページは別な場所に移動した可能性があります。"
+    unprocessable_entity:
+      title: "あなたの変更が拒否されました"
+      explanation: "恐らく変更するための権限が不足していると考えられます。"
+    internal_error:
+      title: "申し訳ありません。何かのエラーが発生しました。"
+      explanation: "このエラーは管理者に通知されます。対応をお待ちください。"

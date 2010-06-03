@@ -1,0 +1,10 @@
+ja:
+  searches:
+    index:
+      empty: "検索結果がありません"
+      tags: "以下のタグにマッチ"
+      search_text: "検索キーワード"
+    form:
+      clear: "消去"
+      search_box_title: "登録済みの質問から検索する"
+      tags_tip: "[タグ]という形で検索するとタグの中から検索できます。"

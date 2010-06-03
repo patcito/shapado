@@ -1,0 +1,18 @@
+ja:
+  announcements:
+    index:
+      title: "お知らせ"
+    create:
+      success: 'お知らせを作成しました'
+    form:
+    actions:
+      title: "アクション"
+      delete: "削除"
+
+  activerecord:
+    attributes:
+      announcement:
+        message: "メッセージ"
+        starts_at: "開始日"
+        ends_at: "終了日"
+        only_anonymous: "未ログインユーザのみ"

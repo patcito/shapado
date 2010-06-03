@@ -1,0 +1,16 @@
+ja:
+  sessions:
+    create:
+      flash_notice: "ログイン成功しました"
+      flash_error: "ログインできません。ユーザ名'{{login}}'"
+    destroy:
+      flash_notice: "ログアウトしました"
+    new:
+      with_openid: "OpenIDを使ってログインする"
+      with_facebook: "Facebookを使ってログインする"
+      with_twitter: "Twitterを使ってログインする"
+      with_authentication: "iPhone Worldの認証システムを利用する"
+      registered: "既に登録済みの方はこちら"
+      not_registered: "まだ未登録の方はこちら"
+      log_in: "ログイン"
+      signup: "ユーザ登録"

@@ -1,0 +1,18 @@
+ja:
+  votes:
+    create:
+      flash_notice: "投票してくれてありがとうございます！"
+      flash_error:  "投票はできません"
+      unauthenticated: "ユーザでないと投票できません"
+    destroy:
+      flash_notice: "あなたの投票は削除されました"
+    control:
+      to_vote_up: "プラスの投票をします"
+      to_vote_down: "マイナスの投票をします"
+      have_voted_up: "プラスの投票を取り消します"
+      have_voted_down: "マイナスの投票を取り消します"
+
+  activerecord:
+    models:
+      votes: "投票"
+      vote: "投票"

@@ -1,0 +1,34 @@
+ja:
+  admin:
+    manage:
+      content:
+        title: "カスタムコンテンツ"
+        question_prompt: "質問の促し"
+        question_help: "質問のヘルプ"
+        head: "ヘッダー"
+        footer: "フッター"
+        top_bar: "トップバー"
+        top_bar_tip: "1行につき1つのリンクにする"
+      properties:
+        general:
+          title: "サイト設定"
+        constrains:
+          title: "制約"
+          reputation_constrains_subtitle: "各アクションを起こすのに必要なポイント設定です"
+          reputation_constrains_description: "各アクションを行うにはポイントを得る必要があります。ここではその設定が変更できます。"
+        rewards:
+          title: "名誉"
+          reputation_rewards_subtitle: "名誉の一覧"
+          reputation_rewards_description: "数字を変更することでユーザが名誉を得られる（または失う）タイミングを変更できます。"
+        theme:
+          title: "テーマの設定"
+        domain:
+          title: "ドメイン設定"
+          description: "お持ちのドメインを割り当てることができます。手順は以下のように行います。"
+          instruction1: "まずドメイン管理サービスにログインします。({{subdomain}}のようなドメインを購入したサービスです)。"
+          instruction2: "そしてドメインのDNSセクションに移動し、CNAMEを作成します。"
+          instruction3: "CNAMEは'www'などといったものを設定します。"
+          instruction4: "そしてホスト名に現在設定されているドメイン（{{domain}}）を指定します。"
+          instruction5: "設定が終わって1時間程度もすれば、www.{{subdomain}}は{{appdomain}}を指し示すようになります。"
+          instruction6: "ドメインの設定が終わったらこのサイトの設定をwww.{{subdomain}}などに変更し、更新ボタンを押します。もし何か質問があればフォーラムや{{chat_url}}でサポートを受けられるはずです。"
+          warning: "本当にドメインを変更したいですか？"

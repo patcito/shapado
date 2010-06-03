@@ -1,0 +1,26 @@
+ja:
+  widgets:
+    index:
+      title: "サイドバーウィジェットの編集"
+      description: "矢印を使ってウィジェットの表示位置を変更できます"
+    badges:
+      title: "最近のバッジ"
+      description: "ユーザまたは質問が獲得した最新のバッジを一覧"
+    groups:
+      title: "最近登録されたグループ"
+      description: "最近登録されたグループを一覧します"
+    top_groups:
+      title: "トップ5グループ"
+      description: "トップ5のグループを表示します"
+    top_users:
+      title: "トップ5ユーザ"
+      description: "トップ5のユーザを表示します"
+    users:
+      title: "最近登録したユーザ"
+      description: "新しく登録したユーザを表示します"
+    tag_cloud:
+      title: "タグクラウド"
+      description: "タグクラウドを表示します"
+    pages:
+      title: "Wikiページ"
+      description: "Wikiページを表示します"

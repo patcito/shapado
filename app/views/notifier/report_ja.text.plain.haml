@@ -1,0 +1,20 @@
+-link = url_for(:host => @report.group.domain, :controller => "welcome", :action => "index")
+
+== #{@user.login}さん、
+==
+==
+== グループ #{@report.group.name} に関するレポートです。
+==
+
+== #{@report.since}から
+==
+==
+== #{@report.questions}つの質問が作成されました。
+== #{@report.answers}つの回答が作成されました。
+== #{@report.votes}の投票が行われました。
+== #{@report.badges}のバッジが作成されました。
+==
+==
+== 総アカウント数は#{@report.users}ユーザです。
+
+== グループのURL #{link}

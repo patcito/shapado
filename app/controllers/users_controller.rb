@@ -38,12 +38,16 @@ class UsersController < ApplicationController
   # render new.rhtml
   def new
     @user = User.new
+    @user.timezone = AppConfig.default_timezone
   end
 
   def create
     @user = User.new
-    @user.safe_update(%w[login email name password_confirmation password preferred_languages
+    @user.safe_update(%w[login email name password_confirmation password preferred_languages website
                          language timezone identity_url bio hide_country], params[:user])
+    if params[:user]["birthday(1i)"]
+      @user.birthday = build_date(params[:user], "birthday")
+    end
     success = @user && @user.save
     if success && @user.errors.empty?
       # Protects against session fixation attacks, causes request forgery
@@ -61,7 +65,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_login_or_id(params[:id])
-    raise PageNotFound unless @user
+    unless @user
+      flash[:notice] = t("not_found", :scope => "users.messages.errors")
+      return redirect_to(root_path)
+    end
 
     set_page_title(t("users.show.title", :user => @user.login))
 
@@ -106,6 +113,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    @user.timezone = AppConfig.default_timezone if @user.timezone.blank?
   end
 
   def update
@@ -207,6 +215,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user.delete
+      flash[:notice] = t("destroyed", :scope => "devise.registrations")
+    else
+      flash[:notice] = t("destroy_failed", :scope => "devise.registrations")
+    end
+    return redirect_to(:root)
+  end
+  
   protected
   def active_subtab(param)
     key = params.fetch(param, "votes")

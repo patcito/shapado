@@ -1,0 +1,53 @@
+ja:
+  welcome:
+    facts:
+      prices:
+        cols:
+          onsite: "独自サイト"
+        stackexchange:
+          small: "129ドル/月"
+          medium: "999ドル/月"
+          large: "1,299ドル/月"
+          onsite: "2,500ドル/月"
+        shapado:
+          small: "50ドルから100ドル/月"
+          medium: "<- 左に同じ"
+          large: "500ドル程度"
+          onsite: "無料！"
+      features:
+        cols:
+          adaptable: "適合性"
+          multitopic: "マルチトピック"
+          multilanguage: "複数言語"
+          foss: "オープンソース"
+          joel: "ジョエルをリッチにする？"
+        stackexchange:
+          adaptable: "いいえ"
+          multitopic: "いいえ"
+          multilanguage: "いいえ"
+          foss: "いいえ"
+          joel: "はい！"
+        shapado:
+          adaptable: "はい！"
+          multitopic: "はい！"
+          multilanguage: "はい！"
+          foss: "はい！"
+          joel: "no :/"
+    feedback:
+      title: "フィードバックを送信する"
+      feedback_title: "タイトル"
+      feedback_description: "内容"
+      email_description: "返信ができるよう、あなたのメールアドレスを入力してください"
+      captcha_error: "スパム防止のため、簡単な計算を行ってください"
+    index:
+      hot:     "ホット"
+      active:  "アクティブ"
+      recent_questions: "最近の質問"
+      quick_question: "質問してみましょう、きっと誰かが教えてくれるはず！"
+      create_own_site: "自分のQ&amp;Aサイトを作ってみませんか？たった10秒で作成、しかも無料！"
+
+    confirm_age:
+      warning: "警告：このページはアダルトな内容を含みます！"
+      notice: "ここから先は18歳以上のみがアクセスできます。18歳未満のアクセスは禁止されていますので、必ず正直に答えてください。"
+      under_18: "私は18歳以下です"
+      over_18: "私は18歳以上です"

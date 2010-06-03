@@ -1,0 +1,16 @@
+ja:
+  comments:
+    edit:
+      title: "コメントの編集"
+    create:
+      flash_notice: "コメントありがとうございます"
+    update:
+      flash_notice: "コメントは更新されました"
+    shared:
+      add_comment: "コメントする"
+      comment_submit: "コメントする"
+      said: "のコメント"
+      reply: "返信"
+  models:
+    comments: "コメント"
+    comment: "コメント"

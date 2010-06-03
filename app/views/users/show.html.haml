@@ -23,23 +23,23 @@
       .text
         = t(:reputation, :scope => "activerecord.attributes.user")
       =format_number(@user.config_for(current_group).views_count.to_i)
-      views
+      = t("views")
     .user-info
       %table
         %tr
           %td.user-field
-            Name
+            =t(:name, :scope => "activerecord.attributes.user")
           %td.user-field-value
             =h(@user.name)
         %tr
           %td.user-field
-            Website
+            =t(:website, :scope => "activerecord.attributes.user")
           %td.user-field-value
             -if @user.website
               =link_to h(@user.website), h(@user.website), :rel => "nofollow"
         %tr
           %td.user-field
-            Age
+            =t(:age, :scope => "activerecord.attributes.user")
           %td.user-field-value
             =@user.age
     .bio-info
@@ -164,7 +164,7 @@
         = t(:last_logged_at, :scope => "activerecord.attributes.user")
       .data
         -if @user.last_logged_at
-          = time_ago_in_words(@user.last_logged_at)
+          = t("time.ago", :time => time_ago_in_words(@user.last_logged_at))
     .entry
       .text
         = t(:reputation, :scope => "activerecord.attributes.user")

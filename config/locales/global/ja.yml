@@ -1,0 +1,62 @@
+ja:
+  scaffold:
+    sure: "本当に{{model}}を削除しますか？"
+    show: "表示"
+    edit: "編集"
+    destroy: "削除"
+    back: "戻る"
+    update: "更新"
+    cancel: "キャンセル"
+    close: "閉じる"
+    create: "作成"
+    new: "{{model}}を追加"
+    more: " もっと見る"
+    add: "追加"
+    send: "送信"
+    save: "保存"
+    details: "詳細"
+  time:
+    today: "今日"
+    ago: "{{time}}前"
+  sign_in: "ユーザ登録"
+  
+  messages:
+    success: "{{model}}は{{action}}されました"
+  models:
+    question:   "質問"
+  actions:
+    created:     "作成"
+    deleted:     "削除"
+    updated:     "更新"
+    closed:      "終了"
+  global:
+    from: "{{site}}から"
+    permission_denied: "権限がありません"
+    please_login: "ログインしてください"
+    group_not_found: "このページ{{url}}はありません"
+    preview: "プレビュー"
+    or: "または"
+    by: "によって"
+    current: "現在"
+    previous: "前"
+  feeds:
+    question: "この質問をフィードで購読する"
+    questions: "全ての質問をフィードで購読する"
+    tag: "このタグの質問をフィードで購読する"
+    user: "このユーザの質問をフィードで購読する"
+    feed: "フィード"
+  languages:
+    en:      "英語"
+    es:      "スペイン語"
+    es-AR:   "スペイン語（米）"
+    fr:      "フランス語"
+    pt:      "ポルトガル語"
+    pt-PT:   "ポルトガル語"
+    any:     "選択しない"
+    ja:      "日本語"
+    user:    "自分の設定している言語のみ"
+  number:
+    x_time:
+      zero: "なし"
+      one: "{{count}}回"
+      other: "{{count}}回"
