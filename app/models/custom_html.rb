@@ -25,6 +25,6 @@ d'obtenir une réponse et non une discussion sans fin. Éssayer d'être clair et
   }
 
   key :head, Hash, :default => {}
-  key :footer, String
+  key :footer, Hash, :default => {}
   key :head_tag, String
 end
