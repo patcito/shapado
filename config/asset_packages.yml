@@ -4,8 +4,13 @@ javascripts:
   - jquery
   - jquery.tools.min
   - jquery-ui
+  - jquery.textarea
+  - jquery.wysiwyg
+  - jquery.autocomplete
   - jquery.fcbkcomplete
   - jquery.notifyBar
+  - showdown
+  - highlight/prettify
   - components/search
   - application
   - modules/sessions
@@ -19,14 +24,13 @@ javascripts:
   - modules/tags_question
   - modules/members
   - modules/move_group
-  - modules/single/question
+  - modules/editor
+
 - show:
-  - jquery.textarea
-  - jquery.wysiwyg
+  - modules/single/question
   - jquery.autovideo
-  - showdown
-  - highlight/prettify
   - modules/show_question
+
 - login:
   - openid/js/jquery.openid.min
 
