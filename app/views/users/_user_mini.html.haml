@@ -1,7 +1,7 @@
 -bronze, silver, gold = user.badges_count_on(current_group)
 
 %span.fn.nickname
-  -if user.is_a?(User)
+  -unless user.nil?
     =link_to h(user.login), user_path(user), :class => "user-link"
     -if user.owner_of?(current_group)
       %span.ownerflair{:title => "admin"}
@@ -16,7 +16,7 @@
     = t('users.deleted')
 
 %span.reputation{:title => t("activerecord.attributes.user.reputation")}
-  -if user.is_a?(User)
+  -unless user.nil?
     =user.reputation_on(current_group)
 
 -if local_assigns[:with_badges] != false

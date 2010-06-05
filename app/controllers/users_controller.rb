@@ -213,7 +213,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    if current_user.delete
+    if false && current_user.delete # FIXME We need a better way to delete users
       flash[:notice] = t("destroyed", :scope => "devise.registrations")
     else
       flash[:notice] = t("destroy_failed", :scope => "devise.registrations")
