@@ -73,19 +73,26 @@ $(document).ready(function() {
 })
 
 function initAutocomplete(){
-  $('.autocomplete_for_tags').autocomplete('/questions/tags_for_autocomplete.js', {
-      multiple: true,
-      delay: 200,
-      max: 10,
-      selectFirst: false,
-      extraParams: {'format' : 'js'},
-      formatResult: function(data, value) {
-        return value.split(";")[0];
-      },
-      formatItem: function(data, i, n, value) {
-        row = data[0].split(";")
-        return row[0]+" "+row[1]
-      }
+  var select = $('<select size="100px" name="question[tags]" id="question_tags" class="autocomplete_for_tags" ></select>')
+  var tagInput = $('.autocomplete_for_tags');
+  var width = tagInput.width();
+  tagInput.after(select);
+  if(typeof(tagInput)!='undefined' && $.trim(tagInput.val())!=''){
+    var tags = tagInput.val().split(',')
+    if( tags.length > 0){
+      $.each(tags, function(i,n){
+        if($.trim(n)!='')
+        select.append('<option value="'+n+'" selected="selected" class="selected">'+n+'</option>')
+      })
+    }
+  }
+  tagInput.remove();
+  $('.autocomplete_for_tags').fcbkcomplete({
+    json_url: '/questions/tags_for_autocomplete.js',
+    firstselected: true,
+    delay: 200,
+    maxitimes: 6,
+    width: width
   });
 }
 

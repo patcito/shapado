@@ -173,12 +173,16 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.js do
         result = []
-        if q =params[:prefix]
-          result = Question.find_tags(/^#{Regexp.escape(q)}/,
+        if q = params[:tag]
+          result = Question.find_tags(/^#{Regexp.escape(q.downcase)}/i,
                                       :group_id => current_group.id)
         end
-        results = result.map do |t| "#{t["name"]};(#{t["count"].to_i})" end.join("\n")
-        render :text => results
+
+        results = result.map do |t|
+          {:caption => "#{t["name"]} (#{t["count"].to_i})", :value => t["name"]}
+        end
+
+        render :json => results
       end
     end
   end

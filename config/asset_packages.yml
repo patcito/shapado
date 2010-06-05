@@ -4,7 +4,7 @@ javascripts:
   - jquery
   - jquery.tools.min
   - jquery-ui
-  - jquery.autocomplete
+  - jquery.fcbkcomplete
   - jquery.notifyBar
   - components/search
   - application
