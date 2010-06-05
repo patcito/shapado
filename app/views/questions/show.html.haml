@@ -1,4 +1,4 @@
-= javascript_include_tag "modules/single/question"
+= javascript_include_merged :show
 
 -@current_class = 'question hentry entry post'
 
@@ -264,6 +264,3 @@
           -related_questions.each do |rq|
             %li
               =link_to h(rq.title), question_path(rq), :title => truncate(strip_tags(rq.body), :length => 200)
-
-
-= javascript_include_tag 'jsMath/easy/load.js'
