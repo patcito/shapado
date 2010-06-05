@@ -258,7 +258,6 @@ class Question
     if new? && !disable_limits?
       last_question = Question.first( :user_id => self.user_id,
                                       :group_id => self.group_id,
-                                      :id => { :not => self.id},
                                       :order => "created_at desc")
 
       valid = (last_question.nil? || (Time.now - last_question.created_at) > 20)

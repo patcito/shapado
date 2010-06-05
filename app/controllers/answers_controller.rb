@@ -90,14 +90,11 @@ class AnswersController < ApplicationController
                           :select => ["email"]}
 
           users = User.find(@question.watchers, search_opts)
-          # For deleted user.
-          users.push(@question.user) if @question.user != current_user && @question.user && @question.user.is_a?(User)
-          followers = []
-
+          users.push(@question.user) if !@question.user.nil? && @question.user != current_user
           followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
-          # For deleted user.
-          users = [] unless users
-          followers = [] unless followers
+
+          users ||= []
+          followers ||= []
           (users - followers).each do |u|
             if !u.email.blank? && u.notification_opts.new_answer
               Notifier.deliver_new_answer(u, current_group, @answer, false)
