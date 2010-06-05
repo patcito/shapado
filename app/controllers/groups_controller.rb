@@ -48,10 +48,7 @@ class GroupsController < ApplicationController
     else
       @group = current_group
     end
-    unless @group
-      flash[:notice] = t("not_found", :scope => "groups.messages.errors")
-      return redirect_to(root_path)
-    end
+    raise PageNotFound if @group.nil?
 
     @comments = @group.comments.paginate(:page => params[:page].to_i,
                                          :per_page => params[:per_page] || 10 )

@@ -19,7 +19,7 @@ ja:
     today: "今日"
     ago: "{{time}}前"
   sign_in: "ユーザ登録"
-  
+
   messages:
     success: "{{model}}は{{action}}されました"
   models:

@@ -65,10 +65,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_login_or_id(params[:id])
-    unless @user
-      flash[:notice] = t("not_found", :scope => "users.messages.errors")
-      return redirect_to(root_path)
-    end
+    raise PageNotFound unless @user
 
     set_page_title(t("users.show.title", :user => @user.login))
 
@@ -223,7 +220,7 @@ class UsersController < ApplicationController
     end
     return redirect_to(:root)
   end
-  
+
   protected
   def active_subtab(param)
     key = params.fetch(param, "votes")

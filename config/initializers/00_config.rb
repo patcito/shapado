@@ -81,11 +81,13 @@ AppConfig.enable_facebook_auth = AppConfig.facebook["activate"]
 
 AppConfig.version = File.read(RAILS_ROOT+"/VERSION")
 
-ActionMailer::Base.smtp_settings = {
-  :address => "smtp.gmail.com",
-  :port => 587,
-  :domain => "qahub.jp",
-  :authentication => :login,
-  :user_name => AppConfig.mail[:gmail_user_name],
-  :password => AppConfig.mail[:gmail_password]
-}
+if AppConfig.gmail[:activate]
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "qahub.jp",
+    :authentication => :login,
+    :user_name => AppConfig.gmail[:gmail_user_name],
+    :password => AppConfig.gmail[:gmail_password]
+  }
+end

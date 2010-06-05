@@ -45,10 +45,7 @@ class AnswersController < ApplicationController
 
   def show
     @answer = Answer.find(params[:id])
-    if @answer.nil?
-      flash = t("not_found", :scode => "answers.messages.errors")
-      return redirect_to(root_path)
-    end
+    raise PageNotFound if @answer.nil?
     @question = @answer.question
     respond_to do |format|
       format.html
