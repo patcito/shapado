@@ -35,6 +35,14 @@
       logo_legend: "you can upload the group logo. the maximum file size is 2mb."
       any_language: cualquiera
       access: Configuración de Acceso
+      isolate_group: isolate the group form other groups
+      members_only: "only the group's members will be able to access this group"
+      custom_html: allow custom html
+      custom_js: allow custom javascript
+      custom_analytics: allow Custom Analytics
+      analytics_engine: analytics Engine
+      website_analytics_id: website Analytics ID
+      analytics_legend: the group will be able to use its own tracking code
   activerecord:
     models:
       groups: grupos

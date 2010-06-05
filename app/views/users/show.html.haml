@@ -23,7 +23,7 @@
       .text
         = t(:reputation, :scope => "activerecord.attributes.user")
       =format_number(@user.config_for(current_group).views_count.to_i)
-      = t("views")
+      = t(".views")
     .user-info
       %table
         %tr

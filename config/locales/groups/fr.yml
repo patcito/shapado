@@ -34,6 +34,14 @@ fr:
       logo_legend: "vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb."
       any_language: "n'importe qu'elle"
       access: Configuration de l'accès
+      isolate_group: isolate the group form other groups
+      members_only: "only the group's members will be able to access this group"
+      custom_html: allow custom html
+      custom_js: allow custom javascript
+      custom_analytics: allow Custom Analytics
+      analytics_engine: analytics Engine
+      website_analytics_id: website Analytics ID
+      analytics_legend: the group will be able to use its own tracking code
   activerecord:
     models:
       groups: groupes

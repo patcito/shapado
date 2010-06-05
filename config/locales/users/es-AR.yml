@@ -23,6 +23,7 @@
       title: "Usuario {{user}}"
       follow: seguir
       unfollow: dejar de seguir
+      views: vistas
     follow:
       flash_notice: "El usuario {{user}} fue añadido a su lista de amigos"
     unfollow:
@@ -80,3 +81,4 @@
         language_filter: filtro por idioma
         website: Sitio Web
         birthday: Fecha de Cumpleaños
+        age: Edad
