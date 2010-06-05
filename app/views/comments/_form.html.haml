@@ -1,6 +1,4 @@
 .group
-  = hidden_field_tag "commentable_type", commentable.class.name, :id => "commentable_type_#{commentable.id}"
-  = hidden_field_tag "commentable_id", commentable.id, :id => "commentable_id_#{commentable.id}"
   = hidden_field_tag "source", source, :id => "source_#{commentable.id}"
 
   -if current_group.wysiwyg_editor

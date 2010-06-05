@@ -130,7 +130,7 @@
             = submit_tag t(".request_closing_details"), :class => "button"
 
   -if logged_in?
-    =link_to t("comments.shared.add_comment"), "#", :id => "add_comment_link", :rel => 'nofollow'
+    =link_to t("comments.shared.add_comment"), new_question_comment_path(@question), :id => "add_comment_link", :rel => 'nofollow'
 
   .comments
     -@question.comments.each do |comment|
@@ -138,7 +138,7 @@
   .clear
   .forms
     .comment-form-question
-      -form_tag comments_path, :class => "form commentForm nestedAnswerForm", :id => "add_comment_form" do
+      -form_tag question_comments_path(@question), :class => "form commentForm nestedAnswerForm", :id => "add_comment_form" do
         -@comment = Comment.new
         = render :partial => "comments/form", :locals => {:source => source, :commentable => @question}
         .group.navform

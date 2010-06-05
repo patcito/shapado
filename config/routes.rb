@@ -58,10 +58,13 @@ ActionController::Routing::Routes.draw do |map|
                                             :retag => :get,
                                             :retag_to => :put,
                                             :close => :post} do |questions|
+        questions.resources :comments
         questions.resources :answers, :member => {:flag => :get,
                                                   :history => :get,
                                                   :diff => :get,
-                                                  :revert => :get}
+                                                  :revert => :get} do |answers|
+          answers.resources :comments
+        end
         questions.resources :close_requests
       end
     end
@@ -83,8 +86,6 @@ ActionController::Routing::Routes.draw do |map|
                                      :css => :get},
                           :collection => { :autocomplete_for_group_slug => :get}
 
-
-  map.resources :comments
   map.resources :votes
   map.resources :flags
 

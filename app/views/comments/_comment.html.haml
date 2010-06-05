@@ -53,8 +53,16 @@
         - if logged_in? && current_user != comment.user
           = link_to t("comments.shared.reply"), "#", :class => "addNestedAnswer reply", 'data-author' => comment.user.login
         -if logged_in? && (current_user.can_modify?(comment) || current_user.mod_of?(current_group))
-          = link_to t("scaffold.edit"), edit_comment_path(comment, :source => source), :class => "edit_comment"
+          -case comment.commentable_type
+            -when "Question"
+              = link_to t("scaffold.edit"), edit_question_comment_path(comment.commentable, comment, :source => source), :class => "edit_comment"
+            -when "Answer"
+              = link_to t("scaffold.edit"), edit_question_answer_comment_path(comment.commentable.question, comment.commentable, comment, :source => source), :class => "edit_comment"
         -if logged_in? && comment.can_be_deleted_by?(current_user)
-          = link_to t("scaffold.destroy"), comment_path(comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
+          -case comment.commentable_type
+            -when "Question"
+              = link_to t("scaffold.destroy"), question_comment_path(comment.commentable, comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
+            -when "Answer"
+              = link_to t("scaffold.destroy"), question_answer_comment_path(comment.commentable.question, comment.commentable, comment, :source => source), :confirm => t("scaffold.sure", :model => "comment"), :method => :delete
     .clear
 

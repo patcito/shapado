@@ -81,7 +81,7 @@
     .clear
 
     -if logged_in?
-      = link_to t(".add_comment"), "#", :class => "addNestedAnswer add_answer_comment_link"
+      = link_to t(".add_comment"), new_question_comment_path(@question, answer), :class => "addNestedAnswer add_answer_comment_link"
 
     / Nested Answers
     .children.comments
@@ -89,7 +89,7 @@
         = render :partial => "comments/comment", :object => comment, :locals => {:source => source, :mini => true}
   .clear
   .forms.comment-form
-    -form_tag comments_path, :class => "form commentForm nestedAnswerForm" do
+    -form_tag question_answer_comments_path(@question, answer), :class => "form commentForm nestedAnswerForm" do
       -@comment = Comment.new
       = render :partial => "comments/form", :locals => {:source => source, :commentable => answer}
       .group.navform
