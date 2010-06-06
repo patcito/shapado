@@ -23,6 +23,7 @@ el:
       title: "Μέλος {{user}}"
       follow: ακολουθήστε
       unfollow: μην ακολουθείτε
+      views: views
     follow:
       flash_notice: "το μέλος {{user}} προστέθηκε στους φίλους σας"
     unfollow:
@@ -80,3 +81,4 @@ el:
         language_filter: γλωσσικό φίλτρο
         website: ιστότοπος
         birthday: ημερομηνία γέννησης
+        age: Age

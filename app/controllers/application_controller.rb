@@ -171,6 +171,8 @@ class ApplicationController < ActionController::Base
         'fr'
       when "ja"
         'ja'
+      when /^el/
+        'el'
       else
         'en'
     end

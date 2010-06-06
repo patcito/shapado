@@ -1,0 +1,16 @@
+-link = url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
+
+== Γεια σας #{@user.login},
+%br
+
+== Έχετε κερδίσει τον τίτλο #{@badge.name} στο #{AppConfig.application_name}
+%br
+
+Περιγραφή τίτλου:
+%h2
+  = @badge.description
+
+Μπορείτε να δείτε όλους τους τίτλους σας στην
+=link_to "σελίδα σας", link
+
+

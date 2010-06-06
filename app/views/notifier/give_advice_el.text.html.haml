@@ -1,0 +1,18 @@
+%p
+  == Γεια σας #{h(@user.login)},
+  %br
+  = Ο/η h(@question.user.login)
+  μόλις έκανε μια ερώτηση που μπορεί να είστε σε θέση να απαντήσετε:
+  %br
+  == "#{h(@question.title)}"
+  %br
+  Για να απαντήσετε, απλώς απαντήστε σ' αυτό το μήνυμα εδώ:
+  = link_to url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
+  %br
+
+  Εναλλακτικά, αν ξέρετε κάποιον που είναι σε θέση να απαντήσει, στείλτε του αυτό τον σύνδεσμο παραπομπής:
+  =  url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
+  %br
+  Αν δεν λάβουμε απάντηση από εσάς σύντομα θα ρωτήσουμε κάποιον άλλο, εσείς μπορείτε να απαντήσετε ακόμα όποτε θέλετε.
+  %br
+== - #{h(@group.name)}
