@@ -47,6 +47,7 @@ es-AR:
     post_new_questions: publicar nuevas preguntas a
     share_on_twitter: "twitter, facebook y mas..."
   languages:
+    el:      griego
     en:      inglés
     es:      español
     es-AR:   español latino

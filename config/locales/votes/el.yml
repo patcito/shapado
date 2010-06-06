@@ -1,0 +1,21 @@
+el:
+  votes:
+    create:
+      flash_notice: "ευχαριστούμε για την ψήφο σας!"
+      flash_error:  "δεν μπορείτε να ψηφίσετε εδώ"
+      unauthenticated: "οι ανώνυμοι χρήστες δεν μπορούν να ψηφίσουν"
+    destroy:
+      flash_notice: "η ψήφος σας ανακλήθηκε επιτυχώς."
+    control:
+      to_vote_up: "κλικ για να υπερψηφίσετε"
+      to_vote_down: "κλικ για να καταψηφίσετε"
+      have_voted_up: "κλικ για να ανακαλέσετε την ψήφο σας"
+      have_voted_down: "κλικ για να ανακαλέσετε την ψήφο σας"
+    model:
+      messages:
+        closed_question: "δεν μπορείτε να ψηφίσετε σε ερωτήσεις που έχουν κλειδωθεί"
+        vote_down_comment: "τα σχόλια δεν μπορούν να καταψηφιστούν"
+  activerecord:
+    models:
+      votes: ψήφοι
+      vote: ψήφος

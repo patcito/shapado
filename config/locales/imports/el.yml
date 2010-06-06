@@ -1,0 +1,6 @@
+el:
+  imports:
+    subtabs:
+      need_confirmation:
+        name: χρειάζεται επιβεβαίωση
+        title: αποστολή email επιβεβαίωσης
