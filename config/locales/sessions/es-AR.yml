@@ -14,3 +14,5 @@ es-AR:
       not_registered: "todavía no esta registrado?"
       log_in: entrar
       signup: registrarse
+      sign_in: entrar
+      remember_me: recordarme

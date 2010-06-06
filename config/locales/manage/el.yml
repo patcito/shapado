@@ -24,6 +24,7 @@ el:
           reputation_rewards_description: οι τιμές παρακάτω σας δίνουν τη δυνατότητα να ρυθμίσετε πως τα μέλη κερδίζουν ή χάνουν πόντους υπόληψης για τις ενέργειές τους
         theme:
           title: ρυθμίστε το θέμα της ομάδας σας
+          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
         domain:
           title: ρυθμίστε το domain
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"

@@ -14,4 +14,5 @@ el:
       not_registered: "δεν έχετε εγγραφεί ακόμα;"
       log_in: σύνδεση
       signup: εγγραφή
-
+      sign_in: σύνδεση
+      remember_me: remember me

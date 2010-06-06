@@ -24,6 +24,7 @@ en:
           reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
         theme:
           title: setup the group's theme
+          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
         domain:
           title: setup your domain
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"

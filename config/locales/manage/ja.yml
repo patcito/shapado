@@ -22,6 +22,7 @@ ja:
           reputation_rewards_description: "数字を変更することでユーザが名誉を得られる（または失う）タイミングを変更できます。"
         theme:
           title: "テーマの設定"
+          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
         domain:
           title: "ドメイン設定"
           description: "お持ちのドメインを割り当てることができます。手順は以下のように行います。"

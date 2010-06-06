@@ -14,3 +14,5 @@ fr:
       not_registered: "pas encore enregistré?"
       log_in: se connecter
       signup: créer un compte
+      sign_in: se connecter
+      remember_me: retenir ma session

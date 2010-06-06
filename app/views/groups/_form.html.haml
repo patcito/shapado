@@ -37,16 +37,16 @@
     = form.check_box :has_custom_analytics, :class => "checkbox"
     = form.label :private, t(".custom_analytics"), :class => "radio"
     .description
-      t(".analytics_legend")
+      = t(".analytics_legend")
 
 -if !@group.new?
   - if @group.has_custom_analytics
     .group
       = form.label :analytics_engine, t(".analytics_engine"), :class => "label"
-      =  select("group", "analytics_vendor", [[t('Google Analytics'), 'googlean']])
+      =  select("group", "analytics_vendor", [['Google Analytics', 'googlean']])
 
     .group
-      = form.label :analytics_id, t("website_analytics_id"), :class => "label"
+      = form.label :analytics_id, t(".website_analytics_id"), :class => "label"
       = form.text_field :analytics_id, :class=> "text_field"
 
   .group

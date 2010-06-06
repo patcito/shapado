@@ -14,3 +14,5 @@ ja:
       not_registered: "まだ未登録の方はこちら"
       log_in: "ログイン"
       signup: "ユーザ登録"
+      sign_in: sign in
+      remember_me: remember me

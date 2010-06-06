@@ -47,15 +47,16 @@ en:
     post_new_questions: post new questions to
     share_on_twitter: "twitter, facebook and more..."
   languages:
-    el:      greek
-    en:      english
-    es:      spanish
-    es-AR:   latin american spanish
-    fr:      french
-    pt:      portuguese
-    pt-PT:   portuguese
-    any:     any
-    user:    my preferred languages
+    el:      Greek
+    en:      English
+    es:      Spanish
+    es-AR:   Latin American Spanish
+    fr:      French
+    pt:      Portuguese
+    pt-PT:   Portuguese
+    ja:      Japanese
+    any:     Any
+    user:    My Preferred Languages
   number:
     x_time:
       zero: "never"

@@ -39,13 +39,17 @@ ja:
     by: "によって"
     current: "現在"
     previous: "前"
+    share: share
   feeds:
     question: "この質問をフィードで購読する"
     questions: "全ての質問をフィードで購読する"
     tag: "このタグの質問をフィードで購読する"
     user: "このユーザの質問をフィードで購読する"
     feed: "フィード"
+    post_new_questions: post new questions to
+    share_on_twitter: "twitter, facebook and more..."
   languages:
+    el:      "Greek"
     en:      "英語"
     es:      "スペイン語"
     es-AR:   "スペイン語（米）"

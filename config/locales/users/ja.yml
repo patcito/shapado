@@ -20,6 +20,7 @@ ja:
     edit:
       title: "設定"
       submit: "設定を変更する"
+      enable_twitter: Enable your facebook or twitter accounts
     show:
       follow: "フォローする"
       unfollow: "フォロー解除"

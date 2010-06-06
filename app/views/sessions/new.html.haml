@@ -13,7 +13,7 @@
 
 -unless current_group.openid_only
   %h2
-    = t("sign_in")
+    = t(".sign_in")
 
   -form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form"} do |f|
     .group
@@ -25,7 +25,7 @@
 
     -if devise_mapping.rememberable?
       .group
-        =f.label :remember_me, t("users.login.remember_me")
+        =f.label :remember_me, t(".remember_me")
         =f.check_box :remember_me
 
     .group.navform

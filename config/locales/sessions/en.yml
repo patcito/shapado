@@ -13,5 +13,6 @@ en:
       registered: "already registered?"
       not_registered: "not registered yet?"
       log_in: login
-      signup: signup
-
+      signup: sign up
+      sign_in: sign in
+      remember_me: remember me

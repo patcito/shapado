@@ -80,7 +80,3 @@
     = f.check_box "notification_opts[reports]", :checked => @user.notification_opts.reports
     = t(".reports_notification")
 
-  %h2.title
-    = t("devise.cancel.title")
-  .group
-    = link_to t("devise.cancel.linktitle"), user_path(@user), :method => "delete", :confirm => t("devise.cancel.message")
