@@ -44,7 +44,7 @@
     - jun
     - jul
     - ago
-    - sep
+    - set
     - oct
     - nov
     - dic
@@ -67,8 +67,8 @@
         one: menos de 1 segundo
         other: menos de {{count}} segundos
       x_seconds:
-        one: 1 segundo
-        other: "{{count}} segundos"
+        one: 1 second
+        other: "{{count}} seconds"
       less_than_x_minutes:
         zero: menos de 1 minuto
         one: menos de 1 minuto
@@ -77,20 +77,20 @@
         one: 1 minuto
         other: "{{count}} minutos"
       about_x_hours:
-        one: aprox. 1 hora
-        other: aprox. {{count}} horas
+        one: aproximadamente 1 hora
+        other: aproximadamente {{count}} horas
       x_days:
         one: "1 día"
         other: "{{count}} días"
       about_x_months:
-        one: aprox. 1 mes
-        other: "aprox. {{count}} meses"
+        one: aproximandamente 1 mes
+        other: aproximadamente {{count}} mes
       x_months:
-        one: hace 1 month
-        other: "{{count}} meses"
+        one: 1 month
+        other: "{{count}} mes"
       about_x_years:
-        one: "aprox. 1 año"
-        other: "aprox. {{count}} años"
+        one: "aproximadamente 1 año"
+        other: "aproximadamente {{count}} años"
       over_x_years:
         one: "más de 1 año"
         other: "más de {{count}} años"
@@ -159,11 +159,10 @@
         equal_to: debe ser igual a {{count}}
         less_than: debe ser menor que {{count}}
         less_than_or_equal_to: debe ser menor o igual que {{count}}
-        odd: debe ser impar
-        even: debe ser par
+        odd: debe ser par
+        even: debe ser impar
   support:
     array:
       words_connector: ", "
       two_words_connector: " y "
       last_word_connector: " y "
-

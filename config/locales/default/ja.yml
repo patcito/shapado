@@ -4,17 +4,18 @@
 
 ja:
   date:
-  date:
     formats:
       default: "%Y/%m/%d"
       short: "%m/%d"
       long: "%Y年%m月%d日(%a)"
-      abbr_default: "%Y-%m-%d"
+
     day_names: [日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日]
     abbr_day_names: [日, 月, 火, 水, 木, 金, 土]
+
     month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
     abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
-    order: [ :year, :month, :day ]
+
+    order: [:year, :month, :day]
 
   time:
     formats:
@@ -32,6 +33,9 @@ ja:
       two_words_connector: "と"
       last_word_connector: "と"
 
+    select:
+      prompt: "選択してください。"
+
   number:
     format:
       separator: "."
@@ -45,7 +49,6 @@ ja:
         separator: "."
         delimiter: ","
         precision: 0
-
 
     percentage:
       format:
@@ -98,15 +101,12 @@ ja:
       about_x_years:
         one:   "約{{count}}年"
         other: "約{{count}}年"
-
       over_x_years:
         one:   "{{count}}年以上"
         other: "{{count}}年以上"
 
   activerecord:
     errors:
-      format:
-        separator: ""
       template:
         header:
           one:   "{{model}}にエラーが発生しました。"
@@ -133,3 +133,7 @@ ja:
         less_than_or_equal_to: "は{{count}}以下の値にしてください。"
         odd: "は奇数にしてください。"
         even: "は偶数にしてください。"
+        record_invalid: "バリデーションに失敗しました。 {{errors}}"
+
+      full_messages:
+        format: "{{attribute}}{{message}}"
