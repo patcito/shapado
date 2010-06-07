@@ -33,36 +33,36 @@ fr:
       half_a_minute: "une demi-minute"
       less_than_x_seconds:
         zero:  "moins d'une seconde"
-        one:   "moins de 1 seconde"
-        other: "moins de {{count}} secondes"
+        one:   "moins de 1 seconde"
+        other: "moins de {{count}} secondes"
       x_seconds:
-        one:   "1 seconde"
-        other: "{{count}} secondes"
+        one:   "1 seconde"
+        other: "{{count}} secondes"
       less_than_x_minutes:
         zero:  "moins d'une minute"
-        one:   "moins de 1 minute"
-        other: "moins de {{count}} minutes"
+        one:   "moins de 1 minute"
+        other: "moins de {{count}} minutes"
       x_minutes:
-        one:   "1 minute"
-        other: "{{count}} minutes"
+        one:   "1 minute"
+        other: "{{count}} minutes"
       about_x_hours:
         one:   "environ une heure"
-        other: "environ {{count}} heures"
+        other: "environ {{count}} heures"
       x_days:
-        one:   "1 jour"
-        other: "{{count}} jours"
+        one:   "1 jour"
+        other: "{{count}} jours"
       about_x_months:
         one:   "environ un mois"
-        other: "environ {{count}} mois"
+        other: "environ {{count}} mois"
       x_months:
         one:   "1 mois"
-        other: "{{count}} mois"
+        other: "{{count}} mois"
       about_x_years:
         one:   "environ un an"
-        other: "environ {{count}} ans"
+        other: "environ {{count}} ans"
       over_x_years:
         one:   "plus d'un an"
-        other: "plus de {{count}} ans"
+        other: "plus de {{count}} ans"
     prompts:
       year:   "Année"
       month:  "Mois"
@@ -75,12 +75,12 @@ fr:
     format:
       precision: 3
       separator: ','
-      delimiter: ' '
+      delimiter: '.'
     currency:
       format:
         unit: '€'
         precision: 2
-        format: '%n %u'
+        format: '%n%u'
     human:
       format:
         # These three are to override number.format and are optional
@@ -91,7 +91,7 @@ fr:
       # storage_units: [octet, kb, Mb, Gb, Tb]
       # Rails >= v2.3
       storage_units:
-        format: "%n %u"
+        format: "%n%u"
         units:
           byte:
             one:   "octet"

@@ -179,11 +179,6 @@ el:
     am: "πμ"
     pm: "μμ"
 
-  datetime:
-    formats:
-      default: "%d-%m-%YT%H:%M:%S%Z"
-
-
 # Used in array.to_sentence.
   support:
     array:
