@@ -1,0 +1,21 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: 이유
+    models: 
+      flag: 플래그
+      flags: 플래그
+  flags: 
+    create: 
+      flash_error: Flag을 달 수 없습니다
+      flash_notice: 리포트에 감사드립니다
+    form: 
+      attention: 운영자 주의가 필요합니다
+      label: 주의해서 Flag을 사용에 주세요.
+      offensive: 모욕 또는 폭력적인 언행
+      spam: 스팸

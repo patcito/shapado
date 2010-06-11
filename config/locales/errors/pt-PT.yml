@@ -1,17 +1,22 @@
-pt-PT:
-  errors:
-    options_label: "outras coisas que podes tentar:"
-    go_to: "ir para {{link}} página"
-    help_us_answer: ajuda-nos a responder a {{link}}
-    search: "pesquisar"
-    forbidden:
-      explanation: "não tem as permissões necessárias para aceder a esta página."
-    not_found:
-      title: "página não encontrada."
-      explanation: "pode ter escrito mal o endereço ou a página pode ter sido movida."
-    unprocessable_entity:
-      title: "a alteração que pretendeu foi rejeitada"
-      explanation: "se calhar tentou modificar algo para o qual não tinha permissões."
-    internal_error:
-      title: "pedimos desculpa, mas ocorreu um erro."
-      explanation: "fomos notificados sobre este problema e vamos averiguá-lo em breve."
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  errors: 
+    forbidden: 
+      explanation: não tem as permissões necessárias para aceder a esta página.
+      title: acesso negado
+    go_to: ir para a página {{link}}
+    help_us_answer: ajude-nos a responder a {{link}}
+    internal_error: 
+      explanation: fomos notificados sobre este problema e vamos averiguá-lo em breve.
+      title: pedimos desculpa, mas ocorreu um erro.
+    not_found: 
+      explanation: pode ter escrito mal o endereço ou a página pode ter sido movida.
+      title: página não encontrada.
+    options_label: "outras coisas que pode tentar:"
+    search: pesquisar
+    unprocessable_entity: 
+      explanation: se calhar tentou modificar algo para o qual não tinha permissões.
+      title: a alteração que pretendia foi rejeitada.

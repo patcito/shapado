@@ -1,0 +1,22 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  errors: 
+    forbidden: 
+      explanation: не ги имате потребните права на пристап до оваа страница.
+      title: пристапот е одбиен
+    go_to: оди на страницата {{link}}
+    help_us_answer: помогнете ни да одговориме на {{link}}
+    internal_error: 
+      explanation: известени сме за овој проблем и ќе наскоро го разгледаме.
+      title: нажалост, нешто не е во ред.
+    not_found: 
+      explanation: можеби погрешно сте ја внеле адресата или страницата е преместена.
+      title: страницата не е пронајдена.
+    options_label: "што друго да пробате:"
+    search: пребарување
+    unprocessable_entity: 
+      explanation: можеби сте сакале да промените нешто кајшто немате пристап.
+      title: промената што ја баравте е одбиена.

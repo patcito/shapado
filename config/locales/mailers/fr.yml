@@ -1,21 +1,23 @@
-fr:
-  mailers:
-    notifications:
-      new_answer:
-        subject_owner: "{{login}} a répondu à votre question {{title}}"
-        subject_friend: "votre amis {{login}} a répondu à la question {{title}}"
-        subject_other: "{{login}} a répondu à la question {{title}}"
-      new_comment:
-        subject: "{{login}} a commenté sur {{group}}"
-      give_advice:
-        subject: "nous avons besoin de votre aide: {{question_title}}"
-        friend_subject: "votre amis à besoin d'aide: {{question_title}}"
-      follow:
-        subject: "{{login}} vous suit sur {{app}}"
-      earned_badge:
-        subject: "Vous avez gagné une insigne sur {{group}}!"
-      favorited:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Vous avez gagné une insigne sur {{group}}!
+      favorited: 
         subject: "{{login}} a ajouté votre question comme favorite!"
-      report:
-        subject: "rapport pour le groupe {{group}} de {{app}}"
-
+      follow: 
+        subject: "{{login}} vous suit sur {{app}}"
+      give_advice: 
+        friend_subject: "votre amis à besoin d'aide: {{question_title}}"
+        subject: "nous avons besoin de votre aide: {{question_title}}"
+      new_answer: 
+        subject_friend: votre amis {{login}} a répondu à la question {{title}}
+        subject_other: "{{login}} a répondu à la question {{title}}"
+        subject_owner: "{{login}} a répondu à votre question {{title}}"
+      new_comment: 
+        subject: "{{login}} a commenté sur {{group}}"
+      report: 
+        subject: rapport pour le groupe {{group}} de {{app}}

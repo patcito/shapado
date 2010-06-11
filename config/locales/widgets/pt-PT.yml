@@ -1,26 +1,29 @@
-pt-PT:
-  widgets:
-    index:
-      title: manage sidebar widgets
-      description: use the arrows to move your widgets
-    badges:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  widgets: 
+    badges: 
+      description: this widget display recent badges earned by users or questions
       title: recent badges
-      description: "this widget display recent badges earned by users or questions"
-    groups:
+    groups: 
+      description: this widget displays the latest groups
       title: recent groups
-      description: "this widget displays the latest groups"
-    top_groups:
-      title: top 5 groups
-      description: "this widget displays the top five groups"
-    top_users:
-      title: top 5 users
-      description: "this widget displays top five users"
-    users:
-      title: recent users
-      description: "this widget display new registered members"
-    tag_cloud:
-      title: tag cloud
-      description: "this widget displays a tag cloud"
-    pages:
+    index: 
+      description: use the arrows to move your widgets
+      title: manage sidebar widgets
+    pages: 
+      description: this widget displays the list of wiki pages
       title: wiki pages
-      description: "this widget displays the list of wiki pages"
+    tag_cloud: 
+      description: this widget displays a tag cloud
+      title: tag cloud
+    top_groups: 
+      description: this widget displays the top five groups
+      title: top 5 groups
+    top_users: 
+      description: this widget displays top five users
+      title: top 5 users
+    users: 
+      description: this widget display new registered members
+      title: recent users

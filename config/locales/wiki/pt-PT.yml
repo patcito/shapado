@@ -1,18 +1,21 @@
-pt-PT:
-  wiki:
-    history:
-      title: "history ({{count}})"
-      previous_versions: previous versions
-      current_version: current version
-      version: version
-      version_summary: version summary
-    diff:
-      title: differences between {{prev}} and {{curr}}
-    actions:
-      revert: revert to this version
-      show_diff: compare selected versions
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  wiki: 
+    actions: 
       all_history: back to history
       back_to_question: back to question
-    model:
-      attributes:
+      revert: revert to this version
+      show_diff: compare selected versions
+    diff: 
+      title: differences between {{prev}} and {{curr}}
+    history: 
+      current_version: current version
+      previous_versions: previous versions
+      title: history ({{count}})
+      version: version
+      version_summary: version summary
+    model: 
+      attributes: 
         message: summary

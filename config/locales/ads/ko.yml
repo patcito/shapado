@@ -1,0 +1,16 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  ads: 
+    ad_links: 새 {{type}} ad 추가
+    create: 
+      success: 광고가 성공적으로 만들었습니다.
+    index: 
+      add_adbard: 새 adbard 추가
+      add_adsense: 새 Google 애드 센스 광고를 추가하십시오
+      title: 광고
+    name: "이름:"
+    position: " 위치 :"
+    title: " 새 {{type}} ad 추가"

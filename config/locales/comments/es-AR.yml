@@ -1,16 +1,19 @@
-es-AR:
-  comments:
-    edit:
-      title: Editar comentario
-    create:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  comments: 
+    create: 
       flash_notice: gracias por tu comentario
-    update:
-      flash_notice: "el comentario ha sido actualizado con exito."
-    shared:
-      add_comment: "añadir comentario..."
-      comment_submit: "comentar"
-      said: dijo
+    edit: 
+      title: Editar comentario
+    shared: 
+      add_comment: añadir comentario...
+      comment_submit: comentar
       reply: contestar
-  models:
-    comments: comentarios
+      said: dijo
+    update: 
+      flash_notice: el comentario ha sido actualizado con exito.
+  models: 
     comment: comentario
+    comments: comentarios

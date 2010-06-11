@@ -1,10 +1,12 @@
-fr:
-  unfavorites:
-    create:
-      unauthenticated: "vous devez créer un compte pour retirer des favorits"
-      success:         "la question a été retiré de vos favorits"
-
-  activerecord:
-    models:
-      favorites: favorites
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  activerecord: 
+    models: 
       favorite: favorite
+      favorites: favorites
+  unfavorites: 
+    create: 
+      success: la question a été retiré de vos favorits
+      unauthenticated: vous devez créer un compte pour retirer des favorits

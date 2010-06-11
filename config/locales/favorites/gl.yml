@@ -1,0 +1,13 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    models: 
+      favorite: favorito
+      favorites: favoritos
+  favorites: 
+    create: 
+      success: engadiuse a pregunta aos seus favoritos
+      unauthenticated: necesita unha conta para engadir favoritos

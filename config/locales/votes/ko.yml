@@ -1,0 +1,25 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    models: 
+      vote: vote
+      votes: votes
+  votes: 
+    control: 
+      have_voted_down: Down 취소하기
+      have_voted_up: Up 취소하기
+      to_vote_down: Down 하기
+      to_vote_up: Up 하기
+    create: 
+      flash_error: 여기에 투표할 수 없습니다
+      flash_notice: 투표에 감사 드립니다
+      unauthenticated: 익명 사용자는 투표할 수 없습니다
+    destroy: 
+      flash_notice: 투표가 취소되었습니다.
+    model: 
+      messages: 
+        closed_question: 마감된 질문에는 투표할 수 없습니다
+        vote_down_comment: 코멘트에 투표할 수는 없습니다

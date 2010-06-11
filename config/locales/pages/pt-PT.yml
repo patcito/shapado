@@ -1,31 +1,33 @@
-"pt-PT":
-  pages:
-    title: fixme
-    index:
-      title: List of pages
-      create_page: create new page
-      written_in: written in {{language}}
-    edit:
-      title: Editing page
-    create:
-      success: 'Page was successfully created.'
-    update:
-      success: 'Page was successfully updated.'
-    new:
-      title: new page
-    form:
-      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
-      language_tip: page language
-    actions:
-      title: Actions
-      create_page: "Create new page"
-      edit_page: "Edit page"
-
-  activerecord:
-    models:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: stylesheets
+        js: javascript
+    models: 
       page: page
       pages: pages
-    attributes:
-      page:
-        js: javascript
-        css: stylesheets
+  pages: 
+    actions: 
+      create_page: Create new page
+      edit_page: Edit page
+      title: Actions
+    create: 
+      success: Page was successfully created.
+    edit: 
+      title: Editing page
+    form: 
+      language_tip: page language
+      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
+    index: 
+      create_page: create new page
+      title: List of pages
+      written_in: written in {{language}}
+    new: 
+      title: new page
+    title: fixme
+    update: 
+      success: Page was successfully updated.

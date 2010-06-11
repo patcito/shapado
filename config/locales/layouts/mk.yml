@@ -1,0 +1,49 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  layouts: 
+    application: 
+      ask_question: постави прашање
+      badges: значки
+      forgot: заборавивте?
+      home: почетна
+      languages: јазици
+      log_in: најава
+      logged: најавен како {{login}}
+      logout: одјава
+      manage_ads: раководење со реклами
+      moderate: модерирај
+      now: веднаш!
+      openid: 
+        explaination: ако сакате да се регистрирате или пак само да се најавите, одберете го вашиот добавувач на OpenID
+      pages: страници
+      questions: прашања
+      questions_in: прашања во
+      questions_tagged: означени со
+      search: пребарај
+      settings: нагодувања
+      signup: регистрација
+      subscribe: претплати се
+      tags: ознаки
+      title: прашања и одговори
+      unanswered: неодговорени
+      users: корисници
+      welcome_from: "добредојдовте! еве што можете да правите:"
+    manage: 
+      actions: дејства
+      announcements: соопштенија
+      constrains: ограничувања
+      content: содржина
+      dashboard: контролна табла
+      domain: домен
+      general: општо
+      members: членови
+      pages: страници
+      properties: својства
+      reputation: углед
+      rewards: награди
+      stats: статистики
+      theme: мотив
+      widgets: елементи

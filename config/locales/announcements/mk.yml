@@ -1,0 +1,20 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: важи до
+        message: порака
+        only_anonymous: само анонимни корисници
+        starts_at: важи од
+  announcements: 
+    actions: 
+      delete: отстрани
+      title: дејства
+    create: 
+      success: соопштението е успешно создадено.
+    index: 
+      title: соопштенија

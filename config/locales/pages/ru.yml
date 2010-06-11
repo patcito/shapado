@@ -1,0 +1,22 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  activerecord: 
+    models: 
+      page: страница
+      pages: страницы
+  pages: 
+    actions: 
+      create_page: Создать новую страницу
+      edit_page: Редактировать страницу
+      title: Действия
+    edit: 
+      title: Редактирование страницы
+    form: 
+      language_tip: язык страницы
+      title_tip: Заголовок страницы; используйте его для ссылки на страницу, например, [[ЧаВо|смотрите часто задаваемые вопросы]]
+    index: 
+      create_page: создать новую страницу
+      title: список страниц

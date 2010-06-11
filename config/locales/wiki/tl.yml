@@ -1,0 +1,22 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  wiki: 
+    actions: 
+      all_history: bumalik sa kasaysayan
+      back_to_question: bumalik sa tanong
+      revert: magpanumbalik sa bersyong ito
+      show_diff: paghambingin ang napiling mga bersyon
+    diff: 
+      title: pagkakaiba sa pagitan ng {{prev}} at {{curr}}
+    history: 
+      current_version: kasalukuyang bersyon
+      previous_versions: nakaraang mga bersyon
+      title: kasaysayan ({{count}})
+      version: bersyon
+      version_summary: buod ng bersyon
+    model: 
+      attributes: 
+        message: buod

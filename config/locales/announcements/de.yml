@@ -1,0 +1,20 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: endet am
+        message: Nachricht
+        only_anonymous: nur für anonyme Nutzer
+        starts_at: beginnt am
+  announcements: 
+    actions: 
+      delete: entfernen
+      title: Aktionen
+    create: 
+      success: Die Ankündigung wurde erfolgreich erstellt.
+    index: 
+      title: Ankündigungen

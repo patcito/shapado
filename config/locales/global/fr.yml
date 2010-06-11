@@ -1,64 +1,65 @@
-fr:
-  scaffold:
-    sure: Êtes-vous sûr de vouloir effacer ce {{model}} ?
-    show: monter
-    edit: Éditer
-    destroy: effacer
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  actions: 
+    closed: fermé
+    created: crée
+    deleted: éffacé
+    updated: actualisé
+  feeds: 
+    feed: Flux
+    post_new_questions: poster les nouvelles questions à
+    question: souscrire à cette question
+    questions: souscrire à toutes les questions
+    share_on_twitter: twitter, facebook et plus...
+    tag: souscrite au tag
+    user: inscrivez-vous aux questions de l'utilisateur
+  global: 
+    by: par
+    current: précédent
+    from: depuis {{site}}
+    group_not_found: la page {{url}} n'existe pas
+    or: ou
+    permission_denied: permission refusée
+    please_login: ouvrez une session s'il vous plait
+    preview: prévue
+    previous: suivant
+    share: share
+  languages: 
+    any: any
+    en: anglais
+    es: espagnol
+    es-AR: espagnol d'amérique latine
+    fr: français
+    pt: portugais
+    pt-PT: portugais
+    user: mes langues
+  messages: 
+    success: "{{model}} a été {{action}} avec succès."
+  models: 
+    question: la question
+  number: 
+    x_time: 
+      one: "{{count}} fois"
+      other: "{{count}} fois"
+      zero: jamais
+  scaffold: 
+    add: ajouter
     back: retour
-    update: actualiser
     cancel: annuler
     close: fermer
     create: créer
-    new: ajouter {{model}}
-    more: plus...
-    add: ajouter
-    send: envoyer
-    save: save
+    destroy: effacer
     details: details
-  time:
+    edit: Éditer
+    more: plus...
+    new: ajouter {{model}}
+    save: save
+    send: envoyer
+    show: monter
+    sure: Êtes-vous sûr de vouloir effacer ce {{model}} ?
+    update: actualiser
+  time: 
+    ago: il y a {{time}}
     today: aujourd'hui
-    ago: "il y a {{time}}"
-  messages:
-    success: "{{model}} a été {{action}} avec succès."
-  models:
-    question:   la question
-  actions:
-    created:     crée
-    deleted:     éffacé
-    updated:     actualisé
-    closed:      fermé
-  global:
-    from: depuis {{site}}
-    permission_denied: permission refusée
-    please_login: ouvrez une session s'il vous plait
-    group_not_found: "la page {{url}} n'existe pas"
-    preview: prévue
-    or: ou
-    by: par
-    current: précédent
-    previous: suivant
-    share: share
-  feeds:
-    question: souscrire à cette question
-    questions: souscrire à toutes les questions
-    tag: souscrite au tag
-    user:  inscrivez-vous aux questions de l'utilisateur
-    feed: Flux
-    post_new_questions: poster les nouvelles questions à
-    share_on_twitter: "twitter, facebook et plus..."
-  languages:
-    el:      grecque
-    en:      anglais
-    es:      espagnol
-    es-AR:   espagnol d'amérique latine
-    fr:      français
-    pt:      portugais
-    pt-PT:   portugais
-    ja:      japonais
-    any:     any
-    user:    mes langues
-  number:
-    x_time:
-      zero: "jamais"
-      one: "{{count}} fois"
-      other: "{{count}} fois"

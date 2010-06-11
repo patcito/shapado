@@ -1,53 +1,56 @@
-pt-PT:
-  welcome:
-    facts:
-      prices:
-        cols:
-          onsite: no seu sítio web
-        stackexchange:
-          small: $129/mês
-          medium: $999/mês
-          large: $1299/mês
-          onsite: $2500/mês
-        shapado:
-          small: aproximadamente $50 to $100/mês na maioria dos provedores de alojamento
-          medium: <=== igual
-          large: aproximadamente $500
-          onsite: $0 no seu servidor duh
-      features:
-        cols:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  welcome: 
+    confirm_age: 
+      notice: You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
+      over_18: I am over 18
+      under_18: I am under 18
+      warning: "WARNING: This page may contain explicit adult material."
+    facts: 
+      features: 
+        cols: 
           adaptable: adaptável
-          multitopic: multi-tópicos
-          multilanguage: multi-idioma
           foss: livre/código aberto
           joel: farei joel mais rico?
-        stackexchange:
+          multilanguage: multilínguas
+          multitopic: multi-tópicos
+        shapado: 
+          adaptable: sim!
+          foss: sim!
+          joel: não :/
+          multilanguage: sim!
+          multitopic: sim!
+        stackexchange: 
           adaptable: não
-          multitopic: não
-          multilanguage: não
           foss: não
           joel: sim!
-        shapado:
-          adaptable: sim!
-          multitopic: sim!
-          multilanguage: sim!
-          foss: sim!
-          joel: "não :/"
-    feedback:
-      title: send your feedback
-      feedback_title: title
-      feedback_description: description
-      email_description: please, provie your email so we can answer your message
+          multilanguage: não
+          multitopic: não
+      prices: 
+        cols: 
+          onsite: no seu sítio web
+        shapado: 
+          large: aproximadamente $500
+          medium: <=== igual
+          onsite: $0 no seu servidor duh
+          small: aproximadamente $50 to $100/mês na maioria dos provedores de alojamento
+        stackexchange: 
+          large: $1299/mês
+          medium: $999/mês
+          onsite: $2500/mês
+          small: $129/mês
+    feedback: 
       captcha_error: please, solve a simple math operation
-    index:
-      hot:     popular
-      active:  activo
-      recent_questions: perguntas recentes
+      email_description: please, provie your email so we can answer your message
+      feedback_description: description
+      feedback_title: title
+      title: send your feedback
+    index: 
+      active: activo
+      create_own_site: Create your own Q&amp;A site in 8 seconds for free
+      hot: popular
       quick_question: ask a question, we will find someone to answer
-      create_own_site: "Create your own Q&amp;A site in 8 seconds for free"
-
-    confirm_age:
-      warning: "WARNING: This page may contain explicit adult material."
-      notice: You may only enter this Website if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.
-      under_18: "I am under 18"
-      over_18: "I am over 18"
+      recent_questions: perguntas recentes

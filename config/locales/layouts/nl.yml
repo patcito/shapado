@@ -1,0 +1,49 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  layouts: 
+    application: 
+      ask_question: Vraag stellen
+      badges: speldjes
+      forgot: Vergeten?
+      home: Hoofdmenu
+      languages: Talen
+      log_in: Aanmelden
+      logged: Aangemeld als {{login}}
+      logout: Afmelden
+      manage_ads: Advertenties beheren
+      moderate: Modereren
+      now: Nu!
+      openid: 
+        explaination: "Als u wilt registreren of aanmelden, kies dan uw OpenID-provider:"
+      pages: Pagina's
+      questions: Vragen
+      questions_in: Vragen in het
+      questions_tagged: Met label
+      search: Zoeken
+      settings: Voorkeuren
+      signup: Registreren
+      subscribe: Abonneren
+      tags: Labels
+      title: Vragen en antwoorden
+      unanswered: Onbeantwoord
+      users: Gebruikers
+      welcome_from: Welkom! U kunt
+    manage: 
+      actions: Handelingen
+      announcements: Aankondigingen
+      constrains: Beperkingen
+      content: Inhoud
+      dashboard: Dashboard
+      domain: Domein
+      general: Algemeen
+      members: Leden
+      pages: Pagina's
+      properties: Eigenschappen
+      reputation: Reputatie
+      rewards: Beloningen
+      stats: Statistieken
+      theme: Thema
+      widgets: Widgets

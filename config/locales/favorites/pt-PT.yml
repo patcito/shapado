@@ -1,10 +1,12 @@
-pt-PT:
-  favorites:
-    create:
-      unauthenticated: "you need an account to add favorites"
-      success:         "the question has been added to your favorities"
-
-  activerecord:
-    models:
-      favorites: favorites
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    models: 
       favorite: favorite
+      favorites: favorites
+  favorites: 
+    create: 
+      success: the question has been added to your favorities
+      unauthenticated: you need an account to add favorites

@@ -1,12 +1,15 @@
-pt-PT:
-  admin:
-    moderate:
-      index:
-        title: moderar
-        ban: banir
-        content: conteúdo
-        item_title: título
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  admin: 
+    moderate: 
+      index: 
         all: todas
-        flagged: flagged questions
+        ban: banir
         banned: banned questions
+        content: conteúdo
+        flagged: flagged questions
+        item_title: título
         need_tags: retag
+        title: moderar

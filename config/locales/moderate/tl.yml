@@ -1,0 +1,16 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  admin: 
+    moderate: 
+      index: 
+        all: lahat
+        ban: pagbawalan
+        banned: pinagbabawalang mga tanong
+        content: nilalaman
+        flagged: binandilang mga tanong
+        item_title: pamagat
+        need_tags: tatakan uli
+        title: katamtaman

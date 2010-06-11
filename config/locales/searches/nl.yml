@@ -1,0 +1,14 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  searches: 
+    form: 
+      clear: Leegmaken
+      search_box_title: Controleer of uw vraag al gesteld is
+      tags_tip: Gebruik [label] om labels aan te geven.
+    index: 
+      empty: Er waren geen vragen die voldoen aan uw zoekopdracht.
+      search_text: Vragen die tekst bevatten
+      tags: Met deze labels

@@ -1,149 +1,128 @@
-es-AR:
-  badges:
-    index:
-      title: insignias
-      description: "todas las insignias que puedes ganar. comparte tu conocimiento, gana placas."
-    show:
-      title: insignia {{type}}
-      description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
-      for_tag_bronze: 200 votos en la etiqueta {{tag}}
-      for_tag_silver: 400 votos en la etiqueta {{tag}}
-      for_tag_gold: 1000 votos en la etiqueta {{tag}}
-      earned: otorgada
-    shared:
-      rockstar:
-        description: 1000 votos positivos, máximo 10 negativos
-      popstar:
-        description: 500 votos positivos, máximo 10 negativos
-      fanatic:
-        name: fanático
-        description: visita el sitio 100 días consecutivos
-      service_medal:
-        name: medalla de servicio
-        description: recibir 300 votos positivos
-      famous_question:
-        name: pregunta famosa
-        description: hace una pregunta con 10000 visitas
-      notable_question:
-        name: pregunta notable
-        description: hace una pregunta con 2500 visitas
-      popular_question:
-        name: pregunta popular
-        description: hace una pregunta con 1000 visitas
-      popular_person:
-        name: persona popular
-        description: que tu perfil sea visitado 10000 veces
-      guru:
-        name: guru
-        description: dar solución a una pregunta con promedio de votos superior a 40
-      favorite_question:
-        name: pregunta favorita
-        description: pregunta seleccionada como preferida por 25 usuarios
-      tutor:
-        name: tutor
-        description: dar solución a una pregunta con promedio de votos superior a 2
-      addict:
-        name: adicto
-        description: visita el sitio 20 días consecutivos
-      good_question:
-        name: buena pregunta
-        description: haber hecho una pregunta que alcanzo el promedio de 10 votos
-      good_answer:
-        name: buena respuesta
-        description: haber hecho una respuesta que alcanzo el promedio de 10 votos
-      pioneer:
-        name: pionero
-        description: ser de los primeros usuarios registrados
-      supporter:
-        name: partidario
-        description: votar positivamente por primera vez
-      critic:
-        name: critico
-        description: votar negativamente por primera vez
-      inquirer:
-        name: investigador
-        description: preguntar por primera vez
-      troubleshooter:
-        name: solucionador
-        description: responder por primera vez
-      commentator:
-        name: comentador
-        description: deja 10 comentarios
-      merit_medal:
-        name: medalla al merito
-        description: recibir 200 votos positivos
-      effort_medal:
-        name: medalla al esfuerzo
-        description: recibir 100 votos positivos
-      student:
-        name: estudiante
-        description: primera pregunta con al menos un voto positivo
-      shapado:
-        description: visita el sitio 8 días consecutivos
-      editor:
-        description: primer mensaje editado
-      friendly:
-        name: amistoso
-        description: sigue a alguien por primera vez
-      interesting_person:
-        name: persona interesante
-        description: tiene mas de 10 seguidores
-      popular_person:
-        name: persona popular
-        description: tiene mas de 50 seguidores
-      celebrity:
-        name: celebridad
-        description: tiene mas de 100 seguidores
-      necromancer:
-        name: necromancer
-        description: contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
-      stellar_question:
-        name: stellar question
-        description: Pregunta con mas de 100 favoritos
-      nice_question:
-        name: nice question
-        description: pregunta votada 10 veces
-      nice_answer:
-        name: nice answer
-        description: respuesta votada 10 veces
-      great_question:
-        name: great question
-        description: pregunta votada 100 veces
-      great_answer:
-        name: great answer
-        description: respuesta votada 10 veces
-      peer_pressure:
-        name: peer pressure
-        description: borra su propio post con puntaje menor igual a -3
-      enlightened:
-        name: enlightened
-        description: primera respuesta aceptada con al menos 10 votos positivos
-      disciplined:
-        name: disciplined
-        description: borra su propio post con puntaje mayor igual a 3
-      cleanup:
-        name: cleanup
-        description: Primer rollback
-      civic_duty:
-        name: civic duty
-        description: vota 300 veces
-      citizen_patrol:
-        name: citizen patrol
-        description: primer post reportado
-      self-learner:
-        name: self learner
-        description: contesto su propia pregunta con al menos 3 votos positivos
-      scholar:
-        name: scholar
-        description: first accepted answer on your own question
-      autobiographer:
-        name: autobiographer
-        description: completed all user profile fields
-      organizer:
-        name: organizador
-        description: primer re-etiquetado
-
-  activerecord:
-    models:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    models: 
       badge: insignia
       badges: insignias
+  badges: 
+    index: 
+      description: todas las insignias que puedes ganar. comparte tu conocimiento, gana placas.
+      title: insignias
+    shared: 
+      addict: 
+        description: visita el sitio 20 días consecutivos
+      autobiographer: 
+        description: completed all user profile fields
+        name: autobiographer
+      celebrity: 
+        description: tiene mas de 100 seguidores
+        name: celebridad
+      citizen_patrol: 
+        description: primer post reportado
+        name: citizen patrol
+      civic_duty: 
+        description: vota 300 veces
+        name: civic duty
+      cleanup: 
+        description: Primer rollback
+        name: cleanup
+      commentator: 
+        description: deja 10 comentarios
+      critic: 
+        description: votar negativamente por primera vez
+      disciplined: 
+        description: borra su propio post con puntaje mayor igual a 3
+        name: disciplined
+      editor: 
+        description: primer mensaje editado
+      effort_medal: 
+        description: recibir 100 votos positivos
+      enlightened: 
+        description: primera respuesta aceptada con al menos 10 votos positivos
+        name: enlightened
+      famous_question: 
+        description: hace una pregunta con 10000 visitas
+      fanatic: 
+        description: visita el sitio 100 días consecutivos
+      favorite_question: 
+        description: pregunta seleccionada como preferida por 25 usuarios
+      friendly: 
+        description: sigue a alguien por primera vez
+        name: amistoso
+      good_answer: 
+        description: haber hecho una respuesta que alcanzo el promedio de 10 votos
+      good_question: 
+        description: haber hecho una pregunta que alcanzo el promedio de 10 votos
+      great_answer: 
+        description: respuesta votada 10 veces
+        name: great answer
+      great_question: 
+        description: pregunta votada 100 veces
+        name: great question
+      guru: 
+        description: dar solución a una pregunta con promedio de votos superior a 40
+      inquirer: 
+        description: preguntar por primera vez
+      interesting_person: 
+        description: tiene mas de 10 seguidores
+        name: persona interesante
+      merit_medal: 
+        description: recibir 200 votos positivos
+      necromancer: 
+        description: contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
+        name: necromancer
+      nice_answer: 
+        description: respuesta votada 10 veces
+        name: nice answer
+      nice_question: 
+        description: pregunta votada 10 veces
+        name: nice question
+      notable_question: 
+        description: hace una pregunta con 2500 visitas
+      organizer: 
+        description: primer re-etiquetado
+        name: organizador
+      peer_pressure: 
+        description: borra su propio post con puntaje menor igual a -3
+        name: peer pressure
+      pioneer: 
+        description: ser de los primeros usuarios registrados
+      popstar: 
+        description: 500 votos positivos, máximo 10 negativos
+      popular_person: 
+        description: tiene mas de 50 seguidores
+        name: persona popular
+      popular_question: 
+        description: hace una pregunta con 1000 visitas
+      rockstar: 
+        description: 1000 votos positivos, máximo 10 negativos
+      scholar: 
+        description: first accepted answer on your own question
+        name: scholar
+      self-learner: 
+        description: contesto su propia pregunta con al menos 3 votos positivos
+        name: self learner
+      service_medal: 
+        description: recibir 300 votos positivos
+      shapado: 
+        description: visita el sitio 8 días consecutivos
+      stellar_question: 
+        description: Pregunta con mas de 100 favoritos
+        name: stellar question
+      student: 
+        description: primera pregunta con al menos un voto positivo
+      supporter: 
+        description: votar positivamente por primera vez
+      troubleshooter: 
+        description: responder por primera vez
+      tutor: 
+        description: dar solución a una pregunta con promedio de votos superior a 2
+    show: 
+      description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
+      earned: otorgada
+      for_tag_bronze: 200 votos en la etiqueta {{tag}}
+      for_tag_gold: 1000 votos en la etiqueta {{tag}}
+      for_tag_silver: 400 votos en la etiqueta {{tag}}
+      title: insignia {{type}}

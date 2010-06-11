@@ -1,0 +1,20 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  comments: 
+    create: 
+      flash_notice: 코멘트에 감사 드립니다
+    edit: 
+      title: 코멘트 편집
+    shared: 
+      add_comment: 코멘트 추가 ...
+      comment_submit: 코멘트
+      reply: 답변
+      said: said
+    update: 
+      flash_notice: 답변이 성공적으로 업데이트되었습니다.
+  models: 
+    comment: 코멘트
+    comments: 코멘트

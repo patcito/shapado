@@ -1,0 +1,13 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    models: 
+      favorite: favorisieren
+      favorites: Favoriten
+  favorites: 
+    create: 
+      success: die Frage wurde zu deinen Favoriten hinzugefügt
+      unauthenticated: Du brauchst ein Nutzerkonto, um Favoriten hinzufügen zu können.

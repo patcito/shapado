@@ -1,18 +1,20 @@
-es-AR:
-  flags:
-    form:
-      spam: spam
-      offensive: ofensivo, abusivo o intolerante
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: razón
+    models: 
+      flag: reporte de abuso
+      flags: reportes de abuso
+  flags: 
+    create: 
+      flash_error: usted no puede reportar como abuso esto
+      flash_notice: gracias por su reporte
+    form: 
       attention: requiere atención de un moderador
       label: por favor reporte con cuidado
-    create:
-      flash_notice: gracias por su reporte
-      flash_error: usted no puede reportar como abuso esto
-
-  activerecord:
-    models:
-      flags: reportes de abuso
-      flag: reporte de abuso
-    attributes:
-      flag:
-        type: razón
+      offensive: ofensivo, abusivo o intolerante
+      spam: spam

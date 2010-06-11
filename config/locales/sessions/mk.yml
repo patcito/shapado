@@ -1,0 +1,20 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  sessions: 
+    create: 
+      flash_error: не можам да ве најавам како „{{login}}“
+      flash_notice: успешно сте најавени
+    destroy: 
+      flash_notice: одјавени сте.
+    new: 
+      log_in: најава
+      not_registered: сè уште не сте регистрирани?
+      registered: веќе сте регистрирани?
+      signup: регистрација
+      with_authentication: најава со нашиот потврден систем
+      with_facebook: најава со Facebook
+      with_openid: најава со OpenID
+      with_twitter: најава со Twitter

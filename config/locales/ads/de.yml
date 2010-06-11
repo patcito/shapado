@@ -1,0 +1,16 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  ads: 
+    ad_links: Füge einen neue „{{type}}“-Anzeige hinzu
+    create: 
+      success: Die Anzeige wurde erfolgreich erstellt.
+    index: 
+      add_adbard: Füge eine neue „Adbard“-Anzeige hinzu
+      add_adsense: Füge eine neue „Google Adsense“-Anzeige hinzu
+      title: Anzeigen
+    name: "Name:"
+    position: "Position:"
+    title: Füge einen neue „{{type}}“-Anzeige hinzu

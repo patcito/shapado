@@ -1,18 +1,21 @@
-fr:
-  wiki:
-    history:
-      title: "historial ({{count}})"
-      previous_versions: versions précédentes
-      current_version: version actuelle
-      version: version
-      version_summary: résumé de cette version
-    diff:
-      title: différences entre {{prev}} et {{curr}}
-    actions:
-      revert: retourner à cette version
-      show_diff: comparer les versions sélectionnées
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  wiki: 
+    actions: 
       all_history: retourner à l'historique
       back_to_question: retourner à la question
-    model:
-      attributes:
+      revert: retourner à cette version
+      show_diff: comparer les versions sélectionnées
+    diff: 
+      title: différences entre {{prev}} et {{curr}}
+    history: 
+      current_version: version actuelle
+      previous_versions: versions précédentes
+      title: historial ({{count}})
+      version: version
+      version_summary: résumé de cette version
+    model: 
+      attributes: 
         message: résumé

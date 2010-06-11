@@ -1,6 +1,9 @@
-fr:
-  imports:
-    subtabs:
-      need_confirmation:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
         name: ont besoin de confirmation
         title: envoyer emails de confirmation

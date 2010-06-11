@@ -1,0 +1,66 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  actions: 
+    closed: Gesloten
+    created: Aangemaakt
+    deleted: Verwijderd
+    updated: Bijgewerkt
+  feeds: 
+    feed: Feed
+    post_new_questions: Nieuwe vragen toevoegen aan
+    question: Op deze vraag abonneren
+    questions: Op alle vragen abonneren
+    share_on_twitter: Twitter, Facebook en meer...
+    tag: Op label abonneren
+    user: Op gebruikersvragen abonneren
+  global: 
+    by: door
+    current: huidige
+    from: Van {{site}}
+    group_not_found: De pagina {{url}} bestaat niet
+    or: of
+    permission_denied: Geen toegang
+    please_login: Meld u aan
+    preview: Voorbeeld
+    previous: vorige
+    share: Delen
+  languages: 
+    any: Alle
+    en: Engels
+    es: Engels
+    es-AR: Latijns-Amerikaans Spaans
+    fr: Frans
+    pt: Portugees
+    pt-PT: Portugees
+    user: Voorkeurstalen
+  messages: 
+    success: "{{model}} is {{action}}."
+  models: 
+    question: De vraag
+  number: 
+    x_time: 
+      one: "{{count}} keer"
+      other: "{{count}} keer"
+      zero: Nooit
+  scaffold: 
+    add: Toevoegen
+    back: Terug
+    cancel: Annuleren
+    close: Sluiten
+    create: Aanmaken
+    destroy: Verwijderen
+    details: Details
+    edit: Bewerken
+    more: Meer...
+    new: Nieuwe {{model}} toevoegen
+    save: Opslaan
+    send: Verzenden
+    show: Weergeven
+    sure: Weet u zeker dat u deze {{model}} wilt verwijderen?
+    update: Bijwerken
+  time: 
+    ago: "{{time}} geleden"
+    today: Vandaag

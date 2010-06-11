@@ -1,21 +1,25 @@
-fr:
-  votes:
-    create:
-      flash_notice: "merci d'avoir voté!"
-      flash_error:  "vous ne pouvez pas voter"
-      unauthenticated: "les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait"
-    control:
-      to_vote_up: "cliquez si vous approuvez"
-      to_vote_down: "cliquez si vous désapprouvez"
-      have_voted_up: "cliquez pour annuler votre approuvement"
-      have_voted_down: "cliquez pour annuler votre désapprouvement"
-    destroy:
-      flash_notice: "votre vote a été annulé avec succès"
-    model:
-      messages:
-        closed_question: "vous ne pouvez pas voter sur les entées qui appartienent à une question fermée."
-        vote_down_comment: "comments cannot be voted down"
-  activerecord:
-    models:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  activerecord: 
+    models: 
+      vote: voter
       votes: votes
-      user: vote
+  votes: 
+    control: 
+      have_voted_down: cliquez pour annuler votre désapprouvement
+      have_voted_up: cliquez pour annuler votre approuvement
+      to_vote_down: cliquez si vous désapprouvez
+      to_vote_up: cliquez si vous approuvez
+    create: 
+      flash_error: vous ne pouvez pas voter
+      flash_notice: merci d'avoir voté!
+      unauthenticated: les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait
+    destroy: 
+      flash_notice: votre vote a été annulé avec succès
+    model: 
+      messages: 
+        closed_question: vous ne pouvez pas voter sur les entées qui appartienent à une question fermée.
+        vote_down_comment: comments cannot be voted down

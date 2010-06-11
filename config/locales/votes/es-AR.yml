@@ -1,21 +1,24 @@
-es-AR:
-  votes:
-    create:
-      flash_notice: "gracias por su voto"
-      flash_error:  "usted no puede votar esta"
-      unauthenticated: "los usuarios anónimos no puede votar"
-    destroy:
-      flash_notice: "tu voto ha sido revocado exitosamente."
-    control:
-      to_vote_up: "clic para aprobar"
-      to_vote_down: "clic para desaprobar"
-      have_voted_up: "clic para deshacer tu aprobación"
-      have_voted_down: "clic para deshacer tu desaprobación"
-    model:
-      messages:
-        closed_question: "usted no puede votar en cualquier entrada que pertenezcan a una pregunta cerrada"
-        vote_down_comment: "los comentarios no pueden ser votados negativamente"
-  activerecord:
-    models:
-      votes: votos
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    models: 
       vote: voto
+      votes: votos
+  votes: 
+    control: 
+      have_voted_down: clic para deshacer tu desaprobación
+      have_voted_up: clic para deshacer tu aprobación
+      to_vote_down: clic para desaprobar
+      to_vote_up: clic para aprobar
+    create: 
+      flash_error: usted no puede votar esta
+      flash_notice: gracias por su voto
+      unauthenticated: los usuarios anónimos no puede votar
+    destroy: 
+      flash_notice: tu voto ha sido revocado exitosamente.
+    model: 
+      messages: 
+        closed_question: usted no puede votar en cualquier entrada que pertenezcan a una pregunta cerrada
+        vote_down_comment: los comentarios no pueden ser votados negativamente

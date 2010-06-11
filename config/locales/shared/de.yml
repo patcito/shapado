@@ -1,0 +1,12 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  shared: 
+    current_tags: 
+      title: ausgewählte Schlagworte
+    topbar: 
+      admin: administrieren
+      logged_as: Als {{login}} angemeldet
+      user_page: Meine Seite

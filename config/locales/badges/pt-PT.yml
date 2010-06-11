@@ -1,119 +1,129 @@
-"pt-PT":
-  badges:
-    index:
-      title: badges
-      description: "all badges that you can earn. share your knowledge earn badges."
-    show:
-      title: badge {{type}}
-      description: "users earned this badge. recently awarded to:"
-      for_tag_bronze: 200 votes in tag {{tag}}
-      for_tag_silver: 400 votes in tag {{tag}}
-      for_tag_gold: 1000 votes in tag {{tag}}
-      earned: earned
-    shared:
-      rockstar:
-        description: 1000 positive votes, 10 negative votes maximum
-      popstar:
-        description: 500 positive votes, 10 negative votes maximum
-      fanatic:
-        description: visited the site each day for 100 consecutive days
-      service_medal:
-        description: 300 positive votes
-      famous_question:
-        name: famous question
-        description: asked a question with 10000 views
-      notable_question:
-        name: notable question
-        description: asked a question with 2500 views
-      popular_question:
-        name: poular question
-        description: asked a question with 1000 views
-      popular_person:
-        description: your profile is visited 10000 times
-      guru:
-        description: give a solution to a question with an average of  more than 40 votes
-      favorite_question:
-        description: question favorited by 25 users
-      tutor:
-        description: give a solution to a question with an average of more than 2 votes
-      addict:
-        description: visited the site each day for 20 consecutive days
-      good_question:
-        description: having a question that reaches an average of more than 10 votes
-      good_answer:
-        description: having an answer that reaches an average of more than 10 votes
-      pioneer:
-        description: be one of the first user to register
-      supporter:
-        description: vote positively for the first time
-      critic:
-        description: vote negatively for the first time
-      inquirer:
-        description: ask for the first time
-      troubleshooter:
-        description: answer for the first time
-      commentator:
-        description: left 10 comments
-      merit_medal:
-        description: get 200 positive votes
-      effort_medal:
-        description: get 100 positive votes
-      student:
-        description: asked first question with at least one up vote
-      shapado:
-        description: visited the site each day for 8 consecutive days
-      editor:
-        description: first edited post
-      necromancer:
-        name: necromancer
-        description: Answered a question more than 60 days later with at least 5 votes
-      stellar_question:
-        name: stellar question
-        description: Question favorited by 100 users
-      nice_question:
-        name: nice question
-        description: Question voted up 10 times
-      nice_answer:
-        name: nice answer
-        description: Answer voted up 10 times
-      great_question:
-        name: great question
-        description: Question voted up 100 times
-      great_answer:
-        name: great answer
-        description: Answer voted up 100 times
-      peer_pressure:
-        name: peer pressure
-        description: Deleted own post with score of -3 or lower
-      enlightened:
-        name: enlightened
-        description: First answer was accepted with at least 10 up votes
-      disciplined:
-        name: disciplined
-        description: Deleted own post with score of 3 or higher
-      cleanup:
-        name: cleanup
-        description: First rollback
-      civic_duty:
-        name: civic duty
-        description: Voted 300 times
-      citizen_patrol:
-        name: citizen patrol
-        description: First flagged post
-      self-learner:
-        name: self learner
-        description: Answered your own question with at least 3 up votes
-      scholar:
-        name: scholar
-        description: First accepted answer on your own question
-      autobiographer:
-        name: autobiographer
-        description: Completed all user profile fields
-      organizer:
-        name: organizer
-        description: First retag
-
-  activerecord:
-    models:
-      badge: badge
-      badges: badges
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  activerecord: 
+    models: 
+      badge: distintivo
+      badges: distintivos
+  badges: 
+    index: 
+      description: todos os distintivos que conseguir ganhar; partilhe o seu conhecimento e ganhe distintivos.
+      title: distintivos
+    shared: 
+      addict: 
+        description: visitou o site em 20 dias consecutivos
+      autobiographer: 
+        description: preencheu todos os campos do perfil de utilizador
+        name: autobiógrafo
+      celebrity: 
+        description: obter mais de 100 seguidores
+        name: celebridade
+      citizen_patrol: 
+        description: primeira publicação reportada
+        name: patrulha do cidadão
+      civic_duty: 
+        description: votou 300 vezes
+        name: dever cívico
+      cleanup: 
+        description: primeira reversão
+        name: limpeza
+      commentator: 
+        description: deixou 10 comentários
+      critic: 
+        description: votar negativamente pela primeira vez
+      disciplined: 
+        description: eliminou publicação própria com pontuação de 3 ou superior
+        name: disciplinado
+      editor: 
+        description: primeira publicação editada
+      effort_medal: 
+        description: obter 100 votos positivos
+      enlightened: 
+        description: primeira resposta foi aceite com pelo menos 10 votos positivos
+        name: esclarecido
+      famous_question: 
+        description: fez uma pergunta com 10 000 visitas
+      fanatic: 
+        description: visitou o site em 100 dias consecutivos
+      favorite_question: 
+        description: pergunta adicionada aos favoritos por 25 utilizadores
+      friendly: 
+        description: seguir alguém pela primeira vez
+        name: amistoso
+      good_answer: 
+        description: ter dado uma resposta que atinge uma média de mais de 25 votos
+      good_question: 
+        description: ter feito uma pergunta que atinge uma média de mais de 25 votos
+      great_answer: 
+        description: resposta com 100 votos positivos
+        name: óptima resposta
+      great_question: 
+        description: pergunta com 100 votos positivos
+        name: óptima pergunta
+      guru: 
+        description: dar uma solução a uma pergunta com uma média de mais de 40 votos
+      inquirer: 
+        description: perguntar pela primeira vez
+      interesting_person: 
+        description: obter mais de 10 seguidores
+        name: pessoa interessante
+      merit_medal: 
+        description: obter 200 votos positivos
+      necromancer: 
+        description: respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
+        name: necromante
+      nice_answer: 
+        description: resposta com 10 votos positivos
+        name: boa resposta
+      nice_question: 
+        description: pergunta votada positivamente 10 vezes
+        name: boa pergunta
+      notable_question: 
+        description: fez uma pergunta com 2 500 visitas
+      organizer: 
+        description: primeira recategorização
+        name: organizador
+      peer_pressure: 
+        description: eliminou publicação própria com pontuação de -3 ou inferior
+        name: pressão dos pares
+      pioneer: 
+        description: ser um dos primeiros utilizadores a registar-se
+      popstar: 
+        description: 500 votos positivos, máximo de 10 votos negativos
+      popular_person: 
+        description: tem mais de 50 seguidores
+        name: pessoa popular
+      popular_question: 
+        description: fez uma pergunta com 1000 visitas
+      rockstar: 
+        description: 1000 votos positivos, máximo de 10 votos negativos
+      scholar: 
+        description: primeira resposta aceite, numa pergunta do próprio
+        name: académico
+      self-learner: 
+        description: respondeu à sua própria pergunta, com pelo menos 3 votos positivos
+        name: autodidata
+      service_medal: 
+        description: 300 votos positivos
+      shapado: 
+        description: visitou o site em 8 dias consecutivos
+      stellar_question: 
+        description: pergunta adicionada aos favoritos por 100 utilizadores
+        name: pergunta extraordinária
+      student: 
+        description: fez a primeira pergunta com pelo menos um voto positivo
+      supporter: 
+        description: votar positivamente pela primeira vez
+      troubleshooter: 
+        description: responder pela primeira vez
+      tutor: 
+        description: dar uma solução a uma pergunta com uma média de mais de 2 votos
+    show: 
+      description: "utilizadores que ganharam este distintivo; recentemente atribuído a:"
+      earned: recebeu
+      for_tag_bronze: 200 votos na categoria {{tag}}
+      for_tag_gold: 1000 votos na categoria {{tag}}
+      for_tag_silver: 400 votos na categoria {{tag}}
+      title: distintivo {{type}}

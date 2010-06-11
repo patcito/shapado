@@ -1,0 +1,20 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  sessions: 
+    create: 
+      flash_error: U kon niet aanmelden als "{{login}}"
+      flash_notice: U bent aangemeld
+    destroy: 
+      flash_notice: U bent afgemeld.
+    new: 
+      log_in: Aanmelden
+      not_registered: Nog niet geregistreerd?
+      registered: Al geregistreerd?
+      signup: Registreren
+      with_authentication: Aanmelden via ons aanmeldingssysteem
+      with_facebook: Aanmelden met Facebook
+      with_openid: Aanmelden met OpenID
+      with_twitter: Aanmelden met Twitter

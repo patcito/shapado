@@ -1,0 +1,13 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    models: 
+      favorite: favorisieren
+      favorites: Favoriten
+  unfavorites: 
+    create: 
+      success: Die Frage ist aus deiner Favoritenliste entfernt worden
+      unauthenticated: Du musst angemeldet sein, um Favoriten entfernen zu können.

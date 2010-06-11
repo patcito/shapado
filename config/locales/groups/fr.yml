@@ -1,65 +1,64 @@
-fr:
-  groups:
-    index:
-      title: groups
-      filter: "chercher les groupes"
-      actives: actifs
-      pendings: en attente
-      most_active: most active
-      request_group: demander un nouveau groupe
-      name: nom
-    group:
-      about: À propos
-      close: fermer
-      accept_group: accepter ce groupe
-      close_group: fermer ce groupe
-      allow_ads: permettre publicité
-      disallow_ads: interdir publicité
-      accept_group_with_custom_ads: accepter ce groupe et autoriser publicité personnalisée
-    show:
-      title: "à propos de {{name}}"
-      visit_group: visiter ce groupe
-      group_awaiting_acceptance: "ce groupe est dans l'attente de l'acceptation d'un modérateur."
-      group_closed: ce groupe a été fermé.
-      accept_group: accepter ce groupe
-      close_group: fermer ce groupe
-    new:
-      title: créez votre groupe
-    create:
-      flash_notice: "Votre groupe a été créé avec succès, vous pouvez maintenant commencer à le configurer."
-    form:
-      description_legend: vous avez 400 caractères pour décrire le groupe.
-      legend_legend: "ceci sera utilisé dans l'entête, vous disposez de 40 caractères"
-      default_tags_legend: "séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés."
-      logo_legend: "vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb."
-      any_language: "n'importe qu'elle"
-      access: Configuration de l'accès
-      isolate_group: isolate the group form other groups
-      members_only: "only the group's members will be able to access this group"
-      custom_html: allow custom html
-      custom_js: allow custom javascript
-      custom_analytics: allow Custom Analytics
-      analytics_engine: analytics Engine
-      website_analytics_id: website Analytics ID
-      analytics_legend: the group will be able to use its own tracking code
-  activerecord:
-    models:
-      groups: groupes
-      group: groupe
-      default_tags_message: vous ne pouvez pas utiliser plus de 10 tags par défaut.
-    attributes:
-      group:
-        name: name
-        subdomain: url
-        domain: domaine
-        legend: légende
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: tags par défaut
         description: description
-        state: état
-        owner: "ce groupe a été crée par {{login}}"
+        domain: domaine
+        fb_button: Activer le boutton Like de Facebook (ne protège pas la vie privée)
+        forum: permettre plus d'une réponse par utilisateur
         group_created_by: crée par
         language: langue
-        default_tags: "tags par défaut"
+        legend: légende
         logo: logo
-        forum: permettre plus d'une réponse par utilisateur
-        wysiwyg_editor: "Activer l'éditeur de texte convivial (présente à l'écran tel qu'à l'écrit)"
-        fb_button: "Activer le boutton Like de Facebook (ne protège pas la vie privée)"
+        may_contain_adult_content: ce site peut inclure du contenu pour adultes
+        name: name
+        openid_only: seules les personnes utilisant openid ont accès au site
+        owner: ce groupe a été crée par {{login}}
+        registered_only: seules les personnes autorisées ont accès au site
+        state: état
+        subdomain: url
+        wysiwyg_editor: Activer l'éditeur de texte convivial (présente à l'écran tel qu'à l'écrit)
+    models: 
+      default_tags_message: vous ne pouvez pas utiliser plus de 10 tags par défaut.
+      group: groupe
+      groups: groupes
+  groups: 
+    create: 
+      flash_notice: Votre groupe a été créé avec succès, vous pouvez maintenant commencer à le configurer.
+    form: 
+      access: Configuration de l'accès
+      any_language: n'importe qu'elle
+      default_tags_legend: séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés.
+      description_legend: vous avez 400 caractères pour décrire le groupe.
+      legend_legend: ceci sera utilisé dans l'entête, vous disposez de 40 caractères
+      logo_legend: vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb.
+    group: 
+      about: À propos
+      accept_group: accepter ce groupe
+      allow_ads: permettre publicité
+      close: fermer
+      close_group: fermer ce groupe
+      disallow_ads: interdir publicité
+    index: 
+      actives: actifs
+      filter: chercher les groupes
+      most_active: most active
+      name: nom
+      pendings: en attente
+      request_group: demander un nouveau groupe
+      title: groups
+    new: 
+      title: créez votre groupe
+    show: 
+      accept_group: accepter ce groupe
+      accept_group_with_custom_ads: accepter les groupes et autoriser les annonces personnalisées
+      close_group: fermer ce groupe
+      group_awaiting_acceptance: ce groupe est dans l'attente de l'acceptation d'un modérateur.
+      group_closed: ce groupe a été fermé.
+      title: à propos de {{name}}
+      visit_group: visiter ce groupe

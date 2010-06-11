@@ -1,0 +1,21 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: dahilan
+    models: 
+      flag: bandila
+      flags: mga bandila
+  flags: 
+    create: 
+      flash_error: hindi mo ito maibabandila
+      flash_notice: salamat sa iyong ulat
+    form: 
+      attention: kailangan ng pagpansin ng namumuno
+      label: mangyaring ibandila ng may pag-iingat
+      offensive: pananalitang nakapagpapagalit, mapagmalabis o mapoot
+      spam: manlulusob

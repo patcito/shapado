@@ -1,8 +1,11 @@
-pt-PT:
-  shared:
-    topbar:
-      logged_as: "logged in as {{login}}"
-      admin: gerir
-      user_page: my page
-    current_tags:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  shared: 
+    current_tags: 
       title: selected tags
+    topbar: 
+      admin: gerir
+      logged_as: logged in as {{login}}
+      user_page: my page

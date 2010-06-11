@@ -1,0 +1,10 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: треба потврда
+        title: испрати потврдни е-пораки

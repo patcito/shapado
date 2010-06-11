@@ -1,0 +1,20 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  comments: 
+    create: 
+      flash_notice: Vielen Dank für deinen Kommentar
+    edit: 
+      title: Kommentar bearbeiten
+    shared: 
+      add_comment: Kommentar hinzufügen …
+      comment_submit: kommentieren
+      reply: antworten
+      said: schrieb
+    update: 
+      flash_notice: Der Kommentar wurde erfolgreich aktualisiert.
+  models: 
+    comment: Kommentar
+    comments: Kommentare

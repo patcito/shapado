@@ -1,0 +1,52 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  activerecord: 
+    attributes: 
+      user: 
+        activation_code: код активации
+        avatar: Изображение в профиле
+        birthday: День рождения
+        current_password: текущий пароль
+        email: электронная почта
+        fullname: полное имя
+        hide_country: Не отображать мою страну
+        language: язык
+        language_filter: фильтр по языку
+        last_logged_at: был последний раз на сайте
+        login: имя пользователя
+        name: настоящее имя
+        password: пароль
+        password_confirmation: подтверждение пароля
+        preferred_languages: выберите знакомые вам языки
+        preferred_tags: предпочитаемые теги
+        reputation: репутация
+        timezone: часовой пояс
+        updated_at: обновлено
+        website: Веб-сайт
+    models: 
+      user: пользователь
+      users: пользователи
+  users: 
+    actions: 
+      edit_wiki_post: редактирование вики-записей
+      vote_down: голосовать против
+    create: 
+      flash_error: к сожалению, мы не могли настроить эту учётную запись. повторите попытку снова или обратитесь к администратору (по ссылке выше).
+      flash_notice: благодарим за регистрацию!
+    edit: 
+      enable_twitter: Включить учётные записи facebook или twitter
+      submit: сохранить
+      title: настройки
+    follow: 
+      flash_notice: пользователь {{user}} добавлен в список ваших друзей
+    index: 
+      newest: новейшие
+      oldest: старейшие
+      title: все пользователи
+    show: 
+      follow: следить
+      title: Пользователь {{user}}
+      unfollow: не следить

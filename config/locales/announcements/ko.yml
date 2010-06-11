@@ -1,0 +1,20 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: 끝
+        message: " 메시지"
+        only_anonymous: 익명 사용자에 대해서만
+        starts_at: 시작
+  announcements: 
+    actions: 
+      delete: 삭제
+      title: 액션
+    create: 
+      success: 발표가 성공적으로 만들었습니다.
+    index: 
+      title: 알림

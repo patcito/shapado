@@ -1,0 +1,20 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: eindigt om
+        message: bericht
+        only_anonymous: alleen voor anonieme gebruikers
+        starts_at: begint om
+  announcements: 
+    actions: 
+      delete: verwijderen
+      title: Handelingen
+    create: 
+      success: de aankondiging is aangemaakt.
+    index: 
+      title: aankondigingen

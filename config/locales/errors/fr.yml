@@ -1,17 +1,22 @@
-fr:
-  errors:
-    options_label: "autres choses que vous pouvez faire:"
-    go_to: "aller à la page {{link}}"
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  errors: 
+    forbidden: 
+      explanation: vous n'avez pas les permissions requises pour accéder à cette page.
+      title: accès refusé
+    go_to: aller à la page {{link}}
     help_us_answer: aider nous à répondre à {{link}}
-    search: "chercher"
-    forbidden:
-      explanation: "vous n'avez pas les permissions requises pour accéder à cette page."
-    not_found:
-      title: "page non trouvée."
-      explanation: "vous avez peut-être mal écrit l'adresse ou bien la page en question a changé."
-    unprocessable_entity:
-      title: "votre modification a été rejetée."
-      explanation: "peut-être que vous avez éssayer de changer un élément dont vous n'avez pas accès."
-    internal_error:
-      title: "nous somme désolé mais une erreur s'est produite."
-      explanation: "nous avons été alerté à propos de cette erreur et nous allons vérifier d'ici peu."
+    internal_error: 
+      explanation: nous avons été alerté à propos de cette erreur et nous allons vérifier d'ici peu.
+      title: nous somme désolé mais une erreur s'est produite.
+    not_found: 
+      explanation: vous avez peut-être mal écrit l'adresse ou bien la page en question a changé.
+      title: page non trouvée.
+    options_label: "autres choses que vous pouvez faire:"
+    search: chercher
+    unprocessable_entity: 
+      explanation: peut-être que vous avez éssayer de changer un élément dont vous n'avez pas accès.
+      title: votre modification a été rejetée.

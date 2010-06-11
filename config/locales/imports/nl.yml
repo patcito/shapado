@@ -1,0 +1,10 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: Bevestiging nodig
+        title: Bevestigingse-mails verzenden

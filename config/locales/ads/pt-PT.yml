@@ -1,12 +1,15 @@
-"pt-PT":
-  ads:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  ads: 
     ad_links: add a new {{type}} ad
-    title: add a new {{type}} ad
+    create: 
+      success: ad was successfully created.
+    index: 
+      add_adbard: add a new adbard ad
+      add_adsense: add a new google adsense ad
+      title: ads
     name: "name:"
     position: "position:"
-    index:
-      title: ads
-      add_adsense: add a new google adsense ad
-      add_adbard: add a new adbard ad
-    create:
-      success: "ad was successfully created."
+    title: add a new {{type}} ad

@@ -1,0 +1,30 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  widgets: 
+    badges: 
+      description: овој елемент ги прикажува скорешните значки доделени на корисници или прашања
+      title: скорешни значки
+    groups: 
+      description: овој елемент ги прикажува најновите групи
+      title: скорешни групи
+    index: 
+      description: елементите поместувајте ги со стрелките
+      title: раководење со елементи во странична лента
+    pages: 
+      description: овој елемент го прикажува списокот на вики-страници
+      title: вики-страници
+    tag_cloud: 
+      description: овој елемент го прикажува облакот од ознаки
+      title: облак од ознаки
+    top_groups: 
+      description: овој овој елемент ги прикажува 5-те највисоко рангирани („врвни“) групи
+      title: 5 врвни групи
+    top_users: 
+      description: овој елемент ги прикажува петте највисоко рангирани („врвни“) корисници
+      title: 5 врвни корисници
+    users: 
+      description: овој елемент прикажува новорегистрирани корисници
+      title: скорешни корисници

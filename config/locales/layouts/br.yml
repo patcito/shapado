@@ -1,0 +1,50 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  layouts: 
+    application: 
+      ask_question: goulenn un dra bennak
+      badges: badjoù
+      forgot: disoñjet ?
+      home: degemer
+      languages: yezhoù
+      log_in: kevreañ
+      logged: kevreet evel {{login}}
+      logout: digevreañ
+      manage_ads: merañ ar bruderezh
+      moderate: habaskaat
+      now: bremañ !
+      openid: 
+        explaination: "mar fell deoc'h en em enskrivañ pe kevreañ traken, dibabit ur pourvezer openid :"
+      pages: pajennoù
+      questions: goulennoù
+      questions_in: goulennoù e
+      questions_tagged: tikedennet gant
+      search: klask
+      settings: arventennoù
+      signup: en em enskrivañ
+      subscribe: en em enskrivañ
+      tags: balizennoù
+      title: goulennoù & respontoù
+      unanswered: direspont
+      users: implijerien
+      welcome_from: degemer mat ! Gouest oc'h
+    manage: 
+      actions: oberoù
+      announcements: kemennoù
+      constrains: strishadurioù
+      content: danvez
+      dashboard: dashboard
+      domain: domani
+      general: dre-vras
+      members: izili
+      pages: pajennoù
+      properties: perzhioù
+      reputation: brud
+      rewards: prizioù
+      stats: stadegoù
+      theme: tem
+      widgets: bitrakoù

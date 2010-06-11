@@ -1,0 +1,29 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Antworttext
+        created_at: beantwortet
+        link: Link
+    models: 
+      answer: Antwort
+      answers: Antworten
+  answers: 
+    create: 
+      flash_error: "Beim Antworten ist ein Fehler aufgetreten. Bitte beachte:\n- leere Antwortfelder sowie identische Antworttexte sind nicht möglich\n- bevor eine weitere Antwort gespeichert werden kann, muss 20 Sekunden gewartet werden\n- es kann von einer einzelnen Person nur eine Antwort pro Frage erstellt werden"
+      flash_notice: Vielen Dank!
+    edit: 
+      title: Antwort bearbeiten
+    form: 
+      answer_label: Frage beantworten
+      comment_label: Antwort kommentieren
+      comment_submit: Kommentar
+      submit: Antwort
+    revert: 
+      title: Antwort entfernen
+    update: 
+      flash_notice: Die Antwort wurde erfolgreich aktualisiert.

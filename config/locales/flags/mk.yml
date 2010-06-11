@@ -1,0 +1,21 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: причина
+    models: 
+      flag: знаменце
+      flags: знаменца
+  flags: 
+    create: 
+      flash_error: ова не може да го означите
+      flash_notice: ви благодариме за пријавата
+    form: 
+      attention: бара внимание од модератор
+      label: означувајте внимателно
+      offensive: навреди, малтретирање или искажување на омраза
+      spam: спам

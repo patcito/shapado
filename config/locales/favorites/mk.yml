@@ -1,0 +1,13 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    models: 
+      favorite: омилено
+      favorites: омилени
+  favorites: 
+    create: 
+      success: прашањето е додадено во вашите омилени
+      unauthenticated: ќе ви треба сметка за да можете да додавате омилени

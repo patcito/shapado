@@ -1,0 +1,29 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: 내용
+        created_at: 답변
+        link: 링크
+    models: 
+      answer: 답변
+      answers: 답변
+  answers: 
+    create: 
+      flash_error: "답변을 추가하지 못했습니다.\n아래 사항을 확인하세요.\n- 내용이 없거나, 반복된 답변은 허용되지 않습니다.\n- 하나의 답변을 달고 20초가 지나야 새로운 답변을 추가할 수 있습니다.\n- 질문마다 단 하나의 답변만 게시할 수 있습니다."
+      flash_notice: 감사합니다!
+    edit: 
+      title: 답변 편집
+    form: 
+      answer_label: 질문에 대한 답변
+      comment_label: 이 답변에 대한 코멘트
+      comment_submit: 코멘트
+      submit: 답변
+    revert: 
+      title: " 답변 취소"
+    update: 
+      flash_notice: 답변이 성공적으로 업데이트되었습니다.

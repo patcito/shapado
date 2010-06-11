@@ -1,0 +1,129 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    models: 
+      badge: speldje
+      badges: speldjes
+  badges: 
+    index: 
+      description: alle speldjes die u kunt verdienen. Deel uw kennis, verdien speldjes.
+      title: speldjes
+    shared: 
+      addict: 
+        description: heeft de site twintig dagen achter elkaar bezocht
+      autobiographer: 
+        description: heeft alle velden in het gebruikersprofiel ingevuld
+        name: autobiograaf
+      celebrity: 
+        description: meer dan 100 volgers
+        name: beroemdheid
+      citizen_patrol: 
+        description: eerste bericht gemarkeerd
+        name: burgerpatrouille
+      civic_duty: 
+        description: driehonderd keer gestemd
+        name: burgerplicht
+      cleanup: 
+        description: eerste keer teruggedraaid
+        name: opruimen
+      commentator: 
+        description: heeft tien opmerkingen achtergelaten
+      critic: 
+        description: heeft voor de eerste keer negatief beoordeeld
+      disciplined: 
+        description: heeft een eigen bericht met een score van drie of hoger verwijderd
+        name: gedisciplineerd
+      editor: 
+        description: eerste bericht bewerkt
+      effort_medal: 
+        description: honderd positieve stemmen halen
+      enlightened: 
+        description: heeft een eerste antwoord dat tenminste tien keer positief is beoordeeld
+        name: verlicht
+      famous_question: 
+        description: heeft een vraag gesteld die tienduizend keer bekeken is
+      fanatic: 
+        description: heeft de site honderd dagen achter elkaar bezocht
+      favorite_question: 
+        description: heeft een vraag gesteld die door 25 gebruikers als favoriet is ingesteld
+      friendly: 
+        description: voor de eerste keer iemand gaan volgen
+        name: vriendelijk
+      good_answer: 
+        description: met een antwoord dat een gemiddelde van meer dan 25 stemmen bereikt
+      good_question: 
+        description: heeft een vraag die een gemiddelde van meer dan 25 stemmen bereikt
+      great_answer: 
+        description: antwoord dat honderd keer positief is beoordeeld
+        name: perfect antwoord
+      great_question: 
+        description: vraag die honderd keer positief beoordeeld is
+        name: supervraag
+      guru: 
+        description: geef een oplossing voor een vraag met een gemiddelde van meer dan 40 stemmen
+      inquirer: 
+        description: heeft een eerste vraag gesteld
+      interesting_person: 
+        description: meer dan tien volgers
+        name: interessant persoon
+      merit_medal: 
+        description: krijg tweehonderd positieve stemmen
+      necromancer: 
+        description: heeft een vraag beantwoord meer dan twee maanden na het stellen met tenminste vijf stemmen
+        name: geestenbezweerder
+      nice_answer: 
+        description: antwoord dat tien keer positief is beoordeeld
+        name: mooi antwoord
+      nice_question: 
+        description: vraag die tien keer positief beoordeeld is
+        name: goede vraag
+      notable_question: 
+        description: heeft een vraag gesteld die 2500 keer bekeken is
+      organizer: 
+        description: eerste herlabeling
+        name: organisator
+      peer_pressure: 
+        description: heeft eigen bericht met een score van -3 of lager verwijderd
+        name: groepsdruk
+      pioneer: 
+        description: een van de eerste geregistreerde gebruikers
+      popstar: 
+        description: vijfhonderd positieve stemmen, maximaal 10 negatieve stemmen
+      popular_person: 
+        description: heeft meer dan vijftig volgers
+        name: populiare gebruiker
+      popular_question: 
+        description: heeft een vraag beantwoord die duizend keer bekeken is
+      rockstar: 
+        description: duizend positieve stemmen, maximaal tien negatieve stemmen
+      scholar: 
+        description: eerste geaccepteerde antwoord op een eigen vraag
+        name: geleerde
+      self-learner: 
+        description: eigen vraag beantwoord met tenminste drie positieve beoordelingen
+        name: zelflerend
+      service_medal: 
+        description: driehonderd positieve stemmen
+      shapado: 
+        description: heeft de site acht dagen achter elkaar bezocht
+      stellar_question: 
+        description: vraag die door honderd gebruikers als favoriet is aangegeven
+        name: bovennatuurlijk goede vraag
+      student: 
+        description: heeft een vraag gesteld met tenminste één positieve stem
+      supporter: 
+        description: heeft de eerste keer positief gestemd
+      troubleshooter: 
+        description: het eerste antwoord gegeven
+      tutor: 
+        description: geef een antwoord op een vraag met een gemiddelde van meer dan twee stemmen
+    show: 
+      description: "gebruikers die dit speldje recentelijk hebben verdiend:"
+      earned: verdiend
+      for_tag_bronze: tweehonderd stemmen in label {{tag}}
+      for_tag_gold: duizend stemmen in label {{tag}}
+      for_tag_silver: vierhonderd stemmen in label {{tag}}
+      title: speldje {{type}}

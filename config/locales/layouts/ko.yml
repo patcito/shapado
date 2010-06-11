@@ -1,0 +1,49 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  layouts: 
+    application: 
+      ask_question: 질문
+      badges: 배지
+      forgot: 잊었나요?
+      home: 홈
+      languages: 언어
+      log_in: 로그인
+      logged: " {{login}}로 로그인"
+      logout: 로그아웃
+      manage_ads: 광고 관리
+      moderate: moderate
+      now: now!
+      openid: 
+        explaination: 등록 또는 로그인하려면, OpenID 제공자를 선택하세요.
+      pages: 페이지
+      questions: 질문
+      questions_in: 질문
+      questions_tagged: 태그
+      search: 찾기
+      settings: 설정
+      signup: 가입
+      subscribe: 가입
+      tags: 태그
+      title: 질문 및 답변
+      unanswered: 답변 없음
+      users: 사용자
+      welcome_from: 환영합니다!
+    manage: 
+      actions: 액션
+      announcements: 알림
+      constrains: constrains
+      content: 콘텐츠
+      dashboard: dashboard
+      domain: 도메인
+      general: 일반
+      members: 회원
+      pages: 페이지
+      properties: properties
+      reputation: 명성
+      rewards: 보상
+      stats: 통계
+      theme: 테마
+      widgets: 위젯

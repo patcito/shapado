@@ -1,0 +1,136 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: 답변
+        asked_by: asked by
+        body: 본문
+        closed: 마감됨
+        created_at: 질문
+        language: 언어
+        tags: 태그
+        title: 제목
+        updated_at: 업데이트됨
+        updated_by: updated by
+        views: 보기
+        votes: 투표
+    models: 
+      question: 질문
+      questions: 질문
+  questions: 
+    answer: 
+      add_comment: 코멘트 추가 ...
+      flag: 플래그
+      pick_answer: 해법으로 선택
+      unset_answer: unset as solution?
+    create: 
+      flash_notice: 질문이 성공적으로 게시되었습니다.
+    edit: 
+      title: 질문 수정
+    flag: 
+      title: flag question
+    form: 
+      adult_content: 이 질문은 성인 자료가 포함되어 있습니다.
+      body_tip: what's your question? be descriptive.
+      language_tip: 질문 언어를 선택하세요.
+      tags_tip: 태그로 귀하의 질문에 대한 자세한 정보를 추가합니다.
+    index: 
+      active: active
+      active_tooltip: 최근에 업데이트된 질문들
+      ask_question: 질문하기
+      empty: 아직 아무도 질문하지 않았습니다. 첫 질문자가 되세요!
+      help_to_answer: 답변을 도와주세요
+      hot: hot
+      hot_tooltip: 지난 5 일 동안 가장 활발한 질문과 답변
+      newest: 최신
+      newest_tooltip: 가장 최근 질문들
+      oldest: oldest
+      title: 모든 질문들
+      unanswered_questions: 답변이 없는 질문들
+      votes: 투표
+      votes_tooltip: 표를 많이 받은 질문들
+    model: 
+      messages: 
+        empty_tags: 죄송합니다. 태그를 사용해야 합니다.
+        title_too_long: 제목이 너무 깁니다. 100자 이하로 줄이세요
+        too_many_tags: 죄송합니다. 최대 9개까지 태그를 입력할 수 있습니다.
+        too_short: "{{count}}자는 너무 짧습니다."
+    move: 
+      group_label: "slug 그룹으로 이동:"
+      submit: 이동!
+      title: "질문 이동: {{title}}"
+    move_to: 
+      group_dont_exists: 그룹{{group}이/가 존재하지 않습니다
+      success: "{{group}}으로 질문을 이동"
+    new: 
+      how_to_ask: 질문 방법
+      title: 질문
+    question: 
+      accepted_tooltip: 이 질문은 수락된 답변이 있습니다
+    retag: 
+      title: retag
+    retag_form: 
+      cancel: 취소
+      submit: 태그 업데이트
+      title: 태그 업데이트
+    retag_to: 
+      failure: 죄송합니다 태그를 업데이트할 수 없습니다.
+      success: 태그가 성공적으로 업데이 트되었습니다.
+    revert: 
+      title: revert question
+    shared: 
+      flag: 플래그
+    show: 
+      accepted_tooltip: 답변들 중 하나를 정답으로 수락
+      another_answers: 기타 답변
+      answers: 답변
+      answers_title: 
+        one: "{{count}} 답변"
+        other: "{{count}} 답변들"
+      asked_on: "질문 대상:"
+      ban: 금지
+      close: 닫기
+      close_reason: "이 질문은 아래 사유로 폐쇄되었습니다 :"
+      favorite_tooltip: 이 질문을 Favorite에 추가
+      flag: 플래그
+      flagged_as: "플래그 :"
+      flags: reported as
+      last_activity: 최근 활동
+      related_questions: 관련된 질문들
+      request_closing: 마감 요청
+      request_closing_details: 이 질문의 마감 요청
+      retag: retag
+      retract_request: 이미 요청하셨습니다. 취소할까요?
+      share: "이 질문을 공유:"
+      share_on: "{{site}}에서 이 질문을 공유"
+      solution: 해결
+      to_answer_question: 이 질문에 답하기
+      unauthenticated_retag: 질문을 retag하려면 계정이 필요합니다
+      unfavorite_tooltip: 이 질문을 Favorite에서 삭제
+      unwatch_tooltip: 이 질문을 그만 보기
+      viewed: 조회
+      watch_tooltip: 이 질문을 관찰하기
+    solve: 
+      flash_notice: 질문이 해결되었습니다.
+    tags: 
+      filter: 태그 검색
+      title: 태그
+      tooltip: " {{tag}}로 태그된 질문들 보기"
+    unanswered: 
+      empty: 이 그룹은 답변이 없는 질문이 없습니다.
+      expert: 전문가
+      my_tags: 내 태그
+      tags: unanswered tags
+      title: 답변이 없는 질문들
+    unsolve: 
+      flash_notice: 질문이 해결되지 않습니다.
+    unwatch: 
+      success: 이 질문에 새로운 답변이 달려도 더 이상 이메일로 전달받지 않습니다.
+    update: 
+      flash_notice: 질문이 성공적으로 업데이트되었습니다.
+    watch: 
+      success: 이 질문에 새로운 답변이 달리면 이메일로 전달 받습니다.

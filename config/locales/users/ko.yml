@@ -1,0 +1,85 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activated at
+        activation_code: activation code
+        asked_by: 질문자
+        avatar: 프로필 이미지
+        birthday: 생일
+        created_at: 가입함
+        current_password: "현재 패스워드:"
+        email: 이메일
+        fullname: 이름
+        hide_country: 국가를 표시하지 않음
+        language: 언어
+        language_filter: 언어별 필터링
+        last_logged_at: seen
+        login: 사용자 ID
+        name: 실명
+        password: 패스워드
+        password_confirmation: 패스워드 확인
+        preferred_languages: 언어를 선택하십시오
+        preferred_tags: 선호하는 태그
+        reputation: 명성
+        timezone: 타임존
+        updated_at: 업데이트 날짜
+        website: 웹사이트
+    models: 
+      user: 이용자
+      users: 이용자
+  users: 
+    actions: 
+      edit_others_posts: 다른 사용자의 게시글을 수정
+      edit_wiki_post: 위키 게시물 수정
+      flag: 플래그
+      retag_others_questions: retag others questions
+      vote_down: vote down
+      vote_to_close_any_question: 모든 질문의 마감을 요청
+      vote_to_close_own_question: 질문 마감을 요청
+      vote_up: vote up
+    create: 
+      flash_error: 해당 계정을 설정할 수 없습니다. 다시 시도하거나 관리자에게 문의하시기 바랍니다 (링크 참조).
+      flash_notice: 환영합니다!
+    edit: 
+      enable_twitter: 페이스북이나 트위터 계정 활성화
+      submit: 저장
+      title: 설정
+    follow: 
+      flash_notice: 사용자  {{user}}를 벗으로 추가하였습니다
+    form: 
+      activities_notification: 배지 획득, 새로운 Follower등 이벤트에 관한 이메일 알림을 받음
+      avatar_tip: Gravatar를 사용하여 프로필 이미지 변경
+      give_advice_notification: 자신의 전문 분야에 해당하는 질문들을 이메일로 수신
+      information: 정보
+      new_answer_notification: 새로운 답변을 메일로 받음
+      notifications: 알림
+      reports_notification: 최신 그룹 활동 보고서를 받음 (그룹 관리자만)
+    index: 
+      empty: 이 그룹은 회원이 없습니다. 이 그룹에 가입하세요.
+      filter: 사용자 검색
+      name: 이름
+      name_tooltip: 알파벳 순서로 사용자 정렬
+      newest: 최신
+      newest_tooltip: 최근 가입한 사용자들
+      oldest: oldest
+      oldest_tooltip: users who were the first to join
+      reputation: 명성
+      reputation_tooltip: 명성 순서로 사용자 정렬
+      title: 모든 사용자
+    messages: 
+      errors: 
+        reputation_needed: 이 {{action}}은 명성 {{min_reputation}}이 필요합니다
+    new: 
+      submit: 가입
+      title: 새 사용자로 가입
+    show: 
+      follow: follow
+      title: 사용자 {{user}}
+      unfollow: unfollow
+    unfollow: 
+      flash_notice: 사용자  {{user}}를 벗에서 삭제하였습니다

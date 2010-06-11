@@ -1,0 +1,36 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: теги по умолчанию
+        description: описание
+        domain: домен
+        group_created_by: кем создано
+        language: язык
+        legend: краткое описание
+        logo: логотип
+        may_contain_adult_content: этот сайт может содержать материалы для взрослых
+        name: имя
+        openid_only: только люди с openid имеют доступ к сайту
+        owner: эта группа создана {{login}}
+  groups: 
+    group: 
+      allow_ads: разрешить рекламу
+      close: закрыть
+      close_group: закрыть эту группу
+      disallow_ads: запретить рекламу
+    index: 
+      actives: активные
+      filter: поиск групп
+      name: имя
+      pendings: на рассмотрении
+      request_group: запросить новую группу
+      title: группы
+    show: 
+      accept_group: принять группу
+      accept_group_with_custom_ads: принять группу и разрешить настраиваемую рекламу
+      group_closed: эта группа была закрыта.

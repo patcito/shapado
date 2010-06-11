@@ -1,0 +1,16 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: gampanin
+  members: 
+    form: 
+      login_tip: maghanap habang nagmamakinilya
+    index: 
+      manage_members_title: pamahalaan ang mga kasapi
+      title: mga kasapi sa pangkat ni {{name}}
+      title_isolate: mga kasapi sa {{name}}

@@ -1,0 +1,25 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    models: 
+      vote: Stem
+      votes: Stemmen
+  votes: 
+    control: 
+      have_voted_down: Klik om uw negatieve beoordeling te verwijderen
+      have_voted_up: Klik om uw positieve beoordeling te verwijderen
+      to_vote_down: Klik om negatief te beoordelen
+      to_vote_up: Klik om positief te beoordelen
+    create: 
+      flash_error: U kunt hier niet op stemmen
+      flash_notice: Bedankt voor uw stem!
+      unauthenticated: Anonieme gebruikers kunnen niet stemmen
+    destroy: 
+      flash_notice: Uw stem is ingetrokken.
+    model: 
+      messages: 
+        closed_question: U kunt niet stemmen op onderdelen van vragen die gesloten zijn
+        vote_down_comment: Opmerkingen kunnen niet negatief beoordeeld worden

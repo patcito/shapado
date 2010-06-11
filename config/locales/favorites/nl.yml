@@ -1,0 +1,13 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    models: 
+      favorite: favoriet
+      favorites: favorieten
+  favorites: 
+    create: 
+      success: De vraag is toegevoegd aan uw favorieten
+      unauthenticated: U moet een gebruiker hebben om favorieten toe te kunnen voegen

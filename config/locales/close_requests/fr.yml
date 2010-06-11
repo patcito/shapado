@@ -1,23 +1,31 @@
-fr:
-  close_requests:
-    index:
-      title: liste des demandes de fermeture
-    form:
-     dupe: doublon
-     ot: hors sujet
-     no_question: N'est pas une question
-     not_relevant: N'est pas pertinente
-     spam: spam
-     request_closing_details: demander de fermer cette question
-     close_with_reason: fermer cette question en utilisant cette raison
-    create:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  close_requests: 
+    create: 
       flash_notice: demande de fermeture créée avec succès
-    update:
-      flash_notice: demande de fermeture actualisée avec succès
-    destroy:
+    destroy: 
       flash_notice: demande de fermeture retirée avec succès
-    model:
+    form: 
+      close_with_reason: fermer cette question en utilisant cette raison
+      dupe: doublon
+      no_question: N'est pas une question
+      not_relevant: N'est pas pertinente
+      ot: hors sujet
+      request_closing_details: demander de fermer cette question
+      spam: spam
+    index: 
+      title: liste des demandes de fermeture
+    model: 
+      attributes: 
+        comment: commentaire
+        reason: motif
+        user: utilisateur
+      messages: 
+        already_requested: vous avez déjà fait une demande de fermeture sur cette question
       name: demande de fermeture
       prural_name: demandes de fermeture
-      messages:
-        already_requested: "vous avez déjà fait une demande de fermeture sur cette question"
+    update: 
+      flash_notice: demande de fermeture actualisée avec succès

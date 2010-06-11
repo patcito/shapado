@@ -1,45 +1,48 @@
-es-AR:
-  layouts:
-    application:
-      title: "preguntas & respuestas"
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  layouts: 
+    application: 
+      ask_question: pregunte
+      badges: insignias
+      forgot: la olvido?
+      home: pagina principal
+      languages: idiomas
+      log_in: acceder
+      logged: conectado como {{login}}
+      logout: salir
+      manage_ads: propagandas
+      moderate: moderar
+      now: ya!
+      openid: 
+        explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
+      pages: paginas
       questions: preguntas
       questions_in: preguntas en
       questions_tagged: etiquetadas con
-      ask_question: pregunte
-      tags: etiquetas
-      users: usuarios
-      badges: insignias
-      unanswered: sin contestar
-      pages: paginas
-      logout: salir
-      logged: conectado como {{login}}
       search: buscar
-      forgot: la olvido?
-      log_in: acceder
-      signup: registrarse
       settings: configuración
-      languages: idiomas
-      moderate: moderar
-      manage_ads: propagandas
-      home: pagina principal
+      signup: registrarse
       subscribe: subscribirse
+      tags: etiquetas
+      title: preguntas & respuestas
+      unanswered: sin contestar
+      users: usuarios
       welcome_from: bienvenido! puedes
-      now: ya!
-      openid:
-        explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
-    manage:
-      dashboard: dashboard
-      properties: properties
-      widgets: widgets
+    manage: 
       actions: actions
-      stats: stats
-      members: miembros
-      reputation: reputación
-      content: contenido
-      theme: tema
-      domain: dominio
-      pages: paginas
-      constrains: restricciones
-      rewards: premios
-      general: general
       announcements: anuncios
+      constrains: restricciones
+      content: contenido
+      dashboard: dashboard
+      domain: dominio
+      general: general
+      members: miembros
+      pages: paginas
+      properties: properties
+      reputation: reputación
+      rewards: premios
+      stats: stats
+      theme: tema
+      widgets: widgets

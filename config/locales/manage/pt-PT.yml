@@ -1,37 +1,39 @@
-pt-PT:
-  admin:
-    manage:
-      content:
-        title: custom content
-        question_prompt: question prompt
-        question_help: question help
-        head: header
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  admin: 
+    manage: 
+      content: 
         footer: footer
+        head: header
+        question_help: question help
+        question_prompt: question prompt
+        title: custom content
         top_bar: top bar
         top_bar_tip: enter one link per line
-      properties:
-        general:
-          title: group properties
-        share:
-          title: share
-        constrains:
-          title: constrains
-          reputation_constrains_subtitle: list of reputations constrains for each action
+      properties: 
+        constrains: 
           reputation_constrains_description: this formular allows you to configure how much reputation points users to be able to do a given action
-        rewards:
-          title: rewards
-          reputation_rewards_subtitle: list of reputations rewards
-          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
-        theme:
-          title: setup the group's theme
-          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
-        domain:
-          title: setup your domain
+          reputation_constrains_subtitle: list of reputations constrains for each action
+          title: constrains
+        domain: 
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
-          instruction1: "To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com)."
+          instruction1: To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com).
           instruction2: There you need to go to the DNS section and create something called a CNAME.
-          instruction3: "Pick 'www' or anything else as the name of your CNAME."
+          instruction3: Pick 'www' or anything else as the name of your CNAME.
           instruction4: "Then in the host or destination field, put your current shapado domain: {{domain}}."
-          instruction5: "Once this is done, after an hour or so, your domain www.{{subdomain}} should point to {{appdomain}}."
-          instruction6: "When this is the case, come back here and put your domain name www.{{subdomain}} in the field below and press the button 'update'. If you have questions, ask us in the {{chat_url}} or on our support forum"
+          instruction5: Once this is done, after an hour or so, your domain www.{{subdomain}} should point to {{appdomain}}.
+          instruction6: When this is the case, come back here and put your domain name www.{{subdomain}} in the field below and press the button 'update'. If you have questions, ask us in the {{chat_url}} or on our support forum
+          title: setup your domain
           warning: Are you sure you want to change your domain?
+        general: 
+          title: group properties
+        rewards: 
+          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+          reputation_rewards_subtitle: list of reputations rewards
+          title: rewards
+        share: 
+          title: share
+        theme: 
+          title: setup the group's theme

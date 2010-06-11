@@ -1,0 +1,20 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: ముగింపు
+        message: సందేశం
+        only_anonymous: అజ్ఞాత వాడుకరులకు మాత్రమే
+        starts_at: మొదలు
+  announcements: 
+    actions: 
+      delete: తొలగించు
+      title: చర్యలు
+    create: 
+      success: ప్రకటనని విజయవంతంగా సృష్టించారు.
+    index: 
+      title: ప్రకటనలు

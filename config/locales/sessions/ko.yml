@@ -1,0 +1,20 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  sessions: 
+    create: 
+      flash_error: " '{{login}}'로 로그인하지 못했습니다"
+      flash_notice: 성공적으로 로그인
+    destroy: 
+      flash_notice: 로그아웃되었습니다.
+    new: 
+      log_in: 로그인
+      not_registered: 아직 등록하지 않았나요?
+      registered: 이미 등록하셨나요?
+      signup: 가입
+      with_authentication: 우리의 인증 시스템으로 로그인
+      with_facebook: 페이스북으로 로그인
+      with_openid: OpenID로 로그인
+      with_twitter: 트위터로 로그인

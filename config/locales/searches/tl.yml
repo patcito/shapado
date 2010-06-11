@@ -1,0 +1,14 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  searches: 
+    form: 
+      clear: hawiin
+      search_box_title: Suriin kung naitanong na dati ang katanungan mo
+      tags_tip: gamitin ang [tatak] upang tukuyin ang mga tatak.
+    index: 
+      empty: hindi tumugma sa anumang mga tanong ang paghahanap mo.
+      search_text: mga katanungan na naglalaman ng
+      tags: sa loob ng mga tatak na ito

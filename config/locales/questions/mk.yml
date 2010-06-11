@@ -1,0 +1,136 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: одговори
+        asked_by: поставено од
+        body: текст
+        closed: затворено
+        created_at: поставено
+        language: јазик
+        tags: ознаки
+        title: наслов
+        updated_at: подновено
+        updated_by: подновено од
+        views: прегледи
+        votes: гласови
+    models: 
+      question: прашање
+      questions: прашања
+  questions: 
+    answer: 
+      add_comment: додај коментар...
+      flag: означи
+      pick_answer: одбери како решение
+      unset_answer: ова повеќе да не биде решение?
+    create: 
+      flash_notice: прашањето е успешно создадено.
+    edit: 
+      title: уредување на прашањето
+    flag: 
+      title: означување на прашање
+    form: 
+      adult_content: ова прашање содржи материјал за возрасни
+      body_tip: што сакате да прашате? бидете описни.
+      language_tip: одберете прашање за јазикот
+      tags_tip: користете ознаки за да додете повеќе информации за вашето прашање.
+    index: 
+      active: активни
+      active_tooltip: неодамна подновени прашања
+      ask_question: постави прашање
+      empty: сè уште никој нема поставено прашање. Бидете првиот што ќе постави!
+      help_to_answer: помогнете ни да одговориме на
+      hot: интересни
+      hot_tooltip: прашања со највеќе активности во текот на последните 5 дена
+      newest: најнови
+      newest_tooltip: најскоро поставените прашања
+      oldest: најстари
+      title: сите прашања
+      unanswered_questions: неодговорени прашања
+      votes: гласови
+      votes_tooltip: прашања со највеќе гласови
+    model: 
+      messages: 
+        empty_tags: Нажалост, мора да употребите барем една ознака.
+        title_too_long: Насловот е предолг. не треба да содржи повеќе од 100 знаци
+        too_many_tags: Нажалост, можете да внесете највеќе до 9 ознаки.
+        too_short: изгледа прекратко. Употребете повеќе зборови од {{count}} за да бидете поконкретни.
+    move: 
+      group_label: "премести во групата со насловот:"
+      submit: премести!
+      title: "преместување на прашањето: {{title}}"
+    move_to: 
+      group_dont_exists: групата {{group}} не постои
+      success: прашањето е преместено во {{group}}
+    new: 
+      how_to_ask: како да поставите прашање
+      title: постави прашање
+    question: 
+      accepted_tooltip: Ова прашање има одговор кој е прифатен
+    retag: 
+      title: преозначи
+    retag_form: 
+      cancel: откажи
+      submit: поднови ознаки!
+      title: Поднови ознаки
+    retag_to: 
+      failure: Нажалост, оваа ознака не може да се поднови.
+      success: Ознаките се успешно подновени.
+    revert: 
+      title: враќање на прашање
+    shared: 
+      flag: знаменце
+    show: 
+      accepted_tooltip: еден од одговорите е прифатен како точен
+      another_answers: други одговори
+      answers: одговори
+      answers_title: 
+        one: "{{count}} одговор"
+        other: "{{count}} одговори"
+      asked_on: постевено на
+      ban: забрани
+      close: затвори
+      close_reason: "прашањево е затворено од следнава причина:"
+      favorite_tooltip: додајте го прашањево во вашите омилени
+      flag: знаменце
+      flagged_as: означени како
+      flags: пријавено како
+      last_activity: последна активност
+      related_questions: поврзани прашања
+      request_closing: побарај затворање
+      request_closing_details: побарај затворање на прашањево
+      retag: преозначи
+      retract_request: веќе имате поставено барање. дали би сакале да го повлечете?
+      share: сподели го прашањево на
+      share_on: сподели го прашањево на {{site}}
+      solution: решение
+      to_answer_question: за да одговорите на ова прашање
+      unauthenticated_retag: треба да имате сметка за да можете да преозначувате прашања
+      unfavorite_tooltip: отстранете го прашањево од вашите омилени
+      unwatch_tooltip: престани со набљудување на прашањево
+      viewed: прегледани
+      watch_tooltip: набљудувај го прашањево
+    solve: 
+      flash_notice: одговорот е решен.
+    tags: 
+      filter: пребарај ознаки
+      title: ознаки
+      tooltip: приказ на прашања со ознаката {{tag}}
+    unanswered: 
+      empty: оваа група нема неодговорени прашања.
+      expert: стручњаци
+      my_tags: мои ознаки
+      tags: неодговорени ознаки
+      title: неодговорени прашања
+    unsolve: 
+      flash_notice: прашањето сега не е решено.
+    unwatch: 
+      success: повеќе нема да добивате соопштенија по е-пошта за секој нов одговор на ова прашање
+    update: 
+      flash_notice: прашањето е успешно подновено.
+    watch: 
+      success: отсега ќе примате соопштенија по е-пошта за секој нов одговор на ова прашање

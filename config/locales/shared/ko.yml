@@ -1,0 +1,12 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  shared: 
+    current_tags: 
+      title: 선택된 태그
+    topbar: 
+      admin: 관리자
+      logged_as: " {{login}}로 로그인"
+      user_page: 내 페이지

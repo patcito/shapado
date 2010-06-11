@@ -1,18 +1,19 @@
-fr:
-  sessions:
-    create:
-      flash_notice: "connexion réussie"
-      flash_error: "nous n'avons pas pu vous connecter en tant que '{{login}}'"
-    destroy:
-      flash_notice: "vous avez été déconnecté."
-    new:
-      with_openid: se connecter avec openid
-      with_facebook: "sign in with facebook"
-      with_twitter: "sign in with twitter"
-      with_authentication: "se connecer avec notre système d'identification"
-      registered: "déjà enregistré?"
-      not_registered: "pas encore enregistré?"
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  sessions: 
+    create: 
+      flash_error: nous n'avons pas pu vous connecter en tant que '{{login}}'
+      flash_notice: connexion réussie
+    destroy: 
+      flash_notice: vous avez été déconnecté.
+    new: 
       log_in: se connecter
+      not_registered: pas encore enregistré?
+      registered: déjà enregistré?
       signup: créer un compte
-      sign_in: se connecter
-      remember_me: retenir ma session
+      with_authentication: se connecer avec notre système d'identification
+      with_facebook: sign in with facebook
+      with_openid: se connecter avec openid
+      with_twitter: sign in with twitter

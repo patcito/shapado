@@ -1,0 +1,14 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  searches: 
+    form: 
+      clear: leeren
+      search_box_title: Prüfe, ob deine Frage bereits gestellt wurde
+      tags_tip: Verwende [tag] um Schlagworte anzugeben.
+    index: 
+      empty: Deine Suche hat keine Ergebnisse erzielt.
+      search_text: Fragen enthalten
+      tags: in diesen Schlagworten

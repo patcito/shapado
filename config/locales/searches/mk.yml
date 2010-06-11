@@ -1,0 +1,14 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  searches: 
+    form: 
+      clear: исчисти
+      search_box_title: Проверка дали прашањето е веќе поставено
+      tags_tip: користете [ознака] за укажување на ознаки.
+    index: 
+      empty: бараното не одговара на ниедно постоечко прашање.
+      search_text: прашања што содржат
+      tags: во рамките на овие ознаки

@@ -1,0 +1,136 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Antwoorden
+        asked_by: Gesteld door
+        body: Tekst
+        closed: Gesloten
+        created_at: Gesteld
+        language: Taal
+        tags: Labels
+        title: Naam
+        updated_at: Bijgewerkt
+        updated_by: Bijgewerkt door
+        views: bekeken
+        votes: Stemmen
+    models: 
+      question: Vraag
+      questions: Vragen
+  questions: 
+    answer: 
+      add_comment: Opmerking toevoegen...
+      flag: Markeren
+      pick_answer: Als correct antwoord instellen
+      unset_answer: Als correct antwoorden verwijderen?
+    create: 
+      flash_notice: De vraag is gesteld.
+    edit: 
+      title: Bezig met het bewerken van de vraag
+    flag: 
+      title: Vraag markeren
+    form: 
+      adult_content: Deze vraag bevat inhoud alleen voor volwassenen.
+      body_tip: Wat is uw vraag? Zorg dat deze beschrijvend is.
+      language_tip: Selecteer de taal voor de vraag.
+      tags_tip: Gebruik labels om meer informatie aan uw vraag toe te voegen.
+    index: 
+      active: Actief
+      active_tooltip: Vragen die recent zijn bijgewerkt
+      ask_question: Vraag stellen
+      empty: Niemand heeft nog vragen gesteld. Wees de eerste!
+      help_to_answer: Helpen met beantwoorden
+      hot: Populair
+      hot_tooltip: Vragen met de meeste activiteit in de afgelopen vijf dagen
+      newest: Nieuwste
+      newest_tooltip: De nieuwste vragen
+      oldest: Oudste
+      title: Alle vragen
+      unanswered_questions: Onbeantwoorde vragen
+      votes: Stemmen
+      votes_tooltip: Vragen met de meeste stemmen
+    model: 
+      messages: 
+        empty_tags: U moet tenminste één label opgeven
+        title_too_long: De vraag is te lang. Deze mag niet meer dan honderd tekens bevatten.
+        too_many_tags: U kunt maximaal negen labels opgeven.
+        too_short: Dit lijkt te kort. Gebruik alstublieft meer dan {{count}} woorden om specifieker te zijn.
+    move: 
+      group_label: "Verplaatsen naar de groep:"
+      submit: Verplaatsen!
+      title: Vraag "{{title}}" verplaatsen
+    move_to: 
+      group_dont_exists: De groep {{group}} bestaat niet.
+      success: Vraag verplaatst naar {{group}}
+    new: 
+      how_to_ask: Hoe vragen
+      title: Stel vraag
+    question: 
+      accepted_tooltip: Deze vraag heeft een antwoord dat is geaccepteerd.
+    retag: 
+      title: Labels wijzigen
+    retag_form: 
+      cancel: Annuleren
+      submit: Labels bijwerken!
+      title: Labels bijwerken
+    retag_to: 
+      failure: De labels konden niet worden bijgewerkt.
+      success: De labels zijn bijgewerkt.
+    revert: 
+      title: Vraag terugdraaien
+    shared: 
+      flag: Markeren
+    show: 
+      accepted_tooltip: Een van de antwoorden is geaccepteerd als juist antwoord.
+      another_answers: Andere antwoorden
+      answers: Antwoorden
+      answers_title: 
+        one: "{{count}} antwoord"
+        other: "{{count}} antwoorden"
+      asked_on: Gesteld op
+      ban: Verbergen
+      close: Sluiten
+      close_reason: "De vraag is gesloten om de volgende reden:"
+      favorite_tooltip: Deze vraag aan uw favorieten toevoegen
+      flag: Markeren
+      flagged_as: Gemarkeerd als
+      flags: Gerapporteerd als
+      last_activity: Laatste activiteit
+      related_questions: Gerelateerde vragen
+      request_closing: Sluitingsverzoek indienen
+      request_closing_details: Sluitingsverzoek voor deze vraag indienen
+      retag: Labels wijzigen
+      retract_request: U hebt al een verzoek ingediend. Wilt u dat intrekken?
+      share: Deze vragen delen op
+      share_on: Deze vragen delen op {{site}}
+      solution: Correct antwoord
+      to_answer_question: Om deze vraag te beantwoorden
+      unauthenticated_retag: U moet een gebruiker hebben om labels voor vragen te kunnen wijzigen.
+      unfavorite_tooltip: Deze vraag uit uw favorieten verwijderen
+      unwatch_tooltip: Deze vraag niet langer volgen
+      viewed: bekeken
+      watch_tooltip: Deze vraag volgen
+    solve: 
+      flash_notice: De vraag is beantwoord.
+    tags: 
+      filter: Zoeken naar labels
+      title: Labels
+      tooltip: Vragen weergeven met het label {{tag}}
+    unanswered: 
+      empty: Deze groep heeft geen onbeantwoorde vragen.
+      expert: Experts
+      my_tags: Mijn labels
+      tags: Onbeantwoorde labels
+      title: Onbeantwoorde vragen
+    unsolve: 
+      flash_notice: De vraag is nu niet beantwoord
+    unwatch: 
+      success: U ontvangt vanaf nu geen berichten per e-mail meer voor ieder nieuw antwoord op deze vraag.
+    update: 
+      flash_notice: De vraag is bijgewerkt.
+    watch: 
+      success: U ontvangt vanaf nu berichten per e-mail voor ieder nieuw antwoord op deze vraag.

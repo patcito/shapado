@@ -1,0 +1,22 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  errors: 
+    forbidden: 
+      explanation: U hebt niet voldoende rechten om deze pagina te kunnen gebruiken.
+      title: Toegang geweigerd
+    go_to: Ga naar de pagina {{link}}
+    help_us_answer: Help ons {{link}} beantwoorden
+    internal_error: 
+      explanation: De websitebeheerder is op de hoogste gesteld en kijkt er snel naar.
+      title: Er is iets fout gegaan.
+    not_found: 
+      explanation: Mogelijk hebt u een invoerfout gemaakt of de pagina heeft een andere naam gekregen.
+      title: Pagina niet gevonden.
+    options_label: "Andere dingen om te proberen:"
+    search: Zoeken
+    unprocessable_entity: 
+      explanation: Wellicht probeerde u iets te wijzigen waar u geen rechten voor had.
+      title: De wijziging die u wilde maken is geweigerd.

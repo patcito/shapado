@@ -1,0 +1,10 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: benötigen eine Bestätigung
+        title: Bestätigungs-E-Mails senden

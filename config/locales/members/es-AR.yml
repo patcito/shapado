@@ -1,12 +1,15 @@
-es-AR:
-  activerecord:
-    attributes:
-      member:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    attributes: 
+      member: 
         role: rol
-  members:
-    index:
-      title: "miembros del group {{name}}"
-      title_isolate: "miembros de {{name}}"
-      manage_members_title: "administrar membresías"
-    form:
-      login_tip: "busca cuando usted digita"
+  members: 
+    form: 
+      login_tip: busca cuando usted digita
+    index: 
+      manage_members_title: administrar membresías
+      title: miembros del group {{name}}
+      title_isolate: miembros de {{name}}

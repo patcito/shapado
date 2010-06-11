@@ -1,0 +1,19 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: వివరణ
+        link: లంకె
+    models: 
+      answer: జవాబు
+      answers: జవాబులు
+  answers: 
+    create: 
+      flash_notice: ధన్యవాదాలు!
+    form: 
+      comment_label: ఈ జవాబుపై వ్యాఖ్యానించండి
+      comment_submit: వ్యాఖ్యానించండి

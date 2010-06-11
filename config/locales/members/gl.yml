@@ -1,0 +1,16 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: rol
+  members: 
+    form: 
+      login_tip: procurar á vez que escribe
+    index: 
+      manage_members_title: xestionar os membros
+      title: membros do grupo de {{name}}
+      title_isolate: membros de {{name}}

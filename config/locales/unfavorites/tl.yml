@@ -1,0 +1,13 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    models: 
+      favorite: paborito
+      favorites: mga paborito
+  unfavorites: 
+    create: 
+      success: ang tanong ay tinanggal mula sa mga paborito mo
+      unauthenticated: kailangan mo ng isang akawnt upang makapagtanggal ng isang paborito

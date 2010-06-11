@@ -1,0 +1,34 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: стилски страници
+        js: Јава-скрипта
+    models: 
+      page: страница
+      pages: страници
+  pages: 
+    actions: 
+      create_page: Создај нова страница
+      edit_page: Уреди страница
+      title: Дејства
+    create: 
+      success: Страницата е успешно создадена.
+    edit: 
+      title: Уредување на страницата
+    form: 
+      language_tip: јазик на страницата
+      title_tip: Наслов на страницата - со ова наведувајте ја страницата. За пример, погледајте ги [[FAQ|често поставуваните прашања]]
+    index: 
+      create_page: создај нова страница
+      title: списоци на страници
+      written_in: напишано на {{language}}
+    new: 
+      title: нова страница
+    title: поправи
+    update: 
+      success: Страницата е успешно подновена.

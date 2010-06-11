@@ -1,0 +1,16 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: улога
+  members: 
+    form: 
+      login_tip: пребарувај пишувајќи
+    index: 
+      manage_members_title: раководење со членови
+      title: членови на групата на {{name}}
+      title_isolate: членови на {{name}}

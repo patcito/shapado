@@ -1,11 +1,13 @@
-pt-PT:
-  searches:
-    index:
-      empty: "your search returned no matches."
-      tags: within these tags
-      search_text: questions containing
-      tags_tip: use [tag] to specify tags.
-    form:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  searches: 
+    form: 
       clear: clear
-      search_box_title: "Check whether your question already have asked"
+      search_box_title: Check whether your question already have asked
       tags_tip: use [tag] to specify tags.
+    index: 
+      empty: your search returned no matches.
+      search_text: questions containing
+      tags: within these tags

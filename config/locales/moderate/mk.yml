@@ -1,0 +1,16 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  admin: 
+    moderate: 
+      index: 
+        all: сите
+        ban: забрани
+        banned: забранети прашања
+        content: содржина
+        flagged: означени прашања
+        item_title: наслов
+        need_tags: преозначи
+        title: модерирање

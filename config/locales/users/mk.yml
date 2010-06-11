@@ -1,0 +1,85 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: активирано во
+        activation_code: активационен код
+        asked_by: побарано од
+        avatar: Слика за профилот
+        birthday: Роденден
+        created_at: се придружил
+        current_password: тековна лозинка
+        email: е-пошта
+        fullname: полно име
+        hide_country: Не прикажувај од која земја сум
+        language: јазик
+        language_filter: филтрирај по јазик
+        last_logged_at: виден
+        login: корисничко име
+        name: вистинско име
+        password: лозинка
+        password_confirmation: потврда на лозинката
+        preferred_languages: одберете ги јазиците што ги познавате
+        preferred_tags: претпочитани ознаки
+        reputation: углед
+        timezone: часовна зона
+        updated_at: подновено во
+        website: Мреж. место
+    models: 
+      user: корисник
+      users: корисници
+  users: 
+    actions: 
+      edit_others_posts: уредување на туѓи пораки
+      edit_wiki_post: уредување на вики-пораки
+      flag: означи
+      retag_others_questions: преозначи туѓи прашања
+      vote_down: гласај „против“
+      vote_to_close_any_question: барање да се затвори било кое прашање
+      vote_to_close_own_question: барање да се затвори сопствено прашање
+      vote_up: гласај „за“
+    create: 
+      flash_error: Нажалост, не можевме да ја направиме таа сметка. Обидете се повторно, или пак обратете се кај администратор (врската е погоре)
+      flash_notice: ви благодариме што се регистриравте!
+    edit: 
+      enable_twitter: Овозможете ги вашите сметки на Facebook или Twitter
+      submit: зачувај
+      title: поставки
+    follow: 
+      flash_notice: Корисникот {{user}} е додаден како ваш пријател
+    form: 
+      activities_notification: добивање на соопштенија по е-пошта за системски активности како заработени значки, нови следбеници и тн.
+      avatar_tip: сменете си ја профилната слика со граватар
+      give_advice_notification: добивање на известувања по е-пошта за прашања од вашата стручна област
+      information: информации
+      new_answer_notification: добивање на соопштенија по е-пошта за нови одговори
+      notifications: соопштенија
+      reports_notification: добивање на извештај за најновите активности во групата (само за администратори на групи)
+    index: 
+      empty: оваа група нема членови. Учествувајте за да се зачлените во групава.
+      filter: пребарај корисници
+      name: име
+      name_tooltip: корисниците по азбучен ред
+      newest: најнови
+      newest_tooltip: штотуку регистрирани корисници
+      oldest: најстари
+      oldest_tooltip: првозачленети корисници
+      reputation: углед
+      reputation_tooltip: корисниците по повисок углед
+      title: сите корисници
+    messages: 
+      errors: 
+        reputation_needed: за да {{action}} потребен ви е углед од {{min_reputation}}
+    new: 
+      submit: пријави се
+      title: регистрирај се како нов корисник
+    show: 
+      follow: следи
+      title: Корисник {{user}}
+      unfollow: повеќе не следи
+    unfollow: 
+      flash_notice: Корисникот {{user}} е отстранет од вашите пријатели

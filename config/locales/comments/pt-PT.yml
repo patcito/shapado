@@ -1,16 +1,19 @@
-pt-PT:
-  comments:
-    edit:
-      title: Edit comment
-    create:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  comments: 
+    create: 
       flash_notice: thanks for your comment
-    update:
-      flash_notice: "comment was successfully updated."
-    shared:
-      add_comment: "add comment..."
-      comment_submit: "comment"
-      said: said
+    edit: 
+      title: Edit comment
+    shared: 
+      add_comment: add comment...
+      comment_submit: comment
       reply: reply
-  models:
-    comments: comments
+      said: said
+    update: 
+      flash_notice: comment was successfully updated.
+  models: 
     comment: comment
+    comments: comments

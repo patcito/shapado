@@ -1,0 +1,12 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  shared: 
+    current_tags: 
+      title: одбрани ознаки
+    topbar: 
+      admin: админ
+      logged_as: најавен како {{login}}
+      user_page: мојата страница

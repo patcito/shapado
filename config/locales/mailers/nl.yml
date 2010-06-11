@@ -1,0 +1,24 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Uw hebt een speldje verdient in {{group}}!
+      favorited: 
+        subject: "{{login}} heeft uw vraag als favoriet toegevoegd!"
+      follow: 
+        subject: "{{login}} volgt u nu op {{app}}"
+      give_advice: 
+        friend_subject: "Uw vriend heeft hulp nodig: {{question_title}}"
+        subject: "We hebben uw advies nodig: {{question_title}}"
+      new_answer: 
+        subject_friend: Uw vriend {{login}} heeft de vraag {{title}} beantwoord
+        subject_other: "{{login}} heeft de vraag {{title}} beantwoord"
+        subject_owner: "{{login}} heeft uw vraag {{title}} beantwoord"
+      new_comment: 
+        subject: "{{login}} heeft een opmerking toegevoegd aan {{group}}"
+      report: 
+        subject: Rapportage voor de groep {{group}} van {{app}}

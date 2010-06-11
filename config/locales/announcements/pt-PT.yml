@@ -1,18 +1,19 @@
-"pt-PT":
-  announcements:
-    index:
-      title: announcements
-    create:
-      success: 'announcement was successfully created.'
-    form:
-    actions:
-      title: actions
-      delete: remove
-
-  activerecord:
-    attributes:
-      announcement:
-        message: message
-        starts_at: starts at
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    attributes: 
+      announcement: 
         ends_at: ends at
+        message: message
         only_anonymous: only for anonymous users
+        starts_at: starts at
+  announcements: 
+    actions: 
+      delete: remove
+      title: actions
+    create: 
+      success: announcement was successfully created.
+    index: 
+      title: announcements

@@ -1,37 +1,39 @@
-fr:
-  admin:
-    manage:
-      content:
-        title: contenu personalisé
-        question_prompt: titre du formulaire question
-        question_help: aide aux questions
-        head: en-tête
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  admin: 
+    manage: 
+      content: 
         footer: pied de page
+        head: en-tête
+        question_help: aide aux questions
+        question_prompt: titre du formulaire question
+        title: contenu personalisé
         top_bar: barre supérieure
         top_bar_tip: saisissez un lien par ligne
-      properties:
-        general:
-          title: propriétés du groupe
-        share:
-          title: partagez
-        constrains:
-          title: constraintes
-          reputation_constrains_subtitle: liste des contraintes pour chaque action
+      properties: 
+        constrains: 
           reputation_constrains_description: ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action.
-        rewards:
-          title: récompenses
-          reputation_rewards_subtitle: liste des récompenses de reputation
-          reputation_rewards_description: "ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action."
-        theme:
-          title: configurez le thème du groupe
-          logo_legend: Vous pouvez télécharger le logo du groupe. La taille maximum est de 2mb.
-        domain:
-          title: configurer votre nom de domaine
+          reputation_constrains_subtitle: liste des contraintes pour chaque action
+          title: constraintes
+        domain: 
           description: "Vous pouvez configurer votre nom de domaine à fin de le faire pointer vers votre site de la manière suivante:"
-          instruction1: "Vous devez tout d'abord vous rendre sur le site où vous avez acheter votre nom de de domaine tel que {{subdomain}}.com."
-          instruction2: "Là, vous devez vous rendre dans la section DNS pour y créer un CNAME."
-          instruction3: "Choisissez 'www' ou tout autre nom pour votre CNAME."
+          instruction1: Vous devez tout d'abord vous rendre sur le site où vous avez acheter votre nom de de domaine tel que {{subdomain}}.com.
+          instruction2: Là, vous devez vous rendre dans la section DNS pour y créer un CNAME.
+          instruction3: Choisissez 'www' ou tout autre nom pour votre CNAME.
           instruction4: "Ensuite, comme host ou destination, tapez le nom de votre site shapado actuel: {{domain}}."
-          instruction5: "Après une heure ou deux, votre domaine www.{{subdomain}} devrait pointer vers {{appdomain}}."
-          instruction6: "Vous pouvez maintenant revenir sur cette page et tapez le nom de domaine que vous avez choisi tel que www.{{subdomain}} dans le champs de texte ci-dessous et confirmer. Si vous avez des questions, posez-les sur le {{chat_url}} ou sur notre forum"
+          instruction5: Après une heure ou deux, votre domaine www.{{subdomain}} devrait pointer vers {{appdomain}}.
+          instruction6: Vous pouvez maintenant revenir sur cette page et tapez le nom de domaine que vous avez choisi tel que www.{{subdomain}} dans le champs de texte ci-dessous et confirmer. Si vous avez des questions, posez-les sur le {{chat_url}} ou sur notre forum
+          title: configurer votre nom de domaine
           warning: Êtes-vous sûr de vouloir changer votre domaine?
+        general: 
+          title: propriétés du groupe
+        rewards: 
+          reputation_rewards_description: ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action.
+          reputation_rewards_subtitle: liste des récompenses de reputation
+          title: récompenses
+        share: 
+          title: partagez
+        theme: 
+          title: configurez le thème du groupe

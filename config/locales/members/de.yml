@@ -1,0 +1,16 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rolle
+  members: 
+    form: 
+      login_tip: Suche während der Eingabe
+    index: 
+      manage_members_title: Mitglieder verwalten
+      title: Mitglieder der Gruppe {{name}}
+      title_isolate: Mitglieder von {{name}}

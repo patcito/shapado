@@ -1,0 +1,85 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: Geactiveerd op
+        activation_code: Activeringscode
+        asked_by: Gesteld door
+        avatar: Profielafbeelding
+        birthday: Geboortedatum
+        created_at: Geregistreerd op
+        current_password: Huidige wachtwoord
+        email: E-mailadres
+        fullname: Volledige naam
+        hide_country: Mijn land niet weergeven
+        language: Taal
+        language_filter: Filteren op taal
+        last_logged_at: Laatst actief op
+        login: Gebruikersnaam
+        name: Echte naam
+        password: Wachtwoord
+        password_confirmation: Wachtwoordbevestiging
+        preferred_languages: Selecteer de talen die u kent
+        preferred_tags: Voorkeurslabels
+        reputation: Reputatie
+        timezone: Tijdzone
+        updated_at: Bijgewerkt op
+        website: Website
+    models: 
+      user: Gebruiker
+      users: Gebruikers
+  users: 
+    actions: 
+      edit_others_posts: Berichten van anderen bewerken
+      edit_wiki_post: Wikiberichten bewerken
+      flag: Markeren
+      retag_others_questions: Labels wijzigen voor vragen van anderen
+      vote_down: Negatief beoordelen
+      vote_to_close_any_question: Sluitingsverzoek voor een vraag indienen
+      vote_to_close_own_question: Sluitingsverzoek voor eigen vraag indienen
+      vote_up: Positief beoordelen
+    create: 
+      flash_error: Het was niet mogelijk die gebruiker aan te maken. Probeer het opnieuw of neem contact op met een beheerder via de verwijzing hierboven.
+      flash_notice: Bedankt voor uw aanmelding!
+    edit: 
+      enable_twitter: Facebook of Twitter inschakelen
+      submit: Opslaan
+      title: Voorkeuren
+    follow: 
+      flash_notice: De gebruiker {{user}} is toegevoegd aan uw vrienden.
+    form: 
+      activities_notification: E-mails ontvangen over systeemactiviteiten zoals verdiende speldjes, nieuwe volgers, enzovoort.
+      avatar_tip: Uw profielafbeelding wijzigen via gravatar
+      give_advice_notification: E-mail ontvangen over vragen in uw expertisegebied
+      information: Informatie
+      new_answer_notification: E-mail ontvangen over nieuwe antwoorden
+      notifications: Kennisgevingen
+      reports_notification: Een overzicht ontvangen van de laatste groepsactiviteit (alleen voor beheerders)
+    index: 
+      empty: Deze groep heeft geen leden. Neem deel om er lid van te worden.
+      filter: Gebruikers zoeken
+      name: Naam
+      name_tooltip: Alfabetisch gesorteerde gebruikerslijst
+      newest: Nieuwste
+      newest_tooltip: Recent geregistreerde gebruikers
+      oldest: Oudste
+      oldest_tooltip: Gebruikers die als eerste geregistreerd hebben
+      reputation: Reputatie
+      reputation_tooltip: Op reputatie gesorteerde gebruikerslijst
+      title: Alle gebruikers
+    messages: 
+      errors: 
+        reputation_needed: Uw reputatie moet minimaal {{min_reputation}} zijn om te kunnen {{action}}
+    new: 
+      submit: Registreren
+      title: Aanmelden als nieuwe gebruiker
+    show: 
+      follow: Volgen
+      title: Gebruiker {{user}}
+      unfollow: Niet langer volgen
+    unfollow: 
+      flash_notice: De gebruiker {{user}} is niet langer uw vriend

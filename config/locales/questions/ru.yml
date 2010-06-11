@@ -1,0 +1,113 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: G0rn
+# Author: Lockal
+ru: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: ответы
+        closed: закрыто
+        language: язык
+        tags: теги
+        title: заголовок
+        updated_at: обновлено
+        updated_by: обновлено
+        views: просмотров
+        votes: голосов
+    models: 
+      question: вопрос
+      questions: вопросы
+  questions: 
+    answer: 
+      add_comment: добавить комментарий…
+      flag: отметить
+      pick_answer: выбрать в качестве решения
+    create: 
+      flash_notice: вопрос успешно создан.
+    edit: 
+      title: редактирование вопроса
+    flag: 
+      title: отметить вопрос
+    form: 
+      adult_content: этот вопрос содержит материалы для взрослых.
+      body_tip: в чём состоит вопрос? сделайте его более информативным.
+      language_tip: выберите язык вопроса.
+    index: 
+      active: активные
+      active_tooltip: недавно обновлённые вопросы
+      ask_question: задать вопрос
+      empty: пока никто не задавал вопросы, станьте первыми!
+      hot: горячие
+      hot_tooltip: вопросы с наибольшей активностью за последние 5 дней
+      newest: новейшие
+      newest_tooltip: недавно заданные вопросы
+      oldest: старейшие
+      title: все вопросы
+      unanswered_questions: вопросы без ответов
+      votes_tooltip: вопросы с наибольшим числом голосов
+    model: 
+      messages: 
+        title_too_long: Название слишком длинное. Оно не должно содержать более 100 символов
+    move: 
+      submit: переместить!
+      title: "переместить вопрос: {{title}}"
+    move_to: 
+      group_dont_exists: группа {{group}} не существует
+      success: вопрос перемещён в {{group}}
+    new: 
+      title: задать вопрос
+    question: 
+      accepted_tooltip: На этот вопрос есть принятый ответ
+    retag: 
+      title: изменить теги
+    retag_form: 
+      cancel: отменить
+      submit: обновить теги!
+    retag_to: 
+      failure: К сожалению, теги не могут быть обновлены.
+      success: Теги успешно обновлены.
+    shared: 
+      flag: отметить
+    show: 
+      accepted_tooltip: один из ответов был принят в качестве правильного ответа
+      another_answers: другие ответы
+      answers: ответы
+      close: закрыть
+      close_reason: "вопрос закрыт по следующей причине:"
+      favorite_tooltip: добавить этот вопрос в избранное
+      flag: отметить
+      last_activity: последние действия
+      related_questions: похожие вопросы
+      request_closing: запрос закрытия
+      request_closing_details: оставить запрос на закрытие этого вопроса
+      retag: изменить теги
+      retract_request: вы уже сделали запрос; вы хотите отказаться от него?
+      share_on: разместить этот вопрос на {{site}}
+      solution: решение
+      to_answer_question: ответить на этот вопрос
+      unauthenticated_retag: зарегистрируйте учётную запись для изменения тегов вопросов
+      unfavorite_tooltip: удалить этот вопрос из списка избранных
+      unwatch_tooltip: перестать следить за этим вопросом
+      watch_tooltip: следить за этим вопросом
+    solve: 
+      flash_notice: вопрос был решён.
+    tags: 
+      filter: поиск по тегам
+      title: теги
+      tooltip: показать вопросы с тегом {{tag}}
+    unanswered: 
+      empty: в этой группе нет вопросов без ответов.
+      expert: эксперты
+      my_tags: мои теги
+      tags: теги без ответов
+      title: вопросы без ответов
+    unsolve: 
+      flash_notice: вопрос пока не решён.
+    unwatch: 
+      success: вы больше не будете  получать почтовые уведомления по каждому новому ответу на этот вопрос
+    update: 
+      flash_notice: вопрос успешно обновлён.
+    watch: 
+      success: теперь вы будете  получать почтовые уведомления по каждому новому ответу на этот вопрос

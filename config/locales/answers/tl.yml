@@ -1,0 +1,29 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: katawan
+        created_at: nasagot na
+        link: kawing
+    models: 
+      answer: sagot
+      answers: mga sagot
+  answers: 
+    create: 
+      flash_error: "may nangyaring mali sa pagdaragdag ng sagot mo.\n tandaan na:\n- hindi pinapayagan ang mga sagot na walang laman at paulit-ulit\n- kailangan mong maghintay ng 20 mga segundo bago makapagtala ng ibang sagot.\n- makapagpapaskil ka lang ng isang sagot ayon sa tanong."
+      flash_notice: salamat!
+    edit: 
+      title: binabago ang sagot
+    form: 
+      answer_label: sagutin ang tanong
+      comment_label: puna sa sagot na ito
+      comment_submit: puna
+      submit: sagot
+    revert: 
+      title: ipanumbalik ang sagot
+    update: 
+      flash_notice: matagumpay na naisapanahon ang sagot.

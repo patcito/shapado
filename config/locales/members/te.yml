@@ -1,0 +1,14 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: పాత్ర
+  members: 
+    index: 
+      manage_members_title: సభ్యుల నిర్వహణ
+      title: "{{name}} లోని గుంపు సభ్యులు"
+      title_isolate: "{{name}} యొక్క సభ్యులు"

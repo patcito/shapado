@@ -1,18 +1,19 @@
-es-AR:
-  sessions:
-    create:
-      flash_notice: "ingreso exitoso"
-      flash_error:  "no pudo ingresar como '{{login}}'"
-    destroy:
-      flash_notice: "usted ha cerrado la sesión."
-    new:
-      with_openid: entra usando openid
-      with_facebook: entra usando facebook
-      with_twitter: entra usando twitter
-      with_authentication: entra con nuestro propio sistema de usuarios
-      registered: "¿ya esta registrado?"
-      not_registered: "todavía no esta registrado?"
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  sessions: 
+    create: 
+      flash_error: no pudo ingresar como '{{login}}'
+      flash_notice: ingreso exitoso
+    destroy: 
+      flash_notice: usted ha cerrado la sesión.
+    new: 
       log_in: entrar
+      not_registered: todavía no esta registrado?
+      registered: ¿ya esta registrado?
       signup: registrarse
-      sign_in: entrar
-      remember_me: recordarme
+      with_authentication: entra con nuestro propio sistema de usuarios
+      with_facebook: entra usando facebook
+      with_openid: entra usando openid
+      with_twitter: entra usando twitter

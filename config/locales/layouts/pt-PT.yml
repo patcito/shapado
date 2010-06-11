@@ -1,45 +1,48 @@
-pt-PT:
-  layouts:
-    application:
-      title: "perguntas & respostas"
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  layouts: 
+    application: 
+      ask_question: fazer pergunta
+      badges: badges
+      forgot: esqueceu-se?
+      home: início
+      languages: idiomas
+      log_in: ligar
+      logged: ligado como {{login}}
+      logout: desligar sessão
+      manage_ads: gerir as propaganda
+      moderate: moderar
+      now: now!
+      openid: 
+        explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
+      pages: pages
       questions: perguntas
       questions_in: perguntas em
       questions_tagged: tagged with
-      ask_question: fazer pergunta
-      tags: tags
-      users: utilizadores
-      badges: badges
-      unanswered: sem resposta
-      pages: pages
-      logout: desligar sessão
-      logged: ligado como {{login}}
       search: search
-      forgot: esqueceu-se?
-      log_in: ligar
-      signup: registar-se
       settings: preferências
-      languages: idiomas
-      moderate: moderar
-      manage_ads: gerir as propaganda
-      home: início
+      signup: registar-se
       subscribe: subscribe
+      tags: tags
+      title: perguntas & respostas
+      unanswered: sem resposta
+      users: utilizadores
       welcome_from: welcome! you can
-      now: now!
-      openid:
-        explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
-    manage:
-      dashboard: dashboard
-      properties: properties
-      widgets: widgets
+    manage: 
       actions: actions
-      stats: stats
-      members: members
-      reputation: reputation
-      content: content
-      theme: theme
-      domain: domain
-      pages: pages
-      constrains: constrains
-      rewards: rewards
-      general: general
       announcements: announcements
+      constrains: constrains
+      content: content
+      dashboard: dashboard
+      domain: domain
+      general: general
+      members: members
+      pages: pages
+      properties: properties
+      reputation: reputation
+      rewards: rewards
+      stats: stats
+      theme: theme
+      widgets: widgets

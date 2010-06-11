@@ -1,0 +1,16 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  admin: 
+    moderate: 
+      index: 
+        all: alle
+        ban: Verbergen
+        banned: Verborgen vragen
+        content: Inhoud
+        flagged: Gemarkeerde vragen
+        item_title: Naam
+        need_tags: Labels wijzigen
+        title: Modereren

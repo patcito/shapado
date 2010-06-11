@@ -1,0 +1,16 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nike
+fi: 
+  ads: 
+    ad_links: lisää uusi {{type}}
+    create: 
+      success: mainos luotu.
+    index: 
+      add_adbard: lisää uusi adbard-mainos
+      add_adsense: lisää uusi google adsense -mainos
+      title: mainokset
+    name: "nimi:"
+    position: "sijainti:"
+    title: lisää uusi {{type}}

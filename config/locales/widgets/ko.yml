@@ -1,0 +1,30 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  widgets: 
+    badges: 
+      description: 이 위젯은 최근 배지와 질문을 보여줍니다
+      title: 최근 배지
+    groups: 
+      description: 이 위젯은 최근 그룹들을 표시합니다
+      title: 최근 그룹
+    index: 
+      description: 화살표로 위젯을 이동하세요
+      title: 사이드바 위젯을 관리
+    pages: 
+      description: 이 위젯은 위키 페이지의 목록이 표시합니다
+      title: 위키 페이지
+    tag_cloud: 
+      description: 이 도구는 태그 크라우드를 표시합니다
+      title: 태그 클라우드
+    top_groups: 
+      description: 이 위젯은 Top 5 그룹을 보여줍니다
+      title: Top 5 그룹
+    top_users: 
+      description: 이 위젯은 Top 5 사용자를 보여줍니다
+      title: Top 5 사용자
+    users: 
+      description: 이 위젯은 새로운 등록 회원들을 표시합니다
+      title: 최근 사용자

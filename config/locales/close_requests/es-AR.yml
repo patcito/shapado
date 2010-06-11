@@ -1,27 +1,30 @@
-"es-AR":
-  close_requests:
-    index:
-      title: lista de peticiones de cierre
-    form:
-     dupe: duplicada
-     ot: fuera de tema
-     no_question: no es realmente una pregunta
-     not_relevant: no es pertinente
-     spam: spam
-     request_closing_details: pedir el cierre de esta pregunta
-     close_with_reason: cerrar esta pregunta usando esta razón
-    create:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  close_requests: 
+    create: 
       flash_notice: close request created successfully
-    update:
-      flash_notice: close request updated successfully
-    destroy:
+    destroy: 
       flash_notice: close request deleted successfully
-    model:
+    form: 
+      close_with_reason: cerrar esta pregunta usando esta razón
+      dupe: duplicada
+      no_question: no es realmente una pregunta
+      not_relevant: no es pertinente
+      ot: fuera de tema
+      request_closing_details: pedir el cierre de esta pregunta
+      spam: spam
+    index: 
+      title: lista de peticiones de cierre
+    model: 
+      attributes: 
+        comment: comment
+        reason: reason
+        user: user
+      messages: 
+        already_requested: you have already requested to close this question
       name: petición de cierre
       prural_name: peticiónes de cierre
-      messages:
-        already_requested: "you have already requested to close this question"
-      attributes:
-        user: user
-        reason: reason
-        comment: comment
+    update: 
+      flash_notice: close request updated successfully

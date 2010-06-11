@@ -1,23 +1,31 @@
-pt-PT:
-  close_requests:
-    index:
-      title: list of close requests
-    form:
-      dupe: duplicate
-      ot: off topic
-      no_question: not a question
-      not_relevant: not relevant
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  close_requests: 
+    create: 
+      flash_notice: pedido de fecho criado com sucesso
+    destroy: 
+      flash_notice: pedido de fecho foi eliminado
+    form: 
+      close_with_reason: fechar esta pergunta usando este motivo
+      dupe: duplicada
+      no_question: não é uma pergunta
+      not_relevant: não é relevante
+      ot: está fora do tema
+      request_closing_details: pedir para fechar esta pergunta
       spam: spam
-      request_closing_details: request to close this question
-      close_with_reason: close this question using this reason
-    create:
-      flash_notice: close request created successfully
-    update:
-      flash_notice: close request updated successfully
-    destroy:
-      flash_notice: close request deleted successfully
-    model:
-      name: close request
-      prural_name: close requests
-      messages:
-        already_requested: "you have already requested to close this question"
+    index: 
+      title: lista de pedidos de fecho
+    model: 
+      attributes: 
+        comment: comentário
+        reason: motivo
+        user: utilizador
+      messages: 
+        already_requested: já pediu para fechar esta pergunta
+      name: pedido de fecho
+      prural_name: pedidos de fecho
+    update: 
+      flash_notice: pedido de fecho foi actualizado

@@ -1,65 +1,64 @@
-pt-PT:
-  groups:
-    index:
-      title: grupos
-      filter: "search for groups"
-      actives: activos
-      pendings: pendentes
-      most_active: mais ativos
-      request_group: pedir um novo grupo
-      name: name
-    group:
-      about: sobre
-      close: fechar
-      accept_group: aceitar este grupo
-      close_group: fechar este grupo
-      allow_ads: permitir a propaganda
-      disallow_ads: proibir a propaganda
-      accept_group_with_custom_ads: aceitar este grupo e permitir propaganda personalizada
-    show:
-      title: "sobre {{name}}"
-      visit_group: visitar este grupo
-      group_awaiting_acceptance: "este grupo está à espera da permissão de um moderador."
-      group_closed: este grupo foi fechado.
-      accept_group: aceitar este grupo
-      close_group: fechar este grupo
-    new:
-      title: create your group
-    create:
-      flash_notice: Your group was successfully created, you can now start to configure it.
-    form:
-      description_legend: you have 400 characters to describe the group.
-      legend_legend: "it will be used in the header, you have 40 characters"
-      default_tags_legend: "separate tags by commas. only 10 default tags allowed."
-      logo_legend: "you can upload the group logo. the maximum file size is 2mb."
-      any_language: any
-      access: Access Settings
-      isolate_group: isolate the group form other groups
-      members_only: "only the group's members will be able to access this group"
-      custom_html: allow custom html
-      custom_js: allow custom javascript
-      custom_analytics: allow Custom Analytics
-      analytics_engine: analytics Engine
-      website_analytics_id: website Analytics ID
-      analytics_legend: the group will be able to use its own tracking code
-  activerecord:
-    models:
-      groups: grupos
-      group: grupo
-      default_tags_message: "you can't have more than 10 default tags"
-    attributes:
-      group:
-        name: name
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: categorias predefinidas
+        description: descrição
+        domain: domínio
+        fb_button: Activar botão estilo Facebook (não respeita privacidade)
+        forum: permitir mais do que uma resposta por utilizador
+        group_created_by: criado por
+        language: língua
+        legend: legenda
+        logo: logótipo
+        may_contain_adult_content: este site pode ter conteúdo para adultos
+        name: nome
+        openid_only: só pessoas que usam openid podem aceder ao site
+        owner: este grupo foi criado por {{login}}
+        registered_only: só pessoas registadas podem aceder ao site
+        state: estado
         subdomain: url
-        domain: domain
-        legend: legend
-        description: description
-        state: state
-        owner: "este grupo foi criado por {{login}}"
-        group_created_by: created by
-        language: idioma
-        default_tags: "default tags"
-        logo: logo
-        forum: allow more than one answer by user
-        wysiwyg_editor: Enable user-friendly editor
-        fb_button: Enable Facebook Like button (not privacy friendly)
+        wysiwyg_editor: Activar o editor de fácil utilização
+    models: 
+      default_tags_message: não pode ter mais do que 10 categorias predefinidas
+      group: grupo
+      groups: grupos
+  groups: 
+    create: 
+      flash_notice: O seu grupo foi criado; pode agora começar a configurá-lo.
+    form: 
+      access: Definições de Acesso
+      any_language: qualquer
+      default_tags_legend: separe as categorias por vírgulas; só são permitidas 10 categorias predefinidas.
+      description_legend: tem 400 caracteres para descrever o grupo.
+      legend_legend: será usado no cabeçalho; tem disponíveis 40 caracteres
+      logo_legend: pode fazer upload do logótipo do grupo; o tamanho máximo do ficheiro é 2MB.
+    group: 
+      about: sobre
+      accept_group: aceitar este grupo
+      allow_ads: permitir anúncios
+      close: fechar
+      close_group: fechar este grupo
+      disallow_ads: não permitir anúncios
+    index: 
+      actives: activos
+      filter: pesquisar grupos
+      most_active: mais activos
+      name: nome
+      pendings: pendentes
+      request_group: pedir um grupo novo
+      title: grupos
+    new: 
+      title: crie o seu grupo
+    show: 
+      accept_group: aceitar este grupo
+      accept_group_with_custom_ads: aceitar grupo e permitir anúncios personalizados
+      close_group: fechar este grupo
+      group_awaiting_acceptance: este grupo aguarda a aceitação de um moderador.
+      group_closed: este grupo foi fechado.
+      title: sobre {{name}}
+      visit_group: visitar este grupo

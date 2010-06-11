@@ -1,0 +1,13 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    models: 
+      favorite: Favorite
+      favorites: Favorite
+  favorites: 
+    create: 
+      success: 질문이 귀하의 favorities에 추가되었습니다
+      unauthenticated: Favorite에 추가하려면 계정이 필요합니다

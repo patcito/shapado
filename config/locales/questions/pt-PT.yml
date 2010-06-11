@@ -1,134 +1,136 @@
-pt-PT:
-  questions:
-    index:
-      title: todas as perguntas
-      hot:     populares
-      active:  activas
-      votes:   votos
-      newest:  mais recentes
-      oldest:  mais antigas
-      ask_question: fazer pergunta
-      empty: "ainda ninguém fez nenhuma pergunta, seja o primeiro!"
-      help_to_answer: help us answer
-      unanswered_questions: unanswered questions
-      hot_tooltip: questions with the most activity over the last 5 days
-      active_tooltip: questions that have been updated recently
-      votes_tooltip:  questions with the most votes
-      newest_tooltip: the most recently asked questions
-    show:
-      answers: respostas
-      another_answers: outras respostas
-      solution: solução
-      share: "partilhar esta pergunta em"
-      share_on: "partilhar esta pergunta em {{site}}"
-      related_questions: related questions
-      flags: reportado como
-      flag: reportar
-      flagged_as: flagged as
-      viewed: visto
-      to_answer_question: to answer this question
-      watch_tooltip: "watch this question"
-      accepted_tooltip: "one of the answers was accepted as the correct answer"
-      unwatch_tooltip: "stop watching this question"
-      favorite_tooltip: "add this question to your favorites"
-      unfavorite_tooltip: "remove this question from your favorites"
-      asked_on: "asked on"
-      last_activity: last activity
-      unauthenticated_retag: you need an account to retag questions
-      retag: retag
-      request_closing: request closing
-      request_closing_details: request to close this question
-      close: close
-      ban: ban
-      retract_request: you have already made a request, would you line to retract it?
-      close_reason: "the question has been closed for the following reason:"
-      answers_title:
-        one: "{{count}} answer"
-        other: "{{count}} answers"
-    retag:
-      title: retag
-    answer:
-      pick_answer: escolher como solução
-      unset_answer: retirar como solução?
-      flag: reporte
-      add_comment: adicionar comentário...
-    question:
-      accepted_tooltip: This question has been accepted
-    form:
-      body_tip: qual é a sua pergunta? seja descritivo.
-      language_tip: seleccione o idioma da questão.
-      tags_tip:  usar etiquetas para dar mais informação sobre a sua questão.
-      adult_content: this question contains adult content.
-    flag:
-      title:   reportar pergunta
-    edit:
-      title: editar pergunta
-    unanswered:
-      title: perguntas sem resposta
-      tags: etiquetas sem resposta
-      empty: "this group doesn't have any unanswered questions."
-      my_tags: "my tags"
-      expert: expert
-      filter: search for tags
-    tags:
-      title: etiquetas
-      tooltip: show questions tagged {{tag}}
-    new:
-      title: fazer pergunta
-      how_to_ask: how to ask
-    create:
-      flash_notice: "pergunta foi criada com sucesso."
-    update:
-      flash_notice: "pergunta foi actualizada com sucesso."
-    solve:
-      flash_notice: "pergunta foi resolvida."
-    unsolve:
-      flash_notice: "pergunta agora não está resolvida."
-    watch:
-      success:      "you will now receive notifications by mail for every new answer to this question"
-    unwatch:
-      success:      "you will not receive notifications by mail for every new answer to this question anymore"
-    revert:
-      title: "revert question"
-    move:
-      title:        "move question: {{title}}"
-      group_label:  "move to the group with slug:"
-      submit:       "move!"
-    move_to:
-      success:      "question moved to {{group}}"
-      group_dont_exists: "the group {{group}} don't exists"
-    shared:
-      flag: reportar
-    retag_form:
-      title:  "Update tags"
-      submit: "update tags!"
-      cancel: "cancel"
-    retag_to:
-      success: "The tags have been updated successfully."
-      failure: "Sorry, the tags could not be updated."
-    model:
-      messages:
-        too_short: "seems too short. Please use more words than {{count}} to be more specific."
-        too_many_tags: Sorry, you can only enter 9 tags maximum.
-        empty_tags: Sorry, you need to use at least one tag.
-        title_too_long: "The title is too long. it should not contain more than 100 characters"
-
-  activerecord:
-    models:
-      questions: perguntas
-      question: pergunta
-    attributes:
-      question:
-        title: título
-        body: conteúdo
-        tags: etiquetas
-        asked_by: perguntado por
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  activerecord: 
+    attributes: 
+      question: 
         answers: respostas
+        asked_by: perguntada por
+        body: conteúdo
+        closed: fechada
+        created_at: perguntada
+        language: língua
+        tags: categorias
+        title: título
+        updated_at: actualizada
+        updated_by: actualizada por
         views: visitas
         votes: votos
-        language: idioma
-        created_at: asked
-        updated_at: updated
-        updated_by: updated by
-        closed: closed
-
+    models: 
+      question: pergunta
+      questions: perguntas
+  questions: 
+    answer: 
+      add_comment: adicionar comentário...
+      flag: reportar
+      pick_answer: escolher como solução
+      unset_answer: retirar como solução?
+    create: 
+      flash_notice: pergunta foi criada com sucesso.
+    edit: 
+      title: editar pergunta
+    flag: 
+      title: reportar pergunta
+    form: 
+      adult_content: esta pergunta envolve conteúdo para adultos.
+      body_tip: qual é a sua pergunta? seja descritivo.
+      language_tip: seleccione a língua da pergunta.
+      tags_tip: use categorias para fornecer mais informação sobre a sua pergunta.
+    index: 
+      active: activas
+      active_tooltip: perguntas actualizadas recentemente
+      ask_question: fazer pergunta
+      empty: ainda ninguém fez nenhuma pergunta, seja o primeiro!
+      help_to_answer: ajude-nos a responder
+      hot: populares
+      hot_tooltip: perguntas com mais actividade nos últimos 5 dias
+      newest: mais recentes
+      newest_tooltip: perguntas mais recentes
+      oldest: mais antigas
+      title: todas as perguntas
+      unanswered_questions: perguntas sem resposta
+      votes: votos
+      votes_tooltip: perguntas com mais votos
+    model: 
+      messages: 
+        empty_tags: Desculpe, tem de usar pelo menos uma categoria.
+        title_too_long: O título é demasiado longo; não pode conter mais do que 100 caracteres
+        too_many_tags: Desculpe, mas só pode introduzir até 9 categorias.
+        too_short: parece demasiado curta. Use mais do que {{count}} palavras para ser mais específico.
+    move: 
+      group_label: "mover para o grupo com o slug:"
+      submit: mover!
+      title: "mover a pergunta: {{title}}"
+    move_to: 
+      group_dont_exists: o grupo {{group}} não existe
+      success: pergunta movida para o grupo {{group}}
+    new: 
+      how_to_ask: como perguntar
+      title: fazer pergunta
+    question: 
+      accepted_tooltip: Esta pergunta tem uma resposta que foi aceite
+    retag: 
+      title: recategorizar
+    retag_form: 
+      cancel: cancelar
+      submit: actualizar categorias!
+      title: Actualizar categorias
+    retag_to: 
+      failure: Desculpe, não foi possível actualizar as categorias.
+      success: As categorias foram actualizadas com sucesso.
+    revert: 
+      title: reverter a pergunta
+    shared: 
+      flag: reportar
+    show: 
+      accepted_tooltip: uma das respostas foi aceite como sendo a resposta correcta
+      another_answers: outras respostas
+      answers: respostas
+      answers_title: 
+        one: "{{count}} resposta"
+        other: "{{count}} respostas"
+      asked_on: colocada a
+      ban: banir
+      close: fechar
+      close_reason: "a pergunta foi fechada pelo seguinte motivo:"
+      favorite_tooltip: adicionar esta pergunta às suas favoritas
+      flag: reportar
+      flagged_as: reportada como
+      flags: reportada como
+      last_activity: última actividade
+      related_questions: perguntas relacionadas
+      request_closing: pedir encerramento
+      request_closing_details: pedido para fechar esta pergunta
+      retag: recategorizar
+      retract_request: já colocou um pedido; deseja retirá-lo?
+      share: partilhar esta pergunta em
+      share_on: partilhar esta pergunta em {{site}}
+      solution: solução
+      to_answer_question: para responder a esta pergunta
+      unauthenticated_retag: precisa de ter uma conta para recategorizar perguntas
+      unfavorite_tooltip: remover esta pergunta das suas favoritas
+      unwatch_tooltip: deixar de vigiar esta pergunta
+      viewed: visitada
+      watch_tooltip: vigiar esta pergunta
+    solve: 
+      flash_notice: pergunta foi resolvida.
+    tags: 
+      filter: pesquisar categorias
+      title: categorias
+      tooltip: mostrar perguntas na categoria {{tag}}
+    unanswered: 
+      empty: este grupo não contém perguntas sem resposta.
+      expert: peritos
+      my_tags: as minhas categorias
+      tags: categorias sem resposta
+      title: perguntas sem resposta
+    unsolve: 
+      flash_notice: pergunta agora não está resolvida.
+    unwatch: 
+      success: deixará de receber notificações por correio por cada nova resposta a esta pergunta
+    update: 
+      flash_notice: pergunta foi actualizada com sucesso.
+    watch: 
+      success: a partir de agora receberá notificações por correio a cada nova resposta a esta pergunta

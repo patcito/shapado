@@ -1,0 +1,20 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: G0rn
+ru: 
+  comments: 
+    create: 
+      flash_notice: спасибо за ваш комментарий
+    edit: 
+      title: Редактировать комментарий
+    shared: 
+      add_comment: добавить комментарий…
+      comment_submit: комментировать
+      reply: ответить
+      said: написал(а)
+    update: 
+      flash_notice: комментарий успешно обновлен.
+  models: 
+    comment: комментарий
+    comments: комментарии

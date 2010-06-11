@@ -1,0 +1,37 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  doc: 
+    chat: 
+      title: 채팅 지원
+    plans: 
+      15millions: 15 백만 페이지뷰 / 월
+      1million: 1 백만 페이지뷰 / 월
+      247_all_support: 웹 기반, 이메일, 채팅 및 전화 지원 - 24/7
+      5millions: 5 백만 페이지뷰 / 월
+      all_support: 웹 기반, 이메일, 채팅 및 전화 지원
+      basic_restrictions: 사용자 정의 ads와 UI가 없습니다
+      beta_info: 지금은 모든 사이트가 무료이며, Optimum  플랜과 같은 서비스가 제공됩니다. 던, 웹 기반의 이메일과 채팅을 통한 지원은 제외.
+      big_sites: 트래픽이 많은 사이트
+      custom_ads: 자신의 광고를 사용
+      custom_analytics: 트래픽 통계
+      custom_domain: 사용자 정의 도메인
+      custom_themes: 미리 만들어 진 사용자 정의 테마를 사용
+      custom_ui: 사용자 정의 UI
+      free_plan: 무료 플랜
+      getting_popular: 인기 증가
+      huge_sites: 트래픽이 많은 사이트
+      month: 월
+      page_views: 소규모 / 개인 사이트를 위해
+      plans: 플랜
+      private_site: 프라이빗/퍼블릭 액세스 허용
+      small_private: 소규모 / 개인 사이트
+      start_monetizing: 수익 창출을 시작
+      support: 지원
+      title: 플랜 및 가격
+      unlimited: 매월 무제한 트래픽
+      we_offer: 저희가 제공하는 기타 서비스
+      web_support: 웹 기반 지원
+      with_unlimited: 사용자 정의 광고와 도메인이 없는 무제한 트래픽.

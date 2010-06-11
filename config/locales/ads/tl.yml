@@ -1,0 +1,16 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  ads: 
+    ad_links: magdagdag ng isang bagong anunsyong {{type}}
+    create: 
+      success: matagumpay na nalikha ang anunsyo.
+    index: 
+      add_adbard: magdagdag ng isang bagong anunsyong adbard
+      add_adsense: magdagdag ng isang bagong anunsyong google adsense
+      title: mga anunsyo
+    name: "pangalan:"
+    position: "puwesto:"
+    title: magdagdag ng isang bagong anunsyong {{type}}

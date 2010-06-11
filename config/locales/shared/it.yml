@@ -1,0 +1,12 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: HalphaZ
+it: 
+  shared: 
+    current_tags: 
+      title: Tag selezionati
+    topbar: 
+      admin: Amministrazione
+      logged_as: Loggato come ((login))
+      user_page: La mia pagina

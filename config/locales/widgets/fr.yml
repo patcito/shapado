@@ -1,27 +1,29 @@
-fr:
-  widgets:
-    index:
-      title: administrer les widgets de la barre latérale
-      description: utiliser les flèches pour déplacer les widgets
-    badges:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  widgets: 
+    badges: 
+      description: Ce widget montre les insignes récement gagnées par les utilisateurs ou questions
       title: Récentes insignes
-      description: "Ce widget montre les insignes récement gagnées par les utilisateurs ou questions"
-    groups:
+    groups: 
+      description: ce widget montre les derniers groupes en date
       title: groupes récents
-      description: "ce widget montre les derniers groupes en date"
-    top_groups:
-      title: top 5 des groupes
-      description: "ce widget montre le top 5 des groupes les plus actifs"
-    top_users:
-      title: top 5 des utilisateurs
-      description: ce widget montre le top 5 des utilisateurs
-    users:
-      title: utilisateurs récents
-      description: "ce widget montre les nouveaux membres enregistrés"
-    tag_cloud:
-      title: nuage de tags
-      description: "ce widget montre un nuage de tags"
-    pages:
+    index: 
+      description: utiliser les flèches pour déplacer les widgets
+      title: administrer les widgets de la barre latérale
+    pages: 
+      description: ce widget liste les pages wiki
       title: pages wiki
-      description: "ce widget liste les pages wiki"
-
+    tag_cloud: 
+      description: ce widget montre un nuage de tags
+      title: nuage de tags
+    top_groups: 
+      description: ce widget montre le top 5 des groupes les plus actifs
+      title: top 5 des groupes
+    top_users: 
+      description: ce widget montre le top 5 des utilisateurs
+      title: top 5 des utilisateurs
+    users: 
+      description: ce widget montre les nouveaux membres enregistrés
+      title: utilisateurs récents

@@ -1,0 +1,129 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    models: 
+      badge: значка
+      badges: значки
+  badges: 
+    index: 
+      description: сите значки што можете да ги заработите. споделувајте сознанија и печалете значки.
+      title: значки
+    shared: 
+      addict: 
+        description: го посетил мрежното место 20 дена по ред
+      autobiographer: 
+        description: ги пополнил сите полиња во корисничкиот профил
+        name: автобиограф
+      celebrity: 
+        description: имање над 100 следбеници
+        name: славна личност
+      citizen_patrol: 
+        description: прва означена порака
+        name: граѓанска патрола
+      civic_duty: 
+        description: изгласан 300 пати
+        name: граѓанска должност
+      cleanup: 
+        description: прво враќање
+        name: расчистување
+      commentator: 
+        description: даде 10 коментари
+      critic: 
+        description: негативен глас за прв пат
+      disciplined: 
+        description: избришавте своја порака со барем 3 бода
+        name: дисциплиниран
+      editor: 
+        description: прва уредена порака
+      effort_medal: 
+        description: добивање на 100 позитивни гласа
+      enlightened: 
+        description: првиот одговор бил прифатен со барем 10 гласа „за“
+        name: просветлен
+      famous_question: 
+        description: поставил прашање со 10 000 прегледи
+      fanatic: 
+        description: го посетил мрежното место 100 дена по ред
+      favorite_question: 
+        description: прашање омилено на 25 корисници
+      friendly: 
+        description: следење некого за прв пат
+        name: дружељубив
+      good_answer: 
+        description: давање на одговор што ќе достигне просечно над 25 гласа
+      good_question: 
+        description: имање поставено прашање што достигнало просечно над 25 гласа
+      great_answer: 
+        description: одговор со 100 гласови „за“
+        name: одличен одговор
+      great_question: 
+        description: прашање добило 100 гласа „за“
+        name: одлично прашање
+      guru: 
+        description: изнаоѓање решение на прашање со просечно над 40 гласа
+      inquirer: 
+        description: поставање на прашање за прв пат
+      interesting_person: 
+        description: имање над 10 следбеници
+        name: интересна личност
+      merit_medal: 
+        description: добивање на 200 позитивни гласа
+      necromancer: 
+        description: одговорено прашање во рок подолг од 60 дена и со барем 5 гласа
+        name: некромант
+      nice_answer: 
+        description: одговорот добил 10 гласа „за“
+        name: фин одговор
+      nice_question: 
+        description: прашањето добило над 10 гласа „за“
+        name: фино прашање
+      notable_question: 
+        description: поставено прашање со 2500 прегледи
+      organizer: 
+        description: прво преозначување
+        name: организатор
+      peer_pressure: 
+        description: избришал своја порака со -3 бода или пониско
+        name: притисок од средината
+      pioneer: 
+        description: меѓу првите регистрирани корисници
+      popstar: 
+        description: 500 позитивни, а само 10 негативни гласови
+      popular_person: 
+        description: имање над 50 следбеници
+        name: популарана личност
+      popular_question: 
+        description: поставил прашање со 1000 прегледи
+      rockstar: 
+        description: 1000 позитивни, а највеќе 10 негавитни гласа
+      scholar: 
+        description: прв прифатен одговор на ваше прашање
+        name: научен трудбеник
+      self-learner: 
+        description: самите си одговоривте свое прашање со барем три гласа „за“
+        name: самоученик
+      service_medal: 
+        description: 300 позитивни гласа
+      shapado: 
+        description: го посетил мрежното место 8 дена по ред
+      stellar_question: 
+        description: прашање омилено на 100 корисници
+        name: ѕвездено прашање
+      student: 
+        description: го поставил првото прашање со барем еден глас „за“
+      supporter: 
+        description: гласање позитивно за прв пат
+      troubleshooter: 
+        description: давање одговор за прв пат
+      tutor: 
+        description: давање решение на прашање со просечно над 2 гласа
+    show: 
+      description: "корисници што ја добиле оваа значка. неодамна доделена на:"
+      earned: заработил
+      for_tag_bronze: 200 гласа на ознаката {{tag}}
+      for_tag_gold: 1000 гласа за ознаката {{tag}}
+      for_tag_silver: 400 гласа на ознаката {{tag}}
+      title: значка {{type}}

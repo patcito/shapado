@@ -1,10 +1,13 @@
-fr:
-  searches:
-    index:
-      empty: "aucune question ne correspond aux termes de recherche spécifiés."
-      tags: parmi ces tags
-      search_text: questions contenant
-    form:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  searches: 
+    form: 
       clear: effacer
-      search_box_title: "Vérifiez que votre question n'ait pas déjà été posé"
+      search_box_title: Vérifiez que votre question n'ait pas déjà été posé
       tags_tip: utiliser [tag] pour décrire vos tags.
+    index: 
+      empty: aucune question ne correspond aux termes de recherche spécifiés.
+      search_text: questions contenant
+      tags: parmi ces tags

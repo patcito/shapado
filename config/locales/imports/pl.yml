@@ -1,0 +1,10 @@
+# Messages for Polish (Polski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Sp5uhe
+pl: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: konieczne potwierdzenie
+        title: wyślij e‐mail z prośbą o potwierdzenie

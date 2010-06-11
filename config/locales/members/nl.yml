@@ -1,0 +1,16 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rol
+  members: 
+    form: 
+      login_tip: Zoeken tijdens het invoeren
+    index: 
+      manage_members_title: Leden beheren
+      title: Leden van de groep {{name}}
+      title_isolate: Leden van {{name}}

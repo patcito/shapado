@@ -1,0 +1,22 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  wiki: 
+    actions: 
+      all_history: zurück zur Versionsgeschichte
+      back_to_question: zurück zur Frage
+      revert: auf diese Version zurücksetzen
+      show_diff: gewählte Versionen vergleichen
+    diff: 
+      title: Unterschiede zwischen {{prev}} und {{curr}}
+    history: 
+      current_version: aktuelle Version
+      previous_versions: vorherige Versionen
+      title: Versionsgeschichte ({{count}})
+      version: Version
+      version_summary: Zusammenfassung zur Version
+    model: 
+      attributes: 
+        message: Zusammenfassung

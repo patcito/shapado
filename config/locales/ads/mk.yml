@@ -1,0 +1,16 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  ads: 
+    ad_links: додај нова реклама - {{type}}
+    create: 
+      success: рекламата е успешно создадена.
+    index: 
+      add_adbard: додај нова реклама за Ad Bard
+      add_adsense: додај нова реклама за Google AdSense
+      title: реклами
+    name: "назив:"
+    position: "позиција:"
+    title: додај нова реклама - {{type}}

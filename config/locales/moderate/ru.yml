@@ -1,0 +1,13 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  admin: 
+    moderate: 
+      index: 
+        all: все
+        banned: запрещённые вопросы
+        flagged: отмеченные вопросы
+        need_tags: изменение тегов
+        title: модерация

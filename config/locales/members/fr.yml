@@ -1,12 +1,15 @@
-fr:
-  activerecord:
-    attributes:
-      member:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  activerecord: 
+    attributes: 
+      member: 
         role: role
-  members:
-    index:
-      title: "members of {{name}}'s group"
-      title_isolate: "members of {{name}}"
+  members: 
+    form: 
+      login_tip: search as you type
+    index: 
       manage_members_title: manage members
-    form:
-      login_tip: "search as you type"
+      title: members of {{name}}'s group
+      title_isolate: members of {{name}}

@@ -1,0 +1,13 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Александр Сигачёв
+ru: 
+  activerecord: 
+    models: 
+      favorite: избранное
+      favorites: избранные
+  favorites: 
+    create: 
+      success: вопрос был добавлен в ваш список избранного
+      unauthenticated: вам нужно зарегистрироваться, чтобы добавлять в избранное

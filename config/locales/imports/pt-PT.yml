@@ -1,6 +1,9 @@
-pt-PT:
-  imports:
-    subtabs:
-      need_confirmation:
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
         name: need confirmation
         title: send confirmation emails

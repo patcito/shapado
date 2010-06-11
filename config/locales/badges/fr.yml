@@ -1,151 +1,128 @@
-fr:
-  badges:
-    index:
-      title: insignes
-      description: "Liste des insignes que vous pouvez gagner. Partagez votre connaissance, gagnez des insignes."
-    show:
-      title: insigne {{type}}
-      description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
-      for_tag_bronze: 200 votes pour le tag {{tag}}
-      for_tag_silver: 400 votes pour le tag {{tag}}
-      for_tag_gold: 1000 votes pour le tag {{tag}}
-      earned: earned
-    shared:
-      rockstar:
-        description: 1000 votes positifs, 10 négatifs maximum
-      popstar:
-        description: 500 votes positifs, 10 négatifs maximum
-      fanatic:
-        name: fanatique
-        description: Visiter le site 100 jours consécutifs
-      service_medal:
-        name: Question ayant reçu 10000 visites
-        description: Recevoir 300 votes positifs
-      famous_question:
-        name: Question renommée
-        description: "Question ayant reçu 10000 visites"
-      notable_question:
-        name: notable question
-        description: "Question ayant reçu 2500 visites"
-      popular_question:
-        name: question populaire
-        description: "Question ayant reçu 1000 visites"
-      popular_person:
-        name: personne populaire
-        description: "Votre profil est visité 10000 fois"
-      guru:
-        name: guru
-        description: "Donner une solution à une question ayant une moyenne de votes supérieure à 40"
-      favorite_question:
-        name: Question favorite
-        description: "Question sélectionnée comme favorite par 25 utilisateurs"
-      tutor:
-        name: tuteur
-        description: "Donner une solution à une question ayant une moyenne de votes supérieure à 2"
-      addict:
-        name: accro
-        description: "Visiter le site 20 jours consécutifs"
-      good_question:
-        name: bonne question
-        description: avoir fait une question ayant atteint une moyenne de 10 votes
-      good_answer:
-        name: bonne réponse
-        description: avoir fait une réponse ayant atteint une moyenne de 10 votes
-      pioneer:
-        name: pionnier
-        description: "Être parmi les premiers à s'être inscrit"
-      supporter:
-        name: supporter
-        description: voter positivement pour la première fois
-      critic:
-        name: critique
-        description: "Voter négativement pour la première fois"
-      inquirer:
-        name: interrogateur
-        description: "Poser une question pour la première fois"
-      troubleshooter:
-        name: Solutionneur
-        description: "Répondre pour la première fois"
-      commentator:
-        name: commentateur
-        description: Recevoir 100 votes positifs
-      merit_medal:
-        name: "médaille de l'effort"
-        description: recevoir 200 votes positifs
-      effort_medal:
-        name: "Médaille de l'effort"
-        description: recevoir 100 votes positifs
-      student:
-        name: "Étudiant"
-        description: Recevoir au moins un vote positif sur sa première question
-      shapado:
-        name: Shapado
-        description: "Visiter le site tous jours durant 8 jours consécutifs"
-      editor:
-        name: "Éditeur"
-        description: "Premier poste édité"
-      friendly:
-        name: friendly
-        description: "suivre quelqu'un pour la première fois"
-      interesting_person:
-        name: "personne intéressante"
-        description: "avoir plus de 10 suiveurs"
-      popular_person:
-        name: personne populaire
-        description: "avoir plus de 50 suiveurs"
-      celebrity:
-        name: célébrité
-        description: "avoir plus de 50 suiveurs"
-      necromancer:
-        name: nécromancien
-        description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
-      stellar_question:
-        name: question stellaire
-        description: Question favorie d'au moins 100 utilisateurs
-      nice_question:
-        name: bonne question
-        description: Question votée positivement 10 fois
-      nice_answer:
-        name: bonne réponse
-        description: Réponse votée positivement 10 fois
-      great_question:
-        name: formidable question
-        description: Question votée positivement 100 fois
-      great_answer:
-        name: formidable réponse
-        description: Réponse votée positivement 100 fois
-      peer_pressure:
-        name: influence des pairs
-        description: A supprimé un post avec un score de -3 ou moins
-      enlightened:
-        name: éclairé
-        description: Première réponse acceptée avec au moins 10 votes positifs
-      disciplined:
-        name: discipliné
-        description: A supprimé un poste avec un score de 3 ou plus
-      cleanup:
-        name: nettoyage
-        description: Premier défait
-      civic_duty:
-        name: devoir civique
-        description: A voté 300 fois
-      citizen_patrol:
-        name: patrouille civile
-        description: Premier rapport de poste
-      self-learner:
-        name: autodidacte
-        description: A répondu à sa propre question avec un score de 3 ou plus
-      scholar:
-        name: érudit
-        description: Réponse acceptée à votre propre question
-      autobiographer:
-        name: autobiographe
-        description: a complété tous ses champs utilisateurs
-      organizer:
-        name: organisateur
-        description: premier retag
-
-  activerecord:
-    models:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  activerecord: 
+    models: 
       badge: insigne
       badges: insignes
+  badges: 
+    index: 
+      description: Liste des insignes que vous pouvez gagner. Partagez votre connaissance, gagnez des insignes.
+      title: insignes
+    shared: 
+      addict: 
+        description: Visiter le site 20 jours consécutifs
+      autobiographer: 
+        description: a complété tous ses champs utilisateurs
+        name: autobiographe
+      celebrity: 
+        description: avoir plus de 50 suiveurs
+        name: célébrité
+      citizen_patrol: 
+        description: Premier rapport de poste
+        name: patrouille civile
+      civic_duty: 
+        description: A voté 300 fois
+        name: devoir civique
+      cleanup: 
+        description: Premier défait
+        name: nettoyage
+      commentator: 
+        description: Recevoir 100 votes positifs
+      critic: 
+        description: Voter négativement pour la première fois
+      disciplined: 
+        description: A supprimé un poste avec un score de 3 ou plus
+        name: discipliné
+      editor: 
+        description: Premier poste édité
+      effort_medal: 
+        description: recevoir 100 votes positifs
+      enlightened: 
+        description: Première réponse acceptée avec au moins 10 votes positifs
+        name: éclairé
+      famous_question: 
+        description: Question ayant reçu 10000 visites
+      fanatic: 
+        description: Visiter le site 100 jours consécutifs
+      favorite_question: 
+        description: Question sélectionnée comme favorite par 25 utilisateurs
+      friendly: 
+        description: suivre quelqu'un pour la première fois
+        name: friendly
+      good_answer: 
+        description: avoir fait une réponse ayant atteint une moyenne de 10 votes
+      good_question: 
+        description: avoir fait une question ayant atteint une moyenne de 10 votes
+      great_answer: 
+        description: Réponse votée positivement 100 fois
+        name: formidable réponse
+      great_question: 
+        description: Question votée positivement 100 fois
+        name: formidable question
+      guru: 
+        description: Donner une solution à une question ayant une moyenne de votes supérieure à 40
+      inquirer: 
+        description: Poser une question pour la première fois
+      interesting_person: 
+        description: avoir plus de 10 suiveurs
+        name: personne intéressante
+      merit_medal: 
+        description: recevoir 200 votes positifs
+      necromancer: 
+        description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
+        name: nécromancien
+      nice_answer: 
+        description: Réponse votée positivement 10 fois
+        name: bonne réponse
+      nice_question: 
+        description: Question votée positivement 10 fois
+        name: bonne question
+      notable_question: 
+        description: Question ayant reçu 2500 visites
+      organizer: 
+        description: premier retag
+        name: organisateur
+      peer_pressure: 
+        description: A supprimé un post avec un score de -3 ou moins
+        name: influence des pairs
+      pioneer: 
+        description: Être parmi les premiers à s'être inscrit
+      popstar: 
+        description: 500 votes positifs, 10 négatifs maximum
+      popular_person: 
+        description: avoir plus de 50 suiveurs
+        name: personne populaire
+      popular_question: 
+        description: Question ayant reçu 1000 visites
+      rockstar: 
+        description: 1000 votes positifs, 10 négatifs maximum
+      scholar: 
+        description: Réponse acceptée à votre propre question
+        name: érudit
+      self-learner: 
+        description: A répondu à sa propre question avec un score de 3 ou plus
+        name: autodidacte
+      service_medal: 
+        description: Recevoir 300 votes positifs
+      shapado: 
+        description: Visiter le site tous jours durant 8 jours consécutifs
+      stellar_question: 
+        description: Question favorie d'au moins 100 utilisateurs
+        name: question stellaire
+      student: 
+        description: Recevoir au moins un vote positif sur sa première question
+      supporter: 
+        description: voter positivement pour la première fois
+      troubleshooter: 
+        description: Répondre pour la première fois
+      tutor: 
+        description: Donner une solution à une question ayant une moyenne de votes supérieure à 2
+    show: 
+      description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
+      earned: earned
+      for_tag_bronze: 200 votes pour le tag {{tag}}
+      for_tag_gold: 1000 votes pour le tag {{tag}}
+      for_tag_silver: 400 votes pour le tag {{tag}}
+      title: insigne {{type}}

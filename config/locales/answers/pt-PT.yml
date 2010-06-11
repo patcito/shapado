@@ -1,30 +1,28 @@
-"pt-PT":
-  answers:
-    form:
-      comment_label: comenta sobre esta resposta
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: conteúdo
+        created_at: answered
+        link: ligação
+    models: 
+      answer: resposta
+      answers: respostas
+  answers: 
+    create: 
+      flash_error: "algo correu mal ao adicionar a sua resposta. \n  lembre-se que: \n - respostas vazias e repetidas não são permitidas \n - tem que esperar 20 segundos para colocar uma nova resposta. \n - só pode colocar uma resposta por pergunta."
+      flash_notice: obrigado!
+    edit: 
+      title: editar resposta
+    form: 
       answer_label: responde à pergunta
+      comment_label: comenta sobre esta resposta
       comment_submit: comentar
       submit: submeter
-    edit:
-      title: editar resposta
-    create:
-      flash_notice: "obrigado!"
-      flash_error:  "algo correu mal ao adicionar a sua resposta.
-  \n  lembre-se que:
-  \n - respostas vazias e repetidas não são permitidas
-  \n - tem que esperar 20 segundos para colocar uma nova resposta.
-  \n - só pode colocar uma resposta por pergunta."
-    update:
-      flash_notice: "resposta foi actualizada com sucesso."
-    revert:
-      title: "revert answer"
-
-  activerecord:
-    models:
-      answers: respostas
-      answer: resposta
-    attributes:
-      answer:
-        link: ligação
-        created_at: answered
-        body: conteúdo
+    revert: 
+      title: revert answer
+    update: 
+      flash_notice: resposta foi actualizada com sucesso.

@@ -1,12 +1,15 @@
-es-AR:
-  admin:
-    moderate:
-      index:
-        title: moderar
-        ban: ban
-        content: contenido
-        item_title: titulo
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  admin: 
+    moderate: 
+      index: 
         all: todas
-        flagged: preguntas reportadas
+        ban: ban
         banned: preguntas baneadas
+        content: contenido
+        flagged: preguntas reportadas
+        item_title: titulo
         need_tags: necesita etiquetas
+        title: moderar

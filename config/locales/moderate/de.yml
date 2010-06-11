@@ -1,0 +1,16 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  admin: 
+    moderate: 
+      index: 
+        all: alle
+        ban: verbieten
+        banned: verbotene Fragen
+        content: Inhalt
+        flagged: gekennzeichnete Fragen
+        item_title: Titel
+        need_tags: Schlagwort ändern
+        title: moderieren

@@ -1,0 +1,12 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Александр Сигачёв
+ru: 
+  shared: 
+    current_tags: 
+      title: выбранные метки
+    topbar: 
+      admin: админ
+      logged_as: вошли как {{login}}
+      user_page: моя страница

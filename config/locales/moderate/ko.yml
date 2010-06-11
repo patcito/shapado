@@ -1,0 +1,16 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  admin: 
+    moderate: 
+      index: 
+        all: 모두
+        ban: 금지
+        banned: 금지된 질문
+        content: 콘텐츠
+        flagged: flagged questions
+        item_title: 제목
+        need_tags: retag
+        title: moderate

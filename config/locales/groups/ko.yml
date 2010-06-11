@@ -1,0 +1,64 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: 기본 태그
+        description: 설명
+        domain: 도메인
+        fb_button: 페이스 북의 Like 버튼을 활성화 (프라이버시 노출 위험이 있음)
+        forum: 개별 사용자가 둘 이상의 대답을 게시할 수 있도록 허용
+        group_created_by: 만든 이
+        language: 언어
+        legend: legend
+        logo: 로고
+        may_contain_adult_content: 이 사이트는 성인용 콘텐츠가 포함되어 있을 수 있습니다
+        name: 이름
+        openid_only: 오픈 ID 사용자만이  사이트에 액세스할 수있음
+        owner: 이 그룹은  {{login}}에 의해 만들어 졌습니다
+        registered_only: 등록된 사용자만 이 사이트에 액세스할 수 있습니다
+        state: state
+        subdomain: url
+        wysiwyg_editor: User-Friendly Editor 활성화
+    models: 
+      default_tags_message: 태그를 10 개 이상 가질 수 없습니다
+      group: 그룹
+      groups: 그룹
+  groups: 
+    create: 
+      flash_notice: 그룹이 만들었습니다. 구성을 시작하세요.
+    form: 
+      access: 액세스 설정
+      any_language: 모두
+      default_tags_legend: 쉼표로 태그를 분리하세요. 기본 태그는 10개만 허용.
+      description_legend: " 400 자 이내로 그룹을 설명하세요."
+      legend_legend: 40 자 이내로 제목을 입력하세요
+      logo_legend: 그룹 로고를 업로드할 수 있습니다. 파일의 최대 크기는 2 메가바이트입니다.
+    group: 
+      about: about
+      accept_group: 이 그룹을 수락
+      allow_ads: 광고를 허용
+      close: 폐쇄
+      close_group: 이 그룹을 폐쇄
+      disallow_ads: 광고 금지
+    index: 
+      actives: 활성
+      filter: 그룹 검색
+      most_active: 가장 활발
+      name: "이름:"
+      pendings: 보류
+      request_group: 새 그룹을 요청
+      title: 그룹
+    new: 
+      title: 그룹 만들기
+    show: 
+      accept_group: 이 그룹을 수락
+      accept_group_with_custom_ads: 그룹 수락 및 사용자 정의 광고를 허용
+      close_group: 이 그룹을 폐쇄
+      group_awaiting_acceptance: 이 그룹은 운영자의 승인을 기다리는 중입니다.
+      group_closed: 이 그룹은 폐쇄되었습니다.
+      title: about {{name}}
+      visit_group: 이 그룹을 방문

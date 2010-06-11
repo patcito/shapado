@@ -1,0 +1,40 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  admin: 
+    manage: 
+      content: 
+        footer: Voettekst
+        head: Kop
+        question_help: Vraaghulp
+        question_prompt: Vraag
+        title: Aangepaste inhoud
+        top_bar: Balk bovenaan
+        top_bar_tip: Voer een verwijzing per regel in
+      properties: 
+        constrains: 
+          reputation_constrains_description: Via dit formulier kunt u instellen hoeveel reputatiepunten gebruikers kunnen verdienen met een bepaalde handeling.
+          reputation_constrains_subtitle: Lijst van reputatiebeperkingen voor iedere handeling
+          title: Beperkingen
+        domain: 
+          description: "U kunt uw site zo inrichten dat deze toegankelijk is via uw eigen domein. Dat werkt zo:"
+          instruction1: Meld u eerst aan bij uw domeinprovider - dat is de site waar u uw domein zoals bijvoorbeeld {{subdomain}}.com hebt gekocht
+          instruction2: Ga daar naar de DNS-instellingen en maak aan wat een CNAME heet.
+          instruction3: Kies "www" of wat u wilt als de naam van uw CNAME.
+          instruction4: "Voer dan in het veld bestemming uw huidige Shapado-domein in: {{domain}}."
+          instruction5: Als dit is gedaan, dat duurt een uurtje of zo, wijst uw domein www.{{subdomain}} naar {{appdomain}}.
+          instruction6: Als dit het geval is, kom hier dan terug en voer uw domeinnaan www.{{subdomain}} in het veld hieronder in en klik op de knop "Bijwerken". Als u vragen hebt, stel die dan aan ons in de {{chat_url}} of in het ondersteunigsforum.
+          title: Uw domein instellen
+          warning: Weet u zeker dat u uw domein wilt wijzigen?
+        general: 
+          title: Groepseigenschappen
+        rewards: 
+          reputation_rewards_description: Via dit formulier kunt u instellen hoe gebruikers reputatiepunten kunnen verdienen en verliezen voor bepaalde handelingen
+          reputation_rewards_subtitle: Lijst met reputatiebeloningen
+          title: Beloningen
+        share: 
+          title: Delen
+        theme: 
+          title: Instellingen voor het groepsthema

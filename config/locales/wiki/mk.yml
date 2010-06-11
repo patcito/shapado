@@ -1,0 +1,22 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  wiki: 
+    actions: 
+      all_history: назад кон историјата
+      back_to_question: назад кон прашањето
+      revert: врати на оваа верзија
+      show_diff: спореди одбрани верзии
+    diff: 
+      title: разлики помеѓу {{prev}} и {{curr}}
+    history: 
+      current_version: тековна верзија
+      previous_versions: претходни верзии
+      title: историја ({{count}})
+      version: верзија
+      version_summary: опис на верзијата
+    model: 
+      attributes: 
+        message: опис

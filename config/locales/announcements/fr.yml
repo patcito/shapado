@@ -1,18 +1,19 @@
-fr:
-  announcements:
-    index:
-      title: annonces
-    create:
-      success: 'announce créée avec succès.'
-    form:
-    actions:
-      title: actions
-      delete: retirer
-
-  activerecord:
-    attributes:
-      announcement:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: termine le
         message: message
-        starts_at: "débute le"
-        ends_at: "termine le"
-        only_anonymous: "juste pour les utilisateurs anonymes"
+        only_anonymous: juste pour les utilisateurs anonymes
+        starts_at: débute le
+  announcements: 
+    actions: 
+      delete: retirer
+      title: actions
+    create: 
+      success: announce créée avec succès.
+    index: 
+      title: annonces

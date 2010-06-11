@@ -1,84 +1,85 @@
-fr:
-  users:
-    index:
-      title: tous les utilisateurs
-      empty: "ce groupe n'a pas de membres pour l'instant, participer pour en devenir un."
-      filter: "Recherchez des utilisateurs"
-      reputation: reputation
-      newest: newest
-      oldest: oldest
-      name: name
-      reputation_tooltip: utilisateurs par ordre de réputation
-      newest_tooltip: utilisateurs vennant d'ouvrir un compte
-      oldest_tooltip: utilisateurs ayant ouvert leur compte en premier
-      name_tooltip: utilisateurs par ordre alphabétique
-    new:
-      title: se connecter en tant que nouvel utilisateur
-      submit: ouvrir un compte
-    edit:
-      title: configuration
-      submit: sauver
-      enable_twitter: Activer vos comptes facebook ou twitter
-    show:
-      title: "User {{user}}"
-      follow: suivre
-      unfollow: ne plus suivre
-      views: visualisations
-    follow:
-      flash_notice: "L'utilisateur {{user}} a été ajouté à votre liste d' amis"
-    unfollow:
-      flash_notice: "L'utilisateur {{user}} a été ajouté à votre liste d'amis"
-    form:
-      information: information
-      notifications: notifications
-      new_answer_notification: obtenir des notifications via email de nouvelles réponses
-      give_advice_notification:  recevoir des notifications via courrier électronique sur les questions liées à votre champs d'expertise
-      activities_notification: recevoir des notifications via courrier électronique sur les activités système telles que les insignes gagnées, les nouveaux suiveurs, etc.
-      reports_notification: recevoir un rapport avec les dernières activités du groupes (juste pour l'admin du groupe)
-      avatar_tip: "changer l'image de votre profil en utilisant gravatar"
-    create:
-      flash_notice: "merci de vous avoir enregistrer!"
-      flash_error:  "désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus."
-    messages:
-      errors:
-        reputation_needed: "vous avez besoin d'une réputation de {{min_reputation}} à fin de pouvoir {{action}}"
-    actions:
-      vote_up: voter positif
-      vote_down: voter négatif
-      flag: flag
-      edit_others_posts: "modifier les postes des autres"
-      edit_wiki_post: "editer les postes wiki"
-      retag others questions: "modifier les tags des questions d'autres utilisateurs"
-      vote_to_close_own_question: "demander de fermer sa propre question"
-      vote_to_close_any_question: "demander de fermer toute question"
-  activerecord:
-    models:
-      users: utilisateurs
-      user: utilisateur
-    attributes:
-      user:
-        login: login
-        email: email
-        name: nom entier
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activé le
+        activation_code: code d'activation
+        asked_by: posée par
+        avatar: Image de profile
+        birthday: Anniversaire
+        created_at: membre
         current_password: mot de passe actuel
+        email: email
+        fullname: nom entier
+        hide_country: Ne pas dévoiler mon pays
+        language: langue
+        language_filter: filter by language
+        last_logged_at: vu
+        login: login
+        name: nom entier
         password: mot de passe
         password_confirmation: confirmation du mot de passe
-        created_at: crée le
-        updated_at: crée le
-        activation_code: code d'activation
-        activated_at: activé le
-        fullname: nom entier
-        language: langue
-        asked_by: posée par
-        timezone: fuseau horaire
-        preferred_tags: tags préférés
         preferred_languages: choisir les langues que vous connaissez
-        last_logged_at: vu
-        created_at: membre
+        preferred_tags: tags préférés
         reputation: reputation
-        avatar: Image de profile
-        hide_country: Ne pas dévoiler mon pays
-        language_filter: filter by language
+        timezone: fuseau horaire
+        updated_at: crée le
         website: Site internet
-        birthday: Anniversaire
-        age: Age
+    models: 
+      user: utilisateur
+      users: utilisateurs
+  users: 
+    actions: 
+      edit_others_posts: modifier les postes des autres
+      edit_wiki_post: editer les postes wiki
+      flag: flag
+      retag_others_questions: modifier les étiquettes des questions des autres utilisateurs
+      vote_down: voter négatif
+      vote_to_close_any_question: demander de fermer toute question
+      vote_to_close_own_question: demander de fermer sa propre question
+      vote_up: voter positif
+    create: 
+      flash_error: désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus.
+      flash_notice: merci de vous avoir enregistrer!
+    edit: 
+      enable_twitter: Activer vos comptes facebook ou twitter
+      submit: sauver
+      title: configuration
+    follow: 
+      flash_notice: L'utilisateur {{user}} a été ajouté à votre liste d' amis
+    form: 
+      activities_notification: recevoir des notifications via courrier électronique sur les activités système telles que les insignes gagnées, les nouveaux suiveurs, etc.
+      avatar_tip: changer l'image de votre profil en utilisant gravatar
+      give_advice_notification: recevoir des notifications via courrier électronique sur les questions liées à votre champs d'expertise
+      information: information
+      new_answer_notification: obtenir des notifications via email de nouvelles réponses
+      notifications: notifications
+      reports_notification: recevoir un rapport avec les dernières activités du groupes (juste pour l'admin du groupe)
+    index: 
+      empty: ce groupe n'a pas de membres pour l'instant, participer pour en devenir un.
+      filter: Recherchez des utilisateurs
+      name: name
+      name_tooltip: utilisateurs par ordre alphabétique
+      newest: newest
+      newest_tooltip: utilisateurs vennant d'ouvrir un compte
+      oldest: oldest
+      oldest_tooltip: utilisateurs ayant ouvert leur compte en premier
+      reputation: reputation
+      reputation_tooltip: utilisateurs par ordre de réputation
+      title: tous les utilisateurs
+    messages: 
+      errors: 
+        reputation_needed: vous avez besoin d'une réputation de {{min_reputation}} à fin de pouvoir {{action}}
+    new: 
+      submit: ouvrir un compte
+      title: se connecter en tant que nouvel utilisateur
+    show: 
+      follow: suivre
+      title: User {{user}}
+      unfollow: ne plus suivre
+    unfollow: 
+      flash_notice: L'utilisateur {{user}} a été ajouté à votre liste d'amis

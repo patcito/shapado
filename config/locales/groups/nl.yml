@@ -1,0 +1,64 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Standaardlabels
+        description: Beschrijving
+        domain: Domein
+        fb_button: Knop "Facebook like" inschakelen (niet privacyvriendelijk)
+        forum: Meer dan één antwoord per gebruiker toestaan
+        group_created_by: Aangemaakt door
+        language: Taal
+        legend: Legenda
+        logo: Logo
+        may_contain_adult_content: Deze site kan inhoud voor volwassenen bevatten
+        name: Naam
+        openid_only: Alleen gebruikers via OpenID toestaan
+        owner: Deze groep is aangemaakt door {{login}}
+        registered_only: Alleen geregistreerde gebruikers kunnen de site lezen
+        state: Status
+        subdomain: URL
+        wysiwyg_editor: Gebruikersvriendelijke tekstverwerker inschakelen
+    models: 
+      default_tags_message: U kunt niet meer dan tien standaardlabels hebben.
+      group: Groep
+      groups: Groepen
+  groups: 
+    create: 
+      flash_notice: Uw groep is aangemaakt. U kunt nu de instellingen maken.
+    form: 
+      access: Toegangsinstellingen
+      any_language: Alle
+      default_tags_legend: Scheid labels met komma's. Er zijn maximaal tien labels toegestaan.
+      description_legend: Beschrijf de groep in vierhonderd tekens of minder.
+      legend_legend: Dit wordt gebruikt als kop. Gebruik maximaal veertig tekens
+      logo_legend: U kunt het groepslogo uploaden. De maximale grootte is 2MB.
+    group: 
+      about: Over
+      accept_group: Groep accepteren
+      allow_ads: Advertenties toestaan
+      close: Sluiten
+      close_group: Deze groep sluiten
+      disallow_ads: Advertenties niet toestaan
+    index: 
+      actives: Actief
+      filter: Groepen doorzoeken
+      most_active: Meest actief
+      name: Naam
+      pendings: In behandeling
+      request_group: Nieuwe groep aanvragen
+      title: Groepen
+    new: 
+      title: Uw groep aanmaken
+    show: 
+      accept_group: Groep accepteren
+      accept_group_with_custom_ads: Groep accepteren en aangepaste advertenties toestaan
+      close_group: Groep sluiten
+      group_awaiting_acceptance: Deze groep wacht op acceptatie door een moderator.
+      group_closed: Deze groep is gesloten.
+      title: Over {{name}}
+      visit_group: Deze groep bezoeken

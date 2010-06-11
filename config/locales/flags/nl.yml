@@ -1,0 +1,21 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Reden
+    models: 
+      flag: Markering
+      flags: Markeringen
+  flags: 
+    create: 
+      flash_error: U kunt dit niet markeren
+      flash_notice: Dan u wel voor uw rapport
+    form: 
+      attention: Heeft aandacht van een moderator nodig
+      label: Markeer alstublieft alleen als het nodig is
+      offensive: Aanstootgevend, beledigend of haatdragend
+      spam: Spam

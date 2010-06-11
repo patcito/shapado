@@ -1,30 +1,28 @@
-es-AR:
-  answers:
-    form:
-      comment_label: commenta sobre esta respuesta
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: contenido
+        created_at: contestado
+        link: enlace
+    models: 
+      answer: respuesta
+      answers: respuestas
+  answers: 
+    create: 
+      flash_error: "algo fue mal añadiendo tu respuesta. \n  recuerda que: \n - no se permiten respuestas vacias ni repetidas. \n - debes esperar 20 segundos antes de volver a contestar. \n - solo puede hacer una sola respuesta por cada pregunta."
+      flash_notice: ¡gracias!
+    edit: 
+      title: editar respuesta
+    form: 
       answer_label: conteste la pregunta
+      comment_label: commenta sobre esta respuesta
       comment_submit: comentar
       submit: contestar
-    edit:
-      title: editar respuesta
-    create:
-      flash_notice: "¡gracias!"
-      flash_error:  "algo fue mal añadiendo tu respuesta.
-\n  recuerda que:
-\n - no se permiten respuestas vacias ni repetidas.
-\n - debes esperar 20 segundos antes de volver a contestar.
-\n - solo puede hacer una sola respuesta por cada pregunta."
-    update:
-      flash_notice: "la respuesta fue actualizada exitosamente."
-    revert:
-      title: "revert answer"
-
-  activerecord:
-    models:
-      answers: respuestas
-      answer: respuesta
-    attributes:
-      answer:
-        link: enlace
-        created_at: contestado
-        body: contenido
+    revert: 
+      title: revert answer
+    update: 
+      flash_notice: la respuesta fue actualizada exitosamente.

@@ -1,8 +1,11 @@
-"es-AR":
-  shared:
-    topbar:
-      logged_as: "conectado como {{login}}"
-      admin: administrar
-      user_page: mi página
-    current_tags:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  shared: 
+    current_tags: 
       title: etiquetas seleccionadas
+    topbar: 
+      admin: administrar
+      logged_as: conectado como {{login}}
+      user_page: mi página

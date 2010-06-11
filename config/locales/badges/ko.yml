@@ -1,0 +1,129 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  activerecord: 
+    models: 
+      badge: 배지
+      badges: 배지
+  badges: 
+    index: 
+      description: 귀하가 획득한 모든 배지. 지식을 공유하고, 배지를 획득하세요.
+      title: 배지
+    shared: 
+      addict: 
+        description: 연속 20 일 동안 사이트를 방문
+      autobiographer: 
+        description: 사용자 프로필 필드를 모두 완료
+        name: autobiographer
+      celebrity: 
+        description: Follower 100명 달성
+        name: 명성
+      citizen_patrol: 
+        description: 첫 Flag
+        name: citizen patrol
+      civic_duty: 
+        description: 투표 300 회
+        name: 시민의 의무
+      cleanup: 
+        description: 첫 롤백
+        name: cleanup
+      commentator: 
+        description: 10 코멘트를 남김
+      critic: 
+        description: 첫 네거티브 투표
+      disciplined: 
+        description: 스코어가 3 이상인 자신의 게시물 삭제
+        name: disciplined
+      editor: 
+        description: 첫 편집된 포스트
+      effort_medal: 
+        description: 100 긍정적인 표를 얻음
+      enlightened: 
+        description: " 답변이 적어도 10 Up Vote로 수용됨"
+        name: enlightened
+      famous_question: 
+        description: 게시한 질문이 1000 view를 달성함
+      fanatic: 
+        description: 100일 연속 사이트를 방문
+      favorite_question: 
+        description: 25 명이 좋아한 질문
+      friendly: 
+        description: 첫 Following
+        name: 친절
+      good_answer: 
+        description: 답변이 평균 vote 25에 이름
+      good_question: 
+        description: 평균 25표 이상의 답변
+      great_answer: 
+        description: 100 vote 답변
+        name: 멋진 답변
+      great_question: 
+        description: Up vote 100을 달성한 질문
+        name: 좋은 질문
+      guru: 
+        description: 평균 40 vote 이상의 답변을 제시
+      inquirer: 
+        description: 첫 질문
+      interesting_person: 
+        description: Follower 10명 달성
+        name: 재미있는 사람
+      merit_medal: 
+        description: 포지티브 100표를 얻음
+      necromancer: 
+        description: answered a question more than 60 days later with at least 5 votes
+        name: necromancer
+      nice_answer: 
+        description: 10 Up Vote 답변
+        name: 좋은 답변
+      nice_question: 
+        description: question voted up 10 times
+        name: 멋진 질문
+      notable_question: 
+        description: 2500 view를 달성한 질문
+      organizer: 
+        description: 첫 retag
+        name: organizer
+      peer_pressure: 
+        description: 점수가 -3 이하인 자신의 게시물 삭제
+        name: peer pressure
+      pioneer: 
+        description: 첫 등록자
+      popstar: 
+        description: 최대 500 포지티브 vote, 10 네거티브 vote
+      popular_person: 
+        description: Follower 50명 달성
+        name: 인기있는 사람
+      popular_question: 
+        description: 게시한 질문이 1000 view를 달성함
+      rockstar: 
+        description: 최대 1000 포지티브 표, 10 네거티브 표
+      scholar: 
+        description: 자신의 질문에 수락된 첫 답변
+        name: 학자
+      self-learner: 
+        description: 최소 3 UP 표로 자신의 질문에 대답
+        name: self learner
+      service_medal: 
+        description: 포지티브 300표
+      shapado: 
+        description: 8일 연속 사이트를 방문
+      stellar_question: 
+        description: 100명이 좋아한 질문
+        name: Stellar 질문
+      student: 
+        description: Up 표를 얻은 첫 질문
+      supporter: 
+        description: 처음으로 포지티브 투표
+      troubleshooter: 
+        description: 첫 답변
+      tutor: 
+        description: 평균 2 표 이상의 답변을 제시
+    show: 
+      description: "이 배지를 받은 사용자. 최근에 수여받은 사용자:"
+      earned: 적립
+      for_tag_bronze: "{{tag}} 태그 200 표"
+      for_tag_gold: "{{tag}} 태그 1000 표"
+      for_tag_silver: "{{tag}} 태그 400 표"
+      title: 배지 {{type}}

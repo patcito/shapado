@@ -1,18 +1,20 @@
-fr:
-  flags:
-    form:
-      spam: spam
-      offensive: injurieux, abusif ou discours de haine
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: raison
+    models: 
+      flag: rapport
+      flags: rapports
+  flags: 
+    create: 
+      flash_error: vous ne pouvez rapporter ceci
+      flash_notice: merci pour votre rapport
+    form: 
       attention: nécesite l'attention des modérateurs
       label: s'il vous plait, raporter avec attention
-    create:
-      flash_notice: merci pour votre rapport
-      flash_error: vous ne pouvez rapporter ceci
-
-  activerecord:
-    models:
-      flags: rapports
-      flag: rapport
-    attributes:
-      flag:
-        type: raison
+      offensive: injurieux, abusif ou discours de haine
+      spam: spam

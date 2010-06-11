@@ -1,0 +1,64 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: основно зададени ознаки
+        description: опис
+        domain: домен
+        fb_button: Овозможи Facebook-овидно копче (не е погодно за приватност)
+        forum: дозволи повеќе од еден одговор по корисник
+        group_created_by: создадена од
+        language: јазик
+        legend: легенда
+        logo: лого
+        may_contain_adult_content: ова мрежно место може да има содржини за возрасни
+        name: име
+        openid_only: само корисници на OpenID можат да пристапат на местото
+        owner: групава е создадена од {{login}}
+        registered_only: само регистрирани корисници можат да пристапат на местото
+        state: држава
+        subdomain: URL
+        wysiwyg_editor: Овозможи згоден кориснички уредувач
+    models: 
+      default_tags_message: не може да имате повеќе од 10 основно зададени ознаки
+      group: група
+      groups: групи
+  groups: 
+    create: 
+      flash_notice: Вашата група е успешно создадена. Сега можете да почнете да правите поставки и прилагодувања.
+    form: 
+      access: Поставки за пристап
+      any_language: било кој
+      default_tags_legend: одделувајте ги ознаките со запирки. дозволени се само 10 основно зададени ознаки.
+      description_legend: имате 400 знаци за опис на групата.
+      legend_legend: ова ќе се користи во заглавието. имате 40 знаци
+      logo_legend: можете да подигнете лого на групата. максималната дозволена големина изнесува 2 Мб
+    group: 
+      about: за групата
+      accept_group: прифати ја групава
+      allow_ads: дозволи реклами
+      close: затвори
+      close_group: затвори ја групава
+      disallow_ads: забрани реклами
+    index: 
+      actives: активни
+      filter: пребарување на нови групи
+      most_active: најактивни
+      name: име
+      pendings: во исчекување
+      request_group: побарај нова група
+      title: групи
+    new: 
+      title: создајте своја група
+    show: 
+      accept_group: прифати ја групава
+      accept_group_with_custom_ads: прифати ја групата и дозволи реклами по избор
+      close_group: затвори ја групава
+      group_awaiting_acceptance: оваа група чека на одобрение од модератор.
+      group_closed: оваа група е затворена.
+      title: за {{name}}
+      visit_group: посети ја групава

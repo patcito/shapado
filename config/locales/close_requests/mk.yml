@@ -1,0 +1,31 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  close_requests: 
+    create: 
+      flash_notice: барањето за затворање е успешно создадено
+    destroy: 
+      flash_notice: барањето за затворање е успешно избришано
+    form: 
+      close_with_reason: затвори го прашањево користејќи ја оваа причина
+      dupe: дупликат
+      no_question: не е прашање
+      not_relevant: нерелевантно
+      ot: вон тема
+      request_closing_details: побарај да се затвори ова прашање
+      spam: спам
+    index: 
+      title: список на барања за затворање
+    model: 
+      attributes: 
+        comment: коментар
+        reason: причина
+        user: корисник
+      messages: 
+        already_requested: веќе сте побарале да се затвори ова прашање
+      name: барање за затворање
+      prural_name: затвори барања
+    update: 
+      flash_notice: барањето за затворање е успешно подновено

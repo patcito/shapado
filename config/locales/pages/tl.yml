@@ -1,0 +1,34 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: mga banig ng estilo
+        js: panitik ng java
+    models: 
+      page: pahina
+      pages: mga pahina
+  pages: 
+    actions: 
+      create_page: Lumikha ng bagong pahina
+      edit_page: Baguhin ang pahina
+      title: Mga galaw
+    create: 
+      success: Matagumpay na nalikha ang pahina.
+    edit: 
+      title: Binabago ang pahina
+    form: 
+      language_tip: wika ng pahina
+      title_tip: "Pamagat ng pahina, gamitin ito upang tukuyin ang pahina.  halimbawa na: [[FAQ|suriin ang mga madalas itanong]]"
+    index: 
+      create_page: lumikha ng bagong pahina
+      title: talaan ng mga pahina
+      written_in: nakasulat sa {{language}}
+    new: 
+      title: bagong pahina
+    title: ayusin ako
+    update: 
+      success: matagumpay na naisapanahon ang pahina.

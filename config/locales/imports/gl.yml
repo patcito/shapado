@@ -1,0 +1,10 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: necesita confirmación
+        title: enviar correos de confirmación

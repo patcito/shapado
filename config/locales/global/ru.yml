@@ -1,0 +1,55 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: G0rn
+ru: 
+  actions: 
+    closed: закрыто
+    created: создано
+    deleted: удалено
+    updated: обновлено
+  feeds: 
+    feed: Канал
+    post_new_questions: отправить новые вопросы в
+    question: подписаться на этот вопрос
+    questions: подписаться на все вопросы
+    share_on_twitter: twitter, facebook и другое...
+    tag: подписаться на тег
+    user: подписаться на вопросы пользователя
+  global: 
+    current: текущий
+    group_not_found: Страница {{url}} не существует
+    or: или
+    permission_denied: доступ запрещён
+    please_login: пожалуйста, представьтесь
+    preview: предпросмотр
+    previous: предыдущий
+  languages: 
+    any: любой
+    en: английский
+    es: испанский
+    es-AR: латиноамериканский испанский
+    fr: французский
+    pt: португальский
+    pt-PT: португальский
+  models: 
+    question: вопрос
+  number: 
+    x_time: 
+      zero: никогда
+  scaffold: 
+    add: добавить
+    back: назад
+    cancel: отменить
+    close: закрыть
+    create: создать
+    destroy: удалить
+    details: подробности
+    edit: править
+    save: сохранить
+    send: отправить
+    show: показать
+    update: обновить
+  time: 
+    ago: "{{time}} назад"
+    today: сегодня

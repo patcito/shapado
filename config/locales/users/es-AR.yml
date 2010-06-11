@@ -1,84 +1,84 @@
-"es-AR":
-  users:
-    index:
-      title: todos los usuarios
-      empty: "este grupo no tiene miembros, participe para unirse a este grupo."
-      filter: "Busca usuarios"
-      reputation: reputación
-      newest: recientes
-      oldest: antiguos
-      name: por nombre de usuario
-      reputation_tooltip: usuarios ordenados por reputación
-      newest_tooltip: usuarios que se acaban de unir
-      oldest_tooltip: usuarios que se unieron primero
-      name_tooltip: usuarios ordenados alfabéticamente
-    new:
-      title: registrar un nuevo usuario
-      submit: registrar
-    edit:
-      title: configuración
-      submit: guardar
-      enable_twitter: Habilita tus cuentas twitter y facebook
-    show:
-      title: "Usuario {{user}}"
-      follow: seguir
-      unfollow: dejar de seguir
-      views: vistas
-    follow:
-      flash_notice: "El usuario {{user}} fue añadido a su lista de amigos"
-    unfollow:
-      flash_notice: "El usuario {{user}} fue removido de su lista de amigos"
-    form:
-      information: información
-      notifications: notificaciones
-      new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
-      give_advice_notification:  obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
-      activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
-      reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
-      avatar_tip: "cambia tu imagen del perfil usando gravatar"
-    create:
-      flash_notice: "gracias por registrarse!"
-      flash_error:  "no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba)."
-    messages:
-      errors:
-        reputation_needed: "necesitas una reputación de {{min_reputation}} para {{action}}"
-    actions:
-      vote_up: votar positivo
-      vote_down: votar negativo
-      flag: reportar como abuso
-      edit_others_posts: "editar preguntas o respuestas de otros usuarios"
-      edit_wiki_post: "editar wikis"
-      retag_others_questions: "cambiar las etiquetas de las preguntas de otros usuarios"
-      vote_to_close_own_question: "request closing own question"
-      vote_to_close_any_question: "request closing any question"
-  activerecord:
-    models:
-      users: usuarios
-      user: usuario
-    attributes:
-      user:
-        login: nombre de usuario
-        email: correo electrónico
-        name: nombre real
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activado en
+        activation_code: código de activación
+        asked_by: asked by
+        avatar: imagen del perfil
+        birthday: Fecha de Cumpleaños
+        created_at: registrado
         current_password: contraseña actual
+        email: correo electrónico
+        fullname: nombre completo
+        hide_country: No mostrar mi pais
+        language: idioma
+        language_filter: filtro por idioma
+        last_logged_at: visto
+        login: nombre de usuario
+        name: nombre real
         password: contraseña
         password_confirmation: confirmación de contraseña
-        created_at: creado en
-        updated_at: actualizado en
-        activation_code: código de activación
-        activated_at: activado en
-        fullname: nombre completo
-        language: idioma
-        asked_by: asked by
-        timezone: zona horaria
-        preferred_tags: etiquetas preferidas
         preferred_languages: escoja los idiomas que conozca
-        last_logged_at: visto
-        created_at: registrado
+        preferred_tags: etiquetas preferidas
         reputation: reputación
-        avatar: imagen del perfil
-        hide_country: No mostrar mi pais
-        language_filter: filtro por idioma
+        timezone: zona horaria
+        updated_at: actualizado en
         website: Sitio Web
-        birthday: Fecha de Cumpleaños
-        age: Edad
+    models: 
+      user: usuario
+      users: usuarios
+  users: 
+    actions: 
+      edit_others_posts: editar preguntas o respuestas de otros usuarios
+      edit_wiki_post: editar wikis
+      flag: reportar como abuso
+      retag_others_questions: cambiar las etiquetas de las preguntas de otros usuarios
+      vote_down: votar negativo
+      vote_to_close_any_question: request closing any question
+      vote_to_close_own_question: request closing own question
+      vote_up: votar positivo
+    create: 
+      flash_error: no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba).
+      flash_notice: gracias por registrarse!
+    edit: 
+      enable_twitter: Habilita tus cuentas twitter y facebook
+      submit: guardar
+      title: configuración
+    follow: 
+      flash_notice: El usuario {{user}} fue añadido a su lista de amigos
+    form: 
+      activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
+      avatar_tip: cambia tu imagen del perfil usando gravatar
+      give_advice_notification: obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
+      information: información
+      new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
+      notifications: notificaciones
+      reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
+    index: 
+      empty: este grupo no tiene miembros, participe para unirse a este grupo.
+      filter: Busca usuarios
+      name: por nombre de usuario
+      name_tooltip: usuarios ordenados alfabéticamente
+      newest: recientes
+      newest_tooltip: usuarios que se acaban de unir
+      oldest: antiguos
+      oldest_tooltip: usuarios que se unieron primero
+      reputation: reputación
+      reputation_tooltip: usuarios ordenados por reputación
+      title: todos los usuarios
+    messages: 
+      errors: 
+        reputation_needed: necesitas una reputación de {{min_reputation}} para {{action}}
+    new: 
+      submit: registrar
+      title: registrar un nuevo usuario
+    show: 
+      follow: seguir
+      title: Usuario {{user}}
+      unfollow: dejar de seguir
+    unfollow: 
+      flash_notice: El usuario {{user}} fue removido de su lista de amigos

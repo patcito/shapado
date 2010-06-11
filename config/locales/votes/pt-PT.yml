@@ -1,21 +1,24 @@
-pt-PT:
-  votes:
-    create:
-      flash_notice: "obrigado pelo seu voto!"
-      flash_error:  "não pode votar isto"
-      unauthenticated: "utilizadores anónimos não podem votar"
-    control:
-      to_vote_up: "click to vote up"
-      to_vote_down: "click to vote down"
-      have_voted_up: "click to undo your up vote"
-      have_voted_down: "click to undo your down vote"
-    destroy:
-      flash_notice: "your vote has been revoked successfully."
-    model:
-      messages:
-        closed_question: "you cannot vote on any posts belonging to a closed question"
-        vote_down_comment: "comments cannot be voted down"
-  activerecord:
-    models:
-      votes: votos
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    models: 
       vote: voto
+      votes: votos
+  votes: 
+    control: 
+      have_voted_down: click to undo your down vote
+      have_voted_up: click to undo your up vote
+      to_vote_down: click to vote down
+      to_vote_up: click to vote up
+    create: 
+      flash_error: não pode votar isto
+      flash_notice: obrigado pelo seu voto!
+      unauthenticated: utilizadores anónimos não podem votar
+    destroy: 
+      flash_notice: your vote has been revoked successfully.
+    model: 
+      messages: 
+        closed_question: you cannot vote on any posts belonging to a closed question
+        vote_down_comment: comments cannot be voted down

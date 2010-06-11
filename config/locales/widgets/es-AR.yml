@@ -1,26 +1,29 @@
-es-AR:
-  widgets:
-    index:
-      title: administrar los widgets de la barra lateral
-      description: usar las flechas para mover los widgets
-    badges:
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es-AR: 
+  widgets: 
+    badges: 
+      description: este widget muestra las insignias ganadas por los usuarios o las preguntas
       title: insignias recientes
-      description: "este widget muestra las insignias ganadas por los usuarios o las preguntas"
-    groups:
+    groups: 
+      description: este widget muestra los últimos grupos registrados
       title: grupos recientes
-      description: "este widget muestra los últimos grupos registrados"
-    top_groups:
-      title: ranking de grupos
-      description: "este widget muestra los grupos mas activos"
-    top_users:
-      title: ranking de usuarios
-      description: "este widget muestra ranking de usuarios"
-    users:
-      title: usuarios recientes
-      description: "este widget muestra los nuevos miembros registrados"
-    tag_cloud:
-      title: nube de etiquetas
-      description: "este widget muestra una nube de etiquetas"
-    pages:
+    index: 
+      description: usar las flechas para mover los widgets
+      title: administrar los widgets de la barra lateral
+    pages: 
+      description: este widget muestra las paginas wiki
       title: paginas wiki
-      description: "este widget muestra las paginas wiki"
+    tag_cloud: 
+      description: este widget muestra una nube de etiquetas
+      title: nube de etiquetas
+    top_groups: 
+      description: este widget muestra los grupos mas activos
+      title: ranking de grupos
+    top_users: 
+      description: este widget muestra ranking de usuarios
+      title: ranking de usuarios
+    users: 
+      description: este widget muestra los nuevos miembros registrados
+      title: usuarios recientes

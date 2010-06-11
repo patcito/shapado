@@ -1,0 +1,21 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Grund
+    models: 
+      flag: Kennzeichen
+      flags: Kennzeichen
+  flags: 
+    create: 
+      flash_error: Du kannst dies nicht kennzeichnen
+      flash_notice: Vielen Dank für Deinen Hinweis
+    form: 
+      attention: erfordert die Aufmerksamkeit eines Moderatoren
+      label: bitte mit Bedacht kennzeichnen
+      offensive: anstößiger, beleidigender oder hasserfüllter Beitrag
+      spam: Spam

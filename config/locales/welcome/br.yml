@@ -1,0 +1,36 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  welcome: 
+    facts: 
+      features: 
+        shapado: 
+          adaptable: ya !
+          foss: ya !
+          joel: ket :/
+          multilanguage: ya !
+          multitopic: ya !
+        stackexchange: 
+          adaptable: ket
+          foss: ket
+          joel: ya !
+          multilanguage: ket
+          multitopic: ket
+      prices: 
+        cols: 
+          onsite: el lec'hienn
+        shapado: 
+          large: tro $500
+        stackexchange: 
+          large: $1299/miz
+          medium: $999/miz
+          onsite: $2500/miz
+          small: $129/miz
+    feedback: 
+      feedback_description: deskrivadur
+      feedback_title: titl
+    index: 
+      active: oberiant
+      hot: tomm

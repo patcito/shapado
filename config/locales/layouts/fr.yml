@@ -1,45 +1,48 @@
-fr:
-  layouts:
-    application:
-      title: "questions & réponses"
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  layouts: 
+    application: 
+      ask_question: posez une question
+      badges: insignes
+      forgot: oublié?
+      home: page principale
+      languages: langues
+      log_in: se connecter
+      logged: connecté {{login}}
+      logout: se déconnecter
+      manage_ads: administrer les publicités
+      moderate: modérer
+      now: now!
+      openid: 
+        explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
+      pages: pages
       questions: questions
       questions_in: questions en
       questions_tagged: taguées
-      ask_question: posez une question
-      tags: tags
-      users: utilisateurs
-      badges: insignes
-      unanswered: sans réponses
-      pages: pages
-      logout: se déconnecter
-      logged: connecté {{login}}
       search: chercher
-      forgot: oublié?
-      log_in: se connecter
-      signup: créer un compte
       settings: configuration
-      languages: langues
-      moderate: modérer
-      manage_ads: administrer les publicités
-      home: page principale
+      signup: créer un compte
       subscribe: s'inscrire
+      tags: tags
+      title: questions & réponses
+      unanswered: sans réponses
+      users: utilisateurs
       welcome_from: welcome! you can
-      now: now!
-      openid:
-        explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
-    manage:
-      dashboard: dashboard
-      properties: propriétés
-      widgets: widgets
+    manage: 
       actions: actions
-      stats: États
-      members: membres
-      reputation: réputation
-      content: contenu
-      theme: thème
-      domain: domaine
-      pages: pages
-      constrains: constraintes
-      rewards: récompenses
-      general: général
       announcements: annonces
+      constrains: constraintes
+      content: contenu
+      dashboard: dashboard
+      domain: domaine
+      general: général
+      members: membres
+      pages: pages
+      properties: propriétés
+      reputation: réputation
+      rewards: récompenses
+      stats: États
+      theme: thème
+      widgets: widgets

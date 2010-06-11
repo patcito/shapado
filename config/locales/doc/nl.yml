@@ -1,0 +1,37 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  doc: 
+    chat: 
+      title: Chatondersteuning
+    plans: 
+      15millions: 15 miljoen pageviews per maand
+      1million: 1 miljoen pageviews per maand
+      247_all_support: Webgebaseerd, e-mail, chat en telefonische ondersteuning 24 uur per dag, 7 dagen per week
+      5millions: 5 miljoen pageviews per maand
+      all_support: Webgebaseerd, e-mail, chat en telefonische ondersteuning
+      basic_restrictions: Geen aangepaste advertenties en geen volledig aanpasbare UI
+      beta_info: Op dit moment zijn alle sites gratis en alle sites hebben dezelfde mogelijkheden als het Optimum-pakket. Uitgezonderd is de ondersteuning. Alleen webgebaseerd, e-mail en chat zijn beschikbaar.
+      big_sites: Sites met veel verkeer
+      custom_ads: Gebruik uw eigen advertenties
+      custom_analytics: Verkeersoverzicht
+      custom_domain: Aangepast domein
+      custom_themes: Gebruik de kant-en-klare thema's
+      custom_ui: Volledig aanpasbare UI
+      free_plan: Gratis pakket
+      getting_popular: Populair worden
+      huge_sites: Sites met heel veel verkeer
+      month: Maand
+      page_views: Voor kleine / particuliere sites
+      plans: Pakketten
+      private_site: Publieke / private toegang inschakelen
+      small_private: kleine / particuliere sites
+      start_monetizing: Begin met verdienen
+      support: Ondersteuning
+      title: Pakketten en prijzen
+      unlimited: Onbeperkt netwerkverkeer per maand
+      we_offer: We bieden ook een
+      web_support: Webgebaseerde ondersteuning
+      with_unlimited: Met onbeperkte netwerkverkeers zonder aangepaste advertenties en zonder aangepaste domeinnaam.

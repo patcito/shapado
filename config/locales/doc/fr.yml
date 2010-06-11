@@ -1,33 +1,36 @@
-fr:
-  doc:
-    chat:
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+fr: 
+  doc: 
+    chat: 
       title: Support par tchat
-    plans:
-      title: Plans de souscription et prix
-      free_plan: plan gratuit
-      we_offer: nous offrons aussi un
-      with_unlimited: avec trafic illimité et sans publicités personalisées ni domaines personalisés.
+    plans: 
+      15millions: 15 millions de pages vues/mois
+      1million: 1 million de pages vues/mois
+      247_all_support: support 24/7 sur le web, email, tchat et téléphone
+      5millions: 5 millions de pages vues/mois
+      all_support: support sur le web, email, tchat et téléphone
+      basic_restrictions: pas de publicités ni d'interface personalisées
       beta_info: Pour les moments, tous les sites sont gratuits et bénéficient des options du plan Optimum, à l'exception du support d'aide qui n'est accessible que par le web, l'email et le tchat.
-      huge_sites: énormes sites
       big_sites: gros sites
-      getting_popular: sites populaires
-      start_monetizing: commencez à commercialiser
-      small_private: sites petits/privés
-      page_views: page vues/mois
-      custom_themes: utilisation de nos thèmes pré-faits
-      private_site: Activez accès privé/public
-      custom_domain: Domaine personalisé
-      custom_ui: Interface personalisable
       custom_ads: Vos propres publicités
       custom_analytics: Stats du trafic
-      support: Support
-      unlimited: Trafic illimité tous les mois
-      1million: 1 million de pages vues/mois
-      5millions: 5 millions de pages vues/mois
-      15millions: 15 millions de pages vues/mois
-      web_support: sur le web
-      all_support: support sur le web, email, tchat et téléphone
-      247_all_support: support 24/7 sur le web, email, tchat et téléphone
-      basic_restrictions: pas de publicités ni d'interface personalisées
+      custom_domain: Domaine personalisé
+      custom_themes: utilisation de nos thèmes pré-faits
+      custom_ui: Interface personalisable
+      free_plan: plan gratuit
+      getting_popular: sites populaires
+      huge_sites: énormes sites
       month: mois
+      page_views: page vues/mois
       plans: plans
+      private_site: Activez accès privé/public
+      small_private: sites petits/privés
+      start_monetizing: commencez à commercialiser
+      support: Support
+      title: Plans de souscription et prix
+      unlimited: Trafic illimité tous les mois
+      we_offer: nous offrons aussi un
+      web_support: sur le web
+      with_unlimited: avec trafic illimité et sans publicités personalisées ni domaines personalisés.

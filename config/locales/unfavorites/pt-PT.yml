@@ -1,10 +1,12 @@
-pt-PT:
-  unfavorites:
-    create:
-      unauthenticated: "you need an account to remove a favorite"
-      success:         "the question has been removed from your favorities"
-
-  activerecord:
-    models:
-      favorites: favorites
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+pt-PT: 
+  activerecord: 
+    models: 
       favorite: favorite
+      favorites: favorites
+  unfavorites: 
+    create: 
+      success: the question has been removed from your favorities
+      unauthenticated: you need an account to remove a favorite

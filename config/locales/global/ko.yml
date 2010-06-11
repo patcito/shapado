@@ -1,0 +1,66 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  actions: 
+    closed: 마감됨
+    created: 생성됨
+    deleted: 삭제됨
+    updated: 업데이트됨
+  feeds: 
+    feed: Feed
+    post_new_questions: 새로운 질문을 게시
+    question: 이 질문을 구독
+    questions: 모든 질문을 구독
+    share_on_twitter: 트위터, 페이스북 등 ...
+    tag: 태그를 구독
+    user: 이 사용자의 질문을 구독
+  global: 
+    by: by
+    current: 현재
+    from: from {{site}}
+    group_not_found: 페이지 {{url}}이 없습니다
+    or: 또는
+    permission_denied: 권한 없음
+    please_login: 로그인하세요
+    preview: 미리보기
+    previous: 이전
+    share: 공유
+  languages: 
+    any: 모두
+    en: 영어
+    es: 스페인어
+    es-AR: 라틴 아메리칸 스페인어
+    fr: 프랑스어
+    pt: 포르투갈어
+    pt-PT: 포르투갈어
+    user: 언어 설정
+  messages: 
+    success: "{model}}이 성공적으로  {{action}} 되었습니다."
+  models: 
+    question: 질문
+  number: 
+    x_time: 
+      one: "{{count}} time"
+      other: "{{count}} times"
+      zero: never
+  scaffold: 
+    add: 추가
+    back: 뒤로
+    cancel: 취소
+    close: 닫기
+    create: 생성
+    destroy: 지우기
+    details: 자세한 정보
+    edit: 편집
+    more: 더 보기...
+    new: 새로운 {{model}} 을/를 추가
+    save: 저장
+    send: 보내기
+    show: 보기
+    sure: 이  {{model}} 을/를 삭제하겠습니까?
+    update: 업데이트
+  time: 
+    ago: "{{time}} ago"
+    today: 오늘
