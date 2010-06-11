@@ -34,16 +34,16 @@ en:
           foss: yes!
           joel: "no :/"
     feedback:
-      title: send your feedback
-      feedback_title: title
-      feedback_description: description
-      email_description: please, provie your email so we can answer your message
-      captcha_error: please, solve a simple math operation
+      title: Send your feedback
+      feedback_title: Title
+      feedback_description: Description
+      email_description: Please, provie your email so we can answer your message
+      captcha_error: Please, solve a simple math operation
     index:
-      hot:     hot
-      active:  active
-      recent_questions: recent questions
-      quick_question: ask a question, we will find someone to answer
+      hot:     Hot
+      active:  Active
+      recent_questions: Recent questions
+      quick_question: Ask a question, we will find someone to answer
       create_own_site: "Create your own Q&amp;A site in 8 seconds for free"
 
     confirm_age:

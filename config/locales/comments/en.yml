@@ -3,14 +3,14 @@ en:
     edit:
       title: Edit comment
     create:
-      flash_notice: thanks for your comment
+      flash_notice: Thanks for your comment
     update:
-      flash_notice: "comment was successfully updated."
+      flash_notice: "Comment was successfully updated."
     shared:
-      add_comment: "add comment..."
-      comment_submit: "comment"
+      add_comment: "Add comment..."
+      comment_submit: "Comment"
       said: said
-      reply: reply
+      reply: Reply
   models:
-    comments: comments
-    comment: comment
+    comments: Comments
+    comment: Comment

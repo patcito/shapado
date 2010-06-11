@@ -1,30 +1,30 @@
 en:
   answers:
     form:
-      comment_label: comment on this answer
-      answer_label: answer the question
-      comment_submit: comment
-      submit: answer
+      comment_label: Comment on this answer
+      answer_label: Answer the question
+      comment_submit: Comment
+      submit: Answer
     edit:
-      title: editing answer
+      title: Editing answer
     create:
-      flash_notice: "thanks!"
-      flash_error:  "something went wrong adding your answer.
-  \n  remember that:
-  \n - empty and repeated answers are not allowed
-  \n - you need to wait 20 senconds before posting another answer.
-  \n - you can only post one answer by question."
+      flash_notice: "Thanks!"
+      flash_error:  "Something went wrong adding your answer.
+  \n  Remember that:
+  \n - Empty and repeated answers are not allowed
+  \n - You need to wait 20 senconds before posting another answer.
+  \n - You can only post one answer by question."
     update:
-      flash_notice: "answer was successfully updated."
+      flash_notice: "Answer was successfully updated."
     revert:
-      title: "revert answer"
+      title: "Revert answer"
 
   activerecord:
     models:
-      answers: answers
-      answer: answer
+      answers: Answers
+      answer: Answer
     attributes:
       answer:
-        link: link
-        created_at: answered
-        body: body
+        link: Link
+        created_at: Answered
+        body: Body

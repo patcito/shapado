@@ -1,68 +1,68 @@
 en:
   groups:
     index:
-      title: groups
-      filter: "search for groups"
-      actives: active
-      pendings: pending
-      most_active: most active
-      request_group: request a new group
-      name: name
+      title: Groups
+      filter: "Search for groups"
+      actives: Active
+      pendings: Pending
+      most_active: Most active
+      request_group: Request a new group
+      name: Name
     group:
-      about: about
-      close: close
-      accept_group: accept this group
-      close_group: close this group
-      allow_ads: allow ads
-      disallow_ads: disallow ads
+      about: About
+      close: Close
+      accept_group: Accept this group
+      close_group: Close this group
+      allow_ads: Allow ads
+      disallow_ads: Disallow ads
     show:
-      title: "about {{name}}"
-      visit_group: visit this group
-      group_awaiting_acceptance: "this group is awaiting for the acceptance of a moderator."
-      group_closed: this group was closed.
-      accept_group: accept this group
-      close_group: close this group
-      accept_group_with_custom_ads: accept group and allow custom ads
+      title: "About {{name}}"
+      visit_group: Visit this group
+      group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
+      group_closed: This group was closed.
+      accept_group: Accept this group
+      close_group: Close this group
+      accept_group_with_custom_ads: Accept group and allow custom ads
     new:
-      title: create your group
+      title: Create your group
     create:
       flash_notice: Your group was successfully created, you can now start to configure it.
     form:
-      description_legend: you have 400 characters to describe the group.
-      legend_legend: "it will be used in the header, you have 40 characters"
-      default_tags_legend: "separate tags by commas. only 10 default tags allowed."
-      logo_legend: "you can upload the group logo. the maximum file size is 2mb."
-      any_language: any
+      description_legend: You have 400 characters to describe the group.
+      legend_legend: "It will be used in the header, you have 40 characters"
+      default_tags_legend: "Separate tags by commas. only 10 default tags allowed."
+      logo_legend: "You can upload the group logo. the maximum file size is 2mb."
+      any_language: Any
       access: Access Settings
-      isolate_group: isolate the group form other groups
-      members_only: "only the group's members will be able to access this group"
-      custom_html: allow custom html
-      custom_js: allow custom javascript
-      custom_analytics: allow Custom Analytics
-      analytics_engine: analytics Engine
-      website_analytics_id: website Analytics ID
+      isolate_group: Isolate the group form other groups
+      members_only: "Only the group's members will be able to access this group"
+      custom_html: Allow custom html
+      custom_js: Allow custom javascript
+      custom_analytics: Allow Custom Analytics
+      analytics_engine: Analytics Engine
+      website_analytics_id: Website Analytics ID
       analytics_legend: The group will be able to use its own tracking code
   activerecord:
     models:
-      groups: groups
-      group: group
-      default_tags_message: "you can't have more than 10 default tags"
+      groups: Groups
+      group: Group
+      default_tags_message: "You can't have more than 10 default tags"
     attributes:
       group:
-        name: name
-        subdomain: url
-        domain: domain
-        legend: legend
-        description: description
-        state: state
-        owner: "this group was created by {{login}}"
+        name: Name
+        subdomain: Url
+        domain: Domain
+        legend: Legend
+        description: Description
+        state: State
+        owner: "This group was created by {{login}}"
         group_created_by: created by
-        language: language
-        default_tags: "default tags"
-        logo: logo
-        forum: allow more than one answer by user
-        openid_only: only people using openid can access the site
-        registered_only: only registered people can access the site
-        may_contain_adult_content: this site may contain adult content
+        language: Language
+        default_tags: "Default tags"
+        logo: Logo
+        forum: Allow more than one answer by user
+        openid_only: Only people using openid can access the site
+        registered_only: Only registered people can access the site
+        may_contain_adult_content: This site may contain adult content
         wysiwyg_editor: Enable user-friendly editor
         fb_button: Enable Facebook like button (not privacy friendly)

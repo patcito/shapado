@@ -1,18 +1,18 @@
 en:
   announcements:
     index:
-      title: announcements
+      title: Announcements
     create:
-      success: 'announcement was successfully created.'
+      success: 'Announcement was successfully created.'
     form:
     actions:
-      title: actions
-      delete: remove
+      title: Actions
+      delete: Remove
 
   activerecord:
     attributes:
       announcement:
-        message: message
-        starts_at: starts at
-        ends_at: ends at
-        only_anonymous: only for anonymous users
+        message: Message
+        starts_at: Starts at
+        ends_at: Ends at
+        only_anonymous: Only for anonymous users

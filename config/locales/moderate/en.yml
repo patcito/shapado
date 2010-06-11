@@ -2,11 +2,11 @@ en:
   admin:
     moderate:
       index:
-        title: moderate
-        ban: ban
-        content: content
-        item_title: title
-        all: all
-        flagged: flagged questions
-        banned: banned questions
-        need_tags: retag
+        title: Moderate
+        ban: Ban
+        content: Content
+        item_title: Title
+        all: All
+        flagged: Flagged questions
+        banned: Banned questions
+        need_tags: Retag

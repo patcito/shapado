@@ -1,10 +1,10 @@
 en:
   pages:
-    title: fixme
+    title: Fixme
     index:
-      title: list of pages
-      create_page: create new page
-      written_in: written in {{language}}
+      title: List of pages
+      create_page: Create new page
+      written_in: Written in {{language}}
     edit:
       title: Editing page
     create:
@@ -12,10 +12,10 @@ en:
     update:
       success: 'Page was successfully updated.'
     new:
-      title: new page
+      title: New page
     form:
       title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
-      language_tip: page language
+      language_tip: Page language
     actions:
       title: Actions
       create_page: "Create new page"
@@ -23,9 +23,9 @@ en:
 
   activerecord:
     models:
-      page: page
-      pages: pages
+      page: Page
+      pages: Pages
     attributes:
       page:
-        js: javascript
-        css: stylesheets
+        js: Javascript
+        css: Stylesheets

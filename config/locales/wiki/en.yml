@@ -1,18 +1,18 @@
 en:
   wiki:
     history:
-      title: "history ({{count}})"
-      previous_versions: previous versions
-      current_version: current version
-      version: version
-      version_summary: version summary
+      title: "History ({{count}})"
+      previous_versions: Previous versions
+      current_version: Current version
+      version: Version
+      version_summary: Version summary
     diff:
-      title: differences between {{prev}} and {{curr}}
+      title: Differences between {{prev}} and {{curr}}
     actions:
-      revert: revert to this version
-      show_diff: compare selected versions
-      all_history: back to history
-      back_to_question: back to question
+      revert: Revert to this version
+      show_diff: Compare selected versions
+      all_history: Back to history
+      back_to_question: Back to question
     model:
       attributes:
-        message: summary
+        message: Summary

@@ -1,45 +1,45 @@
 en:
   layouts:
     application:
-      title: "questions & answers"
-      questions: questions
-      questions_in: questions in
+      title: "Questions & Answers"
+      questions: Questions
+      questions_in: Questions in
       questions_tagged: tagged with
-      ask_question: ask question
-      tags: tags
-      users: users
-      badges: badges
-      unanswered: unanswered
-      pages: pages
-      logout: logout
-      logged: logged in as {{login}}
-      search: search
-      forgot: forgot?
-      log_in: login
-      signup: signup
-      settings: settings
-      languages: languages
-      moderate: moderate
-      manage_ads: manage ads
-      home: home
-      subscribe: subscribe
-      welcome_from: welcome! you can
+      ask_question: Ask question
+      tags: Tags
+      users: Users
+      badges: Badges
+      unanswered: Unanswered
+      pages: Pages
+      logout: Log out
+      logged: Logged in as {{login}}
+      search: Search
+      forgot: Forgot?
+      log_in: Login
+      signup: Sign up
+      settings: Settings
+      languages: Languages
+      moderate: Moderate
+      manage_ads: Manage ads
+      home: Home
+      subscribe: Subscribe
+      welcome_from: Welcome! You can
       now: now!
       openid:
-        explaination: "if you'd like to register or just log in, please select your openid provider:"
+        explaination: "If you'd like to register or just log in, please select your openid provider:"
     manage:
-      dashboard: dashboard
-      properties: properties
-      widgets: widgets
-      actions: actions
-      stats: stats
-      members: members
-      reputation: reputation
-      content: content
-      theme: theme
-      domain: domain
-      pages: pages
-      constrains: constrains
-      rewards: rewards
-      general: general
-      announcements: announcements
+      dashboard: Dashboard
+      properties: Properties
+      widgets: Widgets
+      actions: Actions
+      stats: Stats
+      members: Members
+      reputation: Reputation
+      content: Content
+      theme: Theme
+      domain: Domain
+      pages: Pages
+      constrains: Constrains
+      rewards: Rewards
+      general: General
+      announcements: Announcements

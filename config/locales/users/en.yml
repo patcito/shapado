@@ -1,84 +1,84 @@
 en:
   users:
     index:
-      title: all users
-      empty: "this group doesn't have any members, participate to join this group."
-      filter: "search for users"
-      reputation: reputation
-      newest: newest
-      oldest: oldest
-      name: name
-      reputation_tooltip: users sorted by higher reputation
-      newest_tooltip: users who just joined
-      oldest_tooltip: users who were the first to join
-      name_tooltip: users sorted alphabetically
+      title: All users
+      empty: "This group doesn't have any members, participate to join this group."
+      filter: "Search for users"
+      reputation: Reputation
+      newest: Newest
+      oldest: Oldest
+      name: Name
+      reputation_tooltip: Users sorted by higher reputation
+      newest_tooltip: Users who just joined
+      oldest_tooltip: Users who were the first to join
+      name_tooltip: Users sorted alphabetically
     new:
-      title: sign up as a new user
-      submit: sign up
+      title: Sign up as a new user
+      submit: Sign up
     edit:
-      title: settings
-      submit: save
+      title: Settings
+      submit: Save
       enable_twitter: Enable your facebook or twitter accounts
     show:
       title: "User {{user}}"
-      follow: follow
-      unfollow: unfollow
+      follow: Follow
+      unfollow: Unfollow
       views: views
     follow:
       flash_notice: "The user {{user}} was added to your friends"
     unfollow:
       flash_notice: "The user {{user}} was removed from your friends"
     form:
-      information: information
-      notifications: notifications
-      new_answer_notification: get mail notifications for new answers
-      give_advice_notification: receive email notifications about questions in your field of expertise
-      activities_notification: receive email notifications about system activities such as earned badges, new followers, etc.
-      reports_notification: receive a report with latest group activity (only for group admins)
-      avatar_tip: "change your profile image using gravatar"
+      information: Information
+      notifications: Notifications
+      new_answer_notification: Get mail notifications for new answers
+      give_advice_notification: Receive email notifications about questions in your field of expertise
+      activities_notification: Receive email notifications about system activities such as earned badges, new followers, etc.
+      reports_notification: Receive a report with latest group activity (only for group admins)
+      avatar_tip: "Change your profile image using gravatar"
     create:
-      flash_notice: "thanks for signing up!"
-      flash_error:  "we couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
+      flash_notice: "Thanks for signing up!"
+      flash_error:  "We couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
     messages:
       errors:
-        reputation_needed: "you need a reputation of {{min_reputation}} to {{action}}"
+        reputation_needed: "You need a reputation of {{min_reputation}} to {{action}}"
     actions:
-      vote_up: vote up
-      vote_down: vote down
-      flag: flag
-      edit_others_posts: "edit other's posts"
-      edit_wiki_post: "edit wiki posts"
-      retag_others_questions: "retag others questions"
-      vote_to_close_own_question: "request closing own question"
-      vote_to_close_any_question: "request closing any question"
+      vote_up: Vote up
+      vote_down: Vote down
+      flag: Flag
+      edit_others_posts: "Edit other's posts"
+      edit_wiki_post: "Edit wiki posts"
+      retag_others_questions: "Retag others questions"
+      vote_to_close_own_question: "Request closing own question"
+      vote_to_close_any_question: "Request closing any question"
   activerecord:
     models:
-      users: users
-      user: user
+      users: Users
+      user: User
     attributes:
       user:
-        login: username
-        email: email
-        name: real name
-        current_password: current password
-        password: password
-        password_confirmation: password confirmation
+        login: Username
+        email: Email
+        name: Real name
+        current_password: Current password
+        password: Password
+        password_confirmation: Password confirmation
         created_at: created at
         updated_at: updated at
-        activation_code: activation code
+        activation_code: Activation code
         activated_at: activated at
-        fullname: full name
-        language: language
+        fullname: Full name
+        language: Language
         asked_by: asked by
-        timezone: time zone
-        preferred_tags: preferred tags
-        preferred_languages: select the languages you know
+        timezone: Time zone
+        preferred_tags: Preferred tags
+        preferred_languages: Select the languages you know
         last_logged_at: seen
         created_at: joined
-        reputation: reputation
+        reputation: Reputation
         avatar: Profile image
         hide_country: Do not display my country
-        language_filter: filter by language
+        language_filter: Filter by language
         website: Website
         birthday: Birthday
         age: Age

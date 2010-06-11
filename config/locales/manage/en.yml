@@ -2,31 +2,31 @@ en:
   admin:
     manage:
       content:
-        title: custom content
-        question_prompt: question prompt
-        question_help: question help
+        title: Custom content
+        question_prompt: Question prompt
+        question_help: Question help
         head: header
-        footer: footer
-        top_bar: top bar
-        top_bar_tip: enter one link per line
+        footer: Footer
+        top_bar: Top bar
+        top_bar_tip: Enter one link per line
       properties:
         general:
-          title: group properties
+          title: Group properties
         share:
-          title: share
+          title: Share
         constrains:
-          title: constrains
-          reputation_constrains_subtitle: list of reputations constrains for each action
-          reputation_constrains_description: this formular allows you to configure how much reputation points users to be able to do a given action
+          title: Constrains
+          reputation_constrains_subtitle: List of reputations constrains for each action
+          reputation_constrains_description: This formular allows you to configure how much reputation points users to be able to do a given action
         rewards:
-          title: rewards
-          reputation_rewards_subtitle: list of reputations rewards
-          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+          title: Rewards
+          reputation_rewards_subtitle: List of reputations rewards
+          reputation_rewards_description: This formular allows you to configure how users can win and lose reputation points for a given action
         theme:
-          title: setup the group's theme
+          title: Set the group's theme
           logo_legend: Upload a logo for your group, it must be smaller than 2mb.
         domain:
-          title: setup your domain
+          title: Set your domain
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
           instruction1: "To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com)."
           instruction2: There you need to go to the DNS section and create something called a CNAME.

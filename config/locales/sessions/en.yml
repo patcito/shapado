@@ -1,18 +1,18 @@
 en:
   sessions:
     create:
-      flash_notice: "logged in successfully"
-      flash_error: "couldn't log you in as '{{login}}'"
+      flash_notice: "Logged in successfully"
+      flash_error: "Couldn't log you in as '{{login}}'"
     destroy:
-      flash_notice: "you have been logged out."
+      flash_notice: "You have been logged out."
     new:
-      with_openid: log in with openid
-      with_facebook: "sign in with facebook"
-      with_twitter: "sign in with twitter"
-      with_authentication: log in with our authentication system
-      registered: "already registered?"
-      not_registered: "not registered yet?"
-      log_in: login
-      signup: sign up
-      sign_in: sign in
-      remember_me: remember me
+      with_openid: Log in with openid
+      with_facebook: "Sign in with facebook"
+      with_twitter: "Sign in with twitter"
+      with_authentication: Log in with our authentication system
+      registered: "Already registered?"
+      not_registered: "Not registered yet?"
+      log_in: Login
+      signup: Sign up
+      sign_in: Sign in
+      remember_me: Remember me

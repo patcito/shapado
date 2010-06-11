@@ -1,10 +1,10 @@
 en:
   searches:
     index:
-      empty: "your search did not match any questions."
+      empty: "Your search did not match any questions."
       tags: within these tags
-      search_text: questions containing
+      search_text: Questions containing
     form:
-      clear: clear
+      clear: Clear
       search_box_title: "Check whether your question has already been asked"
-      tags_tip: use [tag] to specify tags.
+      tags_tip: Use [tag] to specify tags.

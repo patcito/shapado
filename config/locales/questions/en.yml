@@ -1,133 +1,133 @@
 en:
   questions:
     index:
-      title: all questions
-      hot:     hot
-      active:  active
-      votes:   votes
-      newest:  newest
-      oldest:  oldest
-      ask_question: ask question
-      empty: "no one has asked any questions yet, be the first!"
-      help_to_answer: help us answer
-      unanswered_questions: unanswered questions
-      hot_tooltip: questions with the most activity over the last 5 days
-      active_tooltip: questions that have been updated recently
-      votes_tooltip:  questions with the most votes
-      newest_tooltip: the most recently asked questions
+      title: All questions
+      hot:     Hot
+      active:  Active
+      votes:   Votes
+      newest:  Newest
+      oldest:  Oldest
+      ask_question: Ask question
+      empty: "No one has asked any questions yet, be the first!"
+      help_to_answer: Help us answer
+      unanswered_questions: Unanswered questions
+      hot_tooltip: Questions with the most activity over the last 5 days
+      active_tooltip: Questions that have been updated recently
+      votes_tooltip:  Questions with the most votes
+      newest_tooltip: The most recently asked questions
     show:
-      answers: answers
-      another_answers: other answers
-      solution: solution
-      share: "share this question on"
-      share_on: "share this question on {{site}}"
-      related_questions: related questions
-      flags: reported as
-      flag: flag
-      flagged_as: flagged as
+      answers: Answers
+      another_answers: Other answers
+      solution: Solution
+      share: "Share this question on"
+      share_on: "Share this question on {{site}}"
+      related_questions: Related questions
+      flags: Reported as
+      flag: Flag
+      flagged_as: Flagged as
       viewed: viewed
       to_answer_question: to answer this question
-      watch_tooltip: "watch this question"
-      accepted_tooltip: "one of the answers was accepted as the correct answer"
-      unwatch_tooltip: "stop watching this question"
-      favorite_tooltip: "add this question to your favorites"
-      unfavorite_tooltip: "remove this question from your favorites"
+      watch_tooltip: "Watch this question"
+      accepted_tooltip: "One of the answers was accepted as the correct answer"
+      unwatch_tooltip: "Stop watching this question"
+      favorite_tooltip: "Add this question to your favorites"
+      unfavorite_tooltip: "Remove this question from your favorites"
       asked_on: "asked on"
-      last_activity: last activity
-      retag: retag
-      unauthenticated_retag: you need an account to retag questions
-      request_closing: request closing
-      request_closing_details: request to close this question
-      close: close
-      ban: ban
-      retract_request: you have already made a request, would you line to retract it?
-      close_reason: "the question has been closed for the following reason:"
+      last_activity: Latest activity
+      retag: Retag
+      unauthenticated_retag: You need an account to retag questions
+      request_closing: Request closing
+      request_closing_details: Request to close this question
+      close: Close
+      ban: Ban
+      retract_request: You have already made a request, would you line to retract it?
+      close_reason: "The question has been closed for the following reason:"
       answers_title:
         one: "{{count}} answer"
         other: "{{count}} answers"
     retag:
-      title: retag
+      title: Retag
     answer:
-      pick_answer: pick as solution
-      unset_answer: unset as solution?
-      flag: flag
-      add_comment: add comment...
+      pick_answer: Pick as solution
+      unset_answer: Unset solution?
+      flag: Flag
+      add_comment: Add comment...
     question:
       accepted_tooltip: This question has an answer that has been accepted
     form:
-      body_tip: what's your question? be descriptive.
-      language_tip: select the language's question.
-      tags_tip:  use tags to add more information about your question.
-      adult_content: this question contains adult material.
+      body_tip: What's your question? be descriptive.
+      language_tip: Select the language's question.
+      tags_tip:  Use tags to add more information about your question.
+      adult_content: This question contains adult material.
     flag:
-      title:   flag question
+      title:   Flag question
     edit:
-      title: editing question
+      title: Editing question
     unanswered:
-      title: unanswered questions
-      tags: unanswered tags
-      empty: "this group doesn't have any unanswered questions."
-      my_tags: my tags
-      expert: experts
+      title: Unanswered questions
+      tags: Unanswered tags
+      empty: "This group doesn't have any unanswered questions."
+      my_tags: My tags
+      expert: Experts
     tags:
-      title: tags
-      tooltip: show questions tagged {{tag}}
-      filter: search for tags
+      title: Tags
+      tooltip: Show questions tagged {{tag}}
+      filter: Search for tags
     new:
-      title: ask question
-      how_to_ask: how to ask
+      title: Ask question
+      how_to_ask: How to ask
     create:
-      flash_notice: "question was successfully created."
+      flash_notice: "The question was successfully created."
     update:
-      flash_notice: "question was successfully updated."
+      flash_notice: "The question was successfully updated."
     solve:
-      flash_notice: "question was solved."
+      flash_notice: "The question was solved."
     unsolve:
-      flash_notice: "question now is not solved."
+      flash_notice: "The question is not solved anymore."
     watch:
-      success:      "you will now receive notifications by mail for every new answer to this question"
+      success:      "You will now receive notifications by mail for every new answer to this question"
     unwatch:
-      success:      "you will not receive notifications by mail for every new answer to this question anymore"
+      success:      "You will not receive notifications by mail for every new answer to this question anymore"
     revert:
-      title: "revert question"
+      title: "Revert question"
     move:
-      title:        "move question: {{title}}"
-      group_label:  "move to the group with slug:"
-      submit:       "move!"
+      title:        "Move question: {{title}}"
+      group_label:  "Move to the group with slug:"
+      submit:       "Move!"
     move_to:
-      success:      "question moved to {{group}}"
-      group_dont_exists: "the group {{group}} doesn't exist"
+      success:      "Question moved to {{group}}"
+      group_dont_exists: "The group {{group}} doesn't exist"
     shared:
-      flag: flag
+      flag: Flag
     retag_form:
       title:  "Update tags"
-      submit: "update tags!"
-      cancel: "cancel"
+      submit: "Update tags!"
+      cancel: "Cancel"
     retag_to:
       success: "The tags have been updated successfully."
       failure: "Sorry, the tags could not be updated."
     model:
       messages:
-        too_short: "seems too short. Please use more words than {{count}} to be more specific."
+        too_short: "Seems too short. Please use more words than {{count}} to be more specific."
         too_many_tags: Sorry, you can only enter 9 tags maximum.
         empty_tags: Sorry, you need to use at least one tag.
         title_too_long: "The title is too long. it should not contain more than 100 characters"
 
   activerecord:
     models:
-      questions: questions
-      question: question
+      questions: Questions
+      question: Question
     attributes:
       question:
-        title: title
-        body: body
-        tags: tags
-        asked_by: asked by
-        answers: answers
-        views: views
-        votes: votes
-        language: language
-        created_at: asked
+        title: Title
+        body: Body
+        tags: Tags
+        asked_by: Asked by
+        answers: Answers
+        views: Views
+        votes: Votes
+        language: Language
+        created_at: Asked
         updated_at: updated
         updated_by: updated by
-        closed: closed
+        closed: Closed

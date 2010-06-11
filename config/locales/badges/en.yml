@@ -2,10 +2,10 @@ en:
   badges:
     index:
       title: badges
-      description: "all badges that you can earn. share your knowledge earn badges."
+      description: "All badges that you can earn. share your knowledge earn badges."
     show:
-      title: badge {{type}}
-      description: "users who earned this badge. recently awarded to:"
+      title: Badge {{type}}
+      description: "Users who earned this badge. recently awarded to:"
       for_tag_bronze: 200 votes in tag {{tag}}
       for_tag_silver: 400 votes in tag {{tag}}
       for_tag_gold: 1000 votes in tag {{tag}}
@@ -16,113 +16,113 @@ en:
       popstar:
         description: 500 positive votes, 10 negative votes maximum
       fanatic:
-        description: visited the site each day for 100 consecutive days
+        description: Visited the site each day for 100 consecutive days
       service_medal:
         description: 300 positive votes
       famous_question:
-        description: asked a question with 10000 views
+        description: Asked a question with 10000 views
       notable_question:
-        description: asked a question with 2500 views
+        description: Asked a question with 2500 views
       popular_question:
-        description: asked a question with 1000 views
+        description: Asked a question with 1000 views
       popular_person:
-        description: your profile is visited 10000 times
+        description: Your profile is visited 10000 times
       guru:
-        description: give a solution to a question with an average of  more than 40 votes
+        description: Gave a solution to a question with an average of  more than 40 votes
       favorite_question:
-        description: question favorited by 25 users
+        description: Question favorited by 25 users
       tutor:
-        description: give a solution to a question with an average of more than 2 votes
+        description: Gave a solution to a question with an average of more than 2 votes
       addict:
-        description: visited the site each day for 20 consecutive days
+        description: Visited the site each day for 20 consecutive days
       good_question:
-        description: having a question that reaches an average of more than 25 votes
+        description: Having a question that reaches an average of more than 25 votes
       good_answer:
-        description: having an answer that reaches an average of more than 25 votes
+        description: Having an answer that reaches an average of more than 25 votes
       pioneer:
-        description: be one of the first user to register
+        description: Be one of the first user to register
       supporter:
-        description: vote positively for the first time
+        description: Voted positively for the first time
       critic:
-        description: vote negatively for the first time
+        description: Voted negatively for the first time
       inquirer:
-        description: ask for the first time
+        description: Asked for the first time
       troubleshooter:
-        description: answer for the first time
+        description: Answered for the first time
       commentator:
-        description: left 10 comments
+        description: Left 10 comments
       merit_medal:
-        description: get 200 positive votes
+        description: Got 200 positive votes
       effort_medal:
-        description: get 100 positive votes
+        description: Got 100 positive votes
       student:
-        description: asked first question with at least one up vote
+        description: Asked first question with at least one up vote
       shapado:
-        description: visited the site each day for 8 consecutive days
+        description: Visited the site each day for 8 consecutive days
       editor:
-        description: first edited post
+        description: First edited post
       friendly:
-        name: friendly
-        description: following someone for the first time
+        name: Friendly
+        description: Following someone for the first time
       interesting_person:
-        name: interesting person
-        description: getting more than 10 followers
+        name: Interesting person
+        description: Getting more than 10 followers
       popular_person:
-        name: popular person
-        description: getting more than 50 followers
+        name: Popular person
+        description: Getting more than 50 followers
       celebrity:
-        name: celebrity
-        description: getting more than 100 followers
+        name: Celebrity
+        description: Getting more than 100 followers
       necromancer:
-        name: necromancer
-        description: answered a question more than 60 days later with at least 5 votes
+        name: Necromancer
+        description: Answered a question more than 60 days later with at least 5 votes
       stellar_question:
-        name: stellar question
-        description: question favorited by 100 users
+        name: Stellar question
+        description: Question added to favorites by 100 users
       nice_question:
-        name: nice question
-        description: question voted up 10 times
+        name: Nice question
+        description: Question voted up 10 times
       nice_answer:
-        name: nice answer
-        description: answer voted up 10 times
+        name: Nice answer
+        description: Answer voted up 10 times
       great_question:
-        name: great question
-        description: question voted up 100 times
+        name: Great question
+        description: Question voted up 100 times
       great_answer:
-        name: great answer
-        description: answer voted up 100 times
+        name: Great answer
+        description: Answer voted up 100 times
       peer_pressure:
-        name: peer pressure
-        description: deleted own post with score of -3 or lower
+        name: Peer pressure
+        description: Deleted own post with score of -3 or lower
       enlightened:
-        name: enlightened
-        description: first answer was accepted with at least 10 up votes
+        name: Enlightened
+        description: First answer was accepted with at least 10 up votes
       disciplined:
-        name: disciplined
-        description: deleted own post with score of 3 or higher
+        name: Disciplined
+        description: Deleted own post with score of 3 or higher
       cleanup:
-        name: cleanup
-        description: first rollback
+        name: Cleanup
+        description: First rollback
       civic_duty:
-        name: civic duty
-        description: voted 300 times
+        name: Civic duty
+        description: Voted 300 times
       citizen_patrol:
-        name: citizen patrol
-        description: first flagged post
+        name: Citizen patrol
+        description: First flagged post
       self-learner:
-        name: self learner
-        description: answered your own question with at least 3 up votes
+        name: Self learner
+        description: Answered your own question with at least 3 up votes
       scholar:
-        name: scholar
-        description: first accepted answer on your own question
+        name: Scholar
+        description: First accepted answer on your own question
       autobiographer:
-        name: autobiographer
-        description: completed all user profile fields
+        name: Autobiographer
+        description: Completed all user profile fields
       organizer:
-        name: organizer
-        description: first retag
+        name: Organizer
+        description: First retag
 
   activerecord:
     models:
-      badge: badge
-      badges: badges
+      badge: Badge
+      badges: Badges

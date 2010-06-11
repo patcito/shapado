@@ -1,27 +1,27 @@
 en:
   scaffold:
-    sure: are you sure you want to delete this {{model}} ?
-    show: show
-    edit: edit
-    destroy: delete
-    back: back
-    update: update
-    cancel: cancel
-    close: close
-    create: create
-    new: add new {{model}}
-    more: "more ..."
-    add: add
-    send: send
-    save: save
-    details: details
+    sure: Are you sure you want to delete this {{model}} ?
+    show: Show
+    edit: Edit
+    destroy: Delete
+    back: Back
+    update: Update
+    cancel: Cancel
+    close: Close
+    create: Create
+    new: Add new {{model}}
+    more: "More ..."
+    add: Add
+    send: Send
+    save: Save
+    details: Details
   time:
     today: today
     ago: "{{time}} ago"
   messages:
     success: "{{model}} was successfully {{action}}."
   models:
-    question:   the question
+    question:   The question
   actions:
     created:     created
     deleted:     deleted
@@ -29,22 +29,22 @@ en:
     closed:      closed
   global:
     from: "from {{site}}"
-    permission_denied: permission denied
-    please_login: please log in
-    group_not_found: "the page {{url}} doesn't exist"
-    preview: preview
+    permission_denied: Permission denied
+    please_login: Please log in
+    group_not_found: "The page {{url}} doesn't exist"
+    preview: Preview
     or: or
     by: by
-    current: current
-    previous: previous
+    current: Current
+    previous: Previous
     share: share
   feeds:
-    question: subscribe to this question
-    questions: subscribe to all questions
-    tag: subscribe to tag
-    user: subscribe to user questions
+    question: Subscribe to this question
+    questions: Subscribe to all questions
+    tag: Subscribe to tag
+    user: Subscribe to user questions
     feed: Feed
-    post_new_questions: post new questions to
+    post_new_questions: Post new questions to
     share_on_twitter: "twitter, facebook and more..."
   languages:
     el:      Greek
@@ -59,6 +59,6 @@ en:
     user:    My Preferred Languages
   number:
     x_time:
-      zero: "never"
+      zero: "Never"
       one: "{{count}} time"
       other: "{{count}} times"
