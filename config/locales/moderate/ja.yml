@@ -1,12 +1,15 @@
-ja:
-  admin:
-    moderate:
-      index:
-        title: "モデレート"
-        ban: "弾く"
-        content: "内容"
-        item_title: "タイトル"
-        all: "全て"
-        flagged: "報告されている質問"
-        banned: "弾かれた質問"
-        need_tags: "タグの編集"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  admin: 
+    moderate: 
+      index: 
+        all: 全て
+        ban: 弾く
+        banned: 弾かれた質問
+        content: 内容
+        flagged: 報告されている質問
+        item_title: タイトル
+        need_tags: タグの編集
+        title: モデレート

@@ -1,21 +1,23 @@
-el:
-  mailers:
-    notifications:
-      new_answer:
-        subject_owner: "ο/η {{login}} απάντησε στην ερώτησή σας {{title}}"
-        subject_friend: "ο/η φίλος/η σας {{login}} απάντησε στην ερώτηση {{title}}"
-        subject_other: "ο/η {{login}} απάντησε στην ερώτηση {{title}}"
-      new_comment:
-        subject: "ο/η {{login}} σχολίασε στο {{group}}"
-      give_advice:
-        subject: "χρειαζόμαστε τη συμβουλή σας: {{question_title}}"
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: έχετε κερδίσει ένα τίτλο στο {{group}}!
+      favorited: 
+        subject: ο/η {{login}} προσέθεσε την ερώτησή σας στις αγαπημένες του!
+      follow: 
+        subject: ο/η {{login}} σας ακολουθεί τώρα στο {{app}}
+      give_advice: 
         friend_subject: "ο φίλος σας χρειάζεται βοήθεια: {{question_title}}"
-      follow:
-        subject: "ο/η {{login}} σας ακολουθεί τώρα στο {{app}}"
-      earned_badge:
-        subject: "έχετε κερδίσει ένα τίτλο στο {{group}}!"
-      favorited:
-        subject: "ο/η {{login}} προσέθεσε την ερώτησή σας στις αγαπημένες του!"
-      report:
-        subject: "αναφορά για την ομάδα {{group}} του {{app}}"
-
+        subject: "χρειαζόμαστε τη συμβουλή σας: {{question_title}}"
+      new_answer: 
+        subject_friend: ο/η φίλος/η σας {{login}} απάντησε στην ερώτηση {{title}}
+        subject_other: ο/η {{login}} απάντησε στην ερώτηση {{title}}
+        subject_owner: ο/η {{login}} απάντησε στην ερώτησή σας {{title}}
+      new_comment: 
+        subject: ο/η {{login}} σχολίασε στο {{group}}
+      report: 
+        subject: αναφορά για την ομάδα {{group}} του {{app}}

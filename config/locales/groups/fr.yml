@@ -32,11 +32,19 @@ fr:
       flash_notice: Votre groupe a été créé avec succès, vous pouvez maintenant commencer à le configurer.
     form: 
       access: Configuration de l'accès
+      analytics_engine: Moteur d’analyse
+      analytics_legend: Le groupe pourra utiliser son propre code de suivi
       any_language: n'importe qu'elle
+      custom_analytics: Autoriser l’analyse personnalisée
+      custom_html: Autoriser le HTML personnalisé
+      custom_js: Autoriser le Javascript personnalisé
       default_tags_legend: séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés.
       description_legend: vous avez 400 caractères pour décrire le groupe.
+      isolate_group: Isoler le groupe des autres groupes
       legend_legend: ceci sera utilisé dans l'entête, vous disposez de 40 caractères
       logo_legend: vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb.
+      members_only: Seuls les membres du groupe pourront accéder à ce groupe
+      website_analytics_id: Identifiant d’analyse du site web
     group: 
       about: À propos
       accept_group: accepter ce groupe

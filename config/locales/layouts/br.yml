@@ -6,45 +6,45 @@
 br: 
   layouts: 
     application: 
-      ask_question: goulenn un dra bennak
-      badges: badjoù
-      forgot: disoñjet ?
-      home: degemer
-      languages: yezhoù
-      log_in: kevreañ
-      logged: kevreet evel {{login}}
-      logout: digevreañ
-      manage_ads: merañ ar bruderezh
-      moderate: habaskaat
+      ask_question: Goulenn un dra bennak
+      badges: Badjoù
+      forgot: Disoñjet ?
+      home: Degemer
+      languages: Yezhoù
+      log_in: Kevreañ
+      logged: Kevreet evel {{login}}
+      logout: Digevreañ
+      manage_ads: Merañ ar bruderezh
+      moderate: Habaskaat
       now: bremañ !
       openid: 
-        explaination: "mar fell deoc'h en em enskrivañ pe kevreañ traken, dibabit ur pourvezer openid :"
-      pages: pajennoù
-      questions: goulennoù
-      questions_in: goulennoù e
+        explaination: "Mar fell deoc'h en em enskrivañ pe kevreañ traken, dibabit ur pourvezer openid :"
+      pages: Pajennoù
+      questions: Goulennoù
+      questions_in: Goulennoù e
       questions_tagged: tikedennet gant
-      search: klask
-      settings: arventennoù
-      signup: en em enskrivañ
-      subscribe: en em enskrivañ
-      tags: balizennoù
-      title: goulennoù & respontoù
-      unanswered: direspont
-      users: implijerien
-      welcome_from: degemer mat ! Gouest oc'h
+      search: Klask
+      settings: Arventennoù
+      signup: En em enskrivañ
+      subscribe: En em enskrivañ
+      tags: Balizennoù
+      title: Goulennoù & Respontoù
+      unanswered: Direspontet
+      users: Implijerien
+      welcome_from: Degemer mat ! Gouest oc'h
     manage: 
-      actions: oberoù
-      announcements: kemennoù
-      constrains: strishadurioù
-      content: danvez
+      actions: Oberoù
+      announcements: Kemennoù
+      constrains: Strishadurioù
+      content: Danvez
       dashboard: dashboard
-      domain: domani
-      general: dre-vras
-      members: izili
-      pages: pajennoù
-      properties: perzhioù
-      reputation: brud
-      rewards: prizioù
-      stats: stadegoù
-      theme: tem
-      widgets: bitrakoù
+      domain: Domani
+      general: Dre-vras
+      members: Izili
+      pages: Pajennoù
+      properties: Perzhioù
+      reputation: Brud
+      rewards: Prizioù
+      stats: Stadegoù
+      theme: Tem
+      widgets: Bitrakoù

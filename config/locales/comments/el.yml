@@ -1,16 +1,19 @@
-el:
-  comments:
-    edit:
-      title: επεξεργασία σχόλιου
-    create:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  comments: 
+    create: 
       flash_notice: ευχαριστούμε για το σχόλιό σας
-    update:
-      flash_notice: "το σχόλιο ενημερώθηκε επιτυχώς."
-    shared:
-      add_comment: "προσθήκη σχόλιου..."
-      comment_submit: "σχολιασμός"
-      said: είπε
+    edit: 
+      title: επεξεργασία σχόλιου
+    shared: 
+      add_comment: προσθήκη σχόλιου...
+      comment_submit: σχολιασμός
       reply: απάντησε
-  models:
-    comments: σχόλια
+      said: είπε
+    update: 
+      flash_notice: το σχόλιο ενημερώθηκε επιτυχώς.
+  models: 
     comment: σχόλιο
+    comments: σχόλια

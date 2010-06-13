@@ -1,12 +1,14 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 es-AR: 
   activerecord: 
     attributes: 
       user: 
         activated_at: activado en
         activation_code: código de activación
+        age: Edad
         asked_by: asked by
         avatar: imagen del perfil
         birthday: Fecha de Cumpleaños
@@ -80,5 +82,6 @@ es-AR:
       follow: seguir
       title: Usuario {{user}}
       unfollow: dejar de seguir
+      views: vistas
     unfollow: 
       flash_notice: El usuario {{user}} fue removido de su lista de amigos

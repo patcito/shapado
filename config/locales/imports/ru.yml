@@ -1,10 +1,11 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Lockal
 # Author: Александр Сигачёв
 ru: 
   imports: 
     subtabs: 
       need_confirmation: 
-        name: необходимо подтверждение
-        title: отправка подтверждающего письма
+        name: Необходимо подтверждение
+        title: Отправка подтверждающего письма

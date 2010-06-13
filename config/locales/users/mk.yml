@@ -8,6 +8,7 @@ mk:
       user: 
         activated_at: активирано во
         activation_code: активационен код
+        age: Возраст
         asked_by: побарано од
         avatar: Слика за профилот
         birthday: Роденден
@@ -81,5 +82,6 @@ mk:
       follow: следи
       title: Корисник {{user}}
       unfollow: повеќе не следи
+      views: прегледи
     unfollow: 
       flash_notice: Корисникот {{user}} е отстранет од вашите пријатели

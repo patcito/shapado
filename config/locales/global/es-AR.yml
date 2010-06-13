@@ -28,10 +28,12 @@ es-AR:
     share: compartir
   languages: 
     any: cualquiera
+    el: griego
     en: inglés
     es: español
     es-AR: español latino
     fr: francés
+    ja: japonés
     pt: portugués
     pt-PT: portugués
     user: idiomas que conozco

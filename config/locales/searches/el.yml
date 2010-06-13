@@ -1,10 +1,13 @@
-el:
-  searches:
-    index:
-      empty: "η αναζήτησή σας δεν επέστρεψε ερωτήσεις."
-      tags: σε αυτές τις ετικέτες
-      search_text: ερωτήσεις που περιέχουν
-    form:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  searches: 
+    form: 
       clear: καθαρισμός
-      search_box_title: "ελέγξτε αν η ερώτησή σας έχει ερωτηθεί ήδη"
+      search_box_title: ελέγξτε αν η ερώτησή σας έχει ερωτηθεί ήδη
       tags_tip: χρησιμοποιήστε [ετικέτα] για να ορίσετε ετικέτες.
+    index: 
+      empty: η αναζήτησή σας δεν επέστρεψε ερωτήσεις.
+      search_text: ερωτήσεις που περιέχουν
+      tags: σε αυτές τις ετικέτες

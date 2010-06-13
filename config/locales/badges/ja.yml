@@ -1,153 +1,128 @@
-ja:
-  badges:
-    index:
-      title: "バッジ"
-      description: "あなたが得られるバッジの全てです。知識を共有することでバッジが手に出来ます！"
-    show:
-      title: "バッジ {{type}}"
-      description: "このバッジを持っているユーザ。最後にバッジを得たユーザ："
-      for_tag_bronze: "タグ{{tag}}に200の投票"
-      for_tag_silver: "タグ{{tag}}に400の投票"
-      for_tag_gold: "タグ{{tag}}に1,000の投票"
-      earned: "取得"
-    shared:
-      rockstar:
-        name: "ロックスター"
-        description: "1,000のプラス投票と最大10の反対票"
-      popstar:
-        name: "ポップスター"
-        description: "500のプラス投票と最大10の反対票"
-      fanatic:
-        name: "ジャンキー"
-        description: "100日間連続でサイトに訪問する"
-      service_medal:
-        name: "名誉勲章"
-        description: "300のプラス投票"
-      famous_question:
-        name: "有名な質問"
-        description: "質問に10,000アクセスあったら"
-      notable_question:
-        name: "注目の質問"
-        description: "質問に2,500アクセスあったら"
-      popular_question:
-        name: "良く見られる質問"
-        description: "質問に1,000アクセスあったら"
-      popular_person:
-        name: "中心人物"
-        description: "あなたのプロフィールに10,000アクセスあったら"
-      guru:
-        name: "グル"
-        description: "質問への回答に平均40以上の投票があったら"
-      favorite_question:
-        name: "気になる質問"
-        description: "質問が25ユーザにお気に入り登録されたら"
-      tutor:
-        name: "家庭教師"
-        description: "質問への回答が平均2以上の投票があったら"
-      addict:
-        name: "皆勤賞"
-        description: "20日連続でサイトに訪問する"
-      good_question:
-        name: "上級質問者"
-        description: "質問への平均投票が25以上になっている"
-      good_answer:
-        name: "良回答者"
-        description: "回答への平均投票が25以上になっている"
-      pioneer:
-        name: "パイオニア"
-        description: "サイトのユーザ登録者"
-      supporter:
-        name: "サポーター"
-        description: "最初の投票者"
-      critic:
-        name: "評論家"
-        description: "最初の負の投票者"
-      inquirer:
-        name: "質問者"
-        description: "最初に質問した人"
-      troubleshooter:
-        name: "トラブルシューター"
-        description: "最初に回答した人"
-      commentator:
-        name: "コメンテーター"
-        description: "10コメントを越えた時"
-      merit_medal:
-        name: "メリット勲章"
-        description: "200以上のプラス投票を受け取ったら"
-      effort_medal:
-        name: "努力家"
-        description: "100以上のプラス投票を受け取ったら"
-      student:
-        name: "学生"
-        description: "1つの投票で最初に聞いた"
-      shapado:
-        name: "皆勤賞"
-        description: "8日連続でサイトに訪問する"
-      editor:
-        name: "エディター"
-        description: "最初にポストを編集した"
-      friendly:
-        name: "フレンドリー"
-        description: "最初に誰かをフォローした"
-      interesting_person:
-        name: "人気者"
-        description: "10人以上のフォロワーがいる"
-      popular_person:
-        name: "有名人"
-        description: "50人以上のフォロワーがいる"
-      celebrity:
-        name: "偉人"
-        description: "100人以上のフォロワーがいる"
-      necromancer:
-        name: "降霊術"
-        description: "60日以上5投票の質問に答えた"
-      stellar_question:
-        name: "素晴らしい質問"
-        description: "質問が100人にお気に入り登録された"
-      nice_question:
-        name: "良い質問"
-        description: "質問が10のプラス投票を得た"
-      nice_answer:
-        name: "良い答え"
-        description: "回答が10のプラス投票を得た"
-      great_question:
-        name: "凄い質問"
-        description: "質問が100のプラス投票を得た"
-      great_answer:
-        name: "凄い答え"
-        description: "回答が100のプラス投票を得た"
-      peer_pressure:
-        name: "内部圧力"
-        description: "自分のポストが-3以下のスコアで削除された"
-      enlightened:
-        name: "賢者"
-        description: "最初の答えが10以上のプラス投票を得たら"
-      disciplined:
-        name: "懲戒処分"
-        description: "自分のポストが3以上のスコアで削除された"
-      cleanup:
-        name: "掃除屋"
-        description: "最初に差し戻したら"
-      civic_duty:
-        name: "名誉市民"
-        description: "300回以上投票"
-      citizen_patrol:
-        name: "パトロール"
-        description: "最初に報告されたポスト"
-      self-learner:
-        name: "自己学習"
-        description: "自分の質問に自分で答える（3回以下の投票）"
-      scholar:
-        name: "学者"
-        description: "自分の質問に最初に受け入れられた回答"
-      autobiographer:
-        name: "アピール"
-        description: "プロフィールの全ての項目を入力"
-      organizer:
-        name: "主催者"
-        description: "最初にタグ編集したら"
-
-  activerecord:
-    models:
-      badge: "バッジ"
-      badges: "バッジ"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    models: 
+      badge: バッジ
+      badges: バッジ
+  badges: 
+    index: 
+      description: あなたが得られるバッジの全てです。知識を共有することでバッジが手に出来ます！
+      title: バッジ
+    shared: 
+      addict: 
+        description: 20日連続でサイトに訪問する
+      autobiographer: 
+        description: プロフィールの全ての項目を入力
+        name: アピール
+      celebrity: 
+        description: 100人以上のフォロワーがいる
+        name: 偉人
+      citizen_patrol: 
+        description: 最初に報告されたポスト
+        name: パトロール
+      civic_duty: 
+        description: 300回以上投票
+        name: 名誉市民
+      cleanup: 
+        description: 最初に差し戻したら
+        name: 掃除屋
+      commentator: 
+        description: 10コメントを越えた時
+      critic: 
+        description: 最初の負の投票者
+      disciplined: 
+        description: 自分のポストが3以上のスコアで削除された
+        name: 懲戒処分
+      editor: 
+        description: 最初にポストを編集した
+      effort_medal: 
+        description: 100以上のプラス投票を受け取ったら
+      enlightened: 
+        description: 最初の答えが10以上のプラス投票を得たら
+        name: 賢者
+      famous_question: 
+        description: 質問に10,000アクセスあったら
+      fanatic: 
+        description: 100日間連続でサイトに訪問する
+      favorite_question: 
+        description: 質問が25ユーザにお気に入り登録されたら
+      friendly: 
+        description: 最初に誰かをフォローした
+        name: フレンドリー
+      good_answer: 
+        description: 回答への平均投票が25以上になっている
+      good_question: 
+        description: 質問への平均投票が25以上になっている
+      great_answer: 
+        description: 回答が100のプラス投票を得た
+        name: 凄い答え
+      great_question: 
+        description: 質問が100のプラス投票を得た
+        name: 凄い質問
+      guru: 
+        description: 質問への回答に平均40以上の投票があったら
+      inquirer: 
+        description: 最初に質問した人
+      interesting_person: 
+        description: 10人以上のフォロワーがいる
+        name: 人気者
+      merit_medal: 
+        description: 200以上のプラス投票を受け取ったら
+      necromancer: 
+        description: 60日以上5投票の質問に答えた
+        name: 降霊術
+      nice_answer: 
+        description: 回答が10のプラス投票を得た
+        name: 良い答え
+      nice_question: 
+        description: 質問が10のプラス投票を得た
+        name: 良い質問
+      notable_question: 
+        description: 質問に2,500アクセスあったら
+      organizer: 
+        description: 最初にタグ編集したら
+        name: 主催者
+      peer_pressure: 
+        description: 自分のポストが-3以下のスコアで削除された
+        name: 内部圧力
+      pioneer: 
+        description: サイトのユーザ登録者
+      popstar: 
+        description: 500のプラス投票と最大10の反対票
+      popular_person: 
+        description: 50人以上のフォロワーがいる
+        name: 有名人
+      popular_question: 
+        description: 質問に1,000アクセスあったら
+      rockstar: 
+        description: 1,000のプラス投票と最大10の反対票
+      scholar: 
+        description: 自分の質問に最初に受け入れられた回答
+        name: 学者
+      self-learner: 
+        description: 自分の質問に自分で答える（3回以下の投票）
+        name: 自己学習
+      service_medal: 
+        description: 300のプラス投票
+      shapado: 
+        description: 8日連続でサイトに訪問する
+      stellar_question: 
+        description: 質問が100人にお気に入り登録された
+        name: 素晴らしい質問
+      student: 
+        description: 1つの投票で最初に聞いた
+      supporter: 
+        description: 最初の投票者
+      troubleshooter: 
+        description: 最初に回答した人
+      tutor: 
+        description: 質問への回答が平均2以上の投票があったら
+    show: 
+      description: このバッジを持っているユーザ。最後にバッジを得たユーザ：
+      earned: 取得
+      for_tag_bronze: タグ{{tag}}に200の投票
+      for_tag_gold: タグ{{tag}}に1,000の投票
+      for_tag_silver: タグ{{tag}}に400の投票
+      title: バッジ {{type}}

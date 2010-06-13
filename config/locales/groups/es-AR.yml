@@ -32,11 +32,17 @@ es-AR:
       flash_notice: Tu grupo ah sido creado exitosamente, ahora puedes empezar a configurarlo.
     form: 
       access: Configuración de Acceso
+      analytics_engine: Motor de análisis
       any_language: cualquiera
+      custom_analytics: Permitir análisis personalizados
+      custom_html: Permitir HTML personalizado
+      custom_js: Permitir javascript personalizado
       default_tags_legend: separate tags by commas. only 10 default tags allowed.
       description_legend: tiene 4000 caracteres para describir el grupo.
       legend_legend: esto será usado en el titulo de la web, tienes 40 caracteres
       logo_legend: you can upload the group logo. the maximum file size is 2mb.
+      members_only: Solamente los miembros del grupo serán capaces de acceder a este grupo
+      website_analytics_id: ID de análisis de sitio web
     group: 
       about: acerca de
       accept_group: aceptar este grupo

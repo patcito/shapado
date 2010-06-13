@@ -1,18 +1,21 @@
-el:
-  sessions:
-    create:
-      flash_notice: "συνδεθήκατε επιτυχώς"
-      flash_error: "δεν μπορέσαμε να σας συνδέσουμε ως '{{login}}'"
-    destroy:
-      flash_notice: "έχετε αποσυνδεθεί."
-    new:
-      with_openid: συνδεθείτε με OpenId
-      with_facebook: "συνδεθείτε με το facebook"
-      with_twitter: "συνδεθείτε με το twitter"
-      with_authentication: συνδεθείτε με το δικό μας σύστημα πιστοποίησης
-      registered: "ήδη εγγεγραμμένος/η;"
-      not_registered: "δεν έχετε εγγραφεί ακόμα;"
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  sessions: 
+    create: 
+      flash_error: δεν μπορέσαμε να σας συνδέσουμε ως '{{login}}'
+      flash_notice: συνδεθήκατε επιτυχώς
+    destroy: 
+      flash_notice: έχετε αποσυνδεθεί.
+    new: 
       log_in: σύνδεση
-      signup: εγγραφή
-      sign_in: σύνδεση
+      not_registered: δεν έχετε εγγραφεί ακόμα;
+      registered: ήδη εγγεγραμμένος/η;
       remember_me: remember me
+      sign_in: σύνδεση
+      signup: εγγραφή
+      with_authentication: συνδεθείτε με το δικό μας σύστημα πιστοποίησης
+      with_facebook: συνδεθείτε με το facebook
+      with_openid: συνδεθείτε με OpenId
+      with_twitter: συνδεθείτε με το twitter

@@ -1,16 +1,19 @@
-ja:
-  comments:
-    edit:
-      title: "コメントの編集"
-    create:
-      flash_notice: "コメントありがとうございます"
-    update:
-      flash_notice: "コメントは更新されました"
-    shared:
-      add_comment: "コメントする"
-      comment_submit: "コメントする"
-      said: "のコメント"
-      reply: "返信"
-  models:
-    comments: "コメント"
-    comment: "コメント"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  comments: 
+    create: 
+      flash_notice: コメントありがとうございます
+    edit: 
+      title: コメントの編集
+    shared: 
+      add_comment: コメントする
+      comment_submit: コメントする
+      reply: 返信
+      said: のコメント
+    update: 
+      flash_notice: コメントは更新されました
+  models: 
+    comment: コメント
+    comments: コメント

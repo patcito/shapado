@@ -1,66 +1,67 @@
-ja:
-  scaffold:
-    sure: "本当に{{model}}を削除しますか？"
-    show: "表示"
-    edit: "編集"
-    destroy: "削除"
-    back: "戻る"
-    update: "更新"
-    cancel: "キャンセル"
-    close: "閉じる"
-    create: "作成"
-    new: "{{model}}を追加"
-    more: " もっと見る"
-    add: "追加"
-    send: "送信"
-    save: "保存"
-    details: "詳細"
-  time:
-    today: "今日"
-    ago: "{{time}}前"
-  sign_in: "ユーザ登録"
-
-  messages:
-    success: "{{model}}は{{action}}されました"
-  models:
-    question:   "質問"
-  actions:
-    created:     "作成"
-    deleted:     "削除"
-    updated:     "更新"
-    closed:      "終了"
-  global:
-    from: "{{site}}から"
-    permission_denied: "権限がありません"
-    please_login: "ログインしてください"
-    group_not_found: "このページ{{url}}はありません"
-    preview: "プレビュー"
-    or: "または"
-    by: "によって"
-    current: "現在"
-    previous: "前"
-    share: share
-  feeds:
-    question: "この質問をフィードで購読する"
-    questions: "全ての質問をフィードで購読する"
-    tag: "このタグの質問をフィードで購読する"
-    user: "このユーザの質問をフィードで購読する"
-    feed: "フィード"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  actions: 
+    closed: 終了
+    created: 作成
+    deleted: 削除
+    updated: 更新
+  feeds: 
+    feed: フィード
     post_new_questions: post new questions to
-    share_on_twitter: "twitter, facebook and more..."
-  languages:
-    el:      "Greek"
-    en:      "英語"
-    es:      "スペイン語"
-    es-AR:   "スペイン語（米）"
-    fr:      "フランス語"
-    pt:      "ポルトガル語"
-    pt-PT:   "ポルトガル語"
-    any:     "選択しない"
-    ja:      "日本語"
-    user:    "自分の設定している言語のみ"
-  number:
-    x_time:
-      zero: "なし"
+    question: この質問をフィードで購読する
+    questions: 全ての質問をフィードで購読する
+    share_on_twitter: twitter, facebook and more...
+    tag: このタグの質問をフィードで購読する
+    user: このユーザの質問をフィードで購読する
+  global: 
+    by: によって
+    current: 現在
+    from: "{{site}}から"
+    group_not_found: このページ{{url}}はありません
+    or: または
+    permission_denied: 権限がありません
+    please_login: ログインしてください
+    preview: プレビュー
+    previous: 前
+    share: share
+  languages: 
+    any: 選択しない
+    el: Greek
+    en: 英語
+    es: スペイン語
+    es-AR: スペイン語（米）
+    fr: フランス語
+    ja: 日本語
+    pt: ポルトガル語
+    pt-PT: ポルトガル語
+    user: 自分の設定している言語のみ
+  messages: 
+    success: "{{model}}は{{action}}されました"
+  models: 
+    question: 質問
+  number: 
+    x_time: 
       one: "{{count}}回"
       other: "{{count}}回"
+      zero: なし
+  scaffold: 
+    add: 追加
+    back: 戻る
+    cancel: キャンセル
+    close: 閉じる
+    create: 作成
+    destroy: 削除
+    details: 詳細
+    edit: 編集
+    more: " もっと見る"
+    new: "{{model}}を追加"
+    save: 保存
+    send: 送信
+    show: 表示
+    sure: 本当に{{model}}を削除しますか？
+    update: 更新
+  time: 
+    ago: "{{time}}前"
+    today: 今日

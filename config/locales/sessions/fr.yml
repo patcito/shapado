@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Peter17
 fr: 
   sessions: 
     create: 
@@ -12,6 +13,8 @@ fr:
       log_in: se connecter
       not_registered: pas encore enregistré?
       registered: déjà enregistré?
+      remember_me: Se souvenir de moi
+      sign_in: S’identifier
       signup: créer un compte
       with_authentication: se connecer avec notre système d'identification
       with_facebook: sign in with facebook

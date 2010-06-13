@@ -32,11 +32,19 @@ nl:
       flash_notice: Uw groep is aangemaakt. U kunt nu de instellingen maken.
     form: 
       access: Toegangsinstellingen
+      analytics_engine: Analytics Engine
+      analytics_legend: De groep kan zijn eigen trackingcode gebruiken
       any_language: Alle
+      custom_analytics: Aangepaste gebruiksanalyse toestaan
+      custom_html: Aangepaste HTML toestaan
+      custom_js: Aangepaste JavaScript toestaan
       default_tags_legend: Scheid labels met komma's. Er zijn maximaal tien labels toegestaan.
       description_legend: Beschrijf de groep in vierhonderd tekens of minder.
+      isolate_group: De groep van andere groepen isoleren
       legend_legend: Dit wordt gebruikt als kop. Gebruik maximaal veertig tekens
       logo_legend: U kunt het groepslogo uploaden. De maximale grootte is 2MB.
+      members_only: Alleen leden van de groep hebben toegang tot deze groep
+      website_analytics_id: Website Analytics ID
     group: 
       about: Over
       accept_group: Groep accepteren

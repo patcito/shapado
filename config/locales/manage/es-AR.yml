@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 es-AR: 
   admin: 
     manage: 
@@ -36,4 +37,5 @@ es-AR:
         share: 
           title: compartir
         theme: 
+          logo_legend: Subir un logo para tu grupo, debe ser menor que 2mb.
           title: configure el tema del grupo

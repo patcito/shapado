@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Peter17
 fr: 
   admin: 
     manage: 
@@ -36,4 +37,5 @@ fr:
         share: 
           title: partagez
         theme: 
+          logo_legend: Importez un logo pour votre groupe. Il doit peser au maximum 2 Mo.
           title: configurez le thème du groupe

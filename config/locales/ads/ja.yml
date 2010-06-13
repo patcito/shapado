@@ -1,12 +1,15 @@
-ja:
-  ads:
-    ad_links: "新しい広告の追加 {{type}}"
-    title: "新しい広告の追加 {{type}}"
-    name: "名前："
-    position: "表示位置："
-    index:
-      title: "広告"
-      add_adsense: "Google Adsenseの追加"
-      add_adbard: "バナー広告の追加"
-    create:
-      success: "広告を作成しました"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  ads: 
+    ad_links: 新しい広告の追加 {{type}}
+    create: 
+      success: 広告を作成しました
+    index: 
+      add_adbard: バナー広告の追加
+      add_adsense: Google Adsenseの追加
+      title: 広告
+    name: 名前：
+    position: 表示位置：
+    title: 新しい広告の追加 {{type}}

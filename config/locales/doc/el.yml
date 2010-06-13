@@ -1,33 +1,36 @@
-el:
-  doc:
-    chat:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  doc: 
+    chat: 
       title: Chat Support
-    plans:
-      plans: plans
-      title: Plans and pricing
-      free_plan: free plan
-      we_offer: we also offer a
-      with_unlimited: with unlimited traffic with no custom ads and no custom domain.
+    plans: 
+      15millions: 15 millions page views/month
+      1million: 1 million page views/month
+      247_all_support: web based, email, chat and phone 24/7 support
+      5millions: 5 millions page views/month
+      all_support: web based, email, chat and phone support
+      basic_restrictions: no custom ads and no fully customizable UI
       beta_info: For now all sites are free and all sites benefit from the same options as the Optimum plan, except for the support which is only web based, email and chat.
-      huge_sites: huge traffic sites
       big_sites: big traffic sites
-      getting_popular: getting popular
-      start_monetizing: start monetizing
-      small_private: small/private sites
-      page_views: for small/private sites
-      custom_themes: make use of our pre-made custom themes
-      private_site: Enable private/public access
-      custom_domain: Custom domain
-      custom_ui: Fully customizable UI
       custom_ads: Use your own ads
       custom_analytics: Traffic stats
-      support: Support
-      unlimited: Unlimited traffic each month
-      1million: 1 million page views/month
-      5millions: 5 millions page views/month
-      15millions: 15 millions page views/month
-      web_support: web based support
-      all_support: web based, email, chat and phone support
-      247_all_support: web based, email, chat and phone 24/7 support
-      basic_restrictions: no custom ads and no fully customizable UI
+      custom_domain: Custom domain
+      custom_themes: make use of our pre-made custom themes
+      custom_ui: Fully customizable UI
+      free_plan: free plan
+      getting_popular: getting popular
+      huge_sites: huge traffic sites
       month: month
+      page_views: for small/private sites
+      plans: plans
+      private_site: Enable private/public access
+      small_private: small/private sites
+      start_monetizing: start monetizing
+      support: Support
+      title: Plans and pricing
+      unlimited: Unlimited traffic each month
+      we_offer: we also offer a
+      web_support: web based support
+      with_unlimited: with unlimited traffic with no custom ads and no custom domain.

@@ -1,10 +1,12 @@
-el:
-  unfavorites:
-    create:
-      unauthenticated: "χρειάζεστε λογαριασμό για να αφαιρέσετε μία αγαπημένη"
-      success:         "η ερώτηση έχει αφαιρεθεί από τις αγαπημένες σας"
-
-  activerecord:
-    models:
-      favorites: αγαπημένες
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  activerecord: 
+    models: 
       favorite: αγαπημένη
+      favorites: αγαπημένες
+  unfavorites: 
+    create: 
+      success: η ερώτηση έχει αφαιρεθεί από τις αγαπημένες σας
+      unauthenticated: χρειάζεστε λογαριασμό για να αφαιρέσετε μία αγαπημένη

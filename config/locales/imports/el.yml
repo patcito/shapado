@@ -1,6 +1,9 @@
-el:
-  imports:
-    subtabs:
-      need_confirmation:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
         name: χρειάζεται επιβεβαίωση
         title: αποστολή email επιβεβαίωσης

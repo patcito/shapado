@@ -6,47 +6,47 @@ ru:
   activerecord: 
     attributes: 
       user: 
-        activation_code: код активации
+        activation_code: Код активации
         avatar: Изображение в профиле
         birthday: День рождения
-        current_password: текущий пароль
-        email: электронная почта
-        fullname: полное имя
+        current_password: Текущий пароль
+        email: Электронная почта
+        fullname: Полное имя
         hide_country: Не отображать мою страну
-        language: язык
-        language_filter: фильтр по языку
+        language: Язык
+        language_filter: Фильтр по языку
         last_logged_at: был последний раз на сайте
-        login: имя пользователя
-        name: настоящее имя
-        password: пароль
-        password_confirmation: подтверждение пароля
-        preferred_languages: выберите знакомые вам языки
-        preferred_tags: предпочитаемые теги
-        reputation: репутация
-        timezone: часовой пояс
+        login: Имя пользователя
+        name: Настоящее имя
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        preferred_languages: Выберите знакомые вам языки
+        preferred_tags: Предпочитаемые теги
+        reputation: Репутация
+        timezone: Часовой пояс
         updated_at: обновлено
         website: Веб-сайт
     models: 
-      user: пользователь
-      users: пользователи
+      user: Пользователь
+      users: Пользователи
   users: 
     actions: 
-      edit_wiki_post: редактирование вики-записей
-      vote_down: голосовать против
+      edit_wiki_post: Редактирование вики-записей
+      vote_down: Голосовать против
     create: 
-      flash_error: к сожалению, мы не могли настроить эту учётную запись. повторите попытку снова или обратитесь к администратору (по ссылке выше).
-      flash_notice: благодарим за регистрацию!
+      flash_error: К сожалению, настроить эту учётную запись не удалось. Повторите попытку снова или обратитесь к администратору (по ссылке выше).
+      flash_notice: Благодарим за регистрацию!
     edit: 
       enable_twitter: Включить учётные записи facebook или twitter
-      submit: сохранить
-      title: настройки
+      submit: Сохранить
+      title: Настройки
     follow: 
-      flash_notice: пользователь {{user}} добавлен в список ваших друзей
+      flash_notice: Пользователь {{user}} добавлен в список ваших друзей
     index: 
-      newest: новейшие
-      oldest: старейшие
-      title: все пользователи
+      newest: Новейшие
+      oldest: Старейшие
+      title: Все пользователи
     show: 
-      follow: следить
+      follow: Следить
       title: Пользователь {{user}}
-      unfollow: не следить
+      unfollow: Не следить

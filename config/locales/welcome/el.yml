@@ -1,53 +1,55 @@
-el:
-  welcome:
-    facts:
-      prices:
-        cols:
-          onsite: στο χώρο σας
-        stackexchange:
-          small: $129/μήνα
-          medium: $999/μήνα
-          large: $1299/μήνα
-          onsite: $2500/μήνα
-        shapado:
-          small: μάλλον μεταξύ $50 και $100/μήνα στους περισσότερους παρόχους φιλοξενίας
-          medium: <=== το ίδιο
-          large: μάλλον κοντά στα $500
-          onsite: μάλλον $0 στο δικό σας server, ε
-      features:
-        cols:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  welcome: 
+    confirm_age: 
+      notice: Για να εισέλθετε σε αυτή τη σελίδα πρέπει να είστε τουλάχιστον 18 ετών ή στην ηλικία ενηλικίωσης στη χώρα στην οποία διαμένετε ή από την οποία έχετε πρόσβαση σε αυτή τη σελίδα.
+      over_18: Είμαι πάνω από 18
+      under_18: Είμαι κάτω από 18
+      warning: "ΠΡΟΣΟΧΗ: Το περιεχόμενο της σελίδας μπορεί να είναι ακατάλληλο για ανηλίκους."
+    facts: 
+      features: 
+        cols: 
           adaptable: προσαρμόσιμο
-          multitopic: πολυθεματικό
-          multilanguage: πολυγλωσσικό
           foss: ελεύθερο/ανοιχτού κώδικα
           joel: θα γίνει ο joel πλουσιότερος;
-        stackexchange:
+          multilanguage: πολυγλωσσικό
+          multitopic: πολυθεματικό
+        shapado: 
+          adaptable: ναι!
+          foss: ναι!
+          joel: όχι :/
+          multilanguage: ναι!
+          multitopic: ναι!
+        stackexchange: 
           adaptable: όχι
-          multitopic: όχι
-          multilanguage: όχι
           foss: όχι
           joel: ναι!
-        shapado:
-          adaptable: ναι!
-          multitopic: ναι!
-          multilanguage: ναι!
-          foss: ναι!
-          joel: "όχι :/"
-    feedback:
-      title: στείλτε τα σχόλιά σας
-      feedback_title: θέμα
-      feedback_description: περιγραφή
-      email_description: παρακαλώ εισάγετε το email σας ώστε να μπορούμε να απαντήσουμε
+          multilanguage: όχι
+          multitopic: όχι
+      prices: 
+        cols: 
+          onsite: στο χώρο σας
+        shapado: 
+          large: μάλλον κοντά στα $500
+          medium: <=== το ίδιο
+          onsite: μάλλον $0 στο δικό σας server, ε
+          small: μάλλον μεταξύ $50 και $100/μήνα στους περισσότερους παρόχους φιλοξενίας
+        stackexchange: 
+          large: $1299/μήνα
+          medium: $999/μήνα
+          onsite: $2500/μήνα
+          small: $129/μήνα
+    feedback: 
       captcha_error: παρακαλώ λύστε μια απλή μαθηματική πράξη
-    index:
-      hot:     δημοφιλείς
-      active:  ενεργές
-      recent_questions: πρόσφατες ερωτήσεις
+      email_description: παρακαλώ εισάγετε το email σας ώστε να μπορούμε να απαντήσουμε
+      feedback_description: περιγραφή
+      feedback_title: θέμα
+      title: στείλτε τα σχόλιά σας
+    index: 
+      active: ενεργές
+      create_own_site: δημιουργήστε το δικό σας Q&amp;A site σε 8 δευτερόλεπτα, δωρεάν
+      hot: δημοφιλείς
       quick_question: κάντε μια ερώτηση, θα βρούμε κάποιον να την απαντήσει
-      create_own_site: "δημιουργήστε το δικό σας Q&amp;A site σε 8 δευτερόλεπτα, δωρεάν"
-
-    confirm_age:
-      warning: "ΠΡΟΣΟΧΗ: Το περιεχόμενο της σελίδας μπορεί να είναι ακατάλληλο για ανηλίκους."
-      notice: "Για να εισέλθετε σε αυτή τη σελίδα πρέπει να είστε τουλάχιστον 18 ετών ή στην ηλικία ενηλικίωσης στη χώρα στην οποία διαμένετε ή από την οποία έχετε πρόσβαση σε αυτή τη σελίδα."
-      under_18: "Είμαι κάτω από 18"
-      over_18: "Είμαι πάνω από 18"
+      recent_questions: πρόσφατες ερωτήσεις

@@ -1,45 +1,48 @@
-el:
-  layouts:
-    application:
-      title: "ερωτήσεις & απαντήσεις"
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  layouts: 
+    application: 
+      ask_question: κάντε ερώτηση
+      badges: τίτλοι
+      forgot: ξεχάσατε;
+      home: κεντρική
+      languages: γλώσσες
+      log_in: σύνδεση
+      logged: συνδεδεμένοι ως {{login}}
+      logout: αποσύνδεση
+      manage_ads: διαχείριση διαφημίσεων
+      moderate: moderate
+      now: τώρα!
+      openid: 
+        explaination: "αν θέλετε να εγγραφείτε ή απλώς να συνδεθείτε, παρακαλώ επιλέξτε τον OpenId πάροχο σας:"
+      pages: σελίδες
       questions: ερωτήσεις
       questions_in: ερωτήσεις στα
       questions_tagged: με τις ετικέτες
-      ask_question: κάντε ερώτηση
-      tags: ετικέτες
-      users: μέλη
-      badges: τίτλοι
-      unanswered: αναπάντητες
-      pages: σελίδες
-      logout: αποσύνδεση
-      logged: συνδεδεμένοι ως {{login}}
       search: αναζήτηση
-      forgot: ξεχάσατε;
-      log_in: σύνδεση
-      signup: εγγραφή
       settings: ρυθμίσεις
-      languages: γλώσσες
-      moderate: moderate
-      manage_ads: διαχείριση διαφημίσεων
-      home: κεντρική
+      signup: εγγραφή
       subscribe: εγγραφή
+      tags: ετικέτες
+      title: ερωτήσεις & απαντήσεις
+      unanswered: αναπάντητες
+      users: μέλη
       welcome_from: καλώς ορίσατε! μπορείτε
-      now: τώρα!
-      openid:
-        explaination: "αν θέλετε να εγγραφείτε ή απλώς να συνδεθείτε, παρακαλώ επιλέξτε τον OpenId πάροχο σας:"
-    manage:
-      dashboard: ταμπλό
-      properties: ιδιότητες
-      widgets: widgets
+    manage: 
       actions: ενέργειες
-      stats: στατιστικά
-      members: μέλη
-      reputation: υπόληψη
-      content: περιεχόμενο
-      theme: θέμα
-      domain: domain
-      pages: σελίδες
-      constrains: περιορισμοί
-      rewards: ανταμοιβές
-      general: γενικά
       announcements: ανακοινώσεις
+      constrains: περιορισμοί
+      content: περιεχόμενο
+      dashboard: ταμπλό
+      domain: domain
+      general: γενικά
+      members: μέλη
+      pages: σελίδες
+      properties: ιδιότητες
+      reputation: υπόληψη
+      rewards: ανταμοιβές
+      stats: στατιστικά
+      theme: θέμα
+      widgets: widgets

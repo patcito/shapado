@@ -4,8 +4,13 @@
 # Author: Y-M D
 br: 
   welcome: 
+    confirm_age: 
+      over_18: A-us 18 bloaz on
+      under_18: Dindan 18 bloaz on
     facts: 
       features: 
+        cols: 
+          multilanguage: liesyezh
         shapado: 
           adaptable: ya !
           foss: ya !
@@ -34,3 +39,4 @@ br:
     index: 
       active: oberiant
       hot: tomm
+      recent_questions: Goulennoù nevez

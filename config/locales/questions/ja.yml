@@ -1,136 +1,135 @@
-ja:
-  questions:
-    index:
-      title: "全ての質問"
-      hot:     "ホット"
-      active:  "アクティブ"
-      votes:   "投票数"
-      newest:  "最新"
-      oldest:  "投稿順"
-      ask_question: "質問する"
-      empty: "まだ質問がありません。ぜひ最初の質問を！"
-      help_to_answer: "全ての質問"
-      unanswered_questions: "まだ回答のない質問"
-      hot_tooltip: "最近5日間での最もアクティブな質問"
-      active_tooltip: "最近更新されている質問"
-      votes_tooltip:  "最も多く投票を受けている質問"
-      newest_tooltip: "最新の質問"
-    show:
-      answers: "回答"
-      another_answers: "他の回答"
-      solution: "解決"
-      share: "この質問を共有する"
-      share_on: "この質問を{{site}}で共有する"
-      related_questions: "似たような質問"
-      flags: "報告する"
-      flag: "報告する"
-      flagged_as: "報告："
-      viewed: "表示回数"
-      to_answer_question: "この質問に回答する"
-      watch_tooltip: "この質問に注目マークを付ける"
-      accepted_tooltip: "1つの回答を正解として受け入れました"
-      unwatch_tooltip: "ウォッチを停止する"
-      favorite_tooltip: "この質問をお気に入りに登録する"
-      unfavorite_tooltip: "この質問はあなたのお気に入りから削除されました"
-      asked_on: "質問日"
-      last_activity: "最終の変更日"
-      retag: "タグの編集"
-      unauthenticated_retag: "タグを編集するにはアカウントが必要です"
-      request_closing: "質問の終了申請"
-      request_closing_details: "この質問を終了申請する"
-      close: "閉じる"
-      ban: "弾く"
-      retract_request: "既にリクエスト済みです。撤回しますか？"
-      close_reason: "この質問は次の理由による閉じられています："
-      answers_title:
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: 回答
+        asked_by: 質問者
+        body: 本文
+        closed: 終了
+        created_at: 作成日
+        language: 言語
+        tags: タグ
+        title: タイトル
+        updated_at: 更新日
+        updated_by: 更新者
+        views: 表示回数
+        votes: 投票数
+    models: 
+      question: 質問
+      questions: 質問
+  questions: 
+    answer: 
+      add_comment: コメントする
+      flag: 報告
+      pick_answer: 解決に導いてくれた回答としてマーク
+      unset_answer: 解決マークを外す
+    create: 
+      flash_notice: 質問が作成されました
+    edit: 
+      title: 質問を修正する
+    flag: 
+      title: 質問を報告する
+    form: 
+      adult_content: この質問はアダルトな内容を含みます
+      body_tip: あなたの質問を記述してください
+      language_tip: 言語を選択してください
+      tags_tip: 質問を具体的にするためにタグを使ってください（カンマ区切りです）
+    index: 
+      active: アクティブ
+      active_tooltip: 最近更新されている質問
+      ask_question: 質問する
+      empty: まだ質問がありません。ぜひ最初の質問を！
+      help_to_answer: 全ての質問
+      hot: ホット
+      hot_tooltip: 最近5日間での最もアクティブな質問
+      newest: 最新
+      newest_tooltip: 最新の質問
+      oldest: 投稿順
+      title: 全ての質問
+      unanswered_questions: まだ回答のない質問
+      votes: 投票数
+      votes_tooltip: 最も多く投票を受けている質問
+    model: 
+      messages: 
+        empty_tags: タグは必須です。必ず一つは入力してください
+        title_too_long: タイトルが長すぎます。50文字以内にしてください。
+        too_many_tags: タグの数が多すぎます。最大6つまでとなっています
+        too_short: タグが短すぎるようです。最低{{count}}文字以上の言葉を使ってみてください
+    move: 
+      group_label: "スラグを次のようにして移動する:"
+      submit: 移動！
+      title: "質問の移動: {{title}}"
+    move_to: 
+      group_dont_exists: グループ {{group}} はありません
+      success: 質問はグループ {{group}} へ移動しました
+    new: 
+      how_to_ask: 質問の方法
+      title: 新しい質問
+    question: 
+      accepted_tooltip: この質問は受け入れられた回答があります
+    retag: 
+      title: タグの編集
+    retag_form: 
+      cancel: キャンセル
+      submit: タグを更新する
+      title: タグの更新
+    retag_to: 
+      failure: タグの更新に失敗しました
+      success: タグを更新しました！
+    revert: 
+      title: 質問を戻す
+    shared: 
+      flag: 報告
+    show: 
+      accepted_tooltip: 1つの回答を正解として受け入れました
+      another_answers: 他の回答
+      answers: 回答
+      answers_title: 
         one: "{{count}}つの回答"
         other: "{{count}}つの回答"
-    retag:
-      title: "タグの編集"
-    answer:
-      pick_answer: "解決に導いてくれた回答としてマーク"
-      unset_answer: "解決マークを外す"
-      flag: "報告"
-      add_comment: "コメントする"
-    question:
-      accepted_tooltip: "この質問は受け入れられた回答があります"
-    form:
-      body_tip: "あなたの質問を記述してください"
-      language_tip: "言語を選択してください"
-      tags_tip:  "質問を具体的にするためにタグを使ってください（カンマ区切りです）"
-      adult_content: "この質問はアダルトな内容を含みます"
-    flag:
-      title:   "質問を報告する"
-    edit:
-      title: "質問を修正する"
-    unanswered:
-      title: "回答のない質問一覧"
-      tags: "関連するタグ"
-      empty: "未回答な質問はないようです"
-      my_tags: "自分のタグ"
-      expert: "エキスパート"
-    tags:
-      title: "タグ"
-      tooltip: "タグ{{tag}}がついた質問を一覧する"
-      filter: "タグを検索"
-    new:
-      title: "新しい質問"
-      how_to_ask: "質問の方法"
-    create:
-      flash_notice: "質問が作成されました"
-    update:
-      flash_notice: "質問は更新されました"
-    solve:
-      flash_notice: "問題は解決しました。"
-    unsolve:
-      flash_notice: "質問はまだ解決していません。"
-    watch:
-      success:      "ウォッチを開始しました。新しい回答が届くとメールで通知されます。"
-    unwatch:
-      success:      "ウォッチを停止しました。この質問に対する回答通知を受け取りません。"
-    revert:
-      title: "質問を戻す"
-    move:
-      title:        "質問の移動: {{title}}"
-      group_label:  "スラグを次のようにして移動する:"
-      submit:       "移動！"
-    move_to:
-      success:      "質問はグループ {{group}} へ移動しました"
-      group_dont_exists: "グループ {{group}} はありません"
-    shared:
-      flag: "報告"
-    retag_form:
-      title:  "タグの更新"
-      submit: "タグを更新する"
-      cancel: "キャンセル"
-    retag_to:
-      success: "タグを更新しました！"
-      failure: "タグの更新に失敗しました"
-    messages:
-      errors:
-        :not_found: "質問が見つかりません"
-    model:
-      messages:
-        too_short: "タグが短すぎるようです。最低{{count}}文字以上の言葉を使ってみてください"
-        too_many_tags: "タグの数が多すぎます。最大6つまでとなっています"
-        empty_tags: "タグは必須です。必ず一つは入力してください"
-        title_too_long: "タイトルが長すぎます。50文字以内にしてください。"
-
-  activerecord:
-    models:
-      questions: "質問"
-      question: "質問"
-    attributes:
-      question:
-        title: "タイトル"
-        body: "本文"
-        tags: "タグ"
-        asked_by: "質問者"
-        answers: "回答"
-        views: "表示回数"
-        votes: "投票数"
-        language: "言語"
-        created_at: "作成日"
-        updated_at: "更新日"
-        updated_by: "更新者"
-        closed: "終了"
+      asked_on: 質問日
+      ban: 弾く
+      close: 閉じる
+      close_reason: この質問は次の理由による閉じられています：
+      favorite_tooltip: この質問をお気に入りに登録する
+      flag: 報告する
+      flagged_as: 報告：
+      flags: 報告する
+      last_activity: 最終の変更日
+      related_questions: 似たような質問
+      request_closing: 質問の終了申請
+      request_closing_details: この質問を終了申請する
+      retag: タグの編集
+      retract_request: 既にリクエスト済みです。撤回しますか？
+      share: この質問を共有する
+      share_on: この質問を{{site}}で共有する
+      solution: 解決
+      to_answer_question: この質問に回答する
+      unauthenticated_retag: タグを編集するにはアカウントが必要です
+      unfavorite_tooltip: この質問はあなたのお気に入りから削除されました
+      unwatch_tooltip: ウォッチを停止する
+      viewed: 表示回数
+      watch_tooltip: この質問に注目マークを付ける
+    solve: 
+      flash_notice: 問題は解決しました。
+    tags: 
+      filter: タグを検索
+      title: タグ
+      tooltip: タグ{{tag}}がついた質問を一覧する
+    unanswered: 
+      empty: 未回答な質問はないようです
+      expert: エキスパート
+      my_tags: 自分のタグ
+      tags: 関連するタグ
+      title: 回答のない質問一覧
+    unsolve: 
+      flash_notice: 質問はまだ解決していません。
+    unwatch: 
+      success: ウォッチを停止しました。この質問に対する回答通知を受け取りません。
+    update: 
+      flash_notice: 質問は更新されました
+    watch: 
+      success: ウォッチを開始しました。新しい回答が届くとメールで通知されます。

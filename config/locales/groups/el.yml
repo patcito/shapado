@@ -1,69 +1,71 @@
-el:
-  groups:
-    index:
-      title: ομάδες
-      filter: "αναζήτηση ομάδων"
-      actives: ενεργές
-      pendings: εκκρεμείς
-      most_active: πιο δραστήριες
-      request_group: ζητήστε νέα ομάδα
-      name: όνομα
-    group:
-      about: περί
-      close: κλείσιμο
-      accept_group: αποδοχή ομάδας
-      close_group: κλείσιμο ομάδας
-      allow_ads: να επιτρέπονται διαφημίσεις
-      disallow_ads: απαγόρευση διαφημίσεων
-    show:
-      title: "σχετικά με {{name}}"
-      visit_group: επισκεφθείτε αυτή την ομάδα
-      group_awaiting_acceptance: "αυτή η ομάδα αναμένει την αποδοχή ενός moderator."
-      group_closed: αυτή η ομάδα έχει κλειστεί.
-      accept_group: αποδοχή ομάδας
-      close_group: κλείσιμο ομάδας
-      accept_group_with_custom_ads: αποδοχή ομάδας με προσαρμοσμένες διαφημίσεις
-    new:
-      title: δημιουργία ομάδας
-    create:
-      flash_notice: η ομάδα σας δημιουργήθηκε επιτυχώς, τώρα μπορείτε να τη ρυθμίσετε.
-    form:
-      description_legend: έχετε 400 χαρακτήρες για να περιγράψετε την ομάδα.
-      legend_legend: "θα χρησιμοποιηθεί στην κεφαλίδα, έχετε 40 χαρακτήρες"
-      default_tags_legend: "διαχωρίστε τις ετικέτες με κόμματα. Επιτρέπονται μόνο 10 προεπιλεγμένες ετικέτες."
-      logo_legend: "μπορείτε να ανεβάσετε το λογότυπο της ομάδας. Το μέγιστο μέγεθος αρχείου είναι 2 MB."
-      any_language: οποιαδήποτε
-      access: ρυθμίσεις πρόσβασης
-      isolate_group: isolate the group form other groups
-      members_only: "only the group's members will be able to access this group"
-      custom_html: allow custom html
-      custom_js: allow custom javascript
-      custom_analytics: allow Custom Analytics
-      analytics_engine: analytics Engine
-      website_analytics_id: website Analytics ID
-      analytics_legend: The group will be able to use its own tracking code
-  activerecord:
-    models:
-      groups: ομάδες
-      group: ομάδα
-      default_tags_message: "δεν επιτρέπονται περισσότερες από 10 προεπιλεγμένες ετικέτες"
-    attributes:
-      group:
-        name: όνομα
-        subdomain: subdomain
-        domain: domain
-        legend: υπόμνημα
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: προεπιλεγμένες ετικέτες
         description: περιγραφή
-        state: κατάσταση
-        owner: "αυτή η ομάδα δημιουργήθηκε από τον/την {{login}}"
+        domain: domain
+        fb_button: ενεργοποίηση του κομβίου like του Facebook (χωρίς προστασία προσωπικών δεδομένων)
+        forum: να επιτρέπονται περισσότερες από μία απαντήσεις από κάθε χρήστη
         group_created_by: δημιουργήθηκε από
         language: γλώσσα
-        default_tags: "προεπιλεγμένες ετικέτες"
+        legend: υπόμνημα
         logo: λογότυπο
-        forum: να επιτρέπονται περισσότερες από μία απαντήσεις από κάθε χρήστη
-        openid_only: μόνο αυτοί με OpenId να έχουν πρόσβαση στο site
-        registered_only: μόνο οι εγγεγραμμένοι να έχουν πρόσβαση στο site
         may_contain_adult_content: αυτό το site μπορεί να έχει περιεχόμενο μόνο για ενηλίκους
+        name: όνομα
+        openid_only: μόνο αυτοί με OpenId να έχουν πρόσβαση στο site
+        owner: αυτή η ομάδα δημιουργήθηκε από τον/την {{login}}
+        registered_only: μόνο οι εγγεγραμμένοι να έχουν πρόσβαση στο site
+        state: κατάσταση
+        subdomain: subdomain
         wysiwyg_editor: ενεργοποίηση του φιλικού κειμενογράφου
-        fb_button: ενεργοποίηση του κομβίου like του Facebook (χωρίς προστασία προσωπικών δεδομένων)
-
+    models: 
+      default_tags_message: δεν επιτρέπονται περισσότερες από 10 προεπιλεγμένες ετικέτες
+      group: ομάδα
+      groups: ομάδες
+  groups: 
+    create: 
+      flash_notice: η ομάδα σας δημιουργήθηκε επιτυχώς, τώρα μπορείτε να τη ρυθμίσετε.
+    form: 
+      access: ρυθμίσεις πρόσβασης
+      analytics_engine: analytics Engine
+      analytics_legend: The group will be able to use its own tracking code
+      any_language: οποιαδήποτε
+      custom_analytics: allow Custom Analytics
+      custom_html: allow custom html
+      custom_js: allow custom javascript
+      default_tags_legend: διαχωρίστε τις ετικέτες με κόμματα. Επιτρέπονται μόνο 10 προεπιλεγμένες ετικέτες.
+      description_legend: έχετε 400 χαρακτήρες για να περιγράψετε την ομάδα.
+      isolate_group: isolate the group form other groups
+      legend_legend: θα χρησιμοποιηθεί στην κεφαλίδα, έχετε 40 χαρακτήρες
+      logo_legend: μπορείτε να ανεβάσετε το λογότυπο της ομάδας. Το μέγιστο μέγεθος αρχείου είναι 2 MB.
+      members_only: only the group's members will be able to access this group
+      website_analytics_id: website Analytics ID
+    group: 
+      about: περί
+      accept_group: αποδοχή ομάδας
+      allow_ads: να επιτρέπονται διαφημίσεις
+      close: κλείσιμο
+      close_group: κλείσιμο ομάδας
+      disallow_ads: απαγόρευση διαφημίσεων
+    index: 
+      actives: ενεργές
+      filter: αναζήτηση ομάδων
+      most_active: πιο δραστήριες
+      name: όνομα
+      pendings: εκκρεμείς
+      request_group: ζητήστε νέα ομάδα
+      title: ομάδες
+    new: 
+      title: δημιουργία ομάδας
+    show: 
+      accept_group: αποδοχή ομάδας
+      accept_group_with_custom_ads: αποδοχή ομάδας με προσαρμοσμένες διαφημίσεις
+      close_group: κλείσιμο ομάδας
+      group_awaiting_acceptance: αυτή η ομάδα αναμένει την αποδοχή ενός moderator.
+      group_closed: αυτή η ομάδα έχει κλειστεί.
+      title: σχετικά με {{name}}
+      visit_group: επισκεφθείτε αυτή την ομάδα

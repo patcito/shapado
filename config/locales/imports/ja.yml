@@ -1,6 +1,9 @@
-ja:
-  imports:
-    subtabs:
-      need_confirmation:
-        name: "メールの確認が必要です"
-        title: "確認用のメールを送信します。"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: メールの確認が必要です
+        title: 確認用のメールを送信します。

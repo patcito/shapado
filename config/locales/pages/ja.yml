@@ -1,31 +1,33 @@
-ja:
-  pages:
-    title: "ページ一覧"
-    index:
-      title: "ページ一覧"
-      create_page: "新しいページを作成する"
-      written_in: "作成言語：{{language}}"
-    edit:
-      title: "ページの編集"
-    create:
-      success: 'ページが作成されました'
-    update:
-      success: 'ページが更新されました'
-    new:
-      title: "新しいページ"
-    form:
-      title_tip: "ページタイトルです。[[タイトル|Slug]]のように作成するとSlugがURLとして使われるようになります"
-      language_tip: "ページの言語"
-    actions:
-      title: "アクション"
-      create_page: "新しいページを作成する"
-      edit_page: "ページを編集する"
-
-  activerecord:
-    models:
-      page: "ページ"
-      pages: "ページ"
-    attributes:
-      page:
-        js: "javascript"
-        css: "stylesheets"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: stylesheets
+        js: javascript
+    models: 
+      page: ページ
+      pages: ページ
+  pages: 
+    actions: 
+      create_page: 新しいページを作成する
+      edit_page: ページを編集する
+      title: アクション
+    create: 
+      success: ページが作成されました
+    edit: 
+      title: ページの編集
+    form: 
+      language_tip: ページの言語
+      title_tip: ページタイトルです。[[タイトル|Slug]]のように作成するとSlugがURLとして使われるようになります
+    index: 
+      create_page: 新しいページを作成する
+      title: ページ一覧
+      written_in: 作成言語：{{language}}
+    new: 
+      title: 新しいページ
+    title: ページ一覧
+    update: 
+      success: ページが更新されました

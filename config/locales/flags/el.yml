@@ -1,18 +1,20 @@
-el:
-  flags:
-    form:
-      spam: spam
-      offensive: προσβλητική ή υβριστική
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: αιτία
+    models: 
+      flag: αναφορά
+      flags: αναφορές
+  flags: 
+    create: 
+      flash_error: δεν μπορείτε να αναφέρετε αυτή την ερώτηση
+      flash_notice: ευχαριστούμε για την αναφορά σας
+    form: 
       attention: απαιτεί την προσοχή moderator
       label: παρακαλώ αναφέρετε με προσοχή
-    create:
-      flash_notice: ευχαριστούμε για την αναφορά σας
-      flash_error: δεν μπορείτε να αναφέρετε αυτή την ερώτηση
-
-  activerecord:
-    models:
-      flags: αναφορές
-      flag: αναφορά
-    attributes:
-      flag:
-        type: αιτία
+      offensive: προσβλητική ή υβριστική
+      spam: spam

@@ -1,18 +1,21 @@
-ja:
-  wiki:
-    history:
-      title: "履歴 ({{count}})"
-      previous_versions: "前のバージョン"
-      current_version: "現在のバージョン"
-      version: "バージョン"
-      version_summary: "バージョンサマリー"
-    diff:
-      title: "差分表示：{{prev}} と {{curr}}"
-    actions:
-      revert: "このバージョンに差し戻す"
-      show_diff: "選択したバージョン同士の差分を見る"
-      all_history: "履歴に戻る"
-      back_to_question: "質問に戻る"
-    model:
-      attributes:
-        message: "更新メッセージ"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  wiki: 
+    actions: 
+      all_history: 履歴に戻る
+      back_to_question: 質問に戻る
+      revert: このバージョンに差し戻す
+      show_diff: 選択したバージョン同士の差分を見る
+    diff: 
+      title: 差分表示：{{prev}} と {{curr}}
+    history: 
+      current_version: 現在のバージョン
+      previous_versions: 前のバージョン
+      title: 履歴 ({{count}})
+      version: バージョン
+      version_summary: バージョンサマリー
+    model: 
+      attributes: 
+        message: 更新メッセージ

@@ -7,107 +7,114 @@ ru:
   activerecord: 
     attributes: 
       question: 
-        answers: ответы
-        closed: закрыто
-        language: язык
-        tags: теги
-        title: заголовок
+        answers: Ответы
+        body: Текст
+        closed: Закрыто
+        language: Язык
+        tags: Теги
+        title: Заголовок
         updated_at: обновлено
         updated_by: обновлено
-        views: просмотров
-        votes: голосов
+        views: Просмотры
+        votes: Голоса
     models: 
-      question: вопрос
-      questions: вопросы
+      question: Вопрос
+      questions: Вопросы
   questions: 
     answer: 
-      add_comment: добавить комментарий…
-      flag: отметить
-      pick_answer: выбрать в качестве решения
+      add_comment: Добавить комментарий…
+      flag: Отметить
+      pick_answer: Выбрать в качестве решения
     create: 
-      flash_notice: вопрос успешно создан.
+      flash_notice: Вопрос успешно создан.
     edit: 
-      title: редактирование вопроса
+      title: Редактирование вопроса
     flag: 
-      title: отметить вопрос
+      title: Отметить вопрос
     form: 
-      adult_content: этот вопрос содержит материалы для взрослых.
-      body_tip: в чём состоит вопрос? сделайте его более информативным.
-      language_tip: выберите язык вопроса.
+      adult_content: Этот вопрос содержит материалы для взрослых.
+      body_tip: В чём состоит вопрос? Сделайте его более информативным.
+      language_tip: Выберите язык вопроса.
     index: 
-      active: активные
-      active_tooltip: недавно обновлённые вопросы
-      ask_question: задать вопрос
-      empty: пока никто не задавал вопросы, станьте первыми!
-      hot: горячие
-      hot_tooltip: вопросы с наибольшей активностью за последние 5 дней
-      newest: новейшие
-      newest_tooltip: недавно заданные вопросы
-      oldest: старейшие
-      title: все вопросы
-      unanswered_questions: вопросы без ответов
-      votes_tooltip: вопросы с наибольшим числом голосов
+      active: Активные
+      active_tooltip: Недавно обновлённые вопросы
+      ask_question: Задать вопрос
+      empty: Пока никто не задавал вопросы, станьте первыми!
+      hot: Горячие
+      hot_tooltip: Вопросы с наибольшей активностью за последние 5 дней
+      newest: Новейшие
+      newest_tooltip: Недавно заданные вопросы
+      oldest: Старейшие
+      title: Все вопросы
+      unanswered_questions: Вопросы без ответов
+      votes: Голоса
+      votes_tooltip: Вопросы с наибольшим числом голосов
     model: 
       messages: 
+        empty_tags: Необходимо указать хотя бы один тег.
         title_too_long: Название слишком длинное. Оно не должно содержать более 100 символов
+        too_short: Слишком мало текста. Используйте больше {{count}} слов, чтобы конкретизировать текст.
     move: 
-      submit: переместить!
-      title: "переместить вопрос: {{title}}"
+      submit: Переместить!
+      title: "Переместить вопрос: {{title}}"
     move_to: 
-      group_dont_exists: группа {{group}} не существует
-      success: вопрос перемещён в {{group}}
+      group_dont_exists: Группа {{group}} не существует
+      success: Вопрос перемещён в {{group}}
     new: 
-      title: задать вопрос
+      title: Задать вопрос
     question: 
       accepted_tooltip: На этот вопрос есть принятый ответ
     retag: 
-      title: изменить теги
+      title: Изменить теги
     retag_form: 
-      cancel: отменить
-      submit: обновить теги!
+      cancel: Отменить
+      submit: Обновить теги!
+      title: Обновление тегов
     retag_to: 
       failure: К сожалению, теги не могут быть обновлены.
       success: Теги успешно обновлены.
+    revert: 
+      title: Откатить вопрос
     shared: 
-      flag: отметить
+      flag: Отметить
     show: 
-      accepted_tooltip: один из ответов был принят в качестве правильного ответа
-      another_answers: другие ответы
-      answers: ответы
-      close: закрыть
-      close_reason: "вопрос закрыт по следующей причине:"
-      favorite_tooltip: добавить этот вопрос в избранное
-      flag: отметить
-      last_activity: последние действия
-      related_questions: похожие вопросы
-      request_closing: запрос закрытия
-      request_closing_details: оставить запрос на закрытие этого вопроса
-      retag: изменить теги
-      retract_request: вы уже сделали запрос; вы хотите отказаться от него?
-      share_on: разместить этот вопрос на {{site}}
-      solution: решение
+      accepted_tooltip: Один из ответов был принят в качестве правильного ответа
+      another_answers: Другие ответы
+      answers: Ответы
+      close: Закрыть
+      close_reason: "Вопрос закрыт по следующей причине:"
+      favorite_tooltip: Добавить этот вопрос в избранное
+      flag: Отметить
+      last_activity: Последние действия
+      related_questions: Похожие вопросы
+      request_closing: Запрос закрытия
+      request_closing_details: Оставить запрос на закрытие этого вопроса
+      retag: Изменить теги
+      retract_request: Вы уже сделали запрос; вы хотите отказаться от него?
+      share_on: Разместить этот вопрос на {{site}}
+      solution: Решение
       to_answer_question: ответить на этот вопрос
-      unauthenticated_retag: зарегистрируйте учётную запись для изменения тегов вопросов
-      unfavorite_tooltip: удалить этот вопрос из списка избранных
-      unwatch_tooltip: перестать следить за этим вопросом
-      watch_tooltip: следить за этим вопросом
+      unauthenticated_retag: Для изменения тегов вопросов необходимо зарегистрировать учётную запись
+      unfavorite_tooltip: Удалить этот вопрос из списка избранных
+      unwatch_tooltip: Перестать следить за этим вопросом
+      watch_tooltip: Следить за этим вопросом
     solve: 
-      flash_notice: вопрос был решён.
+      flash_notice: Вопрос был решён.
     tags: 
-      filter: поиск по тегам
-      title: теги
-      tooltip: показать вопросы с тегом {{tag}}
+      filter: Поиск по тегам
+      title: Теги
+      tooltip: Показать вопросы с тегом {{tag}}
     unanswered: 
-      empty: в этой группе нет вопросов без ответов.
-      expert: эксперты
-      my_tags: мои теги
-      tags: теги без ответов
-      title: вопросы без ответов
+      empty: В этой группе нет вопросов без ответов.
+      expert: Эксперты
+      my_tags: Мои теги
+      tags: Теги без ответов
+      title: Вопросы без ответов
     unsolve: 
-      flash_notice: вопрос пока не решён.
+      flash_notice: Вопрос пока не решён.
     unwatch: 
-      success: вы больше не будете  получать почтовые уведомления по каждому новому ответу на этот вопрос
+      success: Вы больше не будете  получать почтовые уведомления по каждому новому ответу на этот вопрос
     update: 
-      flash_notice: вопрос успешно обновлён.
+      flash_notice: Вопрос успешно обновлён.
     watch: 
-      success: теперь вы будете  получать почтовые уведомления по каждому новому ответу на этот вопрос
+      success: Теперь вы будете  получать почтовые уведомления по каждому новому ответу на этот вопрос

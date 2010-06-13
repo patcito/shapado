@@ -16,7 +16,7 @@ nl:
         title: Naam
         updated_at: Bijgewerkt
         updated_by: Bijgewerkt door
-        views: bekeken
+        views: Keren bekeken
         votes: Stemmen
     models: 
       question: Vraag

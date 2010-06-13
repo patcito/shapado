@@ -1,18 +1,19 @@
-el:
-  announcements:
-    index:
-      title: ανακοινώσεις
-    create:
-      success: 'η ανακοίνωση δημιουργήθηκε επιτυχώς.'
-    form:
-    actions:
-      title: ενέργειες
-      delete: κατάργηση
-
-  activerecord:
-    attributes:
-      announcement:
-        message: μήνυμα
-        starts_at: έναρξη
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  activerecord: 
+    attributes: 
+      announcement: 
         ends_at: λήξη
+        message: μήνυμα
         only_anonymous: μόνο για ανώνυμους χρήστες
+        starts_at: έναρξη
+  announcements: 
+    actions: 
+      delete: κατάργηση
+      title: ενέργειες
+    create: 
+      success: η ανακοίνωση δημιουργήθηκε επιτυχώς.
+    index: 
+      title: ανακοινώσεις

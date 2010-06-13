@@ -1,8 +1,11 @@
-el:
-  shared:
-    topbar:
-      logged_as: "συνδεδεμένοι ως {{login}}"
-      admin: διαχείριση
-      user_page: η σελίδα μου
-    current_tags:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  shared: 
+    current_tags: 
       title: επιλεγμένες ετικέτες
+    topbar: 
+      admin: διαχείριση
+      logged_as: συνδεδεμένοι ως {{login}}
+      user_page: η σελίδα μου

@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 es-AR: 
   sessions: 
     create: 
@@ -12,6 +13,8 @@ es-AR:
       log_in: entrar
       not_registered: todavía no esta registrado?
       registered: ¿ya esta registrado?
+      remember_me: Recordarme
+      sign_in: Iniciar sesión
       signup: registrarse
       with_authentication: entra con nuestro propio sistema de usuarios
       with_facebook: entra usando facebook

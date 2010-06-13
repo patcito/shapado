@@ -1,64 +1,67 @@
-el:
-  scaffold:
-    sure: είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την {{model}} ?
-    show: προβολή
-    edit: επεξεργασία
-    destroy: διαγραφή
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  actions: 
+    closed: κλειδώθηκε
+    created: δημιουργήθηκε
+    deleted: διαγράφηκε
+    updated: ενημερώθηκε
+  feeds: 
+    feed: ροή
+    post_new_questions: αποστολή νέων ερωτήσεων προς
+    question: εγγραφείτε σ' αυτή την ερώτηση
+    questions: εγγραφείτε σε όλες τις ερωτήσεις
+    share_on_twitter: twitter, facebook και άλλα...
+    tag: εγγραφείτε στην ετικέτα
+    user: εγγραφείτε στις ερωτήσεις του μέλους
+  global: 
+    by: από
+    current: τρέχουσα
+    from: από {{site}}
+    group_not_found: η σελίδα {{url}} δεν υπάρχει
+    or: ή
+    permission_denied: απαγορεύεται η πρόσβαση
+    please_login: παρακαλώ συνδεθείτε
+    preview: προεπισκόπηση
+    previous: προηγούμενη
+    share: διαμοιρασμός
+  languages: 
+    any: οποιαδήποτε
+    el: ελληνικά
+    en: αγγλικά
+    es: ισπανικά
+    es-AR: ισπανικά (Αργεντινή)
+    fr: γαλλικά
+    ja: Ιαπωνικά
+    pt: πορτογαλικά
+    pt-PT: πορτογαλικά (Πορτογαλία)
+    user: τις προτιμώμενες γλώσσες μου
+  messages: 
+    success: "{{model}} {{action}} επιτυχώς."
+  models: 
+    question: η ερώτηση
+  number: 
+    x_time: 
+      one: "{{count}} φορά"
+      other: "{{count}} φορές"
+      zero: ποτέ
+  scaffold: 
+    add: προσθήκη
     back: πίσω
-    update: ενημέρωση
     cancel: ακύρωση
     close: κλείδωμα
     create: δημιουργία
-    new: προσθήκη νέας {{model}}
-    more: "περισσότερα ..."
-    add: προσθήκη
-    send: αποστολή
-    save: αποθήκευση
+    destroy: διαγραφή
     details: λεπτομέρειες
-  time:
-    today: σήμερα
+    edit: επεξεργασία
+    more: περισσότερα ...
+    new: προσθήκη νέας {{model}}
+    save: αποθήκευση
+    send: αποστολή
+    show: προβολή
+    sure: είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την {{model}} ?
+    update: ενημέρωση
+  time: 
     ago: "{{time}} πριν"
-  messages:
-    success: "{{model}} {{action}} επιτυχώς."
-  models:
-    question: "η ερώτηση"
-  actions:
-    created:     δημιουργήθηκε
-    deleted:     διαγράφηκε
-    updated:     ενημερώθηκε
-    closed:      κλειδώθηκε
-  global:
-    from: "από {{site}}"
-    permission_denied: απαγορεύεται η πρόσβαση
-    please_login: παρακαλώ συνδεθείτε
-    group_not_found: "η σελίδα {{url}} δεν υπάρχει"
-    preview: προεπισκόπηση
-    or: ή
-    by: από
-    current: τρέχουσα
-    previous: προηγούμενη
-    share: διαμοιρασμός
-  feeds:
-    question: εγγραφείτε σ' αυτή την ερώτηση
-    questions: εγγραφείτε σε όλες τις ερωτήσεις
-    tag: εγγραφείτε στην ετικέτα
-    user: εγγραφείτε στις ερωτήσεις του μέλους
-    feed: ροή
-    post_new_questions: αποστολή νέων ερωτήσεων προς
-    share_on_twitter: "twitter, facebook και άλλα..."
-  languages:
-    el:      ελληνικά
-    en:      αγγλικά
-    es:      ισπανικά
-    es-AR:   ισπανικά (Αργεντινή)
-    fr:      γαλλικά
-    pt:      πορτογαλικά
-    pt-PT:   πορτογαλικά (Πορτογαλία)
-    ja:      Ιαπωνικά
-    any:     οποιαδήποτε
-    user:    τις προτιμώμενες γλώσσες μου
-  number:
-    x_time:
-      zero: "ποτέ"
-      one: "{{count}} φορά"
-      other: "{{count}} φορές"
+    today: σήμερα

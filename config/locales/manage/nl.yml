@@ -37,4 +37,5 @@ nl:
         share: 
           title: Delen
         theme: 
+          logo_legend: Upload een logo voor uw groep. Dit moet kleiner zijn dan 2MB.
           title: Instellingen voor het groepsthema

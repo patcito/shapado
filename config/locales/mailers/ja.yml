@@ -1,23 +1,23 @@
-ja:
-  mailers:
-    notifications:
-      new_answer:
-        subject_owner: "{{login}}があなたの質問に回答しました「{{title}}」"
-        subject_friend: "友達の{{login}}が「{{title}}」に回答しました"
-        subject_other: "{{login}}が質問に回答しました「{{title}}」"
-      new_comment:
-        subject: "{{login}}が{{group}}にコメントしました"
-      give_advice:
-        subject: "あなたのアドバイスを求めています: {{question_title}}"
-        friend_subject: "あなたの友達がヘルプを求めています: {{question_title}}"
-      follow:
-        subject: "{{login}}があなたをフォローしました {{app}}"
-      earned_badge:
-        subject: "バッヂをゲットしました！ {{group}}!"
-      favorited:
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: バッヂをゲットしました！ {{group}}!
+      favorited: 
         subject: "{{login}}があなたの質問をお気に入りに登録しました"
-      report:
+      follow: 
+        subject: "{{login}}があなたをフォローしました {{app}}"
+      give_advice: 
+        friend_subject: "あなたの友達がヘルプを求めています: {{question_title}}"
+        subject: "あなたのアドバイスを求めています: {{question_title}}"
+      new_answer: 
+        subject_friend: 友達の{{login}}が「{{title}}」に回答しました
+        subject_other: "{{login}}が質問に回答しました「{{title}}」"
+        subject_owner: "{{login}}があなたの質問に回答しました「{{title}}」"
+      new_comment: 
+        subject: "{{login}}が{{group}}にコメントしました"
+      report: 
         subject: "{{group}}の{{app}}に関するレポート"
-
-
-

@@ -1,89 +1,85 @@
-ja:
-  users:
-    login:
-      remember_me: "ログインを記録する"
-    index:
-      title: "全てのユーザ"
-      empty: "このグループはメンバーがいません。参加してください！"
-      filter: "ユーザを検索する"
-      reputation: "評価の高い順"
-      newest: "登録の新しい順"
-      oldest: "登録順"
-      name: "名前順"
-      reputation_tooltip: "評価の高い順にユーザを表示します"
-      newest_tooltip: "登録時間の新しい順にユーザを表示します"
-      oldest_tooltip: "登録時間順にユーザを表示します"
-      name_tooltip: "名前順にユーザを表示します"
-    new:
-      title: "新規ユーザ"
-      submit: "新規ユーザ登録"
-    edit:
-      title: "設定"
-      submit: "設定を変更する"
-      enable_twitter: Enable your facebook or twitter accounts
-    show:
-      follow: "フォローする"
-      unfollow: "フォロー解除"
-      views: "回表示"
-    follow:
-      flash_notice: "{{user}}があなたの友達になりました"
-    unfollow:
-      flash_notice: "{{user}}があなたの友達リストから除外されました"
-    deleted: "(削除済み)"
-    form:
-      information: "設定の編集"
-      notifications: "通知の設定"
-      new_answer_notification: "新しい回答を受け取ったらメールで通知する"
-      give_advice_notification: "自分の専門分野に対する質問が登録されたらメールで通知する"
-      activities_notification: "バッジやフォローを受けたらメールで通知する"
-      reports_notification: "グループに関する新しい活動レポートを受け取る（グループ管理者のみ）"
-      avatar_tip: "Gravatarを使ってアイコン画像を変更できます"
-    create:
-      flash_notice: "アカウントを作成しました。登録ありがとうございます！"
-      flash_error:  "アカウントの作成に失敗しました。以下のエラーメッセージを確認して修正してもらうか、管理者にご連絡ください。"
-    messages:
-      errors:
-        reputation_needed: "{{action}}をするには{{min_reputation}}の評価が必要です"
-        not_found: "指定されたユーザが存在しません"
-    actions:
-      vote_up: "＋の投票"
-      vote_down: "マイナスの投票"
-      flag: "報告をする"
-      edit_others_posts: "他のユーザの投稿を編集する"
-      edit_wiki_post: "Wikiポストを編集する"
-      retag_others_questions: "他人の質問のタグを編集する"
-      vote_to_close_own_question: "自分の質問について終了リクエストを出す"
-      vote_to_close_any_question: "任意の質問について終了リクエストを出す"
-  activerecord:
-    models:
-      users: "ユーザ"
-      user: "ユーザ"
-    attributes:
-      user:
-        login: "ログインID"
-        email: "メールアドレス"
-        name: "名前（表示名）"
-        current_password: "現在のパスワード"
-        password: "パスワード"
-        password_confirmation: "パスワード（確認入力）"
-        created_at: "登録時間"
-        updated_at: "更新時間"
-        activation_code: "認証コード"
-        activated_at: "認証時間"
-        fullname: "フルネーム"
-        language: "表示言語"
-        asked_by: "asked by"
-        timezone: "タイムゾーン"
-        preferred_tags: "お勧めタグ"
-        preferred_languages: "分かる言語を選択してください"
-        last_logged_at: "最新ログイン時間"
-        created_at: "参加した時間"
-        reputation: "評価"
-        bio: "自己紹介文"
-        avatar: "プロフィールイメージ"
-        hide_country: "国を表示しない"
-        language_filter: "言語でフィルタリング"
-        age: "年齢"
-        website: "Webサイト"
-        birthday: "誕生日"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: 認証時間
+        activation_code: 認証コード
         age: Age
+        asked_by: asked by
+        avatar: プロフィールイメージ
+        birthday: 誕生日
+        created_at: 参加した時間
+        current_password: 現在のパスワード
+        email: メールアドレス
+        fullname: フルネーム
+        hide_country: 国を表示しない
+        language: 表示言語
+        language_filter: 言語でフィルタリング
+        last_logged_at: 最新ログイン時間
+        login: ログインID
+        name: 名前（表示名）
+        password: パスワード
+        password_confirmation: パスワード（確認入力）
+        preferred_languages: 分かる言語を選択してください
+        preferred_tags: お勧めタグ
+        reputation: 評価
+        timezone: タイムゾーン
+        updated_at: 更新時間
+        website: Webサイト
+    models: 
+      user: ユーザ
+      users: ユーザ
+  users: 
+    actions: 
+      edit_others_posts: 他のユーザの投稿を編集する
+      edit_wiki_post: Wikiポストを編集する
+      flag: 報告をする
+      retag_others_questions: 他人の質問のタグを編集する
+      vote_down: マイナスの投票
+      vote_to_close_any_question: 任意の質問について終了リクエストを出す
+      vote_to_close_own_question: 自分の質問について終了リクエストを出す
+      vote_up: ＋の投票
+    create: 
+      flash_error: アカウントの作成に失敗しました。以下のエラーメッセージを確認して修正してもらうか、管理者にご連絡ください。
+      flash_notice: アカウントを作成しました。登録ありがとうございます！
+    edit: 
+      enable_twitter: Enable your facebook or twitter accounts
+      submit: 設定を変更する
+      title: 設定
+    follow: 
+      flash_notice: "{{user}}があなたの友達になりました"
+    form: 
+      activities_notification: バッジやフォローを受けたらメールで通知する
+      avatar_tip: Gravatarを使ってアイコン画像を変更できます
+      give_advice_notification: 自分の専門分野に対する質問が登録されたらメールで通知する
+      information: 設定の編集
+      new_answer_notification: 新しい回答を受け取ったらメールで通知する
+      notifications: 通知の設定
+      reports_notification: グループに関する新しい活動レポートを受け取る（グループ管理者のみ）
+    index: 
+      empty: このグループはメンバーがいません。参加してください！
+      filter: ユーザを検索する
+      name: 名前順
+      name_tooltip: 名前順にユーザを表示します
+      newest: 登録の新しい順
+      newest_tooltip: 登録時間の新しい順にユーザを表示します
+      oldest: 登録順
+      oldest_tooltip: 登録時間順にユーザを表示します
+      reputation: 評価の高い順
+      reputation_tooltip: 評価の高い順にユーザを表示します
+      title: 全てのユーザ
+    messages: 
+      errors: 
+        reputation_needed: "{{action}}をするには{{min_reputation}}の評価が必要です"
+    new: 
+      submit: 新規ユーザ登録
+      title: 新規ユーザ
+    show: 
+      follow: フォローする
+      unfollow: フォロー解除
+      views: 回表示
+    unfollow: 
+      flash_notice: "{{user}}があなたの友達リストから除外されました"

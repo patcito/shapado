@@ -1,18 +1,20 @@
-ja:
-  flags:
-    form:
-      spam: "スパム"
-      offensive: "攻撃的または虐待的な内容"
-      attention: "管理者の注意が必要です"
-      label: "以下の報告をします"
-    create:
-      flash_notice: "報告ありがとうございます"
-      flash_error: "この質問には報告できません"
-
-  activerecord:
-    models:
-      flags: "報告"
-      flag: "報告"
-    attributes:
-      flag:
-        type: "理由"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: 理由
+    models: 
+      flag: 報告
+      flags: 報告
+  flags: 
+    create: 
+      flash_error: この質問には報告できません
+      flash_notice: 報告ありがとうございます
+    form: 
+      attention: 管理者の注意が必要です
+      label: 以下の報告をします
+      offensive: 攻撃的または虐待的な内容
+      spam: スパム

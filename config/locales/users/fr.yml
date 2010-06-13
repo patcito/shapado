@@ -8,6 +8,7 @@ fr:
       user: 
         activated_at: activé le
         activation_code: code d'activation
+        age: Âge
         asked_by: posée par
         avatar: Image de profile
         birthday: Anniversaire
@@ -81,5 +82,6 @@ fr:
       follow: suivre
       title: User {{user}}
       unfollow: ne plus suivre
+      views: vues
     unfollow: 
       flash_notice: L'utilisateur {{user}} a été ajouté à votre liste d'amis

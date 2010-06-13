@@ -8,6 +8,7 @@ nl:
       user: 
         activated_at: Geactiveerd op
         activation_code: Activeringscode
+        age: Leeftijd
         asked_by: Gesteld door
         avatar: Profielafbeelding
         birthday: Geboortedatum
@@ -81,5 +82,6 @@ nl:
       follow: Volgen
       title: Gebruiker {{user}}
       unfollow: Niet langer volgen
+      views: keren bekeken
     unfollow: 
       flash_notice: De gebruiker {{user}} is niet langer uw vriend

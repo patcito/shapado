@@ -2,19 +2,20 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: G0rn
+# Author: Lockal
 ru: 
   comments: 
     create: 
-      flash_notice: спасибо за ваш комментарий
+      flash_notice: Спасибо за ваш комментарий
     edit: 
       title: Редактировать комментарий
     shared: 
-      add_comment: добавить комментарий…
-      comment_submit: комментировать
-      reply: ответить
+      add_comment: Добавить комментарий…
+      comment_submit: Комментировать
+      reply: Ответить
       said: написал(а)
     update: 
-      flash_notice: комментарий успешно обновлен.
+      flash_notice: Комментарий успешно обновлен.
   models: 
-    comment: комментарий
-    comments: комментарии
+    comment: Комментарий
+    comments: Комментарии

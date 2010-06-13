@@ -28,10 +28,12 @@ fr:
     share: share
   languages: 
     any: any
+    el: grecque
     en: anglais
     es: espagnol
     es-AR: espagnol d'amérique latine
     fr: français
+    ja: japonais
     pt: portugais
     pt-PT: portugais
     user: mes langues

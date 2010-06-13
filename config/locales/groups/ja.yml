@@ -1,83 +1,70 @@
-ja:
-  groups:
-    index:
-      title: "グループ"
-      filter: "グループを検索"
-      actives: "有効"
-      pendings: "審査中"
-      most_active: "アクティブ順"
-      request_group: "新しいグループのリクエスト"
-      name: "名前"
-      oldest: "登録順"
-      newest: "最新順"
-    group:
-      admin: "管理"
-      about: "詳細"
-      close: "閉鎖"
-      accept_group: "このサイトを有効にする"
-      close_group: "このサイトを閉じる"
-      allow_ads: "広告を有効化"
-      disallow_ads: "広告を無効化"
-    show:
-      admin: "管理"
-      title: "{{name}}について"
-      visit_group: "このサイトに行く"
-      group_awaiting_acceptance: "このグループは管理者の判断待ちです"
-      group_closed: "このサイトは閉鎖しています"
-      accept_group: "このサイトを有効にする"
-      close_group: "このサイトを閉鎖する"
-      accept_group_with_custom_ads: "グループの許可とカスタム広告の許可"
-    new:
-      title: "新しいサイトの作成"
-    create:
-      flash_notice: "あなたのサイトは作成されました。設定を変更してください"
-    form:
-      description_legend: "サイトに関する説明を400文字まで記述できます。"
-      legend_legend: "ヘッダー内で利用します。40文字まで設定できます。"
-      default_tags_legend: "各タグはカンマ区切りです。10個まで設定できます。"
-      logo_legend: "このサイト用のロゴがアップデートでいます。ファイルサイズは2MBまでです。"
-      any_language: "全ての言語"
-      access: "アクセス設定"
-      isolate_group: isolate the group form other groups
-      members_only: "only the group's members will be able to access this group"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: デフォルトタグ
+        description: 詳細
+        domain: ドメイン
+        forum: 1ユーザの2回以上の回答を許可する
+        group_created_by: 作成者
+        language: 言語
+        legend: 概要
+        logo: ロゴ
+        may_contain_adult_content: このサイトはアダルトコンテンツを含む
+        name: サイト名
+        openid_only: OpenIDで認証したユーザのみアクセス可能とする
+        owner: このサイトは {{login}}が作成しました
+        registered_only: 登録したユーザのみアクセス可能とする
+        state: ステータス
+        subdomain: URL
+        wysiwyg_editor: WYSIWYGエディタを利用する
+    models: 
+      default_tags_message: デフォルトタグは10個までです
+      group: グループ
+      groups: グループ
+  groups: 
+    create: 
+      flash_notice: あなたのサイトは作成されました。設定を変更してください
+    form: 
+      access: アクセス設定
+      analytics_engine: analytics Engine
+      analytics_legend: the group will be able to use its own tracking code
+      any_language: 全ての言語
+      custom_analytics: allow Custom Analytics
       custom_html: allow custom html
       custom_js: allow custom javascript
-      custom_analytics: allow Custom Analytics
-      analytics_engine: analytics Engine
+      default_tags_legend: 各タグはカンマ区切りです。10個まで設定できます。
+      description_legend: サイトに関する説明を400文字まで記述できます。
+      isolate_group: isolate the group form other groups
+      legend_legend: ヘッダー内で利用します。40文字まで設定できます。
+      logo_legend: このサイト用のロゴがアップデートでいます。ファイルサイズは2MBまでです。
+      members_only: only the group's members will be able to access this group
       website_analytics_id: website Analytics ID
-      analytics_legend: the group will be able to use its own tracking code
-    messages:
-      errors:
-        not_found: "グループが見つかりません"
-  activerecord:
-    models:
-      groups: "グループ"
-      group: "グループ"
-      default_tags_message: "デフォルトタグは10個までです"
-    attributes:
-      group:
-        name: "サイト名"
-        subdomain: "URL"
-        domain: "ドメイン"
-        legend: "概要"
-        description: "詳細"
-        state: "ステータス"
-        owner: "このサイトは {{login}}が作成しました"
-        group_created_by: "作成者"
-        language: "言語"
-        default_tags: "デフォルトタグ"
-        logo: "ロゴ"
-        forum: "1ユーザの2回以上の回答を許可する"
-        openid_only: "OpenIDで認証したユーザのみアクセス可能とする"
-        registered_only: "登録したユーザのみアクセス可能とする"
-        may_contain_adult_content: "このサイトはアダルトコンテンツを含む"
-        wysiwyg_editor: "WYSIWYGエディタを利用する"
-  "isolate the group form other groups": "他のグループから独立させる"
-  "Only the group's members will be able to access this group": "このサイトにはグループのメンバーのみアクセス可能とする"
-  "Allow custom html": "カスタムHTMLを許可"
-  "Allow custom javascript": "独自のJavaScriptを許可"
-  "Allow Custom Analytics": "独自の解析タグを許可"
-  "The group will be able to use its own tracking code": "このサイトで独自の解析タグを利用できるようにします"
-  "Analytics Engine": "解析エンジン"
-  "Google Analytics": "Google Analytics"
-  "Website Analytics ID": "解析用ID"
+    group: 
+      about: 詳細
+      accept_group: このサイトを有効にする
+      allow_ads: 広告を有効化
+      close: 閉鎖
+      close_group: このサイトを閉じる
+      disallow_ads: 広告を無効化
+    index: 
+      actives: 有効
+      filter: グループを検索
+      most_active: アクティブ順
+      name: 名前
+      pendings: 審査中
+      request_group: 新しいグループのリクエスト
+      title: グループ
+    new: 
+      title: 新しいサイトの作成
+    show: 
+      accept_group: このサイトを有効にする
+      accept_group_with_custom_ads: グループの許可とカスタム広告の許可
+      close_group: このサイトを閉鎖する
+      group_awaiting_acceptance: このグループは管理者の判断待ちです
+      group_closed: このサイトは閉鎖しています
+      title: "{{name}}について"
+      visit_group: このサイトに行く

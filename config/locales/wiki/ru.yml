@@ -5,18 +5,18 @@
 ru: 
   wiki: 
     actions: 
-      all_history: возврат к истории
-      back_to_question: возврат к вопросу
-      revert: откатить к этой версии
-      show_diff: сравнить выбранные верии
+      all_history: Возврат к истории
+      back_to_question: Возврат к вопросу
+      revert: Откатить к этой версии
+      show_diff: Сравнить выбранные верии
     diff: 
-      title: различия между {{prev}} и {{curr}}
+      title: Различия между {{prev}} и {{curr}}
     history: 
-      current_version: текущая версия
-      previous_versions: предыдущие версии
-      title: история ({{count}})
-      version: версия
-      version_summary: краткое описание версии
+      current_version: Текущая версия
+      previous_versions: Предыдущие версии
+      title: История ({{count}})
+      version: Версия
+      version_summary: Краткое описание версии
     model: 
       attributes: 
-        message: краткое описание
+        message: Краткое описание

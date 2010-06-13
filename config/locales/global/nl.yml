@@ -24,15 +24,17 @@ nl:
     or: of
     permission_denied: Geen toegang
     please_login: Meld u aan
-    preview: Voorbeeld
+    preview: Voorvertoning
     previous: vorige
     share: Delen
   languages: 
     any: Alle
+    el: Grieks
     en: Engels
     es: Engels
     es-AR: Latijns-Amerikaans Spaans
     fr: Frans
+    ja: Japans
     pt: Portugees
     pt-PT: Portugees
     user: Voorkeurstalen

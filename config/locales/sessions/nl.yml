@@ -13,6 +13,8 @@ nl:
       log_in: Aanmelden
       not_registered: Nog niet geregistreerd?
       registered: Al geregistreerd?
+      remember_me: Aanmeldgegevens onthouden
+      sign_in: Aanmelden
       signup: Registreren
       with_authentication: Aanmelden via ons aanmeldingssysteem
       with_facebook: Aanmelden met Facebook

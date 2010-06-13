@@ -1,8 +1,11 @@
-ja:
-  shared:
-    topbar:
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  shared: 
+    current_tags: 
+      title: 選択しているタグ
+    topbar: 
+      admin: 管理者
       logged_as: "{{login}}としてログイン中"
-      admin: "管理者"
-      user_page: "マイページ"
-    current_tags:
-      title: "選択しているタグ"
+      user_page: マイページ

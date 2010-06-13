@@ -1,12 +1,15 @@
-el:
-  activerecord:
-    attributes:
-      member:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  activerecord: 
+    attributes: 
+      member: 
         role: ρόλος
-  members:
-    index:
-      title: "μέλη της ομάδας {{name}}"
-      title_isolate: "μέλη της ομάδας {{name}}"
+  members: 
+    form: 
+      login_tip: αναζήτηση κατά την πληκτρολόγηση
+    index: 
       manage_members_title: διαχείριση μελών
-    form:
-      login_tip: "αναζήτηση κατά την πληκτρολόγηση"
+      title: μέλη της ομάδας {{name}}
+      title_isolate: μέλη της ομάδας {{name}}

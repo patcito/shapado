@@ -1,10 +1,12 @@
-ja:
-  favorites:
-    create:
-      unauthenticated: "ログインしないとお気に入り登録はできません"
-      success:         "この質問はお気に入りに登録されました"
-
-  activerecord:
-    models:
-      favorites: "お気に入り"
-      favorite: "お気に入り"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    models: 
+      favorite: お気に入り
+      favorites: お気に入り
+  favorites: 
+    create: 
+      success: この質問はお気に入りに登録されました
+      unauthenticated: ログインしないとお気に入り登録はできません

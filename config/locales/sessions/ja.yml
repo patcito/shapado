@@ -1,18 +1,21 @@
-ja:
-  sessions:
-    create:
-      flash_notice: "ログイン成功しました"
-      flash_error: "ログインできません。ユーザ名'{{login}}'"
-    destroy:
-      flash_notice: "ログアウトしました"
-    new:
-      with_openid: "OpenIDを使ってログインする"
-      with_facebook: "Facebookを使ってログインする"
-      with_twitter: "Twitterを使ってログインする"
-      with_authentication: "iPhone Worldの認証システムを利用する"
-      registered: "既に登録済みの方はこちら"
-      not_registered: "まだ未登録の方はこちら"
-      log_in: "ログイン"
-      signup: "ユーザ登録"
-      sign_in: sign in
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  sessions: 
+    create: 
+      flash_error: ログインできません。ユーザ名'{{login}}'
+      flash_notice: ログイン成功しました
+    destroy: 
+      flash_notice: ログアウトしました
+    new: 
+      log_in: ログイン
+      not_registered: まだ未登録の方はこちら
+      registered: 既に登録済みの方はこちら
       remember_me: remember me
+      sign_in: sign in
+      signup: ユーザ登録
+      with_authentication: iPhone Worldの認証システムを利用する
+      with_facebook: Facebookを使ってログインする
+      with_openid: OpenIDを使ってログインする
+      with_twitter: Twitterを使ってログインする

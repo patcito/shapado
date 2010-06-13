@@ -1,12 +1,15 @@
-ja:
-  activerecord:
-    attributes:
-      member:
-        role: "権限"
-  members:
-    index:
-      title: "グループ{{name}}のメンバー"
+# Messages for Japanese (日本語)
+# Exported from translatewiki.net
+# Export driver: syck
+ja: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: 権限
+  members: 
+    form: 
+      login_tip: 検索します
+    index: 
+      manage_members_title: メンバーの管理
+      title: グループ{{name}}のメンバー
       title_isolate: "{{name}}のメンバー"
-      manage_members_title: "メンバーの管理"
-    form:
-      login_tip: "検索します"

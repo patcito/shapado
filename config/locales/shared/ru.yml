@@ -1,12 +1,13 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Lockal
 # Author: Александр Сигачёв
 ru: 
   shared: 
     current_tags: 
-      title: выбранные метки
+      title: Выбранные метки
     topbar: 
-      admin: админ
-      logged_as: вошли как {{login}}
-      user_page: моя страница
+      admin: Администрирование
+      logged_as: Вы вошли как {{login}}
+      user_page: Моя страница

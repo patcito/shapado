@@ -2,54 +2,59 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: G0rn
+# Author: Lockal
 ru: 
   actions: 
-    closed: закрыто
+    closed: Закрыто
     created: создано
     deleted: удалено
     updated: обновлено
   feeds: 
     feed: Канал
-    post_new_questions: отправить новые вопросы в
-    question: подписаться на этот вопрос
-    questions: подписаться на все вопросы
+    post_new_questions: Отправить новые вопросы в
+    question: Подписаться на этот вопрос
+    questions: Подписаться на все вопросы
     share_on_twitter: twitter, facebook и другое...
-    tag: подписаться на тег
-    user: подписаться на вопросы пользователя
+    tag: Подписаться на тег
+    user: Подписаться на вопросы пользователя
   global: 
-    current: текущий
+    current: Текущий
     group_not_found: Страница {{url}} не существует
     or: или
-    permission_denied: доступ запрещён
-    please_login: пожалуйста, представьтесь
-    preview: предпросмотр
-    previous: предыдущий
+    permission_denied: Доступ запрещён
+    please_login: Представьтесь, пожалуйста
+    preview: Предпросмотр
+    previous: Предыдущий
   languages: 
-    any: любой
-    en: английский
-    es: испанский
-    es-AR: латиноамериканский испанский
-    fr: французский
-    pt: португальский
-    pt-PT: португальский
+    any: Любой
+    el: Греческий
+    en: Английский
+    es: Испанский
+    es-AR: Латиноамериканский испанский
+    fr: Французский
+    ja: Японский
+    pt: Португальский
+    pt-PT: Португальский
+    user: Мои предпочитаемые языки
   models: 
-    question: вопрос
+    question: Вопрос
   number: 
     x_time: 
-      zero: никогда
+      zero: Никогда
   scaffold: 
-    add: добавить
-    back: назад
-    cancel: отменить
-    close: закрыть
-    create: создать
-    destroy: удалить
-    details: подробности
-    edit: править
-    save: сохранить
-    send: отправить
-    show: показать
-    update: обновить
+    add: Добавить
+    back: Назад
+    cancel: Отменить
+    close: Закрыть
+    create: Создать
+    destroy: Удалить
+    details: Подробности
+    edit: Редактировать
+    more: Далее…
+    save: Сохранить
+    send: Отправить
+    show: Показать
+    update: Обновить
   time: 
     ago: "{{time}} назад"
     today: сегодня

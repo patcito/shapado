@@ -1,37 +1,40 @@
-el:
-  admin:
-    manage:
-      content:
-        title: προσαρμοσμένο περιεχόμενο
-        question_prompt: προτροπή ερώτησης
-        question_help: βοήθεια ερώτησης
-        head: κεφαλίδα
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  admin: 
+    manage: 
+      content: 
         footer: υποσέλιδο
+        head: κεφαλίδα
+        question_help: βοήθεια ερώτησης
+        question_prompt: προτροπή ερώτησης
+        title: προσαρμοσμένο περιεχόμενο
         top_bar: πάνω μπάρα
         top_bar_tip: εισάγετε ένα σύνδεσμο ανά γραμμή
-      properties:
-        general:
-          title: ιδιότητες ομάδας
-        share:
-          title: διαμοιρασμός
-        constrains:
-          title: περιορισμοί
-          reputation_constrains_subtitle: κατάλογος απαιτούμενης υπόληψης για κάθε ενέργεια
+      properties: 
+        constrains: 
           reputation_constrains_description: αυτές οι τιμές σας δίνουν τη δυνατότητα να καθορίσετε πόσους πόντους υπόληψης πρέπει να έχουν τα μέλη για να τους επιτρέπονται συγκεκριμένες ενέργειες
-        rewards:
-          title: ανταμοιβές
-          reputation_rewards_subtitle: κατάλογος ανταμοιβών υπόληψης
-          reputation_rewards_description: οι τιμές παρακάτω σας δίνουν τη δυνατότητα να ρυθμίσετε πως τα μέλη κερδίζουν ή χάνουν πόντους υπόληψης για τις ενέργειές τους
-        theme:
-          title: ρυθμίστε το θέμα της ομάδας σας
-          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
-        domain:
-          title: ρυθμίστε το domain
+          reputation_constrains_subtitle: κατάλογος απαιτούμενης υπόληψης για κάθε ενέργεια
+          title: περιορισμοί
+        domain: 
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
-          instruction1: "To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com)."
+          instruction1: To do so you first need to log on to your domain provider (the site where you bought your domain such as {{subdomain}}.com).
           instruction2: There you need to go to the DNS section and create something called a CNAME.
-          instruction3: "Pick 'www' or anything else as the name of your CNAME."
+          instruction3: Pick 'www' or anything else as the name of your CNAME.
           instruction4: "Then in the host or destination field, put your current shapado domain: {{domain}}."
-          instruction5: "Once this is done, after an hour or so, your domain www.{{subdomain}} should point to {{appdomain}}."
-          instruction6: "When this is the case, come back here and put your domain name www.{{subdomain}} in the field below and press the button 'update'. If you have questions, ask us in the {{chat_url}} or on our support forum"
+          instruction5: Once this is done, after an hour or so, your domain www.{{subdomain}} should point to {{appdomain}}.
+          instruction6: When this is the case, come back here and put your domain name www.{{subdomain}} in the field below and press the button 'update'. If you have questions, ask us in the {{chat_url}} or on our support forum
+          title: ρυθμίστε το domain
           warning: Είστε σίγουροι ότι θέλετε να αλλάξετε το domain σας;
+        general: 
+          title: ιδιότητες ομάδας
+        rewards: 
+          reputation_rewards_description: οι τιμές παρακάτω σας δίνουν τη δυνατότητα να ρυθμίσετε πως τα μέλη κερδίζουν ή χάνουν πόντους υπόληψης για τις ενέργειές τους
+          reputation_rewards_subtitle: κατάλογος ανταμοιβών υπόληψης
+          title: ανταμοιβές
+        share: 
+          title: διαμοιρασμός
+        theme: 
+          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
+          title: ρυθμίστε το θέμα της ομάδας σας

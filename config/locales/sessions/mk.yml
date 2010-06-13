@@ -13,6 +13,8 @@ mk:
       log_in: најава
       not_registered: сè уште не сте регистрирани?
       registered: веќе сте регистрирани?
+      remember_me: Запомни ме
+      sign_in: Најава
       signup: регистрација
       with_authentication: најава со нашиот потврден систем
       with_facebook: најава со Facebook

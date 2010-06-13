@@ -1,26 +1,29 @@
-el:
-  widgets:
-    index:
-      title: διαχείριση των sidebar widgets
-      description: χρησιμοποιείστε τα βελάκια για να μετακινήσετε τα widgets
-    badges:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  widgets: 
+    badges: 
+      description: παρουσιάζει τους τίτλους που χορηγήθηκαν πρόσφατα
       title: πρόσφατοι τίτλοι
-      description: "παρουσιάζει τους τίτλους που χορηγήθηκαν πρόσφατα"
-    groups:
+    groups: 
+      description: παρουσιάζει τις νεότερες ομάδες
       title: πρόσφατες ομάδες
-      description: "παρουσιάζει τις νεότερες ομάδες"
-    top_groups:
-      title: κορυφαίες 5 ομάδες
-      description: "παρουσιάζει τις κορυφαίες 5 ομάδες"
-    top_users:
-      title: κορυφέα 5 μέλη
-      description: "παρουσιάζει τα κορυφαία 5 μέλη"
-    users:
-      title: πρόσφατα μέλη
-      description: "παρουσιάζει τα νεότερα εγγεγραμμένα μέλη"
-    tag_cloud:
-      title: νέφος ετικετών
-      description: "παρουσιάζει το νέφος ετικετών"
-    pages:
+    index: 
+      description: χρησιμοποιείστε τα βελάκια για να μετακινήσετε τα widgets
+      title: διαχείριση των sidebar widgets
+    pages: 
+      description: παρουσιάζει τον κατάλογο των σελίδων wiki
       title: σελίδες wiki
-      description: "παρουσιάζει τον κατάλογο των σελίδων wiki"
+    tag_cloud: 
+      description: παρουσιάζει το νέφος ετικετών
+      title: νέφος ετικετών
+    top_groups: 
+      description: παρουσιάζει τις κορυφαίες 5 ομάδες
+      title: κορυφαίες 5 ομάδες
+    top_users: 
+      description: παρουσιάζει τα κορυφαία 5 μέλη
+      title: κορυφέα 5 μέλη
+    users: 
+      description: παρουσιάζει τα νεότερα εγγεγραμμένα μέλη
+      title: πρόσφατα μέλη

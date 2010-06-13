@@ -1,27 +1,30 @@
-el:
-  close_requests:
-    index:
-      title: κατάλογος αιτήσεων κλειδώματος
-    form:
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  close_requests: 
+    create: 
+      flash_notice: η αίτηση κλειδώματος δημιουργήθηκε επιτυχώς
+    destroy: 
+      flash_notice: η αίτηση κλειδώματος διαγράφηκε επιτυχώς
+    form: 
+      close_with_reason: κλείδωσε αυτή την ερώτηση με αυτό τον λόγο
       dupe: αντίγραφο
-      ot: εκτός θέματος
       no_question: όχι ερώτηση
       not_relevant: άσχετο
-      spam: spam
+      ot: εκτός θέματος
       request_closing_details: αίτηση για να κλειδωθεί η ερώτηση
-      close_with_reason: κλείδωσε αυτή την ερώτηση με αυτό τον λόγο
-    create:
-      flash_notice: η αίτηση κλειδώματος δημιουργήθηκε επιτυχώς
-    update:
-      flash_notice: η αίτηση κλειδώματος ενημερώθηκε επιτυχώς
-    destroy:
-      flash_notice: η αίτηση κλειδώματος διαγράφηκε επιτυχώς
-    model:
+      spam: spam
+    index: 
+      title: κατάλογος αιτήσεων κλειδώματος
+    model: 
+      attributes: 
+        comment: σχόλιο
+        reason: αιτία
+        user: μέλος
+      messages: 
+        already_requested: έχετε ήδη ζητήσει να κλειδωθεί αυτή η ερώτηση
       name: αίτηση κλειδώματος
       prural_name: αιτήσεις κλειδώματος
-      messages:
-        already_requested: "έχετε ήδη ζητήσει να κλειδωθεί αυτή η ερώτηση"
-      attributes:
-        user: μέλος
-        reason: αιτία
-        comment: σχόλιο
+    update: 
+      flash_notice: η αίτηση κλειδώματος ενημερώθηκε επιτυχώς

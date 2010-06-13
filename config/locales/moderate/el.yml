@@ -1,12 +1,15 @@
-el:
-  admin:
-    moderate:
-      index:
-        title: moderate
-        ban: απαγόρευση
-        content: περιεχόμενο
-        item_title: τίτλος
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+el: 
+  admin: 
+    moderate: 
+      index: 
         all: όλα
-        flagged: αναφερόμενες ερωτήσεις
+        ban: απαγόρευση
         banned: απαγορευμένες ερωτήσεις
+        content: περιεχόμενο
+        flagged: αναφερόμενες ερωτήσεις
+        item_title: τίτλος
         need_tags: αλλαγή ετικετών
+        title: moderate
