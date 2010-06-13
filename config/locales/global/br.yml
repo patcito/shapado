@@ -1,0 +1,55 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  actions: 
+    closed: serret
+    created: krouet
+    deleted: diverket
+    updated: hizivaet
+  global: 
+    by: gant
+    current: Red
+    from: eus {{site}}
+    or: pe
+    please_login: Mar plij kevreit
+    preview: Rakwelet
+    previous: Kent
+  languages: 
+    el: Gresianeg
+    en: Saozneg
+    es: Spagnoleg
+    es-AR: Spagnoleg Amerika Latina
+    fr: Galleg
+    ja: Japaneg
+    pt: Portugaleg
+    pt-PT: Portugaleg
+    user: Ma yezhoù karetañ
+  messages: 
+    success: "{{model}} a zo bet {{action}}."
+  models: 
+    question: Ar goulenn
+  number: 
+    x_time: 
+      one: "{{count}} gwech"
+      other: "{{count}} gwech"
+      zero: Morse
+  scaffold: 
+    add: Ouzhpennañ
+    back: Distreiñ
+    cancel: Nullañ
+    close: Serriñ
+    create: Krouiñ
+    destroy: Diverkañ
+    details: Munudoù
+    edit: Kemmañ
+    more: Muioc'h...
+    new: Ouzhpennañ {{model}}
+    save: Enrollañ
+    send: Kas
+    show: Diskouez
+    update: Hizivaat
+  time: 
+    ago: "{{time}} zo"
+    today: hiziv

@@ -1,0 +1,47 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      group: 
+        description: Deskrivadur
+        domain: Domani
+        forum: Aotreañ muioc'h eget ur respont dre implijer
+        group_created_by: krouet gant
+        language: Yezh
+        legend: Alc'hwez
+        logo: Logo
+        name: Anv
+        state: Stad
+        subdomain: Url
+    models: 
+      group: Strollad
+      groups: Strolladoù
+  groups: 
+    form: 
+      any_language: Forzh pehini
+    group: 
+      about: Diwar-benn
+      accept_group: Asantiñ ar strollad-mañ
+      allow_ads: Aotreañ ar bruderezhioù
+      close: Serriñ
+      close_group: Serriñ ar strollad-mañ
+      disallow_ads: Nac'hañ ar bruderezhioù
+    index: 
+      actives: Oberiant
+      filter: Klask strolladoù
+      most_active: Oberiantañ
+      name: Anv
+      pendings: o c'hortoz
+      request_group: Goulenn ur strollad nevez
+      title: Strolladoù
+    new: 
+      title: Krouiñ ho strollad
+    show: 
+      accept_group: Asantiñ ar strollad-mañ
+      close_group: Serriñ ar strollad-mañ
+      group_closed: Serret eo bet ar strollad-mañ.
+      title: Diwar-benn {{name}}
+      visit_group: Gweladenniñ ar strollad-mañ

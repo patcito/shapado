@@ -1,0 +1,25 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    models: 
+      vote: Stimme
+      votes: Stimmen
+  votes: 
+    control: 
+      have_voted_down: Klicke hier, um Deine negative Stimme zurückzunehmen
+      have_voted_up: Klicke hier, um Deine positive Stimme zurückzunehmen
+      to_vote_down: Hier für eine negative Stimme klicken
+      to_vote_up: Hier für eine positive Stimme klicken
+    create: 
+      flash_error: Du kannst hierüber nicht abstimmen
+      flash_notice: Vielen Dank für Deine Stimme!
+      unauthenticated: Anonyme Nutzer können nicht abstimmen
+    destroy: 
+      flash_notice: Deine Stimme wurde erfolgreich zurückgenommen.
+    model: 
+      messages: 
+        closed_question: Du kannst für keine Beiträge abstimmen, die zu einer erledigten Frage gehören.
+        vote_down_comment: Bei Kommentaren kann nicht negativ abgestimmt werden

@@ -1,0 +1,36 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  welcome: 
+    facts: 
+      features: 
+        cols: 
+          adaptable: лёгкая адаптация
+          foss: бесплатный/открытый исходный код
+          multilanguage: многоязычность
+        shapado: 
+          adaptable: да!
+          foss: да!
+          joel: нет :/
+          multilanguage: да!
+          multitopic: да!
+        stackexchange: 
+          adaptable: нет
+          foss: нет
+          joel: да!
+          multilanguage: нет
+          multitopic: нет
+      prices: 
+        cols: 
+          onsite: на сайте
+        shapado: 
+          medium: <=== то же самое
+        stackexchange: 
+          large: $1299/месяц
+          medium: $999/месяц
+          onsite: $2500/месяц
+          small: $129/месяц
+    index: 
+      hot: Горячие

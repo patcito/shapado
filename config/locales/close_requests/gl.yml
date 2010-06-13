@@ -1,0 +1,31 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  close_requests: 
+    create: 
+      flash_notice: a solicitude de peche creouse correctamente
+    destroy: 
+      flash_notice: a solicitude de peche borrouse correctamente
+    form: 
+      close_with_reason: pechar esta pregunta por este motivo
+      dupe: duplicado
+      no_question: non é unha pregunta
+      not_relevant: non é relevante
+      ot: fóra do tema
+      request_closing_details: solicitar o peche desta pregunta
+      spam: spam
+    index: 
+      title: lista de solicitudes de peche
+    model: 
+      attributes: 
+        comment: comentario
+        reason: motivo
+        user: usuario
+      messages: 
+        already_requested: xa solicitou o peche desta pregunta
+      name: solicitude de peche
+      prural_name: solicitudes de peche
+    update: 
+      flash_notice: a solicitude de peche actualizouse correctamente

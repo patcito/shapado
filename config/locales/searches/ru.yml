@@ -1,0 +1,13 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  searches: 
+    form: 
+      clear: Очистить
+      search_box_title: Проверьте, не был ли этот вопрос задан ранее
+    index: 
+      empty: По вашему запросу не найдено ни одного вопроса.
+      search_text: Вопросы, содержащие
+      tags: с этими тегами

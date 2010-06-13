@@ -1,0 +1,22 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  errors: 
+    forbidden: 
+      explanation: Du hast nicht die erforderlichen Rechte, um auf diese Seite zugreifen zu können.
+      title: Zugriff verweigert
+    go_to: gehe zur Seite {{link}}
+    help_us_answer: Helfe uns {{link}} zu beantworten
+    internal_error: 
+      explanation: Wir wurden hierüber informiert und werden es uns in Kürze ansehen.
+      title: Es tut uns Leid, aber irgend etwas ist schief gelaufen.
+    not_found: 
+      explanation: Du könntest die Adresse vertippt haben, oder die Seite wurde verschoben.
+      title: Die Seite wurde nicht gefunden.
+    options_label: "andere Sachen zum Versuchen:"
+    search: Suche
+    unprocessable_entity: 
+      explanation: Vielleicht wolltest Du etwas ändern, auf das Du keinen Zugriff hast.
+      title: Die von Dir gewünschte Änderung wurde abgelehnt.

@@ -1,0 +1,14 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rol
+  members: 
+    index: 
+      manage_members_title: Izili merañ
+      title: Izili ar strollad {{name}}
+      title_isolate: Izili {{name}}

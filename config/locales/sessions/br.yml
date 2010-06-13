@@ -1,0 +1,17 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  sessions: 
+    create: 
+      flash_notice: Deuet oc'h a-benn da gevreañ
+    destroy: 
+      flash_notice: Digevreet oc'h bet.
+    new: 
+      log_in: Kevreañ
+      not_registered: N'oc'h ket enrollet c'hoazh ?
+      registered: Enrollet oc'h dija ?
+      remember_me: Derc'hel soñj ac'hanon
+      signup: En em enskrivañ
+      with_openid: Kevreañ gant openid

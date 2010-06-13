@@ -1,0 +1,20 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  comments: 
+    create: 
+      flash_notice: grazas polo seu comentario
+    edit: 
+      title: Editar o comentario
+    shared: 
+      add_comment: engadir un comentario...
+      comment_submit: comentar
+      reply: responder
+      said: dixo
+    update: 
+      flash_notice: o comentario actualizouse correctamente.
+  models: 
+    comment: comentario
+    comments: comentarios

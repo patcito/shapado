@@ -1,0 +1,30 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  widgets: 
+    badges: 
+      description: Dieses Widget zeigt die Abzeichen an, die kürzlich an Nutzer oder Fragen vergeben wurden
+      title: kürzlich vergebene Abzeichen
+    groups: 
+      description: Dieses Widget zeigt die fünf neuesten Gruppen an
+      title: kürzlich aktive Gruppen
+    index: 
+      description: Verwende die Pfeile, um Deine Widgets zu verschieben
+      title: Widgets der Seitenleiste verwalten
+    pages: 
+      description: Dieses Widget zeigt die Liste der Wiki-Seiten an
+      title: Wiki-Seiten
+    tag_cloud: 
+      description: Dieses Widget zeigt die Stichwortwolke an
+      title: Stichwortwolke
+    top_groups: 
+      description: Dieses Widget zeigt die fünf aktivsten Gruppen an
+      title: Top 5 Gruppen
+    top_users: 
+      description: Dieses Widget zeigt die fünf aktivsten Nutzer an
+      title: Top 5 Nutzer
+    users: 
+      description: Dieses Widget zeigt die neu registrierten Nutzer an
+      title: kürzlich aktive Nutzer

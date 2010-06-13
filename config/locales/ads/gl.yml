@@ -1,0 +1,16 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  ads: 
+    ad_links: engadir un novo anuncio {{type}}
+    create: 
+      success: o anuncio creouse correctamente.
+    index: 
+      add_adbard: engadir un novo anuncio
+      add_adsense: engadir un novo anuncio do Google
+      title: anuncios
+    name: "nome:"
+    position: "posición:"
+    title: engadir un novo anuncio {{type}}

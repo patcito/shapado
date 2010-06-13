@@ -1,0 +1,51 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: gweredekaet d'an
+        activation_code: Kod gweredekadur
+        age: Oad
+        asked_by: goulennet gant
+        avatar: Skeudenn profil
+        birthday: Deiz-ha-bloaz
+        current_password: Ger-tremen a-vremañ
+        email: Postel
+        fullname: Anv klok
+        hide_country: Chom hep diskwel ma bro
+        language: Yezh
+        language_filter: Sil dre yezh
+        last_logged_at: gwelet
+        login: Anv implijer
+        name: Anv gwir
+        password: Ger-tremen
+        password_confirmation: Kadarnadur ar ger-tremen
+        preferred_languages: Dibabit ar yezhoù a anavezit
+        reputation: Brud
+        timezone: Gwerzhid-eur
+        updated_at: hizivaet d'an
+        website: Lec'hienn internet
+    models: 
+      user: Implijer
+      users: Implijerien
+  users: 
+    edit: 
+      enable_twitter: Gweredekaat ho kont facebook pe twitter
+      submit: Enrollañ
+    form: 
+      information: Titouroù
+      notifications: Kemennoù
+    index: 
+      filter: Klask implijerien
+      name: Anv
+      title: An holl implijerien
+    new: 
+      submit: En em enskrivañ
+    show: 
+      follow: Heuliañ
+      title: Implijer {{user}}
+      unfollow: chom hep heuliañ
+      views: gweladennoù

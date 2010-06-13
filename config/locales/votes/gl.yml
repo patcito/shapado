@@ -1,0 +1,25 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    models: 
+      vote: voto
+      votes: votos
+  votes: 
+    control: 
+      have_voted_down: prema para anular a súa desaprobación
+      have_voted_up: prema para anular a súa aprobación
+      to_vote_down: prema para desaprobar
+      to_vote_up: prema para aprobar
+    create: 
+      flash_error: non pode votar nisto
+      flash_notice: grazas polo seu voto!
+      unauthenticated: os usuarios anónimos non poden votar
+    destroy: 
+      flash_notice: o seu voto riscouse correctamente.
+    model: 
+      messages: 
+        closed_question: non pode votar nas entradas pertencentes a unha pregunta pechada
+        vote_down_comment: os comentarios non se poden desaprobar

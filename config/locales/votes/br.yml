@@ -1,0 +1,17 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    models: 
+      vote: Mouezhiañ
+      votes: Mouezhioù
+  votes: 
+    control: 
+      have_voted_up: Klikit evit nullañ ho aprouadenn
+      to_vote_up: Klikit ma aprouit
+    create: 
+      flash_error: Ne c'hellit ket votiñ an dra-se
+      flash_notice: Trugarez deoc'h da vezañ mouezhiet !
+      unauthenticated: Ne c'hell ket an implijerien dizanv mouezhiañ

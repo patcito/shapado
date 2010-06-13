@@ -1,0 +1,31 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  close_requests: 
+    create: 
+      flash_notice: Beendigungsanfrage wurde erfolgreich erstellt
+    destroy: 
+      flash_notice: Beendigungsanfrage wurde erfolgreich gelöscht
+    form: 
+      close_with_reason: Frage unter Verwendung dieses Grundes beenden
+      dupe: Duplikat
+      no_question: keine Frage
+      not_relevant: nicht relevant
+      ot: nicht zum Thema gehörig
+      request_closing_details: Beendigungsanfrage zu dieser Frage
+      spam: Spam
+    index: 
+      title: Liste der Beendigungsanfragen
+    model: 
+      attributes: 
+        comment: Kommentar
+        reason: Grund
+        user: Nutzer
+      messages: 
+        already_requested: Du hast bereits die Beendigung dieser Frage beantragt
+      name: Beendigungsanfrage
+      prural_name: Beendigungsanfragen
+    update: 
+      flash_notice: Beendigungsanfrage wurde erfolgreich aktualisiert

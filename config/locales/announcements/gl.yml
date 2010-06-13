@@ -1,0 +1,20 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: remata o
+        message: mensaxe
+        only_anonymous: só para usuarios anónimos
+        starts_at: comeza o
+  announcements: 
+    actions: 
+      delete: eliminar
+      title: accións
+    create: 
+      success: o aviso creouse correctamente.
+    index: 
+      title: avisos

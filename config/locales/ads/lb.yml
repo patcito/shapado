@@ -1,0 +1,12 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  ads: 
+    create: 
+      success: D'Reklamm gouf ugeluecht.
+    index: 
+      title: Reklammen
+    name: "Numm:"
+    position: "Positioun:"

@@ -1,0 +1,30 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Follenn stil
+        js: Javascript
+    models: 
+      page: Pajenn
+      pages: Pajennoù
+  pages: 
+    actions: 
+      create_page: Krouiñ ur bajenn nevez
+      edit_page: Kemmañ ar bajenn
+      title: Oberoù
+    edit: 
+      title: O kemmañ ar bajenn
+    form: 
+      language_tip: Yezh ar bajenn
+    index: 
+      create_page: Krouiñ ur bajenn nevez
+      title: Roll ar pajennoù
+      written_in: Skrivet e {{language}}
+    new: 
+      title: Pajenn nevez
+    update: 
+      success: Hizivaet-mat eo bet ar bajenn

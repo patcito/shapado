@@ -1,0 +1,45 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  layouts: 
+    application: 
+      ask_question: Задать вопрос
+      forgot: Забыли?
+      home: В начало
+      languages: Языки
+      log_in: Войти
+      logout: Выход
+      manage_ads: Управление рекламой
+      moderate: Модерация
+      now: сейчас!
+      openid: 
+        explaination: "Если вы хотите зарегистрироваться или просто войти в систему, пожалуйста, выберите своего openid-провайдера:"
+      pages: Страницы
+      questions: Вопросы
+      questions_in: Вопросы в
+      questions_tagged: с тегом
+      search: Найти
+      settings: Настройки
+      signup: Регистрация
+      subscribe: Подписка
+      tags: Теги
+      title: Вопросы и ответы
+      unanswered: Без ответов
+      users: Пользователи
+      welcome_from: Добро пожаловать! Вы можете
+    manage: 
+      actions: Действия
+      announcements: Объявления
+      constrains: Ограничения
+      content: Содержимое
+      domain: Домен
+      general: Общие
+      pages: Страницы
+      properties: Свойства
+      reputation: Репутация
+      rewards: Награды
+      stats: Статистика
+      theme: Оформление
+      widgets: Виджеты

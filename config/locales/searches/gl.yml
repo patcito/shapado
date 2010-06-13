@@ -1,0 +1,14 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  searches: 
+    form: 
+      clear: limpar
+      search_box_title: Comprobar se a súa pregunta xa se realizou nalgunha ocasión
+      tags_tip: empregue [etiqueta] para especificar etiquetas.
+    index: 
+      empty: non se atopou ningunha pregunta que coincidise coa súa procura.
+      search_text: preguntas que conteñen
+      tags: con estas etiquetas

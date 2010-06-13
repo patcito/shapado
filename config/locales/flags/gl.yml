@@ -1,0 +1,21 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: motivo
+    models: 
+      flag: informe
+      flags: informes
+  flags: 
+    create: 
+      flash_error: non pode informar sobre isto
+      flash_notice: grazas polo seu informe
+    form: 
+      attention: necesita a atención dun moderador
+      label: por favor, informe con tino
+      offensive: palabras ofensivas, abusivas ou intolerantes
+      spam: spam

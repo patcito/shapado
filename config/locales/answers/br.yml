@@ -1,0 +1,24 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Korf
+        created_at: Respontet
+        link: Liamm
+    models: 
+      answer: Respont
+      answers: Respontoù
+  answers: 
+    create: 
+      flash_notice: Trugarez !
+    edit: 
+      title: Kemmañ ar respont
+    form: 
+      answer_label: Respont d'ar goulenn
+      comment_label: Addisplegañ an respont-mañ
+      comment_submit: Addispleg
+      submit: Respont
