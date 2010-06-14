@@ -26,7 +26,7 @@ I18n.load_path << Dir[ File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,y
 # You need to "force-initialize" loaded locales
 I18n.backend.send(:init_translations)
 
-AVAILABLE_LOCALES = ['en', 'es-AR', 'fr', 'pt-PT', 'ja', 'el'].sort #I18n.backend.available_locales.map { |l| l.to_s }
-AVAILABLE_LANGUAGES = I18n.backend.available_locales.map { |l| l.to_s.split("-").first}.uniq.sort
+AVAILABLE_LOCALES = ['en', 'es-AR', 'fr', 'pt-PT', 'ja', 'el'] #I18n.backend.available_locales.map { |l| l.to_s }
+AVAILABLE_LANGUAGES = I18n.backend.available_locales.map { |l| l.to_s.split("-").first}.uniq
 RAILS_DEFAULT_LOGGER.debug "* Loaded locales: #{AVAILABLE_LOCALES.inspect}"
 

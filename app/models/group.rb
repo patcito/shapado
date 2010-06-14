@@ -208,7 +208,7 @@ class Group
   end
 
   def language=(lang)
-    if lang != "none" && lang != 'Any'
+    if lang != "none"
       self[:language] = lang
     else
       self[:language] = nil
