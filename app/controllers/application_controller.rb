@@ -164,7 +164,7 @@ class ApplicationController < ActionController::Base
   def find_valid_locale(lang)
     case lang
       when /^es/
-        'es-AR'
+        'es-419'
       when /^pt/
         'pt-PT'
       when "fr"

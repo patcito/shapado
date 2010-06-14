@@ -47,8 +47,6 @@ en:
     post_new_questions: Post new questions to
     share_on_twitter: "twitter, facebook and more..."
   languages:
-    ## FIXME, rename to es-419 as per cldr
-    es-AR:   Latin American Spanish
     any:     Any
     user:    My Preferred Languages
   number:
