@@ -104,7 +104,7 @@
 -if AppConfig.enable_i18n
   .group
     = form.label :language, t(:language, :scope => "activerecord.attributes.group"), :class => "label"
-    = form.select :language, AVAILABLE_LANGUAGES.collect {|lang| [ language_desc(lang), lang ] }+[[t(".any_language"), 'none']], :selected => @group.language || 'Any', :class => "select"
+    = form.select :language, AVAILABLE_LANGUAGES.collect {|lang| [ language_desc(lang), lang ] }+[[t(".any_language"), 'none']], :selected => @group.language || 'none', :class => "select"
 -else
   = form.hidden_field :language, :value => (AppConfig.default_language || 'en')
 
