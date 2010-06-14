@@ -70,6 +70,8 @@ $(document).ready(function() {
   fillTextareas();
 
   $(".highlight_for_user").effect("highlight", {}, 2000);
+  sortValues('group_language', ':last');
+  sortValues('language_filter', ':lt(2)');
 })
 
 function initAutocomplete(){
@@ -182,3 +184,15 @@ function removeFromLocalStorage(key, id){
     }
   }
 }
+
+
+function sortValues(selectID, keepers){
+  var any = $('#'+selectID+' option'+keepers);
+  $('#'+selectID+' option:last').remove();
+  var sortedVals = $.makeArray($('#'+selectID+' option')).sort(function(a,b){
+    return $(a).text() > $(b).text() ? 1: -1;
+  });
+  $('#'+selectID).empty().html(sortedVals);
+  $('#'+selectID).prepend(any);
+  //updateValueList();
+};

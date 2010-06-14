@@ -158,7 +158,7 @@ class Group
   def footer=(value)
     self.custom_html.footer[I18n.locale.to_s.split("-").first] = value
   end
-  
+
   def tag_list
     TagList.first(:group_id => self.id) || TagList.create(:group_id => self.id)
   end
@@ -208,7 +208,7 @@ class Group
   end
 
   def language=(lang)
-    if lang != "none"
+    if lang != "none" && lang != 'Any'
       self[:language] = lang
     else
       self[:language] = nil

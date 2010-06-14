@@ -39,7 +39,7 @@
 
 -if AppConfig.enable_i18n
   .group
-    = f.label :languaje, t(:language, :scope => "activerecord.attributes.user"), :class => "label"
+    = f.label :language, t(:language, :scope => "activerecord.attributes.user"), :class => "label"
     = f.select :language, locales_options, {}, :class => "select"
 -else
   = f.hidden_field :language, :value => (current_group.language || AppConfig.default_language)
