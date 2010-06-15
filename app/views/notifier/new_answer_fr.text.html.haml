@@ -1,9 +1,0 @@
-
-%p
-  == Salut #{h(@user.login)},
-  %br
-  = h(@answer.user.login)
-  a répondu:
-  = find_and_preserve("<pre style='font-size:20px'>"+ shapado_auto_link(markdown(@answer.body, :group => @group))+"</pre>")
-  à la question
-  = link_to h(@question.title), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)

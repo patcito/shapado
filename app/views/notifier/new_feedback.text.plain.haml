@@ -1,11 +1,11 @@
 -if @user
-  == The user #{h(@user.login)}<#{h(@user.email)}> sent a feedback
+  = t('.message1', :user =>h(@user.login), :email => h(@user.email))
 -else
-  == anonymous user sent a feedback from #{@ip} ip
+  = t('.message2', :ip => @ip)
 
-== email: #{@email}
+= t('.message3', :email => h(@user.email))
 
-== subject: #{h(@subject)}
+= t('.message1', :subject => h(@subject))
 ==
 = @content
 
