@@ -11,5 +11,5 @@ el:
       login_tip: αναζήτηση κατά την πληκτρολόγηση
     index: 
       manage_members_title: διαχείριση μελών
-      title: μέλη της ομάδας {{name}}
-      title_isolate: μέλη της ομάδας {{name}}
+      title: μέλη της ομάδας %{name}
+      title_isolate: μέλη της ομάδας %{name}

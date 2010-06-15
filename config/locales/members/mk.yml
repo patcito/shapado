@@ -12,5 +12,5 @@ mk:
       login_tip: пребарувај пишувајќи
     index: 
       manage_members_title: раководење со членови
-      title: членови на групата на {{name}}
-      title_isolate: членови на {{name}}
+      title: членови на групата на %{name}
+      title_isolate: членови на %{name}

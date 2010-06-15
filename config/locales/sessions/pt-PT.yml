@@ -4,7 +4,7 @@
 pt-PT: 
   sessions: 
     create: 
-      flash_error: não foi possível entrar com '{{login}}'
+      flash_error: não foi possível entrar com '%{login}'
       flash_notice: inicio de sessão efectuado com sucesso
     destroy: 
       flash_notice: a sua sessão foi terminada.

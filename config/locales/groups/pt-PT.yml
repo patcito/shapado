@@ -18,7 +18,7 @@ pt-PT:
         may_contain_adult_content: este site pode ter conteúdo para adultos
         name: nome
         openid_only: só pessoas que usam openid podem aceder ao site
-        owner: este grupo foi criado por {{login}}
+        owner: este grupo foi criado por %{login}
         registered_only: só pessoas registadas podem aceder ao site
         state: estado
         subdomain: url
@@ -60,5 +60,5 @@ pt-PT:
       close_group: fechar este grupo
       group_awaiting_acceptance: este grupo aguarda a aceitação de um moderador.
       group_closed: este grupo foi fechado.
-      title: sobre {{name}}
+      title: sobre %{name}
       visit_group: visitar este grupo

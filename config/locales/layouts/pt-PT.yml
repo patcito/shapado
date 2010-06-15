@@ -10,7 +10,7 @@ pt-PT:
       home: início
       languages: idiomas
       log_in: ligar
-      logged: ligado como {{login}}
+      logged: ligado como %{login}
       logout: desligar sessão
       manage_ads: gerir as propaganda
       moderate: moderar

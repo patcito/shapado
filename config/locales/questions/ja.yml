@@ -57,14 +57,14 @@ ja:
         empty_tags: タグは必須です。必ず一つは入力してください
         title_too_long: タイトルが長すぎます。50文字以内にしてください。
         too_many_tags: タグの数が多すぎます。最大6つまでとなっています
-        too_short: タグが短すぎるようです。最低{{count}}文字以上の言葉を使ってみてください
+        too_short: タグが短すぎるようです。最低%{count}文字以上の言葉を使ってみてください
     move: 
       group_label: "スラグを次のようにして移動する:"
       submit: 移動！
-      title: "質問の移動: {{title}}"
+      title: "質問の移動: %{title}"
     move_to: 
-      group_dont_exists: グループ {{group}} はありません
-      success: 質問はグループ {{group}} へ移動しました
+      group_dont_exists: グループ %{group} はありません
+      success: 質問はグループ %{group} へ移動しました
     new: 
       how_to_ask: 質問の方法
       title: 新しい質問
@@ -88,8 +88,8 @@ ja:
       another_answers: 他の回答
       answers: 回答
       answers_title: 
-        one: "{{count}}つの回答"
-        other: "{{count}}つの回答"
+        one: "%{count}つの回答"
+        other: "%{count}つの回答"
       asked_on: 質問日
       ban: 弾く
       close: 閉じる
@@ -105,7 +105,7 @@ ja:
       retag: タグの編集
       retract_request: 既にリクエスト済みです。撤回しますか？
       share: この質問を共有する
-      share_on: この質問を{{site}}で共有する
+      share_on: この質問を%{site}で共有する
       solution: 解決
       to_answer_question: この質問に回答する
       unauthenticated_retag: タグを編集するにはアカウントが必要です
@@ -118,7 +118,7 @@ ja:
     tags: 
       filter: タグを検索
       title: タグ
-      tooltip: タグ{{tag}}がついた質問を一覧する
+      tooltip: タグ%{tag}がついた質問を一覧する
     unanswered: 
       empty: 未回答な質問はないようです
       expert: エキスパート

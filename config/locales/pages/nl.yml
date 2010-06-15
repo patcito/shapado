@@ -26,7 +26,7 @@ nl:
     index: 
       create_page: Nieuwe pagina aanmaken
       title: Paginalijst
-      written_in: Geschreven in {{language}}
+      written_in: Geschreven in %{language}
     new: 
       title: Nieuwe pagina
     title: FIXME

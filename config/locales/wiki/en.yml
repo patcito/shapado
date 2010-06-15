@@ -1,13 +1,13 @@
 en:
   wiki:
     history:
-      title: "History ({{count}})"
+      title: "History (%{count})"
       previous_versions: Previous versions
       current_version: Current version
       version: Version
       version_summary: Version summary
     diff:
-      title: Differences between {{prev}} and {{curr}}
+      title: Differences between %{prev} and %{curr}
     actions:
       revert: Revert to this version
       show_diff: Compare selected versions

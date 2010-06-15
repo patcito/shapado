@@ -7,8 +7,8 @@ nl:
     forbidden: 
       explanation: U hebt niet voldoende rechten om deze pagina te kunnen gebruiken.
       title: Toegang geweigerd
-    go_to: Ga naar de pagina {{link}}
-    help_us_answer: Help ons {{link}} beantwoorden
+    go_to: Ga naar de pagina %{link}
+    help_us_answer: Help ons %{link} beantwoorden
     internal_error: 
       explanation: De websitebeheerder is op de hoogste gesteld en kijkt er snel naar.
       title: Er is iets fout gegaan.

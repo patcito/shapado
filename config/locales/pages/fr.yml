@@ -25,7 +25,7 @@ fr:
     index: 
       create_page: créer une nouvelle page
       title: Liste de pages
-      written_in: écrite en {{language}}
+      written_in: écrite en %{language}
     new: 
       title: nouvelle page
     title: fixme

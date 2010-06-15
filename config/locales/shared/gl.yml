@@ -8,5 +8,5 @@ gl:
       title: etiquetas seleccionadas
     topbar: 
       admin: administrador
-      logged_as: conectado como {{login}}
+      logged_as: conectado como %{login}
       user_page: a miña páxina

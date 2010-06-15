@@ -7,8 +7,8 @@ fr:
     forbidden: 
       explanation: vous n'avez pas les permissions requises pour accéder à cette page.
       title: accès refusé
-    go_to: aller à la page {{link}}
-    help_us_answer: aider nous à répondre à {{link}}
+    go_to: aller à la page %{link}
+    help_us_answer: aider nous à répondre à %{link}
     internal_error: 
       explanation: nous avons été alerté à propos de cette erreur et nous allons vérifier d'ici peu.
       title: nous somme désolé mais une erreur s'est produite.

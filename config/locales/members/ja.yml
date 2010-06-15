@@ -11,5 +11,5 @@ ja:
       login_tip: 検索します
     index: 
       manage_members_title: メンバーの管理
-      title: グループ{{name}}のメンバー
-      title_isolate: "{{name}}のメンバー"
+      title: グループ%{name}のメンバー
+      title_isolate: "%{name}のメンバー"

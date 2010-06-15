@@ -4,7 +4,7 @@
 el: 
   sessions: 
     create: 
-      flash_error: δεν μπορέσαμε να σας συνδέσουμε ως '{{login}}'
+      flash_error: δεν μπορέσαμε να σας συνδέσουμε ως '%{login}'
       flash_notice: συνδεθήκατε επιτυχώς
     destroy: 
       flash_notice: έχετε αποσυνδεθεί.

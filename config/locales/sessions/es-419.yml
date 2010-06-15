@@ -5,7 +5,7 @@
 es-419: 
   sessions: 
     create: 
-      flash_error: no pudo ingresar como '{{login}}'
+      flash_error: no pudo ingresar como '%{login}'
       flash_notice: ingreso exitoso
     destroy: 
       flash_notice: usted ha cerrado la sesión.

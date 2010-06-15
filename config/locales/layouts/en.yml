@@ -12,7 +12,7 @@ en:
       unanswered: Unanswered
       pages: Pages
       logout: Log out
-      logged: Logged in as {{login}}
+      logged: Logged in as %{login}
       search: Search
       forgot: Forgot?
       log_in: Login

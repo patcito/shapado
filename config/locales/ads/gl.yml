@@ -4,7 +4,7 @@
 # Author: Toliño
 gl: 
   ads: 
-    ad_links: engadir un novo anuncio {{type}}
+    ad_links: engadir un novo anuncio %{type}
     create: 
       success: o anuncio creouse correctamente.
     index: 
@@ -13,4 +13,4 @@ gl:
       title: anuncios
     name: "nome:"
     position: "posición:"
-    title: engadir un novo anuncio {{type}}
+    title: engadir un novo anuncio %{type}

@@ -11,7 +11,7 @@ nl:
       home: Hoofdmenu
       languages: Talen
       log_in: Aanmelden
-      logged: Aangemeld als {{login}}
+      logged: Aangemeld als %{login}
       logout: Afmelden
       manage_ads: Advertenties beheren
       moderate: Modereren

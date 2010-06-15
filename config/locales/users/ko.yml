@@ -50,7 +50,7 @@ ko:
       submit: 저장
       title: 설정
     follow: 
-      flash_notice: 사용자  {{user}}를 벗으로 추가하였습니다
+      flash_notice: 사용자  %{user}를 벗으로 추가하였습니다
     form: 
       activities_notification: 배지 획득, 새로운 Follower등 이벤트에 관한 이메일 알림을 받음
       avatar_tip: Gravatar를 사용하여 프로필 이미지 변경
@@ -73,13 +73,13 @@ ko:
       title: 모든 사용자
     messages: 
       errors: 
-        reputation_needed: 이 {{action}}은 명성 {{min_reputation}}이 필요합니다
+        reputation_needed: 이 %{action}은 명성 %{min_reputation}이 필요합니다
     new: 
       submit: 가입
       title: 새 사용자로 가입
     show: 
       follow: follow
-      title: 사용자 {{user}}
+      title: 사용자 %{user}
       unfollow: unfollow
     unfollow: 
-      flash_notice: 사용자  {{user}}를 벗에서 삭제하였습니다
+      flash_notice: 사용자  %{user}를 벗에서 삭제하였습니다

@@ -20,7 +20,7 @@ en:
       another_answers: Other answers
       solution: Solution
       share: "Share this question on"
-      share_on: "Share this question on {{site}}"
+      share_on: "Share this question on %{site}"
       related_questions: Related questions
       flags: Reported as
       flag: Flag
@@ -43,8 +43,8 @@ en:
       retract_request: You have already made a request, would you line to retract it?
       close_reason: "The question has been closed for the following reason:"
       answers_title:
-        one: "{{count}} answer"
-        other: "{{count}} answers"
+        one: "%{count} answer"
+        other: "%{count} answers"
     retag:
       title: Retag
     answer:
@@ -71,7 +71,7 @@ en:
       expert: Experts
     tags:
       title: Tags
-      tooltip: Show questions tagged {{tag}}
+      tooltip: Show questions tagged %{tag}
       filter: Search for tags
     new:
       title: Ask question
@@ -91,12 +91,12 @@ en:
     revert:
       title: "Revert question"
     move:
-      title:        "Move question: {{title}}"
+      title:        "Move question: %{title}"
       group_label:  "Move to the group with slug:"
       submit:       "Move!"
     move_to:
-      success:      "Question moved to {{group}}"
-      group_dont_exists: "The group {{group}} doesn't exist"
+      success:      "Question moved to %{group}"
+      group_dont_exists: "The group %{group} doesn't exist"
     shared:
       flag: Flag
     retag_form:
@@ -108,7 +108,7 @@ en:
       failure: "Sorry, the tags could not be updated."
     model:
       messages:
-        too_short: "Seems too short. Please use more words than {{count}} to be more specific."
+        too_short: "Seems too short. Please use more words than %{count} to be more specific."
         too_many_tags: Sorry, you can only enter 9 tags maximum.
         empty_tags: Sorry, you need to use at least one tag.
         title_too_long: "The title is too long. it should not contain more than 100 characters"

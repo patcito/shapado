@@ -10,7 +10,7 @@ ja:
       home: ホーム
       languages: 言語
       log_in: ログイン
-      logged: "{{login}}としてログイン"
+      logged: "%{login}としてログイン"
       logout: ログアウト
       manage_ads: 広告の管理
       moderate: モデレート

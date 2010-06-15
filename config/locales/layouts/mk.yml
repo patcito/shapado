@@ -11,7 +11,7 @@ mk:
       home: почетна
       languages: јазици
       log_in: најава
-      logged: најавен како {{login}}
+      logged: најавен како %{login}
       logout: одјава
       manage_ads: раководење со реклами
       moderate: модерирај

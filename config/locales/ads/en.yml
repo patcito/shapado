@@ -1,7 +1,7 @@
 en:
   ads:
-    ad_links: Add a new {{type}} ad
-    title: Add a new {{type}} ad
+    ad_links: Add a new %{type} ad
+    title: Add a new %{type} ad
     name: "Name:"
     position: "Position:"
     index:

@@ -18,8 +18,8 @@ es-419:
   global: 
     by: por
     current: actual
-    from: desde {{site}}
-    group_not_found: la página {{url}} no existe
+    from: desde %{site}
+    group_not_found: la página %{url} no existe
     or: o
     permission_denied: permiso denegado
     please_login: por favor inicia sesión
@@ -38,13 +38,13 @@ es-419:
     pt-PT: portugués
     user: idiomas que conozco
   messages: 
-    success: "{{model}} fue exitosamente {{action}}."
+    success: "%{model} fue exitosamente %{action}."
   models: 
     question: la pregunta
   number: 
     x_time: 
-      one: "{{count}} vez"
-      other: "{{count}} veces"
+      one: "%{count} vez"
+      other: "%{count} veces"
       zero: nunca
   scaffold: 
     add: añadir
@@ -56,12 +56,12 @@ es-419:
     details: detalles
     edit: editar
     more: más...
-    new: add new {{model}}
+    new: add new %{model}
     save: guardar
     send: enviar
     show: ver
-    sure: ¿esta seguro que quiere borrar esta {{model}}?
+    sure: ¿esta seguro que quiere borrar esta %{model}?
     update: actualizar
   time: 
-    ago: hace {{time}}
+    ago: hace %{time}
     today: hoy

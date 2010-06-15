@@ -19,8 +19,8 @@ nl:
   global: 
     by: door
     current: huidige
-    from: Van {{site}}
-    group_not_found: De pagina {{url}} bestaat niet
+    from: Van %{site}
+    group_not_found: De pagina %{url} bestaat niet
     or: of
     permission_denied: Geen toegang
     please_login: Meld u aan
@@ -39,13 +39,13 @@ nl:
     pt-PT: Portugees
     user: Voorkeurstalen
   messages: 
-    success: "{{model}} is {{action}}."
+    success: "%{model} is %{action}."
   models: 
     question: De vraag
   number: 
     x_time: 
-      one: "{{count}} keer"
-      other: "{{count}} keer"
+      one: "%{count} keer"
+      other: "%{count} keer"
       zero: Nooit
   scaffold: 
     add: Toevoegen
@@ -57,12 +57,12 @@ nl:
     details: Details
     edit: Bewerken
     more: Meer...
-    new: Nieuwe {{model}} toevoegen
+    new: Nieuwe %{model} toevoegen
     save: Opslaan
     send: Verzenden
     show: Weergeven
-    sure: Weet u zeker dat u deze {{model}} wilt verwijderen?
+    sure: Weet u zeker dat u deze %{model} wilt verwijderen?
     update: Bijwerken
   time: 
-    ago: "{{time}} geleden"
+    ago: "%{time} geleden"
     today: Vandaag

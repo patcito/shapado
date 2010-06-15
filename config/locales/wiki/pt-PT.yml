@@ -9,11 +9,11 @@ pt-PT:
       revert: revert to this version
       show_diff: compare selected versions
     diff: 
-      title: differences between {{prev}} and {{curr}}
+      title: differences between %{prev} and %{curr}
     history: 
       current_version: current version
       previous_versions: previous versions
-      title: history ({{count}})
+      title: history (%{count})
       version: version
       version_summary: version summary
     model: 

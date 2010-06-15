@@ -18,7 +18,7 @@ nl:
         may_contain_adult_content: Deze site kan inhoud voor volwassenen bevatten
         name: Naam
         openid_only: Alleen gebruikers via OpenID toestaan
-        owner: Deze groep is aangemaakt door {{login}}
+        owner: Deze groep is aangemaakt door %{login}
         registered_only: Alleen geregistreerde gebruikers kunnen de site lezen
         state: Status
         subdomain: URL
@@ -68,5 +68,5 @@ nl:
       close_group: Groep sluiten
       group_awaiting_acceptance: Deze groep wacht op acceptatie door een moderator.
       group_closed: Deze groep is gesloten.
-      title: Over {{name}}
+      title: Over %{name}
       visit_group: Deze groep bezoeken

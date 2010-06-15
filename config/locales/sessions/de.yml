@@ -5,7 +5,7 @@
 de: 
   sessions: 
     create: 
-      flash_error: Anmeldung als „{{login}}“ erfolglos
+      flash_error: Anmeldung als „%{login}“ erfolglos
       flash_notice: erfolgreich angemeldet
     destroy: 
       flash_notice: Du bist nun abgemeldet.

@@ -4,7 +4,7 @@
 # Author: Kghbln
 de: 
   ads: 
-    ad_links: Füge einen neue „{{type}}“-Anzeige hinzu
+    ad_links: Füge einen neue „%{type}“-Anzeige hinzu
     create: 
       success: Die Anzeige wurde erfolgreich erstellt.
     index: 
@@ -13,4 +13,4 @@ de:
       title: Anzeigen
     name: "Name:"
     position: "Position:"
-    title: Füge einen neue „{{type}}“-Anzeige hinzu
+    title: Füge einen neue „%{type}“-Anzeige hinzu

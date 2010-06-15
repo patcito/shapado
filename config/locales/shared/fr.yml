@@ -7,5 +7,5 @@ fr:
       title: selected tags
     topbar: 
       admin: administrer
-      logged_as: connecté en tant que {{login}}
+      logged_as: connecté en tant que %{login}
       user_page: my page

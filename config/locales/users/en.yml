@@ -20,14 +20,14 @@ en:
       submit: Save
       enable_twitter: Enable your facebook or twitter accounts
     show:
-      title: "User {{user}}"
+      title: "User %{user}"
       follow: Follow
       unfollow: Unfollow
       views: views
     follow:
-      flash_notice: "The user {{user}} was added to your friends"
+      flash_notice: "The user %{user} was added to your friends"
     unfollow:
-      flash_notice: "The user {{user}} was removed from your friends"
+      flash_notice: "The user %{user} was removed from your friends"
     form:
       information: Information
       notifications: Notifications
@@ -41,7 +41,7 @@ en:
       flash_error:  "We couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
     messages:
       errors:
-        reputation_needed: "You need a reputation of {{min_reputation}} to {{action}}"
+        reputation_needed: "You need a reputation of %{min_reputation} to %{action}"
     actions:
       vote_up: Vote up
       vote_down: Vote down

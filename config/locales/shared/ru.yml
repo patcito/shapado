@@ -9,5 +9,5 @@ ru:
       title: Выбранные метки
     topbar: 
       admin: Администрирование
-      logged_as: Вы вошли как {{login}}
+      logged_as: Вы вошли как %{login}
       user_page: Моя страница

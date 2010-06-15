@@ -122,7 +122,7 @@ ja:
     show: 
       description: このバッジを持っているユーザ。最後にバッジを得たユーザ：
       earned: 取得
-      for_tag_bronze: タグ{{tag}}に200の投票
-      for_tag_gold: タグ{{tag}}に1,000の投票
-      for_tag_silver: タグ{{tag}}に400の投票
-      title: バッジ {{type}}
+      for_tag_bronze: タグ%{tag}に200の投票
+      for_tag_gold: タグ%{tag}に1,000の投票
+      for_tag_silver: タグ%{tag}に400の投票
+      title: バッジ %{type}

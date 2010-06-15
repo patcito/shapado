@@ -18,7 +18,7 @@ ko:
         may_contain_adult_content: 이 사이트는 성인용 콘텐츠가 포함되어 있을 수 있습니다
         name: 이름
         openid_only: 오픈 ID 사용자만이  사이트에 액세스할 수있음
-        owner: 이 그룹은  {{login}}에 의해 만들어 졌습니다
+        owner: 이 그룹은  %{login}에 의해 만들어 졌습니다
         registered_only: 등록된 사용자만 이 사이트에 액세스할 수 있습니다
         state: state
         subdomain: url
@@ -60,5 +60,5 @@ ko:
       close_group: 이 그룹을 폐쇄
       group_awaiting_acceptance: 이 그룹은 운영자의 승인을 기다리는 중입니다.
       group_closed: 이 그룹은 폐쇄되었습니다.
-      title: about {{name}}
+      title: about %{name}
       visit_group: 이 그룹을 방문

@@ -19,8 +19,8 @@ mk:
   global: 
     by: од
     current: тековно
-    from: од {{site}}
-    group_not_found: страницата {{url}} не постои
+    from: од %{site}
+    group_not_found: страницата %{url} не постои
     or: или
     permission_denied: дозволата е одбиена
     please_login: најавете се
@@ -39,13 +39,13 @@ mk:
     pt-PT: португалски
     user: мои претпочитани јазици
   messages: 
-    success: "{{model}} е успешно {{action}}."
+    success: "%{model} е успешно %{action}."
   models: 
     question: прашање
   number: 
     x_time: 
-      one: "{{count}} пат"
-      other: "{{count}} пати"
+      one: "%{count} пат"
+      other: "%{count} пати"
       zero: никогаш
   scaffold: 
     add: додај
@@ -57,12 +57,12 @@ mk:
     details: подробно
     edit: уреди
     more: повеќе ...
-    new: додај нов {{model}}
+    new: додај нов %{model}
     save: зачувај
     send: испрати
     show: прикажи
-    sure: дали сте сигурни дека сакате да го избришете овој {{model}} ?
+    sure: дали сте сигурни дека сакате да го избришете овој %{model} ?
     update: поднови
   time: 
-    ago: пред {{time}}
+    ago: пред %{time}
     today: денес

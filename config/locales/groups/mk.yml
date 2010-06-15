@@ -18,7 +18,7 @@ mk:
         may_contain_adult_content: ова мрежно место може да има содржини за возрасни
         name: име
         openid_only: само корисници на OpenID можат да пристапат на местото
-        owner: групава е создадена од {{login}}
+        owner: групава е создадена од %{login}
         registered_only: само регистрирани корисници можат да пристапат на местото
         state: држава
         subdomain: URL
@@ -68,5 +68,5 @@ mk:
       close_group: затвори ја групава
       group_awaiting_acceptance: оваа група чека на одобрение од модератор.
       group_closed: оваа група е затворена.
-      title: за {{name}}
+      title: за %{name}
       visit_group: посети ја групава

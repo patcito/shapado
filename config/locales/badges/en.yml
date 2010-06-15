@@ -4,11 +4,11 @@ en:
       title: badges
       description: "All badges that you can earn. share your knowledge earn badges."
     show:
-      title: Badge {{type}}
+      title: Badge %{type}
       description: "Users who earned this badge. recently awarded to:"
-      for_tag_bronze: 200 votes in tag {{tag}}
-      for_tag_silver: 400 votes in tag {{tag}}
-      for_tag_gold: 1000 votes in tag {{tag}}
+      for_tag_bronze: 200 votes in tag %{tag}
+      for_tag_silver: 400 votes in tag %{tag}
+      for_tag_gold: 1000 votes in tag %{tag}
       earned: earned
     shared:
       rockstar:

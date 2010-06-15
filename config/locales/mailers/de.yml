@@ -6,19 +6,19 @@ de:
   mailers: 
     notifications: 
       earned_badge: 
-        subject: Du hast ein Abzeichen in Gruppe {{group}} erhalten!
+        subject: Du hast ein Abzeichen in Gruppe %{group} erhalten!
       favorited: 
-        subject: "{{login}} hat Deine Frage als Favorit markiert!"
+        subject: "%{login} hat Deine Frage als Favorit markiert!"
       follow: 
-        subject: "{{login}} folgt Dir nun auf {{app}}"
+        subject: "%{login} folgt Dir nun auf %{app}"
       give_advice: 
-        friend_subject: "Dein Freund benötigt Hilfe: {{question_title}}"
-        subject: "Wir benötigen Deinen Rat: {{question_title}}"
+        friend_subject: "Dein Freund benötigt Hilfe: %{question_title}"
+        subject: "Wir benötigen Deinen Rat: %{question_title}"
       new_answer: 
-        subject_friend: Deine Freund {{login}} hat die Frage {{title}} beantwortet
-        subject_other: "{{login}} hat die Frage {{title}} beantwortet"
-        subject_owner: "{{login}} hat Deine Frage {{title}} beantwortet"
+        subject_friend: Deine Freund %{login} hat die Frage %{title} beantwortet
+        subject_other: "%{login} hat die Frage %{title} beantwortet"
+        subject_owner: "%{login} hat Deine Frage %{title} beantwortet"
       new_comment: 
-        subject: "{{login}} hat einen Kommentar in {{group}} hinterlassen"
+        subject: "%{login} hat einen Kommentar in %{group} hinterlassen"
       report: 
-        subject: Bericht für die Gruppe {{group}} auf {{app}}
+        subject: Bericht für die Gruppe %{group} auf %{app}

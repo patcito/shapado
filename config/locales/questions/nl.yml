@@ -58,14 +58,14 @@ nl:
         empty_tags: U moet tenminste één label opgeven
         title_too_long: De vraag is te lang. Deze mag niet meer dan honderd tekens bevatten.
         too_many_tags: U kunt maximaal negen labels opgeven.
-        too_short: Dit lijkt te kort. Gebruik alstublieft meer dan {{count}} woorden om specifieker te zijn.
+        too_short: Dit lijkt te kort. Gebruik alstublieft meer dan %{count} woorden om specifieker te zijn.
     move: 
       group_label: "Verplaatsen naar de groep:"
       submit: Verplaatsen!
-      title: Vraag "{{title}}" verplaatsen
+      title: Vraag "%{title}" verplaatsen
     move_to: 
-      group_dont_exists: De groep {{group}} bestaat niet.
-      success: Vraag verplaatst naar {{group}}
+      group_dont_exists: De groep %{group} bestaat niet.
+      success: Vraag verplaatst naar %{group}
     new: 
       how_to_ask: Hoe vragen
       title: Stel vraag
@@ -89,8 +89,8 @@ nl:
       another_answers: Andere antwoorden
       answers: Antwoorden
       answers_title: 
-        one: "{{count}} antwoord"
-        other: "{{count}} antwoorden"
+        one: "%{count} antwoord"
+        other: "%{count} antwoorden"
       asked_on: Gesteld op
       ban: Verbergen
       close: Sluiten
@@ -106,7 +106,7 @@ nl:
       retag: Labels wijzigen
       retract_request: U hebt al een verzoek ingediend. Wilt u dat intrekken?
       share: Deze vragen delen op
-      share_on: Deze vragen delen op {{site}}
+      share_on: Deze vragen delen op %{site}
       solution: Correct antwoord
       to_answer_question: Om deze vraag te beantwoorden
       unauthenticated_retag: U moet een gebruiker hebben om labels voor vragen te kunnen wijzigen.
@@ -119,7 +119,7 @@ nl:
     tags: 
       filter: Zoeken naar labels
       title: Labels
-      tooltip: Vragen weergeven met het label {{tag}}
+      tooltip: Vragen weergeven met het label %{tag}
     unanswered: 
       empty: Deze groep heeft geen onbeantwoorde vragen.
       expert: Experts

@@ -19,8 +19,8 @@ pt-PT:
   global: 
     by: por
     current: actual
-    from: de {{site}}
-    group_not_found: a página {{url}} não existe
+    from: de %{site}
+    group_not_found: a página %{url} não existe
     or: ou
     permission_denied: permissão negada
     please_login: por favor inicie sessão
@@ -37,13 +37,13 @@ pt-PT:
     pt-PT: português europeu
     user: as minhas línguas preferidas
   messages: 
-    success: "{{model}} foi {{action}} com sucesso."
+    success: "%{model} foi %{action} com sucesso."
   models: 
     question: a pergunta
   number: 
     x_time: 
-      one: "{{count}} vez"
-      other: "{{count}} vezes"
+      one: "%{count} vez"
+      other: "%{count} vezes"
       zero: nunca
   scaffold: 
     add: adicionar
@@ -55,12 +55,12 @@ pt-PT:
     details: detalhes
     edit: editar
     more: mais ...
-    new: adicionar {{model}} novo
+    new: adicionar %{model} novo
     save: gravar
     send: enviar
     show: mostrar
-    sure: tem a certeza que pretende apagar este {{model}} ?
+    sure: tem a certeza que pretende apagar este %{model} ?
     update: actualizar
   time: 
-    ago: "{{time}} atrás"
+    ago: "%{time} atrás"
     today: hoje

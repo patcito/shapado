@@ -50,7 +50,7 @@ el:
       submit: αποθήκευση
       title: ρυθμίσεις
     follow: 
-      flash_notice: το μέλος {{user}} προστέθηκε στους φίλους σας
+      flash_notice: το μέλος %{user} προστέθηκε στους φίλους σας
     form: 
       activities_notification: ειδοποίηση μέσω email για δραστηριότητες συστήματος όπως απόκτηση τίτλων, νέους οπαδούς, κ.τ.λ.
       avatar_tip: αλλάξτε την εικόνα του προφίλ σας χρησιμοποιώντας το gravatar
@@ -73,14 +73,14 @@ el:
       title: όλα τα μέλη
     messages: 
       errors: 
-        reputation_needed: χρειάζεστε τουλάχιστον {{min_reputation}} υπόληψη για να {{action}}
+        reputation_needed: χρειάζεστε τουλάχιστον %{min_reputation} υπόληψη για να %{action}
     new: 
       submit: εγγραφή
       title: εγγραφείτε ως νέο μέλος
     show: 
       follow: ακολουθήστε
-      title: Μέλος {{user}}
+      title: Μέλος %{user}
       unfollow: μην ακολουθείτε
       views: views
     unfollow: 
-      flash_notice: το μέλος {{user}} αφαιρέθηκε από τους φίλους σας
+      flash_notice: το μέλος %{user} αφαιρέθηκε από τους φίλους σας

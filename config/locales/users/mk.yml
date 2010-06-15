@@ -51,7 +51,7 @@ mk:
       submit: зачувај
       title: поставки
     follow: 
-      flash_notice: Корисникот {{user}} е додаден како ваш пријател
+      flash_notice: Корисникот %{user} е додаден како ваш пријател
     form: 
       activities_notification: добивање на соопштенија по е-пошта за системски активности како заработени значки, нови следбеници и тн.
       avatar_tip: сменете си ја профилната слика со граватар
@@ -74,14 +74,14 @@ mk:
       title: сите корисници
     messages: 
       errors: 
-        reputation_needed: за да {{action}} потребен ви е углед од {{min_reputation}}
+        reputation_needed: за да %{action} потребен ви е углед од %{min_reputation}
     new: 
       submit: пријави се
       title: регистрирај се како нов корисник
     show: 
       follow: следи
-      title: Корисник {{user}}
+      title: Корисник %{user}
       unfollow: повеќе не следи
       views: прегледи
     unfollow: 
-      flash_notice: Корисникот {{user}} е отстранет од вашите пријатели
+      flash_notice: Корисникот %{user} е отстранет од вашите пријатели

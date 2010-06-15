@@ -25,7 +25,7 @@ el:
     index: 
       create_page: δημιουργία νέας σελίδας
       title: κατάλογος σελίδων
-      written_in: γραμμένη στα {{language}}
+      written_in: γραμμένη στα %{language}
     new: 
       title: νέα σελίδα
     title: σελίδες

@@ -11,5 +11,5 @@ es-419:
       login_tip: busca cuando usted digita
     index: 
       manage_members_title: administrar membresías
-      title: miembros del group {{name}}
-      title_isolate: miembros de {{name}}
+      title: miembros del group %{name}
+      title_isolate: miembros de %{name}

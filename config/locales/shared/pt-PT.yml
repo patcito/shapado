@@ -7,5 +7,5 @@ pt-PT:
       title: selected tags
     topbar: 
       admin: gerir
-      logged_as: logged in as {{login}}
+      logged_as: logged in as %{login}
       user_page: my page

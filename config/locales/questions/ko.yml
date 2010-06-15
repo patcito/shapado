@@ -58,14 +58,14 @@ ko:
         empty_tags: 죄송합니다. 태그를 사용해야 합니다.
         title_too_long: 제목이 너무 깁니다. 100자 이하로 줄이세요
         too_many_tags: 죄송합니다. 최대 9개까지 태그를 입력할 수 있습니다.
-        too_short: "{{count}}자는 너무 짧습니다."
+        too_short: "%{count}자는 너무 짧습니다."
     move: 
       group_label: "slug 그룹으로 이동:"
       submit: 이동!
-      title: "질문 이동: {{title}}"
+      title: "질문 이동: %{title}"
     move_to: 
-      group_dont_exists: 그룹{{group}이/가 존재하지 않습니다
-      success: "{{group}}으로 질문을 이동"
+      group_dont_exists: 그룹%{group}이/가 존재하지 않습니다
+      success: "%{group}으로 질문을 이동"
     new: 
       how_to_ask: 질문 방법
       title: 질문
@@ -89,8 +89,8 @@ ko:
       another_answers: 기타 답변
       answers: 답변
       answers_title: 
-        one: "{{count}} 답변"
-        other: "{{count}} 답변들"
+        one: "%{count} 답변"
+        other: "%{count} 답변들"
       asked_on: "질문 대상:"
       ban: 금지
       close: 닫기
@@ -106,7 +106,7 @@ ko:
       retag: retag
       retract_request: 이미 요청하셨습니다. 취소할까요?
       share: "이 질문을 공유:"
-      share_on: "{{site}}에서 이 질문을 공유"
+      share_on: "%{site}에서 이 질문을 공유"
       solution: 해결
       to_answer_question: 이 질문에 답하기
       unauthenticated_retag: 질문을 retag하려면 계정이 필요합니다
@@ -119,7 +119,7 @@ ko:
     tags: 
       filter: 태그 검색
       title: 태그
-      tooltip: " {{tag}}로 태그된 질문들 보기"
+      tooltip: " %{tag}로 태그된 질문들 보기"
     unanswered: 
       empty: 이 그룹은 답변이 없는 질문이 없습니다.
       expert: 전문가

@@ -122,7 +122,7 @@ es-419:
     show: 
       description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
       earned: otorgada
-      for_tag_bronze: 200 votos en la etiqueta {{tag}}
-      for_tag_gold: 1000 votos en la etiqueta {{tag}}
-      for_tag_silver: 400 votos en la etiqueta {{tag}}
-      title: insignia {{type}}
+      for_tag_bronze: 200 votos en la etiqueta %{tag}
+      for_tag_gold: 1000 votos en la etiqueta %{tag}
+      for_tag_silver: 400 votos en la etiqueta %{tag}
+      title: insignia %{type}

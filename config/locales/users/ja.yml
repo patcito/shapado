@@ -50,7 +50,7 @@ ja:
       submit: 設定を変更する
       title: 設定
     follow: 
-      flash_notice: "{{user}}があなたの友達になりました"
+      flash_notice: "%{user}があなたの友達になりました"
     form: 
       activities_notification: バッジやフォローを受けたらメールで通知する
       avatar_tip: Gravatarを使ってアイコン画像を変更できます
@@ -73,7 +73,7 @@ ja:
       title: 全てのユーザ
     messages: 
       errors: 
-        reputation_needed: "{{action}}をするには{{min_reputation}}の評価が必要です"
+        reputation_needed: "%{action}をするには%{min_reputation}の評価が必要です"
     new: 
       submit: 新規ユーザ登録
       title: 新規ユーザ
@@ -82,4 +82,4 @@ ja:
       unfollow: フォロー解除
       views: 回表示
     unfollow: 
-      flash_notice: "{{user}}があなたの友達リストから除外されました"
+      flash_notice: "%{user}があなたの友達リストから除外されました"

@@ -123,7 +123,7 @@ nl:
     show: 
       description: "gebruikers die dit speldje recentelijk hebben verdiend:"
       earned: verdiend
-      for_tag_bronze: tweehonderd stemmen in label {{tag}}
-      for_tag_gold: duizend stemmen in label {{tag}}
-      for_tag_silver: vierhonderd stemmen in label {{tag}}
-      title: speldje {{type}}
+      for_tag_bronze: tweehonderd stemmen in label %{tag}
+      for_tag_gold: duizend stemmen in label %{tag}
+      for_tag_silver: vierhonderd stemmen in label %{tag}
+      title: speldje %{type}

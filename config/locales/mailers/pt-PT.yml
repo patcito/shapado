@@ -5,19 +5,19 @@ pt-PT:
   mailers: 
     notifications: 
       earned_badge: 
-        subject: You have earned a badge on {{group}}!
+        subject: You have earned a badge on %{group}!
       favorited: 
-        subject: "{{login}} added your question as a favorite!"
+        subject: "%{login} added your question as a favorite!"
       follow: 
-        subject: "{{login}} is now following you on {{app}}"
+        subject: "%{login} is now following you on %{app}"
       give_advice: 
-        friend_subject: "your friend needs help: {{question_title}}"
-        subject: "we need your advice: {{question_title}}"
+        friend_subject: "your friend needs help: %{question_title}"
+        subject: "we need your advice: %{question_title}"
       new_answer: 
-        subject_friend: your friend {{login}} answered the question {{title}}
-        subject_other: "{{login}} respondeu à pergunta {{title}}"
-        subject_owner: "{{login}} respondeu à sua pergunta {{title}}"
+        subject_friend: your friend %{login} answered the question %{title}
+        subject_other: "%{login} respondeu à pergunta %{title}"
+        subject_owner: "%{login} respondeu à sua pergunta %{title}"
       new_comment: 
-        subject: "{{login}} commented on {{group}}"
+        subject: "%{login} commented on %{group}"
       report: 
-        subject: report for the group {{group}} of {{app}}
+        subject: report for the group %{group} of %{app}

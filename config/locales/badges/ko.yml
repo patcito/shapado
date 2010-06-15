@@ -123,7 +123,7 @@ ko:
     show: 
       description: "이 배지를 받은 사용자. 최근에 수여받은 사용자:"
       earned: 적립
-      for_tag_bronze: "{{tag}} 태그 200 표"
-      for_tag_gold: "{{tag}} 태그 1000 표"
-      for_tag_silver: "{{tag}} 태그 400 표"
-      title: 배지 {{type}}
+      for_tag_bronze: "%{tag} 태그 200 표"
+      for_tag_gold: "%{tag} 태그 1000 표"
+      for_tag_silver: "%{tag} 태그 400 표"
+      title: 배지 %{type}

@@ -18,8 +18,8 @@ el:
   global: 
     by: από
     current: τρέχουσα
-    from: από {{site}}
-    group_not_found: η σελίδα {{url}} δεν υπάρχει
+    from: από %{site}
+    group_not_found: η σελίδα %{url} δεν υπάρχει
     or: ή
     permission_denied: απαγορεύεται η πρόσβαση
     please_login: παρακαλώ συνδεθείτε
@@ -38,13 +38,13 @@ el:
     pt-PT: πορτογαλικά (Πορτογαλία)
     user: τις προτιμώμενες γλώσσες μου
   messages: 
-    success: "{{model}} {{action}} επιτυχώς."
+    success: "%{model} %{action} επιτυχώς."
   models: 
     question: η ερώτηση
   number: 
     x_time: 
-      one: "{{count}} φορά"
-      other: "{{count}} φορές"
+      one: "%{count} φορά"
+      other: "%{count} φορές"
       zero: ποτέ
   scaffold: 
     add: προσθήκη
@@ -56,12 +56,12 @@ el:
     details: λεπτομέρειες
     edit: επεξεργασία
     more: περισσότερα ...
-    new: προσθήκη νέας {{model}}
+    new: προσθήκη νέας %{model}
     save: αποθήκευση
     send: αποστολή
     show: προβολή
-    sure: είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την {{model}} ?
+    sure: είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την %{model} ?
     update: ενημέρωση
   time: 
-    ago: "{{time}} πριν"
+    ago: "%{time} πριν"
     today: σήμερα

@@ -51,7 +51,7 @@ fr:
       submit: sauver
       title: configuration
     follow: 
-      flash_notice: L'utilisateur {{user}} a été ajouté à votre liste d' amis
+      flash_notice: L'utilisateur %{user} a été ajouté à votre liste d' amis
     form: 
       activities_notification: recevoir des notifications via courrier électronique sur les activités système telles que les insignes gagnées, les nouveaux suiveurs, etc.
       avatar_tip: changer l'image de votre profil en utilisant gravatar
@@ -74,14 +74,14 @@ fr:
       title: tous les utilisateurs
     messages: 
       errors: 
-        reputation_needed: vous avez besoin d'une réputation de {{min_reputation}} à fin de pouvoir {{action}}
+        reputation_needed: vous avez besoin d'une réputation de %{min_reputation} à fin de pouvoir %{action}
     new: 
       submit: ouvrir un compte
       title: se connecter en tant que nouvel utilisateur
     show: 
       follow: suivre
-      title: User {{user}}
+      title: User %{user}
       unfollow: ne plus suivre
       views: vues
     unfollow: 
-      flash_notice: L'utilisateur {{user}} a été ajouté à votre liste d'amis
+      flash_notice: L'utilisateur %{user} a été ajouté à votre liste d'amis

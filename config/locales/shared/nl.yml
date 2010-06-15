@@ -8,5 +8,5 @@ nl:
       title: Geselecteerde labels
     topbar: 
       admin: Beheer
-      logged_as: Aangemeld als {{login}}
+      logged_as: Aangemeld als %{login}
       user_page: Mijn pagina

@@ -5,7 +5,7 @@
 nl: 
   sessions: 
     create: 
-      flash_error: U kon niet aanmelden als "{{login}}"
+      flash_error: U kon niet aanmelden als "%{login}"
       flash_notice: U bent aangemeld
     destroy: 
       flash_notice: U bent afgemeld.

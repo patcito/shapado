@@ -25,7 +25,7 @@ es-419:
     index: 
       create_page: crear una nueva página
       title: Lista de páginas
-      written_in: escrita en {{language}}
+      written_in: escrita en %{language}
     new: 
       title: nueva página
     title: fixme

@@ -18,7 +18,7 @@ es-419:
         may_contain_adult_content: este sitio podria tener contenido para adultos
         name: nombre
         openid_only: solo las personas que usan openid pueden entrar a este sitio
-        owner: esta grupo fue creado por {{login}}
+        owner: esta grupo fue creado por %{login}
         registered_only: solo las personas registradas pueden entrar a este sitio
         state: estado
         subdomain: url
@@ -66,5 +66,5 @@ es-419:
       close_group: cerrar este grupo
       group_awaiting_acceptance: este grupo esta pendiente de la aceptación de un moderador.
       group_closed: este grupo ha sido cerrado.
-      title: sobre {{name}}
+      title: sobre %{name}
       visit_group: visitar este grupo

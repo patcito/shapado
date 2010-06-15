@@ -10,11 +10,11 @@ ko:
       revert: 이 버전으로 되돌리기
       show_diff: 선택된 버전들을 비교
     diff: 
-      title: "{{prev}}과 {{curr}} 간의 차이"
+      title: "%{prev}과 %{curr} 간의 차이"
     history: 
       current_version: 현재 버전
       previous_versions: 이전 버전
-      title: 히스토리 ({{count}})
+      title: 히스토리 (%{count})
       version: 버전
       version_summary: 버전 요약
     model: 

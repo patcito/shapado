@@ -18,7 +18,7 @@ fr:
         may_contain_adult_content: ce site peut inclure du contenu pour adultes
         name: name
         openid_only: seules les personnes utilisant openid ont accès au site
-        owner: ce groupe a été crée par {{login}}
+        owner: ce groupe a été crée par %{login}
         registered_only: seules les personnes autorisées ont accès au site
         state: état
         subdomain: url
@@ -68,5 +68,5 @@ fr:
       close_group: fermer ce groupe
       group_awaiting_acceptance: ce groupe est dans l'attente de l'acceptation d'un modérateur.
       group_closed: ce groupe a été fermé.
-      title: à propos de {{name}}
+      title: à propos de %{name}
       visit_group: visiter ce groupe

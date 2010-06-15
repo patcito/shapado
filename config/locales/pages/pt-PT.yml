@@ -25,7 +25,7 @@ pt-PT:
     index: 
       create_page: create new page
       title: List of pages
-      written_in: written in {{language}}
+      written_in: written in %{language}
     new: 
       title: new page
     title: fixme

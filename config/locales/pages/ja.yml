@@ -25,7 +25,7 @@ ja:
     index: 
       create_page: 新しいページを作成する
       title: ページ一覧
-      written_in: 作成言語：{{language}}
+      written_in: 作成言語：%{language}
     new: 
       title: 新しいページ
     title: ページ一覧

@@ -43,5 +43,5 @@ br:
       accept_group: Asantiñ ar strollad-mañ
       close_group: Serriñ ar strollad-mañ
       group_closed: Serret eo bet ar strollad-mañ.
-      title: Diwar-benn {{name}}
+      title: Diwar-benn %{name}
       visit_group: Gweladenniñ ar strollad-mañ

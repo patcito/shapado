@@ -10,11 +10,11 @@ ru:
       revert: Откатить к этой версии
       show_diff: Сравнить выбранные верии
     diff: 
-      title: Различия между {{prev}} и {{curr}}
+      title: Различия между %{prev} и %{curr}
     history: 
       current_version: Текущая версия
       previous_versions: Предыдущие версии
-      title: История ({{count}})
+      title: История (%{count})
       version: Версия
       version_summary: Краткое описание версии
     model: 

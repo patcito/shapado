@@ -23,7 +23,7 @@ br:
     index: 
       create_page: Krouiñ ur bajenn nevez
       title: Roll ar pajennoù
-      written_in: Skrivet e {{language}}
+      written_in: Skrivet e %{language}
     new: 
       title: Pajenn nevez
     update: 

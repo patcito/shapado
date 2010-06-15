@@ -11,7 +11,7 @@ ko:
       home: 홈
       languages: 언어
       log_in: 로그인
-      logged: " {{login}}로 로그인"
+      logged: " %{login}로 로그인"
       logout: 로그아웃
       manage_ads: 광고 관리
       moderate: moderate

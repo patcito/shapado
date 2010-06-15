@@ -10,5 +10,5 @@ br:
   members: 
     index: 
       manage_members_title: Izili merañ
-      title: Izili ar strollad {{name}}
-      title_isolate: Izili {{name}}
+      title: Izili ar strollad %{name}
+      title_isolate: Izili %{name}

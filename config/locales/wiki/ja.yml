@@ -9,11 +9,11 @@ ja:
       revert: このバージョンに差し戻す
       show_diff: 選択したバージョン同士の差分を見る
     diff: 
-      title: 差分表示：{{prev}} と {{curr}}
+      title: 差分表示：%{prev} と %{curr}
     history: 
       current_version: 現在のバージョン
       previous_versions: 前のバージョン
-      title: 履歴 ({{count}})
+      title: 履歴 (%{count})
       version: バージョン
       version_summary: バージョンサマリー
     model: 

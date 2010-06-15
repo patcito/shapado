@@ -12,5 +12,5 @@ gl:
       login_tip: procurar á vez que escribe
     index: 
       manage_members_title: xestionar os membros
-      title: membros do grupo de {{name}}
-      title_isolate: membros de {{name}}
+      title: membros do grupo de %{name}
+      title_isolate: membros de %{name}

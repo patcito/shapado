@@ -41,12 +41,12 @@ ru:
       submit: Сохранить
       title: Настройки
     follow: 
-      flash_notice: Пользователь {{user}} добавлен в список ваших друзей
+      flash_notice: Пользователь %{user} добавлен в список ваших друзей
     index: 
       newest: Новейшие
       oldest: Старейшие
       title: Все пользователи
     show: 
       follow: Следить
-      title: Пользователь {{user}}
+      title: Пользователь %{user}
       unfollow: Не следить

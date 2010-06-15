@@ -8,5 +8,5 @@ de:
       title: ausgewählte Schlagworte
     topbar: 
       admin: administrieren
-      logged_as: Als {{login}} angemeldet
+      logged_as: Als %{login} angemeldet
       user_page: Meine Seite

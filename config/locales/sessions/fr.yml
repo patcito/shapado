@@ -5,7 +5,7 @@
 fr: 
   sessions: 
     create: 
-      flash_error: nous n'avons pas pu vous connecter en tant que '{{login}}'
+      flash_error: nous n'avons pas pu vous connecter en tant que '%{login}'
       flash_notice: connexion réussie
     destroy: 
       flash_notice: vous avez été déconnecté.

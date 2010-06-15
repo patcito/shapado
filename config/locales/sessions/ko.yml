@@ -5,7 +5,7 @@
 ko: 
   sessions: 
     create: 
-      flash_error: " '{{login}}'로 로그인하지 못했습니다"
+      flash_error: " '%{login}'로 로그인하지 못했습니다"
       flash_notice: 성공적으로 로그인
     destroy: 
       flash_notice: 로그아웃되었습니다.

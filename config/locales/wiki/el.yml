@@ -9,11 +9,11 @@ el:
       revert: επαναφορά σ' αυτή την έκδοση
       show_diff: συγκρίνετε τις επιλεγμένες εκδόσεις
     diff: 
-      title: διαφορές μεταξύ {{prev}} και {{curr}}
+      title: διαφορές μεταξύ %{prev} και %{curr}
     history: 
       current_version: τρέχουσα έκδοση
       previous_versions: προηγούμενες εκδόσεις
-      title: ιστορικό ({{count}})
+      title: ιστορικό (%{count})
       version: έκδοση
       version_summary: σύνοψη έκδοσης
     model: 

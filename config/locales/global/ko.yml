@@ -19,8 +19,8 @@ ko:
   global: 
     by: by
     current: 현재
-    from: from {{site}}
-    group_not_found: 페이지 {{url}}이 없습니다
+    from: from %{site}
+    group_not_found: 페이지 %{url}이 없습니다
     or: 또는
     permission_denied: 권한 없음
     please_login: 로그인하세요
@@ -37,13 +37,13 @@ ko:
     pt-PT: 포르투갈어
     user: 언어 설정
   messages: 
-    success: "{model}}이 성공적으로  {{action}} 되었습니다."
+    success: "{model}이 성공적으로  %{action} 되었습니다."
   models: 
     question: 질문
   number: 
     x_time: 
-      one: "{{count}} time"
-      other: "{{count}} times"
+      one: "%{count} time"
+      other: "%{count} times"
       zero: never
   scaffold: 
     add: 추가
@@ -55,12 +55,12 @@ ko:
     details: 자세한 정보
     edit: 편집
     more: 더 보기...
-    new: 새로운 {{model}} 을/를 추가
+    new: 새로운 %{model} 을/를 추가
     save: 저장
     send: 보내기
     show: 보기
-    sure: 이  {{model}} 을/를 삭제하겠습니까?
+    sure: 이  %{model} 을/를 삭제하겠습니까?
     update: 업데이트
   time: 
-    ago: "{{time}} ago"
+    ago: "%{time} ago"
     today: 오늘

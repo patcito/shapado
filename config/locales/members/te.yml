@@ -10,5 +10,5 @@ te:
   members: 
     index: 
       manage_members_title: సభ్యుల నిర్వహణ
-      title: "{{name}} లోని గుంపు సభ్యులు"
-      title_isolate: "{{name}} యొక్క సభ్యులు"
+      title: "%{name} లోని గుంపు సభ్యులు"
+      title_isolate: "%{name} యొక్క సభ్యులు"

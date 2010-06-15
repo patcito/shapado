@@ -19,7 +19,7 @@ ru:
     user: Подписаться на вопросы пользователя
   global: 
     current: Текущий
-    group_not_found: Страница {{url}} не существует
+    group_not_found: Страница %{url} не существует
     or: или
     permission_denied: Доступ запрещён
     please_login: Представьтесь, пожалуйста
@@ -56,5 +56,5 @@ ru:
     show: Показать
     update: Обновить
   time: 
-    ago: "{{time}} назад"
+    ago: "%{time} назад"
     today: сегодня

@@ -4,7 +4,7 @@
 ja: 
   sessions: 
     create: 
-      flash_error: ログインできません。ユーザ名'{{login}}'
+      flash_error: ログインできません。ユーザ名'%{login}'
       flash_notice: ログイン成功しました
     destroy: 
       flash_notice: ログアウトしました

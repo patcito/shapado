@@ -16,7 +16,7 @@ ja:
         may_contain_adult_content: このサイトはアダルトコンテンツを含む
         name: サイト名
         openid_only: OpenIDで認証したユーザのみアクセス可能とする
-        owner: このサイトは {{login}}が作成しました
+        owner: このサイトは %{login}が作成しました
         registered_only: 登録したユーザのみアクセス可能とする
         state: ステータス
         subdomain: URL
@@ -66,5 +66,5 @@ ja:
       close_group: このサイトを閉鎖する
       group_awaiting_acceptance: このグループは管理者の判断待ちです
       group_closed: このサイトは閉鎖しています
-      title: "{{name}}について"
+      title: "%{name}について"
       visit_group: このサイトに行く

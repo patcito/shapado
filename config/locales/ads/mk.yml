@@ -4,7 +4,7 @@
 # Author: Bjankuloski06
 mk: 
   ads: 
-    ad_links: додај нова реклама - {{type}}
+    ad_links: додај нова реклама - %{type}
     create: 
       success: рекламата е успешно создадена.
     index: 
@@ -13,4 +13,4 @@ mk:
       title: реклами
     name: "назив:"
     position: "позиција:"
-    title: додај нова реклама - {{type}}
+    title: додај нова реклама - %{type}

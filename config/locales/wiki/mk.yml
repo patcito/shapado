@@ -10,11 +10,11 @@ mk:
       revert: врати на оваа верзија
       show_diff: спореди одбрани верзии
     diff: 
-      title: разлики помеѓу {{prev}} и {{curr}}
+      title: разлики помеѓу %{prev} и %{curr}
     history: 
       current_version: тековна верзија
       previous_versions: претходни верзии
-      title: историја ({{count}})
+      title: историја (%{count})
       version: верзија
       version_summary: опис на верзијата
     model: 

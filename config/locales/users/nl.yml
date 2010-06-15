@@ -51,7 +51,7 @@ nl:
       submit: Opslaan
       title: Voorkeuren
     follow: 
-      flash_notice: De gebruiker {{user}} is toegevoegd aan uw vrienden.
+      flash_notice: De gebruiker %{user} is toegevoegd aan uw vrienden.
     form: 
       activities_notification: E-mails ontvangen over systeemactiviteiten zoals verdiende speldjes, nieuwe volgers, enzovoort.
       avatar_tip: Uw profielafbeelding wijzigen via gravatar
@@ -74,14 +74,14 @@ nl:
       title: Alle gebruikers
     messages: 
       errors: 
-        reputation_needed: Uw reputatie moet minimaal {{min_reputation}} zijn om te kunnen {{action}}
+        reputation_needed: Uw reputatie moet minimaal %{min_reputation} zijn om te kunnen %{action}
     new: 
       submit: Registreren
       title: Aanmelden als nieuwe gebruiker
     show: 
       follow: Volgen
-      title: Gebruiker {{user}}
+      title: Gebruiker %{user}
       unfollow: Niet langer volgen
       views: keren bekeken
     unfollow: 
-      flash_notice: De gebruiker {{user}} is niet langer uw vriend
+      flash_notice: De gebruiker %{user} is niet langer uw vriend

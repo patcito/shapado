@@ -7,5 +7,5 @@ el:
       title: επιλεγμένες ετικέτες
     topbar: 
       admin: διαχείριση
-      logged_as: συνδεδεμένοι ως {{login}}
+      logged_as: συνδεδεμένοι ως %{login}
       user_page: η σελίδα μου

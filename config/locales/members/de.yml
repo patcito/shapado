@@ -12,5 +12,5 @@ de:
       login_tip: Suche während der Eingabe
     index: 
       manage_members_title: Mitglieder verwalten
-      title: Mitglieder der Gruppe {{name}}
-      title_isolate: Mitglieder von {{name}}
+      title: Mitglieder der Gruppe %{name}
+      title_isolate: Mitglieder von %{name}

@@ -122,7 +122,7 @@ el:
     show: 
       description: "μέλη που κέρδισαν αυτό τον τίτλο. πρόσφατα χορηγήθηκε στους:"
       earned: χορηγήθηκε
-      for_tag_bronze: 200 ψήφοι στην ετικέτα {{tag}}
-      for_tag_gold: 1000 ψήφοι στην ετικέτα {{tag}}
-      for_tag_silver: 400 ψήφοι στην ετικέτα {{tag}}
-      title: τίτλος {{type}}
+      for_tag_bronze: 200 ψήφοι στην ετικέτα %{tag}
+      for_tag_gold: 1000 ψήφοι στην ετικέτα %{tag}
+      for_tag_silver: 400 ψήφοι στην ετικέτα %{tag}
+      title: τίτλος %{type}

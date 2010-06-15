@@ -10,7 +10,7 @@ fr:
       home: page principale
       languages: langues
       log_in: se connecter
-      logged: connecté {{login}}
+      logged: connecté %{login}
       logout: se déconnecter
       manage_ads: administrer les publicités
       moderate: modérer

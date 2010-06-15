@@ -46,6 +46,6 @@ br:
       submit: En em enskrivañ
     show: 
       follow: Heuliañ
-      title: Implijer {{user}}
+      title: Implijer %{user}
       unfollow: chom hep heuliañ
       views: gweladennoù

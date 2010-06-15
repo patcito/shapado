@@ -11,7 +11,7 @@ br:
   global: 
     by: gant
     current: Red
-    from: eus {{site}}
+    from: eus %{site}
     or: pe
     please_login: Mar plij kevreit
     preview: Rakwelet
@@ -27,13 +27,13 @@ br:
     pt-PT: Portugaleg
     user: Ma yezhoù karetañ
   messages: 
-    success: "{{model}} a zo bet {{action}}."
+    success: "%{model} a zo bet %{action}."
   models: 
     question: Ar goulenn
   number: 
     x_time: 
-      one: "{{count}} gwech"
-      other: "{{count}} gwech"
+      one: "%{count} gwech"
+      other: "%{count} gwech"
       zero: Morse
   scaffold: 
     add: Ouzhpennañ
@@ -45,11 +45,11 @@ br:
     details: Munudoù
     edit: Kemmañ
     more: Muioc'h...
-    new: Ouzhpennañ {{model}}
+    new: Ouzhpennañ %{model}
     save: Enrollañ
     send: Kas
     show: Diskouez
     update: Hizivaat
   time: 
-    ago: "{{time}} zo"
+    ago: "%{time} zo"
     today: hiziv

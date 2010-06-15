@@ -19,12 +19,12 @@ ja:
           title: 制約
         domain: 
           description: お持ちのドメインを割り当てることができます。手順は以下のように行います。
-          instruction1: まずドメイン管理サービスにログインします。({{subdomain}}のようなドメインを購入したサービスです)。
+          instruction1: まずドメイン管理サービスにログインします。(%{subdomain}のようなドメインを購入したサービスです)。
           instruction2: そしてドメインのDNSセクションに移動し、CNAMEを作成します。
           instruction3: CNAMEは'www'などといったものを設定します。
-          instruction4: そしてホスト名に現在設定されているドメイン（{{domain}}）を指定します。
-          instruction5: 設定が終わって1時間程度もすれば、www.{{subdomain}}は{{appdomain}}を指し示すようになります。
-          instruction6: ドメインの設定が終わったらこのサイトの設定をwww.{{subdomain}}などに変更し、更新ボタンを押します。もし何か質問があればフォーラムや{{chat_url}}でサポートを受けられるはずです。
+          instruction4: そしてホスト名に現在設定されているドメイン（%{domain}）を指定します。
+          instruction5: 設定が終わって1時間程度もすれば、www.%{subdomain}は%{appdomain}を指し示すようになります。
+          instruction6: ドメインの設定が終わったらこのサイトの設定をwww.%{subdomain}などに変更し、更新ボタンを押します。もし何か質問があればフォーラムや%{chat_url}でサポートを受けられるはずです。
           title: ドメイン設定
           warning: 本当にドメインを変更したいですか？
         general: 

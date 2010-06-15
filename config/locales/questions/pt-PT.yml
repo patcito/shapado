@@ -58,14 +58,14 @@ pt-PT:
         empty_tags: Desculpe, tem de usar pelo menos uma categoria.
         title_too_long: O título é demasiado longo; não pode conter mais do que 100 caracteres
         too_many_tags: Desculpe, mas só pode introduzir até 9 categorias.
-        too_short: parece demasiado curta. Use mais do que {{count}} palavras para ser mais específico.
+        too_short: parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
     move: 
       group_label: "mover para o grupo com o slug:"
       submit: mover!
-      title: "mover a pergunta: {{title}}"
+      title: "mover a pergunta: %{title}"
     move_to: 
-      group_dont_exists: o grupo {{group}} não existe
-      success: pergunta movida para o grupo {{group}}
+      group_dont_exists: o grupo %{group} não existe
+      success: pergunta movida para o grupo %{group}
     new: 
       how_to_ask: como perguntar
       title: fazer pergunta
@@ -89,8 +89,8 @@ pt-PT:
       another_answers: outras respostas
       answers: respostas
       answers_title: 
-        one: "{{count}} resposta"
-        other: "{{count}} respostas"
+        one: "%{count} resposta"
+        other: "%{count} respostas"
       asked_on: colocada a
       ban: banir
       close: fechar
@@ -106,7 +106,7 @@ pt-PT:
       retag: recategorizar
       retract_request: já colocou um pedido; deseja retirá-lo?
       share: partilhar esta pergunta em
-      share_on: partilhar esta pergunta em {{site}}
+      share_on: partilhar esta pergunta em %{site}
       solution: solução
       to_answer_question: para responder a esta pergunta
       unauthenticated_retag: precisa de ter uma conta para recategorizar perguntas
@@ -119,7 +119,7 @@ pt-PT:
     tags: 
       filter: pesquisar categorias
       title: categorias
-      tooltip: mostrar perguntas na categoria {{tag}}
+      tooltip: mostrar perguntas na categoria %{tag}
     unanswered: 
       empty: este grupo não contém perguntas sem resposta.
       expert: peritos

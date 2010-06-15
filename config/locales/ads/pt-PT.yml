@@ -3,7 +3,7 @@
 # Export driver: syck
 pt-PT: 
   ads: 
-    ad_links: add a new {{type}} ad
+    ad_links: add a new %{type} ad
     create: 
       success: ad was successfully created.
     index: 
@@ -12,4 +12,4 @@ pt-PT:
       title: ads
     name: "name:"
     position: "position:"
-    title: add a new {{type}} ad
+    title: add a new %{type} ad

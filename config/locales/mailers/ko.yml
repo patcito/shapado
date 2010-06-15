@@ -6,19 +6,19 @@ ko:
   mailers: 
     notifications: 
       earned_badge: 
-        subject: "{{group}} 배지를 땄습니다!"
+        subject: "%{group} 배지를 땄습니다!"
       favorited: 
-        subject: "{{login}} 님이 귀하의 질문을 Favorite로 추가하였습니다!"
+        subject: "%{login} 님이 귀하의 질문을 Favorite로 추가하였습니다!"
       follow: 
-        subject: "{{login}}님이 귀하를  {{app}}에서 Following합니다"
+        subject: "%{login}님이 귀하를  %{app}에서 Following합니다"
       give_advice: 
-        friend_subject: "벗의 공부를 도와주세요: {{question_title}}"
-        subject: "귀하의 지식을 공유해 주세요: {{question_title}}"
+        friend_subject: "벗의 공부를 도와주세요: %{question_title}"
+        subject: "귀하의 지식을 공유해 주세요: %{question_title}"
       new_answer: 
-        subject_friend: 친구 {{login}}님이 질문 {{title}}에 답변을 남겼습니다
-        subject_other: "{{login}} 님이 {{title}} 질문에 답변을 남겼습니다"
-        subject_owner: "{{login}} 님이 {{title}} 질문에 답변을 남겼습니다"
+        subject_friend: 친구 %{login}님이 질문 %{title}에 답변을 남겼습니다
+        subject_other: "%{login} 님이 %{title} 질문에 답변을 남겼습니다"
+        subject_owner: "%{login} 님이 %{title} 질문에 답변을 남겼습니다"
       new_comment: 
-        subject: "{{login}}님이 {{group}}에 코멘트를 남겼습니다"
+        subject: "%{login}님이 %{group}에 코멘트를 남겼습니다"
       report: 
-        subject: "{{app}}의 그룹 {{group}} 리포트"
+        subject: "%{app}의 그룹 %{group} 리포트"

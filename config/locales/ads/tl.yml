@@ -4,7 +4,7 @@
 # Author: AnakngAraw
 tl: 
   ads: 
-    ad_links: magdagdag ng isang bagong anunsyong {{type}}
+    ad_links: magdagdag ng isang bagong anunsyong %{type}
     create: 
       success: matagumpay na nalikha ang anunsyo.
     index: 
@@ -13,4 +13,4 @@ tl:
       title: mga anunsyo
     name: "pangalan:"
     position: "puwesto:"
-    title: magdagdag ng isang bagong anunsyong {{type}}
+    title: magdagdag ng isang bagong anunsyong %{type}

@@ -4,7 +4,7 @@
 # Author: Linkr
 ko: 
   ads: 
-    ad_links: 새 {{type}} ad 추가
+    ad_links: 새 %{type} ad 추가
     create: 
       success: 광고가 성공적으로 만들었습니다.
     index: 
@@ -13,4 +13,4 @@ ko:
       title: 광고
     name: "이름:"
     position: " 위치 :"
-    title: " 새 {{type}} ad 추가"
+    title: " 새 %{type} ad 추가"

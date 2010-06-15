@@ -10,11 +10,11 @@ nl:
       revert: Terugdraaien naar deze versie
       show_diff: Geselecteerde versies vergelijken
     diff: 
-      title: Verschillen tussen {{prev}} en {{curr}}
+      title: Verschillen tussen %{prev} en %{curr}
     history: 
       current_version: Huidige versie
       previous_versions: Eerdere versies
-      title: Geschiedenis ({{count}})
+      title: Geschiedenis (%{count})
       version: Versie
       version_summary: Samenvatting voor versie
     model: 

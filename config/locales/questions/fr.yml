@@ -58,14 +58,14 @@ fr:
         empty_tags: désolé, vous devez utiliser au moins un tag.
         title_too_long: le titre est trop long, il ne doit pas contenir plus de 100 caractères
         too_many_tags: désolé, vous ne pouvez utiliser que 9 tags maximum.
-        too_short: parait trop court. S'il vous plait, veuillez utiliser plus de mots que {{count}} pour être plus specific
+        too_short: parait trop court. S'il vous plait, veuillez utiliser plus de mots que %{count} pour être plus specific
     move: 
       group_label: "transférer au groupe du nom:"
       submit: transférer!
-      title: "transférer la question: {{title}}"
+      title: "transférer la question: %{title}"
     move_to: 
-      group_dont_exists: le groupe {{group}} n'éxiste pas
-      success: question transférée à {{group}}
+      group_dont_exists: le groupe %{group} n'éxiste pas
+      success: question transférée à %{group}
     new: 
       how_to_ask: comment poser une question
       title: posez une question
@@ -89,8 +89,8 @@ fr:
       another_answers: autres réponses
       answers: réponses
       answers_title: 
-        one: "{{count}} réponse"
-        other: "{{count}} réponses"
+        one: "%{count} réponse"
+        other: "%{count} réponses"
       asked_on: posée dans
       ban: ban
       close: fermer
@@ -106,7 +106,7 @@ fr:
       retag: modifier les tags
       retract_request: vous avez déjà fait une demande, voulez-vous vous rétracter?
       share: partager cette question
-      share_on: partager cette question {{site}}
+      share_on: partager cette question %{site}
       solution: solution
       to_answer_question: pour répondre à cette question
       unauthenticated_retag: vous devez avoir un compte utilisateur por modifier les tags
@@ -119,7 +119,7 @@ fr:
     tags: 
       filter: recherchez des tags
       title: tags
-      tooltip: montrer les questions avec le tag {{tag}}
+      tooltip: montrer les questions avec le tag %{tag}
     unanswered: 
       empty: ce groupe n'a aucune question sans réponses
       expert: expert

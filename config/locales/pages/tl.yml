@@ -26,7 +26,7 @@ tl:
     index: 
       create_page: lumikha ng bagong pahina
       title: talaan ng mga pahina
-      written_in: nakasulat sa {{language}}
+      written_in: nakasulat sa %{language}
     new: 
       title: bagong pahina
     title: ayusin ako

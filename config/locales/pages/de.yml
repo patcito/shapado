@@ -26,7 +26,7 @@ de:
     index: 
       create_page: Neue Seite erstellen
       title: Liste der Seiten
-      written_in: auf {{language}} geschrieben
+      written_in: auf %{language} geschrieben
     new: 
       title: neue Seite
     title: FIXME

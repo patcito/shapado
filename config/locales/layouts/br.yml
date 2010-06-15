@@ -12,7 +12,7 @@ br:
       home: Degemer
       languages: Yezhoù
       log_in: Kevreañ
-      logged: Kevreet evel {{login}}
+      logged: Kevreet evel %{login}
       logout: Digevreañ
       manage_ads: Merañ ar bruderezh
       moderate: Habaskaat

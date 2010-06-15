@@ -123,7 +123,7 @@ pt-PT:
     show: 
       description: "utilizadores que ganharam este distintivo; recentemente atribuído a:"
       earned: recebeu
-      for_tag_bronze: 200 votos na categoria {{tag}}
-      for_tag_gold: 1000 votos na categoria {{tag}}
-      for_tag_silver: 400 votos na categoria {{tag}}
-      title: distintivo {{type}}
+      for_tag_bronze: 200 votos na categoria %{tag}
+      for_tag_gold: 1000 votos na categoria %{tag}
+      for_tag_silver: 400 votos na categoria %{tag}
+      title: distintivo %{type}

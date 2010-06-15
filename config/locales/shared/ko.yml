@@ -8,5 +8,5 @@ ko:
       title: 선택된 태그
     topbar: 
       admin: 관리자
-      logged_as: " {{login}}로 로그인"
+      logged_as: " %{login}로 로그인"
       user_page: 내 페이지

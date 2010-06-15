@@ -11,5 +11,5 @@ fr:
       login_tip: search as you type
     index: 
       manage_members_title: manage members
-      title: members of {{name}}'s group
-      title_isolate: members of {{name}}
+      title: members of %{name}'s group
+      title_isolate: members of %{name}

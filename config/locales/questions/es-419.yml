@@ -57,14 +57,14 @@ es-419:
         empty_tags: Disculpa, debes usar al menos una etiqueta.
         title_too_long: El titulo es demasiado largo. No puede tener mas de 100 letras
         too_many_tags: Disculpa, solo puedes entrar 9 etiquetas maximo.
-        too_short: demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico.
+        too_short: demasiado corto. Por favor, usa mas palabras que %{count} para ser mas especifico.
     move: 
       group_label: "mover la pregunta a el group con slug:"
       submit: mover!
-      title: "mover la pregunta: {{title}}"
+      title: "mover la pregunta: %{title}"
     move_to: 
-      group_dont_exists: el group {{group}} no existe
-      success: pegunta movida a {{group}}
+      group_dont_exists: el group %{group} no existe
+      success: pegunta movida a %{group}
     new: 
       how_to_ask: como preguntar
       title: pregunte
@@ -88,8 +88,8 @@ es-419:
       another_answers: otras respuestas
       answers: respuestas
       answers_title: 
-        one: "{{count}} respuesta"
-        other: "{{count}} respuestas"
+        one: "%{count} respuesta"
+        other: "%{count} respuestas"
       asked_on: preguntado en
       ban: ban
       close: cerrar
@@ -105,7 +105,7 @@ es-419:
       retag: re-etiquetar
       retract_request: ya has hecho una petición, deseas retractarla?
       share: compartir esta pregunta en
-      share_on: compartir esta pregunta en {{site}}
+      share_on: compartir esta pregunta en %{site}
       solution: solución
       to_answer_question: para responder esta pregunta
       unauthenticated_retag: se necesita una cuenta para re-etiquetar
@@ -118,7 +118,7 @@ es-419:
     tags: 
       filter: buscar tags
       title: etiquetas
-      tooltip: muestra las preguntas etiquetadas con {{tag}}
+      tooltip: muestra las preguntas etiquetadas con %{tag}
     unanswered: 
       empty: este grupo no tiene preguntas no contestar.
       expert: expertos

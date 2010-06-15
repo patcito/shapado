@@ -7,8 +7,8 @@ ko:
     forbidden: 
       explanation: 이 페이지에 액세스할 권한이 없습니다.
       title: 접근이 거부됨
-    go_to: "{{link}} 페이지로 이동"
-    help_us_answer: " {{link}} 답변을 도와 주세요"
+    go_to: "%{link} 페이지로 이동"
+    help_us_answer: " %{link} 답변을 도와 주세요"
     internal_error: 
       explanation: 이 문제를 전달 받았으며, 곧 살펴 볼 것입니다.
       title: 죄송하지만, 뭔가 잘못 됐어요.

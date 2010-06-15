@@ -26,7 +26,7 @@ ko:
     index: 
       create_page: 새 페이지 만들기
       title: 페이지 목록
-      written_in: "{{language}}로 작성"
+      written_in: "%{language}로 작성"
     new: 
       title: 새 페이지
     title: FIXME

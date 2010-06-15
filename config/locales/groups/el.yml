@@ -17,7 +17,7 @@ el:
         may_contain_adult_content: αυτό το site μπορεί να έχει περιεχόμενο μόνο για ενηλίκους
         name: όνομα
         openid_only: μόνο αυτοί με OpenId να έχουν πρόσβαση στο site
-        owner: αυτή η ομάδα δημιουργήθηκε από τον/την {{login}}
+        owner: αυτή η ομάδα δημιουργήθηκε από τον/την %{login}
         registered_only: μόνο οι εγγεγραμμένοι να έχουν πρόσβαση στο site
         state: κατάσταση
         subdomain: subdomain
@@ -67,5 +67,5 @@ el:
       close_group: κλείσιμο ομάδας
       group_awaiting_acceptance: αυτή η ομάδα αναμένει την αποδοχή ενός moderator.
       group_closed: αυτή η ομάδα έχει κλειστεί.
-      title: σχετικά με {{name}}
+      title: σχετικά με %{name}
       visit_group: επισκεφθείτε αυτή την ομάδα

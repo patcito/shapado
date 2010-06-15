@@ -16,7 +16,7 @@ en:
       allow_ads: Allow ads
       disallow_ads: Disallow ads
     show:
-      title: "About {{name}}"
+      title: "About %{name}"
       visit_group: Visit this group
       group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
       group_closed: This group was closed.
@@ -55,7 +55,7 @@ en:
         legend: Legend
         description: Description
         state: State
-        owner: "This group was created by {{login}}"
+        owner: "This group was created by %{login}"
         group_created_by: created by
         language: Language
         default_tags: "Default tags"

@@ -3,7 +3,7 @@
 # Export driver: syck
 el: 
   ads: 
-    ad_links: προσθήκη νέας {{type}} διαφήμισης
+    ad_links: προσθήκη νέας %{type} διαφήμισης
     create: 
       success: η διαφήμιση δημιουργήθηκε επιτυχώς.
     index: 
@@ -12,4 +12,4 @@ el:
       title: διαφημίσεις
     name: "όνομα:"
     position: "θέση:"
-    title: προσθήκη νέας {{type}} διαφήμισης
+    title: προσθήκη νέας %{type} διαφήμισης

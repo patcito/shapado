@@ -10,7 +10,7 @@ el:
       home: κεντρική
       languages: γλώσσες
       log_in: σύνδεση
-      logged: συνδεδεμένοι ως {{login}}
+      logged: συνδεδεμένοι ως %{login}
       logout: αποσύνδεση
       manage_ads: διαχείριση διαφημίσεων
       moderate: moderate

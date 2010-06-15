@@ -10,11 +10,11 @@ tl:
       revert: magpanumbalik sa bersyong ito
       show_diff: paghambingin ang napiling mga bersyon
     diff: 
-      title: pagkakaiba sa pagitan ng {{prev}} at {{curr}}
+      title: pagkakaiba sa pagitan ng %{prev} at %{curr}
     history: 
       current_version: kasalukuyang bersyon
       previous_versions: nakaraang mga bersyon
-      title: kasaysayan ({{count}})
+      title: kasaysayan (%{count})
       version: bersyon
       version_summary: buod ng bersyon
     model: 

@@ -123,7 +123,7 @@ mk:
     show: 
       description: "корисници што ја добиле оваа значка. неодамна доделена на:"
       earned: заработил
-      for_tag_bronze: 200 гласа на ознаката {{tag}}
-      for_tag_gold: 1000 гласа за ознаката {{tag}}
-      for_tag_silver: 400 гласа на ознаката {{tag}}
-      title: значка {{type}}
+      for_tag_bronze: 200 гласа на ознаката %{tag}
+      for_tag_gold: 1000 гласа за ознаката %{tag}
+      for_tag_silver: 400 гласа на ознаката %{tag}
+      title: значка %{type}

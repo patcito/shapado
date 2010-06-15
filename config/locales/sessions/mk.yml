@@ -5,7 +5,7 @@
 mk: 
   sessions: 
     create: 
-      flash_error: не можам да ве најавам како „{{login}}“
+      flash_error: не можам да ве најавам како „%{login}“
       flash_notice: успешно сте најавени
     destroy: 
       flash_notice: одјавени сте.

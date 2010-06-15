@@ -2,7 +2,7 @@ en:
   sessions:
     create:
       flash_notice: "Logged in successfully"
-      flash_error: "Couldn't log you in as '{{login}}'"
+      flash_error: "Couldn't log you in as '%{login}'"
     destroy:
       flash_notice: "You have been logged out."
     new:

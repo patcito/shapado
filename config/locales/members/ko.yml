@@ -12,5 +12,5 @@ ko:
       login_tip: search as you type
     index: 
       manage_members_title: 회원 관리
-      title: "{{name}}의 그룹 회원들"
-      title_isolate: "{{name}}의 회원들"
+      title: "%{name}의 그룹 회원들"
+      title_isolate: "%{name}의 회원들"

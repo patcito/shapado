@@ -50,7 +50,7 @@ pt-PT:
       submit: gravar
       title: preferências
     follow: 
-      flash_notice: The user {{user}} was added to your friends
+      flash_notice: The user %{user} was added to your friends
     form: 
       activities_notification: receive email notifications about system activities such as earned badges, new followers, etc.
       avatar_tip: change your profile image using gravatar
@@ -73,13 +73,13 @@ pt-PT:
       title: todos os utilizadores
     messages: 
       errors: 
-        reputation_needed: you need a reputation of {{min_reputation}} to {{action}}
+        reputation_needed: you need a reputation of %{min_reputation} to %{action}
     new: 
       submit: registar
       title: registar-se como novo utlizador
     show: 
       follow: follow
-      title: User {{user}}
+      title: User %{user}
       unfollow: unfollow
     unfollow: 
-      flash_notice: The user {{user}} was removed from your friends
+      flash_notice: The user %{user} was removed from your friends

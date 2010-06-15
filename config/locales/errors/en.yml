@@ -1,8 +1,8 @@
 en:
   errors:
     options_label: "Other things to try:"
-    go_to: "Go to {{link}} page"
-    help_us_answer: Help us answer {{link}}
+    go_to: "Go to %{link} page"
+    help_us_answer: Help us answer %{link}
     search: "Search"
     forbidden:
       title: "Access denied"

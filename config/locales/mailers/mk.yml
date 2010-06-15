@@ -6,19 +6,19 @@ mk:
   mailers: 
     notifications: 
       earned_badge: 
-        subject: На {{group}} добивте значка!
+        subject: На %{group} добивте значка!
       favorited: 
-        subject: "{{login}} го додаде вашето прашање како омилено!"
+        subject: "%{login} го додаде вашето прашање како омилено!"
       follow: 
-        subject: "{{login}} сега ве следи на {{app}}"
+        subject: "%{login} сега ве следи на %{app}"
       give_advice: 
-        friend_subject: "на вашиот пријател му треба помош: {{question_title}}"
-        subject: "ни треба ваш совет: {{question_title}}"
+        friend_subject: "на вашиот пријател му треба помош: %{question_title}"
+        subject: "ни треба ваш совет: %{question_title}"
       new_answer: 
-        subject_friend: вашиот пријател {{login}} одговори на прашањето {{title}}
-        subject_other: "{{login}} одговори на прашањето {{title}}"
-        subject_owner: "{{login}} ви одговори на прашањето {{title}}"
+        subject_friend: вашиот пријател %{login} одговори на прашањето %{title}
+        subject_other: "%{login} одговори на прашањето %{title}"
+        subject_owner: "%{login} ви одговори на прашањето %{title}"
       new_comment: 
-        subject: "{{login}} искоментира на {{group}}"
+        subject: "%{login} искоментира на %{group}"
       report: 
-        subject: извештај за групата {{group}} од {{app}}
+        subject: извештај за групата %{group} од %{app}
