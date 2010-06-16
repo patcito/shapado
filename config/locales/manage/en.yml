@@ -17,11 +17,11 @@ en:
         constrains:
           title: Constrains
           reputation_constrains_subtitle: List of reputations constrains for each action
-          reputation_constrains_description: This formular allows you to configure how much reputation points users to be able to do a given action
+          reputation_constrains_description: This form allows you to configure how many reputation points users gain or lose for a given action
         rewards:
           title: Rewards
           reputation_rewards_subtitle: List of reputations rewards
-          reputation_rewards_description: This formular allows you to configure how users can win and lose reputation points for a given action
+          reputation_rewards_description: This form allows you to configure how users can win and lose reputation points for a given action
         theme:
           title: Set the group's theme
           logo_legend: Upload a logo for your group, it must be smaller than 2mb.
