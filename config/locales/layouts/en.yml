@@ -43,3 +43,5 @@ en:
       rewards: Rewards
       general: General
       announcements: Announcements
+    notifications:
+      message: "If you do not want to receive automatic notifications from %{domain} anymore, change your preferences in the notifications screen."

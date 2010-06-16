@@ -1,0 +1,16 @@
+-link = url_for(:host => @group.domain, :controller => "users", :action => "show", :id => @user.to_param)
+
+= t('notifier.global.hi', :user => @user.login)
+%br
+
+= t('.message1', :badge => @badge.name, :app => AppConfig.application_name)
+%br
+
+= t('.message2)
+%h2
+  = @badge.description
+
+= t('.message3)
+= link_to t('notifier.global.user_page), link
+
+

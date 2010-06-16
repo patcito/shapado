@@ -1,3 +1,4 @@
+
 -if @user
   = t('.message1', :user =>h(@user.login), :email => h(@user.email))
 -else
@@ -5,7 +6,7 @@
 
 = t('.message3', :email => h(@user.email))
 
-= t('.message1', :subject => h(@subject))
+= t('.message4', :subject => h(@subject))
 ==
 = @content
 
