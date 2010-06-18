@@ -61,7 +61,7 @@
         = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang), :class => "langbox checkbox #{jsclass}"
         %label.radio.langbox{:class=>jsclass}
           = language_desc(lang)
-    = link_to 'show more languages', nil, :class => 'show-more-lang'
+    = link_to t('.show_more_lang'), nil, :class => 'show-more-lang'
 -else
   = hidden_field_tag "user[preferred_languages][]", (current_group.language || AppConfig.default_language)
 
