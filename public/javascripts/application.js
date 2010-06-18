@@ -72,6 +72,12 @@ $(document).ready(function() {
   $(".highlight_for_user").effect("highlight", {}, 2000);
   sortValues('group_language', ':last');
   sortValues('language_filter', ':lt(2)');
+
+  $('.langbox.jshide').hide();
+  $('.show-more-lang').click(function(){
+      $('.langbox.jshide').toggle();
+      return false;
+  })
 })
 
 function initAutocomplete(){

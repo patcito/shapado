@@ -56,10 +56,12 @@
   .group
     = f.label :preferred_languages, t(:preferred_languages, :scope => "activerecord.attributes.user"), :class => "label"
     -AVAILABLE_LANGUAGES.each do |lang|
+      - (DEFAULT_USER_LANGUAGES.include? lang)? jsclass = '' : jsclass = 'jshide'
       .radio_option
-        = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang), :class => "checkbox"
-        %label.radio
+        = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang), :class => "langbox checkbox #{jsclass}"
+        %label.radio.langbox{:class=>jsclass}
           = language_desc(lang)
+    = link_to 'show more languages', nil, :class => 'show-more-lang'
 -else
   = hidden_field_tag "user[preferred_languages][]", (current_group.language || AppConfig.default_language)
 
