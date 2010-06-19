@@ -1,8 +1,7 @@
 %p
   = t('notifier.global.hi', :user => h(@user.login))
   %br
-  = h(@question.user.login)
-  = t('.message1')
+  = t('.message1', :user => h(@question.user.login))
   %br
   == "#{h(@question.title)}"
   %br
