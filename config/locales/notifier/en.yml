@@ -10,21 +10,19 @@ en:
     earned_badge:
       message1: "You have earned a %{badge} badge on %{app}"
       message2: "Badge description:"
-      message3: "You can see all your badges on your"
+      message3: "You can see all your badges on your %{user_page}"
     follow:
       message1: "%{user} is now following your questions and answers on %{app}"
-      message2: 'You may follow him back by clicking on the button "Follow" on his'
+      message2: 'You may follow him back by clicking on the button "Follow" on his %{user_page}'
     give_advice:
       message1: "%{user} just asked a question you might be able to answer:"
       message2: "To answer, just reply to this message here:"
       message3: "Or, if you know someone who might be able to answer, send them this referral link:"
       message4: "If we don't get an answer from you soon, we'll ask someone else; you can still answer it whenever you want."
     new_answer:
-      message1: "accepted"
-      message2: "to the question"
+      message: "%{user} accepted %{new_answer} to the question %{question}"
     new_comment:
-      message1: "commented"
-      message2: "on the question"
+      message: "%{user} commented %{new_comment} on the question %{question}"
     new_feedback:
       message1: "The user %{user} <%{email}> sent a feedback"
       message2: "anonymous user sent a feedback from %{ip} ip"
@@ -34,7 +32,7 @@ en:
       message1: "report for group %{group.name}"
       message2: "since %{since}"
       message3: "%{questions} questions were created"
-      message4: "%{answers} answsers were created"
+      message4: "%{answers} answers were created"
       message5: "%{votes} votes were made"
       message6: "%{badges} badges were awarded"
       message7: "The account has %{users} users."

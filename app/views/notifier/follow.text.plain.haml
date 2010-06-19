@@ -3,6 +3,5 @@
 = t('notifier.global.hi', :user => @followed.login)
 
 = t('.message1', :user => @user.login, :app => AppConfig.application_name)
-= t('.message2')
-== #{t('notifier.global.user_page')}:
-=link
+= t('.message2', :user_page => t('notifier.global.user_page'))
+= link

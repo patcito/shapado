@@ -6,11 +6,8 @@
 = t('.message1', :badge => @badge.name, :app => AppConfig.application_name)
 %br
 
-= t('.message2)
+= t('.message2')
 %h2
   = @badge.description
 
-= t('.message3)
-= link_to t('notifier.global.user_page), link
-
-
+= t('.message3', :user_page => link_to(t('notifier.global.user_page'), link))
