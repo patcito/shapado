@@ -4,9 +4,9 @@ en:
       hi: "Hi %{user},"
       user_page: "user page"
     favorited:
-      message1: "%{user}, added your question as a favorite on %{group}"
+      message1: "%{user} added your question as a favorite on %{group}"
       message2: "The text of your question:"
-      message3: "you can see it here:"
+      message3: "You can see it here:"
     earned_badge:
       message1: "You have earned a %{badge} badge on %{app}"
       message2: "Badge description:"
