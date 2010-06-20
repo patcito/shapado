@@ -18,19 +18,19 @@ en:
       message1: "%{user} just asked a question you might be able to answer:"
       message2: "To answer, just reply to this message here:"
       message3: "Or, if you know someone who might be able to answer, send them this referral link:"
-      message4: "If we don't get an answer from you soon, we'll ask someone else; you can still answer it whenever you want."
+      message4: "If we do not get an answer from you soon, we will ask someone else. You can still answer it whenever you want."
     new_answer:
       message: "%{user} accepted %{new_answer} to the question %{question}"
     new_comment:
       message: "%{user} commented %{new_comment} on the question %{question}"
     new_feedback:
       message1: "The user %{user} <%{email}> sent a feedback"
-      message2: "anonymous user sent a feedback from %{ip} ip"
-      message3: "email: %{email}"
-      message4: "subject: %{subject}"
+      message2: "Anonymous user sent a feedback from IP address %{ip}"
+      message3: "Email address: %{email}"
+      message4: "Subject: %{subject}"
     report:
-      message1: "report for group %{group.name}"
-      message2: "since %{since}"
+      message1: "Report for group %{group.name}"
+      message2: "Since %{since}"
       message3: "%{questions} questions were created"
       message4: "%{answers} answers were created"
       message5: "%{votes} votes were made"
