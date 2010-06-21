@@ -284,9 +284,7 @@ Time.zone.now ? 1 : 0)
     if activity == :login
       self.last_logged_at ||= Time.now
       if !self.last_logged_at.today?
-        self.collection.update({:_id => self._id},
-                               {:$set => {:last_logged_at => Time.zone.now.utc}},
-                               {:upsert => true})
+        self.set( {:last_logged_at => Time.zone.now.utc} )
       end
     else
       self.update_reputation(activity, group) if activity != :login
@@ -299,14 +297,10 @@ Time.zone.now ? 1 : 0)
     last_day = config_for(group).last_activity_at
 
     if last_day != day
-      collection.update({:_id => self.id},
-                        {:$set => {"membership_list.#{group.id}.last_activity_at" => day}},
-                        {:upsert => true})
+      self.set({"membership_list.#{group.id}.last_activity_at" => day})
       if last_day
         if last_day.utc.between?(day.yesterday - 12.hours, day.tomorrow)
-          collection.update({:_id => self.id},
-                            {:$inc => {"membership_list.#{group.id}.activity_days" => 1}},
-                            {:upsert => true})
+          self.increment({"membership_list.#{group.id}.activity_days" => 1})
           Magent.push("actors.judge", :on_activity, group.id, self.id)
         elsif !last_day.utc.today? && (last_day.utc != Time.now.utc.yesterday)
           Rails.logger.info ">> Resetting act days!! last known day: #{last_day}"
@@ -317,17 +311,15 @@ Time.zone.now ? 1 : 0)
   end
 
   def reset_activity_days!(group)
-    self.collection.update({:_id => self._id},
-                           {:$set => {"membership_list.#{group.id}.activity_days" => 0}},
-                            :upsert => true)
+    self.set({"membership_list.#{group.id}.activity_days" => 0})
   end
 
   def upvote!(group, v = 1.0)
-    collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.votes_up" => v.to_f}}, {:upsert => true})
+    self.increment({"membership_list.#{group.id}.votes_up" => v.to_f})
   end
 
   def downvote!(group, v = 1.0)
-    collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.votes_down" => v.to_f}}, {:upsert => true})
+    self.increment({"membership_list.#{group.id}.votes_down" => v.to_f})
   end
 
   def update_reputation(key, group)
@@ -337,7 +329,7 @@ Time.zone.now ? 1 : 0)
     current_reputation = config_for(group).reputation
 
     if value
-      collection.update({:_id => self.id}, {:$inc => {"membership_list.#{group.id}.reputation" => value}}, {:upsert => true})
+      self.increment({"membership_list.#{group.id}.reputation" => value})
     end
 
     stats = self.reputation_stats(group, { :select => [:_id] })

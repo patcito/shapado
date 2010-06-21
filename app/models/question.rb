@@ -146,10 +146,10 @@ class Question
   def on_remove_vote(v, voter)
     if v > 0
       self.user.update_reputation(:question_undo_up_vote, self.group)
-      voter.on_activity(:undo_vote_up_question, self.group)
+      voter.on_activity(:vote_up_question, self.group)
     else
       self.user.update_reputation(:question_undo_down_vote, self.group)
-      voter.on_activity(:undo_vote_down_question, self.group)
+      voter.on_activity(:vote_down_question, self.group)
     end
     on_activity(false)
   end

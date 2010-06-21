@@ -12,10 +12,7 @@ module Voteable
 
   module InstanceMethods
     def add_vote!(v, voter)
-      self.collection.update({:_id => self._id}, {:$inc => {:votes_count => 1,
-                                                            :votes_average => v.to_i}},
-                                                            :upsert => true,
-                                                            :safe => true)
+      self.increment({:votes_count => 1, :votes_average => v.to_i})
       if v > 0
         self.user.upvote!(self.group)
       else
@@ -25,10 +22,7 @@ module Voteable
     end
 
     def remove_vote!(v, voter)
-      self.collection.update({:_id => self._id}, {:$inc => {:votes_count => -1,
-                                                            :votes_average => (-v)}},
-                                                            :upsert => true)
-
+      self.increment({:votes_count => -1, :votes_average => (-v)})
       if v > 0
         self.user.upvote!(self.group, -1)
       else

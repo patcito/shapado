@@ -53,9 +53,11 @@ class Answer < Comment
 
   def on_remove_vote(v, voter)
     if v > 0
-      self.user.upvote!(self.group, -1)
+      self.user.update_reputation(:answer_undo_up_vote, self.group)
+      voter.on_activity(:undo_vote_up_answer, self.group)
     else
-      self.user.downvote!(self.group, -1)
+      self.user.update_reputation(:answer_undo_down_vote, self.group)
+      voter.on_activity(:undo_vote_down_answer, self.group)
     end
   end
 
