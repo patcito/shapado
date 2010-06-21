@@ -344,15 +344,6 @@ $(document).ready(function() {
   });
 });
 
-
-function highlightEffect(object) {
-  if(typeof object != "undefined") {
-    object.fadeOut(400, function() {
-      object.fadeIn(400)
-    });
-  }
-}
-
 $(window).load(function() {
   prettyPrint();
 });

@@ -202,3 +202,11 @@ function sortValues(selectID, keepers){
   $('#'+selectID).prepend(any);
   //updateValueList();
 };
+
+function highlightEffect(object) {
+  if(typeof object != "undefined") {
+    object.fadeOut(400, function() {
+      object.fadeIn(400)
+    });
+  }
+}
