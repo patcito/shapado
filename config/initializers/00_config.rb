@@ -81,13 +81,13 @@ AppConfig.enable_facebook_auth = AppConfig.facebook["activate"]
 
 AppConfig.version = File.read(RAILS_ROOT+"/VERSION")
 
-if AppConfig.smtp[:activate]
+if AppConfig.smtp["activate"]
   ActionMailer::Base.smtp_settings = {
-    :address => AppConfig.smtp[:server],
-    :port => 587,
-    :domain => AppConfig.smtp[:domain],
+    :address => AppConfig.smtp["server"],
+    :port => AppConfig.smtp["port"],
+    :domain => AppConfig.smtp["domain"],
     :authentication => :login,
-    :user_name => AppConfig.smtp[:login],
-    :password => AppConfig.smtp[:password]
+    :user_name => AppConfig.smtp["login"],
+    :password => AppConfig.smtp["password"]
   }
 end
