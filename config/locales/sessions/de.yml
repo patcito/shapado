@@ -13,6 +13,8 @@ de:
       log_in: Anmeldung
       not_registered: noch nicht registriert?
       registered: bereits registriert?
+      remember_me: Anmeldedaten merken
+      sign_in: Anmelden
       signup: Registrierung
       with_authentication: Melde Dich mich unserem Authentifizierungssystem an
       with_facebook: Über „Facebook“ anmelden

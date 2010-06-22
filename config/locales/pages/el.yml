@@ -1,33 +1,34 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     attributes: 
       page: 
-        css: stylesheets
-        js: javascript
+        css: Stylesheets
+        js: Javascript
     models: 
-      page: σελίδα
-      pages: σελίδες
+      page: Σελίδα
+      pages: Σελίδες
   pages: 
     actions: 
-      create_page: δημιουργία νέας σελίδας
-      edit_page: επεξεργασία σελίδας
-      title: ενέργειες
+      create_page: Δημιουργία νέας σελίδας
+      edit_page: Επεξεργασία σελίδας
+      title: Ενέργειες
     create: 
-      success: η σελίδα δημιουργήθηκε επιτυχώς.
+      success: Η σελίδα δημιουργήθηκε επιτυχώς.
     edit: 
-      title: επεξεργασία σελίδας
+      title: Επεξεργασία σελίδας
     form: 
-      language_tip: γλώσσα σελίδας
-      title_tip: "τίτλος σελίδας, χρησιμοποιήστε τον για να αναφερθείτε στη σελίδα. π.χ: [[FAQ|check out the faq]]"
+      language_tip: Γλώσσα σελίδας
+      title_tip: "Τίτλος σελίδας, χρησιμοποιήστε τον για να αναφερθείτε στη σελίδα. π.χ: [[FAQ|check out the faq]]"
     index: 
-      create_page: δημιουργία νέας σελίδας
-      title: κατάλογος σελίδων
-      written_in: γραμμένη στα %{language}
+      create_page: Δημιουργία νέας σελίδας
+      title: Κατάλογος σελίδων
+      written_in: Γραμμένη στα %{language}
     new: 
-      title: νέα σελίδα
-    title: σελίδες
+      title: Νέα σελίδα
+    title: Σελίδες
     update: 
-      success: η σελίδα ενημερώθηκε επιτυχώς.
+      success: Η σελίδα ενημερώθηκε επιτυχώς.

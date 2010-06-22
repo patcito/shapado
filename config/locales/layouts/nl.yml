@@ -47,3 +47,5 @@ nl:
       stats: Statistieken
       theme: Thema
       widgets: Widgets
+    notifications: 
+      message: Als u geen automatische meldingen van %{domain} meer wilt ontvangen, wijzig dan uw voorkeuren in het scherm voor meldingen.

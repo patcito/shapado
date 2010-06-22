@@ -1,0 +1,12 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+"no": 
+  shared: 
+    current_tags: 
+      title: Valgte merker
+    topbar: 
+      admin: Admin
+      logged_as: Innlogget som {{login}}
+      user_page: Min side

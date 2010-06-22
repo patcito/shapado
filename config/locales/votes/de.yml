@@ -5,21 +5,21 @@
 de: 
   activerecord: 
     models: 
-      vote: Stimme
-      votes: Stimmen
+      vote: Bewertung
+      votes: Bewertungen
   votes: 
     control: 
-      have_voted_down: Klicke hier, um Deine negative Stimme zurückzunehmen
-      have_voted_up: Klicke hier, um Deine positive Stimme zurückzunehmen
-      to_vote_down: Hier für eine negative Stimme klicken
-      to_vote_up: Hier für eine positive Stimme klicken
+      have_voted_down: Klicke hier, um Deine negative Bewertung zurückzunehmen
+      have_voted_up: Klicke hier, um Deine positive Bewertung zurückzunehmen
+      to_vote_down: Hier für eine negative Bewertung klicken
+      to_vote_up: Hier für eine positive Bewertung klicken
     create: 
-      flash_error: Du kannst hierüber nicht abstimmen
-      flash_notice: Vielen Dank für Deine Stimme!
-      unauthenticated: Anonyme Nutzer können nicht abstimmen
+      flash_error: Du kannst dies nicht bewerten
+      flash_notice: Vielen Dank für Deine Bewertung!
+      unauthenticated: Anonyme Nutzer können nicht bewerten
     destroy: 
-      flash_notice: Deine Stimme wurde erfolgreich zurückgenommen.
+      flash_notice: Deine Bewertung wurde erfolgreich zurückgenommen.
     model: 
       messages: 
-        closed_question: Du kannst für keine Beiträge abstimmen, die zu einer erledigten Frage gehören.
-        vote_down_comment: Bei Kommentaren kann nicht negativ abgestimmt werden
+        closed_question: Du kannst keine Beiträge bewerten, die zu einer erledigten Frage gehören.
+        vote_down_comment: Kommentaren können nicht negativ bewertet werden

@@ -1,21 +1,22 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   wiki: 
     actions: 
-      all_history: πίσω στο ιστορικό
-      back_to_question: πίσω στην ερώτηση
-      revert: επαναφορά σ' αυτή την έκδοση
-      show_diff: συγκρίνετε τις επιλεγμένες εκδόσεις
+      all_history: Πίσω στο ιστορικό
+      back_to_question: Πίσω στην ερώτηση
+      revert: Επαναφορά σ' αυτή την έκδοση
+      show_diff: Συγκρίνετε τις επιλεγμένες εκδόσεις
     diff: 
-      title: διαφορές μεταξύ %{prev} και %{curr}
+      title: Διαφορές μεταξύ %{prev} και %{curr}
     history: 
-      current_version: τρέχουσα έκδοση
-      previous_versions: προηγούμενες εκδόσεις
-      title: ιστορικό (%{count})
-      version: έκδοση
-      version_summary: σύνοψη έκδοσης
+      current_version: Τρέχουσα έκδοση
+      previous_versions: Προηγούμενες εκδόσεις
+      title: Ιστορικό (%{count})
+      version: Έκδοση
+      version_summary: Σύνοψη έκδοσης
     model: 
       attributes: 
-        message: σύνοψη
+        message: Σύνοψη

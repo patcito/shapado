@@ -15,7 +15,7 @@ nl:
         top_bar_tip: Voer een verwijzing per regel in
       properties: 
         constrains: 
-          reputation_constrains_description: Via dit formulier kunt u instellen hoeveel reputatiepunten gebruikers kunnen verdienen met een bepaalde handeling.
+          reputation_constrains_description: Via dit formulier kunt u instellen hoeveel reputatiepunten gebruikers nodig hebben om een bepaalde handeling uit te voeren.
           reputation_constrains_subtitle: Lijst van reputatiebeperkingen voor iedere handeling
           title: Beperkingen
         domain: 

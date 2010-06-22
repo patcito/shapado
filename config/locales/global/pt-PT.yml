@@ -29,12 +29,6 @@ pt-PT:
     share: partilhar
   languages: 
     any: qualquer
-    en: inglês
-    es: espanhol
-    es-419: espanhol latino-americano
-    fr: francês
-    pt: português
-    pt-PT: português europeu
     user: as minhas línguas preferidas
   messages: 
     success: "%{model} foi %{action} com sucesso."

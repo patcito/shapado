@@ -12,6 +12,7 @@ br:
         question_prompt: Titl ar furmskrid goulennoù
         title: Danvez personelaet
         top_bar: Barenn uhelañ
+        top_bar_tip: Lakait ul liamm dre linenn
       properties: 
         constrains: 
           title: Strishadurioù

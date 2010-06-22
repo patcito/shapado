@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -96,7 +97,7 @@ nl:
         description: heeft meer dan vijftig volgers
         name: populiare gebruiker
       popular_question: 
-        description: heeft een vraag beantwoord die duizend keer bekeken is
+        description: Heeft een vraag gesteld die duizend keer bekeken is
       rockstar: 
         description: duizend positieve stemmen, maximaal tien negatieve stemmen
       scholar: 

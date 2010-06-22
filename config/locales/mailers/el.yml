@@ -1,23 +1,24 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   mailers: 
     notifications: 
       earned_badge: 
-        subject: έχετε κερδίσει ένα τίτλο στο %{group}!
+        subject: Έχετε κερδίσει ένα τίτλο στο %{group}!
       favorited: 
-        subject: ο/η %{login} προσέθεσε την ερώτησή σας στις αγαπημένες του!
+        subject: Ο/η %{login} προσέθεσε την ερώτησή σας στις αγαπημένες του!
       follow: 
-        subject: ο/η %{login} σας ακολουθεί τώρα στο %{app}
+        subject: Ο/η %{login} σας ακολουθεί τώρα στο %{app}
       give_advice: 
-        friend_subject: "ο φίλος σας χρειάζεται βοήθεια: %{question_title}"
-        subject: "χρειαζόμαστε τη συμβουλή σας: %{question_title}"
+        friend_subject: "Ο/η φίλος/η σας χρειάζεται βοήθεια: %{question_title}"
+        subject: "Χρειαζόμαστε τη συμβουλή σας: %{question_title}"
       new_answer: 
-        subject_friend: ο/η φίλος/η σας %{login} απάντησε στην ερώτηση %{title}
-        subject_other: ο/η %{login} απάντησε στην ερώτηση %{title}
-        subject_owner: ο/η %{login} απάντησε στην ερώτησή σας %{title}
+        subject_friend: Ο/η φίλος/η σας %{login} απάντησε στην ερώτηση %{title}
+        subject_other: Ο/η %{login} απάντησε στην ερώτηση %{title}
+        subject_owner: Ο/η %{login} απάντησε στην ερώτησή σας %{title}
       new_comment: 
-        subject: ο/η %{login} σχολίασε στο %{group}
+        subject: Ο/η %{login} σχολίασε στο %{group}
       report: 
-        subject: αναφορά για την ομάδα %{group} του %{app}
+        subject: Αναφορά για την ομάδα %{group} του %{app}

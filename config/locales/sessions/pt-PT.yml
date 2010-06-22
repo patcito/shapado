@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   sessions: 
     create: 
@@ -12,6 +13,8 @@ pt-PT:
       log_in: entrar
       not_registered: ainda não se registou?
       registered: já registado?
+      remember_me: Recordar os meus dados
+      sign_in: Entrar
       signup: registar
       with_authentication: entrar com o nosso sistema de autenticação
       with_facebook: sign in with facebook

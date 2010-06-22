@@ -60,6 +60,7 @@ nl:
       new_answer_notification: E-mail ontvangen over nieuwe antwoorden
       notifications: Kennisgevingen
       reports_notification: Een overzicht ontvangen van de laatste groepsactiviteit (alleen voor beheerders)
+      show_more_lang: Meer talen weergeven
     index: 
       empty: Deze groep heeft geen leden. Neem deel om er lid van te worden.
       filter: Gebruikers zoeken

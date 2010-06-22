@@ -29,12 +29,6 @@ ko:
     share: 공유
   languages: 
     any: 모두
-    en: 영어
-    es: 스페인어
-    es-419: 라틴 아메리칸 스페인어
-    fr: 프랑스어
-    pt: 포르투갈어
-    pt-PT: 포르투갈어
     user: 언어 설정
   messages: 
     success: "{model}이 성공적으로  %{action} 되었습니다."

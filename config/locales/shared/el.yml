@@ -1,11 +1,12 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   shared: 
     current_tags: 
-      title: επιλεγμένες ετικέτες
+      title: Επιλεγμένες ετικέτες
     topbar: 
-      admin: διαχείριση
-      logged_as: συνδεδεμένοι ως %{login}
-      user_page: η σελίδα μου
+      admin: Διαχείριση
+      logged_as: Συνδεδεμένοι ως %{login}
+      user_page: Η σελίδα μου

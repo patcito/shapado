@@ -1,20 +1,21 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     attributes: 
       flag: 
-        type: αιτία
+        type: Αιτία
     models: 
-      flag: αναφορά
-      flags: αναφορές
+      flag: Αναφορά
+      flags: Αναφορές
   flags: 
     create: 
-      flash_error: δεν μπορείτε να αναφέρετε αυτή την ερώτηση
-      flash_notice: ευχαριστούμε για την αναφορά σας
+      flash_error: Δεν μπορείτε να αναφέρετε αυτή την ερώτηση
+      flash_notice: Ευχαριστούμε για την αναφορά σας
     form: 
-      attention: απαιτεί την προσοχή moderator
-      label: παρακαλώ αναφέρετε με προσοχή
-      offensive: προσβλητική ή υβριστική
-      spam: spam
+      attention: Απαιτεί την προσοχή συντονιστή
+      label: Παρακαλώ αναφέρετε με προσοχή
+      offensive: Προσβλητική ή υβριστική
+      spam: Spam

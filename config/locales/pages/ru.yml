@@ -1,9 +1,14 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 ru: 
   activerecord: 
+    attributes: 
+      page: 
+        css: Стилевые таблицы
+        js: JavaScript
     models: 
       page: Страница
       pages: Страницы
@@ -12,6 +17,8 @@ ru:
       create_page: Создать новую страницу
       edit_page: Редактировать страницу
       title: Действия
+    create: 
+      success: Страница была успешно создана.
     edit: 
       title: Редактирование страницы
     form: 
@@ -20,3 +27,9 @@ ru:
     index: 
       create_page: Создать новую страницу
       title: Список страниц
+      written_in: "Язык страницы: {{language}}"
+    new: 
+      title: Новая страница
+    title: FIXME
+    update: 
+      success: Страница была успешно обновлена.

@@ -1,30 +1,31 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   close_requests: 
     create: 
-      flash_notice: η αίτηση κλειδώματος δημιουργήθηκε επιτυχώς
+      flash_notice: Η αίτηση κλειδώματος δημιουργήθηκε επιτυχώς
     destroy: 
-      flash_notice: η αίτηση κλειδώματος διαγράφηκε επιτυχώς
+      flash_notice: Η αίτηση κλειδώματος διαγράφηκε επιτυχώς
     form: 
-      close_with_reason: κλείδωσε αυτή την ερώτηση με αυτό τον λόγο
-      dupe: αντίγραφο
-      no_question: όχι ερώτηση
-      not_relevant: άσχετο
-      ot: εκτός θέματος
-      request_closing_details: αίτηση για να κλειδωθεί η ερώτηση
-      spam: spam
+      close_with_reason: Κλείδωσε αυτή την ερώτηση με αυτό τον λόγο
+      dupe: Αντίγραφο
+      no_question: Μη ερώτηση
+      not_relevant: Άσχετο
+      ot: Εκτός θέματος
+      request_closing_details: Αίτηση για να κλειδωθεί η ερώτηση
+      spam: Spam
     index: 
-      title: κατάλογος αιτήσεων κλειδώματος
+      title: Κατάλογος αιτήσεων κλειδώματος
     model: 
       attributes: 
-        comment: σχόλιο
-        reason: αιτία
-        user: μέλος
+        comment: Σχόλιο
+        reason: Αιτία
+        user: Μέλος
       messages: 
-        already_requested: έχετε ήδη ζητήσει να κλειδωθεί αυτή η ερώτηση
-      name: αίτηση κλειδώματος
-      prural_name: αιτήσεις κλειδώματος
+        already_requested: Έχετε ήδη ζητήσει να κλειδωθεί αυτή η ερώτηση
+      name: Αίτηση κλειδώματος
+      prural_name: Αιτήσεις κλειδώματος
     update: 
-      flash_notice: η αίτηση κλειδώματος ενημερώθηκε επιτυχώς
+      flash_notice: Η αίτηση κλειδώματος ενημερώθηκε επιτυχώς

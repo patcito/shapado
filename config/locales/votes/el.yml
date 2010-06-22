@@ -1,24 +1,25 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     models: 
-      vote: ψήφος
-      votes: ψήφοι
+      vote: Ψήφος
+      votes: Ψήφοι
   votes: 
     control: 
-      have_voted_down: κλικ για να ανακαλέσετε την ψήφο σας
-      have_voted_up: κλικ για να ανακαλέσετε την ψήφο σας
-      to_vote_down: κλικ για να καταψηφίσετε
-      to_vote_up: κλικ για να υπερψηφίσετε
+      have_voted_down: Κάντε κλικ για να αναιρέσετε την ψήφο σας
+      have_voted_up: Κάντε κλικ για να αναιρέσετε την ψήφο σας
+      to_vote_down: Κάντε κλικ για να καταψηφίσετε
+      to_vote_up: Κάντε κλικ για να υπερψηφίσετε
     create: 
-      flash_error: δεν μπορείτε να ψηφίσετε εδώ
-      flash_notice: ευχαριστούμε για την ψήφο σας!
-      unauthenticated: οι ανώνυμοι χρήστες δεν μπορούν να ψηφίσουν
+      flash_error: Δεν μπορείτε να ψηφίσετε εδώ
+      flash_notice: Ευχαριστούμε για την ψήφο σας!
+      unauthenticated: Οι ανώνυμοι χρήστες δεν μπορούν να ψηφίσουν
     destroy: 
-      flash_notice: η ψήφος σας ανακλήθηκε επιτυχώς.
+      flash_notice: Η ψήφος σας ανακλήθηκε επιτυχώς.
     model: 
       messages: 
-        closed_question: δεν μπορείτε να ψηφίσετε σε ερωτήσεις που έχουν κλειδωθεί
-        vote_down_comment: τα σχόλια δεν μπορούν να καταψηφιστούν
+        closed_question: Δεν μπορείτε να ψηφίσετε σε ερωτήσεις που έχουν κλειδωθεί
+        vote_down_comment: Τα σχόλια δεν μπορούν να καταψηφιστούν

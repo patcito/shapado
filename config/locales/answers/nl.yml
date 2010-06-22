@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -17,11 +18,11 @@ nl:
       flash_error: "er is iets misgegaan bij het toevoegen van uw antwoord. Denk eraan dat:\n- lege en herhaalde antwoorden niet zijn toegestaan;\n- u twintig seconden moet wachten voordat u weer een antwoord kan geven;\n- u kunt per vraag één antwoord geven."
       flash_notice: bedankt!
     edit: 
-      title: bezig met het bewerken van het antwoord
+      title: Antwoord bewerken
     form: 
       answer_label: vraag beantwoorden
       comment_label: opmerking bij dit antwoord plaatsen
-      comment_submit: opmerking
+      comment_submit: Opmerking plaatsen
       submit: antwoorden
     revert: 
       title: antwoord terugdraaien

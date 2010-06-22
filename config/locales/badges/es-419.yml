@@ -1,6 +1,7 @@
-# Messages for Spanish (Español)
+# Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es-419: 
   activerecord: 
     models: 
@@ -52,7 +53,7 @@ es-419:
         description: sigue a alguien por primera vez
         name: amistoso
       good_answer: 
-        description: haber hecho una respuesta que alcanzo el promedio de 10 votos
+        description: Tener una respuesta que alcanzo el promedio de 10 votos
       good_question: 
         description: haber hecho una pregunta que alcanzo el promedio de 10 votos
       great_answer: 

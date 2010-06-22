@@ -1,0 +1,18 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+"no": 
+  activerecord: 
+    models: 
+      answer: Svar
+      answers: Svar
+  answers: 
+    create: 
+      flash_notice: Takk!
+    form: 
+      comment_label: Kommenter på dette svaret
+      comment_submit: Kommentar
+      submit: Svar
+    revert: 
+      title: Tilbakestill svar

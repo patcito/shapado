@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 fr: 
   actions: 
     closed: fermé
@@ -17,25 +18,17 @@ fr:
     user: inscrivez-vous aux questions de l'utilisateur
   global: 
     by: par
-    current: précédent
+    current: Actuel
     from: depuis %{site}
     group_not_found: la page %{url} n'existe pas
     or: ou
     permission_denied: permission refusée
     please_login: ouvrez une session s'il vous plait
     preview: prévue
-    previous: suivant
+    previous: Précédent
     share: share
   languages: 
     any: any
-    el: grecque
-    en: anglais
-    es: espagnol
-    es-419: espagnol d'amérique latine
-    fr: français
-    ja: japonais
-    pt: portugais
-    pt-PT: portugais
     user: mes langues
   messages: 
     success: "%{model} a été %{action} avec succès."

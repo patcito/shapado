@@ -1,15 +1,16 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   admin: 
     moderate: 
       index: 
-        all: όλα
-        ban: απαγόρευση
-        banned: απαγορευμένες ερωτήσεις
-        content: περιεχόμενο
-        flagged: αναφερόμενες ερωτήσεις
-        item_title: τίτλος
-        need_tags: αλλαγή ετικετών
-        title: moderate
+        all: Όλα
+        ban: Απαγόρευση
+        banned: Απαγορευμένες ερωτήσεις
+        content: Περιεχόμενο
+        flagged: Αναφερόμενες ερωτήσεις
+        item_title: Τίτλος
+        need_tags: Αλλαγή ετικετών
+        title: Συντονισμός

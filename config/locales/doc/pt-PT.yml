@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 pt-PT: 
   doc: 
     chat: 
@@ -23,7 +24,7 @@ pt-PT:
       getting_popular: getting popular
       huge_sites: huge traffic sites
       month: month
-      page_views: page views/month
+      page_views: Para Sites Pequenos/Particulares
       plans: plans
       private_site: Private site
       small_private: Enable private/public access

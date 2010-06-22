@@ -1,6 +1,7 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   welcome: 
     confirm_age: 
@@ -11,45 +12,45 @@ el:
     facts: 
       features: 
         cols: 
-          adaptable: προσαρμόσιμο
-          foss: ελεύθερο/ανοιχτού κώδικα
-          joel: θα γίνει ο joel πλουσιότερος;
-          multilanguage: πολυγλωσσικό
-          multitopic: πολυθεματικό
+          adaptable: Προσαρμόσιμο
+          foss: Ελεύθερο/ανοιχτού κώδικα
+          joel: Θα κάνω πλουσιότερο τον Joel;
+          multilanguage: Πολυγλωσσικό
+          multitopic: Πολυθεματικό
         shapado: 
-          adaptable: ναι!
-          foss: ναι!
-          joel: όχι :/
-          multilanguage: ναι!
-          multitopic: ναι!
+          adaptable: Ναι!
+          foss: Ναι!
+          joel: Όχι :/
+          multilanguage: Ναι!
+          multitopic: Ναι!
         stackexchange: 
-          adaptable: όχι
-          foss: όχι
-          joel: ναι!
-          multilanguage: όχι
-          multitopic: όχι
+          adaptable: Όχι
+          foss: Όχι
+          joel: Ναι!
+          multilanguage: Όχι
+          multitopic: Όχι
       prices: 
         cols: 
-          onsite: στο χώρο σας
+          onsite: Στο χώρο σας
         shapado: 
-          large: μάλλον κοντά στα $500
+          large: Μάλλον κοντά στα $500
           medium: <=== το ίδιο
-          onsite: μάλλον $0 στο δικό σας server, ε
-          small: μάλλον μεταξύ $50 και $100/μήνα στους περισσότερους παρόχους φιλοξενίας
+          onsite: Μάλλον $0 στο δικό σας server, ε
+          small: Μάλλον μεταξύ $50 και $100/μήνα στους περισσότερους παρόχους φιλοξενίας
         stackexchange: 
           large: $1299/μήνα
           medium: $999/μήνα
           onsite: $2500/μήνα
           small: $129/μήνα
     feedback: 
-      captcha_error: παρακαλώ λύστε μια απλή μαθηματική πράξη
-      email_description: παρακαλώ εισάγετε το email σας ώστε να μπορούμε να απαντήσουμε
-      feedback_description: περιγραφή
-      feedback_title: θέμα
-      title: στείλτε τα σχόλιά σας
+      captcha_error: Παρακαλώ λύστε μια απλή μαθηματική πράξη
+      email_description: Παρακαλώ εισάγετε το email σας ώστε να μπορούμε να απαντήσουμε
+      feedback_description: Περιγραφή
+      feedback_title: Θέμα
+      title: Στείλτε τα σχόλιά σας
     index: 
-      active: ενεργές
-      create_own_site: δημιουργήστε το δικό σας Q&amp;A site σε 8 δευτερόλεπτα, δωρεάν
-      hot: δημοφιλείς
-      quick_question: κάντε μια ερώτηση, θα βρούμε κάποιον να την απαντήσει
-      recent_questions: πρόσφατες ερωτήσεις
+      active: Ενεργές
+      create_own_site: Δημιουργήστε το δικό σας Q&amp;A site σε 8 δευτερόλεπτα, δωρεάν
+      hot: Δημοφιλείς
+      quick_question: Κάντε μια ερώτηση, θα βρούμε κάποιον να την απαντήσει
+      recent_questions: Πρόσφατες ερωτήσεις

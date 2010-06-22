@@ -1,22 +1,23 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   admin: 
     manage: 
       content: 
-        footer: υποσέλιδο
-        head: κεφαλίδα
-        question_help: βοήθεια ερώτησης
-        question_prompt: προτροπή ερώτησης
-        title: προσαρμοσμένο περιεχόμενο
-        top_bar: πάνω μπάρα
-        top_bar_tip: εισάγετε ένα σύνδεσμο ανά γραμμή
+        footer: Υποσέλιδο
+        head: Κεφαλίδα
+        question_help: Βοήθεια ερώτησης
+        question_prompt: Προτροπή ερώτησης
+        title: Προσαρμοσμένο περιεχόμενο
+        top_bar: Άνω μπάρα
+        top_bar_tip: Εισάγετε ένα σύνδεσμο ανά γραμμή
       properties: 
         constrains: 
-          reputation_constrains_description: αυτές οι τιμές σας δίνουν τη δυνατότητα να καθορίσετε πόσους πόντους υπόληψης πρέπει να έχουν τα μέλη για να τους επιτρέπονται συγκεκριμένες ενέργειες
-          reputation_constrains_subtitle: κατάλογος απαιτούμενης υπόληψης για κάθε ενέργεια
-          title: περιορισμοί
+          reputation_constrains_description: Αυτή η φόρμα σας δίνει τη δυνατότητα να καθορίσετε πόσους πόντους υπόληψης πρέπει να έχουν τα μέλη για να τους επιτρέπονται συγκεκριμένες ενέργειες
+          reputation_constrains_subtitle: Κατάλογος απαιτούμενων πόντων υπόληψης για κάθε ενέργεια
+          title: Περιορισμοί
         domain: 
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
           instruction1: To do so you first need to log on to your domain provider (the site where you bought your domain such as %{subdomain}.com).
@@ -25,16 +26,16 @@ el:
           instruction4: "Then in the host or destination field, put your current shapado domain: %{domain}."
           instruction5: Once this is done, after an hour or so, your domain www.%{subdomain} should point to %{appdomain}.
           instruction6: When this is the case, come back here and put your domain name www.%{subdomain} in the field below and press the button 'update'. If you have questions, ask us in the %{chat_url} or on our support forum
-          title: ρυθμίστε το domain
+          title: Ρυθμίστε το domain
           warning: Είστε σίγουροι ότι θέλετε να αλλάξετε το domain σας;
         general: 
-          title: ιδιότητες ομάδας
+          title: Ιδιότητες ομάδας
         rewards: 
-          reputation_rewards_description: οι τιμές παρακάτω σας δίνουν τη δυνατότητα να ρυθμίσετε πως τα μέλη κερδίζουν ή χάνουν πόντους υπόληψης για τις ενέργειές τους
-          reputation_rewards_subtitle: κατάλογος ανταμοιβών υπόληψης
-          title: ανταμοιβές
+          reputation_rewards_description: Η φόρμα παρακάτω σας δίνει τη δυνατότητα να ρυθμίσετε πως τα μέλη κερδίζουν ή χάνουν πόντους υπόληψης για τις ενέργειές τους
+          reputation_rewards_subtitle: Κατάλογος ανταμοιβών υπόληψης
+          title: Ανταμοιβές
         share: 
-          title: διαμοιρασμός
+          title: Διαμοιρασμός
         theme: 
-          logo_legend: Upload a logo for your group, it must be smaller than 2mb.
-          title: ρυθμίστε το θέμα της ομάδας σας
+          logo_legend: Φορτώστε ένα λογότυπο για την ομάδα σας, θα πρέπει να είναι μικρότερο από 2MB.
+          title: Ρυθμίστε το θέμα της ομάδας σας

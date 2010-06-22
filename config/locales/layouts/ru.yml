@@ -1,15 +1,18 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 ru: 
   layouts: 
     application: 
       ask_question: Задать вопрос
+      badges: Беджи
       forgot: Забыли?
       home: В начало
       languages: Языки
       log_in: Войти
+      logged: Вы вошли как {{login}}
       logout: Выход
       manage_ads: Управление рекламой
       moderate: Модерация
@@ -34,8 +37,10 @@ ru:
       announcements: Объявления
       constrains: Ограничения
       content: Содержимое
+      dashboard: Панель инструментов
       domain: Домен
       general: Общие
+      members: Участники
       pages: Страницы
       properties: Свойства
       reputation: Репутация

@@ -15,7 +15,7 @@ mk:
         top_bar_tip: внесете една врска по ред
       properties: 
         constrains: 
-          reputation_constrains_description: овој образец ви овозможува да поставите колку бодови за углед ќе добиваат корисниците за извесно дејство
+          reputation_constrains_description: Овој образец ви овозможува да поставите колку бодови за углед ќе им треба на корисниците за да можат да извршат извесно дејство
           reputation_constrains_subtitle: список на ограничувања за угледот за секое дејство
           title: ограничувања
         domain: 

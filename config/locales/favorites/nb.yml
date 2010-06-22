@@ -1,0 +1,9 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+"no": 
+  activerecord: 
+    models: 
+      favorite: Favoritt
+      favorites: Favoritter

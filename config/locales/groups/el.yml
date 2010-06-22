@@ -1,71 +1,72 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     attributes: 
       group: 
-        default_tags: προεπιλεγμένες ετικέτες
-        description: περιγραφή
-        domain: domain
-        fb_button: ενεργοποίηση του κομβίου like του Facebook (χωρίς προστασία προσωπικών δεδομένων)
-        forum: να επιτρέπονται περισσότερες από μία απαντήσεις από κάθε χρήστη
-        group_created_by: δημιουργήθηκε από
-        language: γλώσσα
-        legend: υπόμνημα
-        logo: λογότυπο
-        may_contain_adult_content: αυτό το site μπορεί να έχει περιεχόμενο μόνο για ενηλίκους
-        name: όνομα
-        openid_only: μόνο αυτοί με OpenId να έχουν πρόσβαση στο site
-        owner: αυτή η ομάδα δημιουργήθηκε από τον/την %{login}
-        registered_only: μόνο οι εγγεγραμμένοι να έχουν πρόσβαση στο site
-        state: κατάσταση
-        subdomain: subdomain
-        wysiwyg_editor: ενεργοποίηση του φιλικού κειμενογράφου
+        default_tags: Προεπιλεγμένες ετικέτες
+        description: Περιγραφή
+        domain: Domain
+        fb_button: Ενεργοποίηση του κομβίου "like" του Facebook (χωρίς προστασία προσωπικών δεδομένων)
+        forum: Να επιτρέπονται περισσότερες από μία απαντήσεις από κάθε χρήστη
+        group_created_by: Δημιουργήθηκε από
+        language: Γλώσσα
+        legend: Υπόμνημα
+        logo: Λογότυπο
+        may_contain_adult_content: Αυτό το site μπορεί να έχει περιεχόμενο μόνο για ενηλίκους
+        name: Όνομα
+        openid_only: Μόνο αυτοί με OpenID να έχουν πρόσβαση στο site
+        owner: Αυτή η ομάδα δημιουργήθηκε από τον/την %{login}
+        registered_only: Μόνο οι εγγεγραμμένοι να έχουν πρόσβαση στην ιστοσελίδα
+        state: Κατάσταση
+        subdomain: URL (subdomain)
+        wysiwyg_editor: Ενεργοποίηση του φιλικού κειμενογράφου
     models: 
-      default_tags_message: δεν επιτρέπονται περισσότερες από 10 προεπιλεγμένες ετικέτες
-      group: ομάδα
-      groups: ομάδες
+      default_tags_message: Δεν επιτρέπονται περισσότερες από 10 προεπιλεγμένες ετικέτες
+      group: Ομάδα
+      groups: Ομάδες
   groups: 
     create: 
-      flash_notice: η ομάδα σας δημιουργήθηκε επιτυχώς, τώρα μπορείτε να τη ρυθμίσετε.
+      flash_notice: Η ομάδα σας δημιουργήθηκε επιτυχώς, τώρα μπορείτε να τη ρυθμίσετε.
     form: 
-      access: ρυθμίσεις πρόσβασης
-      analytics_engine: analytics Engine
-      analytics_legend: The group will be able to use its own tracking code
-      any_language: οποιαδήποτε
-      custom_analytics: allow Custom Analytics
-      custom_html: allow custom html
-      custom_js: allow custom javascript
-      default_tags_legend: διαχωρίστε τις ετικέτες με κόμματα. Επιτρέπονται μόνο 10 προεπιλεγμένες ετικέτες.
-      description_legend: έχετε 400 χαρακτήρες για να περιγράψετε την ομάδα.
-      isolate_group: isolate the group form other groups
-      legend_legend: θα χρησιμοποιηθεί στην κεφαλίδα, έχετε 40 χαρακτήρες
-      logo_legend: μπορείτε να ανεβάσετε το λογότυπο της ομάδας. Το μέγιστο μέγεθος αρχείου είναι 2 MB.
-      members_only: only the group's members will be able to access this group
-      website_analytics_id: website Analytics ID
+      access: Ρυθμίσεις πρόσβασης
+      analytics_engine: Μηχανή Analytics
+      analytics_legend: Η ομάδα θα μπορεί να χρησιμοποιήσει το δικό της tracking code
+      any_language: Οποιαδήποτε
+      custom_analytics: Να επιτρέπεται προσαρμοσμένο Analytics
+      custom_html: Να επιτρέπεται προσαρμοσμένη HTML
+      custom_js: Να επιτρέπεται προσαρμοσμένη javascript
+      default_tags_legend: Διαχωρίστε τις ετικέτες με κόμματα. Επιτρέπονται μόνο 10 προεπιλεγμένες ετικέτες.
+      description_legend: Έχετε 400 χαρακτήρες για να περιγράψετε την ομάδα.
+      isolate_group: Απομόνωση της ομάδας από τις άλλες
+      legend_legend: Θα χρησιμοποιηθεί στην κεφαλίδα, έχετε 40 χαρακτήρες
+      logo_legend: Μπορείτε να ανεβάσετε το λογότυπο της ομάδας. Το μέγιστο μέγεθος αρχείου είναι 2 MB.
+      members_only: Μόνο τα μέλη της ομάδας θα έχουν πρόσβαση σ' αυτήν
+      website_analytics_id: Website Analytics ID
     group: 
-      about: περί
-      accept_group: αποδοχή ομάδας
-      allow_ads: να επιτρέπονται διαφημίσεις
-      close: κλείσιμο
-      close_group: κλείσιμο ομάδας
-      disallow_ads: απαγόρευση διαφημίσεων
+      about: Περί
+      accept_group: Αποδοχή ομάδας
+      allow_ads: Να επιτρέπονται διαφημίσεις
+      close: Κλείσιμο
+      close_group: Κλείσιμο ομάδας
+      disallow_ads: Απαγόρευση διαφημίσεων
     index: 
-      actives: ενεργές
-      filter: αναζήτηση ομάδων
-      most_active: πιο δραστήριες
-      name: όνομα
-      pendings: εκκρεμείς
-      request_group: ζητήστε νέα ομάδα
-      title: ομάδες
+      actives: Ενεργές
+      filter: Αναζήτηση ομάδων
+      most_active: Πιο δραστήριες
+      name: Όνομα
+      pendings: Εκκρεμείς
+      request_group: Ζητήστε νέα ομάδα
+      title: Ομάδες
     new: 
-      title: δημιουργία ομάδας
+      title: Δημιουργία ομάδας
     show: 
-      accept_group: αποδοχή ομάδας
-      accept_group_with_custom_ads: αποδοχή ομάδας με προσαρμοσμένες διαφημίσεις
-      close_group: κλείσιμο ομάδας
-      group_awaiting_acceptance: αυτή η ομάδα αναμένει την αποδοχή ενός moderator.
-      group_closed: αυτή η ομάδα έχει κλειστεί.
-      title: σχετικά με %{name}
-      visit_group: επισκεφθείτε αυτή την ομάδα
+      accept_group: Αποδοχή ομάδας
+      accept_group_with_custom_ads: Αποδοχή ομάδας με προσαρμοσμένες διαφημίσεις
+      close_group: Κλείσιμο ομάδας
+      group_awaiting_acceptance: Αυτή η ομάδα αναμένει την αποδοχή ενός συντονιστή.
+      group_closed: Αυτή η ομάδα έχει κλειστεί.
+      title: Σχετικά με %{name}
+      visit_group: Επισκεφθείτε αυτή την ομάδα

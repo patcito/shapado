@@ -5,9 +5,9 @@
 de: 
   activerecord: 
     models: 
-      favorite: favorisieren
+      favorite: Favorit
       favorites: Favoriten
   favorites: 
     create: 
-      success: die Frage wurde zu deinen Favoriten hinzugefügt
+      success: Die Frage wurde zu deinen Favoriten hinzugefügt
       unauthenticated: Du brauchst ein Nutzerkonto, um Favoriten hinzufügen zu können.

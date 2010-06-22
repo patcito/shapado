@@ -1,19 +1,20 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   comments: 
     create: 
-      flash_notice: ευχαριστούμε για το σχόλιό σας
+      flash_notice: Ευχαριστούμε για το σχόλιό σας
     edit: 
-      title: επεξεργασία σχόλιου
+      title: Επεξεργασία σχόλιου
     shared: 
-      add_comment: προσθήκη σχόλιου...
-      comment_submit: σχολιασμός
-      reply: απάντησε
+      add_comment: Προσθήκη σχόλιου...
+      comment_submit: Σχολιασμός
+      reply: Απάντηση
       said: είπε
     update: 
-      flash_notice: το σχόλιο ενημερώθηκε επιτυχώς.
+      flash_notice: Το σχόλιο ενημερώθηκε επιτυχώς.
   models: 
-    comment: σχόλιο
-    comments: σχόλια
+    comment: Σχόλιο
+    comments: Σχόλια

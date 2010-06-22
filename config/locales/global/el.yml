@@ -1,6 +1,7 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   actions: 
     closed: κλειδώθηκε
@@ -9,59 +10,51 @@ el:
     updated: ενημερώθηκε
   feeds: 
     feed: ροή
-    post_new_questions: αποστολή νέων ερωτήσεων προς
-    question: εγγραφείτε σ' αυτή την ερώτηση
-    questions: εγγραφείτε σε όλες τις ερωτήσεις
+    post_new_questions: Αποστολή νέων ερωτήσεων προς
+    question: Εγγραφείτε σ' αυτή την ερώτηση
+    questions: Εγγραφείτε σε όλες τις ερωτήσεις
     share_on_twitter: twitter, facebook και άλλα...
-    tag: εγγραφείτε στην ετικέτα
-    user: εγγραφείτε στις ερωτήσεις του μέλους
+    tag: Εγγραφείτε στην ετικέτα
+    user: Εγγραφείτε στις ερωτήσεις του μέλους
   global: 
     by: από
-    current: τρέχουσα
+    current: Τρέχουσα
     from: από %{site}
-    group_not_found: η σελίδα %{url} δεν υπάρχει
+    group_not_found: Η σελίδα %{url} δεν υπάρχει
     or: ή
-    permission_denied: απαγορεύεται η πρόσβαση
-    please_login: παρακαλώ συνδεθείτε
-    preview: προεπισκόπηση
-    previous: προηγούμενη
-    share: διαμοιρασμός
+    permission_denied: Απαγορεύεται η πρόσβαση
+    please_login: Παρακαλώ συνδεθείτε
+    preview: Προεπισκόπηση
+    previous: Προηγούμενη
+    share: Διαμοιρασμός
   languages: 
-    any: οποιαδήποτε
-    el: ελληνικά
-    en: αγγλικά
-    es: ισπανικά
-    es-419: ισπανικά (Αργεντινή)
-    fr: γαλλικά
-    ja: Ιαπωνικά
-    pt: πορτογαλικά
-    pt-PT: πορτογαλικά (Πορτογαλία)
-    user: τις προτιμώμενες γλώσσες μου
+    any: Οποιαδήποτε
+    user: Τις προτιμώμενες γλώσσες μου
   messages: 
     success: "%{model} %{action} επιτυχώς."
   models: 
-    question: η ερώτηση
+    question: Η ερώτηση
   number: 
     x_time: 
       one: "%{count} φορά"
       other: "%{count} φορές"
       zero: ποτέ
   scaffold: 
-    add: προσθήκη
-    back: πίσω
-    cancel: ακύρωση
-    close: κλείδωμα
-    create: δημιουργία
-    destroy: διαγραφή
-    details: λεπτομέρειες
-    edit: επεξεργασία
-    more: περισσότερα ...
-    new: προσθήκη νέας %{model}
-    save: αποθήκευση
-    send: αποστολή
-    show: προβολή
-    sure: είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την %{model} ?
-    update: ενημέρωση
+    add: Προσθήκη
+    back: Πίσω
+    cancel: Ακύρωση
+    close: Κλείδωμα
+    create: Δημιουργία
+    destroy: Διαγραφή
+    details: Λεπτομέρειες
+    edit: Επεξεργασία
+    more: Περισσότερα ...
+    new: Προσθήκη νέας %{model}
+    save: Αποθήκευση
+    send: Αποστολή
+    show: Προβολή
+    sure: Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την %{model} ?
+    update: Ενημέρωση
   time: 
     ago: "%{time} πριν"
     today: σήμερα

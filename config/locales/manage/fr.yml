@@ -15,7 +15,7 @@ fr:
         top_bar_tip: saisissez un lien par ligne
       properties: 
         constrains: 
-          reputation_constrains_description: ce formulaire permet de configurer la quantidade de points requise pour effectuer chaque action.
+          reputation_constrains_description: Ce formulaire permet de configurer la quantité de points de réputation requise pour effectuer une action donnée
           reputation_constrains_subtitle: liste des contraintes pour chaque action
           title: constraintes
         domain: 

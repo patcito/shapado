@@ -1,13 +1,17 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 ru: 
   admin: 
     moderate: 
       index: 
         all: Все
+        ban: Блокировка
         banned: Запрещённые вопросы
+        content: Содержание
         flagged: Отмеченные вопросы
+        item_title: Заголовок
         need_tags: Изменить теги
         title: Модерация

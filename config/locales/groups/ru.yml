@@ -9,6 +9,8 @@ ru:
         default_tags: Теги по умолчанию
         description: Описание
         domain: Домен
+        fb_button: Включить кнопку Facebook (отрицательно влияет на защиту личной информации)
+        forum: Разрешить больше одного варианта ответа на пользователя
         group_created_by: кем создано
         language: Язык
         legend: Краткое описание
@@ -20,18 +22,31 @@ ru:
         registered_only: Только зарегистрированные люди могут зайти на сайт
         state: Состояние
         subdomain: URL
+        wysiwyg_editor: Включить удобный для пользования редактор
     models: 
+      default_tags_message: Нельзя установить более 10 тегов по умолчанию
       group: Группа
       groups: Группы
   groups: 
+    create: 
+      flash_notice: Ваша группа успешно создана, теперь вы можете приступить к её настройке.
     form: 
       access: Настройки доступа
+      analytics_engine: Параметры инструментов Analytics
+      analytics_legend: Группа может использовать собственный код отслеживания
       any_language: Любой
+      custom_analytics: Разрешить настраиваемый Analytics
+      custom_html: Разрешить настраиваемый HTML
+      custom_js: Разрешить настраиваемый JavaScript
       default_tags_legend: Разделяйте теги запятыми. Разрешено только 10 тегов по умолчанию.
       description_legend: Вы можете использовать 400 символов для описания группы.
       isolate_group: Изолировать группу от других групп
+      legend_legend: Он будет использоваться в заголовке; максимальный размер — 40 символов
       logo_legend: Вы можете загрузить логотип группы. Максимальный размер файла составляет 2 МБ.
+      members_only: Только участники группы будут иметь доступ к этой группе
+      website_analytics_id: Код Analytics сайта
     group: 
+      about: О группе
       accept_group: Принять эту группу
       allow_ads: Разрешить рекламу
       close: Закрыть
@@ -40,6 +55,7 @@ ru:
     index: 
       actives: Активные
       filter: Поиск групп
+      most_active: Самые активные
       name: Имя
       pendings: На рассмотрении
       request_group: Запросить новую группу
@@ -50,4 +66,7 @@ ru:
       accept_group: Принять группу
       accept_group_with_custom_ads: Принять группу и разрешить настраиваемую рекламу
       close_group: Закрыть эту группу
+      group_awaiting_acceptance: Эта группа ждёт своего принятия модератором.
       group_closed: Эта группа была закрыта.
+      title: О {{name}}
+      visit_group: Перейти в эту группу

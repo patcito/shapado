@@ -12,6 +12,7 @@ br:
         asked_by: goulennet gant
         avatar: Skeudenn profil
         birthday: Deiz-ha-bloaz
+        created_at: ezel
         current_password: Ger-tremen a-vremañ
         email: Postel
         fullname: Anv klok
@@ -35,12 +36,19 @@ br:
     edit: 
       enable_twitter: Gweredekaat ho kont facebook pe twitter
       submit: Enrollañ
+      title: Penndibaboù
     form: 
       information: Titouroù
       notifications: Kemennoù
     index: 
       filter: Klask implijerien
       name: Anv
+      name_tooltip: An implijerien dre urzh al lizherenneg
+      newest: Ar re nevesañ
+      newest_tooltip: An implijerien hag a zo o paouez krouiñ ur gont
+      oldest: Ar re goshañ
+      oldest_tooltip: An implijerien hag o deus digoret ur gont ar re gentañ
+      reputation: Brud
       title: An holl implijerien
     new: 
       submit: En em enskrivañ

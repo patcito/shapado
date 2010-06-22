@@ -32,11 +32,19 @@ pt-PT:
       flash_notice: O seu grupo foi criado; pode agora começar a configurá-lo.
     form: 
       access: Definições de Acesso
+      analytics_engine: Motor de Análise
+      analytics_legend: O grupo poderá usar o seu próprio código de monitorização
       any_language: qualquer
+      custom_analytics: Permitir Análises Personalizadas
+      custom_html: Permitir HTML personalizado
+      custom_js: Permitir JavaScript personalizado
       default_tags_legend: separe as categorias por vírgulas; só são permitidas 10 categorias predefinidas.
       description_legend: tem 400 caracteres para descrever o grupo.
+      isolate_group: Isolar o grupo de outros grupos
       legend_legend: será usado no cabeçalho; tem disponíveis 40 caracteres
       logo_legend: pode fazer upload do logótipo do grupo; o tamanho máximo do ficheiro é 2MB.
+      members_only: Só os membros do grupo poderão aceder a este grupo
+      website_analytics_id: ID da Análise de Site na Internet
     group: 
       about: sobre
       accept_group: aceitar este grupo

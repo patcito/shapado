@@ -1,12 +1,13 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     models: 
-      favorite: αγαπημένη
-      favorites: αγαπημένες
+      favorite: Αγαπημένη
+      favorites: Αγαπημένες
   unfavorites: 
     create: 
-      success: η ερώτηση έχει αφαιρεθεί από τις αγαπημένες σας
-      unauthenticated: χρειάζεστε λογαριασμό για να αφαιρέσετε μία αγαπημένη
+      success: Η ερώτηση έχει αφαιρεθεί από τις αγαπημένες σας
+      unauthenticated: Χρειάζεστε λογαριασμό για να αφαιρέσετε μία αγαπημένη

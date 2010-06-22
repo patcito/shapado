@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: IAlex
 fr: 
   doc: 
     chat: 
@@ -23,7 +24,7 @@ fr:
       getting_popular: sites populaires
       huge_sites: énormes sites
       month: mois
-      page_views: page vues/mois
+      page_views: Pour les sites petits ou privés
       plans: plans
       private_site: Activez accès privé/public
       small_private: sites petits/privés

@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: IAlex
 fr: 
   activerecord: 
     models: 
@@ -29,7 +30,7 @@ fr:
         description: Premier défait
         name: nettoyage
       commentator: 
-        description: Recevoir 100 votes positifs
+        description: Avoir laissé 10 commentaires
       critic: 
         description: Voter négativement pour la première fois
       disciplined: 
@@ -52,7 +53,7 @@ fr:
         description: suivre quelqu'un pour la première fois
         name: friendly
       good_answer: 
-        description: avoir fait une réponse ayant atteint une moyenne de 10 votes
+        description: Avoir une réponse atteignant une moyenne de plus de 25 votes
       good_question: 
         description: avoir fait une question ayant atteint une moyenne de 10 votes
       great_answer: 

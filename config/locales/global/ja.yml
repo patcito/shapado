@@ -28,14 +28,6 @@ ja:
     share: share
   languages: 
     any: 選択しない
-    el: Greek
-    en: 英語
-    es: スペイン語
-    es-419: スペイン語（米）
-    fr: フランス語
-    ja: 日本語
-    pt: ポルトガル語
-    pt-PT: ポルトガル語
     user: 自分の設定している言語のみ
   messages: 
     success: "%{model}は%{action}されました"

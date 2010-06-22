@@ -1,29 +1,30 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   widgets: 
     badges: 
-      description: παρουσιάζει τους τίτλους που χορηγήθηκαν πρόσφατα
-      title: πρόσφατοι τίτλοι
+      description: Παρουσιάζει τους τίτλους που χορηγήθηκαν πρόσφατα
+      title: Πρόσφατοι τίτλοι
     groups: 
-      description: παρουσιάζει τις νεότερες ομάδες
-      title: πρόσφατες ομάδες
+      description: Παρουσιάζει τις νεότερες ομάδες
+      title: Πρόσφατες ομάδες
     index: 
-      description: χρησιμοποιείστε τα βελάκια για να μετακινήσετε τα widgets
-      title: διαχείριση των sidebar widgets
+      description: Χρησιμοποιείστε τα βελάκια για να μετακινήσετε τα widgets
+      title: Διαχείριση των sidebar widgets
     pages: 
-      description: παρουσιάζει τον κατάλογο των σελίδων wiki
-      title: σελίδες wiki
+      description: Παρουσιάζει τον κατάλογο των σελίδων wiki
+      title: Σελίδες wiki
     tag_cloud: 
-      description: παρουσιάζει το νέφος ετικετών
-      title: νέφος ετικετών
+      description: Παρουσιάζει το νέφος ετικετών
+      title: Νέφος ετικετών
     top_groups: 
-      description: παρουσιάζει τις κορυφαίες 5 ομάδες
-      title: κορυφαίες 5 ομάδες
+      description: Παρουσιάζει τις κορυφαίες 5 ομάδες
+      title: Κορυφαίες 5 ομάδες
     top_users: 
-      description: παρουσιάζει τα κορυφαία 5 μέλη
-      title: κορυφέα 5 μέλη
+      description: Παρουσιάζει τα κορυφαία 5 μέλη
+      title: Κορυφαία 5 μέλη
     users: 
-      description: παρουσιάζει τα νεότερα εγγεγραμμένα μέλη
-      title: πρόσφατα μέλη
+      description: Παρουσιάζει τα νεότερα εγγεγραμμένα μέλη
+      title: Πρόσφατα μέλη

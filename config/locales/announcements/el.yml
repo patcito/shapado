@@ -1,19 +1,20 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     attributes: 
       announcement: 
-        ends_at: λήξη
-        message: μήνυμα
-        only_anonymous: μόνο για ανώνυμους χρήστες
-        starts_at: έναρξη
+        ends_at: Λήξη
+        message: Μήνυμα
+        only_anonymous: Μόνο για ανώνυμους χρήστες
+        starts_at: Έναρξη
   announcements: 
     actions: 
-      delete: κατάργηση
-      title: ενέργειες
+      delete: Κατάργηση
+      title: Ενέργειες
     create: 
-      success: η ανακοίνωση δημιουργήθηκε επιτυχώς.
+      success: Η ανακοίνωση δημιουργήθηκε επιτυχώς.
     index: 
-      title: ανακοινώσεις
+      title: Ανακοινώσεις

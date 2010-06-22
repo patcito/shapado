@@ -17,14 +17,6 @@ br:
     preview: Rakwelet
     previous: Kent
   languages: 
-    el: Gresianeg
-    en: Saozneg
-    es: Spagnoleg
-    es-419: Spagnoleg Amerika Latina
-    fr: Galleg
-    ja: Japaneg
-    pt: Portugaleg
-    pt-PT: Portugaleg
     user: Ma yezhoù karetañ
   messages: 
     success: "%{model} a zo bet %{action}."

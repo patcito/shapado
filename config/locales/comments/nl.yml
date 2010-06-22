@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   comments: 
@@ -10,7 +11,7 @@ nl:
       title: Opmerking bewerken
     shared: 
       add_comment: Opmerking toevoegen...
-      comment_submit: Opmerking
+      comment_submit: Opmerking plaatsen
       reply: Antwoord
       said: schreef
     update: 

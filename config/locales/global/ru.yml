@@ -19,27 +19,25 @@ ru:
     user: Подписаться на вопросы пользователя
   global: 
     current: Текущий
+    from: с сайта {{site}}
     group_not_found: Страница %{url} не существует
     or: или
     permission_denied: Доступ запрещён
     please_login: Представьтесь, пожалуйста
     preview: Предпросмотр
     previous: Предыдущий
+    share: распространить
   languages: 
     any: Любой
-    el: Греческий
-    en: Английский
-    es: Испанский
-    es-419: Латиноамериканский испанский
-    fr: Французский
-    ja: Японский
-    pt: Португальский
-    pt-PT: Португальский
     user: Мои предпочитаемые языки
+  messages: 
+    success: "{{model}} успешно {{action}}."
   models: 
     question: Вопрос
   number: 
     x_time: 
+      one: "{{count}} раз"
+      other: "{{count}} раз(а)"
       zero: Никогда
   scaffold: 
     add: Добавить
@@ -51,9 +49,11 @@ ru:
     details: Подробности
     edit: Редактировать
     more: Далее…
+    new: Добавить {{model}}
     save: Сохранить
     send: Отправить
     show: Показать
+    sure: Вы уверены, что хотите удалить {{model}}?
     update: Обновить
   time: 
     ago: "%{time} назад"

@@ -1,15 +1,16 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   activerecord: 
     attributes: 
       member: 
-        role: ρόλος
+        role: Ρόλος
   members: 
     form: 
-      login_tip: αναζήτηση κατά την πληκτρολόγηση
+      login_tip: Αναζήτηση κατά την πληκτρολόγηση
     index: 
-      manage_members_title: διαχείριση μελών
-      title: μέλη της ομάδας %{name}
-      title_isolate: μέλη της ομάδας %{name}
+      manage_members_title: Διαχείριση μελών
+      title: Μέλη της ομάδας %{name}
+      title_isolate: Μέλη της ομάδας %{name}

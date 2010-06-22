@@ -8,8 +8,10 @@ ru:
     attributes: 
       question: 
         answers: Ответы
+        asked_by: Задано
         body: Текст
         closed: Закрыто
+        created_at: Заданные
         language: Язык
         tags: Теги
         title: Заголовок
@@ -25,6 +27,7 @@ ru:
       add_comment: Добавить комментарий…
       flag: Отметить
       pick_answer: Выбрать в качестве решения
+      unset_answer: Аннулировать решение?
     create: 
       flash_notice: Вопрос успешно создан.
     edit: 
@@ -35,11 +38,13 @@ ru:
       adult_content: Этот вопрос содержит материалы для взрослых.
       body_tip: В чём состоит вопрос? Сделайте его более информативным.
       language_tip: Выберите язык вопроса.
+      tags_tip: Используйте теги для добавления информации о вашем вопросе.
     index: 
       active: Активные
       active_tooltip: Недавно обновлённые вопросы
       ask_question: Задать вопрос
       empty: Пока никто не задавал вопросы, станьте первыми!
+      help_to_answer: Помогите ответить
       hot: Горячие
       hot_tooltip: Вопросы с наибольшей активностью за последние 5 дней
       newest: Новейшие
@@ -53,14 +58,17 @@ ru:
       messages: 
         empty_tags: Необходимо указать хотя бы один тег.
         title_too_long: Название слишком длинное. Оно не должно содержать более 100 символов
+        too_many_tags: К сожалению, можно ввести только не более 9 тегов.
         too_short: Слишком мало текста. Используйте больше %{count} слов, чтобы конкретизировать текст.
     move: 
+      group_label: "Переместить в группу с именем:"
       submit: Переместить!
       title: "Переместить вопрос: %{title}"
     move_to: 
       group_dont_exists: Группа %{group} не существует
       success: Вопрос перемещён в %{group}
     new: 
+      how_to_ask: Как задавать вопросы
       title: Задать вопрос
     question: 
       accepted_tooltip: На этот вопрос есть принятый ответ
@@ -81,22 +89,31 @@ ru:
       accepted_tooltip: Один из ответов был принят в качестве правильного ответа
       another_answers: Другие ответы
       answers: Ответы
+      answers_title: 
+        one: "{{count}} ответ"
+        other: "{{count}} ответ(а/ов)"
+      asked_on: задано
+      ban: Заблокировать
       close: Закрыть
       close_reason: "Вопрос закрыт по следующей причине:"
       favorite_tooltip: Добавить этот вопрос в избранное
       flag: Отметить
+      flagged_as: С отметкой
+      flags: Отмечен как
       last_activity: Последние действия
       related_questions: Похожие вопросы
       request_closing: Запрос закрытия
       request_closing_details: Оставить запрос на закрытие этого вопроса
       retag: Изменить теги
       retract_request: Вы уже сделали запрос; вы хотите отказаться от него?
+      share: Разместить этот вопрос на
       share_on: Разместить этот вопрос на %{site}
       solution: Решение
       to_answer_question: ответить на этот вопрос
       unauthenticated_retag: Для изменения тегов вопросов необходимо зарегистрировать учётную запись
       unfavorite_tooltip: Удалить этот вопрос из списка избранных
       unwatch_tooltip: Перестать следить за этим вопросом
+      viewed: просмотренные
       watch_tooltip: Следить за этим вопросом
     solve: 
       flash_notice: Вопрос был решён.

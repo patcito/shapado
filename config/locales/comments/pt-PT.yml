@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   comments: 
     create: 
@@ -9,7 +10,7 @@ pt-PT:
       title: Edit comment
     shared: 
       add_comment: add comment...
-      comment_submit: comment
+      comment_submit: Comentar
       reply: reply
       said: said
     update: 

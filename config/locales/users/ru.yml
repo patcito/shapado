@@ -1,14 +1,19 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 ru: 
   activerecord: 
     attributes: 
       user: 
+        activated_at: активен с
         activation_code: Код активации
+        age: Возраст
+        asked_by: задано
         avatar: Изображение в профиле
         birthday: День рождения
+        created_at: вступил в
         current_password: Текущий пароль
         email: Электронная почта
         fullname: Полное имя
@@ -31,8 +36,14 @@ ru:
       users: Пользователи
   users: 
     actions: 
+      edit_others_posts: Изменение чужих постов
       edit_wiki_post: Редактирование вики-записей
+      flag: Отметить
+      retag_others_questions: Смена тегов чужих вопросов
       vote_down: Голосовать против
+      vote_to_close_any_question: Запросить закрытие любого вопроса
+      vote_to_close_own_question: Запросить закрытие своего вопроса
+      vote_up: Голосовать за
     create: 
       flash_error: К сожалению, настроить эту учётную запись не удалось. Повторите попытку снова или обратитесь к администратору (по ссылке выше).
       flash_notice: Благодарим за регистрацию!
@@ -42,11 +53,36 @@ ru:
       title: Настройки
     follow: 
       flash_notice: Пользователь %{user} добавлен в список ваших друзей
+    form: 
+      activities_notification: Получить уведомления по электронной почте о системных действиях, таких как появление новых беджей, новых следящих и т. д.
+      avatar_tip: Измените изображение в своём профиле с помощью Gravatar
+      give_advice_notification: Получать уведомления по электронной почте о вопросах в вашей области знаний
+      information: Информация
+      new_answer_notification: Получать почтовые уведомления о новых ответах
+      notifications: Уведомления
+      reports_notification: Получать отчёт о последних действиях в группе (только для администраторов групп)
     index: 
+      empty: Эта группа пуста, примите участие для присоединения к ней.
+      filter: Поиск пользователей
+      name: Имя
+      name_tooltip: Пользователи отсортированы в алфавитном порядке
       newest: Новейшие
+      newest_tooltip: Только что присоединившиеся пользователи
       oldest: Старейшие
+      oldest_tooltip: Пользователи, вступившие первыми
+      reputation: Репутация
+      reputation_tooltip: Пользователи отсортированы по более высокой репутации
       title: Все пользователи
+    messages: 
+      errors: 
+        reputation_needed: Вам необходимо обладать репутацией более {{min_reputation}} для того, чтобы {{action}}
+    new: 
+      submit: Зарегистрироваться
+      title: Зарегистрироваться как новый пользователь
     show: 
       follow: Следить
       title: Пользователь %{user}
       unfollow: Не следить
+      views: просмотры
+    unfollow: 
+      flash_notice: Пользователь {{user}} удалён из списка ваших друзей

@@ -1,48 +1,51 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 el: 
   layouts: 
     application: 
-      ask_question: κάντε ερώτηση
-      badges: τίτλοι
-      forgot: ξεχάσατε;
-      home: κεντρική
-      languages: γλώσσες
-      log_in: σύνδεση
-      logged: συνδεδεμένοι ως %{login}
-      logout: αποσύνδεση
-      manage_ads: διαχείριση διαφημίσεων
-      moderate: moderate
+      ask_question: Κάντε ερώτηση
+      badges: Τίτλοι
+      forgot: Ξεχάσατε;
+      home: Κεντρική
+      languages: Γλώσσες
+      log_in: Σύνδεση
+      logged: Συνδεδεμένοι ως %{login}
+      logout: Αποσύνδεση
+      manage_ads: Διαχείριση διαφημίσεων
+      moderate: Συντονισμός
       now: τώρα!
       openid: 
-        explaination: "αν θέλετε να εγγραφείτε ή απλώς να συνδεθείτε, παρακαλώ επιλέξτε τον OpenId πάροχο σας:"
-      pages: σελίδες
-      questions: ερωτήσεις
-      questions_in: ερωτήσεις στα
+        explaination: "Αν θέλετε να εγγραφείτε ή απλώς να συνδεθείτε, επιλέξτε παρακαλώ τον OpenID πάροχο σας:"
+      pages: Σελίδες
+      questions: Ερωτήσεις
+      questions_in: Ερωτήσεις στα
       questions_tagged: με τις ετικέτες
-      search: αναζήτηση
-      settings: ρυθμίσεις
-      signup: εγγραφή
-      subscribe: εγγραφή
-      tags: ετικέτες
-      title: ερωτήσεις & απαντήσεις
-      unanswered: αναπάντητες
-      users: μέλη
-      welcome_from: καλώς ορίσατε! μπορείτε
+      search: Αναζήτηση
+      settings: Ρυθμίσεις
+      signup: Εγγραφή
+      subscribe: Εγγραφή
+      tags: Ετικέτες
+      title: Ερωτήσεις & Απαντήσεις
+      unanswered: Αναπάντητες
+      users: Μέλη
+      welcome_from: Καλώς ορίσατε! Μπορείτε
     manage: 
-      actions: ενέργειες
-      announcements: ανακοινώσεις
-      constrains: περιορισμοί
-      content: περιεχόμενο
-      dashboard: ταμπλό
-      domain: domain
-      general: γενικά
-      members: μέλη
-      pages: σελίδες
-      properties: ιδιότητες
-      reputation: υπόληψη
-      rewards: ανταμοιβές
-      stats: στατιστικά
-      theme: θέμα
-      widgets: widgets
+      actions: Ενέργειες
+      announcements: Ανακοινώσεις
+      constrains: Περιορισμοί
+      content: Περιεχόμενο
+      dashboard: Ταμπλό
+      domain: Domain
+      general: Γενικά
+      members: Μέλη
+      pages: Σελίδες
+      properties: Ιδιότητες
+      reputation: Υπόληψη
+      rewards: Ανταμοιβές
+      stats: Στατιστικά
+      theme: Θέμα
+      widgets: Widgets
+    notifications: 
+      message: Εάν δεν θέλετε να λαμβάνετε αυτόματες ειδοποιήσεις από το %{domain} πια, αλλάξτε τις προτιμήσεις σας στην σελίδα ειδοποιήσεων.

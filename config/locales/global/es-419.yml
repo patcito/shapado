@@ -1,4 +1,4 @@
-# Messages for Spanish (Español)
+# Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
 es-419: 
@@ -28,14 +28,6 @@ es-419:
     share: compartir
   languages: 
     any: cualquiera
-    el: griego
-    en: inglés
-    es: español
-    es-419: español latino
-    fr: francés
-    ja: japonés
-    pt: portugués
-    pt-PT: portugués
     user: idiomas que conozco
   messages: 
     success: "%{model} fue exitosamente %{action}."

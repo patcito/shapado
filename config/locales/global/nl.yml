@@ -1,13 +1,14 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   actions: 
-    closed: Gesloten
-    created: Aangemaakt
-    deleted: Verwijderd
-    updated: Bijgewerkt
+    closed: gesloten
+    created: aangemaakt
+    deleted: verwijderd
+    updated: bijgewerkt
   feeds: 
     feed: Feed
     post_new_questions: Nieuwe vragen toevoegen aan
@@ -29,14 +30,6 @@ nl:
     share: Delen
   languages: 
     any: Alle
-    el: Grieks
-    en: Engels
-    es: Engels
-    es-419: Latijns-Amerikaans Spaans
-    fr: Frans
-    ja: Japans
-    pt: Portugees
-    pt-PT: Portugees
     user: Voorkeurstalen
   messages: 
     success: "%{model} is %{action}."

@@ -8,6 +8,7 @@ pt-PT:
       user: 
         activated_at: activado em
         activation_code: código de activação
+        age: Idade
         asked_by: perguntado por
         avatar: Profile image
         birthday: Birthday
@@ -81,5 +82,6 @@ pt-PT:
       follow: follow
       title: User %{user}
       unfollow: unfollow
+      views: visitas
     unfollow: 
       flash_notice: The user %{user} was removed from your friends
