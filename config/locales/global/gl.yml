@@ -1,0 +1,60 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  actions: 
+    closed: pechado
+    created: creado
+    deleted: borrado
+    updated: actualizado
+  feeds: 
+    feed: Fonte de novas
+    post_new_questions: Publicar novas preguntas en
+    question: Subscribirse a esta pregunta
+    questions: Subscribirse a todas as preguntas
+    share_on_twitter: twitter, facebook e outros...
+    tag: Subscribirse á etiqueta
+    user: Subscribirse ás preguntas do usuario
+  global: 
+    by: por
+    current: Actual
+    from: desde {{site}}
+    group_not_found: A páxina {{url}} non existe
+    or: ou
+    permission_denied: Permisos rexeitados
+    please_login: Acceda ao sistema
+    preview: Vista previa
+    previous: Anteriores
+    share: compartir
+  languages: 
+    any: Calquera
+    user: As linguas que coñezo
+  messages: 
+    success: "{{model}} foi {{action}} correctamente."
+  models: 
+    question: A pregunta
+  number: 
+    x_time: 
+      one: "{{count}} vez"
+      other: "{{count}} veces"
+      zero: Nunca
+  scaffold: 
+    add: Engadir
+    back: Volver
+    cancel: Cancelar
+    close: Pechar
+    create: Crear
+    destroy: Borrar
+    details: Detalles
+    edit: Editar
+    more: Máis...
+    new: Engadir un novo {{model}}
+    save: Gardar
+    send: Enviar
+    show: Mostrar
+    sure: Está seguro de querer borrar este {{model}}?
+    update: Actualizar
+  time: 
+    ago: hai {{time}}
+    today: hoxe

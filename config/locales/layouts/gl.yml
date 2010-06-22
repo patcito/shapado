@@ -1,0 +1,49 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  layouts: 
+    application: 
+      ask_question: Facer unha pregunta
+      badges: Insignias
+      forgot: Esqueceu?
+      home: Inicio
+      languages: Linguas
+      log_in: Rexistro
+      logged: Conectado como {{login}}
+      logout: Saír ao anonimato
+      manage_ads: Xestionar os anuncios
+      moderate: Moderar
+      now: xa!
+      openid: 
+        explaination: "Se quere rexistrarse ou acceder ao sistema, seleccione o seu provedor de OpenID:"
+      pages: Páxinas
+      questions: Preguntas
+      questions_in: Preguntas en
+      questions_tagged: etiquetado con
+      search: Procurar
+      settings: Configuracións
+      signup: Rexístrese
+      subscribe: Subscribirse
+      tags: Etiquetas
+      title: Preguntas e respostas
+      unanswered: Sen resposta
+      users: Usuarios
+      welcome_from: Benvido! Pode
+    manage: 
+      actions: Accións
+      announcements: Anuncios
+      constrains: Restricións
+      content: Contido
+      dashboard: Panel de control
+      domain: Dominio
+      general: Xeral
+      members: Membros
+      pages: Páxinas
+      properties: Propiedades
+      reputation: Reputación
+      rewards: Recompensas
+      stats: Estatísticas
+      theme: Tema visual
+      widgets: Widgets

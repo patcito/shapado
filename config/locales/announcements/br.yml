@@ -1,0 +1,20 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Echuiñ a ra d'an
+        message: Kemennadenn
+        only_anonymous: Evit an implijerien dizanv hepken
+        starts_at: Kregiñ a ra d'an
+  announcements: 
+    actions: 
+      delete: Dilemel
+      title: Oberoù
+    create: 
+      success: Kemennadenn krouet.
+    index: 
+      title: Kemennoù

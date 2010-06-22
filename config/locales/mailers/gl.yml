@@ -1,0 +1,24 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Gañou unha insignia en {{group}}!
+      favorited: 
+        subject: "{{login}} marcou a súa pregunta como unha das súas favoritas!"
+      follow: 
+        subject: "{{login}} xa o segue en {{app}}"
+      give_advice: 
+        friend_subject: "O seu amigo necesita axuda: \"{{question_title}}\""
+        subject: "Necesitamos o seu consello: \"{{question_title}}\""
+      new_answer: 
+        subject_friend: O seu amigo {{login}} respondeu a pregunta "{{title}}"
+        subject_other: "{{login}} respondeu a pregunta \"{{title}}\""
+        subject_owner: "{{login}} respondeu a súa pregunta \"{{title}}\""
+      new_comment: 
+        subject: "{{login}} deixou un comentario en {{group}}"
+      report: 
+        subject: Informe para o grupo {{group}} de {{app}}

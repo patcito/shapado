@@ -1,0 +1,24 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Вы заработали бедж в {{group}}!
+      favorited: 
+        subject: "{{login}} добавил ваш вопрос в избранное!"
+      follow: 
+        subject: "{{login}} сейчас следит на вами на {{app}}"
+      give_advice: 
+        friend_subject: "Вашему другу нужна помощь: {{question_title}}"
+        subject: "Нам нужен ваш совет: {{question_title}}"
+      new_answer: 
+        subject_friend: Ваш друг {{login}} ответил на вопрос {{title}}
+        subject_other: "{{login}} ответил на вопрос {{title}}"
+        subject_owner: "{{login}} ответил на ваш вопрос {{title}}"
+      new_comment: 
+        subject: "{{login}} оставил комментарий в группе {{group}}"
+      report: 
+        subject: Сообщить о группе {{group}} на {{app}}

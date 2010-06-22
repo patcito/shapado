@@ -1,0 +1,20 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Termina le
+        message: Message
+        only_anonymous: Solmente pro usatores anonyme
+        starts_at: Comencia le
+  announcements: 
+    actions: 
+      delete: Remover
+      title: Actiones
+    create: 
+      success: Le aviso ha essite create con successo.
+    index: 
+      title: Avisos

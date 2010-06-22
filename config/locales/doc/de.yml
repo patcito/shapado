@@ -1,0 +1,37 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  doc: 
+    chat: 
+      title: Chat-Support
+    plans: 
+      15millions: 15 Millionen Seitenabrufe/Monat
+      1million: 1 Million Seitenabrufe/Monat
+      247_all_support: Webbasierter E-Mail-, Chat- und Telefonsupport (24/7)
+      5millions: 5 Millionen Seitenabrufe/Monat
+      all_support: Webbasierter E-Mail-, Chat- und Telefonsupport
+      basic_restrictions: Keine nutzerdefinierten Anzeigen und keine voll anpassbare Benutzeroberfläche
+      beta_info: Aktuell sind alle Websites kostenfrei und verfügen über die gleichen Funktionen wie das Premium-Angebot. Eine Ausnahme bildet der Support, der lediglich webbasiert per E-Mail und Chat erfolgt.
+      big_sites: Websites mit hohem Besucheraufkommen
+      custom_ads: Verwende Deine eigenen Anzeigen
+      custom_analytics: Statistik zum Datenverkehr
+      custom_domain: Eigene Domain
+      custom_themes: Verwende unsere vorbereiteten nutzerdefinierten Benutzeroberflächen
+      custom_ui: Vollständig anpassbare Benutzeroberfläche
+      free_plan: kostenloses Angebot
+      getting_popular: Wird immer beliebter
+      huge_sites: Websites mit riesigem Besucheraufkommen
+      month: Monat
+      page_views: Für kleine/private Websites
+      plans: Pläne
+      private_site: Richte privaten/öffentlichen Zugang ein
+      small_private: Kleine/Private Websites
+      start_monetizing: Fange damit an Geld zu verdienen
+      support: Support
+      title: Angebote und Preise
+      unlimited: Unbegrenzter Datenverkehr pro Monat
+      we_offer: Wir bieten auch
+      web_support: Webbasierter Support
+      with_unlimited: mit unbegrenztem Datenverkehr, keinen nutzerdefinierten Anzeigen und keiner eigenen Domain.

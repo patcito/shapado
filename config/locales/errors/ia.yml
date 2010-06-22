@@ -1,0 +1,22 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  errors: 
+    forbidden: 
+      explanation: Tu non ha le permissiones requisite pro acceder a iste pagina.
+      title: Accesso refusate
+    go_to: Ir al pagina %{link}
+    help_us_answer: Adjuta nos a responder a %{link}
+    internal_error: 
+      explanation: Nos ha recipite notification a proposito de iste problema e nos lo examinara tosto.
+      title: Nos lo regretta, ma un error ha occurrite.
+    not_found: 
+      explanation: Tu pote haber mal scribite le adresse o le pagina pote haber essite renominate.
+      title: Pagina non trovate.
+    options_label: "Altere cosas a probar:"
+    search: Recerca
+    unprocessable_entity: 
+      explanation: Pote esser que tu tentava cambiar un cosa al qual tu non ha accesso.
+      title: Le cambio que tu voleva facer ha essite rejectate.

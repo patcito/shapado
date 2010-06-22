@@ -1,0 +1,21 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  errors: 
+    forbidden: 
+      explanation: no tienes los derechos de acceso requeridos para esta página.
+      title: acceso denegado
+    go_to: ir a la {{link}}
+    help_us_answer: ayudanos a responder {{link}}
+    internal_error: 
+      explanation: ya se nos ha informado de este problema y lo resolveremos a la brevedad.
+      title: lo sentimos pero algo salió mal.
+    not_found: 
+      explanation: haz digitado mal la direccion o esta página ha sido movida.
+      title: pagina no encontrada.
+    options_label: "otras cosas que puedes hacer:"
+    search: buscar
+    unprocessable_entity: 
+      explanation: quizás no tenías acceso a lo que intentaste cambiar.
+      title: el cambio que querías ha sido rechazado.

@@ -1,0 +1,59 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  actions: 
+    closed: closed
+    created: created
+    deleted: deleted
+    updated: updated
+  feeds: 
+    feed: Flujo
+    post_new_questions: publicar nuevas preguntas a
+    question: subscribirse a esta pregunta
+    questions: subscribirse a todas las preguntas
+    share_on_twitter: twitter, facebook y mas...
+    tag: subscribirse al tag
+    user: subscribirse a las preguntas del usuario
+  global: 
+    by: por
+    current: actual
+    from: desde {{site}}
+    group_not_found: la página {{url}} no existe
+    or: o
+    permission_denied: permiso denegado
+    please_login: por favor inicia sesión
+    preview: vista previa
+    previous: anterior
+    share: compartir
+  languages: 
+    any: cualquiera
+    user: idiomas que conozco
+  messages: 
+    success: "{{model}} fue exitosamente {{action}}."
+  models: 
+    question: la pregunta
+  number: 
+    x_time: 
+      one: "{{count}} vez"
+      other: "{{count}} veces"
+      zero: nunca
+  scaffold: 
+    add: añadir
+    back: volver
+    cancel: cancelar
+    close: cerrar
+    create: crear
+    destroy: borrar
+    details: detalles
+    edit: editar
+    more: más...
+    new: add new {{model}}
+    save: guardar
+    send: enviar
+    show: ver
+    sure: ¿esta seguro que quiere borrar esta {{model}}?
+    update: actualizar
+  time: 
+    ago: hace {{time}}
+    today: hoy

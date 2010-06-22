@@ -1,0 +1,31 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  close_requests: 
+    create: 
+      flash_notice: Запрос на закрытие успешно создан
+    destroy: 
+      flash_notice: Запрос на закрытие успешно удалён
+    form: 
+      close_with_reason: Закрыть вопрос по этой причине
+      dupe: Копия
+      no_question: Не является вопросом
+      not_relevant: Несущественно
+      ot: Не по теме
+      request_closing_details: Запрос на закрытие этого вопроса
+      spam: спам
+    index: 
+      title: Список запросов на закрытие
+    model: 
+      attributes: 
+        comment: Комментарий
+        reason: причина
+        user: пользователь
+      messages: 
+        already_requested: Вы уже оставляли запрос на закрытие этого вопроса
+      name: Запрос на закрытие
+      prural_name: Запросы на закрытие
+    update: 
+      flash_notice: Запрос на закрытие успешно обновлён

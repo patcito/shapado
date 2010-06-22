@@ -1,0 +1,43 @@
+# Messages for Latin American Spanish (espanol de America Latina)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Patcito
+es-419: 
+  notifier: 
+    earned_badge: 
+      message1: Has ganado una insigna %{badge} en %{app}
+      message2: "La descripcion de la insigna:"
+      message3: Puedes ver todas tus insignas en tu %{user_page}
+    favorited: 
+      message1: "%{user} agrego tu pregunta como favorita en %{group}"
+      message2: "El texto de tu pregunta:"
+      message3: "Lo puedes ver aqui:"
+    follow: 
+      message1: "%{user} esta siguiendo sus preguntas y respuestas en %{app}"
+      message2: Lo puedes seguir de vuelta haciendo clic en el boton "Seguir" en su %{user_page}
+    give_advice: 
+      message1: "%{user} acaba de hacer una pregunta que usted podria contestar:"
+      message2: "Para contestar, responde a este mensaje en el siguiente enlace:"
+      message3: "O, si conoces a alguien que pueda contestar, enviale este enlace:"
+      message4: Si no tenemos respuesta de ti pronto, le preguntaremos a otra persona; puedes contestar la pregunta cuando quieras.
+    global: 
+      hi: Hola %{user},
+      user_page: pagina de usuario
+    new_answer: 
+      message: "%{user} respondió %{new_answer} a la pregunta %{question}"
+    new_comment: 
+      message: "%{user} comento %{new_comment} en la pregunta %{question}"
+    new_feedback: 
+      message1: El usuario %{user} <%{email}> mando un feedback
+      message2: Un usuario anónimo mando un feedback desde la dirección IP %{ip}
+      message3: "Dirección de correo: %{email}"
+      message4: "Objeto: %{subject}"
+    report: 
+      message1: Reporte para el groupo %{group.name}
+      message2: Desde el %{since}
+      message3: " %{questions} preguntas han sido creadas"
+      message4: " %{answers} respuestas han sido creadas"
+      message5: " %{votes} votos has sido efectuados"
+      message6: "%{badges}  insignas han sido otorgadas"
+      message7: La cuenta tiene %{users} usuarios.
+      message8: Visita el  grupo en %{link}

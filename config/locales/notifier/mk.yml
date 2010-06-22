@@ -1,0 +1,43 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  notifier: 
+    earned_badge: 
+      message1: Заработивте значка за %{badge} на %{app}
+      message2: "Опис на значката:"
+      message3: Можете да ги погледате сите ваши значки на вашата %{user_page}
+    favorited: 
+      message1: "%{user} го додаде вашето прашање како омилено на %{group}"
+      message2: "Текстот на вашето прашање:"
+      message3: "Можете да ја видите тука:"
+    follow: 
+      message1: "%{user} сега ги следи вашите прашања и одговори на %{app}"
+      message2: Можете и вие да го следите него стискајќи на копчето „Следи“ на неговата %{user_page}
+    give_advice: 
+      message1: "%{user} штотуку постави прашање што можеби знаете да го одговорите:"
+      message2: "За да дадете одговор, просто одговорете на оваа порака:"
+      message3: "Или пак, ако знаете некој друг што би можел да даде одговот, испратете му ја оваа упатна врска:"
+      message4: Ако наскоро не добиеме одговор од вас, ќе прашаме некој друг. Сепак, можете да одговорите кога сакате.
+    global: 
+      hi: Здраво %{user},
+      user_page: корисничка страница
+    new_answer: 
+      message: "%{user} го прифати %{new_answer} на прашањето %{question}"
+    new_comment: 
+      message: "%{user} коментираше %{new_comment} на прашањето %{question}"
+    new_feedback: 
+      message1: Корисникот %{user} <%{email}> испрати мислење
+      message2: Анонимен корисник испратил мислење од IP-адресата %{ip}
+      message3: "Е-пошта: %{email}"
+      message4: "Наслов: %{subject}"
+    report: 
+      message1: Извештај за групата %{group.name}
+      message2: Од %{since}
+      message3: Создадени се %{questions} прашања
+      message4: создадени се %{answers} одговори
+      message5: дадени се %{votes} гласови
+      message6: доделени се %{badges} значки
+      message7: Сметката има %{users} корисника.
+      message8: Посетете ја вашата група на %{link}

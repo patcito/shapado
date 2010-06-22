@@ -1,0 +1,17 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Luckas Blade
+pt-BR: 
+  errors: 
+    forbidden: 
+      explanation: Você não tem as permissões necessárias para acessar esta página.
+      title: Acesso negado
+    not_found: 
+      explanation: Você pode ter digitado o endereço incorreto ou a página pode ter sido movida.
+      title: Página não encontrada.
+    options_label: "Outras coisas que pode tentar:"
+    search: Pesquisar
+    unprocessable_entity: 
+      explanation: Talvez você tenha tentado alterar algo para o qual não tinha permissão.
+      title: A alteração que pretendia foi rejeitada.

@@ -1,0 +1,41 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  admin: 
+    manage: 
+      content: 
+        footer: Fußzeile
+        head: Kopfzeile
+        question_help: Hilfe zu Fragen
+        question_prompt: Eingabeaufforderung für Fragen
+        title: Nutzerdefinierter Inhalt
+        top_bar: Titelleiste
+        top_bar_tip: Gebe einen Link pro Zeile ein
+      properties: 
+        constrains: 
+          reputation_constrains_description: Mit diesem Formular kannst Du festlegen, wieviele Reputationspunkte ein Nutzer benötigt, um bestimmte Aktionen ausführen zu können
+          reputation_constrains_subtitle: Liste der Einschränkungen nach Reputation für die einzelnen Aktionen
+          title: Einschränkungen
+        domain: 
+          description: "Du kannst Deine Website katalogisieren, so dass sie über Deine eigene Domain aufgerufen werden kann. So wird es gemacht:"
+          instruction1: Hierzu musst Du Dich zunächst bei Deinem Hoster anmelden. Dies ist die Seite bei der Deine Domain wie bspw. {{subdomain}}.de gehostet wird.
+          instruction2: Dort musst Du im DNS-Abschnitt einen kanonischen Namen (CNAME) erstellen.
+          instruction3: Wähle „www“ oder irgendetwas anderes als kanonischen Namen (CNAME).
+          instruction4: Füge hernach Deine aktuelle {{domain}} für Shapado in das Feld für das Domainziel ein.
+          instruction5: Sobald dies erledigt ist, sollte Deine Domain www.{{subdomain}} nach ca. einer Stunde auf {{appdomain}} weiterleiten.
+          instruction6: Sobald dies der Fall ist, kannst Du im folgenden Feld den Namen Deiner www.{{subdomain}} angeben und die Schaltfläche „aktualisieren“ anklicken. Sofern Du Fragen hast, kannst Du uns im Chat {{chat_url}} oder in unserem Hilfeforum kontaktieren.
+          title: Domain festlegen
+          warning: Bist Du sicher, dass Du Deine Domain ändern möchtest?
+        general: 
+          title: Gruppeneigenschaften
+        rewards: 
+          reputation_rewards_description: Mit diesem Formular kannst Du festlegen, wie Nutzer für bestimmte Aktionen Reputationspunkte gewinnen oder verlieren können
+          reputation_rewards_subtitle: Liste der Auszeichnungen
+          title: Auszeichnungen
+        share: 
+          title: freigeben
+        theme: 
+          logo_legend: Lade das Logo für Deine Gruppe hoch. Es muss kleiner als 2 MB sein.
+          title: Lege das Motto für die Gruppe fest

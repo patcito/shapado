@@ -1,0 +1,22 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  errors: 
+    forbidden: 
+      explanation: Non ten os dereitos necesarios para acceder a esta páxina.
+      title: Acceso rexeitado
+    go_to: Ir á páxina %{link}
+    help_us_answer: Axúdenos a responder %{link}
+    internal_error: 
+      explanation: Xa recibimos a notificación sobre este problema e botarémoslle unha ollada axiña.
+      title: Por desgraza, algo foi mal.
+    not_found: 
+      explanation: Poida que escribira incorrectamente o enderezo ou que a páxina fose trasladada.
+      title: Non se atopou a páxina.
+    options_label: "Outras cousas que pode intentar:"
+    search: Procurar
+    unprocessable_entity: 
+      explanation: Poida que intentase cambiar algo ao que non ten acceso.
+      title: O cambio que fixo foi rexeitado.

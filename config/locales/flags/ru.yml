@@ -1,0 +1,21 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: причина
+    models: 
+      flag: Отметка
+      flags: Отметки
+  flags: 
+    create: 
+      flash_error: Вы не можете отметить это
+      flash_notice: Благодарим за ваше сообщение
+    form: 
+      attention: Необходимо внимание модератора
+      label: Пожалуйста, будьте внимательны при отметке
+      offensive: Агрессия, оскорбление или проявление ненависти
+      spam: спам

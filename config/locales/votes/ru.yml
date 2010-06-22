@@ -1,0 +1,26 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Eleferen
+# Author: Lockal
+ru: 
+  activerecord: 
+    models: 
+      vote: Голос
+      votes: Голоса
+  votes: 
+    control: 
+      have_voted_down: Нажмите, чтобы отменить свой голос «против»
+      have_voted_up: Нажмите, чтобы отменить свой голос «за»
+      to_vote_down: Нажмите, чтобы проголосовать «против»
+      to_vote_up: Нажмите, чтобы проголосовать «за»
+    create: 
+      flash_error: Вы не можете голосовать здесь
+      flash_notice: Спасибо за то, что проголосовали!
+      unauthenticated: Анонимные пользователи не могут голосовать
+    destroy: 
+      flash_notice: Ваш голос успешно отозван.
+    model: 
+      messages: 
+        closed_question: Вы не можете голосовать за любые сообщения, относящиеся к закрытым вопросам
+        vote_down_comment: За комментарии нельзя голосовать «против»

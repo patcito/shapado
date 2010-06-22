@@ -1,0 +1,129 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Crazymadlover
+es: 
+  activerecord: 
+    models: 
+      badge: insignia
+      badges: insignias
+  badges: 
+    index: 
+      description: todas las insignias que puedes ganar. comparte tu conocimiento, gana placas.
+      title: insignias
+    shared: 
+      addict: 
+        description: visita el sitio 20 días consecutivos
+      autobiographer: 
+        description: completed all user profile fields
+        name: autobiographer
+      celebrity: 
+        description: tiene mas de 100 seguidores
+        name: celebridad
+      citizen_patrol: 
+        description: primer post reportado
+        name: citizen patrol
+      civic_duty: 
+        description: vota 300 veces
+        name: civic duty
+      cleanup: 
+        description: Primer rollback
+        name: cleanup
+      commentator: 
+        description: deja 10 comentarios
+      critic: 
+        description: votar negativamente por primera vez
+      disciplined: 
+        description: borra su propio post con puntaje mayor igual a 3
+        name: disciplined
+      editor: 
+        description: primer mensaje editado
+      effort_medal: 
+        description: recibir 100 votos positivos
+      enlightened: 
+        description: primera respuesta aceptada con al menos 10 votos positivos
+        name: enlightened
+      famous_question: 
+        description: hace una pregunta con 10000 visitas
+      fanatic: 
+        description: visita el sitio 100 días consecutivos
+      favorite_question: 
+        description: pregunta seleccionada como preferida por 25 usuarios
+      friendly: 
+        description: sigue a alguien por primera vez
+        name: amistoso
+      good_answer: 
+        description: Tener una respuesta que alcanzo un promedio de más de 25 votos
+      good_question: 
+        description: haber hecho una pregunta que alcanzo el promedio de 10 votos
+      great_answer: 
+        description: respuesta votada 10 veces
+        name: great answer
+      great_question: 
+        description: pregunta votada 100 veces
+        name: great question
+      guru: 
+        description: dar solución a una pregunta con promedio de votos superior a 40
+      inquirer: 
+        description: preguntar por primera vez
+      interesting_person: 
+        description: tiene mas de 10 seguidores
+        name: persona interesante
+      merit_medal: 
+        description: recibir 200 votos positivos
+      necromancer: 
+        description: contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
+        name: necromancer
+      nice_answer: 
+        description: respuesta votada 10 veces
+        name: nice answer
+      nice_question: 
+        description: pregunta votada 10 veces
+        name: nice question
+      notable_question: 
+        description: hace una pregunta con 2500 visitas
+      organizer: 
+        description: primer re-etiquetado
+        name: organizador
+      peer_pressure: 
+        description: borra su propio post con puntaje menor igual a -3
+        name: peer pressure
+      pioneer: 
+        description: ser de los primeros usuarios registrados
+      popstar: 
+        description: 500 votos positivos, máximo 10 negativos
+      popular_person: 
+        description: tiene mas de 50 seguidores
+        name: persona popular
+      popular_question: 
+        description: hace una pregunta con 1000 visitas
+      rockstar: 
+        description: 1000 votos positivos, máximo 10 negativos
+      scholar: 
+        description: first accepted answer on your own question
+        name: scholar
+      self-learner: 
+        description: contesto su propia pregunta con al menos 3 votos positivos
+        name: self learner
+      service_medal: 
+        description: recibir 300 votos positivos
+      shapado: 
+        description: visita el sitio 8 días consecutivos
+      stellar_question: 
+        description: Pregunta con mas de 100 favoritos
+        name: stellar question
+      student: 
+        description: primera pregunta con al menos un voto positivo
+      supporter: 
+        description: votar positivamente por primera vez
+      troubleshooter: 
+        description: responder por primera vez
+      tutor: 
+        description: dar solución a una pregunta con promedio de votos superior a 2
+    show: 
+      description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
+      earned: otorgada
+      for_tag_bronze: 200 votos en la etiqueta {{tag}}
+      for_tag_gold: 1000 votos en la etiqueta {{tag}}
+      for_tag_silver: 400 votos en la etiqueta {{tag}}
+      title: insignia {{type}}

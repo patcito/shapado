@@ -1,0 +1,16 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  ads: 
+    ad_links: Adder un nove annuncio {{type}}
+    create: 
+      success: Le annuncio ha essite create con successo.
+    index: 
+      add_adbard: Adder un nove annuncio Adbard
+      add_adsense: Adder un nove annuncio Google AdSense
+      title: Publicitate
+    name: "Nomine:"
+    position: "Position:"
+    title: Adder un nove annuncio {{type}}

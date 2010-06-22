@@ -1,0 +1,19 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  comments: 
+    create: 
+      flash_notice: gracias por tu comentario
+    edit: 
+      title: Editar comentario
+    shared: 
+      add_comment: añadir comentario...
+      comment_submit: comentar
+      reply: contestar
+      said: dijo
+    update: 
+      flash_notice: el comentario ha sido actualizado con exito.
+  models: 
+    comment: comentario
+    comments: comentarios

@@ -1,0 +1,43 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  notifier: 
+    earned_badge: 
+      message1: U hebt het speldje %{badge} verdiend op %{app}
+      message2: "Beschrijving speldje:"
+      message3: U kunt al uw speldjes bekijken op uw %{user_page}
+    favorited: 
+      message1: "%{user} heeft uw vraag als favoriet toegevoegd op %{group}"
+      message2: "Uw vraag:"
+      message3: "U kunt deze hier bekijken:"
+    follow: 
+      message1: "%{user} volgt uw vragen en antwoorden op %{app}"
+      message2: U kunt deze gebruiker ook volgen door op de %{user_page} op "Volgen" te klikken
+    give_advice: 
+      message1: "%{user} heeft een vraag gesteld die u wellicht kunt beantwoorden:"
+      message2: "Antwoord op het bericht in de volgende verwijzing om de vraag te beantwoorden:"
+      message3: "Of stuur deze verwijzing naar iemand die u kent die de vraag kan beantwoorden:"
+      message4: Als we niet snel een antwoord van u krijgen, vragen we iemand anders. U kunt de vraag nog steeds beantwoorden wanneer u maar wilt.
+    global: 
+      hi: Hallo %{user},
+      user_page: gebruikerspagina
+    new_answer: 
+      message: "%{user} heeft %{new_answer} geaccepteerd als antwoord op de vraag %{question}"
+    new_comment: 
+      message: "%{user} heeft de reactie %{new_comment} op de vraag %{question} gegeven"
+    new_feedback: 
+      message1: De gebruiker %{user} <%{email}> heeft een reactie gegeven
+      message2: Een anonieme gebruiker heeft een reactie gegeven vanaf IP-adres %{ip}
+      message3: "E-mailadres: %{email}"
+      message4: "Onderwerp: %{subject}"
+    report: 
+      message1: Rapportage voor groep %{group.name}
+      message2: Sinds %{since}
+      message3: Er zijn %{questions} vragen gesteld
+      message4: Er zijn %{answers} antwoorden gegeven
+      message5: Er is %{votes} keer gestemd
+      message6: Er zijn %{badges} speldjes uitgereikt
+      message7: Er zijn %{users} gebruikers.
+      message8: Bezoek uw groep op %{link}

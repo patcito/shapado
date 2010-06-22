@@ -1,0 +1,37 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Crazymadlover
+es: 
+  doc: 
+    chat: 
+      title: Soporte por chat
+    plans: 
+      15millions: 15 millions de paginas vistas/mes
+      1million: 1 million de paginas vistas/mes
+      247_all_support: soporte web, email, chat y telefono las 24/7
+      5millions: 5 milliones de paginas vistas/mes
+      all_support: soporte web, email, chat y telefono
+      basic_restrictions: no progandas ni interface personalizable
+      beta_info: Por ahora, todos los sitios son gratis y benefician de las mismas opciones que el plan Optimum, menos el soporte por telefono.
+      big_sites: sitios grandes
+      custom_ads: Usa sus propias progandas
+      custom_analytics: Estasticas de trafico
+      custom_domain: Dominio propio
+      custom_themes: usa nuestros temas pre-hechos
+      custom_ui: Interfaz personalizable
+      free_plan: plan gratis
+      getting_popular: sitios populares
+      huge_sites: sitios enormes
+      month: mes
+      page_views: para sitios privados/pequeños
+      plans: planes
+      private_site: Activar acceso privado/publico
+      small_private: sitios chicos/privados
+      start_monetizing: empiezan a comercializar
+      support: Soporte
+      title: Planes de suscripcion y precios
+      unlimited: Trafico ilimitado todos los meses
+      we_offer: ofrecemos tambien un
+      web_support: soporte  web
+      with_unlimited: con trafico ilimitado y sin propagandas ni dominio personalizados.

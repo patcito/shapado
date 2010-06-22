@@ -1,0 +1,20 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  comments: 
+    create: 
+      flash_notice: Gratias pro tu commento
+    edit: 
+      title: Modificar commento
+    shared: 
+      add_comment: Adder commento...
+      comment_submit: Commentar
+      reply: Responder
+      said: diceva
+    update: 
+      flash_notice: Le commento ha essite actualisate con successo.
+  models: 
+    comment: Commento
+    comments: Commentos

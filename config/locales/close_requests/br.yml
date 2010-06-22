@@ -1,0 +1,22 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  close_requests: 
+    form: 
+      dupe: Doublenn
+      no_question: N'eo ket ur goulenn
+      not_relevant: Ne glot ket
+      spam: strob
+    index: 
+      title: Roll ar rekedoù serriñ
+    model: 
+      attributes: 
+        comment: Evezhiadenn
+        reason: Abeg
+        user: Implijer
+      messages: 
+        already_requested: Ur goulenn serriñ oc'h eus graet dija evit ar goulenn-mañ
+      name: Reked serriñ
+      prural_name: Rekedoù serriñ

@@ -1,0 +1,16 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  ads: 
+    ad_links: Ouzhpennañ ur c'hemenn nevez {{type}}
+    create: 
+      success: Krouet eo bet ar c'hemenn.
+    index: 
+      add_adbard: Ouzhpennañ ur c'hemenn adbard nevez
+      add_adsense: Ouzhpennañ ur c'hemenn Google AdSense nevez
+      title: Kemennoù
+    name: "anv :"
+    position: "lec'hiadur :"
+    title: Ouzhpennañ ur c'hemenn nevez {{type}}

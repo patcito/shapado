@@ -1,0 +1,10 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: O deus ezhomm bezañ kadarnaet
+        title: Kas posteloù kadarnaat

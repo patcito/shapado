@@ -1,0 +1,22 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Wizardist
+be-tarask: 
+  wiki: 
+    actions: 
+      all_history: Назад да гісторыі
+      back_to_question: Назад да пытаньня
+      revert: Адкаціць да гэтай вэрсіі
+      show_diff: Параўнаць выбраныя вэрсіі
+    diff: 
+      title: Розьніца паміж {{prev}} і {{curr}}
+    history: 
+      current_version: Цяперашняя вэрсія
+      previous_versions: Папярэднія вэрсіі
+      title: Гісторыя ({{count}})
+      version: Вэрсія
+      version_summary: Кароткае апісаньне вэрсіі
+    model: 
+      attributes: 
+        message: Кароткае апісаньне

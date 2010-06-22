@@ -1,0 +1,33 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: hojas de estilo
+        js: javascript
+    models: 
+      page: página
+      pages: páginas
+  pages: 
+    actions: 
+      create_page: Crear una nueva página
+      edit_page: Editar página
+      title: Acciones
+    create: 
+      success: La página ha sido creada con exito.
+    edit: 
+      title: Editando página
+    form: 
+      language_tip: idioma de la página
+      title_tip: "Titulo de la página, utiliza eso para hacer una referencia a esta página. Por ejemplo: [[FAQ|leer este faq]]"
+    index: 
+      create_page: crear una nueva página
+      title: Lista de páginas
+      written_in: escrita en {{language}}
+    new: 
+      title: nueva página
+    title: fixme
+    update: 
+      success: La página ha sido actualizada con exito.

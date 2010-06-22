@@ -1,0 +1,44 @@
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Jean-Frédéric
+# Author: Peter17
+fr: 
+  notifier: 
+    earned_badge: 
+      message1: Vous avez gagné un %{badge} sur %{app}
+      message2: "Description du badge :"
+      message3: Vous pouvez voir tous vos badges sur votre %{user_page}
+    favorited: 
+      message1: "%{user} a ajouté votre question à ses favoris sur %{group}"
+      message2: "Le texte de votre question :"
+      message3: "Vous pouvez le voir ici :"
+    follow: 
+      message1: "%{user} suit désormais vos questions et réponses sur %{app}"
+      message2: Vous pouvez le suivre en retour en cliquant sur le bouton « Suivre » de sa %{user_page}
+    give_advice: 
+      message1: "%{user} vient de poser une question à laquelle vous pourriez savoir répondre :"
+      message2: "Pour répondre, écrivez simplement votre message ici :"
+      message3: "Ou, si vous connaissez quelqu’un capable de répondre, envoyez-lui ce lien :"
+      message4: Si nous ne recevons pas de réponse rapide de votre part, nous demanderons à quelqu’un d’autre. Vous pouvez toujours répondre quand vous le souhaitez.
+    global: 
+      hi: Bonjour %{user},
+      user_page: page utilisateur
+    new_answer: 
+      message: "%{user} a accepté %{new_answer} à la question %{question}"
+    new_comment: 
+      message: "%{user} a commenté %{new_comment} à la question %{question}"
+    new_feedback: 
+      message1: L’utilisateur %{user} <%{email}> a envoyé un retour
+      message2: Un utilisateur anonyme a envoyé un retour depuis l’adresse IP %{ip}
+      message3: "Adresse électronique : %{email}"
+      message4: "Objet : %{objet}"
+    report: 
+      message1: Rapport pour le groupe %{group.name}
+      message2: Depuis %{since}
+      message3: "%{questions} questions ont été posées"
+      message4: "%{answers} réponses ont été rédigées"
+      message5: "%{votes} votes ont été exprimés"
+      message6: "%{badges} badges ont été décernés"
+      message7: Le compte a %{users} utilisateurs.
+      message8: Visitez votre groupe sur %{link}

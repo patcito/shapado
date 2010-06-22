@@ -1,0 +1,16 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  ads: 
+    ad_links: Добавить новое рекламное объявление {{type}}
+    create: 
+      success: Рекламное объявление успешно создано.
+    index: 
+      add_adbard: Добавить новое рекламное объявление adbard
+      add_adsense: Добавить новое рекламное объявление Google AdSense
+      title: Реклама
+    name: "Имя:"
+    position: "Расположение:"
+    title: Добавление нового рекламного объявления {{type}}

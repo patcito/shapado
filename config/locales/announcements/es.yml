@@ -1,0 +1,19 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: ends at
+        message: message
+        only_anonymous: only for anonymous users
+        starts_at: starts at
+  announcements: 
+    actions: 
+      delete: remove
+      title: actions
+    create: 
+      success: announcement was successfully created.
+    index: 
+      title: announcements

@@ -1,0 +1,87 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Crazymadlover
+es: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activado en
+        activation_code: código de activación
+        age: Edad
+        asked_by: asked by
+        avatar: imagen del perfil
+        birthday: Fecha de Cumpleaños
+        created_at: registrado
+        current_password: contraseña actual
+        email: correo electrónico
+        fullname: nombre completo
+        hide_country: No mostrar mi pais
+        language: idioma
+        language_filter: filtro por idioma
+        last_logged_at: visto
+        login: nombre de usuario
+        name: nombre real
+        password: contraseña
+        password_confirmation: confirmación de contraseña
+        preferred_languages: escoja los idiomas que conozca
+        preferred_tags: etiquetas preferidas
+        reputation: reputación
+        timezone: zona horaria
+        updated_at: actualizado en
+        website: Sitio Web
+    models: 
+      user: usuario
+      users: usuarios
+  users: 
+    actions: 
+      edit_others_posts: editar preguntas o respuestas de otros usuarios
+      edit_wiki_post: editar wikis
+      flag: reportar como abuso
+      retag_others_questions: cambiar las etiquetas de las preguntas de otros usuarios
+      vote_down: votar negativo
+      vote_to_close_any_question: request closing any question
+      vote_to_close_own_question: request closing own question
+      vote_up: votar positivo
+    create: 
+      flash_error: no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba).
+      flash_notice: gracias por registrarse!
+    edit: 
+      enable_twitter: Habilita tus cuentas twitter y facebook
+      submit: guardar
+      title: configuración
+    follow: 
+      flash_notice: El usuario {{user}} fue añadido a su lista de amigos
+    form: 
+      activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
+      avatar_tip: cambia tu imagen del perfil usando gravatar
+      give_advice_notification: obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
+      information: información
+      new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
+      notifications: notificaciones
+      reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
+    index: 
+      empty: este grupo no tiene miembros, participe para unirse a este grupo.
+      filter: Busca usuarios
+      name: por nombre de usuario
+      name_tooltip: usuarios ordenados alfabéticamente
+      newest: recientes
+      newest_tooltip: usuarios que se acaban de unir
+      oldest: antiguos
+      oldest_tooltip: usuarios que se unieron primero
+      reputation: reputación
+      reputation_tooltip: usuarios ordenados por reputación
+      title: todos los usuarios
+    messages: 
+      errors: 
+        reputation_needed: necesitas una reputación de {{min_reputation}} para {{action}}
+    new: 
+      submit: registrar
+      title: registrar un nuevo usuario
+    show: 
+      follow: seguir
+      title: Usuario {user}
+      unfollow: dejar de seguir
+      views: vistas
+    unfollow: 
+      flash_notice: El usuario {{user}} fue removido de su lista de amigos

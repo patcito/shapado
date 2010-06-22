@@ -1,0 +1,23 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Has ganado una insignia en {{group}}!
+      favorited: 
+        subject: "{{login}} puso tu pregunta como favorita!"
+      follow: 
+        subject: "{{login}} ahora te esta siguiendo en {{app}}"
+      give_advice: 
+        friend_subject: "tu amigo necesita ayuda: {{question_title}}"
+        subject: "necesitamos tu ayuda: {{question_title}}"
+      new_answer: 
+        subject_friend: tu amigo {{login}} respondio la pregunta {{title}}
+        subject_other: "{{login}} respondio la pregunta {{title}}"
+        subject_owner: "{{login}} respondio su pregunta {{title}}"
+      new_comment: 
+        subject: "{{login}} comento en {{group}}"
+      report: 
+        subject: reporte para el grupo {{group}} de {{app}}

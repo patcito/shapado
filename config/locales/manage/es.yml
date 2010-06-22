@@ -1,0 +1,41 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Crazymadlover
+es: 
+  admin: 
+    manage: 
+      content: 
+        footer: pie de página
+        head: cabecera
+        question_help: question help
+        question_prompt: question prompt
+        title: custom content
+        top_bar: barra superior
+        top_bar_tip: entre un vinculo por linea
+      properties: 
+        constrains: 
+          reputation_constrains_description: Este formulario te permite configurar cuantos puntos de reputación necesitan los usuarios para efectuar una acción determinada
+          reputation_constrains_subtitle: lista de las restricciónes de repotación por acción
+          title: restricciónes
+        domain: 
+          description: "Puedes conectar tu grupo con tu propio dominio, asi se hace:"
+          instruction1: Primero tienes que conectarte en tu provedor de dominio (la pagina donde has comprado tu dominio como {{subdomain}}.com).
+          instruction2: Ahi, tienes que ir a la seccion DNS y crear un CNAME.
+          instruction3: Dale un nombre como 'www' a tu CNAME, puede ser cualquier cosa.
+          instruction4: "Ahora en el campo 'host' o 'destinacion', ingresa tu dominio shapado actual: {{domain}}."
+          instruction5: Despues de un par de horas, tu dominio www.{{subdomain}} deberia apuntar a {{appdomain}}.
+          instruction6: Si es que apunta bien, ahora regresa aqui y entra tu nombre de dominio www.{{subdomain}} en el campo de texto aqui a bajo y presiona el boton para actualizar. Si tienes preguntas, puedes hablarnos en el {{chat_url}} o en el foro de soporte
+          title: configura tu dominio
+          warning: Estas seguro de querer cambiar tu dominio?
+        general: 
+          title: propiedades del grupo
+        rewards: 
+          reputation_rewards_description: este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
+          reputation_rewards_subtitle: lista de los premios de reputación
+          title: premios
+        share: 
+          title: compartir
+        theme: 
+          logo_legend: Subir un logo para tu grupo, debe ser menor que 2mb.
+          title: configure el tema del grupo

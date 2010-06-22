@@ -1,0 +1,129 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  activerecord: 
+    models: 
+      badge: Бедж
+      badges: Беджи
+  badges: 
+    index: 
+      description: Все беджи, которые можно заработать. Делитесь своими знаниями — получайте беджи.
+      title: беджи
+    shared: 
+      addict: 
+        description: Посещал сайт каждый день 20 дней подряд
+      autobiographer: 
+        description: Заполнил все поля пользовательского профиля
+        name: Автобиограф
+      celebrity: 
+        description: Число следящих составило более 100
+        name: Знаменитость
+      citizen_patrol: 
+        description: Первый раз отметил пост
+        name: Патрулирующий
+      civic_duty: 
+        description: Проголосовал 300 раз
+        name: Гражданский долг
+      cleanup: 
+        description: Первый откат
+        name: Очистка
+      commentator: 
+        description: Оставил 10 комментариев
+      critic: 
+        description: Первый раз проголосовал «против»
+      disciplined: 
+        description: Удалил собственный пост с оценкой 3 или выше
+        name: Дисциплинированный
+      editor: 
+        description: Первый раз отредактировал пост
+      effort_medal: 
+        description: Получил 100 положительных голосов
+      enlightened: 
+        description: Первый ответ был принят хотя бы 10 голосами «за»
+        name: Просвещённый
+      famous_question: 
+        description: Задал вопрос с 10000 просмотров
+      fanatic: 
+        description: Посещал сайт каждый день 100 дней подряд
+      favorite_question: 
+        description: Вопрос добавили в избранное 25 пользователей
+      friendly: 
+        description: Впервые начал за кем-то следить
+        name: Дружественный
+      good_answer: 
+        description: Написал ответ, получивший в среднем больше 25 голосов
+      good_question: 
+        description: Написал вопрос, получивший в среднем больше 25 голосов
+      great_answer: 
+        description: За ответ проголосовали «за» 100 раз
+        name: Отличный ответ
+      great_question: 
+        description: Задал вопрос со 100 голосами «за»
+        name: Отличный вопрос
+      guru: 
+        description: Дал решение вопроса со средним числом голосов более 40
+      inquirer: 
+        description: Задал первый вопрос
+      interesting_person: 
+        description: Число следящих составило более 10
+        name: Интересная личность
+      merit_medal: 
+        description: Получил 200 голосов «за»
+      necromancer: 
+        description: Ответил более чем 60 дней спустя  на вопрос  по крайней мере с 5 голосами
+        name: Некромант
+      nice_answer: 
+        description: Отправил ответ с 10 голосами «за»
+        name: Хороший ответ
+      nice_question: 
+        description: За вопрос проголосовали 10 раз «за»
+        name: Хороший вопрос
+      notable_question: 
+        description: Задал вопрос с 2500 просмотров
+      organizer: 
+        description: Первая смена тегов
+        name: Организатор
+      peer_pressure: 
+        description: Удалил собственный пост с оценкой -3 или ниже
+        name: Под давлением со стороны
+      pioneer: 
+        description: Зарегистрировался одним из первых
+      popstar: 
+        description: 500 голосов «за» и до 10 голосов «против»
+      popular_person: 
+        description: Число следящих составило более 50
+        name: Популярная личность
+      popular_question: 
+        description: Задал вопрос с 1000 просмотров
+      rockstar: 
+        description: 1000 голосов «за» и до 10 голосов «против»
+      scholar: 
+        description: Первый раз принял ответ на собственный вопрос
+        name: Эрудит
+      self-learner: 
+        description: Ответил на собственный вопрос хотя бы с тремя голосами «за»
+        name: Самообучающийся
+      service_medal: 
+        description: 300 голосов «за»
+      shapado: 
+        description: Посещал сайт каждый день 8 дней подряд
+      stellar_question: 
+        description: 100 пользователей добавили вопрос в избранное
+        name: Звёздный вопрос
+      student: 
+        description: Задал первый вопрос хотя бы с одним голосом «за»
+      supporter: 
+        description: Первый раз проголосовал «за»
+      troubleshooter: 
+        description: Ответил первый раз
+      tutor: 
+        description: Дал решение вопроса со средним числом голосов более 2
+    show: 
+      description: "раз(а) бедж вручён пользователям. Недавно награждены:"
+      earned: заработано
+      for_tag_bronze: 200 голосов в теге {{tag}}
+      for_tag_gold: 1000 голосов в теге {{tag}}
+      for_tag_silver: 400 голосов в теге {{tag}}
+      title: Бедж {{type}}

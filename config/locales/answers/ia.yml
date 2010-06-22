@@ -1,0 +1,29 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Texto
+        created_at: Respondite
+        link: Ligamine
+    models: 
+      answer: Responsa
+      answers: Responsas
+  answers: 
+    create: 
+      flash_error: "Alique vadeva mal addente tu responsa. \n  Memora que: \n - Responsas vacue e repetite non es permittite.\n - Tu debe attender 20 secundas ante de publicar un altere responsa. \n - Tu pote solmente publicar un responsa per question."
+      flash_notice: Gratias!
+    edit: 
+      title: Modification de responsa
+    form: 
+      answer_label: Responder al question
+      comment_label: Commentar iste responsa
+      comment_submit: Commentar
+      submit: Responsa
+    revert: 
+      title: Reverter responsa
+    update: 
+      flash_notice: Le responsa ha essite actualisate con successo.

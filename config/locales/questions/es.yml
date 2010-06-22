@@ -1,0 +1,135 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: respuestas
+        asked_by: preguntado por
+        body: contenido
+        closed: cerrada
+        created_at: preguntado
+        language: idioma
+        tags: etiquetas
+        title: titulo
+        updated_at: actualizado
+        updated_by: actualizado por
+        views: visitas
+        votes: votos
+    models: 
+      question: pregunta
+      questions: preguntas
+  questions: 
+    answer: 
+      add_comment: comentar esta respuesta...
+      flag: reportar abuso
+      pick_answer: escoger como solución
+      unset_answer: ¿quitar como solución?
+    create: 
+      flash_notice: la pregunta fue creada exitosamente.
+    edit: 
+      title: editar pregunta
+    flag: 
+      title: reportar abuso en esta pregunta
+    form: 
+      adult_content: esta pregunta tiene contenido para adultos
+      body_tip: ¿cual es tu pregunta? por favor se descriptivo.
+      language_tip: selecciona el idioma de tu pregunta.
+      tags_tip: usa etiquetas para añadir más información sobre tu pregunta.
+    index: 
+      active: activas
+      active_tooltip: preguntas que se han actualizado recientemente
+      ask_question: pregunte
+      empty: nadie ha preguntado aun, ¡se el primero!
+      help_to_answer: ayudanos a responder
+      hot: calientes
+      hot_tooltip: preguntas con más actividad en los ultimos 5 dias
+      newest: recientes
+      newest_tooltip: preguntas más recientes
+      oldest: antiguas
+      title: todas las preguntas
+      unanswered_questions: preguntas sin contestar
+      votes: votos
+      votes_tooltip: preguntas más votadas
+    model: 
+      messages: 
+        empty_tags: Disculpa, debes usar al menos una etiqueta.
+        title_too_long: El titulo es demasiado largo. No puede tener mas de 100 letras
+        too_many_tags: Disculpa, solo puedes entrar 9 etiquetas maximo.
+        too_short: demasiado corto. Por favor, usa mas palabras que {{count}} para ser mas especifico.
+    move: 
+      group_label: "mover la pregunta a el group con slug:"
+      submit: mover!
+      title: "mover la pregunta: {{title}}"
+    move_to: 
+      group_dont_exists: el group {{group}} no existe
+      success: pegunta movida a {{group}}
+    new: 
+      how_to_ask: como preguntar
+      title: pregunte
+    question: 
+      accepted_tooltip: Esta pregunta ha sido contestada
+    retag: 
+      title: re-etiquetar
+    retag_form: 
+      cancel: cancelar
+      submit: actualizar las etiquetas!
+      title: Actualizar las etiquetas
+    retag_to: 
+      failure: Disculpa, las etiquetas no han podido ser actualizadas.
+      success: Las etiquetas han sido actualizados con exito.
+    revert: 
+      title: revertir la pregunta
+    shared: 
+      flag: reportar abuso
+    show: 
+      accepted_tooltip: una de las respuestas fue aceptada como correcta
+      another_answers: otras respuestas
+      answers: respuestas
+      answers_title: 
+        one: "{{count}} respuesta"
+        other: "{{count}} respuestas"
+      asked_on: preguntado en
+      ban: ban
+      close: cerrar
+      close_reason: "la pregunta ha sido cerrada por la siguiente razón:"
+      favorite_tooltip: agregar esta pregunta a tus favoritas
+      flag: reportar abuso
+      flagged_as: reportado como
+      flags: reportado como
+      last_activity: última actividad
+      related_questions: preguntas relacionadas
+      request_closing: pedir cierre
+      request_closing_details: pide cerrar esta pregunta
+      retag: re-etiquetar
+      retract_request: ya has hecho una petición, deseas retractarla?
+      share: compartir esta pregunta en
+      share_on: compartir esta pregunta en {{site}}
+      solution: solución
+      to_answer_question: para responder esta pregunta
+      unauthenticated_retag: se necesita una cuenta para re-etiquetar
+      unfavorite_tooltip: remover esta pregunta de tus favoritas
+      unwatch_tooltip: dejar de seguir esta pregunta
+      viewed: visto
+      watch_tooltip: seguir esta pregunta
+    solve: 
+      flash_notice: la pregunta ha sido resuelta
+    tags: 
+      filter: buscar tags
+      title: etiquetas
+      tooltip: muestra las preguntas etiquetadas con {{tag}}
+    unanswered: 
+      empty: este grupo no tiene preguntas no contestar.
+      expert: expertos
+      my_tags: mis etiquetas
+      tags: etiquetas sin respuesta
+      title: preguntas no contestadas
+    unsolve: 
+      flash_notice: la pregunta ahora no esta resuelta.
+    unwatch: 
+      success: ya no recibirá usted notificaciones via email por cada respuesta a esta pregunta.
+    update: 
+      flash_notice: la pregunta fue actualizada exitosamente.
+    watch: 
+      success: ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta.

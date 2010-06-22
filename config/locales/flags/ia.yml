@@ -1,0 +1,21 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Motivo
+    models: 
+      flag: Reporto
+      flags: Reportos
+  flags: 
+    create: 
+      flash_error: Tu non pote reportar isto
+      flash_notice: Gratias pro tu reporto
+    form: 
+      attention: Require attention de un moderator
+      label: Per favor reporta con cautela
+      offensive: Discurso offensive, abusive o odiose
+      spam: Spam

@@ -1,0 +1,31 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  close_requests: 
+    create: 
+      flash_notice: Requesta de clausura create con successo.
+    destroy: 
+      flash_notice: Requesta de clausura delite con successo.
+    form: 
+      close_with_reason: Clauder iste question usante iste motivo
+      dupe: Duplicato
+      no_question: Non es un question
+      not_relevant: Non relevante
+      ot: Foras del thema
+      request_closing_details: Requestar a clauder iste question
+      spam: Spam
+    index: 
+      title: Lista de requestas de clausura
+    model: 
+      attributes: 
+        comment: Commento
+        reason: Motivo
+        user: Usator
+      messages: 
+        already_requested: Tu ha jam requestate a clauder iste question.
+      name: Requesta de clausura
+      prural_name: Requestas de clausura
+    update: 
+      flash_notice: Requesta de clausura actualisate con successo.

@@ -1,0 +1,43 @@
+# Messages for Portuguese (Português)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Hamilton Abreu
+pt-PT: 
+  notifier: 
+    earned_badge: 
+      message1: Recebeu um distintivo %{badge} na aplicação %{app}
+      message2: "Descrição do distintivo:"
+      message3: Pode ver todos os seus distintivos na sua %{user_page}
+    favorited: 
+      message1: "%{user} adicionou a sua pergunta como favorita no grupo %{group}"
+      message2: "O texto da sua pergunta:"
+      message3: "Pode ver aqui:"
+    follow: 
+      message1: "%{user} está agora a seguir as suas perguntas e respostas na %{app}"
+      message2: Pode seguir o utilizador clicando o botão "Seguir" na %{user_page} do próprio
+    give_advice: 
+      message1: "%{user} acaba de fazer uma pergunta a que talvez saiba responder:"
+      message2: "Para dar uma resposta, responda a esta mensagem aqui: \\"
+      message3: "Ou, se conhece alguém que talvez possa responder, envie-lhe este link:"
+      message4: Se não recebermos uma resposta sua rapidamente, perguntaremos a outra pessoa. Continuará a poder responder quando quiser.
+    global: 
+      hi: Olá %{user},
+      user_page: página de utilizador
+    new_answer: 
+      message: "%{user} aceitou %{new_answer} à pergunta %{question}"
+    new_comment: 
+      message: "%{user} comentou %{new_comment} na pergunta %{question}"
+    new_feedback: 
+      message1: O utilizador %{user} <%{email}> enviou um comentário
+      message2: Utilizador anónimo enviou um comentário do endereço IP %{ip}
+      message3: "Correio electrónico: %{email}"
+      message4: "Assunto: %{subject}"
+    report: 
+      message1: Relatório do grupo %{group.name}
+      message2: Desde %{since}
+      message3: Foram criadas %{questions} perguntas
+      message4: Foram criadas %{answers} respostas
+      message5: Foram atribuídos %{votes} votos
+      message6: Foram atribuídos %{badges} distintivos
+      message7: A conta tem %{users} utilizadores.
+      message8: Visite o nosso grupo em %{link}

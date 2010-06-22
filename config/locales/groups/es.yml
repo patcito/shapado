@@ -1,0 +1,73 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Crazymadlover
+# Author: Diego Grez
+es: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: etiquetas por omision
+        description: descripción
+        domain: dominio
+        fb_button: Activar el boton Like de Facebook (no muy amigable para la privacidad)
+        forum: permitir más de una respuesta por usuario
+        group_created_by: created by
+        language: idioma
+        legend: leyenda
+        logo: logo
+        may_contain_adult_content: este sitio podria tener contenido para adultos
+        name: nombre
+        openid_only: solo las personas que usan openid pueden entrar a este sitio
+        owner: esta grupo fue creado por {{login}}
+        registered_only: solo las personas registradas pueden entrar a este sitio
+        state: estado
+        subdomain: url
+        wysiwyg_editor: habilitar un editor mas amigable para el usuario
+    models: 
+      default_tags_message: no se puede tener mas de 10 tags por defecto.
+      group: grupo
+      groups: grupos
+  groups: 
+    create: 
+      flash_notice: Tu grupo ah sido creado exitosamente, ahora puedes empezar a configurarlo.
+    form: 
+      access: Configuración de Acceso
+      analytics_engine: Motor de análisis
+      analytics_legend: El grupo podrá utilizar su propio código de seguimiento
+      any_language: cualquiera
+      custom_analytics: Permitir análisis personalizados
+      custom_html: Permitir HTML personalizado
+      custom_js: Permitir javascript personalizado
+      default_tags_legend: separate tags by commas. only 10 default tags allowed.
+      description_legend: tiene 4000 caracteres para describir el grupo.
+      isolate_group: Aislar el grupo de otros
+      legend_legend: esto será usado en el titulo de la web, tienes 40 caracteres
+      logo_legend: you can upload the group logo. the maximum file size is 2mb.
+      members_only: Solamente los miembros del grupo serán capaces de acceder a este grupo
+      website_analytics_id: ID de análisis de sitio web
+    group: 
+      about: acerca de
+      accept_group: aceptar este grupo
+      allow_ads: permitir propaganda
+      close: cerrar
+      close_group: cerrar este grupo
+      disallow_ads: prohibir propaganda
+    index: 
+      actives: activos
+      filter: buscar grupos
+      most_active: más activos
+      name: nombre
+      pendings: pendientes
+      request_group: pedir un nuevo grupo
+      title: grupos
+    new: 
+      title: crear su grupo
+    show: 
+      accept_group: aceptar este grupo
+      accept_group_with_custom_ads: aceptar grupo y permitir anuncios personalizados
+      close_group: cerrar este grupo
+      group_awaiting_acceptance: este grupo esta pendiente de la aceptación de un moderador.
+      group_closed: este grupo ha sido cerrado.
+      title: sobre {{name}}
+      visit_group: visitar este grupo

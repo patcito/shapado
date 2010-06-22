@@ -1,0 +1,12 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    models: 
+      favorite: favorite
+      favorites: favorites
+  favorites: 
+    create: 
+      success: la pregunta ha sido añadida a tus favoritas
+      unauthenticated: necesitas tener una cuenta para agregar favoritos

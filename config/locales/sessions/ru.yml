@@ -1,0 +1,23 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Eleferen
+# Author: Lockal
+ru: 
+  sessions: 
+    create: 
+      flash_error: Невозможно войти в систему как «{{login}}»
+      flash_notice: Вы успешно вошли
+    destroy: 
+      flash_notice: Вы вышли из системы.
+    new: 
+      log_in: Войти
+      not_registered: Ещё не зарегистрированы?
+      registered: Уже зарегистрированы?
+      remember_me: Запомнить меня
+      sign_in: Войти
+      signup: Зарегистрироваться
+      with_authentication: Войти через нашу систему аутентификации
+      with_facebook: Войти с помощью Facebook
+      with_openid: Войти с помощью OpenID
+      with_twitter: Войти с помощью Twitter

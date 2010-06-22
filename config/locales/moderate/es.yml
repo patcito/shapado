@@ -1,0 +1,15 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  admin: 
+    moderate: 
+      index: 
+        all: todas
+        ban: ban
+        banned: preguntas baneadas
+        content: contenido
+        flagged: preguntas reportadas
+        item_title: titulo
+        need_tags: necesita etiquetas
+        title: moderar

@@ -1,0 +1,130 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+# Author: McDutchie
+de: 
+  activerecord: 
+    models: 
+      badge: Abzeichen
+      badges: Abzeichen
+  badges: 
+    index: 
+      description: Alle Abzeichen die man erhalten kann. Teile Dein Wissen und erhalte dafür Abzeichen.
+      title: Abzeichen
+    shared: 
+      addict: 
+        description: Hat die Website an zwanzig aufeinander folgenden Tagen besucht
+      autobiographer: 
+        description: Alle Felder des Nutzerprofils wurden ausgefüllt
+        name: Autobiograph
+      celebrity: 
+        description: Hat mehr als 100 Anhänger
+        name: Berühmtheit
+      citizen_patrol: 
+        description: Erster markierter Beitrag
+        name: Bürgerwehr
+      civic_duty: 
+        description: Hat 300-mal bewertet
+        name: Bürgerpflicht
+      cleanup: 
+        description: Erstmalig zurückgesetzt
+        name: Bereinigung
+      commentator: 
+        description: Hat zehn Kommentare verfasst
+      critic: 
+        description: erstmalig negativ bewertet
+      disciplined: 
+        description: Eigenen Beitrag mit einer Punktzahl von 3 und höher gelöscht
+        name: Verwarnt
+      editor: 
+        description: Erster bearbeiteter Beitrag
+      effort_medal: 
+        description: Hat 100 positive Bewertungen erhalten
+      enlightened: 
+        description: Erste Antwort wurde mit mindestens 10 positiven Bewertungen angenommen
+        name: beeindruckend
+      famous_question: 
+        description: Hat eine Frage mit über 10000 Aufrufen gestellt
+      fanatic: 
+        description: Hat die Website an 100 aufeinander folgenden Tagen besucht
+      favorite_question: 
+        description: Frage wurde von 25 Nutzern auf den Merkzettel gesetzt
+      friendly: 
+        description: Folgt jemandem zum ersten Mal
+        name: Freundlich
+      good_answer: 
+        description: Gab eine Antwort, die durchschnittlich mehr als 25 Bewertungen erhalten hat
+      good_question: 
+        description: Hatte eine Frage, die durchschnittlich mehr als 25 Bewertungen erhalten hat
+      great_answer: 
+        description: Antwort wurde bis zu 100-mal positiv bewertet
+        name: Großartige Antwort
+      great_question: 
+        description: Frage wurde 100-mal positiv bewertet
+        name: Großartige Frage
+      guru: 
+        description: Gab eine Antwort, die durchschnittlich mehr als 40 Bewertungen erhalten hat
+      inquirer: 
+        description: Erstmalig gefragt
+      interesting_person: 
+        description: Hat mehr als 10 Anhänger
+        name: Interessante Person
+      merit_medal: 
+        description: Hat 200 positive Bewertungen erhalten
+      necromancer: 
+        description: Gab mehr als 60 Tage später eine Antwort, die mindestens 5 Bewertungen erhalten hat
+        name: Zauberer
+      nice_answer: 
+        description: Antwort wurde bis zu 10-mal positiv bewertet
+        name: Gute Antwort
+      nice_question: 
+        description: Frage wurde bis zu 10-mal positiv bewertet
+        name: Gute Frage
+      notable_question: 
+        description: Hat eine Frage mit über 250 Aufrufen gestellt
+      organizer: 
+        description: Erste Neubenennung
+        name: Organisator
+      peer_pressure: 
+        description: Eigenen Beitrag mit einer Punktzahl von -3 und niedriger gelöscht
+        name: Gruppenzwang
+      pioneer: 
+        description: Sei unter den ersten Nutzern, die sich anmelden
+      popstar: 
+        description: 500 positive und maximal 10 negative Bewertungen
+      popular_person: 
+        description: Hat mehr als 50 Anhänger
+        name: Beliebte Person
+      popular_question: 
+        description: Hat eine Frage mit über 1000 Aufrufen gestellt
+      rockstar: 
+        description: 1000 positive und maximal 10 negative Bewertungen
+      scholar: 
+        description: Erste akzeptierte Antwort auf Deine eigene Frage
+        name: Gelehrter
+      self-learner: 
+        description: Hat für die Antwort auf Deine eigenen Frage mindestens 3 positive Bewertungen erhalten
+        name: Autodidakt
+      service_medal: 
+        description: Hat 300 positive Bewertungen erhalten
+      shapado: 
+        description: Hat die Website an acht aufeinander folgenden Tagen besucht
+      stellar_question: 
+        description: Frage wurde von 100 Nutzern auf den Merkzettel gesetzt
+        name: Ausgezeichnete Frage
+      student: 
+        description: Hat eine erste Frage mit mindestens einer positiven Bewertung gestellt
+      supporter: 
+        description: erstmalig positiv bewertet
+      troubleshooter: 
+        description: Hat zum ersten Mal geantwortet
+      tutor: 
+        description: Gab eine Antwort, die durchschnittlich mehr als 2 Bewertungen erhalten hat
+    show: 
+      description: "Nutzer, die dieses Abzeichen erhalten haben. Kürzlich vergeben an:"
+      earned: erhalten
+      for_tag_bronze: 200 Bewertungen in Kategorie {{tag}}
+      for_tag_gold: 1000 Bewertungen in Kategorie {{tag}}
+      for_tag_silver: 400 Bewertungen in Kategorie {{tag}}
+      title: Abzeichen {{type}}

@@ -1,0 +1,12 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    models: 
+      favorite: favorite
+      favorites: favorites
+  unfavorites: 
+    create: 
+      success: la pregunta ha sido removida de tus favoritas
+      unauthenticated: necesitas tener una cuenta para remover favoritos

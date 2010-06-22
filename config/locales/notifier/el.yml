@@ -1,0 +1,37 @@
+# Messages for Greek (Ελληνικά)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Patcito
+el: 
+  notifier: 
+    earned_badge: 
+      message1: Έχετε κερδίσει τον τίτλο %{badge} στο %{app}
+      message2: "Περιγραφή τίτλου:"
+      message3: Μπορείτε να δείτε όλους τους τίτλους σας στην %{user_page}
+    favorited: 
+      message1: Ο/η %{user} προσέθεσε την ερώτησή σας ως αγαπημένη στο %{group}
+      message2: "Το κείμενο της ερώτησής σας:"
+    follow: 
+      message1: Ο/η %{user} παρακολουθεί τις ερωτήσεις και απαντήσεις σας στο %{app}
+      message2: Μπορείτε να τον ακολουθήσετε κι εσείς πατώντας στο κουμπί "ακολουθήστε" στην %{user_page}
+    give_advice: 
+      message1: "Ο/η %{user} μόλις έκανε μια ερώτηση που μπορεί να είστε σε θέση να απαντήσετε:"
+      message2: "Για να απαντήσετε, απλώς απαντήστε σ' αυτό το μήνυμα εδώ:"
+      message3: "Εναλλακτικά, αν ξέρετε κάποιον που είναι σε θέση να απαντήσει, στείλτε του αυτό τον σύνδεσμο παραπομπής:"
+      message4: Αν δεν λάβουμε απάντηση από εσάς σύντομα θα ρωτήσουμε κάποιον άλλο, εσείς μπορείτε να απαντήσετε ακόμα όποτε θέλετε.
+    global: 
+      hi: Γεια σας %{user},
+      user_page: σελίδα του
+    new_answer: 
+      message: Ο/η %{user} αποδέχτηκε την απάντηση %{new_answer} στην ερώτηση %{question}
+    new_comment: 
+      message: Ο/η %{user} σχολίασε %{new_comment} στην ερώτηση %{question}
+    report: 
+      message1: αναφορά για την ομάδα %{group.name}
+      message2: από %{since}
+      message3: ερωτήθηκαν %{questions} ερωτήσεις
+      message4: δόθηκαν %{answers} απαντήσεις
+      message5: "δόθηκαν #%{votes} ψήφοι"
+      message6: χορηγήθηκαν %{badges} τίτλοι
+      message7: Η ομάδα έχει %{users} χρήστες.
+      message8: Επισκεφθείτε την ομάδα στο %{link}

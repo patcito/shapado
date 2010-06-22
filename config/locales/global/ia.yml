@@ -1,0 +1,60 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  actions: 
+    closed: claudite
+    created: create
+    deleted: delite
+    updated: actualisate
+  feeds: 
+    feed: Syndication
+    post_new_questions: Publicar nove questiones in
+    question: Subscriber a iste question
+    questions: Subscriber a tote le questiones
+    share_on_twitter: Twitter, Facebook e plus...
+    tag: Subscriber al etiquetta
+    user: Subscriber a questiones de usatores
+  global: 
+    by: per
+    current: Actual
+    from: ex {{site}}
+    group_not_found: Le pagina {{url}} non existe
+    or: o
+    permission_denied: Permission refusate
+    please_login: Per favor aperi un session
+    preview: Previsualisar
+    previous: Precedente
+    share: partir
+  languages: 
+    any: Qualcunque
+    user: Mi linguas preferite
+  messages: 
+    success: Le {{model}} ha essite {{action}} con successo.
+  models: 
+    question: Le question
+  number: 
+    x_time: 
+      one: "{{count}} vice"
+      other: "{{count}} vices"
+      zero: Nunquam
+  scaffold: 
+    add: Adder
+    back: Retro
+    cancel: Cancellar
+    close: Clauder
+    create: Crear
+    destroy: Deler
+    details: Detalios
+    edit: Modificar
+    more: Plus...
+    new: Adder nove {{model}}
+    save: Salveguardar
+    send: Inviar
+    show: Monstrar
+    sure: Es tu secur de voler deler iste {{model}}?
+    update: Actualisar
+  time: 
+    ago: "{{time}} retro"
+    today: hodie

@@ -1,0 +1,21 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  wiki: 
+    actions: 
+      all_history: regresar al historial
+      back_to_question: volver a la pregunta
+      revert: revertir a esta versión
+      show_diff: comparar versiones seleccionadas
+    diff: 
+      title: diferencias entre las versiones {{prev}} y {{curr}}
+    history: 
+      current_version: versión actual
+      previous_versions: versiónes antériores
+      title: historia ({{count}})
+      version: versión
+      version_summary: resume de esta versión
+    model: 
+      attributes: 
+        message: resumen

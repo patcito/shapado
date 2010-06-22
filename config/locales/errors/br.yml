@@ -1,0 +1,15 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  errors: 
+    forbidden: 
+      explanation: N'oc'h eus ket an aotreoù ret evit mont d'ar bajenn-se.
+      title: Moned nac'het
+    go_to: Mont d'ar bajenn %{link}
+    help_us_answer: Sikourit ac'hanomp evit respont da %{link}
+    not_found: 
+      title: N'eo ket bet kavet ar bajenn.
+    options_label: "Traoù all a c'hellit ober :"
+    search: Klask

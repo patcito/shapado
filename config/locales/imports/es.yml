@@ -1,0 +1,9 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: necesitan confirmación
+        title: Enviar emails de confirmación

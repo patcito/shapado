@@ -1,0 +1,13 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  searches: 
+    form: 
+      clear: limpiar
+      search_box_title: Comprueba si tu pregunta ya ha sido hecha
+      tags_tip: User [etiqueta] para especificar etiquetas.
+    index: 
+      empty: su búsqueda no produjo ningún resultados.
+      search_text: questions containing
+      tags: con estas etiquetas

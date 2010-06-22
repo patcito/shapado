@@ -1,0 +1,21 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Eleferen
+# Author: Lockal
+ru: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Заканчивается на
+        message: Сообщение
+        only_anonymous: Только для анонимных пользователей
+        starts_at: Начинается с
+  announcements: 
+    actions: 
+      delete: Удалить
+      title: Действия
+    create: 
+      success: Объявление было создано успешно.
+    index: 
+      title: Объявления

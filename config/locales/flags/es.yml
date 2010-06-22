@@ -1,0 +1,20 @@
+# Messages for Spanish (Español)
+# Exported from translatewiki.net
+# Export driver: syck
+es: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: razón
+    models: 
+      flag: reporte de abuso
+      flags: reportes de abuso
+  flags: 
+    create: 
+      flash_error: usted no puede reportar como abuso esto
+      flash_notice: gracias por su reporte
+    form: 
+      attention: requiere atención de un moderador
+      label: por favor reporte con cuidado
+      offensive: ofensivo, abusivo o intolerante
+      spam: spam

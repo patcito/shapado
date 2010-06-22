@@ -1,0 +1,22 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Lockal
+ru: 
+  errors: 
+    forbidden: 
+      explanation: У вас нет необходимых прав для доступа к этой странице.
+      title: Доступ запрещён
+    go_to: Перейти на страницу {{link}}
+    help_us_answer: Окажите нам помощь в ответе на {{link}}
+    internal_error: 
+      explanation: Мы были уведомлены об этой проблеме и займёмся ею в ближайшее время.
+      title: К сожалению, что-то пошло не так.
+    not_found: 
+      explanation: Возможно, вы опечатались или страница была перемещена.
+      title: Страница не найдена.
+    options_label: "Вы можете также попробовать:"
+    search: Найти
+    unprocessable_entity: 
+      explanation: Возможно вы пытались изменить что-то, к чему вы не имеете доступ.
+      title: Запрошенное вами изменение было отклонено.

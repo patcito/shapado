@@ -1,0 +1,24 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Gounezet hoc'h eus ur badj war %{group} !
+      favorited: 
+        subject: "%{login} en deus ouzhpennet ho koulenn evel pennroll !"
+      follow: 
+        subject: "%{login} a vez bremañ oc'h heuliañ ac'hanoc'h war %{app}"
+      give_advice: 
+        friend_subject: "Ho mignon en deus ezhomm sikour : %{question_title}"
+        subject: "Ezhomm hon eus eus ho kuzul : %{question_title}"
+      new_answer: 
+        subject_friend: Ho mignon %{login} en deus respontet d'ar goulenn %{title}
+        subject_other: "%{login} en deus respontet d'ar goulenn %{title}"
+        subject_owner: "%{login} en deus respontet d'ho koulenn %{title}"
+      new_comment: 
+        subject: "%{login} en deus graet un evezhiadenn war %{group}"
+      report: 
+        subject: Danevelloù evit ar strollad %{group} eus %{app}
