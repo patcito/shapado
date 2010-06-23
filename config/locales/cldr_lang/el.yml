@@ -1,5 +1,5 @@
-el: 
-  languages: 
+el:
+  languages:
     aa: Αφάρ
     ab: Αμπχαζικά
     ace: Αχινίζ
@@ -43,6 +43,7 @@ el:
     bas: Μπάσα
     bat: "Βαλτική γλώσσα"
     be: Λευκορωσικά
+    be-TARASK: Λευκορωσικά
     bej: Μπέζα
     bem: Μπέμπα
     ber: Μπέρμπερ

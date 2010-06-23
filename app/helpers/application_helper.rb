@@ -56,7 +56,7 @@ module ApplicationHelper
 
   def language_desc(langs)
     langs.map do |lang|
-      I18n.t("languages.#{lang}", :default => lang)
+      I18n.t("languages.#{lang}", :default => lang).capitalize
     end.join(', ')
   end
 

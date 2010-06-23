@@ -1,5 +1,5 @@
-gl: 
-  languages: 
+gl:
+  languages:
     af: Afrikaans
     afa: "Lingua afro-asiática"
     alg: "Lingua algonquina"
@@ -15,6 +15,7 @@ gl:
     az: Azerbaiano
     bat: "Lingua báltica"
     be: Bielorruso
+    be-TARASK: Bielorruso
     bg: Búlgaro
     bh: Bihariano
     bn: Bengalí

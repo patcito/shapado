@@ -1,5 +1,5 @@
-nl: 
-  languages: 
+nl:
+  languages:
     aa: Afar
     ab: Abchazisch
     ace: Atjees
@@ -43,6 +43,7 @@ nl:
     bas: Basa
     bat: "Baltische taal"
     be: Wit-Russisch
+    be-TARASK: Wit-Russisch
     bej: Beja
     bem: Bemba
     ber: Berber

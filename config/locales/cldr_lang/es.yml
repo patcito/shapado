@@ -1,5 +1,5 @@
-es: 
-  languages: 
+es:
+  languages:
     aa: afar
     ab: abjasio
     ace: acehnés
@@ -43,6 +43,7 @@ es:
     bas: basa
     bat: "lengua báltica"
     be: bielorruso
+    be-TARASK: bielorruso
     bej: beja
     bem: bemba
     ber: bereber

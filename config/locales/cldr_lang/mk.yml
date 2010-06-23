@@ -1,5 +1,5 @@
-mk: 
-  languages: 
+mk:
+  languages:
     aa: афар
     ab: абхазиски
     ace: акинески
@@ -43,6 +43,7 @@ mk:
     bas: баса
     bat: балтички
     be: белоруски
+    be-TARASK: белоруски
     bej: беха
     bem: бемба
     ber: бербер

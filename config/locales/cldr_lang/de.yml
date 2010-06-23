@@ -1,5 +1,5 @@
-de: 
-  languages: 
+de:
+  languages:
     aa: Afar
     ab: Abchasisch
     ace: Aceh-Sprache
@@ -43,6 +43,7 @@ de:
     bas: Basaa-Sprache
     bat: "Baltische Sprachen"
     be: Weißrussisch
+    be-TARASK: Weißrussisch
     bej: Bedauye
     bem: Bemba-Sprache
     ber: Berbersprache

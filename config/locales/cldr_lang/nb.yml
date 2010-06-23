@@ -1,5 +1,5 @@
-nb: 
-  languages: 
+nb:
+  languages:
     aa: afar
     ab: abkhasisk
     ace: achinesisk
@@ -43,6 +43,7 @@ nb:
     bas: basa
     bat: "baltisk språk"
     be: hviterussisk
+    be-TARASK: hviterussisk
     bej: beja
     bem: bemba
     ber: berbisk

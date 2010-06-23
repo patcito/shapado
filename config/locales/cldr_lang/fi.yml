@@ -1,5 +1,5 @@
-fi: 
-  languages: 
+fi:
+  languages:
     aa: afar
     ab: abhaasi
     ace: aceh
@@ -43,6 +43,7 @@ fi:
     bas: basa
     bat: "balttilainen kieli"
     be: valkovenäjä
+    be-TARASK: valkovenäjä
     bej: bedža
     bem: bemba
     ber: berberikieli

@@ -1,5 +1,5 @@
-fr: 
-  languages: 
+fr:
+  languages:
     aa: afar
     ab: abkhaze
     ace: aceh
@@ -43,6 +43,7 @@ fr:
     bas: bassa
     bat: "langue balte"
     be: biélorusse
+    be-TARASK: biélorusse
     bej: bedja
     bem: bemba
     ber: berbère

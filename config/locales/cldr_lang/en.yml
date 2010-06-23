@@ -1,5 +1,5 @@
-en: 
-  languages: 
+en:
+  languages:
     aa: Afar
     ab: Abkhazian
     ace: Achinese
@@ -43,6 +43,7 @@ en:
     bas: Basa
     bat: "Baltic Language"
     be: Belarusian
+    be-TARASK: Belarusian
     bej: Beja
     bem: Bemba
     ber: Berber

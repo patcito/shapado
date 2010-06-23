@@ -1,5 +1,5 @@
-ko: 
-  languages: 
+ko:
+  languages:
     aa: 아파르어
     ab: 압카즈어
     ace: 아체어
@@ -43,6 +43,7 @@ ko:
     bas: 바사어
     bat: "발트어 (기타)"
     be: 벨로루시어
+    be-TARASK: 벨로루시어
     bej: 베자어
     bem: 벰바어
     ber: 베르베르어
