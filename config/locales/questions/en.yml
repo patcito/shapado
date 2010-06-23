@@ -28,7 +28,7 @@ en:
       viewed: viewed
       to_answer_question: to answer this question
       watch_tooltip: "Watch this question"
-      accepted_tooltip: "One of the answers was accepted as the correct answer"
+      accepted_tooltip: "One of the answers was accepted as the correct answer."
       unwatch_tooltip: "Stop watching this question"
       favorite_tooltip: "Add this question to your favorites"
       unfavorite_tooltip: "Remove this question from your favorites"
@@ -40,7 +40,7 @@ en:
       request_closing_details: Request to close this question
       close: Close
       ban: Ban
-      retract_request: You have already made a request, would you line to retract it?
+      retract_request: You have already made a request. Would you like to retract it?
       close_reason: "The question has been closed for the following reason:"
       answers_title:
         one: "%{count} answer"
@@ -55,7 +55,7 @@ en:
     question:
       accepted_tooltip: This question has an answer that has been accepted
     form:
-      body_tip: What's your question? be descriptive.
+      body_tip: What's your question? Be descriptive.
       language_tip: Select the language's question.
       tags_tip:  Use tags to add more information about your question.
       adult_content: This question contains adult material.
@@ -66,7 +66,7 @@ en:
     unanswered:
       title: Unanswered questions
       tags: Unanswered tags
-      empty: "This group doesn't have any unanswered questions."
+      empty: "This group does not have any unanswered questions."
       my_tags: My tags
       expert: Experts
     tags:
@@ -85,9 +85,9 @@ en:
     unsolve:
       flash_notice: "The question is not solved anymore."
     watch:
-      success:      "You will now receive notifications by mail for every new answer to this question"
+      success:      "You will now receive notifications by e-mail for every new answer to this question."
     unwatch:
-      success:      "You will not receive notifications by mail for every new answer to this question anymore"
+      success:      "You will not receive notifications by e-mail for every new answer to this question anymore."
     revert:
       title: "Revert question"
     move:
@@ -96,7 +96,7 @@ en:
       submit:       "Move!"
     move_to:
       success:      "Question moved to %{group}"
-      group_dont_exists: "The group %{group} doesn't exist"
+      group_dont_exists: "The group %{group} does not exist"
     shared:
       flag: Flag
     retag_form:
@@ -111,7 +111,7 @@ en:
         too_short: "Seems too short. Please use more words than %{count} to be more specific."
         too_many_tags: Sorry, you can only enter 9 tags maximum.
         empty_tags: Sorry, you need to use at least one tag.
-        title_too_long: "The title is too long. it should not contain more than 100 characters"
+        title_too_long: "The title is too long. It should not contain more than 100 characters."
 
   activerecord:
     models:
