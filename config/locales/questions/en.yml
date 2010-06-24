@@ -8,7 +8,7 @@ en:
       newest:  Newest
       oldest:  Oldest
       ask_question: Ask question
-      empty: "No one has asked any questions yet, be the first!"
+      empty: "No one has asked any questions yet. Be the first!"
       help_to_answer: Help us answer
       unanswered_questions: Unanswered questions
       hot_tooltip: Questions with the most activity over the last 5 days

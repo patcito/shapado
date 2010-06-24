@@ -12,7 +12,7 @@ en:
       revert: Revert to this version
       show_diff: Compare selected versions
       all_history: Back to history
-      back_to_question: Back to question
+      back_to_question: Back to the question
     model:
       attributes:
         message: Summary

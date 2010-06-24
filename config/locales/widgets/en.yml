@@ -5,7 +5,7 @@ en:
       description: Use the arrows to move your widgets
     badges:
       title: Recent badges
-      description: "This widget display recent badges earned by users or questions"
+      description: "This widget displays recent badges earned by users or questions"
     groups:
       title: Recent groups
       description: "This widget displays the latest groups"
@@ -14,10 +14,10 @@ en:
       description: "This widget displays the top five groups"
     top_users:
       title: Top 5 users
-      description: "This widget displays top five users"
+      description: "This widget displays the top five users"
     users:
       title: Recent users
-      description: "This widget displays new registered members"
+      description: "This widget displays newly registered members"
     tag_cloud:
       title: Tag cloud
       description: "This widget displays a tag cloud"

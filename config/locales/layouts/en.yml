@@ -26,7 +26,7 @@ en:
       welcome_from: Welcome! You can
       now: now!
       openid:
-        explaination: "If you'd like to register or just log in, please select your openid provider:"
+        explaination: "If you would like to register or just log in, please select your OpenID provider:"
     manage:
       dashboard: Dashboard
       properties: Properties

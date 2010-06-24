@@ -2,7 +2,7 @@ en:
   users:
     index:
       title: All users
-      empty: "This group doesn't have any members, participate to join this group."
+      empty: "This group does not have any members. Participate by joining this group."
       filter: "Search for users"
       reputation: Reputation
       newest: Newest
@@ -18,7 +18,7 @@ en:
     edit:
       title: Settings
       submit: Save
-      enable_twitter: Enable your facebook or twitter accounts
+      enable_twitter: Enable your Facebook or Twitter accounts
     show:
       title: "User %{user}"
       follow: Follow
@@ -31,15 +31,15 @@ en:
     form:
       information: Information
       notifications: Notifications
-      new_answer_notification: Get mail notifications for new answers
+      new_answer_notification: Get email notifications for new answers
       give_advice_notification: Receive email notifications about questions in your field of expertise
       activities_notification: Receive email notifications about system activities such as earned badges, new followers, etc.
       reports_notification: Receive a report with latest group activity (only for group admins)
-      avatar_tip: "Change your profile image using gravatar"
+      avatar_tip: "Change your profile image using Gravatar"
       show_more_lang: "Show more languages"
     create:
       flash_notice: "Thanks for signing up!"
-      flash_error:  "We couldn't set up that account, sorry.  please try again, or contact an admin (link is above)."
+      flash_error:  "Sorry, we could not set up that account. Please try again, or contact an administrator (link is above)."
     messages:
       errors:
         reputation_needed: "You need a reputation of %{min_reputation} to %{action}"

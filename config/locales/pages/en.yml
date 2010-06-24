@@ -14,7 +14,7 @@ en:
     new:
       title: New page
     form:
-      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
+      title_tip: "Page title. Use this to reference the page. For example: [[FAQ|check out the faq]]"
       language_tip: Page language
     actions:
       title: Actions
@@ -27,5 +27,5 @@ en:
       pages: Pages
     attributes:
       page:
-        js: Javascript
+        js: JavaScript
         css: Stylesheets
