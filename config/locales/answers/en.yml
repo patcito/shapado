@@ -12,7 +12,7 @@ en:
       flash_error:  "Something went wrong adding your answer.
   \n  Remember that:
   \n - Empty and repeated answers are not allowed
-  \n - You need to wait 20 senconds before posting another answer.
+  \n - You need to wait 20 seconds before posting another answer.
   \n - You can only post one answer by question."
     update:
       flash_notice: "Answer was successfully updated."
