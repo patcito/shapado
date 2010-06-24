@@ -34,7 +34,7 @@ en:
       logo_legend: "You can upload the group logo. the maximum file size is 2mb."
       any_language: Any
       access: Access Settings
-      isolate_group: Isolate the group form other groups
+      isolate_group: Isolate the group from other groups
       members_only: "Only the group's members will be able to access this group"
       custom_html: Allow custom html
       custom_js: Allow custom javascript
