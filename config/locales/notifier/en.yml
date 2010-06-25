@@ -20,7 +20,7 @@ en:
       message3: "Or, if you know someone who might be able to answer, send them this referral link:"
       message4: "If we do not get an answer from you soon, we will ask someone else. You can still answer it whenever you want."
     new_answer:
-      message: "%{user} accepted %{new_answer} to the question %{question}"
+      message: "%{user} answered %{new_answer} to the question %{question}"
     new_comment:
       message: "%{user} commented %{new_comment} on the question %{question}"
     new_feedback:
