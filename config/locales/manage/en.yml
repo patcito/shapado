@@ -15,8 +15,8 @@ en:
         share:
           title: Share
         constrains:
-          title: Constrains
-          reputation_constrains_subtitle: List of reputations constrains for each action
+          title: Requirements
+          reputation_constrains_subtitle: List of reputation requirements for each action
           reputation_constrains_description: This form allows you to configure how many reputation points users need to do a given action
         rewards:
           title: Rewards

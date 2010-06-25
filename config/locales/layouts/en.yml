@@ -39,7 +39,7 @@ en:
       theme: Theme
       domain: Domain
       pages: Pages
-      constrains: Constrains
+      constrains: Requirements
       rewards: Rewards
       general: General
       announcements: Announcements
