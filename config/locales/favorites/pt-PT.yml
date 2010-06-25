@@ -1,12 +1,13 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     models: 
-      favorite: favorite
-      favorites: favorites
+      favorite: Favorita
+      favorites: Favoritas
   favorites: 
     create: 
-      success: the question has been added to your favorities
-      unauthenticated: you need an account to add favorites
+      success: A pergunta foi adicionada às suas favoritas
+      unauthenticated: Precisa de ter uma conta para adicionar favoritas

@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   layouts: 
     application: 
@@ -46,3 +47,5 @@ fr:
       stats: États
       theme: thème
       widgets: widgets
+    notifications: 
+      message: Si vous ne souhaitez plus recevoir de notifications automatiques de %{domain}, vous pouvez changer votre configuration de notifications.

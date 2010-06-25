@@ -1,6 +1,8 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
+# Author: Luckas Blade
 pt-PT: 
   layouts: 
     application: 
@@ -17,7 +19,7 @@ pt-PT:
       now: now!
       openid: 
         explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
-      pages: pages
+      pages: Páginas
       questions: perguntas
       questions_in: perguntas em
       questions_tagged: tagged with
@@ -31,18 +33,20 @@ pt-PT:
       users: utilizadores
       welcome_from: welcome! you can
     manage: 
-      actions: actions
-      announcements: announcements
-      constrains: constrains
+      actions: Acções
+      announcements: Notificações do site
+      constrains: Requisitos
       content: content
       dashboard: dashboard
       domain: domain
       general: general
-      members: members
-      pages: pages
-      properties: properties
-      reputation: reputation
+      members: Membros
+      pages: Páginas
+      properties: Propriedades
+      reputation: Reputação
       rewards: rewards
       stats: stats
-      theme: theme
+      theme: Tema
       widgets: widgets
+    notifications: 
+      message: Se não pretende voltar a receber notificações automáticas de %{domain}, altere as suas preferências no ecrã de notificações.

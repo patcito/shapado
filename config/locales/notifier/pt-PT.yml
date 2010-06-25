@@ -17,14 +17,14 @@ pt-PT:
       message2: Pode seguir o utilizador clicando o botão "Seguir" na %{user_page} do próprio
     give_advice: 
       message1: "%{user} acaba de fazer uma pergunta a que talvez saiba responder:"
-      message2: "Para dar uma resposta, responda a esta mensagem aqui: \\"
+      message2: "Para dar uma resposta, responda a esta mensagem aqui:"
       message3: "Ou, se conhece alguém que talvez possa responder, envie-lhe este link:"
       message4: Se não recebermos uma resposta sua rapidamente, perguntaremos a outra pessoa. Continuará a poder responder quando quiser.
     global: 
       hi: Olá %{user},
       user_page: página de utilizador
     new_answer: 
-      message: "%{user} aceitou %{new_answer} à pergunta %{question}"
+      message: "%{user} respondeu %{new_answer} à pergunta %{question}"
     new_comment: 
       message: "%{user} comentou %{new_comment} na pergunta %{question}"
     new_feedback: 

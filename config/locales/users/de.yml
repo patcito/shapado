@@ -39,7 +39,7 @@ de:
       edit_others_posts: Bearbeite Beiträge anderer
       edit_wiki_post: Beiträge im Wiki bearbeiten
       flag: Kennzeichnen
-      retag_others_questions: Markiere die Fragen anderer
+      retag_others_questions: Ändere die Stichwörter von Fragen anderer
       vote_down: Abwerten
       vote_to_close_any_question: Beantrage die Beendigung einer beliebigen Frage
       vote_to_close_own_question: Beantrage die Beendigung einer eigenen Frage
@@ -81,9 +81,9 @@ de:
       submit: Anmeldung
       title: Anmeldung als Nutzer
     show: 
-      follow: Folgen
+      follow: Beachten
       title: Nutzer %{user}
-      unfollow: Nicht mehr folgen
+      unfollow: Nicht mehr beachten
       views: Ansichten
     unfollow: 
       flash_notice: Nutzer  %{Nutzer} , die nicht mehr zu Ihren Freunden gehören

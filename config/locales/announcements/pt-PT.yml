@@ -1,19 +1,20 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     attributes: 
       announcement: 
         ends_at: ends at
-        message: message
-        only_anonymous: only for anonymous users
+        message: Mensagem
+        only_anonymous: Só para utilizadores anónimos
         starts_at: starts at
   announcements: 
     actions: 
-      delete: remove
-      title: actions
+      delete: Remover
+      title: Acções
     create: 
-      success: announcement was successfully created.
+      success: A notificação do site foi criada.
     index: 
-      title: announcements
+      title: Notificações do site

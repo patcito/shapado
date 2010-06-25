@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: IAlex
 # Author: Jean-Frédéric
 # Author: Peter17
 fr: 
@@ -25,7 +26,7 @@ fr:
       hi: Bonjour %{user},
       user_page: page utilisateur
     new_answer: 
-      message: "%{user} a accepté %{new_answer} à la question %{question}"
+      message: "%{user} a répondu %{new_answer} à la question %{question}"
     new_comment: 
       message: "%{user} a commenté %{new_comment} à la question %{question}"
     new_feedback: 

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Patcito
 es-419: 
   admin: 
     manage: 
@@ -15,7 +16,7 @@ es-419:
         top_bar_tip: entre un vinculo por linea
       properties: 
         constrains: 
-          reputation_constrains_description: este formulario permite configurar cuantos puntos de reputación se necesitan para efectuar cada acción
+          reputation_constrains_description: Este formulario permite configurar cuantos puntos de reputación se necesitan para efectuar cada acción
           reputation_constrains_subtitle: lista de las restricciónes de repotación por acción
           title: restricciónes
         domain: 

@@ -22,7 +22,7 @@ de:
     form: 
       answer_label: Frage beantworten
       comment_label: Antwort kommentieren
-      comment_submit: Kommentar
+      comment_submit: Kommentieren
       submit: Antwort
     revert: 
       title: Antwort entfernen

@@ -6,13 +6,13 @@
 # Author: McDutchie
 pt-PT: 
   ads: 
-    ad_links: Adicionar um novo anúncio {{type}}
+    ad_links: Adicionar um anúncio {{type}} novo
     create: 
-      success: O anúncio foi criado com êxito.
+      success: O anúncio foi criado.
     index: 
       add_adbard: Adicionar um anúncio Ad Bard novo
-      add_adsense: Adicionar um novo anúncio do Google AdSense
+      add_adsense: Adicionar um anúncio do Google AdSense novo
       title: Anúncios
     name: "Nome:"
     position: "Posição:"
-    title: Adicionar um novo anúncio {{type}}
+    title: Adicionar um anúncio {{type}} novo

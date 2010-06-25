@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   searches: 
     form: 
@@ -8,6 +9,6 @@ pt-PT:
       search_box_title: Check whether your question already have asked
       tags_tip: use [tag] to specify tags.
     index: 
-      empty: your search returned no matches.
-      search_text: questions containing
+      empty: A sua pesquisa não coincide com nenhuma pergunta.
+      search_text: Perguntas que contêm
       tags: within these tags

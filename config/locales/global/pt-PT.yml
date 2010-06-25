@@ -31,7 +31,7 @@ pt-PT:
     any: qualquer
     user: as minhas línguas preferidas
   messages: 
-    success: "%{model} foi %{action} com sucesso."
+    success: "{{model}} foi {{action}}."
   models: 
     question: a pergunta
   number: 

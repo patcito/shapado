@@ -2,7 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Nghtwlkr
-"no": 
+nb: 
   activerecord: 
     models: 
       favorite: Favoritt

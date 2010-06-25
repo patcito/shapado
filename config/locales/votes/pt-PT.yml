@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     models: 
@@ -13,12 +14,12 @@ pt-PT:
       to_vote_down: click to vote down
       to_vote_up: click to vote up
     create: 
-      flash_error: não pode votar isto
-      flash_notice: obrigado pelo seu voto!
-      unauthenticated: utilizadores anónimos não podem votar
+      flash_error: Não pode votar aqui
+      flash_notice: Obrigado pelo seu voto!
+      unauthenticated: Utilizadores anónimos não podem votar
     destroy: 
       flash_notice: your vote has been revoked successfully.
     model: 
       messages: 
-        closed_question: you cannot vote on any posts belonging to a closed question
+        closed_question: Não pode votar as mensagens que pertencem a uma pergunta fechada
         vote_down_comment: comments cannot be voted down

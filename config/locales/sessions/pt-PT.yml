@@ -8,15 +8,15 @@ pt-PT:
       flash_error: não foi possível entrar com '%{login}'
       flash_notice: inicio de sessão efectuado com sucesso
     destroy: 
-      flash_notice: a sua sessão foi terminada.
+      flash_notice: A sua sessão foi terminada.
     new: 
-      log_in: entrar
-      not_registered: ainda não se registou?
+      log_in: Entrar
+      not_registered: Ainda não se registou?
       registered: já registado?
       remember_me: Recordar os meus dados
       sign_in: Entrar
-      signup: registar
-      with_authentication: entrar com o nosso sistema de autenticação
-      with_facebook: sign in with facebook
-      with_openid: entrar com openid
-      with_twitter: sign in with twitter
+      signup: Registar
+      with_authentication: Entrar com o nosso sistema de autenticação
+      with_facebook: Entrar com conta do Facebook
+      with_openid: Entrar com OpenID
+      with_twitter: Entrar com conta do Twitter

@@ -15,6 +15,6 @@ nl:
       delete: verwijderen
       title: Handelingen
     create: 
-      success: de aankondiging is aangemaakt.
+      success: De aankondiging is aangemaakt.
     index: 
-      title: aankondigingen
+      title: Aankondigingen

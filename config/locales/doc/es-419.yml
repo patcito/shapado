@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Patcito
 es-419: 
   doc: 
     chat: 
@@ -24,7 +25,7 @@ es-419:
       getting_popular: sitios populares
       huge_sites: sitios enormes
       month: mes
-      page_views: paginas vistas/mes
+      page_views: Para sitios privados/pequeños
       plans: planes
       private_site: Activar acceso privado/publico
       small_private: sitios chicos/privados

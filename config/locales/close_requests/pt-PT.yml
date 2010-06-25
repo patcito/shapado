@@ -5,27 +5,27 @@
 pt-PT: 
   close_requests: 
     create: 
-      flash_notice: pedido de fecho criado com sucesso
+      flash_notice: Pedido de fecho foi criado
     destroy: 
-      flash_notice: pedido de fecho foi eliminado
+      flash_notice: O pedido de fecho foi eliminado
     form: 
-      close_with_reason: fechar esta pergunta usando este motivo
-      dupe: duplicada
-      no_question: não é uma pergunta
-      not_relevant: não é relevante
-      ot: está fora do tema
-      request_closing_details: pedir para fechar esta pergunta
+      close_with_reason: Fechar esta pergunta usando este motivo
+      dupe: Duplicada
+      no_question: Não é uma pergunta
+      not_relevant: Não é relevante
+      ot: Está fora do tema
+      request_closing_details: Pedir para fechar esta pergunta
       spam: spam
     index: 
-      title: lista de pedidos de fecho
+      title: Lista de pedidos de fecho
     model: 
       attributes: 
-        comment: comentário
+        comment: Comentário
         reason: motivo
-        user: utilizador
+        user: Utilizador
       messages: 
-        already_requested: já pediu para fechar esta pergunta
-      name: pedido de fecho
-      prural_name: pedidos de fecho
+        already_requested: Já pediu para fechar esta pergunta
+      name: Pedido de fecho
+      prural_name: Pedidos de fecho
     update: 
-      flash_notice: pedido de fecho foi actualizado
+      flash_notice: O pedido de fecho foi actualizado

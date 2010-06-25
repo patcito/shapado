@@ -5,18 +5,18 @@
 pt-PT: 
   errors: 
     forbidden: 
-      explanation: não tem as permissões necessárias para aceder a esta página.
-      title: acesso negado
-    go_to: ir para a página %{link}
-    help_us_answer: ajude-nos a responder a %{link}
+      explanation: Não tem as permissões necessárias para aceder a esta página.
+      title: Acesso negado
+    go_to: Ir para a página %{link}
+    help_us_answer: Ajude-nos a responder a %{link}
     internal_error: 
-      explanation: fomos notificados sobre este problema e vamos averiguá-lo em breve.
-      title: pedimos desculpa, mas ocorreu um erro.
+      explanation: Fomos notificados sobre este problema e vamos averiguá-lo em breve.
+      title: Pedimos desculpa, mas ocorreu um erro.
     not_found: 
-      explanation: pode ter escrito mal o endereço ou a página pode ter sido movida.
-      title: página não encontrada.
-    options_label: "outras coisas que pode tentar:"
-    search: pesquisar
+      explanation: Pode ter escrito mal o endereço ou a página pode ter sido movida.
+      title: A página não foi encontrada.
+    options_label: "Outras coisas que pode tentar:"
+    search: Pesquisar
     unprocessable_entity: 
-      explanation: se calhar tentou modificar algo para o qual não tinha permissões.
-      title: a alteração que pretendia foi rejeitada.
+      explanation: Talvez tenha tentado modificar algo a que não tinha acesso.
+      title: A alteração que pretendia foi rejeitada.

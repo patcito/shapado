@@ -24,7 +24,7 @@ nl:
       hi: Hallo %{user},
       user_page: gebruikerspagina
     new_answer: 
-      message: "%{user} heeft %{new_answer} geaccepteerd als antwoord op de vraag %{question}"
+      message: "%{user} heeft %{new_answer} geantwoord op de vraag %{question}"
     new_comment: 
       message: "%{user} heeft de reactie %{new_comment} op de vraag %{question} gegeven"
     new_feedback: 

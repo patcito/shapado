@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Patcito
 es-419: 
   activerecord: 
     attributes: 
@@ -33,12 +34,14 @@ es-419:
     form: 
       access: Configuración de Acceso
       analytics_engine: Motor de análisis
+      analytics_legend: El grupo podra utilizar su propio codigo de seguimiento
       any_language: cualquiera
       custom_analytics: Permitir análisis personalizados
       custom_html: Permitir HTML personalizado
       custom_js: Permitir javascript personalizado
       default_tags_legend: separate tags by commas. only 10 default tags allowed.
       description_legend: tiene 4000 caracteres para describir el grupo.
+      isolate_group: Aislar el grupo de otros
       legend_legend: esto será usado en el titulo de la web, tienes 40 caracteres
       logo_legend: you can upload the group logo. the maximum file size is 2mb.
       members_only: Solamente los miembros del grupo serán capaces de acceder a este grupo

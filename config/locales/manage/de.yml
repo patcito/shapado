@@ -16,8 +16,8 @@ de:
       properties: 
         constrains: 
           reputation_constrains_description: Mit diesem Formular kannst Du festlegen, wieviele Reputationspunkte ein Nutzer benötigt, um bestimmte Aktionen ausführen zu können
-          reputation_constrains_subtitle: Liste der Einschränkungen nach Reputation für die einzelnen Aktionen
-          title: Einschränkungen
+          reputation_constrains_subtitle: Liste der Mindestreputation, die für jede Aktion benötigt wird
+          title: Voraussetzungen
         domain: 
           description: "Du kannst Deine Website katalogisieren, so dass sie über Deine eigene Domain aufgerufen werden kann. So wird es gemacht:"
           instruction1: Hierzu musst Du Dich zunächst bei Deinem Hoster anmelden. Dies ist die Seite bei der Deine Domain wie bspw. {{subdomain}}.de gehostet wird.

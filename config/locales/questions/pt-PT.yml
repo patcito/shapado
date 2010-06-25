@@ -6,131 +6,131 @@ pt-PT:
   activerecord: 
     attributes: 
       question: 
-        answers: respostas
-        asked_by: perguntada por
-        body: conteúdo
-        closed: fechada
-        created_at: perguntada
-        language: língua
-        tags: categorias
-        title: título
-        updated_at: actualizada
+        answers: Respostas
+        asked_by: Perguntada por
+        body: Conteúdo
+        closed: Fechada
+        created_at: Perguntada
+        language: Língua
+        tags: Categorias
+        title: Título
+        updated_at: Actualizada
         updated_by: actualizada por
-        views: visitas
-        votes: votos
+        views: Visitas
+        votes: Votos
     models: 
-      question: pergunta
-      questions: perguntas
+      question: Pergunta
+      questions: Perguntas
   questions: 
     answer: 
-      add_comment: adicionar comentário...
-      flag: reportar
-      pick_answer: escolher como solução
-      unset_answer: retirar como solução?
+      add_comment: Adicionar comentário...
+      flag: Reportar
+      pick_answer: Escolher como solução
+      unset_answer: Retirar como solução?
     create: 
-      flash_notice: pergunta foi criada com sucesso.
+      flash_notice: A pergunta foi criada.
     edit: 
-      title: editar pergunta
+      title: A editar pergunta
     flag: 
-      title: reportar pergunta
+      title: Reportar pergunta
     form: 
-      adult_content: esta pergunta envolve conteúdo para adultos.
-      body_tip: qual é a sua pergunta? seja descritivo.
-      language_tip: seleccione a língua da pergunta.
-      tags_tip: use categorias para fornecer mais informação sobre a sua pergunta.
+      adult_content: Esta pergunta envolve conteúdo para adultos.
+      body_tip: Qual é a sua pergunta? Seja descritivo.
+      language_tip: Seleccione a língua da pergunta.
+      tags_tip: Use categorias para fornecer mais informação sobre a sua pergunta.
     index: 
-      active: activas
-      active_tooltip: perguntas actualizadas recentemente
-      ask_question: fazer pergunta
-      empty: ainda ninguém fez nenhuma pergunta, seja o primeiro!
-      help_to_answer: ajude-nos a responder
-      hot: populares
-      hot_tooltip: perguntas com mais actividade nos últimos 5 dias
-      newest: mais recentes
-      newest_tooltip: perguntas mais recentes
-      oldest: mais antigas
-      title: todas as perguntas
-      unanswered_questions: perguntas sem resposta
-      votes: votos
-      votes_tooltip: perguntas com mais votos
+      active: Activas
+      active_tooltip: Perguntas actualizadas recentemente
+      ask_question: Fazer pergunta
+      empty: Ainda ninguém fez nenhuma pergunta. Seja o primeiro!
+      help_to_answer: Ajude-nos a responder
+      hot: Populares
+      hot_tooltip: Perguntas com maior actividade dos últimos 5 dias
+      newest: Mais recentes
+      newest_tooltip: Perguntas mais recentes
+      oldest: Mais antigas
+      title: Todas as perguntas
+      unanswered_questions: Perguntas sem resposta
+      votes: Votos
+      votes_tooltip: Perguntas com mais votos
     model: 
       messages: 
         empty_tags: Desculpe, tem de usar pelo menos uma categoria.
         title_too_long: O título é demasiado longo; não pode conter mais do que 100 caracteres
         too_many_tags: Desculpe, mas só pode introduzir até 9 categorias.
-        too_short: parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
+        too_short: Parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
     move: 
-      group_label: "mover para o grupo com o slug:"
-      submit: mover!
-      title: "mover a pergunta: %{title}"
+      group_label: "Mover para o grupo:"
+      submit: Mover!
+      title: "Mover a pergunta: %{title}"
     move_to: 
-      group_dont_exists: o grupo %{group} não existe
-      success: pergunta movida para o grupo %{group}
+      group_dont_exists: O grupo %{group} não existe
+      success: Pergunta movida para o grupo %{group}
     new: 
-      how_to_ask: como perguntar
-      title: fazer pergunta
+      how_to_ask: Como perguntar
+      title: Fazer pergunta
     question: 
       accepted_tooltip: Esta pergunta tem uma resposta que foi aceite
     retag: 
-      title: recategorizar
+      title: Recategorizar
     retag_form: 
-      cancel: cancelar
-      submit: actualizar categorias!
+      cancel: Cancelar
+      submit: Actualizar categorias!
       title: Actualizar categorias
     retag_to: 
       failure: Desculpe, não foi possível actualizar as categorias.
-      success: As categorias foram actualizadas com sucesso.
+      success: As categorias foram actualizadas.
     revert: 
-      title: reverter a pergunta
+      title: Reverter a pergunta
     shared: 
-      flag: reportar
+      flag: Reportar
     show: 
-      accepted_tooltip: uma das respostas foi aceite como sendo a resposta correcta
-      another_answers: outras respostas
-      answers: respostas
+      accepted_tooltip: Uma das respostas foi aceite como sendo a resposta correcta.
+      another_answers: Outras respostas
+      answers: Respostas
       answers_title: 
         one: "%{count} resposta"
         other: "%{count} respostas"
       asked_on: colocada a
-      ban: banir
-      close: fechar
-      close_reason: "a pergunta foi fechada pelo seguinte motivo:"
-      favorite_tooltip: adicionar esta pergunta às suas favoritas
-      flag: reportar
-      flagged_as: reportada como
-      flags: reportada como
-      last_activity: última actividade
-      related_questions: perguntas relacionadas
-      request_closing: pedir encerramento
-      request_closing_details: pedido para fechar esta pergunta
-      retag: recategorizar
-      retract_request: já colocou um pedido; deseja retirá-lo?
-      share: partilhar esta pergunta em
-      share_on: partilhar esta pergunta em %{site}
-      solution: solução
+      ban: Banir
+      close: Fechar
+      close_reason: "A pergunta foi fechada pelo seguinte motivo:"
+      favorite_tooltip: Adicionar esta pergunta às suas favoritas
+      flag: Reportar
+      flagged_as: Reportada como
+      flags: Reportada como
+      last_activity: Actividade mais recente
+      related_questions: Perguntas relacionadas
+      request_closing: Pedir encerramento
+      request_closing_details: Pedir para fechar esta pergunta
+      retag: Recategorizar
+      retract_request: Já colocou um pedido; deseja retirá-lo?
+      share: Partilhar esta pergunta em
+      share_on: Partilhar esta pergunta em %{site}
+      solution: Solução
       to_answer_question: para responder a esta pergunta
-      unauthenticated_retag: precisa de ter uma conta para recategorizar perguntas
-      unfavorite_tooltip: remover esta pergunta das suas favoritas
-      unwatch_tooltip: deixar de vigiar esta pergunta
+      unauthenticated_retag: Precisa de ter uma conta para recategorizar perguntas
+      unfavorite_tooltip: Remover esta pergunta das suas favoritas
+      unwatch_tooltip: Deixar de vigiar esta pergunta
       viewed: visitada
-      watch_tooltip: vigiar esta pergunta
+      watch_tooltip: Vigiar esta pergunta
     solve: 
-      flash_notice: pergunta foi resolvida.
+      flash_notice: A pergunta foi resolvida.
     tags: 
-      filter: pesquisar categorias
-      title: categorias
-      tooltip: mostrar perguntas na categoria %{tag}
+      filter: Pesquisar categorias
+      title: Categorias
+      tooltip: Mostrar perguntas na categoria %{tag}
     unanswered: 
-      empty: este grupo não contém perguntas sem resposta.
-      expert: peritos
-      my_tags: as minhas categorias
-      tags: categorias sem resposta
-      title: perguntas sem resposta
+      empty: Este grupo não contém perguntas sem resposta.
+      expert: Peritos
+      my_tags: As minhas categorias
+      tags: Categorias sem resposta
+      title: Perguntas sem resposta
     unsolve: 
-      flash_notice: pergunta agora não está resolvida.
+      flash_notice: A pergunta deixou de estar resolvida.
     unwatch: 
-      success: deixará de receber notificações por correio por cada nova resposta a esta pergunta
+      success: Deixará de receber notificações por correio electrónico por cada nova resposta a esta pergunta
     update: 
-      flash_notice: pergunta foi actualizada com sucesso.
+      flash_notice: A pergunta foi actualizada.
     watch: 
-      success: a partir de agora receberá notificações por correio a cada nova resposta a esta pergunta
+      success: Passará a receber notificações por correio electrónico a cada nova resposta a esta pergunta.

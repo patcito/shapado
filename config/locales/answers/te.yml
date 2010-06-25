@@ -1,12 +1,14 @@
 # Messages for Telugu (తెలుగు)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Ravichandra
 # Author: Veeven
 te: 
   activerecord: 
     attributes: 
       answer: 
         body: వివరణ
+        created_at: పరిష్కరించబడినది
         link: లంకె
     models: 
       answer: జవాబు
@@ -14,6 +16,12 @@ te:
   answers: 
     create: 
       flash_notice: ధన్యవాదాలు!
+    edit: 
+      title: జవాబును సరిచేస్తున్నారు
     form: 
+      answer_label: ప్రశ్నకు జవాబివ్వండి
       comment_label: ఈ జవాబుపై వ్యాఖ్యానించండి
       comment_submit: వ్యాఖ్యానించండి
+      submit: జవాబు
+    update: 
+      flash_notice: జవాబు విజయవంతంగా సమర్పించబడింది.

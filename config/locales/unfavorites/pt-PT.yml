@@ -1,12 +1,13 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     models: 
-      favorite: favorite
-      favorites: favorites
+      favorite: Favorita
+      favorites: Favoritas
   unfavorites: 
     create: 
-      success: the question has been removed from your favorities
-      unauthenticated: you need an account to remove a favorite
+      success: A pergunta foi removida das suas favoritas
+      unauthenticated: Precisa de ter uma conta para remover uma favorita

@@ -5,125 +5,125 @@
 pt-PT: 
   activerecord: 
     models: 
-      badge: distintivo
-      badges: distintivos
+      badge: Distintivo
+      badges: Distintivos
   badges: 
     index: 
-      description: todos os distintivos que conseguir ganhar; partilhe o seu conhecimento e ganhe distintivos.
+      description: Todos os distintivos que conseguir ganhar. Partilhe o seu conhecimento e ganhe distintivos.
       title: distintivos
     shared: 
       addict: 
-        description: visitou o site em 20 dias consecutivos
+        description: Visitou o site em 20 dias consecutivos
       autobiographer: 
-        description: preencheu todos os campos do perfil de utilizador
-        name: autobiógrafo
+        description: Preencheu todos os campos do perfil de utilizador
+        name: Autobiógrafo
       celebrity: 
-        description: obter mais de 100 seguidores
-        name: celebridade
+        description: Obter mais de 100 seguidores
+        name: Celebridade
       citizen_patrol: 
-        description: primeira publicação reportada
-        name: patrulha do cidadão
+        description: Primeira publicação reportada
+        name: Patrulha do cidadão
       civic_duty: 
-        description: votou 300 vezes
-        name: dever cívico
+        description: Votou 300 vezes
+        name: Dever cívico
       cleanup: 
-        description: primeira reversão
-        name: limpeza
+        description: Primeira reversão
+        name: Limpeza
       commentator: 
-        description: deixou 10 comentários
+        description: Fez 10 comentários
       critic: 
-        description: votar negativamente pela primeira vez
+        description: Votou negativamente pela primeira vez
       disciplined: 
-        description: eliminou publicação própria com pontuação de 3 ou superior
-        name: disciplinado
+        description: Eliminou publicação própria com pontuação de 3 ou superior
+        name: Disciplinado
       editor: 
-        description: primeira publicação editada
+        description: Primeira publicação editada
       effort_medal: 
-        description: obter 100 votos positivos
+        description: Obteve 100 votos positivos
       enlightened: 
-        description: primeira resposta foi aceite com pelo menos 10 votos positivos
-        name: esclarecido
+        description: Primeira resposta foi aceite com pelo menos 10 votos positivos
+        name: Esclarecido
       famous_question: 
-        description: fez uma pergunta com 10 000 visitas
+        description: Fez uma pergunta com 10 000 visitas
       fanatic: 
-        description: visitou o site em 100 dias consecutivos
+        description: Visitou o site em 100 dias consecutivos
       favorite_question: 
-        description: pergunta adicionada aos favoritos por 25 utilizadores
+        description: Pergunta adicionada aos favoritos por 25 utilizadores
       friendly: 
-        description: seguir alguém pela primeira vez
-        name: amistoso
+        description: Seguir alguém pela primeira vez
+        name: Amistoso
       good_answer: 
-        description: ter dado uma resposta que atinge uma média de mais de 25 votos
+        description: Ter dado uma resposta que atinge uma média de mais de 25 votos
       good_question: 
-        description: ter feito uma pergunta que atinge uma média de mais de 25 votos
+        description: Ter feito uma pergunta que atinge uma média de mais de 25 votos
       great_answer: 
-        description: resposta com 100 votos positivos
-        name: óptima resposta
+        description: Resposta com 100 votos positivos
+        name: Óptima resposta
       great_question: 
-        description: pergunta com 100 votos positivos
-        name: óptima pergunta
+        description: Pergunta com 100 votos positivos
+        name: Óptima pergunta
       guru: 
-        description: dar uma solução a uma pergunta com uma média de mais de 40 votos
+        description: Deu uma solução a uma pergunta com uma média de mais de 40 votos
       inquirer: 
-        description: perguntar pela primeira vez
+        description: Fez a sua primeira pergunta
       interesting_person: 
-        description: obter mais de 10 seguidores
-        name: pessoa interessante
+        description: Obter mais de 10 seguidores
+        name: Pessoa interessante
       merit_medal: 
-        description: obter 200 votos positivos
+        description: Obter 200 votos positivos
       necromancer: 
-        description: respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
-        name: necromante
+        description: Respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
+        name: Necromante
       nice_answer: 
-        description: resposta com 10 votos positivos
-        name: boa resposta
+        description: Resposta com 10 votos positivos
+        name: Boa resposta
       nice_question: 
-        description: pergunta votada positivamente 10 vezes
-        name: boa pergunta
+        description: Pergunta votada positivamente 10 vezes
+        name: Boa pergunta
       notable_question: 
-        description: fez uma pergunta com 2 500 visitas
+        description: Fez uma pergunta com 2500 visitas
       organizer: 
-        description: primeira recategorização
-        name: organizador
+        description: Primeira recategorização
+        name: Organizador
       peer_pressure: 
-        description: eliminou publicação própria com pontuação de -3 ou inferior
-        name: pressão dos pares
+        description: Eliminou publicação própria com pontuação de -3 ou inferior
+        name: Pressão dos pares
       pioneer: 
-        description: ser um dos primeiros utilizadores a registar-se
+        description: Ser um dos primeiros utilizadores a registar-se
       popstar: 
         description: 500 votos positivos, máximo de 10 votos negativos
       popular_person: 
-        description: tem mais de 50 seguidores
-        name: pessoa popular
+        description: Tem mais de 50 seguidores
+        name: Pessoa popular
       popular_question: 
-        description: fez uma pergunta com 1000 visitas
+        description: Fez uma pergunta com 1000 visitas
       rockstar: 
         description: 1000 votos positivos, máximo de 10 votos negativos
       scholar: 
-        description: primeira resposta aceite, numa pergunta do próprio
-        name: académico
+        description: Primeira resposta aceite, numa pergunta do próprio
+        name: Académico
       self-learner: 
-        description: respondeu à sua própria pergunta, com pelo menos 3 votos positivos
-        name: autodidata
+        description: Respondeu à sua própria pergunta, com pelo menos 3 votos positivos
+        name: Autodidata
       service_medal: 
         description: 300 votos positivos
       shapado: 
-        description: visitou o site em 8 dias consecutivos
+        description: Visitou o site em 8 dias consecutivos
       stellar_question: 
-        description: pergunta adicionada aos favoritos por 100 utilizadores
-        name: pergunta extraordinária
+        description: Pergunta adicionada aos favoritos por 100 utilizadores
+        name: Pergunta extraordinária
       student: 
-        description: fez a primeira pergunta com pelo menos um voto positivo
+        description: Fez a primeira pergunta com pelo menos um voto positivo
       supporter: 
-        description: votar positivamente pela primeira vez
+        description: Votou positivamente pela primeira vez
       troubleshooter: 
-        description: responder pela primeira vez
+        description: Deu a sua primeira resposta
       tutor: 
-        description: dar uma solução a uma pergunta com uma média de mais de 2 votos
+        description: Deu uma solução a uma pergunta com uma média de mais de 2 votos
     show: 
-      description: "utilizadores que ganharam este distintivo; recentemente atribuído a:"
+      description: "Utilizadores que receberam este distintivo. Recentemente atribuído a:"
       earned: recebeu
       for_tag_bronze: 200 votos na categoria %{tag}
-      for_tag_gold: 1000 votos na categoria %{tag}
-      for_tag_silver: 400 votos na categoria %{tag}
-      title: distintivo %{type}
+      for_tag_gold: 1000 votos na categoria {{tag}}
+      for_tag_silver: 400 votos na categoria {{tag}}
+      title: Distintivo {{type}}

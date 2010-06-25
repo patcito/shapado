@@ -2,28 +2,30 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Giro720
+# Author: Hamilton Abreu
+# Author: Luckas Blade
 pt-PT: 
   doc: 
     chat: 
-      title: Chat Support
+      title: Supporte por Conversação
     plans: 
       15millions: 15 millions page views/month
       1million: 1 million page views/month
       247_all_support: web based, email, chat and phone 24/7 support
-      5millions: 5 millions page views/month
+      5millions: 5 milhões de visitas/mês
       all_support: web based, email, chat and phone support
       basic_restrictions: no custom ads and no fully customizable UI
       beta_info: For now all sites are free and all sites benefit from the same options as the Optimum plan, except for the support which is only web based, email and chat.
       big_sites: big traffic sites
       custom_ads: Use your own ads
       custom_analytics: Traffic stats
-      custom_domain: Custom domain
+      custom_domain: Domínio personalizado
       custom_themes: make use of our pre-made custom themes
       custom_ui: Fully customizable UI
       free_plan: free plan
       getting_popular: getting popular
       huge_sites: huge traffic sites
-      month: month
+      month: mês
       page_views: Para Sites Pequenos/Particulares
       plans: plans
       private_site: Private site

@@ -6,33 +6,33 @@ pt-PT:
   activerecord: 
     attributes: 
       user: 
-        activated_at: activado em
-        activation_code: código de activação
+        activated_at: Activado em
+        activation_code: Código de activação
         age: Idade
-        asked_by: perguntado por
-        avatar: Profile image
-        birthday: Birthday
+        asked_by: perguntada por
+        avatar: Imagem do perfil
+        birthday: Data de nascimento
         created_at: registado
-        current_password: palavra-passe actual
-        email: endereço de e-mail
-        fullname: nome completo
-        hide_country: Do not display my country
-        language: língua
-        language_filter: filter by language
+        current_password: Palavra-chave actual
+        email: Correio electrónico
+        fullname: Nome completo
+        hide_country: Não mostrar a minha nacionalidade
+        language: Língua
+        language_filter: Filtrar por língua
         last_logged_at: visto
-        login: nome de utilizador
-        name: nome real
-        password: palavra-passe
-        password_confirmation: confirmação da palavra-passe
-        preferred_languages: seleccione os idiomas que conhece
-        preferred_tags: etiquetas preferidas
-        reputation: reputação
-        timezone: localização
-        updated_at: actualizado em
-        website: Website
+        login: Nome de utilizador
+        name: Nome verdadeiro
+        password: Palavra-chave
+        password_confirmation: Confirmação da palavra-chave
+        preferred_languages: Seleccione as línguas que conhece
+        preferred_tags: Categorias preferidas
+        reputation: Reputação
+        timezone: Localização
+        updated_at: Actualizado em
+        website: Site na internet
     models: 
-      user: utilizador
-      users: utilizadores
+      user: Utilizador
+      users: Utilizadores
   users: 
     actions: 
       edit_others_posts: edit other's posts
@@ -60,6 +60,7 @@ pt-PT:
       new_answer_notification: receber notificações via email de novas respostas
       notifications: notificações
       reports_notification: receive a report with latest group activity (only for group admins)
+      show_more_lang: Mostrar mais línguas
     index: 
       empty: este grupo não tem nenhum membro, participa para te juntares a este grupo.
       filter: search for users
@@ -74,7 +75,7 @@ pt-PT:
       title: todos os utilizadores
     messages: 
       errors: 
-        reputation_needed: you need a reputation of %{min_reputation} to %{action}
+        reputation_needed: Precisa de ter uma reputação mínima de %{min_reputation} para %{action}
     new: 
       submit: registar
       title: registar-se como novo utlizador
@@ -84,4 +85,4 @@ pt-PT:
       unfollow: unfollow
       views: visitas
     unfollow: 
-      flash_notice: The user %{user} was removed from your friends
+      flash_notice: O utilizador %{user} foi removido dos seus amigos

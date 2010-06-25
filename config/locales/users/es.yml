@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Patcito
 es: 
   activerecord: 
     attributes: 
@@ -60,6 +61,7 @@ es:
       new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
       notifications: notificaciones
       reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
+      show_more_lang: Mostrar más idiomas
     index: 
       empty: este grupo no tiene miembros, participe para unirse a este grupo.
       filter: Busca usuarios

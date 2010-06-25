@@ -1,6 +1,8 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
+# Author: Luckas Blade
 pt-PT: 
   activerecord: 
     attributes: 
@@ -8,15 +10,15 @@ pt-PT:
         css: stylesheets
         js: javascript
     models: 
-      page: page
-      pages: pages
+      page: Página
+      pages: Páginas
   pages: 
     actions: 
-      create_page: Create new page
-      edit_page: Edit page
-      title: Actions
+      create_page: Criar página nova
+      edit_page: Editar página
+      title: Acções
     create: 
-      success: Page was successfully created.
+      success: A página foi criada com sucesso.
     edit: 
       title: Editing page
     form: 
@@ -24,10 +26,10 @@ pt-PT:
       title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
     index: 
       create_page: create new page
-      title: List of pages
+      title: Lista de páginas
       written_in: written in %{language}
     new: 
-      title: new page
+      title: Página nova
     title: fixme
     update: 
-      success: Page was successfully updated.
+      success: A página foi actualizada.

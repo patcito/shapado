@@ -5,16 +5,16 @@
 pt-PT: 
   comments: 
     create: 
-      flash_notice: thanks for your comment
+      flash_notice: Obrigado pelo seu comentário
     edit: 
-      title: Edit comment
+      title: Editar comentário
     shared: 
-      add_comment: add comment...
+      add_comment: Adicionar comentário...
       comment_submit: Comentar
-      reply: reply
-      said: said
+      reply: Resposta
+      said: disse
     update: 
-      flash_notice: comment was successfully updated.
+      flash_notice: O comentário foi actualizado.
   models: 
-    comment: comment
-    comments: comments
+    comment: Comentário
+    comments: Comentários

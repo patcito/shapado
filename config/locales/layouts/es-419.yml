@@ -1,6 +1,7 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es-419: 
   layouts: 
     application: 
@@ -46,3 +47,5 @@ es-419:
       stats: stats
       theme: tema
       widgets: widgets
+    notifications: 
+      message: Si ya no quieres recibir notificaciones automáticas de %{domain}, cambie sus preferencias en las opciones de notificaciones.

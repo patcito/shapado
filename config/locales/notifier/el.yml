@@ -1,6 +1,7 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Discon
 # Author: Patcito
 el: 
   notifier: 
@@ -11,6 +12,7 @@ el:
     favorited: 
       message1: Ο/η %{user} προσέθεσε την ερώτησή σας ως αγαπημένη στο %{group}
       message2: "Το κείμενο της ερώτησής σας:"
+      message3: "Μπορείτε να το δείτε εδώ:"
     follow: 
       message1: Ο/η %{user} παρακολουθεί τις ερωτήσεις και απαντήσεις σας στο %{app}
       message2: Μπορείτε να τον ακολουθήσετε κι εσείς πατώντας στο κουμπί "ακολουθήστε" στην %{user_page}
@@ -26,12 +28,17 @@ el:
       message: Ο/η %{user} αποδέχτηκε την απάντηση %{new_answer} στην ερώτηση %{question}
     new_comment: 
       message: Ο/η %{user} σχολίασε %{new_comment} στην ερώτηση %{question}
+    new_feedback: 
+      message1: Ο χρήστης %{user} <%{email}> έστειλε σχόλια
+      message2: Ένας ανώνυμος χρήστης έστειλε σχόλια από την IP διεύθυνση %{ip}
+      message3: "Ηλεκτρονική διεύθυνση: %{email}"
+      message4: "Θέμα: %{subject}"
     report: 
       message1: αναφορά για την ομάδα %{group.name}
       message2: από %{since}
       message3: ερωτήθηκαν %{questions} ερωτήσεις
       message4: δόθηκαν %{answers} απαντήσεις
-      message5: "δόθηκαν #%{votes} ψήφοι"
+      message5: δόθηκαν %{votes} ψήφοι
       message6: χορηγήθηκαν %{badges} τίτλοι
       message7: Η ομάδα έχει %{users} χρήστες.
       message8: Επισκεφθείτε την ομάδα στο %{link}

@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 # Author: Peter17
 fr: 
   activerecord: 
@@ -60,6 +61,7 @@ fr:
       new_answer_notification: obtenir des notifications via email de nouvelles réponses
       notifications: notifications
       reports_notification: recevoir un rapport avec les dernières activités du groupes (juste pour l'admin du groupe)
+      show_more_lang: Afficher plus de langues
     index: 
       empty: ce groupe n'a pas de membres pour l'instant, participer pour en devenir un.
       filter: Recherchez des utilisateurs

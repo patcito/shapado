@@ -15,9 +15,9 @@ pt-PT:
         top_bar_tip: Introduza um link por linha
       properties: 
         constrains: 
-          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os utilizadores necessitam para poderem executar uma determinada operação
-          reputation_constrains_subtitle: list of reputations constrains for each action
-          title: constrains
+          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os utilizadores necessitam para poderem executar uma determinada acção
+          reputation_constrains_subtitle: Lista de requisitos de reputação para cada acção
+          title: Requisitos
         domain: 
           description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
           instruction1: To do so you first need to log on to your domain provider (the site where you bought your domain such as %{subdomain}.com).
@@ -31,7 +31,7 @@ pt-PT:
         general: 
           title: group properties
         rewards: 
-          reputation_rewards_description: this formular allows you to configure how users can win and lose reputation points for a given action
+          reputation_rewards_description: Este formulário permite-lhe configurar de que forma os utilizadores podem ganhar e perder pontos de reputação por uma dada acção \
           reputation_rewards_subtitle: list of reputations rewards
           title: rewards
         share: 

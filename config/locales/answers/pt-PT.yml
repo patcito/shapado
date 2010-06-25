@@ -1,28 +1,29 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     attributes: 
       answer: 
-        body: conteúdo
-        created_at: answered
-        link: ligação
+        body: Conteúdo
+        created_at: Respondida
+        link: Link
     models: 
-      answer: resposta
-      answers: respostas
+      answer: Resposta
+      answers: Respostas
   answers: 
     create: 
-      flash_error: "algo correu mal ao adicionar a sua resposta. \n  lembre-se que: \n - respostas vazias e repetidas não são permitidas \n - tem que esperar 20 segundos para colocar uma nova resposta. \n - só pode colocar uma resposta por pergunta."
-      flash_notice: obrigado!
+      flash_error: "Algo correu mal ao adicionar a sua resposta.\n  Lembre-se que:\n - Respostas vazias e repetidas não são permitidas.\n - Tem que esperar 20 segundos para colocar outra resposta.\n - Só pode colocar uma resposta por pergunta."
+      flash_notice: Obrigado!
     edit: 
-      title: editar resposta
+      title: A editar a resposta
     form: 
-      answer_label: responde à pergunta
-      comment_label: comenta sobre esta resposta
-      comment_submit: comentar
-      submit: submeter
+      answer_label: Responder à pergunta
+      comment_label: Comentar esta resposta
+      comment_submit: Comentar
+      submit: Responder
     revert: 
-      title: revert answer
+      title: Reverter a resposta
     update: 
-      flash_notice: resposta foi actualizada com sucesso.
+      flash_notice: A resposta foi actualizada.
