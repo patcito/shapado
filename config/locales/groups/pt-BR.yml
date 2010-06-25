@@ -1,0 +1,47 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Luckas Blade
+pt-BR: 
+  activerecord: 
+    attributes: 
+      group: 
+        description: Descrição
+        forum: Permitir mais do que uma resposta por usuário
+        language: Língua
+        logo: Logotipo
+        name: Nome
+        registered_only: Somente pessoas registradas podem acessar o site
+        state: Estado
+        subdomain: Url
+    models: 
+      group: Grupo
+      groups: Grupos
+  groups: 
+    create: 
+      flash_notice: O seu grupo foi criado, pode agora começar a configurá-lo.
+    form: 
+      custom_html: Permitir HTML personalizado
+      custom_js: Permitir javascript personalizado
+      description_legend: Você pode usar 400 caracteres para descrever o grupo.
+      isolate_group: Isolar o grupo de outros grupos
+    group: 
+      about: Sobre
+      accept_group: Aceitar este grupo
+      allow_ads: Permitir anúncios
+      close: Fechar
+      close_group: Fechar este grupo
+      disallow_ads: Não permitir anúncios
+    index: 
+      filter: Pesquisar grupos
+      name: Nome
+      title: Grupos
+    new: 
+      title: Criar seu grupo
+    show: 
+      accept_group: Aceitar este grupo
+      accept_group_with_custom_ads: Aceitar grupo e permitir anúncios personalizados
+      close_group: Fechar este grupo
+      group_awaiting_acceptance: Este grupo está aguardando a aceitação de um moderador.
+      group_closed: Este grupo foi fechado.
+      visit_group: Visitar este grupo

@@ -1,0 +1,51 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  layouts: 
+    application: 
+      ask_question: Frage stellen
+      badges: Abzeichen
+      forgot: Vergessen?
+      home: Startseite
+      languages: Sprachen
+      log_in: Anmeldung
+      logged: Als %{login} angemeldet
+      logout: Abmelden
+      manage_ads: Anzeigen verwalten
+      moderate: Moderieren
+      now: jetzt!
+      openid: 
+        explaination: "Sofern Du Dich nicht registrieren oder anmelden möchtest, kannst Du auch Deinen OpenID-Anbieter auswählen:"
+      pages: Seiten
+      questions: Fragen
+      questions_in: Fragen in
+      questions_tagged: mit folgenden Stichwörtern versehen
+      search: Suchen
+      settings: Einstellungen
+      signup: Registrieren
+      subscribe: Abonnieren
+      tags: Stichwörter
+      title: Fragen und Antworten
+      unanswered: Unbeantwortet
+      users: Nutzer
+      welcome_from: Herzlich Willkommen! Du kannst
+    manage: 
+      actions: Aktionen
+      announcements: Ankündigungen
+      constrains: Voraussetzungen
+      content: Inhalt
+      dashboard: Übersichtsseite
+      domain: Domain
+      general: Allgemein
+      members: Mitglieder
+      pages: Seiten
+      properties: Eigenschaften
+      reputation: Reputation
+      rewards: Auszeichnungen
+      stats: Statistiken
+      theme: Theme
+      widgets: Widgets
+    notifications: 
+      message: Sofern Du keine automatischen Benachrichtigungen mehr von %{domain} erhalten möchtest, musst Du Deine Einstellungen auf der Benachrichtigungsseite ändern.

@@ -1,0 +1,16 @@
+# Messages for Polish (Polski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Sp5uhe
+pl: 
+  ads: 
+    ad_links: Dodaj nową {{type}} reklamę
+    create: 
+      success: Reklama została utworzona.
+    index: 
+      add_adbard: Dodaj nowy billboard reklamowy
+      add_adsense: Dodaj nową reklamę kontekstową google
+      title: Reklamy
+    name: Nazwa
+    position: Pozycja
+    title: Dodaj nową {{type}} reklamę

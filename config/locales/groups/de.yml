@@ -1,0 +1,73 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+# Author: Ookami
+de: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Standard-Stichwörter
+        description: Beschreibung
+        domain: Domain
+        fb_button: Aktiviere eine Schaltfläche, ähnlich wie bei Facebook (nicht privatsphärenfreundlich)
+        forum: Mehr als eine Antwort pro Nutzer zulassen
+        group_created_by: erstellt von
+        language: Sprache
+        legend: Legende
+        logo: Logo
+        may_contain_adult_content: Diese Website enthält möglicherweise jugendgefährdende Inhalte
+        name: Name
+        openid_only: Nur Personen, die OpenID nutzen, können auf die Website zugreifen
+        owner: Diese Gruppe wurde erstellt von {{login}}
+        registered_only: Diese Website ist nur für registrierte Nutzer zugänglich
+        state: Land
+        subdomain: URL
+        wysiwyg_editor: Nutzerfreundlichen Editor aktivieren
+    models: 
+      default_tags_message: Du kannst nicht mehr als 10 Standard-Stichwörter verwenden
+      group: Gruppe
+      groups: Gruppen
+  groups: 
+    create: 
+      flash_notice: Deine Gruppe wurde erfolgreich erstellt. Du kannst jetzt beginnen, sie zu konfigurieren.
+    form: 
+      access: Zugangs-Einstellungen
+      analytics_engine: Webanalytik-System
+      analytics_legend: Die Gruppe wird ihren eigenen Tracking-Code zu verwenden können
+      any_language: Alle
+      custom_analytics: Nutzerdefinierte Webanalytik erlauben
+      custom_html: Erlaube nutzerdefiniertes HTML
+      custom_js: Erlaube nutzerdefiniertes JavaScript
+      default_tags_legend: Stichwörter durch Kommas trennen. Es sind nur 10 Standard-Stichwörter zulässig.
+      description_legend: Beschreibe deine Gruppe mit max. 400 Zeichen.
+      isolate_group: Diese Gruppe von anderen Gruppen isolieren
+      legend_legend: Es wird in der Kopfzeile verwendet werden. Sie haben 40 Zeichen.
+      logo_legend: Du kannst ein Gruppenlogo hochladen. Die maximale Dateigröße beträgt 2 MB.
+      members_only: Nur Gruppenmitglieder haben Zugriff auf diese Gruppe.
+      website_analytics_id: Webanalytik-ID der Website
+    group: 
+      about: Über
+      accept_group: Diese Gruppe akzeptieren
+      allow_ads: Werbung erlauben
+      close: Schließen
+      close_group: Diese Gruppe schließen
+      disallow_ads: Werbung verbieten
+    index: 
+      actives: Aktiv
+      filter: Nach Gruppen suchen
+      most_active: Aktivste
+      name: Name
+      pendings: Ausstehend
+      request_group: Neue Gruppe beantragen
+      title: Gruppen
+    new: 
+      title: Gruppe erstellen
+    show: 
+      accept_group: Diese Gruppe akzeptieren
+      accept_group_with_custom_ads: Gruppe akzeptieren sowie nutzerdefinierte Anzeigen erlauben
+      close_group: Diese Gruppe schließen
+      group_awaiting_acceptance: Diese Gruppe wartet auf Freigabe durch einen Moderator.
+      group_closed: Diese Gruppe wurde geschlossen.
+      title: Über {{name}}
+      visit_group: Diese Gruppe besuchen

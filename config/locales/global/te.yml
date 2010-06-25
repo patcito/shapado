@@ -1,0 +1,43 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  actions: 
+    closed: మూసివేయబడింది
+    created: సృష్టించబడినది
+    deleted: తొలిగించబడినది
+    updated: తాజాకరించబడినది
+  global: 
+    by: చే
+    current: ప్రస్తుత
+    from: "{{site}} నుంచి"
+    or: లేదా
+    please_login: దయచేసి ప్రవేశించండి
+    preview: మునుజూపు
+    previous: మునుపటి
+    share: పంచుకో
+  languages: 
+    any: ఏదయినా
+    user: నా ప్రాధాన్యతా భాషలు
+  models: 
+    question: ప్రశ్న
+  number: 
+    x_time: 
+      zero: ఎప్పటికీ వద్దు
+  scaffold: 
+    add: చేర్చు
+    back: వెనక్కి
+    cancel: రద్దుచేయి
+    close: మూసివేయి
+    destroy: తొలగించు
+    details: వివరాలు
+    edit: సరిదిద్దు
+    more: ఇంకా...
+    save: భద్రపరుచు
+    show: చూపించు
+    update: తాజాకరించు
+  time: 
+    ago: "{{time}} క్రితం"
+    today: ఈరోజు

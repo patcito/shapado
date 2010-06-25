@@ -2,6 +2,7 @@ I18n.backend.store_translations 'es-419', {}
 I18n.backend.store_translations 'en', {}
 I18n.backend.store_translations 'fr', {}
 I18n.backend.store_translations 'pt-PT', {}
+I18n.backend.store_translations 'pt-BR', {}
 I18n.backend.store_translations 'ja', {}
 I18n.backend.store_translations 'el', {}
 I18n.backend.store_translations 'be-TARASK', {}

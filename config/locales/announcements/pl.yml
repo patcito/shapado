@@ -1,0 +1,20 @@
+# Messages for Polish (Polski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Sp5uhe
+pl: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Zakończ
+        message: Komunikat
+        only_anonymous: Tylko dla anonimowych użytkowników
+        starts_at: Rozpocznij
+  announcements: 
+    actions: 
+      delete: Usuń
+      title: Działania
+    create: 
+      success: Ogłoszenie zostało utworzone.
+    index: 
+      title: Ogłoszenia

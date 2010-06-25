@@ -1,0 +1,29 @@
+# Messages for Polish (Polski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Sp5uhe
+pl: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Treść
+        created_at: Z odpowiedziami
+        link: Link
+    models: 
+      answer: Odpowiedź
+      answers: Odpowiedzi
+  answers: 
+    create: 
+      flash_error: "Coś poszło nie tak z dodaniem odpowiedzi. \nPamiętaj, że: \n– puste i powtarzające się odpowiedzi nie są akceptowane\n– trzeba odczekać 20 sekund przed opublikowaniem kolejnej odpowiedzi\n– można tylko raz odpowiedzieć na pytanie"
+      flash_notice: Dziękujemy!
+    edit: 
+      title: Redagowanie odpowiedzi
+    form: 
+      answer_label: Odpowiedź na pytanie
+      comment_label: Skomentuj tę odpowiedź
+      comment_submit: Komentarz
+      submit: Odpowiedź
+    revert: 
+      title: Przywróć odpowiedź
+    update: 
+      flash_notice: Odpowiedź została zaktualizowana.

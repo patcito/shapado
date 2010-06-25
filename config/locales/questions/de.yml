@@ -1,0 +1,136 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Antworten
+        asked_by: Gefragt von
+        body: Text
+        closed: Beendet
+        created_at: Gefragt
+        language: Sprache
+        tags: Stichwörter
+        title: Titel
+        updated_at: aktualisiert
+        updated_by: aktualisiert von
+        views: Aufrufe
+        votes: Bewertungen
+    models: 
+      question: Frage
+      questions: Fragen
+  questions: 
+    answer: 
+      add_comment: Kommentar hinzufügen …
+      flag: Kennzeichnen
+      pick_answer: Als Lösung auswählen
+      unset_answer: Antwort in Frage stellen?
+    create: 
+      flash_notice: Die Frage wurde erfolgreich erstellt.
+    edit: 
+      title: Bearbeiten der Frage
+    flag: 
+      title: Kennzeichnen der Frage
+    form: 
+      adult_content: Diese Frage enthält jugendgefährdende Angaben.
+      body_tip: Wie lautet Deine Frage? Sei aussagekräftig.
+      language_tip: Wähle die Sprache der Frage.
+      tags_tip: Verwende Stichwörter, um weitere Informationen zu Deiner Frage anzugeben.
+    index: 
+      active: Aktiv
+      active_tooltip: Fragen die vor kurzem aktualisiert wurden
+      ask_question: Frage stellen
+      empty: Bislang hat noch niemand eine Frage gestellt. Sei der Erste!
+      help_to_answer: Helfe uns beim Antworten
+      hot: Heiß
+      hot_tooltip: Fragen mit den meisten Aktivitäten während der letzten 5 Tage
+      newest: Neueste
+      newest_tooltip: Die zuletzt gestellten Fragen
+      oldest: Älteste
+      title: Alle Fragen
+      unanswered_questions: Offene Fragen
+      votes: Bewertungen
+      votes_tooltip: Fragen mit den meisten Bewertungen
+    model: 
+      messages: 
+        empty_tags: Du musst mindestens ein Stichwort verwenden.
+        title_too_long: Der Titel ist zu lang. Er darf aus nicht mehr als 100 Zeichen bestehen.
+        too_many_tags: Du kannst maximal neun Stichwörter verwenden.
+        too_short: Scheint zu kurz zu sein. Bitte verwende mehr als %{count} Wörter.
+    move: 
+      group_label: "Verschiebe zur Gruppe:"
+      submit: Verschieben!
+      title: "Verschiebe Frage: %{title}"
+    move_to: 
+      group_dont_exists: Die Gruppe %{group} existiert nicht
+      success: Frage wurde nach %{group} verschoben
+    new: 
+      how_to_ask: Wie fragen
+      title: Frage stellen
+    question: 
+      accepted_tooltip: Zu dieser Frage gibt es eine Antwort, die akzeptiert wurde
+    retag: 
+      title: Stichwörter ändern
+    retag_form: 
+      cancel: Abbrechen
+      submit: Stichwörter aktualisieren!
+      title: Stichwörter aktualisieren
+    retag_to: 
+      failure: Leider konnten die Stichwörter nicht aktualisiert werden.
+      success: Die Stichwörter wurden erfolgreich aktualisiert.
+    revert: 
+      title: Frage zurücksetzen
+    shared: 
+      flag: Kennzeichnen
+    show: 
+      accepted_tooltip: Eine der Antworten wurde als richtig akzeptiert
+      another_answers: Andere Antworten
+      answers: Antworten
+      answers_title: 
+        one: "%{count} Antwort"
+        other: "%{count} Antworten"
+      asked_on: gefragt bei
+      ban: Verbieten
+      close: Beendet
+      close_reason: "Die Frage wurde aus folgenden Gründen beendet:"
+      favorite_tooltip: Diese Frage zur Favoritenliste hinzufügen
+      flag: Kennzeichen
+      flagged_as: Gekennzeichnet als
+      flags: Gemeldet als
+      last_activity: Letzte Aktivität
+      related_questions: Ähnliche Frage
+      request_closing: Beendigung beantragen
+      request_closing_details: Beantrage diese Frage zu beenden
+      retag: Stichwörter ändern
+      retract_request: Du hast bereits einen Antrag gestellt. Möchtest Du ihn zurückziehen?
+      share: Auf diese Frage aufmerksam machen bei
+      share_on: Auf diese Frage bei %{site} aufmerksam machen
+      solution: Lösung
+      to_answer_question: Frage beantworten
+      unauthenticated_retag: Du brauchst ein Nutzerkonto, um die Stichwörter ändern zu können
+      unfavorite_tooltip: Diese Frage aus der Favoritenliste entfernen
+      unwatch_tooltip: Diese Frage nicht mehr beobachten
+      viewed: Gesehen
+      watch_tooltip: Diese Frage beobachten
+    solve: 
+      flash_notice: Die Frage wurde beantwortet.
+    tags: 
+      filter: Suche nach Stichwörtern
+      title: Stichwörter
+      tooltip: Alle Fragen mit dem Stichwort %{tag} anzeigen
+    unanswered: 
+      empty: Diese Gruppe beinhaltet keine offenen Fragen.
+      expert: Experten
+      my_tags: Meine Stichwörter
+      tags: Offene Stichwörter
+      title: Offene Fragen
+    unsolve: 
+      flash_notice: Die Frage wird nicht mehr beantwortet.
+    unwatch: 
+      success: Du erhältst nun keine E-Mail-Benachrichtigungen mehr zu jeder neuen Antwort auf diese Frage
+    update: 
+      flash_notice: Die Frage wurde erfolgreich aktualisiert.
+    watch: 
+      success: Du erhältst nun E-Mail-Benachrichtigungen zu jeder neuen Antwort auf diese Frage

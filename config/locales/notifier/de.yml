@@ -1,0 +1,43 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  notifier: 
+    earned_badge: 
+      message1: Du hast ein %{badge}-Abzeichen auf %{app} erhalten
+      message2: "Beschreibung zum Abzeichen:"
+      message3: Du kannst alle Deine Abzeichen auf Deiner %{user_page} sehen
+    favorited: 
+      message1: "%{user} hat Deine Frage als Favorit in %{group} hinzugefügt"
+      message2: "Der Text Deiner Frage:"
+      message3: "Du kannst es hier sehen:"
+    follow: 
+      message1: "%{user} beachtet nun Deine Fragen und Antworten auf %{app}"
+      message2: Du kannst ihn beachten, indem Du auf die Schaltfläche „Beachten“ auf seiner %{user_page} klickst
+    give_advice: 
+      message1: "%{user} hat gerade eine Frage gestellt, die Du vielleicht beantworten kannst:"
+      message2: "Um zu Antworten, erwidere die Nachricht hier:"
+      message3: "Oder, wenn Du jemanden kennst, der die Frage beantworten könnte, schicke ihm diesen Link:"
+      message4: Sofern wir von Dir nicht bald eine Antwort erhalten, werden wir jemand anderen fragen. Dennoch kannst Du antworten, wann immer Du möchtest.
+    global: 
+      hi: Hallo %{user},
+      user_page: Nutzerseite
+    new_answer: 
+      message: "%{user} hat %{new_answer} zu Frage %{question} verfasst"
+    new_comment: 
+      message: "%{user} hat %{new_comment} zu Frage %{question} verfasst"
+    new_feedback: 
+      message1: Der Nutzer %{user} <%{email}> hat eine Rückmeldung gegeben
+      message2: Ein anonymer Nutzer mit der IP-Adresse %{ip} hat eine Rückmeldung gegeben
+      message3: "E-Mail-Adresse: %{email}"
+      message4: "Betreff: %{subject}"
+    report: 
+      message1: Bericht für Gruppe %{group.name}
+      message2: Seit %{since}
+      message3: "%{questions} Fragen wurden gestellt"
+      message4: "%{answers} Antworten wurden verfasst"
+      message5: "%{votes} Bewertungen wurden abgegeben"
+      message6: "%{badges} Abzeichen wurden vergeben"
+      message7: Das Konto hat %{users} Nutzer.
+      message8: Besuche Deine Gruppe unter %{link}

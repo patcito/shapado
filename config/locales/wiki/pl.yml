@@ -1,0 +1,22 @@
+# Messages for Polish (Polski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Sp5uhe
+pl: 
+  wiki: 
+    actions: 
+      all_history: Powrót do historii
+      back_to_question: Wróć do pytania
+      revert: Przywróć tę wersję
+      show_diff: Porównaj wybrane wersje
+    diff: 
+      title: Różnice pomiędzy %{prev} i %{curr}
+    history: 
+      current_version: Aktualna wersja
+      previous_versions: Poprzednie wersje
+      title: Historia (%{count})
+      version: Wersja
+      version_summary: Podsumowanie wersji
+    model: 
+      attributes: 
+        message: Podsumowanie

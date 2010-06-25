@@ -1,0 +1,60 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  actions: 
+    closed: beendet
+    created: erstellt
+    deleted: gelöscht
+    updated: aktualisiert
+  feeds: 
+    feed: Feed
+    post_new_questions: Erstelle neue Fragen zu
+    question: Abonniere diese Frage
+    questions: Abonniere alle Fragen
+    share_on_twitter: Twitter, Facebook und mehr …
+    tag: Abonniere das Stichwort
+    user: Abonniere die Fragen des Nutzers
+  global: 
+    by: von
+    current: Aktuell
+    from: von {{site}}
+    group_not_found: Die Seite {{url}} existiert nicht
+    or: oder
+    permission_denied: Zugriff verweigert
+    please_login: Bitte melde Dich an
+    preview: Vorschau betrachten
+    previous: Vorherige
+    share: freigeben
+  languages: 
+    any: Alle
+    user: Meine bevorzugten Sprachen
+  messages: 
+    success: "{{model}} wurde erfolgreich {{action}}."
+  models: 
+    question: Die Frage
+  number: 
+    x_time: 
+      one: "{{count}}-mal"
+      other: "{{count}}-mal"
+      zero: Nie
+  scaffold: 
+    add: Hinzufügen
+    back: Zurück
+    cancel: Abbrechen
+    close: Schließen
+    create: Erstellen
+    destroy: Löschen
+    details: Einzelheiten
+    edit: Bearbeiten
+    more: Mehr …
+    new: Neue {{model}} hinzufügen
+    save: Speichern
+    send: Senden
+    show: Zeigen
+    sure: Bist Du sicher, dass Du diese {{model}} löschen möchtest?
+    update: Aktualisieren
+  time: 
+    ago: vor {{time}}
+    today: heute
