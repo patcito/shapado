@@ -13,7 +13,7 @@ en:
   \n  Remember that:
   \n - Empty and repeated answers are not allowed
   \n - You need to wait 20 seconds before posting another answer.
-  \n - You can only post one answer by question."
+  \n - You can only post one answer per question."
     update:
       flash_notice: "Answer was successfully updated."
     revert:

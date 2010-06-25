@@ -1,9 +1,9 @@
 en:
   votes:
     create:
-      flash_notice: "Thanks voting!"
+      flash_notice: "Thanks for voting!"
       flash_error:  "You cannot vote this"
-      unauthenticated: "Anonymous users can't vote"
+      unauthenticated: "Anonymous users cannot vote"
     destroy:
       flash_notice: "Your vote has been revoked successfully."
     control:

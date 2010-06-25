@@ -2,10 +2,10 @@ en:
   badges:
     index:
       title: badges
-      description: "All badges that you can earn. share your knowledge earn badges."
+      description: "All badges that you can earn. Share your knowledge earn badges."
     show:
       title: Badge %{type}
-      description: "Users who earned this badge. recently awarded to:"
+      description: "Users who earned this badge. Recently awarded to:"
       for_tag_bronze: 200 votes in tag %{tag}
       for_tag_silver: 400 votes in tag %{tag}
       for_tag_gold: 1000 votes in tag %{tag}
@@ -28,7 +28,7 @@ en:
       popular_person:
         description: Your profile is visited 10000 times
       guru:
-        description: Gave a solution to a question with an average of  more than 40 votes
+        description: Gave a solution to a question with an average of more than 40 votes
       favorite_question:
         description: Question favorited by 25 users
       tutor:
@@ -40,7 +40,7 @@ en:
       good_answer:
         description: Having an answer that reaches an average of more than 25 votes
       pioneer:
-        description: Be one of the first user to register
+        description: Be one of the first users to register
       supporter:
         description: Voted positively for the first time
       critic:
@@ -121,7 +121,6 @@ en:
       organizer:
         name: Organizer
         description: First retag
-
   activerecord:
     models:
       badge: Badge

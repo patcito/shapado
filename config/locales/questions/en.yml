@@ -55,8 +55,8 @@ en:
     question:
       accepted_tooltip: This question has an answer that has been accepted
     form:
-      body_tip: What's your question? Be descriptive.
-      language_tip: Select the language's question.
+      body_tip: What is your question? Be descriptive.
+      language_tip: Select the language the question is asked in.
       tags_tip:  Use tags to add more information about your question.
       adult_content: This question contains adult material.
     flag:
@@ -85,9 +85,9 @@ en:
     unsolve:
       flash_notice: "The question is not solved anymore."
     watch:
-      success:      "You will now receive notifications by e-mail for every new answer to this question."
+      success:      "You will now receive notifications by email for every new answer to this question."
     unwatch:
-      success:      "You will not receive notifications by e-mail for every new answer to this question anymore."
+      success:      "You will not receive notifications by email for every new answer to this question anymore."
     revert:
       title: "Revert question"
     move:
