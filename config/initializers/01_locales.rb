@@ -27,11 +27,11 @@ I18n.load_path << Dir[ File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,y
 # You need to "force-initialize" loaded locales
 I18n.backend.send(:init_translations)
 
-AVAILABLE_LOCALES = ["be-TARASK", "br", "de", "el", "en", "es-419", "fi", "fr", "gl", "ia", "ja", "ko", "lb", "mk", "nb", "nl", "pms", "pt-PT", "ru", "te", "tl"] #I18n.backend.available_locales.map { |l| l.to_s }
+AVAILABLE_LOCALES = ["be-TARASK", "br", "de", "el", "en", "es-419", "fi", "fr", "gl", "ia", "ja", "ko", "lb", "mk", "nb", "nl", "pms", "pl", "pt-BR", "pt-PT", "ru", "te", "tl"] #I18n.backend.available_locales.map { |l| l.to_s }
 AVAILABLE_LANGUAGES = I18n.backend.available_locales.map { |l| l.to_s.split("-").first}.uniq
 
 ## this is only for the user settings, not related to translatewiki
-DEFAULT_USER_LANGUAGES = ['en', 'es-419', 'fr', 'pt-PT', 'ja', 'el', 'de', 'ko', 'nl', 'ru', 'tl', 'it']
+DEFAULT_USER_LANGUAGES = ['en', 'es-419', 'fr', 'pl', 'pt-BR', 'pt-PT', 'ja', 'el', 'de', 'ko', 'nl', 'ru', 'tl', 'it']
 
 RAILS_DEFAULT_LOGGER.debug "* Loaded locales: #{AVAILABLE_LOCALES.inspect}"
 
