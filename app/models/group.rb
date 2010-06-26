@@ -224,19 +224,40 @@ class Group
   end
 
   def check_reputation_configs
-    self.reputation_constrains.each do |k,v|
-      self.reputation_constrains[k] = v.to_i
-      if !REPUTATION_CONSTRAINS.has_key?(k)
-        self.errors.add(:reputation_constrains, "Invalid key")
-        return false
+    if self.reputation_constrains_changed?
+      self.reputation_constrains.each do |k,v|
+        self.reputation_constrains[k] = v.to_i
+        if !REPUTATION_CONSTRAINS.has_key?(k)
+          self.errors.add(:reputation_constrains, "Invalid key")
+          return false
+        end
       end
     end
 
-    self.reputation_rewards.each do |k,v|
-      self.reputation_rewards[k] = v.to_i
-      if !REPUTATION_REWARDS.has_key?(k)
-        self.errors.add(:reputation_rewards, "Invalid key")
-        return false
+    if self.reputation_rewards_changed?
+      valid = true
+      [["vote_up_question", "undo_vote_up_question"],
+       ["vote_down_question", "undo_vote_down_question"],
+       ["question_receives_up_vote", "question_undo_up_vote"],
+       ["question_receives_down_vote", "question_undo_down_vote"],
+       ["vote_up_answer", "undo_vote_up_answer"],
+       ["vote_down_answer", "undo_vote_down_answer"],
+       ["answer_receives_up_vote", "answer_undo_up_vote"],
+       ["answer_receives_down_vote", "answer_undo_down_vote"],
+       ["answer_picked_as_solution", "answer_unpicked_as_solution"]].each do |action, undo|
+        if self.reputation_rewards[action].to_i > (self.reputation_rewards[undo].to_i*-1)
+          valid = false
+          self.errors.add(undo, "should be less than #{(self.reputation_rewards[action].to_i)*-1}")
+        end
+      end
+      return false unless valid
+
+      self.reputation_rewards.each do |k,v|
+        self.reputation_rewards[k] = v.to_i
+        if !REPUTATION_REWARDS.has_key?(k)
+          self.errors.add(:reputation_rewards, "Invalid key")
+          return false
+        end
       end
     end
 

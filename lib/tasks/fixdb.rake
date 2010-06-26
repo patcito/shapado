@@ -87,5 +87,24 @@ namespace :fixdb do
                 "authentication_token" => UUIDTools::UUID.random_create.hexdigest})
     end
   end
+
+  task :reputation_rewards => :environment do
+    Group.find_each do |g|
+      [["vote_up_question", "undo_vote_up_question"],
+       ["vote_down_question", "undo_vote_down_question"],
+       ["question_receives_up_vote", "question_undo_up_vote"],
+       ["question_receives_down_vote", "question_undo_down_vote"],
+       ["vote_up_answer", "undo_vote_up_answer"],
+       ["vote_down_answer", "undo_vote_down_answer"],
+       ["answer_receives_up_vote", "answer_undo_up_vote"],
+       ["answer_receives_down_vote", "answer_undo_down_vote"],
+       ["answer_picked_as_solution", "answer_unpicked_as_solution"]].each do |action, undo|
+         if g.reputation_rewards[action] > (g.reputation_rewards[undo]*-1)
+           print "fixing #{g.name} #{undo} reputation rewards\n"
+           g.set("reputation_rewards.#{undo}" => g.reputation_rewards[action]*-1)
+         end
+       end
+    end
+  end
 end
 
