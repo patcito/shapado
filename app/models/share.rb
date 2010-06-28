@@ -9,4 +9,5 @@ class Share
   key :ends_with, String
 
   key :twitter_user, String
+  key :twitter_pattern, String
 end
