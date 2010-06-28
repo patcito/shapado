@@ -52,6 +52,8 @@ en:
       retag_others_questions: "Retag others questions"
       vote_to_close_own_question: "Request closing own question"
       vote_to_close_any_question: "Request closing any question"
+    anonymous_form:
+      never_shown: never shown
   activerecord:
     models:
       users: Users
