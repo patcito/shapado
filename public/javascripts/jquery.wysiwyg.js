@@ -78,11 +78,6 @@
 						return retValue;
                 }
 
-                if (!(this.data('wysiwyg') === null))
-                {
-                        return this;
-                }
-
                 var controls = { };
 
                 /**
