@@ -35,6 +35,7 @@
 
 %h1
   Asking from twitter
+
 .group
   %label.label
     question asked to
@@ -43,11 +44,17 @@
   .description
     a twitter account
 
+.group
   %label.label
     question must include
   =text_field_tag 'group[share][twitter_pattern]', @group.share.twitter_pattern, :class => "text_field"
   .description
     ==ie. #iAsk
+
+.group
+  = check_box_tag 'group[share][enable_twitter]', true, @group.share.enable_twitter, :class => "checkbox"
+  %label.radio
+    active
 
 .group.navform
   = f.submit t('scaffold.update')

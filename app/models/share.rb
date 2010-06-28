@@ -8,6 +8,7 @@ class Share
   key :starts_with, String
   key :ends_with, String
 
+  key :enable_twitter, Boolean, :default => false
   key :twitter_user, String
   key :twitter_pattern, String
 end
