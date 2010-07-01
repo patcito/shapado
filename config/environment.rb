@@ -35,7 +35,7 @@ Rails::Initializer.run do |config|
   config.gem "magent", :version => "0.4"
   config.gem "differ", :version => "0.1.1"
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
-  config.gem "warden", :version => "0.10.3"
+  config.gem "warden", :version => "0.10.7"
   config.gem "devise", :version => "1.0.7"
   config.gem "twitter-text", :version => "1.1.1"
   config.gem "oauth2", :version => "0.0.8"
