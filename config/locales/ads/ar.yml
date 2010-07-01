@@ -1,0 +1,15 @@
+# Messages for Arabic (العربية)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: عمرو
+ar: 
+  ads: 
+    ad_links: أضف إعلان {{type}} جديد
+    create: 
+      success: تم إنشاء الإعلان بنجاح
+    index: 
+      add_adsense: أضف إعلان Google جديد
+      title: إعلانات
+    name: "الاسم:"
+    position: "الموضع:"
+    title: أضف إعلان {{type}} جديد

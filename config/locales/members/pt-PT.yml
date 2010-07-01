@@ -1,15 +1,16 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   activerecord: 
     attributes: 
       member: 
-        role: role
+        role: Função
   members: 
     form: 
-      login_tip: search as you type
+      login_tip: Procurar enquanto escreve
     index: 
-      manage_members_title: manage members
-      title: members of %{name}'s group
-      title_isolate: members of %{name}
+      manage_members_title: Administrar membros
+      title: Membros do grupo de %{name}
+      title_isolate: Membros de %{name}

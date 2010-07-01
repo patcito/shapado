@@ -1,0 +1,10 @@
+# Messages for Bosnian (Bosanski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Palapa
+bs: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: Potrebna potvrda
+        title: Pošalji potvrdne e-mail poruke

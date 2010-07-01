@@ -7,8 +7,8 @@ pt-PT:
   activerecord: 
     attributes: 
       page: 
-        css: stylesheets
-        js: javascript
+        css: Stylesheets
+        js: JavaScript
     models: 
       page: Página
       pages: Páginas
@@ -18,18 +18,18 @@ pt-PT:
       edit_page: Editar página
       title: Acções
     create: 
-      success: A página foi criada com sucesso.
+      success: A página foi criada.
     edit: 
-      title: Editing page
+      title: A editar página
     form: 
-      language_tip: page language
-      title_tip: "Page title, use this to reference the page. for example: [[FAQ|check out the faq]]"
+      language_tip: Língua da página
+      title_tip: "Título da página, usado para referi-la. Por exemplo: [[FAQ|veja a FAQ]]"
     index: 
-      create_page: create new page
+      create_page: Criar página nova
       title: Lista de páginas
-      written_in: written in %{language}
+      written_in: Escrita em %{language}
     new: 
       title: Página nova
-    title: fixme
+    title: Corrigir
     update: 
       success: A página foi actualizada.

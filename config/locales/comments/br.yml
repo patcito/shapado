@@ -1,0 +1,20 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  comments: 
+    create: 
+      flash_notice: Trugarez evit ho evezhiadenn
+    edit: 
+      title: Kemmañ an evezhiadenn
+    shared: 
+      add_comment: Ouzhpennañ un evezhiadenn...
+      comment_submit: Postañ un evezhiadenn
+      reply: Respont
+      said: en deus lavaret
+    update: 
+      flash_notice: Hizivaet-mat eo bet an evezhiadenn
+  models: 
+    comment: Evezhiadenn
+    comments: Evezhiadennoù

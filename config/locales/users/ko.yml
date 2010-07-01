@@ -8,6 +8,7 @@ ko:
       user: 
         activated_at: activated at
         activation_code: activation code
+        age: 나이
         asked_by: 질문자
         avatar: 프로필 이미지
         birthday: 생일
@@ -59,6 +60,7 @@ ko:
       new_answer_notification: 새로운 답변을 메일로 받음
       notifications: 알림
       reports_notification: 최신 그룹 활동 보고서를 받음 (그룹 관리자만)
+      show_more_lang: 다른 언어
     index: 
       empty: 이 그룹은 회원이 없습니다. 이 그룹에 가입하세요.
       filter: 사용자 검색
@@ -81,5 +83,6 @@ ko:
       follow: follow
       title: 사용자 %{user}
       unfollow: unfollow
+      views: 보기
     unfollow: 
       flash_notice: 사용자  %{user}를 벗에서 삭제하였습니다

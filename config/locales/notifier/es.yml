@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 # Author: Patcito
 es: 
   notifier: 
@@ -8,6 +9,13 @@ es:
       message1: Has ganado una insigna %{badge} en %{app}
       message2: "La descripcion de la insigna:"
       message3: Puedes ver todas tus insignas en tu %{user_page}
+    favorited: 
+      message1: "%{user} agregó tu pregunta como un favorito en %{group}"
+      message2: "El texto de tu pregunta:"
+      message3: "Puedes verlo aquí:"
+    follow: 
+      message1: "%{user} está ahora siguiendo tus preguntas y respuestas en %{app}"
+      message2: Puedes seguirlo haciendo click en el botón "seguir" en su %{user_page}
     give_advice: 
       message1: "%{user} acaba de hacer una pregunta que usted podria contestar:"
       message2: "Para contestar, responde a este mensaje en el siguiente enlace:"

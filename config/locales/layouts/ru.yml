@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: Eleferen
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   layouts: 
     application: 
@@ -48,3 +49,5 @@ ru:
       stats: Статистика
       theme: Оформление
       widgets: Виджеты
+    notifications: 
+      message: Если вы не хотите больше получать автоматические уведомления от %{domain}, измените настройки в окне уведомлений.

@@ -1,0 +1,25 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: ArnoLagrange
+eo: 
+  activerecord: 
+    attributes: 
+      answer: 
+        created_at: Respondita
+        link: Ligilo
+  answers: 
+    create: 
+      flash_error: "Io malĝuste funkciis dum aldono de via respondo. \n  Memoru tion: \n - Malplenaj kaj ripetitaj respondoj ne estas permesitaj \n - Vi devas atendi 20 sekundojn antaŭ ol sendi alian respondon. \n - Vi povas sendi po nur unu respondon por ĉiu demando."
+      flash_notice: Dankon!
+    edit: 
+      title: Redakti respondon
+    form: 
+      answer_label: Respondi la demandon
+      comment_label: Rimarko pri ĉi tiu respondo
+      comment_submit: Komento
+      submit: Respondo
+    revert: 
+      title: Malfari respondon
+    update: 
+      flash_notice: Respondo estis sukcese ĝisdatigita.

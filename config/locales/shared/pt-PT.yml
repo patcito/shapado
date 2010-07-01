@@ -1,11 +1,12 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   shared: 
     current_tags: 
-      title: selected tags
+      title: Categorias seleccionadas
     topbar: 
-      admin: gerir
-      logged_as: logged in as %{login}
-      user_page: my page
+      admin: Administrar
+      logged_as: Iniciou sessão como %{login}
+      user_page: A minha página

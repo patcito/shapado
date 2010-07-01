@@ -5,9 +5,12 @@ I18n.backend.store_translations 'pt-PT', {}
 I18n.backend.store_translations 'pt-BR', {}
 I18n.backend.store_translations 'ja', {}
 I18n.backend.store_translations 'el', {}
+I18n.backend.store_translations 'ar', {}
 I18n.backend.store_translations 'be-TARASK', {}
 I18n.backend.store_translations 'br', {}
+I18n.backend.store_translations 'bs', {}
 I18n.backend.store_translations 'de', {}
+I18n.backend.store_translations 'eo', {}
 I18n.backend.store_translations 'fi', {}
 I18n.backend.store_translations 'gl', {}
 I18n.backend.store_translations 'ia', {}
@@ -18,6 +21,7 @@ I18n.backend.store_translations 'nl', {}
 I18n.backend.store_translations 'nb', {}
 I18n.backend.store_translations 'pl', {}
 I18n.backend.store_translations 'pms', {}
+I18n.backend.store_translations 'ps', {}
 I18n.backend.store_translations 'ru', {}
 I18n.backend.store_translations 'te', {}
 I18n.backend.store_translations 'tl', {}

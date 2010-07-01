@@ -10,4 +10,4 @@ pt-PT:
   unfavorites: 
     create: 
       success: A pergunta foi removida das suas favoritas
-      unauthenticated: Precisa de ter uma conta para remover uma favorita
+      unauthenticated: Precisa de uma conta para remover uma favorita

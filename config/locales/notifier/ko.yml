@@ -1,0 +1,43 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Linkr
+ko: 
+  notifier: 
+    earned_badge: 
+      message1: " %{app}에 대해 %{badge} 뱃지를 획득하셨습니다."
+      message2: "뱃지 설명:"
+      message3: " %{user_page}에서 귀하의 뱃지들을 보실 수 있습니다."
+    favorited: 
+      message1: "%{user}님이 귀하의 질문을 %{group}에 관한 Favorite로 추가했습니다."
+      message2: "질문 내용:"
+      message3: "여기를 보세요:"
+    follow: 
+      message1: "%{user}님은 %{app}에 관한 귀하의 질문과 답변을 Follow하지 않습니다."
+      message2: "%{user_page}님을 Follow하려면, \"Follow\" 버튼을 클릭하세요."
+    give_advice: 
+      message1: 귀하가 아실 만한 질문을 %{user}님이 올리셨습니다.
+      message2: "이 메시지에 대한 답변을 적으세요:"
+      message3: 아실만한 분이 있으면, 이 링크를 전달해 주세요.
+      message4: 귀하로부터 답변이 없으면, 다른 분들게 여쭤 보겠습니다. 언제라도 답변을 주세요.
+    global: 
+      hi: Hi %{user},
+      user_page: 사용자 페이지
+    new_answer: 
+      message: "%{user}님이  %{question} 질문에 %{new_answer} 답변을 다셨습니다."
+    new_comment: 
+      message: "%{user}님이  %{question} 질문에 %{new_comment} 코멘트를 다셨습니다."
+    new_feedback: 
+      message1: "%{user} <%{email}>님이 피드백을 보냈습니다."
+      message2: IP address %{ip}인 익명 사용자가 피드백을 보냈습니다.
+      message3: 이메일 %{email}
+      message4: 주제 %{subject}
+    report: 
+      message1: " %{group.name} 그룹을 보고"
+      message2: Since %{since}
+      message3: "%{questions} 질문이 작성되었습니다."
+      message4: "%{answers} 답변이 있습니다."
+      message5: "%{votes} votes가 있습니다."
+      message6: "%{badges} 뱃지가 수여되었습니다."
+      message7: 이 계정에는 %{users} 사용자가 있습니다.
+      message8: " 귀하의 그룹 %{link}을 방문하세요."

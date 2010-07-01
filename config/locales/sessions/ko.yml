@@ -13,6 +13,8 @@ ko:
       log_in: 로그인
       not_registered: 아직 등록하지 않았나요?
       registered: 이미 등록하셨나요?
+      remember_me: 자동 로그인
+      sign_in: 로그인
       signup: 가입
       with_authentication: 우리의 인증 시스템으로 로그인
       with_facebook: 페이스북으로 로그인

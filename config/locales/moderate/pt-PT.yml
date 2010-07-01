@@ -1,15 +1,16 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   admin: 
     moderate: 
       index: 
-        all: todas
-        ban: banir
-        banned: banned questions
-        content: conteúdo
-        flagged: flagged questions
-        item_title: título
-        need_tags: retag
-        title: moderar
+        all: Todas
+        ban: Banir
+        banned: Perguntas banidas
+        content: Conteúdo
+        flagged: Perguntas reportadas
+        item_title: Título
+        need_tags: Recategorizar
+        title: Moderar

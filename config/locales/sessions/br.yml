@@ -13,5 +13,8 @@ br:
       not_registered: N'oc'h ket enrollet c'hoazh ?
       registered: Enrollet oc'h dija ?
       remember_me: Derc'hel soñj ac'hanon
+      sign_in: Kevreañ
       signup: En em enskrivañ
+      with_facebook: Kevreañ gant Facebook
       with_openid: Kevreañ gant openid
+      with_twitter: Kevreañ gant Twitter

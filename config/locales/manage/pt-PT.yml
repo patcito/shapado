@@ -6,36 +6,36 @@ pt-PT:
   admin: 
     manage: 
       content: 
-        footer: footer
-        head: cabeçalho
-        question_help: question help
-        question_prompt: question prompt
-        title: custom content
-        top_bar: top bar
+        footer: Rodapé
+        head: Cabeçalho
+        question_help: Ajuda de perguntas
+        question_prompt: Linha da pergunta
+        title: Conteúdo personalizado
+        top_bar: Barra do topo
         top_bar_tip: Introduza um link por linha
       properties: 
         constrains: 
-          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os utilizadores necessitam para poderem executar uma determinada acção
+          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os utilizadores necessitam para executar uma determinada acção
           reputation_constrains_subtitle: Lista de requisitos de reputação para cada acção
           title: Requisitos
         domain: 
-          description: "You can map your site so it can be accessed through your own custom domain, this is how you do it:"
-          instruction1: To do so you first need to log on to your domain provider (the site where you bought your domain such as %{subdomain}.com).
-          instruction2: There you need to go to the DNS section and create something called a CNAME.
-          instruction3: Pick 'www' or anything else as the name of your CNAME.
-          instruction4: "Then in the host or destination field, put your current shapado domain: %{domain}."
-          instruction5: Once this is done, after an hour or so, your domain www.%{subdomain} should point to %{appdomain}.
-          instruction6: When this is the case, come back here and put your domain name www.%{subdomain} in the field below and press the button 'update'. If you have questions, ask us in the %{chat_url} or on our support forum
-          title: setup your domain
-          warning: Are you sure you want to change your domain?
+          description: "Pode mapear o seu site de forma a ser acessível através do seu domínio próprio. Faça-o assim:"
+          instruction1: Para fazê-lo, antes autentique-se no fornecedor do seu domínio. É o site onde comprou o seu domínio, do tipo %{subdomain}.com.
+          instruction2: Lá, vá à secção de DNS e crie uma coisa chamada um CNAME.
+          instruction3: Escolha 'www' ou outra coisa para o seu CNAME.
+          instruction4: "Depois, no campo do host ou de destino, coloque o seu domínio Shapado actual: %{domain}."
+          instruction5: Cerca de uma hora depois de o fazer, o seu domínio www.%{subdomain} deverá apontar para %{appdomain}.
+          instruction6: Quando for este o caso, volte cá, coloque o nome do seu domínio www.%{subdomain} no campo abaixo e clique 'Actualizar'. Se tem questões, coloque-as em %{chat_url} ou no nosso fórum de suporte.
+          title: Defina o seu domínio
+          warning: Tem a certeza de que quer alterar o seu domínio?
         general: 
-          title: group properties
+          title: Propriedades do grupo
         rewards: 
-          reputation_rewards_description: Este formulário permite-lhe configurar de que forma os utilizadores podem ganhar e perder pontos de reputação por uma dada acção \
-          reputation_rewards_subtitle: list of reputations rewards
-          title: rewards
+          reputation_rewards_description: Este formulário permite-lhe configurar de que forma os utilizadores podem ganhar e perder pontos de reputação por uma dada acção
+          reputation_rewards_subtitle: Lista de prémios de reputação
+          title: Prémios
         share: 
-          title: share
+          title: Partilhar
         theme: 
           logo_legend: Faça o upload de um logótipo para o seu grupo; tem de ser inferior a 2 MB.
-          title: setup the group's theme
+          title: Defina o tema do grupo

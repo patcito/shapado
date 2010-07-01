@@ -47,3 +47,5 @@ ko:
       stats: 통계
       theme: 테마
       widgets: 위젯
+    notifications: 
+      message: " %{domain}로부터 자동 공지를 받지 않으려면, 공지 화면에서 설정을 변경하세요."

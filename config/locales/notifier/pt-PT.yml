@@ -13,7 +13,7 @@ pt-PT:
       message2: "O texto da sua pergunta:"
       message3: "Pode ver aqui:"
     follow: 
-      message1: "%{user} está agora a seguir as suas perguntas e respostas na %{app}"
+      message1: "%{user} está agora a seguir as suas perguntas e respostas na aplicação %{app}"
       message2: Pode seguir o utilizador clicando o botão "Seguir" na %{user_page} do próprio
     give_advice: 
       message1: "%{user} acaba de fazer uma pergunta a que talvez saiba responder:"
@@ -24,9 +24,9 @@ pt-PT:
       hi: Olá %{user},
       user_page: página de utilizador
     new_answer: 
-      message: "%{user} respondeu %{new_answer} à pergunta %{question}"
+      message: "%{user} deu a resposta %{new_answer} à pergunta %{question}"
     new_comment: 
-      message: "%{user} comentou %{new_comment} na pergunta %{question}"
+      message: "%{user} fes o comentário %{new_comment} na pergunta %{question}"
     new_feedback: 
       message1: O utilizador %{user} <%{email}> enviou um comentário
       message2: Utilizador anónimo enviou um comentário do endereço IP %{ip}
@@ -40,4 +40,4 @@ pt-PT:
       message5: Foram atribuídos %{votes} votos
       message6: Foram atribuídos %{badges} distintivos
       message7: A conta tem %{users} utilizadores.
-      message8: Visite o nosso grupo em %{link}
+      message8: Visite o seu grupo em %{link}

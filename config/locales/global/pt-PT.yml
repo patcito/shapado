@@ -4,57 +4,57 @@
 # Author: Hamilton Abreu
 pt-PT: 
   actions: 
-    closed: fechado
-    created: criado
-    deleted: apagado
-    updated: actualizado
+    closed: fechada
+    created: criada
+    deleted: apagada
+    updated: actualizada
   feeds: 
     feed: Feed
-    post_new_questions: publicar perguntas novas
-    question: subscrever esta pergunta
-    questions: subscrever todas as perguntas
+    post_new_questions: Publicar perguntas novas
+    question: Subscrever esta pergunta
+    questions: Subscrever todas as perguntas
     share_on_twitter: no twitter, facebook e outros...
-    tag: subscrever a categoria
-    user: subscrever as perguntas do utilizador
+    tag: Subscrever a categoria
+    user: Subscrever as perguntas do utilizador
   global: 
     by: por
-    current: actual
+    current: Actual
     from: de %{site}
-    group_not_found: a página %{url} não existe
+    group_not_found: A página %{url} não existe
     or: ou
-    permission_denied: permissão negada
-    please_login: por favor inicie sessão
-    preview: antevisão
-    previous: anterior
-    share: partilhar
+    permission_denied: Permissão negada
+    please_login: Inicie uma sessão, por favor
+    preview: Antevisão
+    previous: Anterior
+    share: Partilhar
   languages: 
-    any: qualquer
-    user: as minhas línguas preferidas
+    any: Qualquer
+    user: As Minhas Línguas Preferidas
   messages: 
-    success: "{{model}} foi {{action}}."
+    success: "%{model} foi %{action}."
   models: 
-    question: a pergunta
+    question: A pergunta
   number: 
     x_time: 
       one: "%{count} vez"
       other: "%{count} vezes"
-      zero: nunca
+      zero: Nunca
   scaffold: 
-    add: adicionar
-    back: voltar
-    cancel: cancelar
-    close: fechar
-    create: criar
-    destroy: eliminar
-    details: detalhes
-    edit: editar
-    more: mais ...
-    new: adicionar %{model} novo
-    save: gravar
-    send: enviar
-    show: mostrar
-    sure: tem a certeza que pretende apagar este %{model} ?
-    update: actualizar
+    add: Adicionar
+    back: Voltar
+    cancel: Cancelar
+    close: Fechar
+    create: Criar
+    destroy: Eliminar
+    details: Detalhes
+    edit: Editar
+    more: Mais ...
+    new: Adicionar %{model} novo
+    save: Gravar
+    send: Enviar
+    show: Mostrar
+    sure: Tem a certeza de que pretende apagar este %{model}?
+    update: Actualizar
   time: 
     ago: "%{time} atrás"
     today: hoje

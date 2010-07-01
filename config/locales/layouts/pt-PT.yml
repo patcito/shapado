@@ -6,47 +6,47 @@
 pt-PT: 
   layouts: 
     application: 
-      ask_question: fazer pergunta
-      badges: badges
-      forgot: esqueceu-se?
-      home: início
-      languages: idiomas
-      log_in: ligar
-      logged: ligado como %{login}
-      logout: desligar sessão
-      manage_ads: gerir as propaganda
-      moderate: moderar
-      now: now!
+      ask_question: Fazer pergunta
+      badges: Distintivos
+      forgot: Esqueceu-se?
+      home: Início
+      languages: Línguas
+      log_in: Entrar
+      logged: Autenticado como %{login}
+      logout: Sair
+      manage_ads: Gerir anúncios
+      moderate: Moderar
+      now: agora!
       openid: 
-        explaination: "se quiser registar-se ou apenas ligar-se, por favor seleccione o seu fornecedor de openid:"
+        explaination: "Se pretende registar-se ou entrar, seleccione o seu fornecedor de OpenID, por favor:"
       pages: Páginas
-      questions: perguntas
-      questions_in: perguntas em
-      questions_tagged: tagged with
-      search: search
-      settings: preferências
-      signup: registar-se
-      subscribe: subscribe
-      tags: tags
-      title: perguntas & respostas
-      unanswered: sem resposta
-      users: utilizadores
-      welcome_from: welcome! you can
+      questions: Perguntas
+      questions_in: Perguntas em
+      questions_tagged: categorizada em
+      search: Pesquisar
+      settings: Definições
+      signup: Registar-se
+      subscribe: Subscrever
+      tags: Categorias
+      title: Perguntas e Respostas
+      unanswered: Sem resposta
+      users: Utilizadores
+      welcome_from: Bem-vindo(a)! Pode
     manage: 
       actions: Acções
       announcements: Notificações do site
       constrains: Requisitos
-      content: content
-      dashboard: dashboard
-      domain: domain
-      general: general
+      content: Conteúdo
+      dashboard: Painel
+      domain: Domínio
+      general: Geral
       members: Membros
       pages: Páginas
       properties: Propriedades
       reputation: Reputação
-      rewards: rewards
-      stats: stats
+      rewards: Prémios
+      stats: Estatísticas
       theme: Tema
-      widgets: widgets
+      widgets: Widgets
     notifications: 
-      message: Se não pretende voltar a receber notificações automáticas de %{domain}, altere as suas preferências no ecrã de notificações.
+      message: Se não pretende voltar a receber notificações automáticas de %{domain}, altere as suas preferências na página das notificações.

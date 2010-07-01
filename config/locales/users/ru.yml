@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: Eleferen
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   activerecord: 
     attributes: 
@@ -61,6 +62,7 @@ ru:
       new_answer_notification: Получать почтовые уведомления о новых ответах
       notifications: Уведомления
       reports_notification: Получать отчёт о последних действиях в группе (только для администраторов групп)
+      show_more_lang: Другие языки
     index: 
       empty: Эта группа пуста, примите участие для присоединения к ней.
       filter: Поиск пользователей

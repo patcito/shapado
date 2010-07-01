@@ -6,67 +6,67 @@ pt-PT:
   activerecord: 
     attributes: 
       group: 
-        default_tags: categorias predefinidas
-        description: descrição
-        domain: domínio
-        fb_button: Activar botão estilo Facebook (não respeita privacidade)
-        forum: permitir mais do que uma resposta por utilizador
+        default_tags: Categorias predefinidas
+        description: Descrição
+        domain: Domínio
+        fb_button: Activar botão de estilo Facebook (não respeita privacidade)
+        forum: Permitir mais do que uma resposta por utilizador
         group_created_by: criado por
-        language: língua
-        legend: legenda
-        logo: logótipo
-        may_contain_adult_content: este site pode ter conteúdo para adultos
-        name: nome
-        openid_only: só pessoas que usam openid podem aceder ao site
-        owner: este grupo foi criado por %{login}
-        registered_only: só pessoas registadas podem aceder ao site
-        state: estado
-        subdomain: url
-        wysiwyg_editor: Activar o editor de fácil utilização
+        language: Língua
+        legend: Legenda
+        logo: Logótipo
+        may_contain_adult_content: Este site pode ter conteúdo para adultos
+        name: Nome
+        openid_only: Só pessoas que usam OpenID podem aceder ao site
+        owner: Este grupo foi criado por %{login}
+        registered_only: Só pessoas registadas podem aceder ao site
+        state: Estado
+        subdomain: URL
+        wysiwyg_editor: Activar o editor de utilização fácil
     models: 
-      default_tags_message: não pode ter mais do que 10 categorias predefinidas
-      group: grupo
-      groups: grupos
+      default_tags_message: Não pode ter mais do que 10 categorias predefinidas
+      group: Grupo
+      groups: Grupos
   groups: 
     create: 
-      flash_notice: O seu grupo foi criado; pode agora começar a configurá-lo.
+      flash_notice: O seu grupo foi criado. Agora pode começar a configurá-lo.
     form: 
       access: Definições de Acesso
       analytics_engine: Motor de Análise
       analytics_legend: O grupo poderá usar o seu próprio código de monitorização
-      any_language: qualquer
+      any_language: Qualquer
       custom_analytics: Permitir Análises Personalizadas
       custom_html: Permitir HTML personalizado
       custom_js: Permitir JavaScript personalizado
-      default_tags_legend: separe as categorias por vírgulas; só são permitidas 10 categorias predefinidas.
-      description_legend: tem 400 caracteres para descrever o grupo.
+      default_tags_legend: Separe as categorias por vírgulas. Só são permitidas 10 categorias predefinidas.
+      description_legend: Tem 400 caracteres para descrever o grupo.
       isolate_group: Isolar o grupo de outros grupos
-      legend_legend: será usado no cabeçalho; tem disponíveis 40 caracteres
-      logo_legend: pode fazer upload do logótipo do grupo; o tamanho máximo do ficheiro é 2MB.
+      legend_legend: Será usado no cabeçalho. Dispõe de 40 caracteres.
+      logo_legend: Pode fazer upload do logótipo do grupo. O tamanho máximo do ficheiro é 2MB.
       members_only: Só os membros do grupo poderão aceder a este grupo
-      website_analytics_id: ID da Análise de Site na Internet
+      website_analytics_id: ID da Análise do Site
     group: 
-      about: sobre
-      accept_group: aceitar este grupo
-      allow_ads: permitir anúncios
-      close: fechar
-      close_group: fechar este grupo
-      disallow_ads: não permitir anúncios
+      about: Sobre
+      accept_group: Aceitar este grupo
+      allow_ads: Permitir anúncios
+      close: Fechar
+      close_group: Fechar este grupo
+      disallow_ads: Não permitir anúncios
     index: 
-      actives: activos
-      filter: pesquisar grupos
-      most_active: mais activos
-      name: nome
-      pendings: pendentes
-      request_group: pedir um grupo novo
-      title: grupos
+      actives: Activos
+      filter: Pesquisar grupos
+      most_active: Mais activos
+      name: Nome
+      pendings: Pendentes
+      request_group: Pedir um grupo novo
+      title: Grupos
     new: 
-      title: crie o seu grupo
+      title: Crie o seu grupo
     show: 
-      accept_group: aceitar este grupo
-      accept_group_with_custom_ads: aceitar grupo e permitir anúncios personalizados
-      close_group: fechar este grupo
-      group_awaiting_acceptance: este grupo aguarda a aceitação de um moderador.
-      group_closed: este grupo foi fechado.
-      title: sobre %{name}
-      visit_group: visitar este grupo
+      accept_group: Aceitar este grupo
+      accept_group_with_custom_ads: Aceitar o grupo e permitir anúncios personalizados
+      close_group: Fechar este grupo
+      group_awaiting_acceptance: Este grupo aguarda a aceitação de um moderador.
+      group_closed: Este grupo foi fechado.
+      title: Sobre %{name}
+      visit_group: Visitar este grupo
