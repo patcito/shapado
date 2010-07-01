@@ -1,7 +1,0 @@
-**/*/log/*
-**/*/tmp/*
-*~
-coverage/*
-*.sqlite3
-rdoc/*
-pkg
