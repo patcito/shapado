@@ -1,23 +1,24 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   mailers: 
     notifications: 
       earned_badge: 
-        subject: You have earned a badge on %{group}!
+        subject: Recebeu um distintivo do grupo %{group}!
       favorited: 
-        subject: "%{login} added your question as a favorite!"
+        subject: "%{login} adicionou a sua pergunta às favoritas!"
       follow: 
-        subject: "%{login} is now following you on %{app}"
+        subject: "%{login} está agora a segui-lo na aplicação %{app}"
       give_advice: 
-        friend_subject: "your friend needs help: %{question_title}"
-        subject: "we need your advice: %{question_title}"
+        friend_subject: "O seu amigo precisa de ajuda: %{question_title}"
+        subject: "Precisamos da sua ajuda: %{question_title}"
       new_answer: 
-        subject_friend: your friend %{login} answered the question %{title}
+        subject_friend: O seu amigo %{login} respondeu à pergunta %{title}
         subject_other: "%{login} respondeu à pergunta %{title}"
         subject_owner: "%{login} respondeu à sua pergunta %{title}"
       new_comment: 
-        subject: "%{login} commented on %{group}"
+        subject: "%{login} comentou no grupo %{group}"
       report: 
-        subject: report for the group %{group} of %{app}
+        subject: Relatório do grupo %{group}, da aplicação %{app}

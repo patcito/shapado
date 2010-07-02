@@ -60,6 +60,7 @@ gl:
       new_answer_notification: Recibir notificacións por correo electrónico sobre novas respostas
       notifications: Notificacións
       reports_notification: Recibir un informe coas últimas actividades do grupo (soamente para o administrador do grupo)
+      show_more_lang: Mostrar máis linguas
     index: 
       empty: Este grupo aínda non conta con ningún membro. Únase a el.
       filter: Procurar usuarios

@@ -47,3 +47,5 @@ gl:
       stats: Estatísticas
       theme: Tema visual
       widgets: Widgets
+    notifications: 
+      message: Se non quere recibir máis notificacións automáticas de %{domain}, cambie as súas preferencias de notificación.

@@ -6,10 +6,10 @@ pt-PT:
   activerecord: 
     attributes: 
       flag: 
-        type: motivo
+        type: Motivo
     models: 
-      flag: reporte
-      flags: reportes
+      flag: Reportada
+      flags: Reportadas
   flags: 
     create: 
       flash_error: Não pode reportar isto

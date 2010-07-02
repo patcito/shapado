@@ -6,17 +6,17 @@ pt-PT:
   activerecord: 
     attributes: 
       user: 
-        activated_at: Activado em
+        activated_at: activado em
         activation_code: Código de activação
         age: Idade
-        asked_by: perguntada por
+        asked_by: feita por
         avatar: Imagem do perfil
         birthday: Data de nascimento
         created_at: registado
         current_password: Palavra-chave actual
         email: Correio electrónico
         fullname: Nome completo
-        hide_country: Não mostrar a minha nacionalidade
+        hide_country: Não mostrar o meu país
         language: Língua
         language_filter: Filtrar por língua
         last_logged_at: visto
@@ -28,61 +28,61 @@ pt-PT:
         preferred_tags: Categorias preferidas
         reputation: Reputação
         timezone: Localização
-        updated_at: Actualizado em
+        updated_at: actualizado em
         website: Site na internet
     models: 
       user: Utilizador
       users: Utilizadores
   users: 
     actions: 
-      edit_others_posts: edit other's posts
-      edit_wiki_post: edit wiki posts
-      flag: flag
-      retag_others_questions: retag others questions
-      vote_down: vote down
+      edit_others_posts: Editar publicações de outros
+      edit_wiki_post: Editar publicações wiki
+      flag: Reportar
+      retag_others_questions: Recategorizar perguntas de outros
+      vote_down: Voto negativo
       vote_to_close_any_question: request closing any question
-      vote_to_close_own_question: request closing own question
-      vote_up: vote up
+      vote_to_close_own_question: Pedir encerramento de uma pergunta própria
+      vote_up: Voto positivo
     create: 
-      flash_error: pedimos desculpa mas não pudemos criar essa conta. por favor tente novamente ou contacte um administrador (a ligação está acima).
-      flash_notice: obrigado por registar-se!
+      flash_error: Desculpe, não foi possível criar essa conta. Tente novamente ou contacte um administrador (link está acima), por favor.
+      flash_notice: Obrigado por se registar!
     edit: 
-      enable_twitter: Enable your facebook or twitter accounts
-      submit: gravar
-      title: preferências
+      enable_twitter: Activar as suas contas no Facebook ou no Twitter
+      submit: Gravar
+      title: Definições
     follow: 
-      flash_notice: The user %{user} was added to your friends
+      flash_notice: O utilizador %{user} foi adicionado aos seus amigos
     form: 
-      activities_notification: receive email notifications about system activities such as earned badges, new followers, etc.
-      avatar_tip: change your profile image using gravatar
-      give_advice_notification: receive email notifications about questions in your field of expertise
-      information: informação
-      new_answer_notification: receber notificações via email de novas respostas
-      notifications: notificações
-      reports_notification: receive a report with latest group activity (only for group admins)
+      activities_notification: Receber notificações por correio electrónico de actividades como atribuições de distintivos, novos seguidores, etc.
+      avatar_tip: Alterar a imagem do perfil usando o Gravatar
+      give_advice_notification: Receber notificações por correio electrónico de perguntas na sua área de especialidade
+      information: Informação
+      new_answer_notification: Receber notificações por correio electrónico das novas respostas
+      notifications: Notificações
+      reports_notification: Receber um relatório das actividades mais recentes do grupo (só para administradores de grupos)
       show_more_lang: Mostrar mais línguas
     index: 
-      empty: este grupo não tem nenhum membro, participa para te juntares a este grupo.
-      filter: search for users
-      name: name
-      name_tooltip: users sorted alphabetically
-      newest: newest
-      newest_tooltip: users who just joined
-      oldest: oldest
-      oldest_tooltip: users who were the first to join
-      reputation: reputation
-      reputation_tooltip: users sorted by higher reputation
-      title: todos os utilizadores
+      empty: Este grupo não tem membros. Participe, aderindo a este grupo.
+      filter: Pesquisar utilizadores
+      name: Nome
+      name_tooltip: Utilizadores por ordem alfabética
+      newest: Mais recentes
+      newest_tooltip: Utilizadores que acabam de aderir
+      oldest: Mais antigos
+      oldest_tooltip: Utilizadores que foram os primeiros a aderir
+      reputation: Reputação
+      reputation_tooltip: Utilizadores por ordem decrescente de reputação
+      title: Todos os utilizadores
     messages: 
       errors: 
         reputation_needed: Precisa de ter uma reputação mínima de %{min_reputation} para %{action}
     new: 
-      submit: registar
-      title: registar-se como novo utlizador
+      submit: Registar
+      title: Registar-se como novo utilizador
     show: 
-      follow: follow
-      title: User %{user}
-      unfollow: unfollow
+      follow: Seguir
+      title: Utilizador %{user}
+      unfollow: Deixar de seguir
       views: visitas
     unfollow: 
       flash_notice: O utilizador %{user} foi removido dos seus amigos

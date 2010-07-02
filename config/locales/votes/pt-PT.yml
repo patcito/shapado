@@ -5,21 +5,21 @@
 pt-PT: 
   activerecord: 
     models: 
-      vote: voto
-      votes: votos
+      vote: Voto
+      votes: Votos
   votes: 
     control: 
-      have_voted_down: click to undo your down vote
-      have_voted_up: click to undo your up vote
-      to_vote_down: click to vote down
-      to_vote_up: click to vote up
+      have_voted_down: Clique para desfazer o voto negativo
+      have_voted_up: Clique para desfazer o voto positivo
+      to_vote_down: Clique para votar negativamente
+      to_vote_up: Clique para votar positivamente
     create: 
       flash_error: Não pode votar aqui
       flash_notice: Obrigado pelo seu voto!
       unauthenticated: Utilizadores anónimos não podem votar
     destroy: 
-      flash_notice: your vote has been revoked successfully.
+      flash_notice: O seu voto foi revogado.
     model: 
       messages: 
         closed_question: Não pode votar as mensagens que pertencem a uma pergunta fechada
-        vote_down_comment: comments cannot be voted down
+        vote_down_comment: Não pode votar negativamente um comentário

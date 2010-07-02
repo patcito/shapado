@@ -1,0 +1,12 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  admin: 
+    moderate: 
+      index: 
+        all: ټول
+        ban: بنديز لګول
+        content: مينځپانګه
+        item_title: سرليک

@@ -1,0 +1,18 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  wiki: 
+    actions: 
+      all_history: Distreiñ d'an istor
+      back_to_question: distreiñ d'ar goulenn
+      show_diff: keñveriañ ar stummoù diuzet
+    history: 
+      current_version: Stumm red
+      previous_versions: Stummoù kent
+      title: istor ({{count}})
+      version: stumm
+    model: 
+      attributes: 
+        message: Diverradur

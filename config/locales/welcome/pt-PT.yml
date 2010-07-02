@@ -5,7 +5,7 @@
 pt-PT: 
   welcome: 
     confirm_age: 
-      notice: Só pode entrar neste site se tiver pelo menos 18 anos de idade, ou se tiver atingido a maioridade na jurisdição onde reside ou de onde está a aceder a esta página. \
+      notice: Só pode entrar neste site se tiver pelo menos 18 anos de idade, ou se tiver atingido a maioridade na jurisdição onde reside ou de onde está a aceder a esta página.
       over_18: Tenho mais de 18 anos
       under_18: Tenho menos de 18 anos
       warning: "AVISO: Esta página pode ter conteúdo explícito, para adultos."
@@ -14,7 +14,7 @@ pt-PT:
         cols: 
           adaptable: adaptável
           foss: livre/código aberto
-          joel: farei joel mais rico?
+          joel: vou tornar o joel mais rico?
           multilanguage: multilínguas
           multitopic: multi-tópicos
         shapado: 
@@ -34,9 +34,9 @@ pt-PT:
           onsite: no seu site
         shapado: 
           large: aproximadamente $500
-          medium: <=== igual
-          onsite: $0 no seu servidor duh
-          small: aproximadamente entre $50 to $100/mês na maioria dos fornecedores de alojamento
+          medium: <=== concordo
+          onsite: aproximadamente $0 no seu servidor
+          small: aproximadamente de $50 a $100/mês na maior parte dos servidores de alojamento
         stackexchange: 
           large: $1299/mês
           medium: $999/mês

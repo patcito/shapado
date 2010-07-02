@@ -24,7 +24,7 @@ mk:
       hi: Здраво %{user},
       user_page: корисничка страница
     new_answer: 
-      message: "%{user} го прифати %{new_answer} на прашањето %{question}"
+      message: "%{user} одговори %{new_answer} на прашањето %{question}"
     new_comment: 
       message: "%{user} коментираше %{new_comment} на прашањето %{question}"
     new_feedback: 

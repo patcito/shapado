@@ -5,14 +5,14 @@
 pt-PT: 
   sessions: 
     create: 
-      flash_error: não foi possível entrar com '%{login}'
-      flash_notice: inicio de sessão efectuado com sucesso
+      flash_error: Não foi possível iniciar sessão como '%{login}'
+      flash_notice: Sessão iniciada
     destroy: 
       flash_notice: A sua sessão foi terminada.
     new: 
       log_in: Entrar
       not_registered: Ainda não se registou?
-      registered: já registado?
+      registered: Já está registado?
       remember_me: Recordar os meus dados
       sign_in: Entrar
       signup: Registar

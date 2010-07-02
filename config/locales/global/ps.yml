@@ -1,0 +1,35 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  actions: 
+    closed: تړل شوی
+    created: جوړ شو
+    deleted: ړنګ شو
+    updated: اوسمهاله شو
+  global: 
+    current: تازه
+    or: يا
+    previous: پخوانی
+    share: شريکول
+  languages: 
+    any: هر يو
+    user: زما د خوښې ژبې
+  number: 
+    x_time: 
+      zero: هېڅکله
+  scaffold: 
+    add: ورګډول
+    cancel: ناګارل
+    close: تړل
+    create: جوړول
+    destroy: ړنګول
+    edit: سمول
+    more: نور ...
+    save: خوندي کول
+    send: لېږل
+    show: ښکاره کول
+    update: اوسمهالول
+  time: 
+    today: نن

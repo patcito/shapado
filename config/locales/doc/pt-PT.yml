@@ -9,31 +9,31 @@ pt-PT:
     chat: 
       title: Supporte por Conversação
     plans: 
-      15millions: 15 millions page views/month
-      1million: 1 million page views/month
-      247_all_support: web based, email, chat and phone 24/7 support
+      15millions: 15 milhões de visitas/mês
+      1million: 1 milhão de visitas/mês
+      247_all_support: Suporte baseado na internet, correio electrónico, canais de conversação e telefone de disponibilidade permanentemente
       5millions: 5 milhões de visitas/mês
-      all_support: web based, email, chat and phone support
-      basic_restrictions: no custom ads and no fully customizable UI
-      beta_info: For now all sites are free and all sites benefit from the same options as the Optimum plan, except for the support which is only web based, email and chat.
-      big_sites: big traffic sites
-      custom_ads: Use your own ads
-      custom_analytics: Traffic stats
-      custom_domain: Domínio personalizado
-      custom_themes: make use of our pre-made custom themes
-      custom_ui: Fully customizable UI
-      free_plan: free plan
-      getting_popular: getting popular
-      huge_sites: huge traffic sites
+      all_support: Suporte baseado na internet, correio electrónico, canais de conversação e telefone
+      basic_restrictions: Sem anúncios personalizados e sem interface totalmente personalizável
+      beta_info: Por enquanto todos os sites são gratuitos e disfrutam das opções do plano Óptimo, excepto no que concerne os serviços de suporte, que são baseados na internet, no correio electrónico e em canais de conversação.
+      big_sites: Sites de Alto Tráfego
+      custom_ads: Usar anúncios próprios
+      custom_analytics: Estatísticas de tráfego
+      custom_domain: Domínio próprio
+      custom_themes: Use os nossos temas personalizados predefinidos
+      custom_ui: Interface totalmente personalizável
+      free_plan: Plano Grátis
+      getting_popular: A Tornar-se Popular
+      huge_sites: Sites de Tráfego Enorme
       month: mês
       page_views: Para Sites Pequenos/Particulares
-      plans: plans
-      private_site: Private site
-      small_private: Enable private/public access
-      start_monetizing: start monetizing
-      support: Support
-      title: Plans and pricing
-      unlimited: Unlimited traffic each month
-      we_offer: we also offer a
-      web_support: web based support
-      with_unlimited: with unlimited traffic with no custom ads and no custom domain.
+      plans: Planos
+      private_site: Permitir acesso público/privado
+      small_private: Sites Pequenos/Particulares
+      start_monetizing: começe a ganhar dinheiro
+      support: Suporte
+      title: Planos e preços
+      unlimited: Tráfego ilimitado a cada mês
+      we_offer: Também oferecemos
+      web_support: Suporte baseado na internet
+      with_unlimited: com tráfego ilimitado, sem anúncios personalizados e sem domínio próprio.

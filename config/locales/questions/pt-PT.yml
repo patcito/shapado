@@ -7,14 +7,14 @@ pt-PT:
     attributes: 
       question: 
         answers: Respostas
-        asked_by: Perguntada por
+        asked_by: Feita por
         body: Conteúdo
         closed: Fechada
-        created_at: Perguntada
+        created_at: Feita
         language: Língua
         tags: Categorias
         title: Título
-        updated_at: Actualizada
+        updated_at: actualizada
         updated_by: actualizada por
         views: Visitas
         votes: Votos
@@ -56,7 +56,7 @@ pt-PT:
     model: 
       messages: 
         empty_tags: Desculpe, tem de usar pelo menos uma categoria.
-        title_too_long: O título é demasiado longo; não pode conter mais do que 100 caracteres
+        title_too_long: O título é demasiado longo. Não pode conter mais do que 100 caracteres.
         too_many_tags: Desculpe, mas só pode introduzir até 9 categorias.
         too_short: Parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
     move: 
@@ -104,12 +104,12 @@ pt-PT:
       request_closing: Pedir encerramento
       request_closing_details: Pedir para fechar esta pergunta
       retag: Recategorizar
-      retract_request: Já colocou um pedido; deseja retirá-lo?
+      retract_request: Já colocou um pedido. Quer retirá-lo?
       share: Partilhar esta pergunta em
       share_on: Partilhar esta pergunta em %{site}
       solution: Solução
       to_answer_question: para responder a esta pergunta
-      unauthenticated_retag: Precisa de ter uma conta para recategorizar perguntas
+      unauthenticated_retag: Precisa de uma conta para recategorizar perguntas
       unfavorite_tooltip: Remover esta pergunta das suas favoritas
       unwatch_tooltip: Deixar de vigiar esta pergunta
       viewed: visitada
@@ -124,12 +124,12 @@ pt-PT:
       empty: Este grupo não contém perguntas sem resposta.
       expert: Peritos
       my_tags: As minhas categorias
-      tags: Categorias sem resposta
+      tags: Categorias sem respostas
       title: Perguntas sem resposta
     unsolve: 
       flash_notice: A pergunta deixou de estar resolvida.
     unwatch: 
-      success: Deixará de receber notificações por correio electrónico por cada nova resposta a esta pergunta
+      success: Deixará de receber notificações por correio electrónico por cada nova resposta a esta pergunta.
     update: 
       flash_notice: A pergunta foi actualizada.
     watch: 

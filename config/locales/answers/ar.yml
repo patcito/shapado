@@ -1,0 +1,25 @@
+# Messages for Arabic (العربية)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: عمرو
+ar: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: نص الرسالة
+        created_at: مجاب
+        link: الرابط
+    models: 
+      answer: إجابة
+      answers: إجابات
+  answers: 
+    create: 
+      flash_error: "حدث شيئا ما أثناء إضافة جوابك.\nتذكر أن:\n- الأجوبة الفارغة والمكررة غير مسموحة\n- يجب عليك الانتظار 20 ثانية قبل إضافة إجابة أخرى.\n- لا يمكنك إضافة أكثر من إجابة واحدة لنفس السؤال."
+      flash_notice: شكرا لك!
+    form: 
+      answer_label: أجب على السؤال
+      comment_label: عّلق على هذه الإجابة
+      comment_submit: عّلق
+      submit: إجابة
+    revert: 
+      title: أعد الجواب

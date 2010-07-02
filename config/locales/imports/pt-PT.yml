@@ -1,9 +1,10 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Hamilton Abreu
 pt-PT: 
   imports: 
     subtabs: 
       need_confirmation: 
-        name: need confirmation
-        title: send confirmation emails
+        name: Necessitam de confirmação
+        title: Enviar mensagens electrónicas de confirmação

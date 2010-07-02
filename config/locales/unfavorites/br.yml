@@ -1,0 +1,12 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    models: 
+      favorite: Pennroll
+      favorites: Pennrolloù
+  unfavorites: 
+    create: 
+      success: Tennet eo bet ar goulenn d'ho pennrolloù

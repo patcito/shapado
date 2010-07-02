@@ -1,0 +1,20 @@
+# Messages for Arabic (العربية)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: عمرو
+ar: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: تنتهي في
+        message: رسالة
+        only_anonymous: فقط للمستخدمين المجهولين
+        starts_at: تبدأ في
+  announcements: 
+    actions: 
+      delete: إزالة
+      title: الإجراءات
+    create: 
+      success: تم إنشاء البلاغ بنجاح
+    index: 
+      title: البلاغات

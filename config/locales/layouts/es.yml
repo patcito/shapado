@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 es: 
   layouts: 
     application: 
@@ -46,3 +47,5 @@ es:
       stats: stats
       theme: tema
       widgets: widgets
+    notifications: 
+      message: Si no deseas recibir notificaciones automáticas de %{domain} otra vez, cambia tus preferencias en la pantalla de notificaciones.
