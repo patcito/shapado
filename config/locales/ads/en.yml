@@ -6,7 +6,7 @@ en:
     position: "Position:"
     index:
       title: Ads
-      add_adsense: Add a new google adsense ad
-      add_adbard: Add a new adbard ad
+      add_adsense: Add a new Google AdSense ad
+      add_adbard: Add a new Ad Bard ad
     create:
       success: "Ad was successfully created."
