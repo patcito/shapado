@@ -45,7 +45,9 @@ en:
       recent_questions: Recent questions
       quick_question: Ask a question, we will find someone to answer
       create_own_site: "Create your own Q&amp;A site in 8 seconds for free"
-
+      browse_all_or_by_tags: "See the %{full_list_of_questions} or %{browse_by_tags}"
+      full_list_of_questions: full list of questions
+      browse_by_tags: browse by tags
     confirm_age:
       warning: "WARNING: This page may contain explicit adult material."
       notice: You may only enter this page if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this page.

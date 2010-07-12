@@ -66,6 +66,8 @@
 
 #additional_info
   #help_us
+    = t(".browse_all_or_by_tags", :full_list_of_questions => link_to(t('.full_list_of_questions'), questions_path), :browse_by_tags => link_to(t('.browse_by_tags'), tags_questions_path))
+    %br
     = t("questions.index.help_to_answer")
     = link_to t("questions.index.unanswered_questions"), unanswered_questions_path
 
