@@ -86,8 +86,10 @@ module AuthenticatedSystem
     authenticate_with_open_id(
       identity_url,
       :required => [:nickname,
-                    :email,
-                    'http://axschema.org/contact/email' ]
+                    :email, :fullname, :country, :language,
+                    'http://axschema.org/contact/email',
+                    'http://axschema.org/namePerson/first','http://axschema.org/namePerson/last',
+                   'http://axschema.org/contact/country/home', 'http://axschema.org/pref/language']
     ) do |result, identity_url, registration|
       failed = !result.successful?
       if !failed
@@ -129,6 +131,8 @@ module AuthenticatedSystem
       google_id = true
     elsif identity_url =~ %r{//me.yahoo.com}
       yahoo_id = true
+    elsif identity_url =~ %r{//launchpad.net}
+      launchpad_url = true
     end
 
     if google_id || yahoo_id
@@ -152,6 +156,8 @@ module AuthenticatedSystem
         login = registration["nickname"]+"_gid"
       elsif yahoo_id
         login = registration["nickname"]+"_yid"
+      elsif launchpad_id
+        login = registration["nickname"]+"_lp"
       else
         o =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
         string  =  (0..50).map{ o[rand(o.length)]  }.join
@@ -163,8 +169,21 @@ module AuthenticatedSystem
     end
 
     email = registration["email"]
+    name = registration["fullname"]
+    country_name = registration['country']
+    language = registration['language']
 
-    @user = User.create(:login => login, :email => email, :identity_url=> identity_url)
+    if name.to_s.blank? && registration['http://axschema.org/namePerson/first']
+      name = "#{registration['http://axschema.org/namePerson/first']} #{registration['http://axschema.org/namePerson/last']}"
+    end
+    if language.to_s.blank? && registration['http://axschema.org/pref/language']
+      language = registration['http://axschema.org/pref/language']
+    end
+    if country_name.to_s.blank? && registration['http://axschema.org/contact/country/home']
+      country_name = registration['http://axschema.org/contact/country/home']
+    end
+    @user = User.create(:login => login, :email => email, :identity_url=> identity_url,
+                        :name=> name, :country_name => country_name, :language => language)
     if !@user.valid?
       Rails.logger.error("FAILED OPENID LOGIN WITH: #{identity_url} #{registration.inspect}")
       Rails.logger.error(">>>> #{@user.errors.full_messages.join(", ")}")
