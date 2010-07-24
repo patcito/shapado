@@ -184,7 +184,6 @@ class AnswersController < ApplicationController
   protected
   def check_permissions
     @answer = Answer.find(params[:id])
-    p current_user.mod_of?(@answer.group)
     if !@answer.nil?
       unless (current_user.can_modify?(@answer) || current_user.mod_of?(@answer.group))
         flash[:error] = t("global.permission_denied")
