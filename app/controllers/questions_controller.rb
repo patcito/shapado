@@ -299,12 +299,8 @@ class QuestionsController < ApplicationController
       @question.updated_by = current_user
       @question.last_target = @question
 
-      if (Time.now - @question.created_at) < 12.hours
-        @question.send(:generate_slug)
-      else
-        @question.slugs << @question.slug
-        @question.send(:generate_slug)
-      end
+      @question.slugs << @question.slug
+      @question.send(:generate_slug)
 
       if @question.valid? && @question.save
         sweep_question_views
