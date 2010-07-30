@@ -1,0 +1,19 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Teks
+        created_at: Beantwoord
+        link: Skakel
+    models: 
+      answer: Antwoord
+      answers: Antwoorde
+  answers: 
+    create: 
+      flash_notice: Dankie!
+    form: 
+      submit: Antwoorde

@@ -1,0 +1,25 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  notifier: 
+    favorited: 
+      message1: "%{user} la spørsmålet ditt til som en favoritt på %{group}"
+      message2: "Teksten i spørsmålet ditt:"
+      message3: "Du kan se det her:"
+    give_advice: 
+      message1: "%{user} stilte akkurat et spørsmål du kanskje kan svare på:"
+      message2: "For å svare, bare svar på denne meldingen her:"
+      message3: "Eller, om du kjenner noen som kanskje kan svare, send dem denne lenken:"
+      message4: Hvis vi ikke får et svar fra deg snart vil vi spørre noen andre. Du kan fortsatt svare på det når du vil.
+    global: 
+      hi: Hei %{user},
+      user_page: brukerside
+    new_feedback: 
+      message1: Brukeren %{user} <%{email}> sendte en tilbakemelding
+      message2: En anonym bruker sendte en tilbakemelding fra IP-adresse %{ip}
+      message3: "E-postadresse: %{email}"
+      message4: "Emne: %{subject}"
+    report: 
+      message2: Siden %{since}

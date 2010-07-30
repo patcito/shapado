@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: IAlex
+# Author: Y-M D
 fr: 
   activerecord: 
     models: 
@@ -18,7 +19,7 @@ fr:
         description: a complété tous ses champs utilisateurs
         name: autobiographe
       celebrity: 
-        description: avoir plus de 50 suiveurs
+        description: avoir plus de 100 suiveurs
         name: célébrité
       citizen_patrol: 
         description: Premier rapport de poste

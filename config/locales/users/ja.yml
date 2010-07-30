@@ -1,6 +1,7 @@
 # Messages for Japanese (日本語)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: 青子守歌
 ja: 
   activerecord: 
     attributes: 
@@ -59,6 +60,7 @@ ja:
       new_answer_notification: 新しい回答を受け取ったらメールで通知する
       notifications: 通知の設定
       reports_notification: グループに関する新しい活動レポートを受け取る（グループ管理者のみ）
+      show_more_lang: 他の言語を表示
     index: 
       empty: このグループはメンバーがいません。参加してください！
       filter: ユーザを検索する
@@ -79,6 +81,7 @@ ja:
       title: 新規ユーザ
     show: 
       follow: フォローする
+      title: 利用者%{user}
       unfollow: フォロー解除
       views: 回表示
     unfollow: 

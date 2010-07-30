@@ -1,0 +1,137 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Respontoù
+        asked_by: Goulennet gant
+        body: Korf
+        closed: Serret
+        created_at: Goulennet
+        language: Yezh
+        tags: Balizennoù
+        title: Titl
+        updated_at: hizivaet
+        updated_by: hizivaet gant
+        views: Gweladennoù
+        votes: Mouezhioù
+    models: 
+      question: Goulenn
+      questions: Goulennoù
+  questions: 
+    answer: 
+      add_comment: Ouzhpennañ un evezhiadenn...
+      flag: Banniel
+      pick_answer: Dibab evel respont
+      unset_answer: Nullañ an diskoulm ?
+    create: 
+      flash_notice: Krouet eo bet ar goulenn ervat.
+    edit: 
+      title: Kemmañ ar goulenn
+    flag: 
+      title: Kas kemenn eus in implij direizh
+    form: 
+      adult_content: Er goulenn-mañ ez eus danvez evit an dud gour.
+      body_tip: Pehini eo ho koulenn ? Roit un deskrivadur.
+      language_tip: Dibabit yezh ho koulenn.
+      tags_tip: Implijit ar balizennoù evit ouzhpennañ muioc'h a ditouroù d'ar goulenn.
+    index: 
+      active: Oberiant
+      active_tooltip: Goulennoù bet hizivaet da ziwezhañ
+      ask_question: Sevel ur goulenn
+      empty: Den ebet n'en deus goulennet netra evit c'hoazh. Bec'h de'i !
+      help_to_answer: skoazellit ac'hanomp evit respont
+      hot: Tomm-berv
+      hot_tooltip: Goulennoù buhezekañ abaoe 5 devezh
+      newest: Nevesañ
+      newest_tooltip: Goulennoù diwezhañ
+      oldest: Koshañ
+      title: An holl goulennoù
+      unanswered_questions: Goulennoù direspont
+      votes: Mouezhioù
+      votes_tooltip: Goulennet zo bet votet ar muiañ evito
+    model: 
+      messages: 
+        empty_tags: Digarezit, rankout a rit implijout ur balizenn d'an nebeutañ.
+        title_too_long: Re hir eo an titl. Arabat eo dezhañ bezañ hiroc'h eget 100 arouezenn
+        too_many_tags: Digarezit, ne c'hellit implijout nemet 9 balizenn d'ar muiañ.
+        too_short: Seblantout a ra re verr. Mar plij implijit muioc'h eget %{count} ger evit bezañ resisoc'h.
+    move: 
+      group_label: "Fiñval ar goulenn d'ar strollad :"
+      submit: Dilec'hiañ !
+      title: "Treuzkas ar goulenn : %{title}"
+    move_to: 
+      group_dont_exists: N'eus ket eus ar strollad {{group}}
+      success: Goulenn bet dilec'hiet da {{group}}
+    new: 
+      how_to_ask: Penaos goulenn
+      title: Sevel ur goulenn
+    question: 
+      accepted_tooltip: Respontet ez eus bet d'ar goulenn-mañ ervat
+    retag: 
+      title: Adtikedenniñ
+    retag_form: 
+      cancel: Nullañ
+      submit: Hizivaat an tikedennoù !
+      title: Hizivaat an tikedennoù !
+    retag_to: 
+      failure: Hopala, dibosupl eo hizivaat an tikedennoù
+      success: Hizivaet eo bet an tikedennoù ervat.
+    revert: 
+      title: Disteuler ar goulenn
+    shared: 
+      flag: Kas kemenn un implij direizh
+    show: 
+      accepted_tooltip: Degemeret ez eus bet unan eus ar respontoù da respont reizh.
+      another_answers: Respontoù all
+      answers: Respontoù
+      answers_title: 
+        one: "{{count}} respont"
+        other: "{{count}} respont"
+      asked_on: Goulennet e
+      ban: Forbannañ
+      close: Serriñ
+      close_reason: "Serret eo bet ar goulenn-mañ evit an abeg da-heul :"
+      favorite_tooltip: Ouzhpennañ ar goulenn-mañ d'ar sinedoù
+      flag: Kas kemenn un implij direizh
+      flagged_as: Kemennet evel
+      flags: Kemennet evel
+      last_activity: oberiantizoù ziwezhañ
+      related_questions: Goulennoù kar
+      request_closing: Goulenn serriñ
+      request_closing_details: Goulenn ma vo serret ar goulenn-mañ
+      retag: Adtikedenniñ
+      retract_request: Ur goulenn hoc'h eus savet c'hoazh, tennañ anezhañ a fell deoc'h ?
+      share: Kenrannañ ar goulenn-mañ war
+      share_on: Kenrannañ ar goulenn-mañ war %{site}
+      solution: Diskoulm
+      to_answer_question: evit respont d'ar goulenn-mañ
+      unauthenticated_retag: Ret eo deoc'h kaout ur gont implijer evit gellout kemmañ an tikedennoù
+      unfavorite_tooltip: Lemel ar goulenn-mañ kuit eus ar roll sinedoù
+      unwatch_tooltip: Paouez da heuliañ ar goulenn-mañ
+      viewed: lennet
+      watch_tooltip: Heuliañ ar goulenn-mañ
+    solve: 
+      flash_notice: Diskoulmet eo bet ar gudenn.
+    tags: 
+      filter: Klask tikedennoù
+      title: Tikedennoù
+      tooltip: Diskouez ar goulennoù gant an dikedenn %{tag}
+    unanswered: 
+      empty: N'eus goulenn direspont ebet er strollad-mañ
+      expert: Arbennigourien
+      my_tags: Ma zikedennoù
+      tags: Tikedennoù direspont
+      title: Goulennoù direspont
+    unsolve: 
+      flash_notice: N'eo ket mui diskoulmet ar goulenn.
+    unwatch: 
+      success: Ne resevot ket kemmennadennoù dre bostel pa vo respontoù nevez d'ar goulenn-mañ ken.
+    update: 
+      flash_notice: Hizivaet eo bet ar goulenn ervat.
+    watch: 
+      success: Hiviziken e resevot kemennoù dre bostel bep tro ma vo ur respont nevez d'ar goulenn-mañ

@@ -1,0 +1,25 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    models: 
+      vote: Vot
+      votes: Vots
+  votes: 
+    control: 
+      have_voted_down: Feu clic per a retirar el vostre vot negatiu
+      have_voted_up: Feu clic per a retirar el vostre vot positiu
+      to_vote_down: Feu clic per emetre un vot negatiu
+      to_vote_up: Feu clic per emetre un vot positiu
+    create: 
+      flash_error: No podeu votar això
+      flash_notice: Gràcies per votar!
+      unauthenticated: Els usuaris anònims no poden votar
+    destroy: 
+      flash_notice: S'ha revocat el vostre vot de manera correcta.
+    model: 
+      messages: 
+        closed_question: No podeu votar cap article d'una pregunta tancada
+        vote_down_comment: Els comentaris no poden tenir vots negatius

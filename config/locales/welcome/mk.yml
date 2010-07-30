@@ -50,7 +50,10 @@ mk:
       title: испратете ваше мислење
     index: 
       active: активно
+      browse_all_or_by_tags: Погледајте го %{full_list_of_questions} или %{browse_by_tags}
+      browse_by_tags: разгледајте по ознаки
       create_own_site: Создајте свое сопствено мрежно место за прашања и одговори за 8 секунди и тоа бесплатно
+      full_list_of_questions: полниот список со прашања
       hot: интересно
       quick_question: поставете прашање и ќе најдеме некој што ќе ви го одговори
       recent_questions: скорешни прашања

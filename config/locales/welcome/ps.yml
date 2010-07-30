@@ -1,0 +1,39 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  welcome: 
+    confirm_age: 
+      over_18: زه له ۱۸ کالونو پورته يم
+      under_18: زه له ۱۸ کالونو ټيټ يم
+    facts: 
+      features: 
+        cols: 
+          foss: وړيا/پرانيستې سرچينه
+          multilanguage: ګڼ ژبنيز
+        shapado: 
+          adaptable: هو!
+          foss: هو!
+          joel: نه :/
+          multilanguage: هو!
+          multitopic: هو!
+        stackexchange: 
+          adaptable: نه
+          foss: نه
+          joel: هو!
+          multilanguage: نه
+          multitopic: نه
+      prices: 
+        stackexchange: 
+          large: $1299/مياشت
+          medium: $999/مياشت
+          onsite: $2500/مياشت
+          small: $129/مياشت
+    feedback: 
+      feedback_description: څرګندونه
+      feedback_title: سرليک
+    index: 
+      active: فعال
+      full_list_of_questions: د پوښتنو بشپړ لړليک
+      recent_questions: تازه پوښتنې

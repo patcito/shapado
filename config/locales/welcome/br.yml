@@ -1,16 +1,23 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   welcome: 
     confirm_age: 
+      notice: Ne c'hellit mont war al lec'hienn-mañ nemet ma 'z oc'h da nebeutañ 18 bloaz, pe da nebeutañ oad gour ar barnerezh e lec'h m'emaoc'h o chom pe evit pehini ez it war ar bajenn internet-mañ.
       over_18: A-us 18 bloaz on
       under_18: Dindan 18 bloaz on
+      warning: "DIWALLIT : Er bajenn-mañ e c'heller kavout danvez evit an dud gour."
     facts: 
       features: 
         cols: 
+          adaptable: azasaus
+          foss: frank/digor e darzh
+          joel: Ha pinvidikoc'h e vo Joel a-drugarez din ?
           multilanguage: liesyezh
+          multitopic: liesdanvez
         shapado: 
           adaptable: ya !
           foss: ya !
@@ -28,15 +35,26 @@ br:
           onsite: el lec'hienn
         shapado: 
           large: tro $500
+          medium: <=== heñvel
+          onsite: $0 ebet war o servijer deoc'h moarvat
+          small: moarvat eus $50 da $100/miz war al lod vrasañ eus ar pourvezerien a herbec'hier
         stackexchange: 
           large: $1299/miz
           medium: $999/miz
           onsite: $2500/miz
           small: $129/miz
     feedback: 
+      captcha_error: Mar plij, diskoulmit un oberiadenn matematikel simpl
+      email_description: Merkit ur chomlec'h postel evit ma c'hallfemp respont d'ho kemennadenn
       feedback_description: deskrivadur
       feedback_title: titl
+      title: Kas hoc'h evezhiadennoù
     index: 
       active: oberiant
-      hot: tomm
+      browse_all_or_by_tags: Sellit %{full_list_of_questions} pe %{browse_by_tags}
+      browse_by_tags: merdeit dre balizenn
+      create_own_site: Krouit ho lec'hienn G&amp;R en 8 eilenn, evit netra
+      full_list_of_questions: Roll klok ar goulennoù
+      hot: Tomm-berv
+      quick_question: Goulennit un dra bennak, ni a gavo tud da respont deoc'h
       recent_questions: Goulennoù nevez

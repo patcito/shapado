@@ -1,0 +1,43 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  notifier: 
+    earned_badge: 
+      message1: Conseguiu unha insignia %{badge} en %{app}
+      message2: "Descrición da insignia:"
+      message3: Pode ollar todas as insignias que ten na súa %{user_page}
+    favorited: 
+      message1: "%{user} engadiu a súa pregunta aos favoritos en %{group}"
+      message2: "O texto da súa pregunta:"
+      message3: "Pode vela aquí:"
+    follow: 
+      message1: "%{user} está a seguir as súas preguntas e respostas en %{app}"
+      message2: Pode seguilo premendo no botón "Seguir" na súa %{user_page}
+    give_advice: 
+      message1: "%{user} acaba de facer unha pregunta que quizais vostede poida responder:"
+      message2: "Para contestar, simplemente responda á mensaxe aquí:"
+      message3: "Ou, se sabe de alguén que podería ser capaz de responder, envíelle esta ligazón de referencia:"
+      message4: Se non recibimos axiña unha resposta pola súa parte, preguntarémoslle a outra persoa. Aínda pode responder a ela cando queira.
+    global: 
+      hi: "Ola %{user}:"
+      user_page: páxina de usuario
+    new_answer: 
+      message: "%{user} respondeu %{new_answer} á pregunta %{question}"
+    new_comment: 
+      message: "%{user} comentou %{new_comment} na pregunta %{question}"
+    new_feedback: 
+      message1: O usuario %{user} <%{email}> enviou comentarios
+      message2: Un usuario anónimo mandou comentarios desde o enderezo IP %{ip}
+      message3: "Enderezo de correo electrónico: %{email}"
+      message4: "Asunto: %{subject}"
+    report: 
+      message1: Informe sobre o grupo %{group.name}
+      message2: Desde %{since}
+      message3: Creáronse %{questions} preguntas
+      message4: Creáronse %{answers} respostas
+      message5: Efectuáronse %{votes} votos
+      message6: Outorgáronse %{badges} insignias
+      message7: A conta ten %{users} usuarios.
+      message8: Visite o seu grupo en %{link}

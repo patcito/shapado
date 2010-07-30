@@ -1,0 +1,20 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  comments: 
+    create: 
+      flash_notice: Gràcies pel vostre comentari
+    edit: 
+      title: Edita el comentari
+    shared: 
+      add_comment: Afegiu un comentari...
+      comment_submit: Comentari
+      reply: Responeu
+      said: ha dit
+    update: 
+      flash_notice: S'ha actualitzat correctament el comentari.
+  models: 
+    comment: Comentari
+    comments: Comentaris

@@ -1,0 +1,16 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  wiki: 
+    diff: 
+      title: Ënnerscheed tëschent %{prev} a(n) %{curr}
+    history: 
+      current_version: Aktuell Versioun
+      previous_versions: Vireg Versiounen
+      version: Versioun
+      version_summary: Resumé vun dëser Versioun
+    model: 
+      attributes: 
+        message: Resumé

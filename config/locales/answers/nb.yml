@@ -4,6 +4,9 @@
 # Author: Nghtwlkr
 nb: 
   activerecord: 
+    attributes: 
+      answer: 
+        link: Lenke
     models: 
       answer: Svar
       answers: Svar

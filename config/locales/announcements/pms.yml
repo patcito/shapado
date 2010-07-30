@@ -1,0 +1,21 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: A finiss al
+        message: Mëssagi
+        only_anonymous: Mach për j'utent anònim
+        starts_at: A ancamin-a al
+  announcements: 
+    actions: 
+      delete: Gava
+      title: Assion
+    create: 
+      success: L'anonsi a l'é stàit creà da bin.
+    index: 
+      title: Anonsi

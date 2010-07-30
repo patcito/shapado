@@ -50,7 +50,10 @@ de:
       title: Schicke uns Deine Rückmeldung
     index: 
       active: Aktiv
+      browse_all_or_by_tags: Die %{full_list_of_questions} ansehen oder %{browse_by_tags}
+      browse_by_tags: auf  Basis von Stichworten navigieren
       create_own_site: Erstelle Deine eigene kostenlose „Fragen und Antworten“-Website in acht Sekunden
+      full_list_of_questions: vollständige Liste der Fragen
       hot: Heiß
       quick_question: Stelle eine Frage - wir werden jemanden finden, der sie beantwortet
       recent_questions: Aktuelle Fragen

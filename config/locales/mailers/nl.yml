@@ -1,12 +1,13 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   mailers: 
     notifications: 
       earned_badge: 
-        subject: Uw hebt een speldje verdient in %{group}!
+        subject: U hebt een speldje verdiend in %{group}!
       favorited: 
         subject: "%{login} heeft uw vraag als favoriet toegevoegd!"
       follow: 

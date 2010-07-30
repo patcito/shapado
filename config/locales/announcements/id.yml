@@ -1,0 +1,20 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Berakhir pada
+        message: Pesan
+        only_anonymous: Hanya untuk pengguna anonim
+        starts_at: Dimulai pada
+  announcements: 
+    actions: 
+      delete: Hapus
+      title: Tindakan
+    create: 
+      success: Pengumuman berhasil dibuat.
+    index: 
+      title: Pengumuman

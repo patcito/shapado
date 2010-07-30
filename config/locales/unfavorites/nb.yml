@@ -7,3 +7,7 @@ nb:
     models: 
       favorite: Favoritt
       favorites: Favoritter
+  unfavorites: 
+    create: 
+      success: Spørsmålet har blitt fjernet fra dine favoritter
+      unauthenticated: Du må ha en konto for å fjerne favoritter

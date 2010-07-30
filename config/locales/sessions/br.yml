@@ -1,10 +1,12 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   sessions: 
     create: 
+      flash_error: N'eus ket bet tu da gevreañ ac'hanoc'h evel '%{login}'
       flash_notice: Deuet oc'h a-benn da gevreañ
     destroy: 
       flash_notice: Digevreet oc'h bet.
@@ -15,6 +17,7 @@ br:
       remember_me: Derc'hel soñj ac'hanon
       sign_in: Kevreañ
       signup: En em enskrivañ
+      with_authentication: Kevreañ gant hor reizhiad gwiriekaat
       with_facebook: Kevreañ gant Facebook
       with_openid: Kevreañ gant openid
       with_twitter: Kevreañ gant Twitter

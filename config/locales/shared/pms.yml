@@ -1,0 +1,13 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  shared: 
+    current_tags: 
+      title: Tichëtte selessionà
+    topbar: 
+      admin: Aministrator
+      logged_as: Intrà com %(login)
+      user_page: Mia pàgina

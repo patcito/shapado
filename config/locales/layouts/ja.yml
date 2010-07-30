@@ -1,6 +1,7 @@
 # Messages for Japanese (日本語)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: 青子守歌
 ja: 
   layouts: 
     application: 
@@ -14,6 +15,7 @@ ja:
       logout: ログアウト
       manage_ads: 広告の管理
       moderate: モデレート
+      now: 今すぐ！
       openid: 
         explaination: 外部サービスを使ってログインする場合は下のサービス一覧から選択してください
       pages: ページ
@@ -28,6 +30,7 @@ ja:
       title: Q&Aコミュニティ
       unanswered: 未回答な質問
       users: ユーザ
+      welcome_from: ようこそ！あなたは次のことをすることができます
     manage: 
       actions: アクション
       announcements: アナウンス
@@ -44,3 +47,5 @@ ja:
       stats: ステータス
       theme: テーマ
       widgets: ウィジェット
+    notifications: 
+      message: これ以上%{domain}からの自動通知を受け取りたくない場合、通知画面の設定を変更してください。

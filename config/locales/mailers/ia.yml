@@ -1,0 +1,24 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Tu ha ganiate un insignia in %{group}!
+      favorited: 
+        subject: "%{login} addeva tu question como favorite!"
+      follow: 
+        subject: "%{login} ora te seque in %{app}"
+      give_advice: 
+        friend_subject: "Tu amico ha besonio de adjuta: %{question_title}"
+        subject: "Nos ha besonio de tu consilio: %{question_title}"
+      new_answer: 
+        subject_friend: Tu amico %{login} respondeva al question %{title}
+        subject_other: "%{login} respondeva al question %{title}"
+        subject_owner: "%{login} respondeva a tu question %{title}"
+      new_comment: 
+        subject: "%{login} commentava super %{group}"
+      report: 
+        subject: Reporto pro le gruppo %{group} de %{app}

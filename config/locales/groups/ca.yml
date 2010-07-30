@@ -1,0 +1,72 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Etiquetes predeterminades
+        description: Descripció
+        domain: Domini
+        fb_button: Habilita el botó semblant al Facebook (no garanteix privacitat)
+        forum: Permet més d'una resposta per usuari
+        group_created_by: creat per
+        language: Idioma
+        legend: Llegenda
+        logo: Logotip
+        may_contain_adult_content: Aquest lloc pot contenir material per a adults
+        name: Nom
+        openid_only: Només poden accedir a aquest lloc les persones que emprin OpenID
+        owner: Aquest grup ha estat creat per %{login}
+        registered_only: Només poden accedir a aquest lloc les persones registrades
+        state: Estat
+        subdomain: URL
+        wysiwyg_editor: Habilita l'editor simple
+    models: 
+      default_tags_message: No podeu tenir més de 10 etiquetes predeterminades
+      group: Grup
+      groups: Grups
+  groups: 
+    create: 
+      flash_notice: S'ha creat correctament el vostre grup. Podeu començar a configurar-lo.
+    form: 
+      access: Paràmetres d'accés
+      analytics_engine: Motor d'analítiques
+      analytics_legend: El grup podrà emprar el seu propi codi de monitorització
+      any_language: Qualsevol
+      custom_analytics: Permetre analítiques personalitzades
+      custom_html: Permet HTML personalitzat
+      custom_js: Permetre JavaScript personalitzat
+      default_tags_legend: Separeu les etiquetes amb comes. Només s'admeten 10 etiquetes de manera predeterminada.
+      description_legend: Teniu 400 caràcters per descriure el grup.
+      isolate_group: Aïlleu el grup de la resta de grups
+      legend_legend: S'emprarà a la capçalera. Teniu 40 caràcters.
+      logo_legend: Podeu pujar el logotip del grup. La mida màxima del fitxer és de 2MB.
+      members_only: Només els membres del grup tindran accés a aquest grup
+      website_analytics_id: identificador de les analítiques del lloc web
+    group: 
+      about: Quant a
+      accept_group: Accepta aquest grup
+      allow_ads: Permetre anuncis
+      close: Tanca
+      close_group: Tanca aquest grup
+      disallow_ads: No permetre anuncis
+    index: 
+      actives: Actiu
+      filter: Cercar grups
+      most_active: Més actiu/s
+      name: Nom
+      pendings: Pendent
+      request_group: Sol·licitud d'un nou grup
+      title: Grups
+    new: 
+      title: Creeu el vostre grup
+    show: 
+      accept_group: Accepta aquest grup
+      accept_group_with_custom_ads: Accepta el grup i permet anuncis personalitzats
+      close_group: Tancar aquest grup
+      group_awaiting_acceptance: Aquest grup està esperant l'acceptació d'un moderador.
+      group_closed: Aquest grup s'ha tancat.
+      title: Quant a %{name}
+      visit_group: Visiteu aquest grup

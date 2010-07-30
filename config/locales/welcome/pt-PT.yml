@@ -50,7 +50,10 @@ pt-PT:
       title: Enviar o seu comentário
     index: 
       active: Activo
+      browse_all_or_by_tags: Ver a %{full_list_of_questions} ou %{browse_by_tags}
+      browse_by_tags: navegar por categoria
       create_own_site: Crie o seu próprio site de perguntas e respostas em 8 segundos, grátis
+      full_list_of_questions: lista completa de perguntas
       hot: Popular
       quick_question: Faça uma pergunta, encontraremos quem a responda
       recent_questions: Perguntas recentes

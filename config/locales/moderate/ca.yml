@@ -1,0 +1,16 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  admin: 
+    moderate: 
+      index: 
+        all: Tot
+        ban: Prohibició
+        banned: Preguntes prohibides
+        content: Contingut
+        flagged: Preguntes marcades
+        item_title: Títol
+        need_tags: Recategoriza
+        title: Modereu

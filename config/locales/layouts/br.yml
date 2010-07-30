@@ -48,3 +48,5 @@ br:
       stats: Stadegoù
       theme: Tem
       widgets: Bitrakoù
+    notifications: 
+      message: Ma ne fell ket deoc'h resevout kemennoù emgefre %{domain}, e c'hellit kemmañ ho kefluniadurioù kemennoù.

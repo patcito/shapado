@@ -1,0 +1,22 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  sessions: 
+    create: 
+      flash_error: No s'ha pogut iniciar la vostra sessió com a '%{login}'
+      flash_notice: Heu iniciat la sessió correctament
+    destroy: 
+      flash_notice: Heu tancat la sessió.
+    new: 
+      log_in: Inicieu la sessió
+      not_registered: No us heu registrat encara?
+      registered: Ja esteu registrat?
+      remember_me: Recorda'm
+      sign_in: Registreu-vos
+      signup: Registreu-vos
+      with_authentication: Inicieu la sessió amb el vostre sistema d'autenticació
+      with_facebook: Inicieu la sessió amb el compte del Facebook
+      with_openid: Inicieu la sessió amb OpenID
+      with_twitter: Inicieu la sessió amb el compte de Twitter

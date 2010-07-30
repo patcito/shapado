@@ -1,11 +1,12 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Hamilton Abreu
 pt-PT: 
   close_requests: 
     create: 
-      flash_notice: Pedido de fecho foi criado
+      flash_notice: O pedido de fecho foi criado
     destroy: 
       flash_notice: O pedido de fecho foi eliminado
     form: 

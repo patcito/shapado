@@ -1,0 +1,17 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Eindig om
+        message: Boodskap
+        starts_at: Begin om
+  announcements: 
+    actions: 
+      delete: Skrap
+      title: Aksies
+    index: 
+      title: Aankondigings

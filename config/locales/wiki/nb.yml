@@ -1,0 +1,22 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  wiki: 
+    actions: 
+      all_history: Tilbake til historikk
+      back_to_question: Tilbake til spørsmålet
+      revert: Tilbakestill til denne versjonen
+      show_diff: Sammenlign valgte versjoner
+    diff: 
+      title: Forskjeller mellom %{prev} og %{curr}
+    history: 
+      current_version: Nåværende versjon
+      previous_versions: Tidligere versjoner
+      title: Historikk (%{count})
+      version: Versjon
+      version_summary: Versjonssammendrag
+    model: 
+      attributes: 
+        message: Sammendrag

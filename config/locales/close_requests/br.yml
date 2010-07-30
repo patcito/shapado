@@ -4,10 +4,17 @@
 # Author: Y-M D
 br: 
   close_requests: 
+    create: 
+      flash_notice: Goulenn serriñ bet krouet ervat
+    destroy: 
+      flash_notice: Goulenn serriñ bet dilamet ervat
     form: 
+      close_with_reason: Serriñ ar goulenn-mañ en ur implijout an abeg-se
       dupe: Doublenn
       no_question: N'eo ket ur goulenn
       not_relevant: Ne glot ket
+      ot: E-maez sujed
+      request_closing_details: Goulenn ma vo serret ar goulenn-mañ
       spam: strob
     index: 
       title: Roll ar rekedoù serriñ
@@ -20,3 +27,5 @@ br:
         already_requested: Ur goulenn serriñ oc'h eus graet dija evit ar goulenn-mañ
       name: Reked serriñ
       prural_name: Rekedoù serriñ
+    update: 
+      flash_notice: Goulenn serriñ bet hizivaet ervat

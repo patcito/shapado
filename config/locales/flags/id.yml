@@ -1,0 +1,21 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Alasan
+    models: 
+      flag: Tanda
+      flags: Tanda
+  flags: 
+    create: 
+      flash_error: Anda tidak dapat menandai ini
+      flash_notice: Terima kasih atas laporan Anda
+    form: 
+      attention: Memerlukan perhatian moderator
+      label: Mohon tandai dengan hati-hati
+      offensive: Isi menyinggung, menghina atau menyebarkan kebencian
+      spam: Spam

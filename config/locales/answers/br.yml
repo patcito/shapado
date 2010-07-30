@@ -14,6 +14,7 @@ br:
       answers: Respontoù
   answers: 
     create: 
+      flash_error: "Ur fazi 'zo bet pa oac'h oc'h ouzhpennañ ar goulenn.\nDalc'hit soñj :\n- N'eo ket aotreet ar goulennoù goullo pe e doubl.\n- Rankout a rit gortoz da nebeutañ 20 eilenn a-raok embann ur respont all.\n- Ne c'hellit embann nemet ur respont dre goulenn."
       flash_notice: Trugarez !
     edit: 
       title: Kemmañ ar respont
@@ -22,3 +23,5 @@ br:
       comment_label: Addisplegañ an respont-mañ
       comment_submit: Addispleg
       submit: Respont
+    update: 
+      flash_notice: Krouet eo bet ar respont ervat.

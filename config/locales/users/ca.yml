@@ -1,0 +1,88 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activat el
+        activation_code: Codi d'activació
+        age: Edat
+        asked_by: preguntat per
+        avatar: Imatge del perfil
+        birthday: Aniversari
+        created_at: registrat
+        current_password: Contrasenya actual
+        email: Correu electrònic
+        fullname: Nom complet
+        hide_country: No mostris el meu país
+        language: Idioma
+        language_filter: Filtra per idioma
+        last_logged_at: vist
+        login: Nom d'usuari
+        name: Nom real
+        password: Contrasenya
+        password_confirmation: Confirmació de la contrasenya
+        preferred_languages: Trieu els idiomes que coneixeu
+        preferred_tags: Etiquetes preferides
+        reputation: Reputació
+        timezone: Zona horària
+        updated_at: actualitzat el
+        website: Lloc web
+    models: 
+      user: Usuari
+      users: Usuaris
+  users: 
+    actions: 
+      edit_others_posts: Editeu els articles d'altres
+      edit_wiki_post: Edita els articles del wiki
+      flag: Marca
+      retag_others_questions: Recategoritzeu preguntes d'altres
+      vote_down: Vot negatiu
+      vote_to_close_any_question: Petició de tancament de qualsevol pregunta
+      vote_to_close_own_question: Petició de tancament de la pregunta
+      vote_up: Vot positiu
+    create: 
+      flash_error: No s'ha pogut crear el compte. Torneu-ho a provar o contacteu amb un administrador (teniu l'enllaç més amunt).
+      flash_notice: Gràcies per registrar-vos!
+    edit: 
+      enable_twitter: Habiliteu els vostres comptes del Facebook o del Twitter
+      submit: Desa
+      title: Paràmetres
+    follow: 
+      flash_notice: S'ha afegit l'usuari %{user} a les vostres amistats
+    form: 
+      activities_notification: Rebre notificacions per correu electrònic sobre activitat del sistema com atorgament de distintius, nous seguidors, etc.
+      avatar_tip: Canvieu la imatge del vostre perfil emprant Gravatar
+      give_advice_notification: Rebre notificacions per correu electrònic sobre preguntes del vostre sector de coneixement
+      information: Informació
+      new_answer_notification: Rebre notificacions per correu electrònic per a les noves respostes
+      notifications: Notificacions
+      reports_notification: Rebre un informe amb l'última activitat del grup (només per a administradors de grups)
+      show_more_lang: Mostra més idiomes
+    index: 
+      empty: Aquest grup no té membres. Participeu-hi fent-vos-hi.
+      filter: Cerca per usuari
+      name: Nom
+      name_tooltip: Usuaris per ordre alfabètic
+      newest: Les més noves
+      newest_tooltip: Usuaris que se n'acaben de fer
+      oldest: Les més antigues
+      oldest_tooltip: Els primers usuaris que se n'han fet
+      reputation: Reputació
+      reputation_tooltip: Usuaris per reputació en ordre descendent
+      title: Tots els usuaris
+    messages: 
+      errors: 
+        reputation_needed: Necessiteu una reputació de %{min_reputation} per a poder %{action}
+    new: 
+      submit: Registreu-vos
+      title: Registreu-vos com a nou usuari
+    show: 
+      follow: Seguir-lo/la
+      title: Usuari %{user}
+      unfollow: Deixar de seguir-lo/la
+      views: Visualitzacions
+    unfollow: 
+      flash_notice: S'ha esborrat l'usuari %{user} de la vostra llista d'amistats

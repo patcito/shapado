@@ -1,21 +1,23 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
+# Author: Hamilton Abreu
 pt-PT: 
   wiki: 
     actions: 
-      all_history: back to history
-      back_to_question: back to question
-      revert: revert to this version
-      show_diff: compare selected versions
+      all_history: Retornar ao histórico
+      back_to_question: Voltar à pergunta
+      revert: Reverter para esta versão
+      show_diff: Compare as versões seleccionadas
     diff: 
-      title: differences between %{prev} and %{curr}
+      title: Diferenças entre %{prev} e %{curr}
     history: 
-      current_version: current version
-      previous_versions: previous versions
-      title: history (%{count})
-      version: version
-      version_summary: version summary
+      current_version: Versão actual
+      previous_versions: Versões anteriores
+      title: Histórico (%{count})
+      version: Versão
+      version_summary: Resumo da versão
     model: 
       attributes: 
-        message: summary
+        message: Resumo

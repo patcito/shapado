@@ -1,0 +1,16 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  admin: 
+    moderate: 
+      index: 
+        all: Todos
+        ban: Banir
+        banned: Perguntas banidas
+        content: Conteúdo
+        flagged: Perguntas reportadas
+        item_title: Título
+        need_tags: Recategorizar
+        title: Moderar

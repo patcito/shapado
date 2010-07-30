@@ -1,0 +1,29 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Conteúdo
+        created_at: Respondida
+        link: Link
+    models: 
+      answer: Resposta
+      answers: Respostas
+  answers: 
+    create: 
+      flash_error: "Algo correu mal ao adicionar a sua resposta.\n  Lembre-se que:\n - Respostas vazias e repetidas não são permitidas.\n - Você deve esperar 20 segundos antes de postar outra resposta.\n - Você só pode postar uma resposta por pergunta."
+      flash_notice: Obrigado!
+    edit: 
+      title: Editando a resposta
+    form: 
+      answer_label: Responder à pergunta
+      comment_label: Comentar esta resposta
+      comment_submit: Comentar
+      submit: Responder
+    revert: 
+      title: Reverter a resposta
+    update: 
+      flash_notice: A resposta foi atualizada.

@@ -1,31 +1,41 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Grigol
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   notifier: 
     earned_badge: 
+      message1: Вы заслужили значок %{badge} в %{app}
       message2: "Описание беджа:"
       message3: Вы можете просмотреть все ваши беджи на вашей %{user_page}
     favorited: 
+      message1: "%{user} добавил ваш вопрос в список избранных в группе %{group}"
       message2: "Текст вашего вопроса:"
+      message3: "Вы можете посмотреть здесь:"
     follow: 
+      message1: "%{user} теперь отслеживает ваши вопросы и ответы в %{app}"
       message2: Вы можете начать следить за ним снова, нажав на кнопку «Следить» на его %{user_page}
     give_advice: 
       message1: "%{user} недавно задал вопрос, на который вы могли бы ответить:"
       message2: "Для обратной связи просто ответьте здесь на это сообщение:"
+      message3: "Или, если вы знаете, кто сможет ответить, то отправьте им эту ссылку:"
       message4: Если мы не получим от вас ответа в ближайшее время, мы спросим кого-нибудь ещё. Вы по прежнему сможете ответить, когда захотите.
     global: 
       hi: Здравствуйте, %{user},
       user_page: странице пользователя
     new_answer: 
       message: "%{user} добавил ответ %{new_answer} на вопрос %{question}"
+    new_comment: 
+      message: "%{user} оставил комментарий %{new_comment} к вопросу %{question}"
     new_feedback: 
       message1: Пользователь %{user} <%{email}> отправил отзыв
       message2: Анонимный пользователь отправил отзыв с IP-адреса %{ip}
       message3: "Адрес электронной почты: %{email}"
       message4: "Тема: %{subject}"
     report: 
+      message1: Отчёт для группы %{group.name}
       message2: С %{since}
       message3: "Задано вопросов: %{questions}"
       message4: "Создано ответов: %{answers}"

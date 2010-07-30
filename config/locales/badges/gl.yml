@@ -1,0 +1,129 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    models: 
+      badge: Insignia
+      badges: Insignias
+  badges: 
+    index: 
+      description: Todas as insignias que pode gañar. Comparta os seus coñecementos para conseguilas.
+      title: insignias
+    shared: 
+      addict: 
+        description: Visitou o sitio cada día durante 20 días consecutivos
+      autobiographer: 
+        description: Completou todos os campos do perfil de usuario
+        name: Autobiógrafo
+      celebrity: 
+        description: Ten máis de 100 seguidores
+        name: Celebridade
+      citizen_patrol: 
+        description: Primeira mensaxe da que informou
+        name: Patrulla do cidadán
+      civic_duty: 
+        description: Votou 300 veces
+        name: Obriga cívica
+      cleanup: 
+        description: Primeira reversión
+        name: Limpeza
+      commentator: 
+        description: Deixou 10 comentarios
+      critic: 
+        description: Votou negativamente por vez primeira
+      disciplined: 
+        description: Borrou a súa propia mensaxe cunha puntuación de 3 ou maior
+        name: Disciplinado
+      editor: 
+        description: Primeira mensaxe editada
+      effort_medal: 
+        description: Recibiu 100 votos positivos
+      enlightened: 
+        description: A primeira resposta foi aceptada con, polo menos, 10 votos positivos
+        name: Esclarecido
+      famous_question: 
+        description: Realizou unha pregunta con 10.000 visitas
+      fanatic: 
+        description: Visitou o sitio cada día durante 100 días consecutivos
+      favorite_question: 
+        description: Pregunta marcada como favorita por 25 usuarios
+      friendly: 
+        description: Segue a alguén por vez primeira
+        name: Agradable
+      good_answer: 
+        description: Ten unha resposta que atinxe unha media de máis de 25 votos
+      good_question: 
+        description: Ten unha pregunta que atinxe unha media de máis de 25 votos
+      great_answer: 
+        description: Resposta votada positivamente 100 veces
+        name: Resposta formidable
+      great_question: 
+        description: Pregunta votada positivamente 100 veces
+        name: Pregunta formidable
+      guru: 
+        description: Deu unha solución a unha pregunta, cunha media de máis de 40 votos
+      inquirer: 
+        description: Preguntou por vez primeira
+      interesting_person: 
+        description: Ten máis de 10 seguidores
+        name: Persoa interesante
+      merit_medal: 
+        description: Recibiu 200 votos positivos
+      necromancer: 
+        description: Respondeu a unha pregunta máis de 60 días despois con, polo menos, 5 votos
+        name: Nigromante
+      nice_answer: 
+        description: Resposta votada positivamente 10 veces
+        name: Boa resposta
+      nice_question: 
+        description: Pregunta votada positivamente 10 veces
+        name: Boa pregunta
+      notable_question: 
+        description: Realizou unha pregunta con 2.500 visitas
+      organizer: 
+        description: Primeiro cambio de etiqueta
+        name: Organizador
+      peer_pressure: 
+        description: Borrou a súa propia mensaxe cunha puntuación de -3 ou menor
+        name: Presión dos pares
+      pioneer: 
+        description: Sexa un dos primeiros usuarios en se rexistrar
+      popstar: 
+        description: 500 votos positivos, máximo de 10 votos negativos
+      popular_person: 
+        description: Ten máis de 50 seguidores
+        name: Persoa popular
+      popular_question: 
+        description: Realizou unha pregunta con 1.000 visitas
+      rockstar: 
+        description: 1.000 votos positivos, máximo de 10 votos negativos
+      scholar: 
+        description: Primeira resposta aceptada na súa propia pregunta
+        name: Alumno
+      self-learner: 
+        description: Respondeu á súa propia pregunta con, polo menos, 3 votos positivos
+        name: Autodidacta
+      service_medal: 
+        description: 300 votos positivos
+      shapado: 
+        description: Visitou o sitio cada día durante 8 días consecutivos
+      stellar_question: 
+        description: Pregunta engadida aos favoritos por 100 usuarios
+        name: Pregunta estelar
+      student: 
+        description: Preguntou por vez primeira con, polo menos, un voto positivo
+      supporter: 
+        description: Votou positivamente por vez primeira
+      troubleshooter: 
+        description: Respondeu por vez primeira
+      tutor: 
+        description: Deu unha solución a unha pregunta, cunha media de máis de 2 votos
+    show: 
+      description: "Usuarios que gañaron esta insignia. Recentemente outorgada a:"
+      earned: gañou
+      for_tag_bronze: 200 votos na etiqueta "%{tag}"
+      for_tag_gold: 1.000 votos na etiqueta "%{tag}"
+      for_tag_silver: 400 votos na etiqueta "%{tag}"
+      title: Insignia %{type}

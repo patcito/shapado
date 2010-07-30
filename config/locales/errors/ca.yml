@@ -1,0 +1,22 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  errors: 
+    forbidden: 
+      explanation: No teniu els permisos necessaris per a accedir a aquesta pàgina.
+      title: Accés denegat
+    go_to: Aneu a la pàgina %{link}
+    help_us_answer: Ajudeu-nos a respondre %{link}
+    internal_error: 
+      explanation: Ens han comunicat aquest problema i ens n'ocuparem bon punt poguem.
+      title: S'ha produït algun error.
+    not_found: 
+      explanation: Potser us heu equivocat posant l'adreça o la pàgina ha canviat de lloc.
+      title: No s'ha trobat la pàgina.
+    options_label: "Altres coses per provar:"
+    search: Cerca
+    unprocessable_entity: 
+      explanation: Potser heu intentat modificar alguna cosa per la qual no teniu els permisos necessaris.
+      title: S'ha rebutjat el canvi que heu intentat fer.

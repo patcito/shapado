@@ -1,0 +1,37 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  doc: 
+    chat: 
+      title: Bantuan Obrolan
+    plans: 
+      15millions: 15 juta kunjungan halaman/bulan
+      1million: 1 juta kunjungan halaman/bulan
+      247_all_support: Bantuan berbasis web, surel, obrolan dan telepon 24/7
+      5millions: 5 juta kunjungan halaman/bulan
+      all_support: Bantuan berbasis web, surel, obrolan dan telepon
+      basic_restrictions: Tanpa iklan kustom dan antarmuka pengguna yang dapat disesuaikan sepenuhnya
+      beta_info: Untuk saat ini semua situs gratis dan mendapat manfaat dari pilihan yang sama seperti rencana Optimum, kecuali bantuan yang hanya berbasis web, surel dan obrolan.
+      big_sites: Situs Lalu Lintas Besar
+      custom_ads: Gunakan iklan Anda sendiri
+      custom_analytics: Statistik lalu lintas
+      custom_domain: Ranah kustom
+      custom_themes: Gunakan tema kustom awal buatan kami
+      custom_ui: Antarmuka pengguna yang dapat disesuaikan sepenuhnya
+      free_plan: rencana gratis
+      getting_popular: Jadilah Terkenal
+      huge_sites: Situs Lalu Lintas Raksasa
+      month: bulan
+      page_views: Untuk Situs Kecil/Pribadi
+      plans: Rencana
+      private_site: Izinkan akses pribadi/umum
+      small_private: Situs Kecil/Pribadi
+      start_monetizing: mulai dapatkan uang
+      support: Bantuan
+      title: Rencana dan harga
+      unlimited: Lalu lintas tak terbatas setiap bulan
+      we_offer: Kami juga menawarkan
+      web_support: Bantuan berbasis web
+      with_unlimited: dengan lalu lintas tak terbatas tanpa iklan kustom dan ranah kustom.

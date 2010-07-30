@@ -1,0 +1,14 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  searches: 
+    form: 
+      clear: Neteja
+      search_box_title: Verifiqueu que la vostra pregunta no s'hagi fet abans
+      tags_tip: Empreu [tag] per a especificar les etiquetes.
+    index: 
+      empty: No s'han trobat preguntes que coincideixin amb la vostra cerca
+      search_text: Preguntes que contenen
+      tags: amb aquestes etiquetes

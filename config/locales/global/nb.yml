@@ -1,0 +1,53 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  actions: 
+    closed: lukket
+    created: opprettet
+    deleted: slettet
+    updated: oppdatert
+  feeds: 
+    feed: Mating
+    share_on_twitter: twitter, facebook og mer...
+  global: 
+    by: av
+    current: Nåværende
+    from: fra %{site}
+    group_not_found: Siden &{url} finnes ikke
+    or: eller
+    please_login: Vennligst logg inn
+    preview: Forhåndsvisning
+    previous: Forrige
+    share: del
+  languages: 
+    user: Mine foretrukne språk
+  messages: 
+    success: "%{model} ble %{action}."
+  models: 
+    question: Spørsmålet
+  number: 
+    x_time: 
+      one: "%{count} gang"
+      other: "%{count} ganger"
+      zero: Aldri
+  scaffold: 
+    add: Legg til
+    back: Tilbake
+    cancel: Avbryt
+    close: Lukk
+    create: Opprett
+    destroy: Slett
+    details: Detaljer
+    edit: Rediger
+    more: Mer ...
+    new: Legg til ny %{model}
+    save: Lagre
+    send: Send
+    show: Vis
+    sure: Er du sikker på at du vil slette denne %{model} ?
+    update: Oppdater
+  time: 
+    ago: "%{time} siden"
+    today: i dag

@@ -1,0 +1,16 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rolle
+  members: 
+    form: 
+      login_tip: Søk mens du skriver
+    index: 
+      manage_members_title: Håndter medlemmer
+      title: Medlemmer av %{name}s gruppe
+      title_isolate: Medlemmer av %{name}

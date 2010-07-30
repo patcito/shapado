@@ -5,9 +5,9 @@
 pt-PT: 
   notifier: 
     earned_badge: 
-      message1: Recebeu um distintivo %{badge} na aplicação %{app}
-      message2: "Descrição do distintivo:"
-      message3: Pode ver todos os seus distintivos na sua %{user_page}
+      message1: Recebeu uma condecoração %{badge} na aplicação %{app}
+      message2: "Descrição da condecoração:"
+      message3: Pode ver todas as suas condecorações na sua %{user_page}
     favorited: 
       message1: "%{user} adicionou a sua pergunta como favorita no grupo %{group}"
       message2: "O texto da sua pergunta:"
@@ -38,6 +38,6 @@ pt-PT:
       message3: Foram criadas %{questions} perguntas
       message4: Foram criadas %{answers} respostas
       message5: Foram atribuídos %{votes} votos
-      message6: Foram atribuídos %{badges} distintivos
+      message6: Foram atribuídas %{badges} condecorações
       message7: A conta tem %{users} utilizadores.
       message8: Visite o seu grupo em %{link}

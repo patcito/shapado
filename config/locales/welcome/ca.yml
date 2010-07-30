@@ -1,0 +1,59 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  welcome: 
+    confirm_age: 
+      notice: Només podeu entrar a aquesta pàgina si sou majors de 18 anys o si teniu l'edat mínima legal de majoria d'edat a la jurisdicció on residiu o des d'on accediu a aquesta pàgina.
+      over_18: Sóc major de 18 anys
+      under_18: Sóc menor de 18 anys
+      warning: "ATENCIÓ: aquesta pàgina pot contenir material adult explícit."
+    facts: 
+      features: 
+        cols: 
+          adaptable: adaptable
+          foss: lliure/de codi font obert
+          joel: Faré el Joel més ric?
+          multilanguage: multi-idioma
+          multitopic: multi-tema
+        shapado: 
+          adaptable: sí!
+          foss: sí!
+          joel: no :/
+          multilanguage: sí!
+          multitopic: sí!
+        stackexchange: 
+          adaptable: 'no'
+          foss: 'no'
+          joel: sí!
+          multilanguage: 'no'
+          multitopic: 'no'
+      prices: 
+        cols: 
+          onsite: al lloc web
+        shapado: 
+          large: probablement sobre 500$
+          medium: <=== ídem
+          onsite: probablement 0$ en el vostre propi servidor
+          small: probablement entre 50$ i 100$/mes a la majoria de proveïdors d'hostatjament
+        stackexchange: 
+          large: 1.299$/mes
+          medium: 999$/mes
+          onsite: 2.500$/mes
+          small: 129$/mes
+    feedback: 
+      captcha_error: Resoleu aquesta simple operació matemàtica
+      email_description: Proporcioneu-vos la vostra adreça de correu electrònic així podrem respondre el vostre missatge
+      feedback_description: Descripció
+      feedback_title: Títol
+      title: Envieu el vostres suggeriments
+    index: 
+      active: Actiu
+      browse_all_or_by_tags: Vegeu la %{full_list_of_questions} o %{browse_by_tags}
+      browse_by_tags: navega per etiquetes
+      create_own_site: Creeu el vostre propi lloc de preguntes i respostes en 9 segons i de manera gratuïta
+      full_list_of_questions: llistat complet de preguntes
+      hot: Calent
+      quick_question: Feu una pregunta, trobarem algú que en sàpiga la resposta
+      recent_questions: Preguntes recents

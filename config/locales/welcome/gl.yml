@@ -50,7 +50,10 @@ gl:
       title: dea a súa opinión
     index: 
       active: activas
+      browse_all_or_by_tags: Ollar a %{full_list_of_questions} ou %{browse_by_tags}
+      browse_by_tags: navegar por etiquetas
       create_own_site: Cree o seu propio sitio de preguntas e respostas de xeito gratuíto en 8 segundos
+      full_list_of_questions: lista completa de preguntas
       hot: populares
       quick_question: faga unha pregunta, nós atoparemos a alguén que a responda
       recent_questions: preguntas recentes

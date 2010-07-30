@@ -1,0 +1,13 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    models: 
+      favorite: Favorita
+      favorites: Favorites
+  unfavorites: 
+    create: 
+      success: S'ha eliminat la pregunta de les vostres favorites
+      unauthenticated: Us cal un compte per a poder eliminar favorites

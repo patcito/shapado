@@ -1,0 +1,22 @@
+# Messages for Swedish (Svenska)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Jopparn
+sv: 
+  sessions: 
+    create: 
+      flash_error: Kunde inte logga in dig som '% (login)'
+      flash_notice: Du har framgångsrikt loggat in
+    destroy: 
+      flash_notice: Du har blivit utloggad.
+    new: 
+      log_in: Logga in
+      not_registered: Inte registrerad än?
+      registered: Redan registrerad?
+      remember_me: Kom ihåg mig
+      sign_in: Logga in
+      signup: Skapa ett användarkonto
+      with_authentication: Logga in med vårt verifieringssystem
+      with_facebook: Logga in med Facebook
+      with_openid: Logga in med OpenID
+      with_twitter: Logga in med Twitter

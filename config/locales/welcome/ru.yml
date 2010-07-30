@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   welcome: 
     confirm_age: 
@@ -50,7 +51,10 @@ ru:
       title: Отправить отзыв
     index: 
       active: Активные
+      browse_all_or_by_tags: См. %{full_list_of_questions} или %{browse_by_tags}
+      browse_by_tags: просмотр по меткам
       create_own_site: Создать собственный сайт вопросов и ответов за 8 секунд бесплатно
+      full_list_of_questions: полный список вопросов
       hot: Горячие
       quick_question: Задайте вопрос, мы найдём кого-нибудь для ответа
       recent_questions: Последние вопросы

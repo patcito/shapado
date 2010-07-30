@@ -1,0 +1,60 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  actions: 
+    closed: gesluit
+    created: geskep
+    deleted: verwyder
+    updated: opgedateer
+  feeds: 
+    feed: Voer
+    post_new_questions: Pos nuwe vrae by
+    question: Skryf in op hierdie vraag
+    questions: Skryf in op alle vrae
+    share_on_twitter: Twitter, Facebook en meer...
+    tag: Skryf in op etiket
+    user: Skryf in op gebruikersvrae
+  global: 
+    by: deur
+    current: huidige
+    from: Van %{site}
+    group_not_found: Die bladsy %{url} bestaan nie
+    or: of
+    permission_denied: Geen toegang
+    please_login: Meld asseblief aan
+    preview: Voorskou
+    previous: Vorige
+    share: deel
+  languages: 
+    any: Enige
+    user: My voorkeurtale
+  messages: 
+    success: "%{model} is suksesvol %{action}."
+  models: 
+    question: Die vraag
+  number: 
+    x_time: 
+      one: "%{count} keer"
+      other: "%{count} keer"
+      zero: Nooit
+  scaffold: 
+    add: Voeg by
+    back: Terug
+    cancel: Kanselleer
+    close: Sluit
+    create: Skep
+    destroy: Skrap
+    details: Besonderhede
+    edit: Wysig
+    more: Meer ...
+    new: Voeg nuwe %{model} by
+    save: Stoor
+    send: Stuur
+    show: Wys
+    sure: Is u seker dat u hierdie %{model} wil verwyder?
+    update: Opdateer
+  time: 
+    ago: "%{time} gelede"
+    today: vandag

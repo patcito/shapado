@@ -12,6 +12,7 @@ ps:
       add_comment: تبصره ورګډول...
       comment_submit: تبصره
       reply: ځوابول
+      said: ووييل
   models: 
     comment: تبصره
     comments: تبصرې

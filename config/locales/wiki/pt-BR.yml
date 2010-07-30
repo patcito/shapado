@@ -1,0 +1,22 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  wiki: 
+    actions: 
+      all_history: Retornar ao histórico
+      back_to_question: Voltar à pergunta
+      revert: Reverter para esta versão
+      show_diff: compare as versões selecionadas
+    diff: 
+      title: Diferenças entre %{prev} e %{curr}
+    history: 
+      current_version: Versão atual
+      previous_versions: Versões anteriores
+      title: Histórico (%{count})
+      version: Versão
+      version_summary: Resumo da versão
+    model: 
+      attributes: 
+        message: Resumo

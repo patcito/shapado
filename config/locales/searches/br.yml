@@ -1,0 +1,15 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  searches: 
+    form: 
+      clear: Riñsañ
+      search_box_title: Gwiriañ ha n'eo ket bet savet ho koulenn c'hoazh
+      tags_tip: Ober gant [tag] evit spisaat tikedennoù.
+    index: 
+      empty: N'eus bet kavet netra o klotañ gant ar pezh a glaskit.
+      search_text: Goulennoù enno
+      tags: e-touez an tikedennoù-mañ

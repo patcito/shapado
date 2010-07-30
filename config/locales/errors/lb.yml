@@ -1,0 +1,16 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  errors: 
+    forbidden: 
+      title: Zougang refuséiert
+    go_to: Gitt op d'Säit %{link}
+    internal_error: 
+      title: Et deet eis Leed, awer et ass eppes schif gaang.
+    not_found: 
+      title: Säit net fonnt.
+    search: Sichen
+    unprocessable_entity: 
+      title: D'Ännerung déi Dir wollt gouf refuséiert.

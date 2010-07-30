@@ -1,0 +1,17 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  ads: 
+    ad_links: Дадаць новую рэкляму %{type}
+    create: 
+      success: Рэкляма была пасьпяхова створаная.
+    index: 
+      add_adbard: Дадаць новую рэклямную аб’яву
+      add_adsense: Дадаць новую рэкляму Google AdSense
+      title: Рэкляма
+    name: "Назва:"
+    position: "Пазыцыя:"
+    title: Даданьне новай рэклямы %{type}

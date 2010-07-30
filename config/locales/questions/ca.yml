@@ -1,0 +1,136 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Respostes
+        asked_by: Preguntat per
+        body: Cos
+        closed: Tancat
+        created_at: Preguntat
+        language: Idioma
+        tags: Etiquetes
+        title: Títol
+        updated_at: actualitzat
+        updated_by: actualitzat per
+        views: Visualitzacions
+        votes: Vots
+    models: 
+      question: Pregunta
+      questions: Preguntes
+  questions: 
+    answer: 
+      add_comment: Afegeix un comentari...
+      flag: Marca
+      pick_answer: Trieu-ho com a solució
+      unset_answer: Voleu anular la solució?
+    create: 
+      flash_notice: S'ha creat correctament la pregunta
+    edit: 
+      title: S'està editant la pregunta
+    flag: 
+      title: Marca la pregunta
+    form: 
+      adult_content: Aquesta pregunta conté material adult.
+      body_tip: Quina és la vostra pregunta? expliqueu-ho bé.
+      language_tip: Trieu l'idioma de la pregunta.
+      tags_tip: Empreu etiquetes per a afegir més informació sobre la vostra pregunta.
+    index: 
+      active: Activa
+      active_tooltip: Preguntes que s'han actualitzat recentment
+      ask_question: Feu una pregunta
+      empty: Ningú ha fet cap pregunta encara. Sigueu el primer/a!
+      help_to_answer: Ajudeu-nos a respondre
+      hot: Calent
+      hot_tooltip: Les preguntes amb més activitat dels últims 5 dies
+      newest: Les més noves
+      newest_tooltip: Les preguntes més noves
+      oldest: Lés més antigues
+      title: Totes les preguntes
+      unanswered_questions: Preguntes sense resposta
+      votes: Vots
+      votes_tooltip: Preguntes amb més vots
+    model: 
+      messages: 
+        empty_tags: Heu d'emprar una etiqueta com a mínim.
+        title_too_long: El títol és massa llarg. No pot tenir més de 100 caràcters.
+        too_many_tags: Només podeu emprar 9 etiquetes com a màxim.
+        too_short: Sembla massa curt. Empreu més de %{count} paraules per a ser més específic.
+    move: 
+      group_label: "Moveu-lo al grup amb slug:"
+      submit: Moveu-lo!
+      title: "Mou la pregunta: %{title}"
+    move_to: 
+      group_dont_exists: El grup %{group} no existeix
+      success: S'ha mogut la pregunta a %{group}
+    new: 
+      how_to_ask: Com preguntar
+      title: Feu una pregunta
+    question: 
+      accepted_tooltip: S'ha acceptat una resposta per a aquesta pregunta
+    retag: 
+      title: Recategoritza
+    retag_form: 
+      cancel: Cancel·la
+      submit: Actualitza les etiquetes!
+      title: Actualitza les etiquetes
+    retag_to: 
+      failure: No s'ha pogut actualitzar les etiquetes.
+      success: S'han actualitzat les etiquetes correctament.
+    revert: 
+      title: Reverteix la pregunta
+    shared: 
+      flag: Marca
+    show: 
+      accepted_tooltip: S'ha acceptat una de les respostes com a correcta
+      another_answers: Altres respostes
+      answers: Respostes
+      answers_title: 
+        one: resposta %{count}
+        other: "%{count} respostes"
+      asked_on: preguntat a
+      ban: Prohibir
+      close: Tanca
+      close_reason: "S'ha tancat aquesta pregunta per la següent raó:"
+      favorite_tooltip: Afegiu aquesta pregunta a les vostres favorites
+      flag: Marca
+      flagged_as: Marcada com
+      flags: Informat com a
+      last_activity: Darrera activitat
+      related_questions: Preguntes relacionades
+      request_closing: Demaneu el tancament
+      request_closing_details: Petició de tancar aquesta pregunta
+      retag: Recategoritza
+      retract_request: Ja heu fet una petició. Voleu retirar-la?
+      share: Compartiu aquesta pregunta en
+      share_on: Compartiu aquesta pregunta a %{site}
+      solution: Solució
+      to_answer_question: per a respondre a aquesta pregunta
+      unauthenticated_retag: Us cal tenir un compte per a recategoritzar preguntes
+      unfavorite_tooltip: Treieu aquesta pregunta de les vostres favorites
+      unwatch_tooltip: Deixa de mirar aquesta pregunta
+      viewed: visualitzada
+      watch_tooltip: Mireu aquesta pregunta
+    solve: 
+      flash_notice: S'ha respost la pregunta.
+    tags: 
+      filter: Cerca per etiquetes
+      title: Etiquetes
+      tooltip: Mostra les preguntes marcades %{tag}
+    unanswered: 
+      empty: Aquest grup no té cap pregunta pendent de resposta.
+      expert: Experts
+      my_tags: Les meves etiquetes
+      tags: Etiquetes pendents de resposta
+      title: Preguntes pendents de respondre
+    unsolve: 
+      flash_notice: No s'ha respost la pregunta.
+    unwatch: 
+      success: Ja no rebreu notificacions per correu electrònic per a cada nova resposta a aquesta pregunta.
+    update: 
+      flash_notice: S'ha actualitzat correctament la pregunta.
+    watch: 
+      success: Rebreu notificacions per correu electrònic per a cada reposta a aquesta pregunta.

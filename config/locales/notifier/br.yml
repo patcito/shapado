@@ -1,0 +1,44 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  notifier: 
+    earned_badge: 
+      message1: Gounezet hoc'h eus ur badj %{badge} war %{app}
+      message2: "Deskrivadur ar badj :"
+      message3: Gellout a rit gwelet ho holl badjoù war ho %{user_page}
+    favorited: 
+      message1: "%{user} en deus ouzhpennet ho koulenn d'e sinedoù war %{group}"
+      message2: "Testenn ho koulenn :"
+      message3: "Gallout a rit e welet amañ :"
+    follow: 
+      message1: "%{user} a heuilh bremañ ho koulennoù hag ho respontoù war %{app}"
+      message2: Gellout a rit heuliañ anezhañ ivez en ur glikañ war ar bouton "Heuliañ" eus e %{user_page}
+    give_advice: 
+      message1: "%{user} a zo o paouez sevel ur goulenn e lec'h ma c'hellfer bezañ gouest respont :"
+      message2: "Evit respont, skrivit ho kemennadenn amañ :"
+      message3: "Pe, ma anavezit unan bennak gouest da respont, kasit dezhañ al liamm-mañ :"
+      message4: Ma ne resevomp ket buan ur respont eus ho perzh e c'houlennimp gant unan bennak all. Gellout a rit c'hoazh respont pa fell deoc'h.
+    global: 
+      hi: Salud %{user},
+      user_page: pajenn implijer
+    new_answer: 
+      message: "%{user} en deus respontet %{new_answer} d'ar goulenn %{question}"
+    new_comment: 
+      message: "%{user} en deus graet un evezhiadenn %{new_comment} evit ar goulenn %{question}"
+    new_feedback: 
+      message1: An implijer %{user} <%{email}> en deus kaset un kilober
+      message2: Un implijer dizanv en deus kaset ur c'hilober eus ar chomlec'h IP %{ip}
+      message3: "Chomlec'h postel : %{email}"
+      message4: "Danvez : %{subject}"
+    report: 
+      message1: Danevell evit ar strollad %{group.name}
+      message2: Abaoe %{since}
+      message3: "%{questions} goulenn a zo bet savet"
+      message4: "%{answers} respont a zo bet skrivet"
+      message5: "%{votes} vot a zo bet graet"
+      message6: "%{badges} badj a zo bet roet"
+      message7: "%{users} implijer zo d'ar gont-mañ."
+      message8: Gweladenniñ ho strollad war %{link}

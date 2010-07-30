@@ -1,0 +1,22 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  sessions: 
+    create: 
+      flash_error: Kunne ikke logge deg inn som '%{login}'
+      flash_notice: Logget inn
+    destroy: 
+      flash_notice: Du har blitt logget ut.
+    new: 
+      log_in: Logg inn
+      not_registered: Ikke registrert ennå?
+      registered: Allerede registrert?
+      remember_me: Husk meg
+      sign_in: Logg inn
+      signup: Registrer deg
+      with_authentication: Logg inn med vårt autentiseringssystem
+      with_facebook: Logg inn med Facebook
+      with_openid: Logg inn med OpenID
+      with_twitter: Logg inn med Twitter

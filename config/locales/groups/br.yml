@@ -1,27 +1,51 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   activerecord: 
     attributes: 
       group: 
+        default_tags: Tikedennoù dre ziouer
         description: Deskrivadur
         domain: Domani
+        fb_button: Gweredekaat bouton Like Facebook (ne warez ket ho puhez prevez)
         forum: Aotreañ muioc'h eget ur respont dre implijer
         group_created_by: krouet gant
         language: Yezh
         legend: Alc'hwez
         logo: Logo
+        may_contain_adult_content: Al lec'hienn-mañ a c'hall bezañ enni danvez evit an oadourien nemetken
         name: Anv
+        openid_only: N'eus nemet an dud a ra gant Open ID a c'hall mont war al lec'hienn
+        owner: Krouet eo bet ar strollad gant %{login}
+        registered_only: N'eus nemet an dud enrollet a c'hall mont war al lec'hienn
         state: Stad
         subdomain: Url
+        wysiwyg_editor: Gweredekaat ar skridaozer testennoù aes da implijout
     models: 
+      default_tags_message: N'hallit ket lakaat en tu all da 10 tikedenn dre ziouer
       group: Strollad
       groups: Strolladoù
   groups: 
+    create: 
+      flash_notice: Krouet eo bet ho strollad ervat. Gallout a rit kregiñ d'e gefluniañ.
     form: 
+      access: Kefluniadur moned
+      analytics_engine: Lusker dielfennañ
+      analytics_legend: Gallout a raio ar strollad implijout e god heuliañ dezhañ e-unan
       any_language: Forzh pehini
+      custom_analytics: Aotren an dielfennañ personelaet
+      custom_html: Aotren an HTML personelaet
+      custom_js: Aotren ar JavaScript personelaet
+      default_tags_legend: Dispartiañ an tikedennoù dre skejoù. N'haller lakaat nemet 10 tikedenn dre ziouer.
+      description_legend: 400 arouezenn zo ganeoc'h evit deskrivañ ar strollad.
+      isolate_group: Diforc'hañ ar strollad diouzh ar strolladoù all
+      legend_legend: Implijet e vo en talbenn. 40 arouezenn zo ganeoc'h.
+      logo_legend: Gallout a rit pellgargañ logo ar strollad. 2MB eo ar vent vrasañ.
+      members_only: Ne vo digor ar strollad nemet d'an izili anezhañ.
+      website_analytics_id: ID dielfennañ al lec'hienn web
     group: 
       about: Diwar-benn
       accept_group: Asantiñ ar strollad-mañ
@@ -41,7 +65,9 @@ br:
       title: Krouiñ ho strollad
     show: 
       accept_group: Asantiñ ar strollad-mañ
+      accept_group_with_custom_ads: Degemer ar strolladoù hag aotren ar c'hemennoù personelaet
       close_group: Serriñ ar strollad-mañ
+      group_awaiting_acceptance: Gortoz a ra ar strollad-mañ bezañ aotreet gant un habaskaer.
       group_closed: Serret eo bet ar strollad-mañ.
       title: Diwar-benn %{name}
       visit_group: Gweladenniñ ar strollad-mañ

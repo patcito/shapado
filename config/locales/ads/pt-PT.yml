@@ -6,7 +6,7 @@
 # Author: McDutchie
 pt-PT: 
   ads: 
-    ad_links: Adicionar um anúncio {{type}} novo
+    ad_links: Adicionar um anúncio %{type} novo
     create: 
       success: O anúncio foi criado.
     index: 
@@ -15,4 +15,4 @@ pt-PT:
       title: Anúncios
     name: "Nome:"
     position: "Posição:"
-    title: Adicionar um anúncio {{type}} novo
+    title: Adicionar um anúncio %{type} novo

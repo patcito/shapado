@@ -1,0 +1,61 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+# Author: Luckas Blade
+pt-BR: 
+  actions: 
+    closed: fechada
+    created: criada
+    deleted: apagada
+    updated: atualizada
+  feeds: 
+    feed: Feed
+    post_new_questions: Publicar perguntas novas
+    question: Subscrever esta pergunta
+    questions: Subscrever todas as perguntas
+    share_on_twitter: no twitter, facebook e outros...
+    tag: Subscrever a categoria
+    user: Subscrever as perguntas do usuário
+  global: 
+    by: por
+    current: Atual
+    from: de %{site}
+    group_not_found: A página %{url} não existe
+    or: ou
+    permission_denied: Permissão negada
+    please_login: Inicie uma sessão, por favor
+    preview: Previsualização
+    previous: Anterior
+    share: partilhar
+  languages: 
+    any: Qualquer
+    user: Minhas línguas preferidas
+  messages: 
+    success: "%{model} foi %{action}."
+  models: 
+    question: A pergunta
+  number: 
+    x_time: 
+      one: "%{count} vez"
+      other: "%{count} vezes"
+      zero: Nunca
+  scaffold: 
+    add: Adicionar
+    back: Voltar
+    cancel: Cancelar
+    close: Fechar
+    create: Criar
+    destroy: Eliminar
+    details: Detalhes
+    edit: Editar
+    more: Mais ...
+    new: Adicionar novo %{model}
+    save: Salvar
+    send: Enviar
+    show: Mostrar
+    sure: Você tem certeza de que pretende apagar este %{model}?
+    update: Atualizar
+  time: 
+    ago: "%{time} atrás"
+    today: hoje

@@ -1,0 +1,18 @@
+# Messages for Message documentation (Message documentation)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Hamilton Abreu
+qqq: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        message: "{{Identical|Message}}"
+  announcements: 
+    actions: 
+      delete: "{{Identical|Remove}}"
+      title: "{{Identical|Action}}"
+    create: 
+      success: "An announcement is similar to the MediaWiki sitenotice: a site wide announcement, repeated on every page."
+    index: 
+      title: "An announcement is similar to the MediaWiki sitenotice: a site wide announcement, repeated on every page."

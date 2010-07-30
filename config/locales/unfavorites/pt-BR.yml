@@ -1,0 +1,13 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  activerecord: 
+    models: 
+      favorite: Favorito
+      favorites: Favoritos
+  unfavorites: 
+    create: 
+      success: A pergunta foi removida dos suas favoritas
+      unauthenticated: Você precisa ter uma conta para remover favoritos

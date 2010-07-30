@@ -1,0 +1,16 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Função
+  members: 
+    form: 
+      login_tip: Procurar enquanto escreve
+    index: 
+      manage_members_title: Gerenciar membros
+      title: Membros do grupo de %{name}
+      title_isolate: Membros de %{name}

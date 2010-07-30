@@ -1,0 +1,22 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  mailers: 
+    notifications: 
+      favorited: 
+        subject: "%{login} la spørsmålet ditt til som en favoritt!"
+      follow: 
+        subject: "%{login} følger deg nå på %{app}"
+      give_advice: 
+        friend_subject: "Din venn trenger hjelp: %{question_title}"
+        subject: "Vi trenger ditt råd: %{question_title}"
+      new_answer: 
+        subject_friend: Din venn %{login} svarte på spørsmålet %{title}
+        subject_other: "%{login} svarte på spørsmålet %{title}"
+        subject_owner: "%{login} svarte på spørsmålet ditt %{title}"
+      new_comment: 
+        subject: "%{login} kommenterte på %{group}"
+      report: 
+        subject: Rapport for gruppen %{group} av %{app}

@@ -1,0 +1,15 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        message: Message
+        only_anonymous: Nëmme fir anonym Benotzer
+        starts_at: ugefaang bäi
+  announcements: 
+    actions: 
+      delete: Ewechhuelen
+      title: Aktiounen

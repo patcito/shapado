@@ -1,0 +1,16 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Peranan
+  members: 
+    form: 
+      login_tip: Cari ketika Anda mengetik
+    index: 
+      manage_members_title: Kelola anggota
+      title: Anggota grup %{name}
+      title_isolate: Anggota %{name}

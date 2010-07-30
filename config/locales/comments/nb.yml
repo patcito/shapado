@@ -1,0 +1,20 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  comments: 
+    create: 
+      flash_notice: Takk for kommentaren din
+    edit: 
+      title: Rediger kommentar
+    shared: 
+      add_comment: Legg til kommentar...
+      comment_submit: Kommenter
+      reply: Svar
+      said: sa
+    update: 
+      flash_notice: Kommentaren ble oppdatert.
+  models: 
+    comment: Kommentar
+    comments: Kommentarer

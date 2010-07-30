@@ -1,0 +1,28 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  activerecord: 
+    attributes: 
+      page: 
+        js: JavaScript
+    models: 
+      page: Säit
+      pages: Säiten
+  pages: 
+    actions: 
+      create_page: Nei Säit uleeën
+      edit_page: Säit änneren
+      title: Aktiounen
+    edit: 
+      title: Säit änneren
+    form: 
+      language_tip: Sprooch vun der Säit
+    index: 
+      title: Säitelëscht
+    new: 
+      title: Nei Säit
+    title: Verbesser mech
+    update: 
+      success: D'Säit gouf aktualiséiert.

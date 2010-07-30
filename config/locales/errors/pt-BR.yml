@@ -1,12 +1,18 @@
 # Messages for Brazilian Portuguese (Português do Brasil)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Luckas Blade
 pt-BR: 
   errors: 
     forbidden: 
       explanation: Você não tem as permissões necessárias para acessar esta página.
       title: Acesso negado
+    go_to: Ir para a página %{link}
+    help_us_answer: Ajude-nos a responder a %{link}
+    internal_error: 
+      explanation: Fomos notificados sobre este problema e vamos averiguá-lo em breve.
+      title: Pedimos desculpa, mas ocorreu um erro.
     not_found: 
       explanation: Você pode ter digitado o endereço incorreto ou a página pode ter sido movida.
       title: Página não encontrada.

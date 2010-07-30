@@ -1,0 +1,136 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Respostas
+        asked_by: Preguntada por
+        body: Corpo
+        closed: Pechada
+        created_at: Preguntou
+        language: Lingua
+        tags: Etiquetas
+        title: Título
+        updated_at: actualizada
+        updated_by: actualizada por
+        views: Visitas
+        votes: Votos
+    models: 
+      question: Pregunta
+      questions: Preguntas
+  questions: 
+    answer: 
+      add_comment: Engadir un comentario...
+      flag: Informar
+      pick_answer: Elixir como solución
+      unset_answer: Quere anular a solución?
+    create: 
+      flash_notice: A pregunta foi creada correctamente.
+    edit: 
+      title: Editando a pregunta
+    flag: 
+      title: Informar dun abuso
+    form: 
+      adult_content: Esta pregunta contén material para adultos.
+      body_tip: Cal é a súa pregunta? Sexa descritivo.
+      language_tip: Seleccione a lingua na que formula a pregunta.
+      tags_tip: Use as etiquetas para engadir máis información sobre a pregunta.
+    index: 
+      active: Activas
+      active_tooltip: As preguntas que foron actualizadas recentemente
+      ask_question: Facer unha pregunta
+      empty: Ninguén fixo ningunha pregunta aínda. Sexa o primeiro!
+      help_to_answer: Axúdenos a dar resposta
+      hot: Populares
+      hot_tooltip: As preguntas con máis actividade ao longo dos últimos 5 días
+      newest: Máis novas
+      newest_tooltip: As preguntas formuladas nos últimos intres
+      oldest: Máis vellas
+      title: Todas as preguntas
+      unanswered_questions: Preguntas sen resposta
+      votes: Votos
+      votes_tooltip: Preguntas con máis votos
+    model: 
+      messages: 
+        empty_tags: Sentímolo. Cómpre usar, polo menos, unha etiqueta.
+        title_too_long: O título é longo de máis. Non pode conter máis de 100 caracteres.
+        too_many_tags: Sentímolo. Soamente pode introducir un máximo de 9 etiquetas.
+        too_short: Semella curta de máis. Utilice máis de %{count} palabras para ser máis específico.
+    move: 
+      group_label: "Mover ao grupo de nome:"
+      submit: Mover!
+      title: "Mover a pregunta: %{title}"
+    move_to: 
+      group_dont_exists: Non existe o grupo %{group}
+      success: Pregunta trasladada a %{group}
+    new: 
+      how_to_ask: Como formular unha pregunta
+      title: Facer unha pregunta
+    question: 
+      accepted_tooltip: Esta pregunta ten unha resposta que foi aceptada
+    retag: 
+      title: Cambiar a etiqueta
+    retag_form: 
+      cancel: Cancelar
+      submit: Actualizar as etiquetas!
+      title: Actualizar as etiquetas
+    retag_to: 
+      failure: Sentímolo. As etiquetas non se puideron actualizar.
+      success: As etiquetas actualizáronse correctamente.
+    revert: 
+      title: Reverter a pregunta
+    shared: 
+      flag: Informar
+    show: 
+      accepted_tooltip: Unha das respostas foi aceptada como a resposta correcta.
+      another_answers: Outras respostas
+      answers: Respostas
+      answers_title: 
+        one: "%{count} resposta"
+        other: "%{count} respostas"
+      asked_on: preguntada o
+      ban: Bloquear
+      close: Pechar
+      close_reason: "A pregunta foi pechada polo seguinte motivo:"
+      favorite_tooltip: Engadir a pregunta aos seus favoritos
+      flag: Informar
+      flagged_as: Informado como
+      flags: Informar como
+      last_activity: Última actividade
+      related_questions: Preguntas relacionadas
+      request_closing: Pedir o peche
+      request_closing_details: Pedir o peche desta pregunta
+      retag: Cambiar as etiquetas
+      retract_request: Xa fixo unha proposta. Quere retirala?
+      share: Compartir esta pregunta en
+      share_on: Compartir esta pregunta en %{site}
+      solution: Solución
+      to_answer_question: para responder a esta pregunta
+      unauthenticated_retag: Necesita unha conta para cambiar as etiquetas das preguntas
+      unfavorite_tooltip: Eliminar esta pregunta dos seus favoritos
+      unwatch_tooltip: Deixar de seguir esta pregunta
+      viewed: visitada
+      watch_tooltip: Seguir esta pregunta
+    solve: 
+      flash_notice: A pregunta está resolta.
+    tags: 
+      filter: Procura por etiquetas
+      title: Etiquetas
+      tooltip: Mostrar as preguntas etiquetadas con "%{tag}"
+    unanswered: 
+      empty: Este grupo non contén ningunha pregunta sen resposta.
+      expert: Expertos
+      my_tags: As miñas etiquetas
+      tags: Etiquetas sen resposta
+      title: Preguntas sen resposta
+    unsolve: 
+      flash_notice: A pregunta non está resolta.
+    unwatch: 
+      success: Xa non recibirá notificacións por correo electrónico para cada nova resposta a esta pregunta.
+    update: 
+      flash_notice: A pregunta actualizouse correctamente.
+    watch: 
+      success: Agora recibirá notificacións por correo electrónico para cada nova resposta a esta pregunta.

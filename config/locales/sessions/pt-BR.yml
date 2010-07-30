@@ -1,0 +1,22 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  sessions: 
+    create: 
+      flash_error: Não foi possível iniciar sessão como '%{login}'
+      flash_notice: Sessão iniciada
+    destroy: 
+      flash_notice: A sua sessão foi terminada.
+    new: 
+      log_in: Entrar
+      not_registered: Ainda não se registrou?
+      registered: Já se registrou?
+      remember_me: Recordar os meus dados
+      sign_in: Entrar
+      signup: Criar uma conta
+      with_authentication: Entrar com o nosso sistema de autenticação
+      with_facebook: Entrar com conta do Facebook
+      with_openid: Entrar com OpenID
+      with_twitter: Entrar com conta do Twitter

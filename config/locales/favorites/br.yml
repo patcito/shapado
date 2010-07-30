@@ -5,9 +5,9 @@
 br: 
   activerecord: 
     models: 
-      favorite: Pennroll
-      favorites: Pennrolloù
+      favorite: Sined
+      favorites: Sinedoù
   favorites: 
     create: 
-      success: Ouzhpennet eo bet ar goulenn d'ho pennrolloù
-      unauthenticated: Rankout a reoc'h krouiñ ur gont evit ouzhpennañ pennrolloù
+      success: Ouzhpennet eo bet ar goulenn d'ho sinedoù
+      unauthenticated: Rankout a reoc'h krouiñ ur gont evit ouzhpennañ sinedoù

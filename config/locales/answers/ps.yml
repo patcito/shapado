@@ -14,6 +14,11 @@ ps:
   answers: 
     create: 
       flash_notice: مننه!
+    edit: 
+      title: ځواب سمول
     form: 
+      answer_label: پوښتنه ځوابول
       comment_submit: تبصره
       submit: ځواب
+    update: 
+      flash_notice: ځواب مو په برياليتوب سره اوسمهاله شو.

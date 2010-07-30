@@ -1,0 +1,25 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  activerecord: 
+    models: 
+      vote: Votar
+      votes: Votos
+  votes: 
+    control: 
+      have_voted_down: Clique para desfazer o voto negativo
+      have_voted_up: Clique para desfazer o seu voto positivo
+      to_vote_down: Clique para votar negativamente
+      to_vote_up: Clique para votar positivamente
+    create: 
+      flash_error: Você não pode votar aqui
+      flash_notice: Obrigado pelo seu voto!
+      unauthenticated: Usuários anônimos não podem votar
+    destroy: 
+      flash_notice: O seu voto foi revogado com sucesso.
+    model: 
+      messages: 
+        closed_question: Você não pode votar em mensagens que pertencem a uma pergunta fechada
+        vote_down_comment: Os comentários não podem ser votados negativamente

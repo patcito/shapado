@@ -6,10 +6,10 @@ pt-PT:
   activerecord: 
     attributes: 
       announcement: 
-        ends_at: ends at
+        ends_at: Termina a
         message: Mensagem
         only_anonymous: Só para utilizadores anónimos
-        starts_at: starts at
+        starts_at: Inicia a
   announcements: 
     actions: 
       delete: Remover

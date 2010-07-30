@@ -1,0 +1,13 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  ads: 
+    ad_links: يوه نوې %{type} خبرتيا ورګډول
+    create: 
+      success: خبرتيا په برياليتوب سره جوړه شوه.
+    index: 
+      title: خبرتياوې
+    name: "نوم:"
+    title: يوه نوې %{type} خبرتيا ورګډول

@@ -1,0 +1,51 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  layouts: 
+    application: 
+      ask_question: Poner question
+      badges: Insignias
+      forgot: Oblidate?
+      home: Initio
+      languages: Linguas
+      log_in: Aperir session
+      logged: Authenticate como %{login}
+      logout: Clauder session
+      manage_ads: Gerer annuncios
+      moderate: Moderar
+      now: ora!
+      openid: 
+        explaination: "Si tu vole crear un conto o solmente aperir un session, per favor selige tu providitor OpenID:"
+      pages: Paginas
+      questions: Questiones
+      questions_in: Questiones in
+      questions_tagged: etiquettate con
+      search: Cercar
+      settings: Configurationes
+      signup: Crear un conto
+      subscribe: Subscriber
+      tags: Etiquettas
+      title: Questiones & responsas
+      unanswered: Sin responsa
+      users: Usatores
+      welcome_from: Benvenite! Tu pote
+    manage: 
+      actions: Actiones
+      announcements: Avisos
+      constrains: Requisitos
+      content: Contento
+      dashboard: Pannello de instrumentos
+      domain: Dominio
+      general: General
+      members: Membros
+      pages: Paginas
+      properties: Proprietates
+      reputation: Reputation
+      rewards: Recompensas
+      stats: Statisticas
+      theme: Thema
+      widgets: Widgets
+    notifications: 
+      message: Si tu non vole plus reciper notificationes automatic de %{domain}, cambia tu preferentias in le scheda pro notificationes.

@@ -1,0 +1,15 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  searches: 
+    form: 
+      clear: Scancela
+      search_box_title: Ch'a contròla se soa chestion a l'é già stàita ciamà
+      tags_tip: Dovré [tag] për specifiché le tichëtte.
+    index: 
+      empty: Gnun-a chestion a corëspond a soa arserca.
+      search_text: Chestion contenente
+      tags: an mes a coste tichëtte-sì

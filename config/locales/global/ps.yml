@@ -16,6 +16,8 @@ ps:
   languages: 
     any: هر يو
     user: زما د خوښې ژبې
+  models: 
+    question: پوښتنه
   number: 
     x_time: 
       zero: هېڅکله

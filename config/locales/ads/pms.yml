@@ -1,0 +1,17 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  ads: 
+    ad_links: Gionté un neuv anonsi %{type}
+    create: 
+      success: L'anonsi a l'é stàit creà për da bin.
+    index: 
+      add_adbard: Gionté un neuv anonsi adbard
+      add_adsense: Gionté un neuv anonsi adsense ëd google
+      title: Anonsi
+    name: "Nòm:"
+    position: "Posission:"
+    title: Gionté un neuv anonsi %{type}

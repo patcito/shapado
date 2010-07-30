@@ -11,7 +11,7 @@ ru:
         asked_by: Задано
         body: Текст
         closed: Закрыто
-        created_at: Заданные
+        created_at: Задано
         language: Язык
         tags: Теги
         title: Заголовок
@@ -44,7 +44,7 @@ ru:
       active_tooltip: Недавно обновлённые вопросы
       ask_question: Задать вопрос
       empty: Пока никто не задавал вопросы, станьте первыми!
-      help_to_answer: Помогите ответить
+      help_to_answer: Помогите ответить на
       hot: Горячие
       hot_tooltip: Вопросы с наибольшей активностью за последние 5 дней
       newest: Новейшие
@@ -113,7 +113,7 @@ ru:
       unauthenticated_retag: Для изменения тегов вопросов необходимо зарегистрировать учётную запись
       unfavorite_tooltip: Удалить этот вопрос из списка избранных
       unwatch_tooltip: Перестать следить за этим вопросом
-      viewed: просмотренные
+      viewed: просмотрено
       watch_tooltip: Следить за этим вопросом
     solve: 
       flash_notice: Вопрос был решён.

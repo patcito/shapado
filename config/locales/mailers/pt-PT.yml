@@ -6,7 +6,7 @@ pt-PT:
   mailers: 
     notifications: 
       earned_badge: 
-        subject: Recebeu um distintivo do grupo %{group}!
+        subject: Recebeu uma condecoração do grupo %{group}!
       favorited: 
         subject: "%{login} adicionou a sua pergunta às favoritas!"
       follow: 

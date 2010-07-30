@@ -7,7 +7,7 @@ pt-PT:
   activerecord: 
     attributes: 
       page: 
-        css: Stylesheets
+        css: Folhas de estilo
         js: JavaScript
     models: 
       page: Página

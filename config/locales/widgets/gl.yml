@@ -1,0 +1,30 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  widgets: 
+    badges: 
+      description: Este widget mostra as insignias gañadas recentemente polos usuarios ou preguntas
+      title: Insignias recentes
+    groups: 
+      description: Este widget mostra os últimos grupos
+      title: Grupos recentes
+    index: 
+      description: Utilice as frechas para mover os seus widgets
+      title: Xestionar os widgets da barra lateral
+    pages: 
+      description: Este widget mostra a lista de páxinas wiki
+      title: Páxinas wiki
+    tag_cloud: 
+      description: Este widget mostra unha nube de etiquetas
+      title: Nube de etiquetas
+    top_groups: 
+      description: Este widget mostra os cinco mellores grupos
+      title: Os 5 mellores grupos
+    top_users: 
+      description: Este widget mostra os cinco mellores usuarios
+      title: Os 5 mellores usuarios
+    users: 
+      description: Este widget mostra os novos membros rexistrados
+      title: Usuarios recentes

@@ -1,0 +1,37 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  doc: 
+    chat: 
+      title: Suport per xat
+    plans: 
+      15millions: 15 milions de pàgines vistes mensualment
+      1million: 1 milió de pàgines vistes mensualment
+      247_all_support: Basat en web, correu-e, xat i telèfon amb suport 24/7
+      5millions: 5 milions de pàgines vistes mensualment
+      all_support: Basat en web, correu-e, xat i suport telefònic
+      basic_restrictions: Sense anuncis personalitzats i no es pot configurar completament l'interfície d'usuari
+      beta_info: Per ara tots els llocs són gratuïts i es beneficien de les mateixes opcions com el pla Optimum, excepte per l'ajuda que només és via web, correu-e i xat.
+      big_sites: Llocs amb molt de trànsit
+      custom_ads: Empreu els vostres propis anuncis
+      custom_analytics: Estadístiques de trànsit
+      custom_domain: Domini personalitzat
+      custom_themes: Emprar els nostres temes prefabricats
+      custom_ui: Interfície d'usuari totalment personalitzable
+      free_plan: pla gratuït
+      getting_popular: Assolint popularitat
+      huge_sites: Llocs amb trànsit intens
+      month: mes
+      page_views: Per a llocs petits/privats
+      plans: Plans
+      private_site: Habilita l'accés privat/públic
+      small_private: Llocs petits/privats
+      start_monetizing: empieza a hacer dinero
+      support: Ajuda
+      title: Plans i tarifes
+      unlimited: Trànsit il·limitat mensual
+      we_offer: També oferim un
+      web_support: Suport basat en web
+      with_unlimited: amb trànsit il·limitat sense anuncis ni domini personalitzats

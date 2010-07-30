@@ -5,12 +5,12 @@
 pt-PT: 
   activerecord: 
     models: 
-      badge: Distintivo
-      badges: Distintivos
+      badge: Condecoração
+      badges: Condecorações
   badges: 
     index: 
-      description: Todos os distintivos que conseguir ganhar. Partilhe o seu conhecimento e ganhe distintivos.
-      title: distintivos
+      description: Todos as condecorações que pode ganhar. Partilhe o seu conhecimento, ganhe condecorações.
+      title: condecorações
     shared: 
       addict: 
         description: Visitou o site em 20 dias consecutivos
@@ -121,9 +121,9 @@ pt-PT:
       tutor: 
         description: Deu uma solução a uma pergunta com uma média de mais de 2 votos
     show: 
-      description: "Utilizadores que receberam este distintivo. Recentemente atribuído a:"
+      description: "Utilizadores que receberam esta condecoração. Recentemente atribuída a:"
       earned: recebeu
       for_tag_bronze: 200 votos na categoria %{tag}
       for_tag_gold: 1000 votos na categoria {{tag}}
       for_tag_silver: 400 votos na categoria {{tag}}
-      title: Distintivo {{type}}
+      title: Condecoração %{type}

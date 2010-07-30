@@ -1,0 +1,31 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  widgets: 
+    badges: 
+      description: Ar widget-mañ a ziskouez ar badjoù gounezet nevez zo gant an implijerien pe gant ar goulennoù
+      title: Badjoù diwezhañ
+    groups: 
+      description: Ar widget-mañ a ziskouez ar strolladoù ziwezhañ
+      title: Strolladoù nevez
+    index: 
+      description: Implijout ar biroù evit fiñval ar widgetoù
+      title: Melestriñ widgetoù ar varenn kostez
+    pages: 
+      description: Ar widget-mañ a roll ar pajennoù wiki
+      title: Pajennoù wiki
+    tag_cloud: 
+      description: Ar widget-mañ a ziskouez ur goumoulenn merkoù
+      title: Koumoulenn merkoù
+    top_groups: 
+      description: Ar widget-mañ a ziskouez top 5 ar strolladoù
+      title: Ar 5 strollad wellañ
+    top_users: 
+      description: Ar widget-mañ a ziskouez top 5 an implijerien
+      title: Ar 5 implijer wellañ
+    users: 
+      description: Ar widget-mañ a ziskouez an izili nevez enrollet
+      title: Implijerien diwezhañ

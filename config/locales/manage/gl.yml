@@ -1,0 +1,41 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  admin: 
+    manage: 
+      content: 
+        footer: pé de páxina
+        head: cabeceira
+        question_help: Axuda sobre as preguntas
+        question_prompt: Formulación da pregunta
+        title: Contido personalizado
+        top_bar: Barra superior
+        top_bar_tip: Insira unha ligazón por liña
+      properties: 
+        constrains: 
+          reputation_constrains_description: Este formulario permite configurar o número de puntos de reputación que os usuarios necesitan para levar a cabo unha determinada acción
+          reputation_constrains_subtitle: Lista de requirimentos de reputación para cada acción
+          title: Requirimentos
+        domain: 
+          description: "Pode configurar o seu sitio de xeito que se poida consultar a través do seu propio dominio personalizado. Faise así:"
+          instruction1: Para facer isto, primeiro necesita acceder ao sistema do seu provedor de dominios. Ese é o lugar onde comprou o seu dominio, como %{subdomain}.com.
+          instruction2: Alí terá que ir ata a sección DNS e crear unha cousa chamada CNAME.
+          instruction3: Escolla "www" ou calquera outra cousa para o seu CNAME.
+          instruction4: "A continuación, no campo de destino, introduza o seu dominio Shapado actual: %{domain}."
+          instruction5: Unha vez feito isto, ao que pase unha ou dúas horas, o seu www.%{subdomain} debería apuntar cara a %{appdomain}.
+          instruction6: Cando se dea este caso, volva aquí e poña o nome do seu dominio, www.%{subdomain}, no campo de embaixo e prema o botón "actualizar". Se ten algunha dúbida, pregunte no %{chat_url} ou no noso foro de axuda.
+          title: Configurar o seu dominio
+          warning: Está seguro de querer cambiar o seu dominio?
+        general: 
+          title: Propiedades do grupo
+        rewards: 
+          reputation_rewards_description: Este formulario permítelle configurar o xeito de que os usuarios gañen e perdan puntos de reputación por unha determinada acción
+          reputation_rewards_subtitle: Lista de recompensas por reputación
+          title: Recompensas
+        share: 
+          title: Compartir
+        theme: 
+          logo_legend: Suba un logo para o seu grupo. Non pode exceder os 2MB.
+          title: Establecer o tema do grupo

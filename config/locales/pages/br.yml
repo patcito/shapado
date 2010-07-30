@@ -16,10 +16,13 @@ br:
       create_page: Krouiñ ur bajenn nevez
       edit_page: Kemmañ ar bajenn
       title: Oberoù
+    create: 
+      success: Krouet eo bet ar bajenn ervat.
     edit: 
       title: O kemmañ ar bajenn
     form: 
       language_tip: Yezh ar bajenn
+      title_tip: "Titl ar bajenn. Implijit kement-mañ evit krouiñ un dave d'ar bajenn. Da skouer : [[FAQ|lenn ar FAG-mañ]]"
     index: 
       create_page: Krouiñ ur bajenn nevez
       title: Roll ar pajennoù

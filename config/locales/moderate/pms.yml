@@ -1,0 +1,17 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  admin: 
+    moderate: 
+      index: 
+        all: Tùit
+        ban: Vieta
+        banned: Chestion proibìe
+        content: Contnù
+        flagged: Chestion signalà
+        item_title: Tìtol
+        need_tags: Etichëtté torna
+        title: Moderé

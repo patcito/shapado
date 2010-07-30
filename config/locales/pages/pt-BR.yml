@@ -1,11 +1,13 @@
 # Messages for Brazilian Portuguese (Português do Brasil)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Luckas Blade
 pt-BR: 
   activerecord: 
     attributes: 
       page: 
+        css: Folhas de estilo
         js: Javascript
     models: 
       page: Página
@@ -14,15 +16,20 @@ pt-BR:
     actions: 
       create_page: Criar nova página
       edit_page: Editar página
+      title: Ações
     create: 
       success: A página foi criada com sucesso.
     edit: 
       title: Editando página
     form: 
       language_tip: Língua da página
+      title_tip: "Título da página, usado para referi-la. Por exemplo: [[FAQ|veja a FAQ]]"
     index: 
+      create_page: Criar nova página
       title: Lista de páginas
+      written_in: Escrita em %{language}
     new: 
       title: Nova página
+    title: Corrigir
     update: 
       success: A página foi atualizada com sucesso.

@@ -1,0 +1,25 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: It l'has vagnà un distintiv su %{group}!
+      favorited: 
+        subject: ↓ %{login} a l'ha giontà soa chestion com un-a dle favorìe!
+      follow: 
+        subject: "%{login} adess a-j va dapress su %{app}"
+      give_advice: 
+        friend_subject: "Tò amis a l'ha dabzògn d'agiut: %{question_title}"
+        subject: "I l'oma dabzògn ëd tò consèj: %{question_title}"
+      new_answer: 
+        subject_friend: Sò amis %{login} a l'ha rëspondù a la chestion %{title}
+        subject_other: "%{login} a l'ha arspondù a la chestion %{title}"
+        subject_owner: "%{login} a l'ha arspondù a soa chestion %{title}"
+      new_comment: 
+        subject: "%{login} a l'ha comentà su %{group}"
+      report: 
+        subject: Rapòrt për la partìa %{group} ëd %{app}

@@ -1,0 +1,51 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  layouts: 
+    application: 
+      ask_question: Feu una pregunta
+      badges: Distintius
+      forgot: Ho heu oblidat?
+      home: Inici
+      languages: Idiomes
+      log_in: Inici de sessió
+      logged: Heu entrat com a %{login}
+      logout: Finalitza la sessió
+      manage_ads: Gestioneu els anuncis
+      moderate: Modereu
+      now: ara!
+      openid: 
+        explaination: "Si voleu registrar-vos o només iniciar la sessiò, trieu el vostre proveïdor d'OpenID:"
+      pages: Pàgines
+      questions: Preguntes
+      questions_in: Preguntes a
+      questions_tagged: etiquetat com
+      search: Cerca
+      settings: Configuració
+      signup: Registreu-vos
+      subscribe: Subscriviu-vos
+      tags: Etiquetes
+      title: Preguntes i respostes
+      unanswered: Sense respondre
+      users: Usuaris
+      welcome_from: Benvinguts! Podeu
+    manage: 
+      actions: Accions
+      announcements: Avisos
+      constrains: Requeriments
+      content: Contingut
+      dashboard: Tauler d'instruments
+      domain: Domini
+      general: General
+      members: Membres
+      pages: Pàgines
+      properties: Propietats
+      reputation: Reputació
+      rewards: Recompenses
+      stats: Estadístiques
+      theme: Tema
+      widgets: Ginys
+    notifications: 
+      message: Si no voleu rebre més les notificacions automàtiques de %{domain}, canvieu les vostres preferències a la pantalla de notificacions.

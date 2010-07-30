@@ -1,0 +1,30 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  layouts: 
+    application: 
+      ask_question: پوښتنه پوښتل
+      badges: نښانونه
+      home: کور
+      languages: ژبې
+      log_in: ننوتل
+      logout: وتل
+      now: اوس!
+      pages: مخونه
+      questions: پوښتنې
+      search: پلټنه
+      settings: امستنې
+      signup: نومليکل
+      title: پوښتنې او ځوابونه
+      unanswered: بې ځوابه
+      users: کارنان
+      welcome_from: ښه راغلاست! تاسې کولای شی چې
+    manage: 
+      announcements: خبرتياوې
+      constrains: غوښتنې
+      domain: شپول
+      members: غړي
+      pages: مخونه
+      properties: ځانتياوې

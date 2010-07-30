@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Y-M D
 fr: 
   activerecord: 
     attributes: 
@@ -13,7 +14,7 @@ fr:
       answers: réponses
   answers: 
     create: 
-      flash_error: "une erreur s'est produite lors de l'ajout de votre question. \n  n'oubliez pas que: \n - les réponses vides de contenu ou les doublons ne sont pas autorisées. \n - vous devez attendre au moins 20 secondes avant de poster une autre réponse. \n - vous ne pouvez poster qu'une réponse par question"
+      flash_error: "une erreur s'est produite lors de l'ajout de votre question. \n  n'oubliez pas que: \n - les réponses vides de contenu ou les doublons ne sont pas autorisées. \n - vous devez attendre au moins 20 secondes avant de poster une autre réponse. \n - vous ne pouvez poster qu'une réponse par question."
       flash_notice: merci!
     edit: 
       title: Éditer la réponse

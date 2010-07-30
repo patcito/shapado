@@ -1,0 +1,20 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  comments: 
+    create: 
+      flash_notice: Obrigado pelo seu comentário
+    edit: 
+      title: Editar comentário
+    shared: 
+      add_comment: Adicionar comentário...
+      comment_submit: Comentar
+      reply: Responder
+      said: disse
+    update: 
+      flash_notice: O comentário foi atualizado.
+  models: 
+    comment: Comentário
+    comments: Comentários

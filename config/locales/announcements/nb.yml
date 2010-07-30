@@ -1,0 +1,20 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Slutter
+        message: Melding
+        only_anonymous: Kun for anonyme brukere
+        starts_at: Starter
+  announcements: 
+    actions: 
+      delete: Fjern
+      title: Handlinger
+    create: 
+      success: Kunngjøringen ble opprettet.
+    index: 
+      title: Kunngjøringer

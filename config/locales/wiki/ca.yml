@@ -1,0 +1,22 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  wiki: 
+    actions: 
+      all_history: Torneu a l'historial
+      back_to_question: Torna a la pregunta
+      revert: Reverteix a aquesta versió
+      show_diff: Compara les versions seleccionades
+    diff: 
+      title: Diferències entre %{prev} i %{curr}
+    history: 
+      current_version: Versió actual
+      previous_versions: Versions anteriors
+      title: Històric (%{count})
+      version: Versió
+      version_summary: Resum de la versió
+    model: 
+      attributes: 
+        message: Resum

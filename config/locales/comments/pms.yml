@@ -1,0 +1,21 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  comments: 
+    create: 
+      flash_notice: Mersì për tò coment
+    edit: 
+      title: Modifiché ël coment
+    shared: 
+      add_comment: Gionté un coment...
+      comment_submit: Coment
+      reply: Arspond
+      said: a l'ha dit
+    update: 
+      flash_notice: Ël coment a l'é stàit modificà da bin
+  models: 
+    comment: Coment
+    comments: Coment

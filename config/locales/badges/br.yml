@@ -1,0 +1,118 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  activerecord: 
+    models: 
+      badge: Badj
+      badges: Badjoù
+  badges: 
+    index: 
+      description: An holl badjoù a c'hellit gounid. Rannit o anaoudegezhioù, gounezit badjoù.
+      title: badjoù
+    shared: 
+      addict: 
+        description: Gweladenniñ al lec'hienn bemdez e-pad 20 devezh da-heul
+      autobiographer: 
+        description: en deus leuniet e holl maeziennoù implijer
+        name: Emvuhezskriver
+      celebrity: 
+        description: Kaout muioc'h eget 100 heulier
+      citizen_patrol: 
+        name: Patrouilh keodedel
+      civic_duty: 
+        description: En deus votet 300 gwech
+        name: Dever keodedel
+      cleanup: 
+        description: Drouziwezh gentañ
+        name: Naetaerezh
+      commentator: 
+        description: Bez skrivet 10 evezhiadenn
+      critic: 
+        description: bet votet a-enep evit ar wech gentañ
+      disciplined: 
+        name: Kenurzhiek
+      effort_medal: 
+        description: Kaout 100 mouezh pozitivel
+      enlightened: 
+        description: Respont gentañ bet degemeret gant d'an nebeutañ 10 vot a-du
+        name: Goulaouiñ
+      famous_question: 
+        description: Goulenn gant 10 000 gweladenn
+      fanatic: 
+        description: Gweladenniñ al lec'hienn bemdez e-pad 100 devezh da-heul
+      favorite_question: 
+        description: Goulenn bet lakaet da sined gant muioc'h eget 25 implijer
+      friendly: 
+        description: Heuliañ unan bennak evit ar wech gentañ
+      good_answer: 
+        description: Kaout ur respont gant ur geidenn uheloc'h eget 25 mouezh
+      good_question: 
+        description: Kaout ur goulenn gant ur geidenn uheloc'h eget 25 mouezh
+      great_answer: 
+        description: Respont bet votet a-du 100 gwech
+        name: Respont dispar
+      great_question: 
+        description: Goulenn bet votet a-du 100 gwech
+        name: Goulenn dispar
+      guru: 
+        description: Reiñ un diskoulm d'ur goulenn gant ur geidenn uheloc'h eget 40 mouezh
+      inquirer: 
+        description: Sevel ur goulenn evit ar wech gentañ
+      interesting_person: 
+        description: Kaout muioc'h eget 10 heulier
+        name: Den dedennus
+      merit_medal: 
+        description: Kaout 200 mouezh pozitivel
+      necromancer: 
+        description: En deus respontet d'ur goulenn bet savet muioc'h eget 60 devezh zo ha gant 5 mouezh da nebeutañ
+        name: Igromañser
+      nice_answer: 
+        description: Respont bet votet a-du 10 gwech
+        name: Respont vat
+      nice_question: 
+        description: Goulenn bet votet a-du 10 gwech
+        name: Goulenn vat
+      notable_question: 
+        description: Goulenn gant 2 500 gweladenn
+      organizer: 
+        name: Aozer
+      pioneer: 
+        description: Bezañ er re gentañ o vezañ en em enskrivet
+      popstar: 
+        description: 500 vot pozitivel, 10 negativel d'ar muiañ
+      popular_person: 
+        description: Kaout muioc'h eget 50 heulier
+        name: Den poblel
+      popular_question: 
+        description: Goulenn gant 1 000 gweladenn
+      rockstar: 
+        description: 1 000 vot pozitivel, 10 negativel d'ar muiañ
+      scholar: 
+        description: Respont gentañ bet degemeret evit ho koulenn
+        name: helenneg
+      self-learner: 
+        description: En deus respontet d'e c'houlenn gant ur skor a 3 pe muioc'h
+        name: Emzeskad
+      service_medal: 
+        description: 300 mouezh pozitivel
+      shapado: 
+        description: Gweladenniñ al lec'hienn bemdez e-pad  8 devezh da-heul
+      stellar_question: 
+        description: Goulenn sined evit 100 implijer d'an nebeutañ
+        name: Goulenn steredel
+      student: 
+        description: Resevout ur vouezh a-du evit e c'houlenn gentañ
+      supporter: 
+        description: bet votet a-du evit ar wech gentañ
+      troubleshooter: 
+        description: Respont evit ar wech gentañ
+      tutor: 
+        description: Reiñ un diskoulm d'ur goulenn gant ur geidenn a votoù uheloc'h eget 2
+    show: 
+      description: "Implijerien hag o deus gounezet ar badj-mañ. Bet roet n'eus ket pell da :"
+      for_tag_bronze: 200 mouezh evit an tikedenn %{tag}
+      for_tag_gold: 1 000 mouezh evit an tikedenn %{tag}
+      for_tag_silver: 400 mouezh evit an tikedenn %{tag}
+      title: Badj {{type}}

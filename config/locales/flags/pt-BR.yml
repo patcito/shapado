@@ -1,0 +1,22 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+# Author: Luckas Blade
+pt-BR: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Motivo
+    models: 
+      flag: Reportada
+      flags: Reportadas
+  flags: 
+    create: 
+      flash_error: Você não pode reportar isto
+      flash_notice: Obrigado por ter reportado
+    form: 
+      attention: Requer a atenção do moderador
+      label: Reporte com cuidado, por favor
+      offensive: Conteúdo ofensivo, abusivo ou insultuoso
+      spam: Spam

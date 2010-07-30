@@ -1,0 +1,21 @@
+# Messages for Pashto (پښتو)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ahmed-Najib-Biabani-Ibrahimkhel
+ps: 
+  activerecord: 
+    models: 
+      page: مخ
+      pages: مخونه
+  pages: 
+    actions: 
+      create_page: يو نوی مخ جوړول
+      edit_page: مخ سمول
+    form: 
+      language_tip: د مخ ژبه
+    index: 
+      create_page: يو نوی مخ جوړول
+      title: د مخونو لړليک
+      written_in: په %{language} ليکل شوی
+    new: 
+      title: نوی مخ

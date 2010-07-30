@@ -9,7 +9,14 @@ br:
       title: Moned nac'het
     go_to: Mont d'ar bajenn %{link}
     help_us_answer: Sikourit ac'hanomp evit respont da %{link}
+    internal_error: 
+      explanation: Kelaouet omp bet eus ar fazi-se ha gwiriekaet e vo ganeomp a-benn nebeut.
+      title: Digarezit ac'hanomp, met un dra a zo aet a-dreuz.
     not_found: 
+      explanation: Marteze hoc'h eus skrivet fall ar chomlec'h pe eo bet cheñchet ar bajenn.
       title: N'eo ket bet kavet ar bajenn.
     options_label: "Traoù all a c'hellit ober :"
     search: Klask
+    unprocessable_entity: 
+      explanation: Marteze hoc'h klasket kemmañ un dra n'hoc'h ket aotreet d'ober.
+      title: Nac'het eo bet ho kemm.

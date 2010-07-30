@@ -1,0 +1,16 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  ads: 
+    ad_links: Tambahkan iklan jenis %{type} yang baru
+    create: 
+      success: Iklan berhasil dibuat.
+    index: 
+      add_adbard: Tambahkan iklan Ad Bard yang baru
+      add_adsense: Tambahkan iklan Google AdSense yang baru
+      title: Iklan
+    name: "Nama:"
+    position: "Posisi:"
+    title: Tambahkan iklan jenis %{type} yang baru

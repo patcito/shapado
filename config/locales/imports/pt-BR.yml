@@ -1,0 +1,10 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: Necessitam de confirmação
+        title: Enviar e-mails de confirmação

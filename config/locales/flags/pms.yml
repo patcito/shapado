@@ -1,0 +1,22 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Rason
+    models: 
+      flag: Marca
+      flags: Marcador
+  flags: 
+    create: 
+      flash_error: A peul pa buteje na marca a sòn
+      flash_notice: Mersì për tò rapòrt
+    form: 
+      attention: A ciama l'atension dël moderator
+      label: Për piasì, ch'a marca con atension
+      offensive: Dëscors ofensiv, abusiv o ëd ghignon
+      spam: Rumenta

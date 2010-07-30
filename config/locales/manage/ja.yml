@@ -1,6 +1,7 @@
 # Messages for Japanese (日本語)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: 青子守歌
 ja: 
   admin: 
     manage: 
@@ -14,7 +15,7 @@ ja:
         top_bar_tip: 1行につき1つのリンクにする
       properties: 
         constrains: 
-          reputation_constrains_description: 各アクションを行うにはポイントを得る必要があります。ここではその設定が変更できます。
+          reputation_constrains_description: このフォームでは、与えられた行動を実行するために、利用者がどれだけの評価点を必要とするか設定できます。
           reputation_constrains_subtitle: 各アクションを起こすのに必要なポイント設定です
           title: 制約
         domain: 
@@ -33,6 +34,8 @@ ja:
           reputation_rewards_description: 数字を変更することでユーザが名誉を得られる（または失う）タイミングを変更できます。
           reputation_rewards_subtitle: 名誉の一覧
           title: 名誉
+        share: 
+          title: 共有
         theme: 
           logo_legend: Upload a logo for your group, it must be smaller than 2mb.
           title: テーマの設定

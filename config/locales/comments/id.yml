@@ -1,0 +1,20 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  comments: 
+    create: 
+      flash_notice: Terima kasih atas komentar Anda
+    edit: 
+      title: Sunting komentar
+    shared: 
+      add_comment: Menambahkan komentar...
+      comment_submit: Komentar
+      reply: Balas
+      said: berkata
+    update: 
+      flash_notice: Komentar berhasil dimutakhirkan.
+  models: 
+    comment: Komentar
+    comments: Komentar

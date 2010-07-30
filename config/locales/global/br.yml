@@ -1,6 +1,7 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   actions: 
@@ -9,17 +10,26 @@ br:
     deleted: diverket
     updated: hizivaet
   feeds: 
+    feed: Lanvad
+    post_new_questions: Sevel goulennoù nevez ouzh
+    question: Koumanantiñ d'ar goulenn-mañ
+    questions: Koumanantiñ d'an holl c'houlennoù
     share_on_twitter: twitter, facebook ha muioc'h...
+    tag: Koumanantiñ d'an dikedenn
     user: En em enskrivit da goulennoù an implijer
   global: 
     by: gant
     current: Red
     from: eus %{site}
+    group_not_found: N'eus ket eus ar bajenn %{url}
     or: pe
+    permission_denied: Aotre nac'het
     please_login: Mar plij kevreit
     preview: Rakwelet
     previous: Kent
+    share: rannañ
   languages: 
+    any: Ne vern
     user: Ma yezhoù karetañ
   messages: 
     success: "%{model} a zo bet %{action}."

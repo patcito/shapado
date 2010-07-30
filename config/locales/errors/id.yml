@@ -1,0 +1,22 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  errors: 
+    forbidden: 
+      explanation: Anda tidak memiliki hak yang diperlukan untuk mengakses halaman ini.
+      title: Akses ditolak
+    go_to: Tuju ke halaman %{link}
+    help_us_answer: Bantu kami menjawab %{link}
+    internal_error: 
+      explanation: Kami telah diberitahu tentang masalah ini dan kami segera memeriksanya.
+      title: Kami mohon maaf, terjadi kesalahan.
+    not_found: 
+      explanation: Anda mungkin salah mengetikkan alamat atau halaman tersebut mungkin telah dipindahkan.
+      title: Halaman tidak ditemukan.
+    options_label: "Hal lain untuk dicoba:"
+    search: Cari
+    unprocessable_entity: 
+      explanation: Mungkin Anda mencoba mengubah sesuatu yang tidak Anda miliki aksesnya.
+      title: Perubahan yang Anda inginkan ditolak.

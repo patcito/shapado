@@ -1,6 +1,7 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   admin: 
@@ -15,15 +16,25 @@ br:
         top_bar_tip: Lakait ul liamm dre linenn
       properties: 
         constrains: 
+          reputation_constrains_description: Ar furmskrid a aotre da gefluniañ ar c'hementad poentoù brud ret evit seveniñ un obererezh roet
+          reputation_constrains_subtitle: Roll ar redioù evit pep obererezh
           title: Strishadurioù
         domain: 
+          description: "Gellout a rit kefluniañ ho anv domani evit biziañ anezhañ davet ho lec'hienn eus an doare da-heul :"
+          instruction1: Da gentañ e rankit mont war al lec'hienn e lec'h m'hoc'h eus prennet ho anv domani, evel %{subdomain}.com.
+          instruction2: Amañ e rankit mont er rann DNS evit krouiñ ur CNAME.
+          instruction3: Dibabit "www" pe forzh peseurt anv all evit ho CNAME.
+          instruction5: Ur wech graet an dra-mañ, goude un eurvezh pe ziv, e rankfe biziañ ho tomani www.%{subdomain} davet %{appdomain}.
           title: Kefluniañ ho anv domani
           warning: Ha sur oc'h kaout c'hoant kemmañ ho domani ?
         general: 
           title: Perzhioù ar strollad
         rewards: 
+          reputation_rewards_description: Ar furmskrid-mañ a servij da gefluniañ penaos e c'hell un implijer gounid pe koll poentoù evit un obererezh resis
+          reputation_rewards_subtitle: Roll ar profoù brud
           title: Prizioù
         share: 
           title: Rannañ
         theme: 
+          logo_legend: Enporzhit ul logo evit ho strollad. D'ar muiañ e c'hell bezañ 2 Mo.
           title: Kefluniañ tem ar strollad

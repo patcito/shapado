@@ -1,0 +1,72 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Etiquettas predefinite
+        description: Description
+        domain: Dominio
+        fb_button: Activar le button Like de Facebook (non protege le vita private)
+        forum: Permitter plus de un responsa per usator
+        group_created_by: create per
+        language: Lingua
+        legend: Legenda
+        logo: Logotypo
+        may_contain_adult_content: Iste sito pote continer contento adulte
+        name: Nomine
+        openid_only: Solo le personas usante OpenID pote acceder al sito
+        owner: Iste gruppo esseva create per %{login}
+        registered_only: Solo le personas registrate pote acceder al sito
+        state: Stato
+        subdomain: URL
+        wysiwyg_editor: Activar le editor facile a usar
+    models: 
+      default_tags_message: Tu non pote haber plus de 10 etiquettas predefinite
+      group: Gruppo
+      groups: Gruppos
+  groups: 
+    create: 
+      flash_notice: Tu gruppo ha essite create con successo. Tu pote ora comenciar a configurar lo.
+    form: 
+      access: Configurationes de accesso
+      analytics_engine: Motor de analyse
+      analytics_legend: Le gruppo potera usar su proprie codice de sequimento
+      any_language: Qualcunque
+      custom_analytics: Permitter analyse personalisate
+      custom_html: Permitter HTML personalisate
+      custom_js: Permitter JavaScript personalisate
+      default_tags_legend: Separa etiquettas per commas. Solmente 10 etiquettas predefinite es permittite.
+      description_legend: Tu ha 400 characteres pro describer le gruppo.
+      isolate_group: Isolar le gruppo de altere gruppos
+      legend_legend: Isto essera usate in le titulo. Tu ha 40 characteres.
+      logo_legend: Tu pote incargar le logotypo del gruppo. Le grandor maxime del file es 2MB.
+      members_only: Solmente le membros del gruppo potera acceder a iste gruppo
+      website_analytics_id: ID de analyse de sito web
+    group: 
+      about: A proposito
+      accept_group: Acceptar iste gruppo
+      allow_ads: Permitter publicitate
+      close: Clauder
+      close_group: Clauder iste gruppo
+      disallow_ads: Non permitter publicitate
+    index: 
+      actives: Active
+      filter: Cercar gruppos
+      most_active: Le plus active
+      name: Nomine
+      pendings: Pendente
+      request_group: Requestar un nove gruppo
+      title: Gruppos
+    new: 
+      title: Crear tu gruppo
+    show: 
+      accept_group: Acceptar iste gruppo
+      accept_group_with_custom_ads: Acceptar gruppo e permitter annuncios personalisate
+      close_group: Clauder iste gruppo
+      group_awaiting_acceptance: Iste gruppo attende le acceptation de un moderator.
+      group_closed: Iste gruppo ha essite claudite.
+      title: A proposito de %{name}
+      visit_group: Visitar iste gruppo

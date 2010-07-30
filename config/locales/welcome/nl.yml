@@ -50,7 +50,10 @@ nl:
       title: Geef ons uw terugkoppeling
     index: 
       active: Actief
+      browse_all_or_by_tags: De %{full_list_of_questions} of %{browse_by_tags}
+      browse_by_tags: bladeren op basis van label
       create_own_site: Maak in 8 seconden uw eigen gratis Vraag en Antwoordsite
+      full_list_of_questions: volledige lijst met vragen
       hot: Populair
       quick_question: Stel een vraag, en wij vinden het antwoord.
       recent_questions: Recente vragen

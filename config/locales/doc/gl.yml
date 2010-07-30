@@ -1,0 +1,37 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  doc: 
+    chat: 
+      title: Axuda do chat
+    plans: 
+      15millions: 15 millóns de visitas por páxina ao mes
+      1million: 1 millón de visitas por páxina ao mes
+      247_all_support: Apoio baseado na web, no correo electrónico, no chat e mais no teléfono con dispoñibilidade permanente
+      5millions: 5 millóns de visitas por páxina ao mes
+      all_support: Apoio baseado na web, no correo electrónico, no chat e mais no teléfono
+      basic_restrictions: Sen anuncios personalizados nin interface de usuario completamente personalizable
+      beta_info: Polo de agora, todos os sitios son gratuítos e obteñen os seus beneficios a partir das opcións do plan óptimo, coa excepción do apoio que só está baseado na web, no correo electrónico e mais no chat.
+      big_sites: Sitios cun alto tráfico
+      custom_ads: Use os seus propios anuncios
+      custom_analytics: Estatísticas de tráfico
+      custom_domain: Dominio personalizado
+      custom_themes: Utilice os nosos temas personalizados predefinidos
+      custom_ui: Interface de usuario completamente personalizable
+      free_plan: plan gratuíto
+      getting_popular: Gañando popularidade
+      huge_sites: Sitios cun enorme tráfico
+      month: mes
+      page_views: Para os sitios privados ou pequenos
+      plans: Planos
+      private_site: Activar o acceso privado ou público
+      small_private: Sitios pequenos ou privados
+      start_monetizing: comezar a gañar cartos
+      support: Axuda
+      title: Planos e prezos
+      unlimited: Tráfico ilimitado cada mes
+      we_offer: Ofrecemos tamén un
+      web_support: Apoio baseado na web
+      with_unlimited: con tráfico ilimitado sen anuncios nin dominio personalizados.

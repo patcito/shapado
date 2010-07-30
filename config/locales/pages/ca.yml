@@ -1,0 +1,34 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Fulls d'estil
+        js: JavaScript
+    models: 
+      page: Pàgina
+      pages: Pàgines
+  pages: 
+    actions: 
+      create_page: Creeu una nova pàgina
+      edit_page: Editeu la pàgina
+      title: Accions
+    create: 
+      success: S'ha creat correctament la pàgina.
+    edit: 
+      title: S'està editant la pàgina
+    form: 
+      language_tip: Idioma de la pàgina
+      title_tip: "Títol de la pàgina. Empreu-lo per a referenciar la pàgina. Per exemple: [[FAQ] llegiu les PMF]]"
+    index: 
+      create_page: Crea una nova pàgina
+      title: Llistat de pàgines
+      written_in: Escrit en %{language}
+    new: 
+      title: Nova pàgina
+    title: Arregla'm
+    update: 
+      success: S'ha actualitzat correctament la pàgina.

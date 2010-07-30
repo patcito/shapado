@@ -1,0 +1,129 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  activerecord: 
+    models: 
+      badge: Distintiu
+      badges: Distintius
+  badges: 
+    index: 
+      description: Tots els distintius que podeu guannyar. Compartiu el vostre coneixement i guanyeu distintius.
+      title: distintius
+    shared: 
+      addict: 
+        description: Heu visitat el lloc cada dia durant 20 dies consecutius
+      autobiographer: 
+        description: S'han completat tots els camps del perfil d'usuari
+        name: Autobiògraf
+      celebrity: 
+        description: Teniu més de 100 seguidors
+        name: Celebritat
+      citizen_patrol: 
+        description: Primera publicació marcada
+        name: Patrulla ciutadana
+      civic_duty: 
+        description: S'ha votat 300 cops
+        name: Deure cívic
+      cleanup: 
+        description: Primera reversió
+        name: Neteja
+      commentator: 
+        description: Queden 10 comentaris
+      critic: 
+        description: L'han votat negativament per primer cop
+      disciplined: 
+        description: S'ha esborrat una publicació pròpia amb una puntuació de 3 o superior
+        name: Disciplinat/da
+      editor: 
+        description: Primer post editat
+      effort_medal: 
+        description: Teniu 100 vots positius
+      enlightened: 
+        description: La primera resposta ha estat acceptada amb un mínim de 10 vots
+        name: Il·lustrat/da
+      famous_question: 
+        description: Heu fet una pregunta amb 10.000 visualitzacions
+      fanatic: 
+        description: Heu visitat el lloc cada dia durant 100 dies consecutius
+      favorite_question: 
+        description: Pregunta preferida per a 25 usuaris
+      friendly: 
+        description: Esteu seguint algú per primer cop
+        name: Amigablement
+      good_answer: 
+        description: Tenint una resposta que assoleix una mitjana de més de 25 vots
+      good_question: 
+        description: Teniu una pregunta que ha assolit una mitjana de més de 25 vots
+      great_answer: 
+        description: Aquesta resposta ha estat votada 100 cops
+        name: Gran resposta
+      great_question: 
+        description: S'ha votat la pregunta 100 cops
+        name: Gran pregunta
+      guru: 
+        description: Ha donat una sol·lució a una pregunta amb una mitjana superior als 40 vots
+      inquirer: 
+        description: Primer cop que es pregunta
+      interesting_person: 
+        description: Teniu més de 10 seguidors
+        name: Persona interessant
+      merit_medal: 
+        description: Ha obtingut 200 vots positius
+      necromancer: 
+        description: Heu respost una pregunta fa més de 60 dies amb un mínim de 5 vots
+        name: Nigromant
+      nice_answer: 
+        description: S'ha votat la resposta 10 cops
+        name: Bona resposta
+      nice_question: 
+        description: S'ha votat la pregunta 10 cops
+        name: Bona pregunta
+      notable_question: 
+        description: Heu fet una pregunta amb 2.500 visualitzacions
+      organizer: 
+        description: Primera recategorització
+        name: Organitzador
+      peer_pressure: 
+        description: S'ha eliminat una publicació pròpia amb una puntuació de -3 o inferior
+        name: Pressió del grup
+      pioneer: 
+        description: Sigueu un dels primers usuaris en registrar-vos
+      popstar: 
+        description: 500 vots positius i 10 negatius com a màxim
+      popular_person: 
+        description: Teniu més de 50 seguidors
+        name: Persona popular
+      popular_question: 
+        description: S'ha fet una pregunta amb 1000 visualitzacions
+      rockstar: 
+        description: 1.000 vots positius i 10 de negatius com a màxim
+      scholar: 
+        description: Primera resposta acceptada a la vostra pròpia pregunta
+        name: Alumne
+      self-learner: 
+        description: Heu respost la vostra pròpia pregunta amb un mínim de 3 vots positius
+        name: Autodidacta
+      service_medal: 
+        description: 300 vots positius
+      shapado: 
+        description: Heu visitat el lloc cada dia durant 8 dies consecutius
+      stellar_question: 
+        description: 100 usuaris han afegit la pregunta com als seus favorits
+        name: Pregunta estrella
+      student: 
+        description: Heu fet la primera pregunta amb un mínim d'un vot positiu
+      supporter: 
+        description: L'han votat positivament per primer cop
+      troubleshooter: 
+        description: S'ha respost per primer cop
+      tutor: 
+        description: Heu donat una sol·lució a una pregunta amb una mitjana superior als 2 vots
+    show: 
+      description: "Els usuaris que han guanyat aquest distintiu. Recentment atorgat a:"
+      earned: guanyat
+      for_tag_bronze: 200 vots a l'etiqueta %{tag}
+      for_tag_gold: 1.000 vots a l'etiqueta %{tag}
+      for_tag_silver: 400 vots a l'etiqueta %{tag}
+      title: Distintiu %{type}

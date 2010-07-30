@@ -1,0 +1,14 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  searches: 
+    form: 
+      clear: Kosongkan
+      search_box_title: Periksa apakah pertanyaan Anda telah diminta
+      tags_tip: Gunakan [tag] untuk menentukan tag.
+    index: 
+      empty: Pencarian Anda tidak membuahkan hasil.
+      search_text: Pertanyaan yang mengandung
+      tags: di antara tag-tag ini

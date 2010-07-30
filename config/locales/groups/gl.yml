@@ -1,0 +1,72 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Etiquetas por defecto
+        description: Descrición
+        domain: Dominio
+        fb_button: Activar o botón "Like" do Facebook (non protexe o anonimato)
+        forum: Permitir máis dunha resposta por usuario
+        group_created_by: creado por
+        language: Lingua
+        legend: Lenda
+        logo: Logo
+        may_contain_adult_content: Este sitio pode posuír contidos para adultos
+        name: Nome
+        openid_only: Só as persoas con OpenID pode acceder ao sitio
+        owner: Este grupo foi creado por %{login}
+        registered_only: Só as persoas rexistradas poden acceder ao sitio
+        state: Estado
+        subdomain: URL
+        wysiwyg_editor: Activar o editor sinxelo
+    models: 
+      default_tags_message: Non pode empregar máis de 10 etiquetas por defecto
+      group: Grupo
+      groups: Grupos
+  groups: 
+    create: 
+      flash_notice: A creación do seu grupo rematou correctamente. Agora, xa pode comezar a configuralo.
+    form: 
+      access: Configuracións de acceso
+      analytics_engine: Motor de análise
+      analytics_legend: O grupo poderá utilizar o seu propio código de vixilancia
+      any_language: Calquera
+      custom_analytics: Activar as análises personalizadas
+      custom_html: Permitir o HTML personalizado
+      custom_js: Permitir o JavaScript personalizado
+      default_tags_legend: Separe as etiquetas por comas. Tan só están permitidas 10 etiquetas por defecto.
+      description_legend: Ten 400 caracteres para describir o grupo.
+      isolate_group: Illar o grupo do resto
+      legend_legend: Usarase na cabeceira. Ten 40 caracteres.
+      logo_legend: Podes cargar o logo do grupo. O tamaño máximo é de 2MB.
+      members_only: Só os membros do grupo poderán acceder a este grupo
+      website_analytics_id: ID das análises da páxina web
+    group: 
+      about: Acerca de
+      accept_group: Aceptar este grupo
+      allow_ads: Activar os anuncios
+      close: Pechar
+      close_group: Pechar este grupo
+      disallow_ads: Desactivar os anuncios
+    index: 
+      actives: Activos
+      filter: Procurar un grupo
+      most_active: Máis activos
+      name: Nome
+      pendings: Pendente
+      request_group: Pedir un novo grupo
+      title: Grupos
+    new: 
+      title: Crear o seu grupo
+    show: 
+      accept_group: Aceptar este grupo
+      accept_group_with_custom_ads: Aceptar o grupo e permitir anuncios personalizados
+      close_group: Pechar este grupo
+      group_awaiting_acceptance: Este grupo está á espera da aceptación por parte dun moderador.
+      group_closed: Este grupo foi pechado.
+      title: Acerca de "%{name}"
+      visit_group: Visitar este grupo

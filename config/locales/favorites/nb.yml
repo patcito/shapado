@@ -7,3 +7,7 @@ nb:
     models: 
       favorite: Favoritt
       favorites: Favoritter
+  favorites: 
+    create: 
+      success: Spørsmålet har blitt lagt til dine favoritter
+      unauthenticated: Du må ha en konto for å legge til favoritter

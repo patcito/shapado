@@ -8,7 +8,7 @@ br:
       earned_badge: 
         subject: Gounezet hoc'h eus ur badj war %{group} !
       favorited: 
-        subject: "%{login} en deus ouzhpennet ho koulenn evel pennroll !"
+        subject: "%{login} en deus ouzhpennet ho koulenn evel ur sined !"
       follow: 
         subject: "%{login} a vez bremañ oc'h heuliañ ac'hanoc'h war %{app}"
       give_advice: 

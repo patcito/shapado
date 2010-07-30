@@ -1,0 +1,16 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  admin: 
+    moderate: 
+      index: 
+        all: Semua
+        ban: Larang
+        banned: Pertanyaan terlarang
+        content: Isi
+        flagged: Pertanyaan tertandai
+        item_title: Judul
+        need_tags: Tag kembali
+        title: Menengah

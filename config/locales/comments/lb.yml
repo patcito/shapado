@@ -1,0 +1,20 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  comments: 
+    create: 
+      flash_notice: Merci fir Är Bemierkung
+    edit: 
+      title: Bemierkung änneren
+    shared: 
+      add_comment: Bemierkung derbäisetzen...
+      comment_submit: Bemierkung
+      reply: Äntwerten
+      said: huet gesot
+    update: 
+      flash_notice: D'Bemierkung gouf aktualiséiert.
+  models: 
+    comment: Bemierkung
+    comments: Bemierkungen

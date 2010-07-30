@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: IAlex
+# Author: Y-M D
 fr: 
   doc: 
     chat: 
@@ -19,7 +20,7 @@ fr:
       custom_analytics: Stats du trafic
       custom_domain: Domaine personalisé
       custom_themes: utilisation de nos thèmes pré-faits
-      custom_ui: Interface personalisable
+      custom_ui: Interface personnalisable
       free_plan: plan gratuit
       getting_popular: sites populaires
       huge_sites: énormes sites

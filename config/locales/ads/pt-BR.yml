@@ -1,0 +1,16 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  ads: 
+    ad_links: Adicionar um novo anúncio %{type}
+    create: 
+      success: O anúncio foi criado.
+    index: 
+      add_adbard: Adicionar um novo anúncio Ad Bard
+      add_adsense: Adicionar um novo anúncio do Google AdSense
+      title: Anúncios
+    name: "Nome:"
+    position: "Posição:"
+    title: Adicionar um novo anúncio %{type}

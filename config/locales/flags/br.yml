@@ -1,0 +1,21 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+# Author: Y-M D
+br: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: Abeg
+    models: 
+      flag: Banniel
+  flags: 
+    create: 
+      flash_error: Ne c'hellit ket danevelliñ an dra-se
+      flash_notice: Trugarez evit ho tanevell
+    form: 
+      attention: Ezhomm 'zo eus evezh ar verourien
+      label: Mar plij danevellit gant evezh
+      offensive: Kunujennoù, komzoù tagus, droug-komzoù pe pozioù kasoni
+      spam: Strob

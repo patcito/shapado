@@ -1,0 +1,21 @@
+# Messages for Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ильнар
+tt-cyrl: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: "Сәбәп:"
+    models: 
+      flag: Тамга
+      flags: Тамгалар
+  flags: 
+    create: 
+      flash_error: Сез моны тамгалый алмыйсыз
+      flash_notice: Рәхмәт
+    form: 
+      attention: Моның өчен модератор кирәк булачак
+      label: Зинһар өчен игьтибарлы булыгыз!
+      offensive: Каршылык яки ачулану хисләре
+      spam: Бу спам

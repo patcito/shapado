@@ -53,7 +53,7 @@ pt-PT:
     follow: 
       flash_notice: O utilizador %{user} foi adicionado aos seus amigos
     form: 
-      activities_notification: Receber notificações por correio electrónico de actividades como atribuições de distintivos, novos seguidores, etc.
+      activities_notification: Receber notificações por correio electrónico de actividades como atribuição de condecorações, novos seguidores, etc.
       avatar_tip: Alterar a imagem do perfil usando o Gravatar
       give_advice_notification: Receber notificações por correio electrónico de perguntas na sua área de especialidade
       information: Informação

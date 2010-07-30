@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   welcome: 
     confirm_age: 
@@ -49,7 +50,10 @@ fr:
       title: envoyer votre feedback
     index: 
       active: actives
+      browse_all_or_by_tags: Découvrez la %{full_list_of_questions} ou %{browse_by_tags}
+      browse_by_tags: naviguez par tag
       create_own_site: Créez votre propre site de QR en 8 secondes gratuitement
+      full_list_of_questions: liste complète de questions
       hot: chaudes
       quick_question: posez une question, nous trouverons quelqu'un pour y répondre
       recent_questions: questions récentes

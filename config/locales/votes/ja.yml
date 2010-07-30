@@ -1,6 +1,7 @@
 # Messages for Japanese (日本語)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: 青子守歌
 ja: 
   activerecord: 
     models: 
@@ -18,3 +19,7 @@ ja:
       unauthenticated: ユーザでないと投票できません
     destroy: 
       flash_notice: あなたの投票は削除されました
+    model: 
+      messages: 
+        closed_question: 閉じられた質問に属する記事には投票できません
+        vote_down_comment: コメントは投票で否決できません

@@ -1,0 +1,30 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  widgets: 
+    badges: 
+      description: Aquest giny mostra els distintius recentment atorgats a usuaris o preguntes
+      title: Distintius recents
+    groups: 
+      description: Aquest giny mostra els últims grups
+      title: Grups recents
+    index: 
+      description: Empreu les fletxes per a moure els ginys
+      title: Gestiona els ginys de la barra lateral
+    pages: 
+      description: Aquest giny mostra la llista de pàgines wiki
+      title: Pàgines Wiki
+    tag_cloud: 
+      description: Aquest giny mostra un núvol d'etiquetes
+      title: Núvol d'etiquetes
+    top_groups: 
+      description: Aquest giny mostra els 5 grups millor classificats
+      title: Els 5 grups millor classificats
+    top_users: 
+      description: Aquest giny mostra els 5 usuaris millor classificats
+      title: Els 5 usuaris millor classificats
+    users: 
+      description: Aquest giny mostra els membres recentment registrats
+      title: Usuaris recents

@@ -1,0 +1,57 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  activerecord: 
+    attributes: 
+      user: 
+        activation_code: Aktiveringskode
+        age: Alder
+        asked_by: spurt av
+        avatar: Profilbilde
+        birthday: Bursdag
+        current_password: Nåværende passord
+        email: E-post
+        fullname: Fullt navn
+        hide_country: Ikke vis landet mitt
+        language: Språk
+        language_filter: Filtrer etter språk
+        login: Brukernavn
+        name: Virkelig navn
+        password: Passord
+        password_confirmation: Passordbekreftelse
+        preferred_languages: Velg språkene du kan
+        timezone: Tidssone
+        website: Nettsted
+    models: 
+      user: Bruker
+      users: Brukere
+  users: 
+    create: 
+      flash_error: Beklager, vi kunne ikke sette opp den kontoen. Prøv igjen eller kontakt en administrator (lenke er ovenfor).
+      flash_notice: Takk for at du registrerte deg.
+    edit: 
+      enable_twitter: Aktiver Facebook- eller Twitterkontoer
+      submit: Lagre
+      title: Innstillinger
+    follow: 
+      flash_notice: Brukeren %{user} ble lagt til dine venner
+    form: 
+      information: Informasjon
+      new_answer_notification: Få e-postvarsler om nye svar
+      notifications: Varsler
+      show_more_lang: Vis flere språk
+    index: 
+      filter: Søk etter brukere
+      name: Navn
+      name_tooltip: Brukere sortert alfabetisk
+      newest: Nyest
+      oldest: Eldst
+      title: Alle brukere
+    new: 
+      submit: Registrer deg
+      title: Registrer deg som en ny bruker
+    show: 
+      follow: Følg
+      title: Bruker %{user}

@@ -1,0 +1,16 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  ads: 
+    ad_links: Voeg nuwe advertensie van tipe %{type} by
+    create: 
+      success: Die advertensie is geskep.
+    index: 
+      add_adbard: Voeg 'n nuwe "Ad Bar"-tipe advertensie by
+      add_adsense: Voeg 'n nuwe "Google AdSense"-advertensie by
+      title: Advertensies
+    name: "Naam:"
+    position: "Posisie:"
+    title: Voeg nuwe advertensie van tipe %{type} by

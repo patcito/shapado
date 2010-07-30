@@ -1,0 +1,43 @@
+# Messages for Catalan (Català)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Papapep
+ca: 
+  notifier: 
+    earned_badge: 
+      message1: Heu guanyat un distintiu %{badge} a %{app}
+      message2: "Descripció del distintiu:"
+      message3: Podeu veure tots els vostres distintius a la vostra %{user_page}
+    favorited: 
+      message1: "%{user} ha afegit la vostra pregunta com a favorita a %{group}"
+      message2: "El text de la vostra pregunta:"
+      message3: "Podeu veure-ho aquí:"
+    follow: 
+      message1: "%{user} segueix les vostres preguntes i respostes a %{app}"
+      message2: Podeu seguir-lo fent clic damunt el botó "Seguir-lo" a la seva %{user_page}
+    give_advice: 
+      message1: "%{user} acaba de fer una pregunta de la qual potser sapigueu la resposta:"
+      message2: "Per a respondre, només us cal respondre a aquest missatge:"
+      message3: "Si sabeu d'algú que potser sàpiga la resposta, envieu-li aquest enllaç de referència:"
+      message4: Si no tenim una resposta vostra en breu, la farem a algú altre. De tota manera, podreu respondre quan us vagi bé.
+    global: 
+      hi: Hola, %{user},
+      user_page: pàgina d'usuari
+    new_answer: 
+      message: "%{user} ha respost %{new_answer} a la pregunta %{question}"
+    new_comment: 
+      message: "%{user} ha comentat %{new_comment} a la pregunta %{question}"
+    new_feedback: 
+      message1: L'usuari %{user} <%{email}> ha enviat una retroacció
+      message2: Un usuari anònim ha enviat una retroacció des de l'adreça IP %{ip}
+      message3: "Adreça de correu electrònic: %{email}"
+      message4: "Assumpte: %{subject}"
+    report: 
+      message1: Informe pel grup %{group.name}
+      message2: Des de %{since}
+      message3: S'han creat %{questions} preguntes
+      message4: S'han creat %{answers} respostes
+      message5: S'han efectuat %{votes} vots
+      message6: S'han atorgat distintius %{badges}
+      message7: El compte té %{users} usuaris.
+      message8: Visiteu el vostre grup a %{link}

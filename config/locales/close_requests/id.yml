@@ -1,0 +1,31 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  close_requests: 
+    create: 
+      flash_notice: Permintaan penutupan berhasil dibuat
+    destroy: 
+      flash_notice: Permintaan penutupan berhasil dihapus
+    form: 
+      close_with_reason: Tutup pertanyaan ini atas alasan ini
+      dupe: Sudah ada
+      no_question: Bukan pertanyaan
+      not_relevant: Tidak relevan
+      ot: Keluar dari topik
+      request_closing_details: Minta tutup pertanyaan ini
+      spam: spam
+    index: 
+      title: Daftar permintaan yang ditutup
+    model: 
+      attributes: 
+        comment: Komentar
+        reason: Alasan
+        user: Pengguna
+      messages: 
+        already_requested: Anda telah meminta untuk menutup pertanyaan ini
+      name: Tutup permintaan
+      prural_name: Tutup permintaan
+    update: 
+      flash_notice: Permintaan penutupan berhasil dimutakhirkan
