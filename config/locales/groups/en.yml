@@ -18,7 +18,7 @@ en:
     show:
       title: "About %{name}"
       visit_group: Visit this group
-      group_awaiting_acceptance: "This group is awaiting for the acceptance of a moderator."
+      group_awaiting_acceptance: "This group is awaiting acceptance of a moderator."
       group_closed: This group was closed.
       accept_group: Accept this group
       close_group: Close this group
