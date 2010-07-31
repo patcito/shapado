@@ -14,4 +14,8 @@ module Sweepers
     expire_fragment("question_on_index_#{question.id}")
     expire_fragment("mini_question_on_index_#{question.id}")
   end
+
+  def sweep_new_users(group)
+    expire_fragment("new_users_#{group.id}")
+  end
 end
