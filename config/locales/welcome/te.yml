@@ -1,0 +1,48 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  welcome: 
+    confirm_age: 
+      over_18: నా వయసు 18 కంటే ఎక్కువ
+      under_18: నా వయసు 18 కంటే తక్కువ
+      warning: "హెచ్చరిక: ఈ పుటలో ప్రత్యేకించి పెద్దవారికి మాత్రమే సంబంధించిన సమారం ఉండవచ్చు."
+    facts: 
+      features: 
+        cols: 
+          foss: స్వేచ్ఛా/బహిరంగాకరం
+          joel: నేను జోయెల్&zwnj;ని మరింత ధనవంతున్ని చేస్తానా?
+          multilanguage: బహు-భాషత్వం
+        shapado: 
+          adaptable: అవును!
+          foss: అవును!
+          joel: కాదు :/
+          multilanguage: అవును!
+          multitopic: అవును!
+        stackexchange: 
+          adaptable: కాదు
+          foss: కాదు
+          joel: అవును!
+          multilanguage: కాదు
+          multitopic: కాదు
+      prices: 
+        shapado: 
+          onsite: మీ స్వంత సర్వరులో బహుశా $0
+        stackexchange: 
+          large: $1299/నెలకి
+          medium: $999/నెలకి
+          onsite: $2500/నెలకి
+          small: $129/నెలకి
+    feedback: 
+      captcha_error: దయచేసి, ఈ చిన్న లెక్కని చేయండి
+      email_description: మీ సందేశానికి జవాబివ్వడానికి వీలుగా దయచేసి మీ ఈమెయిలు చిరునామాని ఇవ్వండి
+      feedback_description: వివరణ
+      feedback_title: శీర్షిక
+      title: మీ సలహాలూ సూచనలని పంపించండి
+    index: 
+      browse_all_or_by_tags: " %{full_list_of_questions} లేదా %{browse_by_tags} లను చూడండి"
+      create_own_site: 8 క్షణాల్లో మీ స్వంత Q&amp;A సైటుని ఉచితంగా సృష్టించుకోండి
+      full_list_of_questions: ప్రశ్నల యొక్క పూర్తి జాబితా
+      quick_question: ఒక ప్రశ్నని అడగండి, సమాధానమిచ్చే ఒకరిని మేం కనుగొంటాం
+      recent_questions: ఇటీవలి ప్రశ్నలు

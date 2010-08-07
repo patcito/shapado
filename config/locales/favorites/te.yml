@@ -1,0 +1,13 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    models: 
+      favorite: ఇష్టపడు
+      favorites: ఇష్టాంశాలు
+  favorites: 
+    create: 
+      success: ఈ ప్రశ్నని మీ ఇష్టాంశాలకు చేర్చాం
+      unauthenticated: ఇష్టాంశాలను చేర్చుకోడానికి మీకు ఖాతా ఉండాలి

@@ -1,0 +1,28 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      page: 
+        js: జావాస్క్రిప్ట్
+    models: 
+      page: పుట
+      pages: పుటలు
+  pages: 
+    actions: 
+      create_page: కొత్త  పుటని సృష్టించండి
+      title: చర్యలు
+    create: 
+      success: పుటని విజయవంతంగా సృష్టించాం.
+    form: 
+      language_tip: పుట భాష
+      title_tip: "పుట శీర్షిక. పుటని సూచించడానికి దీన్ని ఉపయోగించండి. ఉదాహరణకి: [[FAQ|తరచూ అడిగే ప్రశ్నలని చూడండి]]"
+    index: 
+      title: పుటల జాబితా
+      written_in: "%{language}లో రాసారు"
+    new: 
+      title: కొత్త పుట
+    update: 
+      success: పుటని విజయవంతంగా తాజాకరించాం.

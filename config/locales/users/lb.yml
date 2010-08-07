@@ -1,0 +1,52 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  activerecord: 
+    attributes: 
+      user: 
+        age: Alter
+        avatar: Profilbild
+        birthday: Gebuertsdag
+        current_password: Aktuellt Passwuert
+        email: E-Mailadress
+        fullname: Ganzen Numm
+        hide_country: Mäi Land net weisen
+        language: Sprooch
+        language_filter: Filter no der Sprooch
+        login: Benotzernumm
+        name: Richtegen Numm
+        password: Passwuert
+        password_confirmation: Passwuert confirméieren
+        preferred_languages: Sicht déi Sproochen eraus déi Dir verstitt
+        reputation: Reputatioun
+        timezone: Zäitzone
+        website: Internetsite
+    models: 
+      user: Benotzer
+      users: Benotzer
+  users: 
+    actions: 
+      vote_up: Méi héich bewäerten
+    edit: 
+      submit: Späicheren
+      title: Astellungen
+    follow: 
+      flash_notice: De Benotzer %{user} gouf bäi Är Frënn derbäigesat.
+    form: 
+      avatar_tip: Ännert d'Bild an Ärem Profil mat 'Gravatar'
+      information: Informatioun
+      notifications: Benoriichtegungen
+      show_more_lang: Méi Sprooche weisen
+    index: 
+      filter: No Benotzer sichen
+      name: Numm
+      name_tooltip: Benotzer alphabetesch zortéiert
+      newest: Neist
+      newest_tooltip: Benotzer déi eréischt elo grad bäikoumen
+      oldest: Eelzt
+      reputation: Reputatioun
+      title: All Benotzer
+    show: 
+      title: Benotzer {{user}}

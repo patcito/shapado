@@ -1,0 +1,16 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      flag: 
+        type: కారణం
+  flags: 
+    create: 
+      flash_error: దీన్ని మీరు పిర్యాదు చెయ్యలేరు.
+      flash_notice: పిర్యాదు చేసినందుకు మీకు ధన్యవాదాలు
+    form: 
+      label: దయచేసి జాగ్రత్తతో పిర్యాదుచేయండి
+      offensive: అభ్యంతరకర, కించపరిచే, లేదా విద్వేశపూరిత వ్యాఖ్యలు

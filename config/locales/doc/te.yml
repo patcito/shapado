@@ -1,0 +1,24 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  doc: 
+    chat: 
+      title: ఛాట్ తోడ్పాటు
+    plans: 
+      15millions: 15 మిలియన్ల పేజీ వీక్షణలు/నెలకి
+      1million: 1 మిలియను పేజీ వీక్షణలు/నెలకి
+      5millions: 5 మిలియన్ల పేజీ వీక్షణలు/నెలకి
+      custom_ads: మీ స్వంత వ్యాపారప్రకటనలని వాడుకోండి
+      custom_analytics: ట్రాఫిక్ గణాంకాలు
+      free_plan: ఉచిత పథకం
+      month: నెల
+      page_views: చిన్న/ప్రైవేయి సైట్ల కొరకు
+      plans: ప్రణాళికలు
+      small_private: చిన్న/ప్రైవేయి సైట్లు
+      support: తోడ్పాటు
+      title: ప్రణాళికలు మరియు ధరలు
+      unlimited: ప్రతీ నెలా అపరిమిత ట్రాఫిక్
+      web_support: జాల ఆధారిత తోడ్పాటు

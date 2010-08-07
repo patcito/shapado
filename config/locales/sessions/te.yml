@@ -1,0 +1,22 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  sessions: 
+    create: 
+      flash_error: "'%{login}' గా మిమ్మల్ని ప్రవేశింపజేయలేకపోయాం"
+      flash_notice: విజయవంతంగా ప్రవేశించారు
+    destroy: 
+      flash_notice: మీరు నిష్క్రమించారు.
+    new: 
+      log_in: ప్రవేశించండి
+      not_registered: ఇంకా నమోదు కాలేదా?
+      registered: ఇప్పటికే నమోదయ్యారా?
+      remember_me: నన్ను గుర్తుంచుకో
+      sign_in: ప్రవేశించండి
+      signup: నమోదు
+      with_authentication: మా అధీకరణ వ్యవస్థతో ప్రవేశించండి
+      with_facebook: ఫేస్‌బుక్‌తో ప్రవేశించండి
+      with_openid: ఓపెన్ఐడీతో ప్రవేశించండి
+      with_twitter: ట్విట్టర్‌తో ప్రవేశించండి

@@ -1,0 +1,28 @@
+# Messages for Igbo (Igbo)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ukabia
+ig: 
+  activerecord: 
+    attributes: 
+      page: 
+        js: JavaScript
+    models: 
+      page: Ihü
+      pages: Ihü
+  pages: 
+    actions: 
+      create_page: Ké ihü ohúrù
+      edit_page: Rüwa ihü
+      title: Mmèmé
+    create: 
+      success: Ihü kèrè na nke ómá.
+    edit: 
+      title: Ihü í rü
+    form: 
+      language_tip: Asụsụ ihü
+    index: 
+      title: Ndétu ihü
+    new: 
+      title: Ihü ohúrù
+    title: Gbado'm

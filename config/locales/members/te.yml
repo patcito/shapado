@@ -8,6 +8,8 @@ te:
       member: 
         role: పాత్ర
   members: 
+    form: 
+      login_tip: మీరు చేస్తున్నప్పుడే అన్వేషణ
     index: 
       manage_members_title: సభ్యుల నిర్వహణ
       title: "%{name} లోని గుంపు సభ్యులు"

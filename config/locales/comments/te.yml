@@ -1,0 +1,21 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  comments: 
+    create: 
+      flash_notice: మీ వ్యాఖ్యకి ధన్యవాదాలు
+    edit: 
+      title: వ్యాఖ్యని మార్చు
+    shared: 
+      add_comment: వ్యాఖ్యానించండి...
+      comment_submit: వ్యాఖ్య
+      reply: ప్రతిస్పందన
+      said: అన్నారు
+    update: 
+      flash_notice: వ్యాఖ్యని జయప్రదంగా తాజాకరించాం.
+  models: 
+    comment: వ్యాఖ్య
+    comments: వ్యాఖ్యలు

@@ -1,0 +1,22 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: "%{group} గుంపులో మీరు ఒక బాడ్జిని పొందారు!"
+      favorited: 
+        subject: మీ ప్రశ్నని %{login} తన ఇష్టాంశంగా చేర్చుకున్నారు!
+      follow: 
+        subject: "%{app}లో %{login} ఇప్పుడు మిమ్మల్ని అనుసరిస్తున్నారు"
+      give_advice: 
+        friend_subject: "మీ మిత్రునికి సహాయం కావాలి: %{question_title}"
+        subject: "మాకు మీ సలహా కావాలి: %{question_title}"
+      new_answer: 
+        subject_friend: "%{title} అన్న ప్రశ్నకి మీ మిత్రులు %{login} జవాబిచ్చారు"
+        subject_other: "%{title} అన్న ప్రశ్నకి %{login} జవాబిచ్చారు"
+        subject_owner: "%{title} అన్న ప్రశ్నకి %{login} జవాబిచ్చారు"
+      new_comment: 
+        subject: " %{group}లో %{login}  వ్యాఖ్యానించారు"

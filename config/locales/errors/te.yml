@@ -1,0 +1,23 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  errors: 
+    forbidden: 
+      explanation: ఈ పుటని చూడటానికి అవసరమైన హక్కులు మీకు లేవు.
+      title: అనుమతి నిరాకరించారు
+    go_to: "%{link} పుటకి వెళ్ళండి"
+    help_us_answer: "%{link}కి జవాబివ్వడానికి మాకు సహాయపడండి"
+    internal_error: 
+      explanation: ఈ సమస్య గురించి మాకు సమాచారం అందింది మరియు మేం త్వరలోనే దాని చూస్తాము.
+      title: క్షమించండి,  ఏదో పొరపాటు జరిగింది.
+    not_found: 
+      explanation: మీరు చిరునామాని తప్పుగా టైపు చేసి ఉండవచ్చు లేదా ఈ పుటని తరలించి ఉండొచ్చు.
+      title: పేజీ కనబడలేదు.
+    options_label: "ప్రయత్నించదగ్గ ఇతర అంశాలు:"
+    search: వెతుకు
+    unprocessable_entity: 
+      explanation: బహుశా మీకు అనుమతి లేనిదాన్ని మార్చడానికి మీరు ప్రయత్నించారనుకుంట.
+      title: మీరు అడిగిన మార్పు తిరస్కరించబడింది.

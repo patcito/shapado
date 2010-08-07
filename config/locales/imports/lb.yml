@@ -1,0 +1,10 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: brauch eng Confirmatioun
+        title: Confirmatiouns-E-Maile schécken

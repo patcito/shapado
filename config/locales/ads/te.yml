@@ -1,0 +1,12 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  ads: 
+    create: 
+      success: వ్యాపారప్రకటనని విజయవంతంగా సృష్టించాం.
+    index: 
+      title: ప్రకటనలు
+    name: "పేరు:"
+    position: "స్థానం:"

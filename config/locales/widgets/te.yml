@@ -1,0 +1,22 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  widgets: 
+    badges: 
+      title: ఇటీవలి బాడ్జీలు
+    groups: 
+      description: ఈ విడ్జెట్ కొత్త గుంపులని చూపిస్తుంది
+      title: ఇటీవలి గుంపులు
+    pages: 
+      description: ఈ విడ్జెట్ వికీ పుటల యొక్క జాబితాని చూపిస్తుంది
+      title: వికీ పుటలు
+    tag_cloud: 
+      title: ట్యాగు మేఘం
+    top_groups: 
+      title: పై 5 గుంపులు
+    top_users: 
+      title: పై 5 గురు వాడుకరులు
+    users: 
+      title: ఇటీవలి వాడుకరులు

@@ -1,0 +1,23 @@
+# Messages for Piedmontese (Piemontèis)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Borichèt
+# Author: Dragonòt
+pms: 
+  wiki: 
+    actions: 
+      all_history: André a la stòria
+      back_to_question: André a la chestion
+      revert: Torné andré a costa version-sì
+      show_diff: Paragon-a le version selessionà
+    diff: 
+      title: Diferense an tra %{prev} e %{curr}
+    history: 
+      current_version: Version corenta
+      previous_versions: Version prima
+      title: Stòria (%{count})
+      version: Version
+      version_summary: Resumé dla version
+    model: 
+      attributes: 
+        message: Resumé

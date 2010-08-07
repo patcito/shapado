@@ -1,0 +1,74 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  activerecord: 
+    models: 
+      badge: బాడ్జీ
+      badges: బాడ్జీలు
+  badges: 
+    index: 
+      description: మీరు పొందదగ్గ అన్ని బాడ్జీలు. మీ జ్ఞానాన్ని పంచుకోండి, బాడ్జీలను పొందండి.
+      title: బాడ్జీలు
+    shared: 
+      addict: 
+        description: సైటుని  20 రోజుల పాటు వరుసగా ప్రతీరోజూ సందర్శించారు
+      celebrity: 
+        name: ప్రసిద్ధులు
+      civic_duty: 
+        description: 300 సార్లు వోటేసారు
+      commentator: 
+        description: 10 వ్యాఖ్యలు చేసారు
+      effort_medal: 
+        description: 100 అనుకూల వోట్లను పొందారు
+      famous_question: 
+        description: 10,000 వీక్షణలు  సంపాదించిన ప్రశ్నని అడిగారు
+      fanatic: 
+        description: సైటుని 100 రోజుల పాటు వరుసగా ప్రతీరోజూ సందర్శించారు
+      favorite_question: 
+        description: 25 మందివాడుకర్లు ప్రశ్నని మెచ్చుకున్నారు
+      friendly: 
+        description: మొదటిసారిగా ఇతరులని అనుసరిస్తున్నారు
+        name: స్నేహశీలి
+      great_answer: 
+        name: గొప్ప సమాధానం
+      great_question: 
+        description: ప్రశ్న 100 వోట్లు పొందింది
+        name: మంచి ప్రశ్న
+      inquirer: 
+        description: మొదటిసారి ప్రశ్న అడిగారు
+      interesting_person: 
+        description: 10 కంటే ఎక్కువమంది అనుచరులని పొందుతున్నారు
+        name: ఆసక్తికరమైన వ్యక్తి
+      merit_medal: 
+        description: 200 అనుకూల వోట్లను పొందారు
+      nice_answer: 
+        description: జవాబు 10 వోట్లు పొందింది
+        name: మంచి సమాధానం
+      nice_question: 
+        name: మంచి ప్రశ్న
+      notable_question: 
+        description: 2500 వీక్షణలతో ఉన్న ప్రశ్నని అడిగారు
+      pioneer: 
+        description: నమోదయ్యే వాడుకర్లలో మొదటివారవ్వండి
+      popular_person: 
+        description: 50 కంటే ఎక్కువమంది అనుచరులను కలిగివున్నారు
+        name: ప్రజాదరణగల వ్యక్తి
+      popular_question: 
+        description: 1000 వీక్షణలు  సంపాదించిన ప్రశ్నని అడిగారు
+      scholar: 
+        description: మొదటిసారిగా స్వంత ప్రశ్నపై జవాబుని అంగీకరించారు
+        name: పండితుడు
+      self-learner: 
+        name: స్వయం శిక్షకులు
+      stellar_question: 
+        description: ప్రశ్నని 100 వాడుకరులు ఇష్టాంశాలలో చేర్చుకున్నారు
+        name: అత్యుత్తమ ప్రశ్న
+      student: 
+        description: కనీసం ఒక్క పై వోటుతో మొదటి  ప్రశ్నని అడిగారు
+      troubleshooter: 
+        description: మొదటిసారిగా జవాబిచ్చారు
+    show: 
+      title: "%{type} బాడ్జీ"

@@ -1,0 +1,13 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  admin: 
+    moderate: 
+      index: 
+        all: అన్నీ
+        ban: నిషేధించు
+        banned: నిషేధించిన ప్రశ్నలు
+        content: విషయం
+        item_title: శీర్షిక

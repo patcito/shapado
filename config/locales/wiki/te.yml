@@ -1,0 +1,21 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  wiki: 
+    actions: 
+      all_history: తిరిగి చరిత్రకి
+      back_to_question: తిరిగి ప్రశ్నకి
+      show_diff: ఎంచుకున్న కూర్పులను పోల్చిచూడు
+    diff: 
+      title: "{{prev}} మరియు {{curr}}ల మధ్య తేడాలు"
+    history: 
+      current_version: ప్రస్తుత కూర్పు
+      previous_versions: గత కూర్పులు
+      title: చరిత్ర ({{count}})
+      version: కూర్పు
+      version_summary: కూర్పు సారాంశం
+    model: 
+      attributes: 
+        message: సారాశం

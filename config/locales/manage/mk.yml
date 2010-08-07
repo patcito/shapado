@@ -6,7 +6,7 @@ mk:
   admin: 
     manage: 
       content: 
-        footer: долна колон-цифра
+        footer: Подножје
         head: заглавие
         question_help: помош со прашања
         question_prompt: потсетник за прашање

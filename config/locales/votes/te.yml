@@ -1,0 +1,18 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    models: 
+      vote: వోటు
+      votes: వోట్లు
+  votes: 
+    create: 
+      flash_error: దీనిపై మీరు వోటేయలేరు
+      flash_notice: వోటేసినందుకు కృతజ్ఞతలు!
+      unauthenticated: అజ్ఞాత వాడుకరులు వోటువేయలేరు
+    model: 
+      messages: 
+        closed_question: మూసివేసిన ప్రశ్నలకి సంబంధించిన అంశాలపై మీరు వోటు వెయ్యలేరు
+        vote_down_comment: వ్యాఖ్యలకి వోటు వేయలేరు

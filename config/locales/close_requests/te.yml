@@ -1,0 +1,31 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Ravichandra
+# Author: Veeven
+te: 
+  close_requests: 
+    create: 
+      flash_notice: మూసివేత అభ్యర్థనని విజయవంతంగా సృష్టించాం
+    destroy: 
+      flash_notice: మూసివేత అభ్యర్థనని విజయవంతంగా తొలగించాం
+    form: 
+      close_with_reason: ఈ ప్రశ్నని ఈ కారణంతో మూసివేయండి
+      dupe: నకలు
+      no_question: ప్రశ్న కాదు
+      not_relevant: అనవసరం
+      ot: అసందర్భ విషయం
+      request_closing_details: ఈ ప్రశ్నని మూసివేయమని అభ్యర్థించండి
+    index: 
+      title: మూసివేత అభ్యర్థనల జాబితా
+    model: 
+      attributes: 
+        comment: వ్యాఖ్య
+        reason: కారణం
+        user: వాడుకరి
+      messages: 
+        already_requested: ఈ ప్రశ్నని మూసివేయమని మీరు ఇప్పటికే అడిగివున్నారు
+      name: మూసివేత అభ్యర్థన
+      prural_name: మూసివేత అభ్యర్థనలు
+    update: 
+      flash_notice: మూసివేత అభ్యర్థనని విజయవంతంగా తాజాకరించాం

@@ -1,0 +1,12 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  shared: 
+    current_tags: 
+      title: ఎంచుకున్న ట్యాగులు
+    topbar: 
+      admin: నిర్వహణ
+      logged_as: "%{login} వలె ప్రవేశించారు"
+      user_page: నా పుట

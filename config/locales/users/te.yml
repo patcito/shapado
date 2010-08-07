@@ -1,0 +1,55 @@
+# Messages for Telugu (తెలుగు)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Veeven
+te: 
+  activerecord: 
+    attributes: 
+      user: 
+        activation_code: చేతనపు సంకేతం
+        age: వయసు
+        asked_by: అడిగిన వారు
+        birthday: పుట్టిన రోజు
+        created_at: చేరిన తేదీ
+        current_password: "ప్రస్తుత సంకేతపదం:"
+        email: ఈమెయిలు
+        fullname: పూర్తి పేరు
+        hide_country: నా దేశాన్ని చూపించకు
+        language: భాష
+        login: వాడుకరిపేరు
+        name: అసలు పేరు
+        password: సంకేతపదం
+        password_confirmation: సంకేతపదపు నిర్ధారణ
+        preferred_languages: మీకు తెలిసిన భాషలను ఎంచుకోండి
+        reputation: ఖ్యాతి
+        timezone: కాలమండలం
+        website: వెబ్ సైటు
+    models: 
+      user: వాడుకరి
+      users: వాడుకరులు
+  users: 
+    edit: 
+      enable_twitter: మీ ఫేస్‌బుక్ లేదా ట్విట్టర్ ఖాతాలను చేతనం చేయండి
+      submit: భద్రపరచు
+      title: అమరికలు
+    follow: 
+      flash_notice: వాడుకరి %{user}ని మీ స్నేహితుల కు చేర్చాం
+    form: 
+      information: సమాచారం
+      notifications: గమనింపులు
+      show_more_lang: మరిన్ని భాషలను చూపించు
+    index: 
+      empty: ఈ గుంపులో ప్రస్తుతం సభ్యులు ఎవరూ లేరు. ఈ గుంపులో చేరి పాల్గొనండి.
+      name: పేరు
+      newest_tooltip: కొత్తగా చేరిన వాడుకరులు
+      oldest_tooltip: మొదటగా చేరిన వాడుకరులు
+      reputation: ఖ్యాతి
+      title: అందరు వాడుకరులు
+    new: 
+      title: కొత్త వాడుకరిగా నమోదవ్వండి
+    show: 
+      follow: అనుసరించు
+      title: వాడుకరి %{user}
+      views: వీక్షణలు
+    unfollow: 
+      flash_notice: వాడుకరి %{user}ని మీ స్నేహితుల నుండి తొలగించాం
