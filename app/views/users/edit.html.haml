@@ -3,12 +3,12 @@
     =t(".title")
 
 -content_for :sidebar do
-  -if AppConfig.twitter["activate"] || AppConfig.enable_facebook_auth
+  -if AppConfig.twitter["activate"] || with_facebook?
     .block.notice{:style => "padding-bottom: 10px"}
       %h4
         =t(".enable_twitter")
 
-      -if AppConfig.enable_facebook_auth
+      -if with_facebook?
         =link_to t("sessions.new.with_facebook"), oauth_authorize_path(:merge => true), :title => "Facebook", :id => "facebook_auth"
 
         %br

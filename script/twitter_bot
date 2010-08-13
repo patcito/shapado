@@ -1,0 +1,120 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__)+"/../config/environment"
+
+gem 'twitter', '0.9.8'
+gem 'crack', '0.1.6'
+
+require 'twitter'
+require 'whatlanguage'
+
+class TwitterBot
+  def initialize
+    @extractor = Object.new
+    @extractor.extend(Twitter::Extractor)
+  end
+
+  def search(keyword, &block)
+    begin
+      Twitter::Search.new(keyword).each do |status|
+        block.call(status)
+      end
+    rescue Crack::ParseError
+    end
+  end
+
+  def run!
+    loop do
+      Group.find_each("share.enable_twitter" => true) do |group|
+        begin
+          process_group(group)
+        rescue Exception => e
+          puts "WARNING: #{e} #{e.backtrace.join("\n\t")}"
+        end
+      end
+      sleep 5
+    end
+  end
+
+  private
+  def process_group(group)
+    return if group.share.twitter_user.blank?
+
+    share = group.share
+    default_date = (Time.now - 5.days).utc
+    last_date = (group[:last_twitter_question_at] ||default_date) rescue default_date
+
+    since = last_date.strftime("%Y-%m-%d")
+
+    query = "#{share.twitter_pattern} to:#{share.twitter_user} ?"
+    puts "Processing #{group.name}. query=#{query.inspect}"
+    self.search(query.strip) do |status|
+      id = status[:id]
+      date = Time.parse(status[:created_at]).utc
+      if date < last_date
+        next
+      end
+
+      if Question.first(:twitter_source => status[:id], :select => [:_id]).present?
+        next
+      end
+
+      status_text = status[:text]
+      username = status[:from_user]
+
+      puts "#{status_text.inspect} --@#{username}"
+
+      user = User.first(:twitter_login => username)
+      if user.present?
+        username = user.login
+      else
+        user = nil
+      end
+
+      title = status_text.gsub(/^@#{share.twitter_user}\s+/, "")
+      tags = Set.new(@extractor.extract_hashtags(status_text))
+      body = ""
+      if !user
+        body = %@<a rel="nofollow" href="http://twitter.com/#{username}/status/#{status[:id]}">#{username}</a> pregunta desde twitter:<br/><br/>@
+      end
+      body += title
+
+      language = group.language
+      if language.nil?
+        language = find_language(status_text)
+      end
+
+      if user.nil?
+        user = group.owner.present? ? group.owner : User.first(:login => "admin")
+      end
+
+      question = Question.create!(:title => title[0,100],
+                                  :tags => tags,
+                                  :body => body,
+                                  :group => group,
+                                  :user => user,
+                                  :language => language,
+                                  :twitter_source => status[:id])
+    end
+
+    group.set({:last_twitter_question_at => last_date})
+    group.last_twitter_question_at = last_date
+  end
+
+  private
+  def find_language(text)
+    case text.gsub(/<\/?[^>]*>/, "").language
+    when :spanish
+      'es'
+    when :french
+      'fr'
+    when :portuguese
+      'pt'
+    else
+      'en'
+    end
+  end
+end
+
+
+TwitterBot.new.run!

@@ -31,3 +31,7 @@
 .quick-vote-button{
 /*    display: none;*/
 }
+
+#sidebar .content ul li{
+    display: inline;
+}

@@ -111,7 +111,7 @@ class GroupsController < ApplicationController
   def update
     @group.safe_update(%w[name legend description default_tags subdomain logo logo_info forum
                           custom_favicon language theme reputation_rewards reputation_constrains
-                          has_adult_content registered_only openid_only custom_css wysiwyg_editor fb_button], params[:group])
+                          has_adult_content registered_only openid_only custom_css wysiwyg_editor fb_button share], params[:group])
 
     @group.safe_update(%w[isolate domain private has_custom_analytics has_custom_html has_custom_js], params[:group]) #if current_user.admin?
     @group.safe_update(%w[analytics_id analytics_vendor], params[:group]) if @group.has_custom_analytics

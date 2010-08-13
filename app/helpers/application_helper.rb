@@ -1,5 +1,14 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def with_facebook?
+    return true if current_group.share.fb_active
+
+    if request.host =~ Regexp.new("#{AppConfig.domain}$", Regexp::IGNORECASE)
+      AppConfig.facebook["activate"]
+    else
+      false
+    end
+  end
 
   def context_panel_ads(group)
     if AppConfig.enable_adbard && request.domain == AppConfig.domain &&

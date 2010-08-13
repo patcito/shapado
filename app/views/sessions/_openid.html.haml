@@ -9,7 +9,7 @@
 
   -unless local_assigns[:only_openid]
     #twitter-and-facebook
-      -if AppConfig.enable_facebook_auth
+      -if with_facebook?
         =link_to t("sessions.new.with_facebook"), oauth_authorize_path, :title => "Facebook", :id => "facebook_auth"
 
       -if AppConfig.twitter["activate"]

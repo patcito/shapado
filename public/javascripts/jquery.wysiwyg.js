@@ -1,5 +1,5 @@
 /**
- * WYSIWYG - jQuery plugin 0.8
+ * WYSIWYG - jQuery plugin 0.92 (arigatou gozaimasu)
  *
  * Copyright (c) 2008-2009 Juan M Martinez
  * http://plugins.jquery.com/project/jWYSIWYG
@@ -40,7 +40,7 @@
                 return element;
         };
 
-        $.fn.documentSelection = function ()
+        var documentSelection = function ()
         {
                 var element = this.get(0);
 
@@ -61,27 +61,21 @@
                         var action = arguments[0].toString();
                         var params = [];
 
-                        for (var i = 1; i < arguments.length; i++)
-                        {
-                                params[i - 1] = arguments[i];
-                        }
                         if (action == 'enabled')
                         {
                                 return this.data('wysiwyg') !== null;
                         }
-                        if (action in Wysiwyg)
+                        for (var i = 1; i < arguments.length; i++)
                         {
-                                return this.each(function ()
-                                {
-                                        $.data(this, 'wysiwyg').designMode();
-
-                                        Wysiwyg[action].apply(this, params);
-                                });
+                                params[i - 1] = arguments[i];
                         }
-                        else
+						var retValue = null;
+                        this.each(function()
                         {
-                                return this;
-                        }
+                                $.data(this, 'wysiwyg').designMode();
+                                retValue = Wysiwyg[action].apply(this, params);
+                        });
+						return retValue;
                 }
 
                 var controls = { };
@@ -118,7 +112,7 @@
         };
 
         $.fn.wysiwyg.defaults = {
-                html: '<' + '?xml version="1.0" encoding="UTF-8"?' + '><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">STYLE_SHEET</head><body style="margin: 0px;">INITIAL_CONTENT</body></html>',
+                html: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">STYLE_SHEET</head><body style="margin: 0px;">INITIAL_CONTENT</body></html>',
                 formTableHtml: '<form class="wysiwyg"><fieldset><legend>Insert table</legend><label>Count of columns: <input type="text" name="colCount" value="3" /></label><label><br />Count of rows: <input type="text" name="rowCount" value="3" /></label><input type="submit" class="button" value="Insert table" /> <input type="reset" value="Cancel" /></fieldset></form>',
                 formImageHtml:'<form class="wysiwyg"><fieldset><legend>Insert Image</legend><label>Image URL: <input type="text" name="url" value="http://" /></label><label>Image Title: <input type="text" name="imagetitle" value="" /></label><label>Image Description: <input type="text" name="description" value="" /></label><input type="submit" class="button" value="Insert Image" /> <input type="reset" value="Cancel" /></fieldset></form>',
                 formWidth: 440,
@@ -252,9 +246,9 @@
                         visible: true,
                         exec: function ()
                         {
-                                var selection = $(this.editor).documentSelection();
+                                var selection = documentSelection.call($(this.editor));
 
-                                if (selection.length > 0)
+                                if (selection && selection.length > 0)
                                 {
                                         if ($.browser.msie)
                                         {
@@ -266,7 +260,7 @@
                                                 var szURL = prompt('URL', 'http://');
                                                 if (szURL && szURL.length > 0)
                                                 {
-                                                        this.editorDoc.execCommand('unlink', false, []);
+                                                        this.editorDoc.execCommand('unlink', false, null);
                                                         this.editorDoc.execCommand('createLink', false, szURL);
                                                 }
                                         }
@@ -283,9 +277,9 @@
                         visible: true,
                         exec: function ()
                         {
+                                var self = this;
                                 if ($.modal)
                                 {
-                                        var self = this;
                                         $.modal($.fn.wysiwyg.defaults.formImageHtml, {
                                                 onShow: function(dialog)
                                                 {
@@ -313,7 +307,6 @@
                                 else
                                 {
                                      if ($.fn.dialog){
-                                        var self = this;
                                         var dialog = $($.fn.wysiwyg.defaults.formImageHtml).appendTo('body');
                                         dialog.dialog({
                                             modal: true,
@@ -371,10 +364,9 @@
                         visible: true,
                         exec: function ()
                         {
-
+                                var self = this;
                                 if ($.fn.modal)
                                 {
-                                        var self = this;
                                         $.modal($.fn.wysiwyg.defaults.formTableHtml, {
                                                 onShow: function(dialog)
                                                 {
@@ -400,7 +392,6 @@
                                 else
                                 {
                                     if ($.fn.dialog){
-                                        var self = this;
                                         var dialog = $($.fn.wysiwyg.defaults.formTableHtml).appendTo('body');
                                         dialog.dialog({
                                             modal: true,
@@ -442,24 +433,24 @@
                         visible: true,
                         groupIndex: 7,
                         className: 'h1',
-                        command: $.browser.msie ? 'FormatBlock' : 'heading',
-                        'arguments': [$.browser.msie ? '<h1>' : 'h1'],
+                        command: ($.browser.msie || $.browser.safari) ? 'FormatBlock' : 'heading',
+                        'arguments': ($.browser.msie || $.browser.safari) ? '<h1>' : 'h1',
                         tags: ['h1'],
                         tooltip: 'Header 1'
                 },
                 h2: {
                         visible: true,
                         className: 'h2',
-                        command: $.browser.msie ? 'FormatBlock' : 'heading',
-                        'arguments': [$.browser.msie ? '<h2>' : 'h2'],
+                        command: ($.browser.msie || $.browser.safari)  ? 'FormatBlock' : 'heading',
+                        'arguments': ($.browser.msie || $.browser.safari) ? '<h2>' : 'h2',
                         tags: ['h2'],
                         tooltip: 'Header 2'
                 },
                 h3: {
                         visible: true,
                         className: 'h3',
-                        command: $.browser.msie ? 'FormatBlock' : 'heading',
-                        'arguments': [$.browser.msie ? '<h3>' : 'h3'],
+                        command: ($.browser.msie || $.browser.safari) ? 'FormatBlock' : 'heading',
+                        'arguments': ($.browser.msie || $.browser.safari) ? '<h3>' : 'h3',
                         tags: ['h3'],
                         tooltip: 'Header 3'
                 },
@@ -495,8 +486,9 @@
                                 {
                                         this.focus();
                                 }
-                                this.editorDoc.execCommand('removeFormat', false, []);
-                                this.editorDoc.execCommand('unlink', false, []);
+                                this.editorDoc.execCommand('formatBlock', false, '<P>'); // remove headings
+                                this.editorDoc.execCommand('removeFormat', false, null);
+                                this.editorDoc.execCommand('unlink', false, null);
                          },
                          tooltip: 'Remove formatting'
                 },
@@ -519,7 +511,41 @@
                                 this.viewHTML = !(this.viewHTML);
                          },
                          tooltip: 'View source code'
-                }
+                },
+                rtl: {
+                         visible : false,
+                         exec    : function()
+                         {
+                                 var selection = $(this.editor).documentSelection();
+                                 if ($("<div />").append(selection).children().length > 0) 
+                                 {
+                                         selection = $(selection).attr("dir", "rtl");
+                                 }
+                                 else
+                                 {
+                                         selection = $("<div />").attr("dir", "rtl").append(selection);
+                                 }
+                                 this.editorDoc.execCommand('inserthtml', false, $("<div />").append(selection).html());
+                        },
+                        tooltip : "Right to Left"
+                },
+                ltr: {
+                        visible : false,
+                        exec    : function()
+                        {
+                                var selection = $(this.editor).documentSelection();
+                                if ($("<div />").append(selection).children().length > 0) 
+                                {
+                                        selection = $(selection).attr("dir", "ltr");
+                                }
+                                else
+                                {
+                                        selection = $("<div />").attr("dir", "ltr").append(selection);
+                                }
+                                this.editorDoc.execCommand('inserthtml', false, $("<div />").append(selection).html());
+                        },
+                        tooltip : "Left to Right"
+               }
         };
 
         $.extend(Wysiwyg, {
@@ -552,6 +578,7 @@
                                         self.editorDoc.execCommand('insertImage', false, szURL);
                                 }
                         }
+		                return this;
                 },
 
                 createLink: function (szURL)
@@ -560,15 +587,15 @@
 
                         if (self.constructor == Wysiwyg && szURL && szURL.length > 0)
                         {
-                                var selection = $(self.editor).documentSelection();
+                                var selection = documentSelection.call($(self.editor));
 
-                                if (selection.length > 0)
+                                if (selection && selection.length > 0)
                                 {
                                         if ($.browser.msie)
                                         {
                                                 self.focus();
                                         }
-                                        self.editorDoc.execCommand('unlink', false, []);
+                                        self.editorDoc.execCommand('unlink', false, null);
                                         self.editorDoc.execCommand('createLink', false, szURL);
                                 }
                                 else if (self.options.messages.nonSelection)
@@ -576,24 +603,34 @@
                                         alert(self.options.messages.nonSelection);
                                 }
                         }
+						return this;
                 },
 
                 insertHtml: function (szHTML)
                 {
                         var self = $.data(this, 'wysiwyg');
                         self.insertHtml(szHTML);
+						return this;
                 },
 
                 insertTable: function(colCount, rowCount, filler)
                 {
                         $.data(this, 'wysiwyg').insertTable(colCount, rowCount, filler);
+						return this;
+                },
+
+                getContent: function()
+                {
+					    var self = $.data(this, 'wysiwyg');
+						return self.getContent();
                 },
 
                 setContent: function (newContent)
                 {
-                        var self = $.data(this, 'wysiwyg');
+					    var self = $.data(this, 'wysiwyg');
                         self.setContent(newContent);
                         self.saveContent();
+						return this;
                 },
 
                 clear: function ()
@@ -601,18 +638,21 @@
                         var self = $.data(this, 'wysiwyg');
                         self.setContent('');
                         self.saveContent();
+						return this;
                 },
 
                 removeFormat: function ()
                 {
                         var self = $.data(this, 'wysiwyg');
                         self.removeFormat();
+						return this;
                 },
 
                 save: function ()
                 {
                         var self = $.data(this, 'wysiwyg');
                         self.saveContent();
+						return this;
                 },
 
                 "document": function()
@@ -625,6 +665,7 @@
                 {
                         var self = $.data(this, 'wysiwyg');
                         self.destroy();
+						return this;
                 }
         });
 
@@ -651,18 +692,21 @@
                         {
                                 this.focus();
                         }
-                        this.editorDoc.execCommand('removeFormat', false, []);
-                        this.editorDoc.execCommand('unlink', false, []);
+                        this.editorDoc.execCommand('removeFormat', false, null);
+                        this.editorDoc.execCommand('unlink', false, null);
+						return this;
                 },
                 destroy: function ()
                 {
                         $(this.element).remove();
                         $.removeData(this.original, 'wysiwyg');
                         $(this.original).show();
+						return this;
                 },
                 focus: function ()
                 {
                         this.editor.get(0).contentWindow.focus();
+						return this;
                 },
 
                 init: function (element, options)
@@ -819,10 +863,11 @@
                          */
                         $(this.original).focus(function ()
                         {
-                                if (!$.browser.msie)
-                                {
-                                        self.focus();
-                                }
+						        if ($(this).filter(':visible'))
+								{
+								        return;
+								}
+                                self.focus();
                         });
 
                         if (!$.browser.msie)
@@ -955,12 +1000,12 @@
                 {
                         var selection = this.getSelection();
 
-                        if (!(selection))
+                        if (!selection)
                         {
                                 return null;
                         }
 
-                        return (selection.rangeCount > 0) ? selection.getRangeAt(0) : selection.createRange();
+                        return (selection.rangeCount > 0) ? selection.getRangeAt(0) : (selection.createRange ? selection.createRange() : null);
                 },
 
                 getContent: function ()
@@ -971,6 +1016,7 @@
                 setContent: function (newContent)
                 {
                         $(innerDocument(this.editor)).find('body').html(newContent);
+						return this;
                 },
                 insertHtml: function (szHTML)
                 {
@@ -991,10 +1037,11 @@
                                         this.editorDoc.execCommand('insertHTML', false, szHTML);
                                 }
                         }
+						return this;
                 },
                 insertTable: function(colCount, rowCount, filler)
                 {
-                        if (isNaN(rowCount) || isNaN(colCount) || rowCount == null || colCount==null)
+                        if (isNaN(rowCount) || isNaN(colCount) || rowCount === null || colCount === null)
                         {
                                 return;
                         }
@@ -1016,7 +1063,7 @@
                                 html.push('</tr>');
                         }
                         html.push('</tbody></table>');
-                        this.insertHtml(html.join(''));
+                        return this.insertHtml(html.join(''));
                 },
                 saveContent: function ()
                 {
@@ -1031,6 +1078,7 @@
 
                                 $(this.original).val(content);
                         }
+						return this;
                 },
 
                 withoutCss: function ()
@@ -1052,6 +1100,7 @@
                                         }
                                 }
                         }
+						return this;
                 },
 
                 appendMenu: function (cmd, args, className, fn, tooltip)
@@ -1059,7 +1108,7 @@
                         var self = this;
                         args = args || [];
 
-                        $('<li role="menuitem" UNSELECTABLE="on">' + (className || cmd) + '</li>').addClass(className || cmd).attr('title', tooltip).hover(addHoverClass, removeHoverClass).click(function ()
+                        return $('<li role="menuitem" UNSELECTABLE="on">' + (className || cmd) + '</li>').addClass(className || cmd).attr('title', tooltip).hover(addHoverClass, removeHoverClass).click(function ()
                         {
                                 if (fn)
                                 {
@@ -1081,7 +1130,7 @@
 
                 appendMenuSeparator: function ()
                 {
-                        $('<li role="separator" class="separator"></li>').appendTo(this.panel);
+                        return $('<li role="separator" class="separator"></li>').appendTo(this.panel);
                 },
 
                 appendControls: function ()
@@ -1108,7 +1157,7 @@
                                 }
                                 this.appendMenu(
                                         control.command || name,
-                                        control['arguments'] || [],
+                                        control['arguments'] || '',
                                         control.className || control.command || name || 'empty',
                                         control.exec,
                                         control.tooltip || control.command || name || ''

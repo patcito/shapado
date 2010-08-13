@@ -41,7 +41,7 @@
                   =t(".welcome_from")
                   =link_to t("sessions.new.with_twitter"), twitter_authorize_path, :title => "Twitter", :id => "twitter_auth", :class => "highlight_for_user"
                   =t(".now")
-            -elsif AppConfig.facebook["activate"] && request.referrer =~ %r{^https?://(www\.){0,1}facebook\.com}
+            -elsif with_facebook? && request.referrer =~ %r{^https?://(www\.){0,1}facebook\.com}
               .flash
                 .message.notice.highlight_for_user{:style => "padding: 8px 4px; font-weight: bold"}
                   =t(".welcome_from")
