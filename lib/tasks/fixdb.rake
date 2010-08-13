@@ -106,5 +106,14 @@ namespace :fixdb do
        end
     end
   end
+
+  task :unsolve_questions => :environment do
+    Question.find_each(:accepted => true) do |q|
+      if q.answer.nil?
+        print "."
+        q.set({:answer_id => nil, :accepted => false})
+      end
+    end
+  end
 end
 

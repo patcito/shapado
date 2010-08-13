@@ -31,6 +31,8 @@ class Answer < Comment
   validate :disallow_spam
   validate :check_unique_answer, :if => lambda { |a| (!a.group.forum && !a.disable_limits?) }
 
+  before_destroy :unsolve_question
+
   def check_unique_answer
     check_answer = Answer.first(:question_id => self.question_id,
                                :user_id => self.user_id)
@@ -69,8 +71,8 @@ class Answer < Comment
 
   def ban
     self.question.answer_removed!
-    self.collection.update({:_id => self._id}, {:$set => {:banned => true}},
-                                               :upsert => true)
+    unsolve_question
+    self.set({:banned => true})
   end
 
   def self.ban(ids)
@@ -108,5 +110,9 @@ class Answer < Comment
   end
 
   protected
-
+  def unsolve_question
+    if !self.question.nil? && self.question.answer_id == self.id
+      self.question.set({:answer_id => nil, :accepted => false})
+    end
+  end
 end
