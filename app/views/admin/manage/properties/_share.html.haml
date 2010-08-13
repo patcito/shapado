@@ -1,52 +1,52 @@
 -content_for :after_form do
   %h1
-    Share
+    =t(".title")
   = render :partial => "shared/dlvr_link", :locals => {:url => questions_url(:format => :atom)}
 
 %h1
-  Facebook App
+  =t(".facebook_app")
 .group
   %label.label
-    Application id
+    =t(".application_id")
   = text_field_tag 'group[share][fb_app_id]', @group.share.fb_app_id, :class => "text_field"
 .group
   %label.label
-    Secret key
+    =t(".secret_key")
   = text_field_tag 'group[share][fb_secret_key]',  @group.share.fb_secret_key, :class => "text_field"
 .group
   = check_box_tag 'group[share][fb_active]', true, @group.share.fb_active, :class => "checkbox"
   %label.radio
-    active
+    =t("global.active")
 
 %h1
   == Share Prefix / Suffix
 .group
   %label.label
-    Starts with
+    =t("global.starts_with")
   = text_field_tag 'group[share][starts_with]', @group.share.starts_with, :class => "text_field"
   .description
     ==ie. #qa
 .group
   %label.label
-    Ends with
+    =t("global.ends_with")
   = text_field_tag 'group[share][ends_with]', @group.share.ends_with, :class => "text_field"
   .description
     ==ie. #shapado
 
 %h1
-  Asking from twitter
+  =t(".asking_from_twitter")
 
 .group
   %label.label
-    question asked to
+    =t(".question_asked_to")
   @
   = text_field_tag 'group[share][twitter_user]', @group.share.twitter_user, :class => "text_field", :style => "width: 10%"
   .description
-    a twitter account
+    =t(".twitter_account")
 
 .group
   %label.label
-    question must include
+    =t(".question_must_include")
   =text_field_tag 'group[share][twitter_pattern]', @group.share.twitter_pattern, :class => "text_field"
   .description
     ==ie. #iAsk
@@ -54,7 +54,7 @@
 .group
   = check_box_tag 'group[share][enable_twitter]', true, @group.share.enable_twitter, :class => "checkbox"
   %label.radio
-    active
+    =t("global.active")
 
 .group.navform
   = f.submit t('scaffold.update')

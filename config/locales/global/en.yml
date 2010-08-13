@@ -38,6 +38,9 @@ en:
     current: Current
     previous: Previous
     share: share
+    active: active
+    starts_with: Starts With
+    ends_with: Ends With
   feeds:
     question: Subscribe to this question
     questions: Subscribe to all questions

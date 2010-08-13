@@ -14,6 +14,11 @@ en:
           title: Group properties
         share:
           title: Share
+          application_id: Application ID
+          secret_key: Secret Key
+          question_asked_to: Question Asked To
+          question_must_include: Question Must Include
+          twitter_account: A Twitter Account
         constrains:
           title: Requirements
           reputation_constrains_subtitle: List of reputation requirements for each action
