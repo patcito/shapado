@@ -29,8 +29,7 @@
 -if current_group.language.nil? && AppConfig.enable_i18n
   .group
     = f.label :language, t(:language, :scope => "activerecord.attributes.question"), :class => "label"
-    -lang = @question.new? ? current_user.main_language : @question.language
-    = f.select :language, languages_options(current_user.preferred_languages), {:selected => lang}, :class => "select"
+    = language_select(f, @question)
     .description
       = t(".language_tip")
 -else

@@ -69,6 +69,17 @@ module ApplicationHelper
     end.join(', ')
   end
 
+  def language_select(f, question)
+    selected = if question.new?
+      logged_in? ? current_user.main_language : question.language
+    else
+      question.language
+    end
+    languages = logged_in? ? current_user.preferred_languages : AVAILABLE_LANGUAGES
+
+    f.select :language, languages_options(languages), {:selected => selected}, :class => "select"
+  end
+
   def languages_options(languages=nil, current_languages = [])
     languages = AVAILABLE_LANGUAGES-current_languages if languages.blank?
     locales_options(languages)
