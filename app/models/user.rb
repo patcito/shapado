@@ -458,7 +458,9 @@ Time.zone.now ? 1 : 0)
   end
 
   def has_flagged?(flaggeable)
-    flaggeable.flags.first(:user_id=>self.id)
+    flaggeable.flags.detect do |flag|
+      flag.user_id == self.id
+    end
   end
 
   def generate_uuid

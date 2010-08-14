@@ -45,7 +45,6 @@ ActionController::Routing::Routes.draw do |map|
                                                   :related_questions => :get},
                                 :member => {:solve => :get,
                                             :unsolve => :get,
-                                            :flag => :get,
                                             :favorite => :any,
                                             :unfavorite => :any,
                                             :watch => :any,
@@ -59,12 +58,13 @@ ActionController::Routing::Routes.draw do |map|
                                             :retag_to => :put,
                                             :close => :post} do |questions|
         questions.resources :comments
-        questions.resources :answers, :member => {:flag => :get,
-                                                  :history => :get,
+        questions.resources :answers, :member => {:history => :get,
                                                   :diff => :get,
                                                   :revert => :get} do |answers|
           answers.resources :comments
+          answers.resources :flags
         end
+        questions.resources :flags
         questions.resources :close_requests
       end
     end
@@ -87,7 +87,6 @@ ActionController::Routing::Routes.draw do |map|
                           :collection => { :autocomplete_for_group_slug => :get}
 
   map.resources :votes
-  map.resources :flags
 
   map.resources :widgets, :member => {:move => :post}, :path_prefix => "/manage"
   map.resources :members, :path_prefix => "/manage"

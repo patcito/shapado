@@ -170,17 +170,6 @@ class AnswersController < ApplicationController
     end
   end
 
-  def flag
-    @answer = Answer.find(params[:id])
-    @flag = Flag.new
-    @flag.flaggeable_type = @answer.class.name
-    @flag.flaggeable_id = @answer.id
-    respond_to do |format|
-      format.html
-      format.json
-    end
-  end
-
   protected
   def check_permissions
     @answer = Answer.find(params[:id])

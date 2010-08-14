@@ -3,19 +3,19 @@
 # Export driver: syck
 # Author: Giro720
 # Author: Luckas Blade
-pt-BR: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: Motivo
-    models: 
+pt-BR:
+  activerecord:
+    attributes:
+      flag:
+        reason: Motivo
+    models:
       flag: Reportada
       flags: Reportadas
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: Você não pode reportar isto
       flash_notice: Obrigado por ter reportado
-    form: 
+    form:
       attention: Requer a atenção do moderador
       label: Reporte com cuidado, por favor
       offensive: Conteúdo ofensivo, abusivo ou insultuoso

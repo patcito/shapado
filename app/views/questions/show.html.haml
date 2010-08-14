@@ -2,11 +2,12 @@
 
 -@current_class = 'question hentry entry post'
 
-
 -show_close_request_form = !@question.closed && logged_in? && @question.can_be_requested_to_close_by?(current_user)
 
--if logged_in? && current_user.mod_of?(current_group) && @question.closed
-  -show_close_request_form = (@question.close_reason.user_id == current_user.id)
+-if logged_in?
+  -if current_user.mod_of?(current_group) && @question.closed
+    -show_close_request_form = (@question.close_reason.user_id == current_user.id)
+  -@flag = current_user.has_flagged?(@question) || Flag.new
 
 -if show_close_request_form
   -@close_request = @question.close_requests.detect{ |rq| rq.user_id == current_user.id } || CloseRequest.new(:reason => "dupe")
@@ -100,10 +101,14 @@
   .controls
     .actions
       -if logged_in?
-        - if flag = current_user.has_flagged?(@question)
-          %span.flagged= "#{t('.flagged_as')} #{t(flag.type, :scope=>'flags.form')}"
-        - else
-          =link_to t(".flag"), flag_question_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
+        -if !@flag.new?
+          .flagged
+            = "#{t('.flagged_as')} #{t(@flag.reason, :scope=>'flags.form')}"
+            =link_to t("scaffold.edit"), edit_question_flag_path(@question,@flag), :class => "flag-link", :id => "edit_question_flag_link", :rel => 'nofollow'
+            =link_to t("scaffold.destroy"), question_flag_path(@question,@flag), :id => "destroy_question_flag_link", :rel => 'nofollow', :confirm => "are you sure?", :method => :delete
+        -elsif (!logged_in? || current_user != @question.user)
+          =link_to t(".flag"), question_flag_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
+
         -if show_close_request_form
           -close_link_label = current_user.mod_of?(current_group) ?  t(".close") : t(".request_closing")
           =link_to close_link_label, new_question_close_request_path(@question), :id => "request-close-link", :rel => 'nofollow', :title => t('.request_closing_details')
@@ -117,9 +122,7 @@
         -if current_user.mod_of?(@question.group)
           = link_to t(".ban"), ban_path(:question_ids => [@question.id]), :class => "button", :confirm => "are you sure?"
     .forms
-      -flag = Flag.new
-      - flag.flaggeable = @question
-      = render :partial => "flags/form", :locals => {:flag => flag, :source => source, :form_id => "question_flag_form" }
+      = render :partial => "flags/form", :locals => {:flag => @flag, :flaggeable => @question, :source => source, :form_id => "question_flag_form" }
 
       -if !@question.closed && show_close_request_form
         -form_for [@question, @close_request], :html => {:class => "form hide", :id => "request_close_question_form"} do |form|

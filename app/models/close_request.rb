@@ -11,6 +11,8 @@ class CloseRequest
 
   key :comment, String
 
+  validates_presence_of :user
+
   validate :should_be_unique
   validate :check_reputation
 

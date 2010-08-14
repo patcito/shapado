@@ -58,9 +58,10 @@ class Question
   belongs_to :last_target, :polymorphic => true
 
   has_many :answers, :dependent => :destroy
-  has_many :flags, :as => "flaggeable", :dependent => :destroy
   has_many :badges, :as => "source"
   has_many :comments, :as => "commentable", :order => "created_at asc", :dependent => :destroy
+
+  has_many :flags
   has_many :close_requests
 
   validates_presence_of :user_id
@@ -111,25 +112,21 @@ class Question
     view_count_id = "#{self.id}-#{ip}"
     if ViewsCount.find(view_count_id).nil?
       ViewsCount.create(:_id => view_count_id)
-      self.collection.update({:_id => self._id}, {:$inc => {:views_count => 1}},
-                                                :upsert => true)
+      self.increment(:views_count => 1)
     end
   end
 
   def answer_added!
-    self.collection.update({:_id => self._id}, {:$inc => {:answers_count => 1}},
-                                              :upsert => true)
+    self.increment(:answers_count => 1)
     on_activity
   end
 
   def answer_removed!
-    self.collection.update({:_id => self._id}, {:$inc => {:answers_count => -1}},
-                                               :upsert => true)
+    self.decrement(:answers_count => 1)
   end
 
   def flagged!
-    self.collection.update({:_id => self._id}, {:$inc => {:flags_count => 1}},
-                                               :upsert => true)
+    self.increment(:flags_count => 1)
   end
 
   def on_add_vote(v, voter)
@@ -155,22 +152,19 @@ class Question
   end
 
   def add_favorite!(fav, user)
-    self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => 1}},
-                                                          :upsert => true)
+    self.increment(:favorites_count => 1)
     on_activity(false)
   end
 
 
   def remove_favorite!(fav, user)
-    self.collection.update({:_id => self._id}, {:$inc => {:favorites_count => -1}},
-                                                          :upsert => true)
+    self.decrement(:favorites_count => 1)
     on_activity(false)
   end
 
   def on_activity(bring_to_front = true)
     update_activity_at if bring_to_front
-    self.collection.update({:_id => self._id}, {:$inc => {:hotness => 1}},
-                                                         :upsert => true)
+    self.increment(:hotness => 1)
   end
 
   def update_activity_at
@@ -178,35 +172,28 @@ class Question
     if new?
       self.activity_at = now
     else
-      self.collection.update({:_id => self._id}, {:$set => {:activity_at => now}},
-                                                 :upsert => true)
+      self.set(:activity_at => now)
     end
   end
 
   def ban
-    self.collection.update({:_id => self._id}, {:$set => {:banned => true}},
-                                               :upsert => true)
+    self.set(:banned => true)
   end
 
   def self.ban(ids)
-    ids = ids.map do |id| id end
-
+    # TODO: use mongo_mapper syntax
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => true}},
-                                                     :multi => true,
-                                                     :upsert => true)
+                                                     :multi => true)
   end
 
   def unban
-    self.collection.update({:_id => self._id}, {:$set => {:banned => false}},
-                                               :upsert => true)
+    self.set(:banned => false)
   end
 
   def self.unban(ids)
-    ids = ids.map do |id| id end
-
+    # TODO: use mongo_mapper syntax
     self.collection.update({:_id => {:$in => ids}}, {:$set => {:banned => false}},
-                                                     :multi => true,
-                                                     :upsert => true)
+                                                     :multi => true)
   end
 
   def favorite_for?(user)
@@ -215,18 +202,18 @@ class Question
 
 
   def add_watcher(user)
+    # TODO: use mongo_mapper syntax
     if !watch_for?(user)
       self.collection.update({:_id => self.id},
-                             {:$push => {:watchers => user.id}},
-                             :upsert => true);
+                             {:$push => {:watchers => user.id}});
     end
   end
 
   def remove_watcher(user)
+    # TODO: use mongo_mapper syntax
     if watch_for?(user)
       self.collection.update({:_id => self.id},
-                             {:$pull => {:watchers => user._id}},
-                             :upsert => true)
+                             {:$pull => {:watchers => user._id}});
     end
   end
 
@@ -272,11 +259,11 @@ class Question
   end
 
   def self.update_last_target(question_id, target)
+    # TODO: use mongo_mapper syntax
     self.collection.update({:_id => question_id},
                            {:$set => {:last_target_id => target.id,
                                       :last_target_type => target.class.to_s,
-                                      :last_target_date => target.updated_at.utc}},
-                           :upsert => true)
+                                      :last_target_date => target.updated_at.utc}})
   end
 
   def can_be_requested_to_close_by?(user)

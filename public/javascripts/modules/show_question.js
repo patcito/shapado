@@ -294,7 +294,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $("#question_flag_link.flag-link").click(function() {
+  $("#question_flag_link.flag-link, #edit_question_flag_link.flag-link").click(function() {
     $("#request_close_question_form").slideUp();
     $("#add_comment_form").slideUp();
     $("#close_question_form").slideUp();

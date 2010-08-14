@@ -1,5 +1,5 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets", "fixdb:tokens", "fixdb:es419"] do
+task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets", "fixdb:tokens", "fixdb:es419", "fixdb:flags"] do
 end
 
 namespace :fixdb do
@@ -114,6 +114,31 @@ namespace :fixdb do
         q.set({:answer_id => nil, :accepted => false})
       end
     end
+  end
+
+  task :flags => :environment do
+    Group.find_each do |group|
+      puts "Updating #{group["name"]} flags"
+      count = 0
+
+      MongoMapper.database.collection("flags").find({:group_id => group["_id"]}).each do |flag|
+        count += 1
+        flag.delete("group_id")
+        id = flag.delete("flaggeable_id")
+        klass = flag.delete("flaggeable_type")
+        flag["reason"] = flag.delete("type")
+        if klass == "Answer"
+          obj = Answer.find(id)
+        elsif klass == "Question"
+          obj = Question.find(id)
+        end
+        p klass
+        p id
+        obj.add_to_set({:flags => flag})
+      end
+      puts count
+    end
+    MongoMapper.database.collection("falgs").drop
   end
 end
 

@@ -424,17 +424,6 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def flag
-    @question = Question.find_by_slug_or_id(params[:id])
-    @flag = Flag.new
-    @flag.flaggeable_type = @question.class.name
-    @flag.flaggeable_id = @question.id
-    respond_to do |format|
-      format.html
-      format.json
-    end
-  end
-
   def favorite
     @favorite = Favorite.new
     @favorite.question = @question

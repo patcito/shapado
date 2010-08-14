@@ -64,7 +64,7 @@ class CloseRequestsController < ApplicationController
         @question.save
         flash[:notice] = t(:flash_notice, :scope => "close_requests.update")
         format.html { redirect_to(question_path(@question)) }
-        format.json { render :json => @close_request.to_json}
+        format.json { render :json => @close_request.to_json }
         format.js { render :json => {:message => flash[:notice], :success => true }.to_json }
       else
         flash[:error] = @close_request.errors.full_messages.join(", ")

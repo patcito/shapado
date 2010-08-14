@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Papapep
-ca: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: Raó
-    models: 
+ca:
+  activerecord:
+    attributes:
+      flag:
+        reason: Raó
+    models:
       flag: Marca
       flags: Marques
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: No podeu marcar això
       flash_notice: Gràcies pel vostre informe
-    form: 
+    form:
       attention: Cal actuació del moderador
       label: Marqueu amb compte
       offensive: Llenguatge ofensiu o abusiu.
