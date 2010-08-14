@@ -11,6 +11,7 @@ class Admin::ManageController < ApplicationController
        :widgets => :widgets
 
   subtabs :properties => [[:general, "general"],
+                          [:share, "share"],
                           [:rewards, "rewards"],
                           [:constrains, "constrains"],
                           [:theme, "theme"],

@@ -17,13 +17,17 @@ en:
           application_id: Application ID
           secret_key: Secret Key
           question_asked_to: Question Asked To
-          question_must_include: Question Must Include
+          question_must_include: Question must include the following tag to be tweeted
           twitter_account: The Twitter account your users will ask questions to.
           facebook_app: Facebook app settings
           asking_from_twitter: Asking questions from Twitter
+          tweet_starts_with: Prepend a tag to your tweets
+          tweet_ends_with: Append a tag to your tweets
           starts_with_example: "ie. #qa"
           ends_with_example: "ie. #shapado"
           question_must_include_example: "ie. #iAsk"
+          add_tags: Add tags to your tweets
+          title_on_dlvr: Share on dlvr.it
         constrains:
           title: Requirements
           reputation_constrains_subtitle: List of reputation requirements for each action

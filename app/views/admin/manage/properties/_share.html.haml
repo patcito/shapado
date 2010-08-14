@@ -1,6 +1,6 @@
 -content_for :after_form do
   %h1
-    =t(".title")
+    =t(".title_on_dlvr")
   = render :partial => "shared/dlvr_link", :locals => {:url => questions_url(:format => :atom)}
 
 %h1
@@ -19,16 +19,16 @@
     =t("global.active")
 
 %h1
-  == Share Prefix / Suffix
+  = t(".add_tags")
 .group
   %label.label
-    =t("global.starts_with")
+    =t(".tweet_starts_with")
   = text_field_tag 'group[share][starts_with]', @group.share.starts_with, :class => "text_field"
   .description
     = t(".starts_with_example")
 .group
   %label.label
-    =t("global.ends_with")
+    =t(".tweet_ends_with")
   = text_field_tag 'group[share][ends_with]', @group.share.ends_with, :class => "text_field"
   .description
     = t(".ends_with_example")
