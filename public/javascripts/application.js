@@ -84,7 +84,6 @@ $(document).ready(function() {
 function initAutocomplete(){
   var select = $('<select size="100px" name="question[tags]" id="question_tags" class="autocomplete_for_tags" ></select>')
   var tagInput = $('.autocomplete_for_tags');
-  var width = tagInput.width();
   tagInput.after(select);
   if(typeof(tagInput)!='undefined' && $.trim(tagInput.val())!=''){
     var tags = tagInput.val().split(',')
@@ -95,13 +94,14 @@ function initAutocomplete(){
       })
     }
   }
+
   tagInput.remove();
   $('.autocomplete_for_tags').fcbkcomplete({
     json_url: '/questions/tags_for_autocomplete.js',
     firstselected: true,
     delay: 200,
     maxitimes: 6,
-    width: width
+    width: "300px"
   });
 }
 
