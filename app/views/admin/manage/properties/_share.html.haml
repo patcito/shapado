@@ -25,13 +25,13 @@
     =t("global.starts_with")
   = text_field_tag 'group[share][starts_with]', @group.share.starts_with, :class => "text_field"
   .description
-    ==ie. #qa
+    = t(".starts_with_example")
 .group
   %label.label
     =t("global.ends_with")
   = text_field_tag 'group[share][ends_with]', @group.share.ends_with, :class => "text_field"
   .description
-    ==ie. #shapado
+    = t(".ends_with_example")
 
 %h1
   =t(".asking_from_twitter")
@@ -46,10 +46,10 @@
 
 .group
   %label.label
-    =t(".question_must_include")
+    = t(".question_must_include")
   =text_field_tag 'group[share][twitter_pattern]', @group.share.twitter_pattern, :class => "text_field"
   .description
-    ==ie. #iAsk
+    = t(".question_must_include_example")
 
 .group
   = check_box_tag 'group[share][enable_twitter]', true, @group.share.enable_twitter, :class => "checkbox"

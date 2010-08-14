@@ -18,7 +18,12 @@ en:
           secret_key: Secret Key
           question_asked_to: Question Asked To
           question_must_include: Question Must Include
-          twitter_account: A Twitter Account
+          twitter_account: The Twitter account your users will ask questions to.
+          facebook_app: Facebook app settings
+          asking_from_twitter: Asking questions from Twitter
+          starts_with_example: "ie. #qa"
+          ends_with_example: "ie. #shapado"
+          question_must_include_example: "ie. #iAsk"
         constrains:
           title: Requirements
           reputation_constrains_subtitle: List of reputation requirements for each action
