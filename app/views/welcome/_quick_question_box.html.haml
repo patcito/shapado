@@ -1,0 +1,37 @@
+-@question = Question.new
+-form_for(@question, :url => questions_url, :html=>{:class => "form", :id => "ask_question"}) do |f|
+  -# TODO: refactor this
+  -lang = current_languages.kind_of?(Array) ? current_languages.first : current_languages
+  -lang = logged_in? ? current_user.language : lang
+  -lang = current_group.language ? current_group.language : lang
+
+  %h3
+    %label.label
+      =current_group.question_prompt || t(".quick_question")
+  .columns
+    .column_info
+      -if logged_in?
+        -reputation = current_user.reputation_on(current_group)
+        .avatar
+          = gravatar(current_user.email.to_s, :size => 64)
+        .reputation{:class => class_for_number(reputation)}
+          = format_number(reputation)
+      -else
+        .avatar
+          = gravatar("", :size => 64)
+    .column_form
+      .group
+        .pointer
+        =f.text_area :title, :class => "text_area", :id => "question_title"
+
+      = f.hidden_field :language, :value => lang
+
+      #tags
+        .group.left{:style => "width: 86%"}
+          %span
+            =t(:tags, :scope => "activerecord.attributes.question")
+          =f.text_field :tags, :class => "text_field autocomplete_for_tags", :style => "display: inline"
+        #qqsubmit.left{:style => "width: 14%"}
+          =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
+      .clear
+  .clear
