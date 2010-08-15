@@ -237,6 +237,12 @@ class QuestionsController < ApplicationController
   def edit
   end
 
+  def create_draft!
+    draft = Draft.create!(:question => @question)
+    session[:draft] = draft.id
+    login_required
+  end
+
   # POST /questions
   # POST /questions.xml
   def create
@@ -246,9 +252,22 @@ class QuestionsController < ApplicationController
     @question.user = current_user
 
     if !logged_in?
-      draft = Draft.create!(:question => @question)
-      session[:draft] = draft.id
-      return login_required
+      if params[:user]
+        user = User.find(:email => params[:user][:email])
+        if user.present?
+          if !user.anonymous
+            flash[:notice] = "The user is already registered, please log in"
+            return create_draft!
+          end
+        else
+          user = User.new(:anonymous => true)
+          user.safe_update(%w[name email website], params[:user])
+          user.save!
+          @question.user = user
+        end
+      else
+        return create_draft!
+      end
     end
 
     respond_to do |format|
