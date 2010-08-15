@@ -175,7 +175,8 @@ class QuestionsController < ApplicationController
         result = []
         if q = params[:tag]
           result = Question.find_tags(/^#{Regexp.escape(q.downcase)}/i,
-                                      :group_id => current_group.id)
+                                      :group_id => current_group.id,
+                                      :banned => false)
         end
 
         results = result.map do |t|
