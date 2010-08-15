@@ -7,7 +7,7 @@ javascripts:
   - jquery.textarea
   - jquery.wysiwyg
   - jquery.autocomplete
-  - jquery.fcbkcomplete
+  - jquery.autoSuggest
   - jquery.notifyBar
   - showdown
   - highlight/prettify
