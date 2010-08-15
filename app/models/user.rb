@@ -52,6 +52,8 @@ class User
 
   key :feed_token,                String
 
+  key :anonymous,                 Boolean, :default => false
+
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   has_many :comments, :dependent => :destroy
@@ -71,10 +73,12 @@ class User
   validates_inclusion_of :language, :within => AVAILABLE_LOCALES
   validates_inclusion_of :role,  :within => ROLES
 
-  validates_presence_of     :login
-  validates_length_of       :login,    :within => 3..40
-  validates_uniqueness_of   :login
-  validates_format_of       :login,    :with => /\w+/
+  with_options :if => lambda { |e| !e.anonymous } do |v|
+    v.validates_presence_of     :login
+    v.validates_length_of       :login,    :within => 3..40
+    v.validates_uniqueness_of   :login
+    v.validates_format_of       :login,    :with => /\w+/
+  end
 
   validates_length_of       :name,     :maximum => 100
 
@@ -471,8 +475,8 @@ Time.zone.now ? 1 : 0)
   end
 
   def password_required?
-    return false if openid_login?
-    return false if twitter_login?
+    return false if openid_login? || twitter_login? || self.anonymous
+
     (encrypted_password.blank? || !password.blank?)
   end
 
