@@ -260,8 +260,9 @@ class QuestionsController < ApplicationController
             return create_draft!
           end
         else
-          user = User.new(:anonymous => true)
+          user = User.new(:anonymous => true, :login => "Anonymous")
           user.safe_update(%w[name email website], params[:user])
+          user.login = user.name if user.name.present?
           user.save!
           @question.user = user
         end
@@ -274,10 +275,10 @@ class QuestionsController < ApplicationController
       if @question.save
         sweep_question_views
 
-        current_user.stats.add_question_tags(*@question.tags)
+        @question.user.stats.add_question_tags(*@question.tags)
         current_group.tag_list.add_tags(*@question.tags)
 
-        current_user.on_activity(:ask_question, current_group)
+        @question.user.on_activity(:ask_question, current_group)
         current_group.on_activity(:ask_question)
 
         Magent.push("actors.judge", :on_ask_question, @question.id)
@@ -286,7 +287,7 @@ class QuestionsController < ApplicationController
 
         # TODO: move to magent
         users = User.find_experts(@question.tags, [@question.language],
-                                                  :except => [current_user.id],
+                                                  :except => [@question.user.id],
                                                   :group_id => current_group.id)
         followers = @question.user.followers(:group_id => current_group.id, :languages => [@question.language])
 
