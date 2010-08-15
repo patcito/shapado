@@ -1,5 +1,6 @@
 desc "Fix all"
-task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets", "fixdb:tokens", "fixdb:es419"] do
+task :fixall => [:environment, "fixdb:badges", "fixdb:questions", "fixdb:update_widgets", "fixdb:tokens", "fixdb:es419",
+                 "fixdb:anonymous"] do
 end
 
 namespace :fixdb do
@@ -114,6 +115,10 @@ namespace :fixdb do
         q.set({:answer_id => nil, :accepted => false})
       end
     end
+  end
+
+  task :anonymous => :environment do
+    User.set({}, {:anonymous => false})
   end
 end
 
