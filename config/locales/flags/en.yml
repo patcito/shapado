@@ -16,7 +16,9 @@ en:
       flash_notice: "Your flag has been revoked successfully."
     update:
       flash_notice: "The question flag was successfully updated."
-
+    model:
+      messages:
+        already_requested: "You already flagged this {{model}}"
   activerecord:
     models:
       flags: Flags

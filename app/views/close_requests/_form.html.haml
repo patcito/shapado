@@ -1,15 +1,28 @@
-.group
-  = form.label :type, t(:type, :scope=>"activerecord.attributes.flag"), :class => "label"
-  -CloseRequest::REASONS.each do |type|
-    = form.radio_button :reason, type, :class => "radio_button"
-    = t(type, :scope=>"close_requests.form")
-    %br
 
-.group
-  = form.label :comment, t(:comment, :scope=>"models"), :class => "label"
-  = form.text_field :comment, :class => "text_field"
 
--if current_user.mod_of?(current_group)
+-form_for [question, close_request], :html => {:class => "form  #{local_assigns[:hide] ? "hide": ""}", :id => local_assigns[:form_id]} do |form|
+  -if !close_request.new?
+    =link_to t("questions.show.retract_request"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
   .group
-    = check_box_tag "close"
-    = t('.close_with_reason')
+    = form.label :reason, t(:reason, :scope=>"activerecord.attributes.flag"), :class => "label"
+    -CloseRequest::REASONS.each do |reason|
+      = form.radio_button :reason, reason, :class => "radio_button"
+      = t(reason, :scope=>"close_requests.form")
+      %br
+
+  .group
+    = form.label :comment, t(:comment, :scope=>"models"), :class => "label"
+    = form.text_field :comment, :class => "text_field"
+
+  -if current_user.mod_of?(current_group)
+    .group
+      = check_box_tag "close"
+      = t('.close_with_reason')
+
+  .group.navform
+    -if close_request.new?
+      = submit_tag t(".request_closing_details"), :class => "button", :id => "close_question_submit_#{question.id}"
+    -else
+      = form.submit t("scaffold.update"), :id => "close_question_submit_#{question.id}"
+    = t("global.or")
+    = link_to t("scaffold.cancel"), question_path(question), :class => "button cancel"

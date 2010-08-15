@@ -18,9 +18,9 @@ class Flag
     request = self._root_document.flags.detect{ |rq| rq.user_id == self.user_id }
     valid = (request.nil? || request.id == self.id)
 
-#     "You already flagged this #{self.flaggeable_type}"
     if !valid
-      self.errors.add(:user, I18n.t("flags.model.messages.already_requested"))
+      self.errors.add(:user, I18n.t("flags.model.messages.already_requested",
+                                    :model => I18n.t("activerecord.models.#{@resource.class.to_s.tableize.singularize}")))
     end
     valid
   end
