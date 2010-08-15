@@ -8,16 +8,32 @@ function setupWysiwygEditor() {
   var editor = $("#wysiwyg_editor");
   if(!editor || editor.length == 0)
     return;
-
-  editor.wysiwyg({
-    events: {
-      click: function(e) {
-        if(!window.onbeforeunload && !hasStorage()) {
-          //I18n.on_leave_page
-          window.onbeforeunload = function() {return I18n.on_leave_page;};
-        }
-      }
-    }
+// events: {
+//   click: function(e) {
+//     if(!window.onbeforeunload && !hasStorage()) {
+//       //I18n.on_leave_page
+//       window.onbeforeunload = function() {return I18n.on_leave_page;};
+//     }
+//   }
+// }
+  editor.htmlarea({
+    toolbar: [
+      ["html"], ["bold", "italic", "underline", "strikethrough", "|", "subscript", "superscript"],
+      ["increasefontsize", "decreasefontsize"],
+      ["orderedlist", "unorderedlist"],
+      ["indent", "outdent"],
+      ["justifyleft", "justifycenter", "justifyright"],
+      ["link", "unlink", "image", "horizontalrule"],
+      ["p", "h1", "h2", "h3", "h4", "h5", "h6"],
+      ["cut", "copy", "paste"],
+      [{
+          css: "removeformat",
+          text: "Remove Format",
+          action: function(btn) {
+            this.removeFormat();
+          }
+      }]
+    ]
   });
 }
 

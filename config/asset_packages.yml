@@ -5,7 +5,7 @@ javascripts:
   - jquery.tools.min
   - jquery-ui
   - jquery.textarea
-  - jquery.wysiwyg
+  - jHtmlArea
   - jquery.autocomplete
   - jquery.autoSuggest
   - jquery.notifyBar
