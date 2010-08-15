@@ -88,6 +88,7 @@ function initAutocomplete(){
     formatList: function(data, elem){
       return elem.html(data.caption);
     },
+    preFill: tagInput.val(),
     startText: 'Enter A Label Here',
     emptyText: 'No Results',
     limitText: 'No More Selections Are Allowed'
