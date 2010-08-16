@@ -66,6 +66,7 @@ ActionController::Routing::Routes.draw do |map|
         end
         questions.resources :flags
         questions.resources :close_requests
+        questions.resources :open_requests
       end
     end
   end

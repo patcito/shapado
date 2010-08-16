@@ -63,6 +63,7 @@ class Question
 
   has_many :flags
   has_many :close_requests
+  has_many :open_requests
 
   validates_presence_of :user_id
   validates_uniqueness_of :slug, :scope => :group_id, :allow_blank => true
@@ -269,6 +270,12 @@ class Question
   def can_be_requested_to_close_by?(user)
     ((self.user_id == user.id) && user.can_vote_to_close_own_question_on?(self.group)) ||
     user.can_vote_to_close_any_question_on?(self.group)
+  end
+
+  def can_be_requested_to_open_by?(user)
+    return false if !self.closed
+    ((self.user_id == user.id) && user.can_vote_to_open_own_question_on?(self.group)) ||
+    user.can_vote_to_open_any_question_on?(self.group)
   end
 
   def can_be_deleted_by?(user)
