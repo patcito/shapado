@@ -8,6 +8,17 @@ class CloseRequestsController < ApplicationController
     @close_requests = @question.close_requests
   end
 
+  def new
+    @close_request = CloseRequest.new(:reason => "dupe")
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:html => render_to_string(:partial => "close_requests/form",
+                                                   :locals => {:question => @question })}.to_json
+      end
+    end
+  end
+
   def create
     @close_request = CloseRequest.new(:reason => params[:close_request][:reason],
                                       :comment => params[:close_request][:comment])
@@ -88,13 +99,6 @@ class CloseRequestsController < ApplicationController
       format.html { redirect_to(question_path(@question)) }
       format.json {head :ok}
       format.js { render :json => {:message => flash[:notice], :success => true}.to_json }
-    end
-  end
-
-  def new
-    @close_request = CloseRequest.new(:reason => "dupe")
-    respond_to do |format|
-      format.html
     end
   end
 

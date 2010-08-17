@@ -81,8 +81,7 @@
             = link_to "ban", ban_path(:answer_ids => [answer.id]), :confirm => "are you sure?"
       .clear
       .forms
-        -if current_user != answer.user
-          = render :partial => "flags/form", :locals => {:flag => @aflag, :flaggeable => answer, :source => source }
+
     .clear
 
     -if logged_in?

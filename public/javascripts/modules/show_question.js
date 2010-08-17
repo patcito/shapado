@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
-  $(".forms form.flag_form").hide();
-  $("#close_question_form").hide();
+//  $(".forms form.flag_form").hide();
+//  $("#close_question_form").hide();
   $('.auto-link').autoVideo();
 
   $("form.vote_form button").live("click", function(event) {
@@ -277,37 +277,67 @@ $(document).ready(function() {
     return false;
   });
 
+  $(".close_form .cancel").live("click", function() {
+    $(this).parents(".close_form").slideUp();
+    return false;
+  });
+
   $(".answer .flag-link").live("click", function() {
     var link = $(this);
-    var controls = link.parents(".controls")
-    controls.find(".forms form.nestedAnswerForm").slideUp();
-    controls.parents(".answer").find(".forms .flag_form").slideToggle();
-
+    var href = link.attr('href');
+    var controls = link.parents(".controls");
+    if(!link.hasClass('busy')){
+      link.addClass('busy');
+      $.getJSON(href+'.js', function(data){
+        controls.parents(".answer").find(".forms:first").html(data.html);
+        link.removeClass('busy');
+      })
+    }
     return false;
   });
 
   $("#close_question_link").click(function() {
-    $("#request_close_question_form").slideUp();
     $("#add_comment_form").slideUp();
-    $("#question_flag_form").slideUp();
-    $("#close_question_form").slideToggle();
+    var link = $(this);
+    var href = link.attr('href');
+    if(!link.hasClass('busy')){
+      link.addClass('busy');
+      $.getJSON(href+'.js', function(data){
+        var controls = link.parents('.controls');
+        controls.find(".forms").html(data.html);
+        link.removeClass('busy');
+      })
+    }
     return false;
   });
 
   $("#question_flag_link.flag-link, #edit_question_flag_link.flag-link").click(function() {
-    $("#request_close_question_form").slideUp();
     $("#add_comment_form").slideUp();
-    $("#close_question_form").slideUp();
-    $("#question_flag_form").slideToggle();
+    var link = $(this);
+    var href = link.attr('href');
+    if(!link.hasClass('busy')){
+      link.addClass('busy');
+      $.getJSON(href+'.js', function(data){
+        var controls = link.parents('.controls');
+        controls.find(".forms").html(data.html);
+        link.removeClass('busy');
+      })
+    }
     return false;
   });
 
   $("#request-close-link").click(function() {
-    var controls = $(this).parents(".controls")
     $("#add_comment_form").slideUp();
-    $("#question_flag_form").slideUp();
-    $("#close_question_form").slideUp();
-    $("#request_close_question_form").slideToggle();
+    var link = $(this);
+    var href = link.attr('href');
+    if(!link.hasClass('busy')){
+      link.addClass('busy');
+      $.getJSON(href+'.js', function(data){
+        var controls = link.parents('.controls');
+        controls.find(".forms").html(data.html);
+        link.removeClass('busy');
+      })
+    }
     return false;
   });
 
