@@ -1,0 +1,31 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: LaPingvino
+eo: 
+  close_requests: 
+    create: 
+      flash_notice: Fermpeto sukcese kreiĝis
+    destroy: 
+      flash_notice: Fermpetoj sukcese forviŝiĝis
+    form: 
+      close_with_reason: Fermi ĉi tiun demandon per ĉi tiu kialo
+      dupe: Duoblaĵo
+      no_question: Ne demando
+      not_relevant: Ne gravas
+      ot: Eksterteme
+      request_closing_details: Peto por fermi ĉi tiun demandon
+      spam: spamo
+    index: 
+      title: Listo de fermpetoj
+    model: 
+      attributes: 
+        comment: Komento
+        reason: Kialo
+        user: Uzanto
+      messages: 
+        already_requested: Vi jam petis fermi ĉi tiun demandon
+      name: Fermpeton
+      prural_name: Fermpetoj
+    update: 
+      flash_notice: Fermpeto sukcese ĝisdatiĝis

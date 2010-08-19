@@ -1,0 +1,16 @@
+# Messages for Serbian Cyrillic ekavian (Српски (ћирилица))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Rancher
+sr-EC: 
+  ads: 
+    ad_links: Додај нови %{type} оглас
+    create: 
+      success: Оглас је успешно направљен.
+    index: 
+      add_adbard: Додај нови „Ед Бард“ оглас
+      add_adsense: Додај нови Google AdSense оглас
+      title: Огласи
+    name: "Назив:"
+    position: "Позиција:"
+    title: Додај нови %{type} оглас

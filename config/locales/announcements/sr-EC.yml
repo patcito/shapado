@@ -1,0 +1,20 @@
+# Messages for Serbian Cyrillic ekavian (Српски (ћирилица))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Rancher
+sr-EC: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Завршава се у
+        message: Порука
+        only_anonymous: Само за анонимне кориснике
+        starts_at: Почиње у
+  announcements: 
+    actions: 
+      delete: Уклони
+      title: Радње
+    create: 
+      success: Саопштење је успешно направљено.
+    index: 
+      title: Саопштења

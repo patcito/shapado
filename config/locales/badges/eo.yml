@@ -1,0 +1,129 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: LaPingvino
+eo: 
+  activerecord: 
+    models: 
+      badge: Insigno
+      badges: Insignoj
+  badges: 
+    index: 
+      description: Ĉiuj gajneblaj insignoj. Dividu vian scion kaj gajnu insignojn.
+      title: insignoj
+    shared: 
+      addict: 
+        description: Vizitis la retejon ĉiutage 20 tagojn sinsekve
+      autobiographer: 
+        description: Kompletis ĉiujn uzantprofilajn kampojn
+        name: Aŭtobiografiisto
+      celebrity: 
+        description: Ekhavi pli ol 100 sekvantojn
+        name: Famulo
+      citizen_patrol: 
+        description: Unua markita afiŝo
+        name: Supervidanto
+      civic_duty: 
+        description: Voĉdonis 300-foje
+        name: Civitana devo
+      cleanup: 
+        description: Unua remeto
+        name: Purigado
+      commentator: 
+        description: Lasis 10 komentojn
+      critic: 
+        description: Voĉdonis negative unuafoje
+      disciplined: 
+        description: Forviŝi propran afiŝon kun 3 poentoj aŭ pli
+        name: Disciplinita
+      editor: 
+        description: Unua redaktita afiŝo
+      effort_medal: 
+        description: Ekhavis 100 pozitivajn voĉojn
+      enlightened: 
+        description: Unua respondo akceptiĝis per almenaŭ 10 voĉoj
+        name: Lumiĝinta
+      famous_question: 
+        description: Demandis demandon kun 10000 vidoj
+      fanatic: 
+        description: Vizitis la retejon ĉiutage 100 tagojn sinsekve
+      favorite_question: 
+        description: Demando favorata de 25 uzantoj
+      friendly: 
+        description: Unuafoje sekvas iun
+        name: Amika
+      good_answer: 
+        description: Havi respondon kiu meznombre atingas pli ol 25 voĉoj
+      good_question: 
+        description: Havi demandon kiu meznombre atingas pli ol 25 voĉoj
+      great_answer: 
+        description: Respondo suprenvoĉdonita 100-foje
+        name: Bonega respondo
+      great_question: 
+        description: Demando voĉdoniĝis supren 100-foje
+        name: Bonega demando
+      guru: 
+        description: Donis solvon al demando kun meznombre pli ol 40 voĉoj
+      inquirer: 
+        description: Demandis unuafoje
+      interesting_person: 
+        description: Ekhavi pli ol 10 sekvantojn
+        name: Interesulo
+      merit_medal: 
+        description: Ekhavis 200 pozitivajn voĉojn
+      necromancer: 
+        description: Respondis demandon pli ol 60 tagojn poste kun almenaŭ 5 voĉoj.
+        name: Viviganto
+      nice_answer: 
+        description: Respondo suprenvoĉdonita 10-foje
+        name: Bela respondo
+      nice_question: 
+        description: Demando voĉdoniĝis supren 10-foje
+        name: Bela demando
+      notable_question: 
+        description: Demandis demandon kun 2500 vidoj
+      organizer: 
+        description: Unua ŝanĝo de etikedoj
+        name: Organizanto
+      peer_pressure: 
+        description: Forviŝis propran afiŝon kun -3 aŭ malpli da poentoj
+        name: Kunula premo
+      pioneer: 
+        description: Esti unu el la unuaj registritaj uzantoj
+      popstar: 
+        description: 500 pozitivaj voĉdonoj, maksimume 10 negativaj
+      popular_person: 
+        description: Ekhavi pli ol 50 sekvantojn
+        name: Popularulo
+      popular_question: 
+        description: Demandis demandon kun 1000 vidoj
+      rockstar: 
+        description: 1000 pozitivaj voĉdonoj, maksimume 10 negativaj
+      scholar: 
+        description: Unua akceptita respondo al propra demando
+        name: Lernanto
+      self-learner: 
+        description: Respondis propran demandon kun almenaŭ 3 suprenvoĉoj
+        name: Aŭtodidakto
+      service_medal: 
+        description: 300 pozitivaj voĉoj
+      shapado: 
+        description: Vizitis la retejon ĉiutage 8 tagojn sinsekve
+      stellar_question: 
+        description: Demando aldoniĝis al favorataj de 100 uzantoj
+        name: Mojosega demando
+      student: 
+        description: Demandis unuan demandon kun almenaŭ unu suprenvoĉo
+      supporter: 
+        description: Voĉdonis pozitive unuafoje
+      troubleshooter: 
+        description: Respondis unuafoje
+      tutor: 
+        description: Donis solvon al demando kun meznombre pli ol 2 voĉoj
+    show: 
+      description: "Uzantoj kiuj gajnis ĉi tiun insignon. Laste donita al:"
+      earned: gajnis
+      for_tag_bronze: 200 voĉoj en etikedo %{tag}
+      for_tag_gold: 1000 voĉoj en etikedo %{tag}
+      for_tag_silver: 400 voĉoj en etikedo %{tag}
+      title: Insigno %{type}

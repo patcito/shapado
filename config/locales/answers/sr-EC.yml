@@ -1,0 +1,29 @@
+# Messages for Serbian Cyrillic ekavian (Српски (ћирилица))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Rancher
+sr-EC: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Тело
+        created_at: Одговорено
+        link: Веза
+    models: 
+      answer: Одговор
+      answers: Одговори
+  answers: 
+    create: 
+      flash_error: "Дошло је до грешке у додавању Вашег одговора. \n  Запамтите да: \n — Празни и поновљени одговори нису дозвољени.\n — Требате да сачекате 20 секунди пре постављања следећег одговора. \n — Можете поставити само један одговор по питању."
+      flash_notice: Хвала!
+    edit: 
+      title: Уређивање одговора
+    form: 
+      answer_label: Одговори на питање
+      comment_label: Прокоментариши на овај одговор
+      comment_submit: Прокоментариши
+      submit: Одговори
+    revert: 
+      title: Врати одговор
+    update: 
+      flash_notice: Одговор је успешно ажуриран.

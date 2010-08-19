@@ -1,0 +1,20 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: LaPingvino
+eo: 
+  comments: 
+    create: 
+      flash_notice: Dankon pro via komento
+    edit: 
+      title: Redakti komenton
+    shared: 
+      add_comment: Aldoni komenton...
+      comment_submit: Komenti
+      reply: Respondi
+      said: diris
+    update: 
+      flash_notice: Komento estis sukcese ĝisdatigita.
+  models: 
+    comment: Komento
+    comments: Komentoj
