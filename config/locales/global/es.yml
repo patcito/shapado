@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   actions: 
     closed: closed
@@ -16,6 +17,7 @@ es:
     tag: subscribirse al tag
     user: subscribirse a las preguntas del usuario
   global: 
+    active: Activar
     by: por
     current: actual
     from: desde {{site}}

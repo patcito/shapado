@@ -1,3 +1,11 @@
+/** Messages for Japanese (æ—¥æœ¬èª)
+ *  Exported from translatewiki.net
+ *
+ * Translators:
+ *  - é’å­å®ˆæ­Œ
+ */
+
 var I18n = {
-  on_leave_page: "ÊÑ¹¹ÆâÍÆ¤¬¼º¤ï¤ì¤ë²ÄÇ½À­¤¬¤¢¤ê¤Ş¤¹"
+	on_leave_page: "å¤‰æ›´ãŒå¤±ã‚ã‚Œã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚"
 };
+

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Patcito
 fr: 
   actions: 
     closed: fermé
@@ -17,6 +18,7 @@ fr:
     tag: souscrite au tag
     user: inscrivez-vous aux questions de l'utilisateur
   global: 
+    active: Activer
     by: par
     current: Actuel
     from: depuis %{site}

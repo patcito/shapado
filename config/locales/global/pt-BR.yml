@@ -18,6 +18,7 @@ pt-BR:
     tag: Subscrever a categoria
     user: Subscrever as perguntas do usuário
   global: 
+    active: Ativar
     by: por
     current: Atual
     from: de %{site}

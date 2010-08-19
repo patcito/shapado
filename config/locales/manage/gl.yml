@@ -35,7 +35,21 @@ gl:
           reputation_rewards_subtitle: Lista de recompensas por reputación
           title: Recompensas
         share: 
+          add_tags: Engadir etiquetas aos seus chíos
+          application_id: ID da aplicación
+          asking_from_twitter: Preguntas desde o Twitter
+          ends_with_example: "por exemplo, #shapado"
+          facebook_app: Configuración da aplicación do Facebook
+          question_asked_to: Pregunta feita a
+          question_must_include: A pregunta debe incluír a seguinte etiqueta para podela converter nun chío
+          question_must_include_example: "por exemplo, #euPregunto"
+          secret_key: Clave secreta
+          starts_with_example: "por exemplo, #pr"
           title: Compartir
+          title_on_dlvr: Compartir en dlvr.it
+          tweet_ends_with: Engadir unha etiqueta aos seus chíos
+          tweet_starts_with: Antepor unha etiqueta aos seus chíos
+          twitter_account: A conta de Twitter á que os seus usuarios realizarán as preguntas.
         theme: 
           logo_legend: Suba un logo para o seu grupo. Non pode exceder os 2MB.
           title: Establecer o tema do grupo

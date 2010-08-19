@@ -17,6 +17,7 @@ de:
     tag: Abonniere das Stichwort
     user: Abonniere die Fragen des Nutzers
   global: 
+    active: Aktivieren
     by: von
     current: Aktuell
     from: von {{site}}

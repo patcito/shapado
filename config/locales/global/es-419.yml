@@ -1,6 +1,7 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es-419: 
   actions: 
     closed: closed
@@ -16,6 +17,7 @@ es-419:
     tag: subscribirse al tag
     user: subscribirse a las preguntas del usuario
   global: 
+    active: Activar
     by: por
     current: actual
     from: desde %{site}

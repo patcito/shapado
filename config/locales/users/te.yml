@@ -9,6 +9,7 @@ te:
         activation_code: చేతనపు సంకేతం
         age: వయసు
         asked_by: అడిగిన వారు
+        avatar: అవతార చిత్రం
         birthday: పుట్టిన రోజు
         created_at: చేరిన తేదీ
         current_password: "ప్రస్తుత సంకేతపదం:"
@@ -28,6 +29,8 @@ te:
       user: వాడుకరి
       users: వాడుకరులు
   users: 
+    create: 
+      flash_notice: నమోదుచేసుకున్నందుకు ధన్యవాదాలు!
     edit: 
       enable_twitter: మీ ఫేస్‌బుక్ లేదా ట్విట్టర్ ఖాతాలను చేతనం చేయండి
       submit: భద్రపరచు

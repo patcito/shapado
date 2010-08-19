@@ -17,6 +17,7 @@ gl:
     tag: Subscribirse á etiqueta
     user: Subscribirse ás preguntas do usuario
   global: 
+    active: Activar
     by: por
     current: Actual
     from: desde {{site}}

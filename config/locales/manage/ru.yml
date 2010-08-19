@@ -1,6 +1,7 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 # Author: Александр Сигачёв
 ru: 
@@ -36,6 +37,7 @@ ru:
           reputation_rewards_subtitle: Список вознаграждений к репутации
           title: Награды
         share: 
+          secret_key: Секретный Ключ
           title: Распространение
         theme: 
           logo_legend: Загрузка логотипа своей группы, его размер должен быть менее 2 МБ.

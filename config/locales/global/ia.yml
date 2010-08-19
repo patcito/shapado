@@ -17,6 +17,7 @@ ia:
     tag: Subscriber al etiquetta
     user: Subscriber a questiones de usatores
   global: 
+    active: Activar
     by: per
     current: Actual
     from: ex {{site}}

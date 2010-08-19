@@ -41,6 +41,7 @@ te:
       feedback_title: శీర్షిక
       title: మీ సలహాలూ సూచనలని పంపించండి
     index: 
+      active: క్రియాశీలం
       browse_all_or_by_tags: " %{full_list_of_questions} లేదా %{browse_by_tags} లను చూడండి"
       create_own_site: 8 క్షణాల్లో మీ స్వంత Q&amp;A సైటుని ఉచితంగా సృష్టించుకోండి
       full_list_of_questions: ప్రశ్నల యొక్క పూర్తి జాబితా

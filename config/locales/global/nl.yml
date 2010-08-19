@@ -18,6 +18,7 @@ nl:
     tag: Op label abonneren
     user: Op gebruikersvragen abonneren
   global: 
+    active: Activeren
     by: door
     current: huidige
     from: Van %{site}

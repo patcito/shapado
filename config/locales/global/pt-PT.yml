@@ -17,6 +17,7 @@ pt-PT:
     tag: Subscrever a categoria
     user: Subscrever as perguntas do utilizador
   global: 
+    active: Activar
     by: por
     current: Actual
     from: de %{site}

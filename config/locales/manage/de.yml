@@ -35,7 +35,21 @@ de:
           reputation_rewards_subtitle: Liste der Auszeichnungen
           title: Auszeichnungen
         share: 
+          add_tags: Deinen „Tweets“ Stichworte hinzufügen
+          application_id: Anwendungsnummer
+          asking_from_twitter: Fragen aus Twitter heraus stellen
+          ends_with_example: "d. h. #shapado"
+          facebook_app: Einstellungen für die „Facebook-App“
+          question_asked_to: Frage richtete sich an
+          question_must_include: Die Frage muss folgendes Stichwort enthalten, damit sie veröffentlicht werden kann
+          question_must_include_example: "d. h. #iAsk"
+          secret_key: Geheimschlüssel
+          starts_with_example: "d. h. #qa"
           title: freigeben
+          title_on_dlvr: Auf „dlvr.it“ veröffentlichen
+          tweet_ends_with: Deinem „Tweet“ ein Stichwort hintanstellen
+          tweet_starts_with: Deinem „Tweet“ ein Stichwort voranstellen
+          twitter_account: Das Twitterkonto auf dem die Fragen Deiner Nutzer veröffentlicht werden.
         theme: 
           logo_legend: Lade das Logo für Deine Gruppe hoch. Es muss kleiner als 2 MB sein.
           title: Lege das Motto für die Gruppe fest

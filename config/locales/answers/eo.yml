@@ -2,12 +2,17 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: ArnoLagrange
+# Author: LaPingvino
 eo: 
   activerecord: 
     attributes: 
       answer: 
+        body: Korpo
         created_at: Respondita
         link: Ligilo
+    models: 
+      answer: Respondo
+      answers: Respondoj
   answers: 
     create: 
       flash_error: "Io malĝuste funkciis dum aldono de via respondo. \n  Memoru tion: \n - Malplenaj kaj ripetitaj respondoj ne estas permesitaj \n - Vi devas atendi 20 sekundojn antaŭ ol sendi alian respondon. \n - Vi povas sendi po nur unu respondon por ĉiu demando."

@@ -1,6 +1,7 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: G0rn
 # Author: Lockal
 ru: 
@@ -18,6 +19,7 @@ ru:
     tag: Подписаться на тег
     user: Подписаться на вопросы пользователя
   global: 
+    active: Активировать
     current: Текущий
     from: с сайта {{site}}
     group_not_found: Страница %{url} не существует

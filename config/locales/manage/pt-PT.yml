@@ -35,7 +35,21 @@ pt-PT:
           reputation_rewards_subtitle: Lista de prémios de reputação
           title: Prémios
         share: 
+          add_tags: Acrescentar categorias aos seus tweets
+          application_id: Aplicação
+          asking_from_twitter: Perguntar a partir do Twitter
+          ends_with_example: "ex: #shapado"
+          facebook_app: Configurações do Facebook
+          question_asked_to: Pergunta Feita a
+          question_must_include: A pergunta tem de incluir a seguinte categoria para ser enviada pelo Twitter
+          question_must_include_example: "ex: #euPergunto"
+          secret_key: Chave Secreta
+          starts_with_example: "ex: #pr"
           title: Partilhar
+          title_on_dlvr: Partilhar no dlvr.it
+          tweet_ends_with: Acrescentar uma categoria no fim dos seus tweets
+          tweet_starts_with: Acrescentar uma categoria no início dos seus tweets
+          twitter_account: A conta do Twitter à qual os seus utilizadores farão perguntas.
         theme: 
           logo_legend: Faça o upload de um logótipo para o seu grupo; tem de ser inferior a 2 MB.
           title: Defina o tema do grupo

@@ -17,6 +17,7 @@ id:
     tag: Berlangganan ke tag
     user: Berlangganan ke pertanyaan pengguna
   global: 
+    active: Aktifkan
     by: oleh
     current: Terkini
     from: dari %{site}
