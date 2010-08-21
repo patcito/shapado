@@ -81,7 +81,8 @@
 				var org_li = $("#as-original-"+x);
 				var results_holder = $('<div class="as-results" id="as-results-'+x+'" style="position: absolute"></div>').hide();
 				var results_ul =  $('<ul class="as-list"></ul>');
-				var values_input = $('<input type="hidden" class="as-values" name="as_values_'+x+'" id="as-values-'+x+'" />');
+				var values_input = $('<input type="hidden" class="as-values" id="as-values-'+x+'" />');
+        values_input.attr("name", input.attr("name"));
 				var prefill_value = "";
 				if(typeof opts.preFill == "string"){
 					var vals = opts.preFill.split(",");
