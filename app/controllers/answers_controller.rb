@@ -65,63 +65,45 @@ class AnswersController < ApplicationController
     @answer.votes_average = 0
     @answer.flags_count = 0
 
+    @answer.user = current_user
     if !logged_in?
-      draft = Draft.create(:answer => @answer)
-      session[:draft] = draft.id
-      login_required
-    else # TODO: put a return statement and remove this else block
-      @answer.user = current_user
-      respond_to do |format|
-        if @question && @answer.save
-          sweep_question(@question)
-
-          Question.update_last_target(@question.id, @answer)
-
-          current_user.stats.add_answer_tags(*@question.tags)
-
-          @question.answer_added!
-
-          current_group.on_activity(:answer_question)
-          current_user.on_activity(:answer_question, current_group)
-
-          # TODO: use magent to do it
-          search_opts = {"notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
-                          :_id => {:$ne => current_user.id},
-                          :select => ["email"]}
-
-          users = User.find(@question.watchers, search_opts)
-          users.push(@question.user) if !@question.user.nil? && @question.user != current_user
-          followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
-
-          users ||= []
-          followers ||= []
-          (users - followers).each do |u|
-            if !u.email.blank? && u.notification_opts.new_answer
-              Notifier.deliver_new_answer(u, current_group, @answer, false)
-            end
-          end
-
-          followers.each do |u|
-            if !u.email.blank? && u.notification_opts.new_answer
-              Notifier.deliver_new_answer(u, current_group, @answer, true)
-            end
-          end
-
-          flash[:notice] = t(:flash_notice, :scope => "answers.create")
-          format.html{redirect_to question_path(@question)}
-          format.json { render :json => @answer.to_json(:except => %w[_keywords]) }
-          format.js do
-            render(:json => {:success => true, :message => flash[:notice],
-              :html => render_to_string(:partial => "questions/answer",
-                                        :object => @answer,
-                                        :locals => {:question => @question})}.to_json)
+      if params[:user]
+        user = User.find(:email => params[:user][:email])
+        if user.present?
+          if !user.anonymous
+            flash[:notice] = "The user is already registered, please log in"
+            return create_draft!
           end
         else
-          flash[:error] = t(:flash_error, :scope => "answers.create")
-          format.html{redirect_to question_path(@question)}
-          format.json { render :json => @answer.errors, :status => :unprocessable_entity }
-          format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
+          user = User.new(:anonymous => true, :login => "Anonymous")
+          user.safe_update(%w[name email website], params[:user])
+          user.login = user.name if user.name.present?
+          user.save!
+          @answer.user = user
         end
+      else
+        return create_draft!
+      end
+    end
+
+    respond_to do |format|
+      if @question && @answer.save
+        after_create_answer
+
+        flash[:notice] = t(:flash_notice, :scope => "answers.create")
+        format.html{redirect_to question_path(@question)}
+        format.json { render :json => @answer.to_json(:except => %w[_keywords]) }
+        format.js do
+          render(:json => {:success => true, :message => flash[:notice],
+            :html => render_to_string(:partial => "questions/answer",
+                                      :object => @answer,
+                                      :locals => {:question => @question})}.to_json)
+        end
+      else
+        flash[:error] = t(:flash_error, :scope => "answers.create")
+        format.html{redirect_to question_path(@question)}
+        format.json { render :json => @answer.errors, :status => :unprocessable_entity }
+        format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
       end
     end
   end
@@ -221,6 +203,46 @@ class AnswersController < ApplicationController
       end
     else
       return redirect_to questions_path
+    end
+  end
+
+  def create_draft!
+    draft = Draft.create(:answer => @answer)
+    session[:draft] = draft.id
+    login_required
+  end
+
+  # TODO: use magent to do it
+  def after_create_answer
+    sweep_question(@question)
+
+    Question.update_last_target(@question.id, @answer)
+    @answer.user.stats.add_answer_tags(*@question.tags)
+    @question.answer_added!
+
+    current_group.on_activity(:answer_question)
+    @answer.user.on_activity(:answer_question, current_group)
+
+    search_opts = {"notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
+                    :_id => {:$ne => @answer.user.id},
+                    :select => ["email"]}
+
+    users = User.find(@question.watchers, search_opts)
+    users.push(@question.user) if !@question.user.nil? && @question.user != @answer.user
+    followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
+
+    users ||= []
+    followers ||= []
+    (users - followers).each do |u|
+      if !u.email.blank? && u.notification_opts.new_answer
+        Notifier.deliver_new_answer(u, current_group, @answer, false)
+      end
+    end
+
+    followers.each do |u|
+      if !u.email.blank? && u.notification_opts.new_answer
+        Notifier.deliver_new_answer(u, current_group, @answer, true)
+      end
     end
   end
 end

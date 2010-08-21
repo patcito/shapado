@@ -237,12 +237,6 @@ class QuestionsController < ApplicationController
   def edit
   end
 
-  def create_draft!
-    draft = Draft.create!(:question => @question)
-    session[:draft] = draft.id
-    login_required
-  end
-
   # POST /questions
   # POST /questions.xml
   def create
@@ -725,5 +719,11 @@ class QuestionsController < ApplicationController
     if !logged_in? || (Date.today.year.to_i - (current_user.birthday || Date.today).year.to_i) < 18
       render :template => "welcome/confirm_age"
     end
+  end
+
+  def create_draft!
+    draft = Draft.create!(:question => @question)
+    session[:draft] = draft.id
+    login_required
   end
 end
