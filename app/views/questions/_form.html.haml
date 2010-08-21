@@ -1,4 +1,5 @@
 = f.error_messages
+= error_messages_for(:user)
 .group
   = f.label :title, "#{t(:title, :scope => "activerecord.attributes.question")}*", :class => "label"
   = f.text_field :title, :class => "text_field"

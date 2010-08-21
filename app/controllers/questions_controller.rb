@@ -247,18 +247,18 @@ class QuestionsController < ApplicationController
 
     if !logged_in?
       if params[:user]
-        user = User.find(:email => params[:user][:email])
-        if user.present?
-          if !user.anonymous
+        @user = User.find(:email => params[:user][:email])
+        if @user.present?
+          if !@user.anonymous
             flash[:notice] = "The user is already registered, please log in"
             return create_draft!
           end
         else
-          user = User.new(:anonymous => true, :login => "Anonymous")
-          user.safe_update(%w[name email website], params[:user])
-          user.login = user.name if user.name.present?
-          user.save
-          @question.user = user
+          @user = User.new(:anonymous => true, :login => "Anonymous")
+          @user.safe_update(%w[name email website], params[:user])
+          @user.login = @user.name if @user.name.present?
+          @user.save
+          @question.user = @user
         end
       else
         return create_draft!
@@ -266,7 +266,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      if @question.save
+      if @question.user.valid? && @question.save
         sweep_question_views
 
         @question.user.stats.add_question_tags(*@question.tags)
@@ -301,7 +301,7 @@ class QuestionsController < ApplicationController
         format.json { render :json => @question.to_json(:except => %w[_keywords watchers]), :status => :created}
       else
         format.html { render :action => "new" }
-        format.json { render :json => @question.errors, :status => :unprocessable_entity }
+        format.json { render :json => @question.errors+@question.user.errors, :status => :unprocessable_entity }
       end
     end
   end

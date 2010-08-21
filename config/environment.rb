@@ -71,7 +71,7 @@ Rails::Initializer.run do |config|
   if AppConfig.recaptcha["activate"]
     config.middleware.use "Rack::Recaptcha", :public_key => AppConfig.recaptcha["public_key"],
                                              :private_key => AppConfig.recaptcha["private_key"],
-                                             :paths => ['/users/login']
+                                             :paths => nil
   end
 end
 
