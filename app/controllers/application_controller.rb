@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
   include Subdomains
   include Sweepers
 
+  if !AppConfig.recaptcha['activate']
+    def recaptcha_valid?
+      true
+    end
+  end
+
   if AppConfig.exception_notification['activate']
     include ExceptionNotifiable
     include SuperExceptionNotifier

@@ -246,7 +246,7 @@ class QuestionsController < ApplicationController
     @question.user = current_user
 
     if !logged_in?
-      if params[:user]
+      if recaptcha_valid? && params[:user]
         @user = User.find(:email => params[:user][:email])
         if @user.present?
           if !@user.anonymous
@@ -260,13 +260,13 @@ class QuestionsController < ApplicationController
           @user.save
           @question.user = @user
         end
-      else
+      elsif !AppConfig.recaptcha["activate"]
         return create_draft!
       end
     end
 
     respond_to do |format|
-      if @question.user.valid? && @question.save
+      if recaptcha_valid? && @question.user.valid? && @question.save
         sweep_question_views
 
         @question.user.stats.add_question_tags(*@question.tags)
@@ -300,6 +300,7 @@ class QuestionsController < ApplicationController
         format.html { redirect_to(question_path(@question)) }
         format.json { render :json => @question.to_json(:except => %w[_keywords watchers]), :status => :created}
       else
+        @question.errors.add(:captcha, "is invalid") unless recaptcha_valid?
         format.html { render :action => "new" }
         format.json { render :json => @question.errors+@question.user.errors, :status => :unprocessable_entity }
       end
