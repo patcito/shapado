@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('.auto-link').autoVideo();
 
   $("form.vote_form button").live("click", function(event) {
-    var btn_name = $(this).attr("name")
+    var btn_name = $(this).attr("name");
     var form = $(this).parents("form");
     $.post(form.attr("action")+'.js', form.serialize()+"&"+btn_name+"=1", function(data){
       if(data.success){
@@ -77,7 +77,8 @@ $(document).ready(function() {
                     showMessage(data.message, "notice")
                     form.find("textarea").val("");
                     form.find("#markdown_preview").html("");
-                    $("#wysiwyg_editor").wysiwyg('clear');
+                    if($("#wysiwyg_editor").length > 0 )
+                      $("#wysiwyg_editor").htmlarea('updateHtmlArea');
                     removeFromLocalStorage(location.href, "markdown_editor");
                   } else {
                     showMessage(data.message, "error")
