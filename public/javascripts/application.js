@@ -89,7 +89,7 @@ function initAutocomplete(){
       return elem.html(data.caption);
     },
     preFill: tagInput.val(),
-    startText: 'Enter A Label Here',
+    startText: '',
     emptyText: 'No Results',
     limitText: 'No More Selections Are Allowed'
   });
