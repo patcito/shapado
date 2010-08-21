@@ -23,16 +23,16 @@
        }
 
        //HACK?
-       for (property in settings.extraParams) {
+       for (var property in settings.extraParams) {
          extraParams.push({ name : property, value : settings.extraParams[property]})
        }
 
-       query = function() {
+       var query = function() {
          $.ajax({
            url: settings.url,
            dataType: "json",
            type: "GET",
-           data: $.merge(self.serializeArray(), extraParams),
+           data: $.merge(settings.fields.serializeArray(), extraParams),
            success: function(data) {
              settings.target.empty();
              settings.target.append(data.html);

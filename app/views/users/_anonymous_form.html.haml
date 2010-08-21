@@ -1,11 +1,16 @@
-.group
-  = label_tag "user[name]", t(:name, :scope => "activerecord.attributes.user"), :class => "label"
-  = text_field_tag "user[name]", params[:user] ? params[:user][:name] : "", :class => "text_field"
-.group
-  = label_tag "user[email]", t(:email, :scope => "activerecord.attributes.user"), :class => "label"
-  .description
-    = t(".never_shown")
-  = text_field_tag "user[email]", params[:user] ? params[:user][:website] : "", :class => "text_field"
-.group
-  = label_tag "user[website]", t(:website, :scope => "activerecord.attributes.user"), :class => "label"
-  = text_field_tag "user[website]", params[:user] ? params[:user][:website] : "", :class => "text_field"
+-if !is_bot?
+  .group
+    = label_tag "user[name]", t(:name, :scope => "activerecord.attributes.user"), :class => "label"
+    = text_field_tag "user[name]", params[:user] ? params[:user][:name] : "", :class => "text_field"
+  .group
+    = label_tag "user[email]", t(:email, :scope => "activerecord.attributes.user"), :class => "label"
+    .description
+      = t(".never_shown")
+    = text_field_tag "user[email]", params[:user] ? params[:user][:website] : "", :class => "text_field"
+  .group
+    = label_tag "user[website]", t(:website, :scope => "activerecord.attributes.user"), :class => "label"
+    = text_field_tag "user[website]", params[:user] ? params[:user][:website] : "", :class => "text_field"
+
+  -if AppConfig.recaptcha["activate"]
+    .group
+      =recaptcha_tag(:challenge, :width => 600, :rows => 5, :display => {:lang => I18n.locale})

@@ -2,6 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include Rack::Recaptcha::Helpers
   include AuthenticatedSystem
   include Subdomains
   include Sweepers
@@ -33,6 +34,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :find_languages
   layout :set_layout
+
+  helper_method :recaptcha_tag
 
   protected
 
@@ -250,6 +253,7 @@ class ApplicationController < ActionController::Base
   def is_bot?
     request.user_agent =~ /\b(Baidu|Gigabot|Googlebot|libwww-perl|lwp-trivial|msnbot|SiteUptime|Slurp|WordPress|ZIBB|ZyBorg|Java|Yandex|Linguee|LWP::Simple|Exabot|ia_archiver|Purebot|Twiceler|StatusNet|Baiduspider)\b/i
   end
+  helper_method :is_bot?
 
   def build_date(params, name)
     Time.zone.parse("#{params["#{name}(1i)"]}-#{params["#{name}(2i)"]}-#{params["#{name}(3i)"]}") rescue nil

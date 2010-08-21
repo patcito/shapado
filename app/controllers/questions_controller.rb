@@ -257,7 +257,7 @@ class QuestionsController < ApplicationController
           user = User.new(:anonymous => true, :login => "Anonymous")
           user.safe_update(%w[name email website], params[:user])
           user.login = user.name if user.name.present?
-          user.save!
+          user.save
           @question.user = user
         end
       else

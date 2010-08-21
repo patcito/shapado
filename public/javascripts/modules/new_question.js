@@ -8,6 +8,7 @@ $(document).ready(function() {
 
   $("#ask_question").searcher({ url : "/questions/related_questions.js",
                               target : $("#related_questions"),
+                              fields : $("input[type=text][name*=question]"),
                               behaviour : "focusout",
                               timeout : 2500,
                               extraParams : { 'format' : 'js', 'per_page' : 5 },
