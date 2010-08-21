@@ -43,6 +43,7 @@ Rails::Initializer.run do |config|
   config.gem "oauth2", :version => "0.0.8"
   config.gem "twitter_oauth", :version => "0.3.6"
   config.gem "sanitize", :version => "1.2.1"
+  config.gem "rack-recaptcha", :lib => "rack/recaptcha", :version => "0.2.2"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -67,6 +68,11 @@ Rails::Initializer.run do |config|
   config.action_controller.use_accept_header = false
   # middlewares
   config.middleware.use "DynamicDomain"
+  if AppConfig.recaptcha["activate"]
+    config.middleware.use "Rack::Recaptcha", :public_key => AppConfig.recaptcha["public_key"],
+                                             :private_key => AppConfig.recaptcha["private_key"],
+                                             :paths => ['/users/login']
+  end
 end
 
 require "smtp_tls"
