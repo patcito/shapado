@@ -45,6 +45,7 @@ en:
       ban: Ban
       retract_request: You have already made a request. Would you like to retract it?
       close_reason: "The question has been closed for the following reason:"
+      request_close_as: "Closed as"
       answers_title:
         one: "%{count} answer"
         other: "%{count} answers"

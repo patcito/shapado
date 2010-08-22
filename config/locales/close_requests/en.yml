@@ -10,6 +10,8 @@ en:
       spam: spam
       request_closing_details: Request to close this question
       close_with_reason: Close this question using this reason
+    edit:
+      title: Edit closing request
     create:
       flash_notice: Close request created successfully
     update:
