@@ -2,8 +2,8 @@
 -solution = question.accepted && question.answer_id == answer.id
 -source = question_path(@question)
 
--if logged_in?
-  -@aflag = current_user.has_flagged?(answer) || Flag.new
+- @aflag = current_user.has_flagged?(answer) if logged_in?
+- @aflag ||= Flag.new
 
 .answer.commentable{:class => "post-#{answer.id} #{solution ? "solution" : ""}" }
   %a{:name=>answer.id}

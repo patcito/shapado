@@ -39,6 +39,9 @@ en:
       request_closing: Request closing
       request_closing_details: Request to close this question
       close: Close
+      request_opening: Request opening
+      request_opening_details: Request to open this question
+      open: Open
       ban: Ban
       retract_request: You have already made a request. Would you like to retract it?
       close_reason: "The question has been closed for the following reason:"

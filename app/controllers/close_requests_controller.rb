@@ -14,7 +14,8 @@ class CloseRequestsController < ApplicationController
       format.html
       format.js do
         render :json => {:html => render_to_string(:partial => "close_requests/form",
-                                                   :locals => {:question => @question })}.to_json
+                                                   :locals => {:question => @question,
+                                                               :close_request => @close_request})}.to_json
       end
     end
   end
@@ -50,6 +51,19 @@ class CloseRequestsController < ApplicationController
         format.html { redirect_to(question_path(@question)) }
         format.json { render :json => @close_request.errors, :status => :unprocessable_entity}
         format.js { render :json => {:message => flash[:error], :success => false }.to_json }
+      end
+    end
+  end
+
+  def edit
+    @close_request = @question.close_requests.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:html => render_to_string(:partial => "close_requests/form",
+                                                   :locals => {:close_request => @close_request,
+                                                               :question => @question,
+                                                               :form_id => "question_close_form" })}.to_json
       end
     end
   end

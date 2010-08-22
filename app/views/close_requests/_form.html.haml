@@ -1,8 +1,6 @@
 
 
--form_for [@question, @close_request], :html => {:class => "close_form form  #{local_assigns[:hide] ? "hide": ""}", :id => local_assigns[:form_id]} do |form|
-  -if !@close_request.new?
-    =link_to t("questions.show.retract_request"), question_close_request_path(:question_id => @question.slug, :id => @close_request.id), :method => :delete, :confirm => "are you sure?"
+-form_for [question, close_request], :html => {:class => "close_form form  #{local_assigns[:hide] ? "hide": ""}"} do |form|
   .group
     = form.label :reason, t(:reason, :scope=>"activerecord.attributes.flag"), :class => "label"
     -CloseRequest::REASONS.each do |reason|

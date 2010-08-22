@@ -424,6 +424,26 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def open
+    @question = Question.find_by_slug_or_id(params[:id])
+
+    @question.closed = false
+    @question.close_reason_id = nil
+
+    respond_to do |format|
+      if @question.save
+        sweep_question(@question)
+
+        format.html { redirect_to question_path(@question) }
+        format.json { head :ok }
+      else
+        flash[:error] = @question.errors.full_messages.join(", ")
+        format.html { redirect_to question_path(@question) }
+        format.json { render :json => @question.errors, :status => :unprocessable_entity  }
+      end
+    end
+  end
+
   def favorite
     @favorite = Favorite.new
     @favorite.question = @question

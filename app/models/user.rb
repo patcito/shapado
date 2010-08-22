@@ -463,6 +463,18 @@ Time.zone.now ? 1 : 0)
     end
   end
 
+  def has_requested_to_close?(question)
+    question.close_requests.detect do |close_request|
+      close_request.user_id == self.id
+    end
+  end
+
+  def has_requested_to_open?(question)
+    question.open_requests.detect do |open_request|
+      open_request.user_id == self.id
+    end
+  end
+
   def generate_uuid
     self.feed_token = UUIDTools::UUID.random_create.hexdigest
   end
