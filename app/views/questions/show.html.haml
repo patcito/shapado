@@ -111,7 +111,7 @@
           = "#{t('.flagged_as')} #{t(@flag.reason, :scope=>'flags.form')}"
           = link_to t("scaffold.edit"), edit_question_flag_path(@question,@flag), :class => "flag-link", :id => "edit_question_flag_link", :rel => 'nofollow'
           = link_to t("scaffold.destroy"), question_flag_path(@question,@flag), :id => "destroy_question_flag_link", :rel => 'nofollow', :confirm => "are you sure?", :method => :delete
-      - elsif current_user != @question.user
+      - elsif logged_in? && current_user != @question.user
         = link_to t(".flag"), new_question_flag_path(@question), :class => "flag-link", :id => "question_flag_link", :rel => 'nofollow'
 
       - if logged_in?

@@ -53,7 +53,7 @@
     .controls
       .actions
         = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question.id, answer.id), :class => "bookmark"
-        -if @aflag.new? && (!logged_in? || current_user != answer.user)
+        - if logged_in? && @aflag.new? && current_user != answer.user
           = link_to t(".flag"), new_question_answer_flag_path(@question,answer), :class => "flag-link", :rel => 'nofollow'
 
         -if logged_in?
