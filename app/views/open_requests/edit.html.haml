@@ -1,0 +1,5 @@
+- content_for :subtabs do
+  .navtitle
+    = t(".title", :model => I18n.t("activerecord.models.question"))
+
+= render :partial => "open_requests/form", :locals => {:open_request => @close_request, :question => @question }

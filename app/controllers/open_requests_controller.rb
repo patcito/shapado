@@ -32,7 +32,7 @@ class OpenRequestsController < ApplicationController
 
   def update
     @open_request = @question.open_requests.find(params[:id])
-    @open_request.reason = params[:open_request][:comment]
+    @open_request.comment = params[:open_request][:comment]
 
     respond_to do |format|
       if @open_request.valid?
@@ -70,6 +70,19 @@ class OpenRequestsController < ApplicationController
     @open_request = OpenRequest.new
     respond_to do |format|
       format.html
+    end
+  end
+
+  def edit
+    @open_request = @question.open_requests.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:html => render_to_string(:partial => "open_requests/form",
+                                                   :locals => {:open_request => @open_request,
+                                                               :question => @question,
+                                                               :form_id => "question_open_form" })}.to_json
+      end
     end
   end
 

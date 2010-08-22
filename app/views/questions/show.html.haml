@@ -129,8 +129,8 @@
           -if !@open_request.new?
             .flagged
               = "#{t('.request_open')} #{@open_request.comment}"
-              = link_to t("scaffold.edit"), edit_question_open_request_path(@question,@close_request), :class => "flag-link", :id => "edit_question_open_request_link", :rel => 'nofollow'
-              = link_to t("scaffold.destroy"), question_open_request_path(@question,@close_request), :id => "destroy_question_open_request_link", :rel => 'nofollow', :confirm => "are you sure?", :method => :delete
+              = link_to t("scaffold.edit"), edit_question_open_request_path(@question, @open_request), :class => "flag-link", :id => "edit_question_open_request_link", :rel => 'nofollow'
+              = link_to t("scaffold.destroy"), question_open_request_path(@question,@open_request), :id => "destroy_question_open_request_link", :rel => 'nofollow', :confirm => "are you sure?", :method => :delete
 
           -if current_user.mod_of?(current_group)
             = link_to t(".open"), open_question_path(@question), :rel => 'nofollow', :title => t('.request_opening_details'), :method => "put"
