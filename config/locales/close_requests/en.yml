@@ -9,18 +9,18 @@ en:
       not_relevant: Not relevant
       spam: spam
       request_closing_details: Request to close this question
-      close_with_reason: Close this question using this reason
+      close_with_reason: Closing this question using this reason
     edit:
       title: Edit closing request
     create:
-      flash_notice: Close request created successfully
+      flash_notice: Closing request created successfully
     update:
-      flash_notice: Close request updated successfully
+      flash_notice: Closing request updated successfully
     destroy:
-      flash_notice: Close request deleted successfully
+      flash_notice: Closing request deleted successfully
     model:
-      name: Close request
-      prural_name: Close requests
+      name: Closing request
+      prural_name: Closing requests
       messages:
         already_requested: "You have already requested to close this question"
       attributes:
