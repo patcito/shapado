@@ -67,6 +67,7 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = :en
   config.action_controller.use_accept_header = false
   # middlewares
+  config.middleware.use "MongoMapperMiddleware"
   config.middleware.use "DynamicDomain"
   if AppConfig.recaptcha["activate"]
     config.middleware.use "Rack::Recaptcha", :public_key => AppConfig.recaptcha["public_key"],
