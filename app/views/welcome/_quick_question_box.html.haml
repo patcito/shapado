@@ -24,16 +24,17 @@
         =f.text_area :title, :class => "text_area", :id => "question_title"
 
       #tags{:style => "width: 100%"}
+        %span#qqsubmit{:style => "width: 20%; float: right"}
+          =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
+
         -if lang
           = f.hidden_field :language, :value => lang
         -else
           %span.group{:style => "width: 20%"}
             = language_select(f, @question)
-        %span.group{:style => "width: 60%"}
+        %span.group.as-inline{:style => "width: 50%"}
           =f.text_field :tags, :class => "text_field autocomplete_for_tags"
         -if lang
           %span{:style => "width: 20%"}
-        %span#qqsubmit{:style => "width: 16%"}
-          =f.submit t(".ask_question", :default => :"layouts.application.ask_question"), :class => "ask_question"
       .clear
   .clear
