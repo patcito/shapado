@@ -15,6 +15,12 @@ Dir.glob("#{RAILS_ROOT}/app/models/**/*.rb") do |model_path|
   File.basename(model_path, ".rb").classify.constantize
 end
 
+# HACK: do not create indexes on every request
+module MongoMapper::Plugins::Indexes::ClassMethods
+  def ensure_index(*args)
+  end
+end
+
 
 Dir.glob("#{RAILS_ROOT}/app/javascripts/**/*.js") do |js_path|
   code = File.read(js_path)
