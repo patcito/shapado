@@ -409,6 +409,7 @@ class QuestionsController < ApplicationController
 
     @question.closed = true
     @question.closed_at = Time.zone.now
+    @question.close_reason_id = params[:close_request_id]
 
     respond_to do |format|
       if @question.save

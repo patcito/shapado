@@ -56,7 +56,7 @@ ActionController::Routing::Routes.draw do |map|
                                             :move_to => :put,
                                             :retag => :get,
                                             :retag_to => :put,
-                                            :close => :post,
+                                            :close => :put,
                                             :open => :put} do |questions|
         questions.resources :comments
         questions.resources :answers, :member => {:history => :get,
