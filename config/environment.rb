@@ -41,7 +41,7 @@ Rails::Initializer.run do |config|
   config.gem "dcu-devise", :version => "1.0.7", :lib => "devise"
   config.gem "twitter-text", :version => "1.1.1"
   config.gem "oauth2", :version => "0.0.8"
-  config.gem "twitter_oauth", :version => "0.3.6"
+  config.gem "twitter_oauth", :version => "0.4.3"
   config.gem "sanitize", :version => "1.2.1"
   config.gem "rack-recaptcha", :lib => "rack/recaptcha", :version => "0.2.2"
 
