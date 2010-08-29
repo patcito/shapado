@@ -1,0 +1,22 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  wiki: 
+    actions: 
+      all_history: Retornar al historia
+      back_to_question: Retornar al question
+      revert: Reverter a iste version
+      show_diff: Comparar versiones seligite
+    diff: 
+      title: Differentias inter %{prev} e %{curr}
+    history: 
+      current_version: Version actual
+      previous_versions: Previe versiones
+      title: Historia (%{count})
+      version: Version
+      version_summary: Summario del version
+    model: 
+      attributes: 
+        message: Summario

@@ -35,7 +35,21 @@ mk:
           reputation_rewards_subtitle: список на награди за угледот
           title: награди
         share: 
+          add_tags: Додај ознаки на објавеното на Twitter
+          application_id: Назнака (ID) на програмот
+          asking_from_twitter: Поставување прашања од Twitter
+          ends_with_example: "на пр. #shapado"
+          facebook_app: Поставки за Facebook
+          question_asked_to: Прашањето е поставено на
+          question_must_include: Прашањето мора да ја содржи следната ознака за да може да биде објавено на Twitter
+          question_must_include_example: "на пр. #iAsk"
+          secret_key: Таен клуч
+          starts_with_example: "на пр. #qa"
           title: сподели
+          title_on_dlvr: Сподели на dlvr.it
+          tweet_ends_with: Приложи ознака кон објавеното на Twitter
+          tweet_starts_with: Вметни ознака во објавеното на Twitter
+          twitter_account: Сметката на Twitter на којашто вашите корисници ќе поставуваат прашања.
         theme: 
           logo_legend: Подигнете лого за вашата група. Мора да е помало од 2MB.
           title: постави мотив за групата

@@ -1,6 +1,8 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
+# Author: Peter17
 fr: 
   activerecord: 
     attributes: 
@@ -8,8 +10,8 @@ fr:
         role: role
   members: 
     form: 
-      login_tip: search as you type
+      login_tip: Chercher pendant la frappe
     index: 
-      manage_members_title: manage members
+      manage_members_title: Gérer les membres
       title: members of %{name}'s group
       title_isolate: members of %{name}

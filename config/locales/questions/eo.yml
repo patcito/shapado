@@ -1,0 +1,88 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+# Author: Gufulo
+eo: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Respondoj
+        asked_by: Demandita de
+        closed: Fermita
+        created_at: Demandita
+        language: Lingvo
+        tags: Etikedoj
+        title: Titolo
+        updated_at: ĝisdatigita
+        updated_by: ĝisdatigita de
+        views: Legoj
+        votes: Voĉdonoj
+    models: 
+      question: Demando
+      questions: Demandoj
+  questions: 
+    create: 
+      flash_notice: La demando estis sukcese kreita.
+    edit: 
+      title: Redakti demandon
+    flag: 
+      title: Marki demandon
+    form: 
+      adult_content: Tiu ĉi demando enhavas materialon por plenkreskuloj.
+      body_tip: Kio estas via demando? Estu priskribema.
+      language_tip: Elektu la lingvon de la demando.
+      tags_tip: Uzu etikedojn por aldoni pli da informo pri via demando.
+    model: 
+      messages: 
+        empty_tags: Pardonu, sed vi devas uzi almenaŭ unu etikedon.
+        title_too_long: La titolo estas tro longa. Ĝi havu ne pli ol 100 signojn.
+        too_many_tags: Pardonu, sed vi povas uzi maksimume 9 etikedojn.
+        too_short: Ŝajne tro mallonga. Bonvolu uzi pli da vortoj ol %{count} por esti pli preciza.
+    move: 
+      submit: Movi!
+      title: "Movi demandon: %{title}"
+    move_to: 
+      group_dont_exists: La grupo %{group} ne ekzistas
+      success: Demando movita al %{group}
+    new: 
+      how_to_ask: Kiel demandi
+      title: Demandi
+    retag: 
+      title: Reetikedi
+    shared: 
+      flag: Marki
+    show: 
+      accepted_tooltip: Unu el la respondoj estis akceptita kiel la ĝusta respondo.
+      another_answers: Aliaj respondoj
+      answers: Respondoj
+      answers_title: 
+        one: "%{count} respondo"
+        other: "%{count} respondoj"
+      asked_on: demandita je
+      ban: Forbaru
+      close: Fermi
+      close_reason: "La demando fermiĝis sekvakiale:"
+      favorite_tooltip: Aldoni tiun ĉi demandon al viaj plej ŝatataj
+      flag: Marki
+      flagged_as: Markita kiel
+      flags: Raportita kiel
+      last_activity: Lasta aktivo
+      related_questions: Rilataj demandoj
+      request_closing_details: Peti por fermi tiun ĉi demandon
+      retag: Reetikedi
+      share: Diskonigu ĉi tiun demandon per
+      share_on: Diskonigu ĉi tiun demandon per %{site}
+      solution: Solvo
+      to_answer_question: por demandi tiun ĉi demandon
+      unauthenticated_retag: Vi bezonas konton por reetikedi demandojn
+      unfavorite_tooltip: Forigu ĉi tiun demandon el viaj plej ŝatataj
+      unwatch_tooltip: Ĉesi sekvi ĉi tiun demandon
+      viewed: vidita
+      watch_tooltip: Sekvi tiun ĉi demandon
+    solve: 
+      flash_notice: La demando estis solvita.
+    unsolve: 
+      flash_notice: Tiu ĉi demando ne plu estas solvita.
+    watch: 
+      success: Vi nun ricevos sciigojn retpoŝtajn por ĉiu nova respondo al tiu ĉi demando.

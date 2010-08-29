@@ -1,0 +1,12 @@
+# Messages for Simplified Chinese (‪中文(简体)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Chenxiaoqino
+zh-hans: 
+  shared: 
+    current_tags: 
+      title: 已选择的标签
+    topbar: 
+      admin: 管理员
+      logged_as: 已以%{login}的身份登录
+      user_page: 我的页面

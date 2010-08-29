@@ -1,0 +1,65 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Tanda baku
+        description: Deskripsi
+        domain: Domain
+        fb_button: Aktifkan tombol suka Facebook (tidak menjamin privasi)
+        forum: Izinkan lebih dari satu jawaban oleh pengguna
+        group_created_by: dibuat oleh
+        language: Bahasa
+        legend: Keterangan
+        logo: Logo
+        may_contain_adult_content: Situs ini mungkin berisi konten dewasa
+        name: Nama
+        openid_only: Hanya orang-orang yang memakai OpenID yang dapat mengakses situs ini
+        owner: Grup ini dibuat oleh %{login}
+        registered_only: Hanya pengguna terdaftar yang boleh mengakses situs ini
+        state: Keadaan
+        subdomain: URL
+        wysiwyg_editor: Aktifkan penyunting ramah pengguna
+    models: 
+      default_tags_message: Anda tidak diperbolehkan memiliki lebih dari 10 tag baku
+      group: Grup
+      groups: Grup
+  groups: 
+    form: 
+      access: Pengaturan Akses
+      any_language: Apa pun
+      custom_html: Izinkan HTML kustom
+      custom_js: Izinkan JavaScript kustom
+      default_tags_legend: Pisahkan tag dengan koma. Hanya 10 tag baku yang diperbolehkan.
+      description_legend: Anda punya 400 karakter untuk mendeskripsikan grup ini.
+      isolate_group: Isolasi grup ini dari grup lain
+      legend_legend: Ini akan digunakan di kepala. Anda punya 40 karakter.
+      logo_legend: Anda dapat mengunggah logo grup. Ukuran berkas maksimal 2MB.
+      members_only: Hanya anggora grup yang diperbolehkan mengakses grup ini
+    group: 
+      about: Tentang
+      accept_group: Terima grup ini
+      allow_ads: Izinkan iklan
+      close: Tutup
+      close_group: Tutup grup ini
+      disallow_ads: Jangan izinkan iklan
+    index: 
+      actives: Aktif
+      filter: Cari grup
+      most_active: Paling aktif
+      name: Nama
+      pendings: Menunggu
+      request_group: Minta grup baru
+      title: Grup
+    new: 
+      title: Buat grup Anda
+    show: 
+      accept_group: Terima grup ini
+      accept_group_with_custom_ads: Terima grup dan izinkan iklan kustom
+      close_group: Tutup grup ini
+      group_closed: Grup iini ditutup.
+      title: Tentang %{name}
+      visit_group: Kunjungi grup ini

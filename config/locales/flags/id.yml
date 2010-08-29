@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Farras
-id:
-  activerecord:
-    attributes:
-      flag:
+id: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: Alasan
-    models:
+    models: 
       flag: Tanda
       flags: Tanda
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: Anda tidak dapat menandai ini
       flash_notice: Terima kasih atas laporan Anda
-    form:
+    form: 
       attention: Memerlukan perhatian moderator
       label: Mohon tandai dengan hati-hati
       offensive: Isi menyinggung, menghina atau menyebarkan kebencian

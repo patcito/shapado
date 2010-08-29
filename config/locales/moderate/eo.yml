@@ -1,0 +1,15 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+eo: 
+  admin: 
+    moderate: 
+      index: 
+        all: Ĉiuj
+        ban: Bloki
+        content: Enhavo
+        flagged: Markitaj demandoj
+        item_title: Titolo
+        need_tags: Reetikedi
+        title: Administri

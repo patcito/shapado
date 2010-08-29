@@ -2,10 +2,11 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Jopparn
+# Author: McDutchie
 sv: 
   sessions: 
     create: 
-      flash_error: Kunde inte logga in dig som '% (login)'
+      flash_error: Kunde inte logga in dig som '%{login}'
       flash_notice: Du har framgångsrikt loggat in
     destroy: 
       flash_notice: Du har blivit utloggad.

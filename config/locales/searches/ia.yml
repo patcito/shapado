@@ -1,0 +1,14 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  searches: 
+    form: 
+      clear: Vacuar
+      search_box_title: Verifica que tu question non ha jam essite ponite
+      tags_tip: Usa [etiquetta] pro specificar etiquettas.
+    index: 
+      empty: Nulle question correspondeva al terminos de tu recerca.
+      search_text: Questiones continente
+      tags: intra iste etiquettas

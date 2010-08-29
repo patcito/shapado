@@ -5,6 +5,7 @@
 te: 
   layouts: 
     application: 
+      ask_question: ప్రశ్నని అడగండి
       badges: బాడ్జీలు
       forgot: మర్చిపోయారా?
       home: ముంగిలి

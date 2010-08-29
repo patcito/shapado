@@ -95,16 +95,22 @@ nl:
       ban: Verbergen
       close: Sluiten
       close_reason: "De vraag is gesloten om de volgende reden:"
+      edit_request: Verzoek bewerken
       favorite_tooltip: Deze vraag aan uw favorieten toevoegen
       flag: Markeren
       flagged_as: Gemarkeerd als
       flags: Gerapporteerd als
       last_activity: Laatste activiteit
+      open: Open
       related_questions: Gerelateerde vragen
       request_closing: Sluitingsverzoek indienen
       request_closing_details: Sluitingsverzoek voor deze vraag indienen
+      request_opening: Heropeningsverzoek indienen
+      request_opening_details: Heropeningsverzoek voor deze vraag indienen
+      requested_close_as: U hebt een heropeningsverzoek voor deze vraag ingediend als
+      requested_reopening: U hebt een heropeningsverzoek ingediend
       retag: Labels wijzigen
-      retract_request: U hebt al een verzoek ingediend. Wilt u dat intrekken?
+      retract_request: Verzoek intrekken
       share: Deze vragen delen op
       share_on: Deze vragen delen op %{site}
       solution: Correct antwoord

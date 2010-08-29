@@ -8,6 +8,8 @@ ia:
       flash_notice: Requesta de clausura create con successo.
     destroy: 
       flash_notice: Requesta de clausura delite con successo.
+    edit: 
+      title: Modificar requesta de clausura
     form: 
       close_with_reason: Clauder iste question usante iste motivo
       dupe: Duplicato

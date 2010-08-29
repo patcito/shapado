@@ -1,0 +1,51 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  layouts: 
+    application: 
+      ask_question: Tanyakan pertanyaan
+      badges: Lencana
+      forgot: Lupa?
+      home: Utama
+      languages: Bahasa
+      log_in: Masuk log
+      logged: Masuk log sebagai %{login}
+      logout: Keluar log
+      manage_ads: Kelola iklan
+      moderate: Moderasi
+      now: sekarang!
+      openid: 
+        explaination: "Jika Anda ingin mendaftar atau masuk log, silakan pilih penyedia OpenID Anda:"
+      pages: Halaman
+      questions: Pertanyaan
+      questions_in: Pertanyaan di
+      questions_tagged: ditandai dengan
+      search: Cari
+      settings: Pengaturan
+      signup: Daftar
+      subscribe: Berlangganan
+      tags: Tanda
+      title: Pertanyaan & Jawaban
+      unanswered: Tidak terjawab
+      users: Pengguna
+      welcome_from: Selamat datang! Anda dapat
+    manage: 
+      actions: Tindakan
+      announcements: Pengumuman
+      constrains: Persyaratan
+      content: Isi
+      dashboard: Dasbor
+      domain: Domain
+      general: Umum
+      members: Anggota
+      pages: Halaman
+      properties: Properti
+      reputation: Reputasi
+      rewards: Imbalan
+      stats: Statistik
+      theme: Tema
+      widgets: Widget
+    notifications: 
+      message: Jika Anda tidak ingin lagi menerima pemberitahuan otomatis dari %{domain}, ubah preferensi Anda di layar notifikasi.

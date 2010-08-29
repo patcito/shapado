@@ -1,0 +1,34 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Folios de stilo
+        js: JavaScript
+    models: 
+      page: Pagina
+      pages: Paginas
+  pages: 
+    actions: 
+      create_page: Crear nove pagina
+      edit_page: Modificar pagina
+      title: Actiones
+    create: 
+      success: Le pagina ha essite create con successo.
+    edit: 
+      title: Modifica pagina
+    form: 
+      language_tip: Lingua del pagina
+      title_tip: "Titulo de pagina. Usa isto pro referer al pagina. Per exemplo: [[FAQ|consultar le FAQ]]"
+    index: 
+      create_page: Crear nove pagina
+      title: Lista de paginas
+      written_in: Scribite in %{language}
+    new: 
+      title: Nove pagina
+    title: Corrigeme
+    update: 
+      success: Le pagina ha essite actualisate con successo.

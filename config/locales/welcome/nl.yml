@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   welcome: 
@@ -55,5 +56,5 @@ nl:
       create_own_site: Maak in 8 seconden uw eigen gratis Vraag en Antwoordsite
       full_list_of_questions: volledige lijst met vragen
       hot: Populair
-      quick_question: Stel een vraag, en wij vinden het antwoord.
+      quick_question: Stel een vraag, en wij vinden iemand die het antwoord weet
       recent_questions: Recente vragen

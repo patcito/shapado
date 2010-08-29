@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: IAlex
+# Author: Peter17
 # Author: Y-M D
 fr: 
   activerecord: 
@@ -123,7 +124,7 @@ fr:
         description: Donner une solution à une question ayant une moyenne de votes supérieure à 2
     show: 
       description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
-      earned: earned
+      earned: gagné
       for_tag_bronze: 200 votes pour le tag %{tag}
       for_tag_gold: 1000 votes pour le tag %{tag}
       for_tag_silver: 400 votes pour le tag %{tag}

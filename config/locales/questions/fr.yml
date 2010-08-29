@@ -44,7 +44,7 @@ fr:
       ask_question: poser une question
       empty: aucune question n'a été posé pour le moment, soyez le premier à en poser une!
       help_to_answer: aidez-nous
-      hot: hot
+      hot: Chaud
       hot_tooltip: les questions les plus active de ces 5 derniers jours
       newest: récentes
       newest_tooltip: les questions les plus récentes
@@ -81,7 +81,7 @@ fr:
       failure: Désolé, les tags n'ont pas pu être actualisé.
       success: Les tags ont été actualisé avec succès.
     revert: 
-      title: revert question
+      title: Révoquer la question
     shared: 
       flag: signaler
     show: 

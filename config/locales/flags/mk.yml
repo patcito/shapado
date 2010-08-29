@@ -2,20 +2,31 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Bjankuloski06
-mk:
-  activerecord:
-    attributes:
-      flag:
+mk: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: причина
-    models:
+    models: 
       flag: знаменце
       flags: знаменца
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: ова не може да го означите
       flash_notice: ви благодариме за пријавата
-    form:
+    destroy: 
+      flash_notice: Вашата ознака е успешно поништена.
+    edit: 
+      title: Уреди ознака на {{model}}
+    form: 
       attention: бара внимание од модератор
       label: означувајте внимателно
       offensive: навреди, малтретирање или искажување на омраза
       spam: спам
+    model: 
+      messages: 
+        already_requested: Веќе го означивте ова {{model}}
+    new: 
+      title: Означи го {{model}}
+    update: 
+      flash_notice: Ознаката на прашањето е успешно подновена.

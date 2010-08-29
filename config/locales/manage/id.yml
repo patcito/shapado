@@ -1,0 +1,38 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  admin: 
+    manage: 
+      content: 
+        footer: Kaki
+        head: kepala
+        question_help: Bantuan pertanyaan
+        title: Konten kustom
+        top_bar_tip: Masukkan satu pranala per baris
+      properties: 
+        constrains: 
+          reputation_constrains_subtitle: Daftar persyaratan reputasi untuk setiap tindakan
+          title: Persyaratan
+        domain: 
+          title: Tetapkan domain Anda
+        general: 
+          title: Properti grup
+        rewards: 
+          reputation_rewards_subtitle: Daftar imbalan reputasi
+          title: Imbalan
+        share: 
+          add_tags: Tambahkan tanda ke tweet Anda
+          application_id: ID Aplikasi
+          asking_from_twitter: Menanyakan pertanyaan dari Twitter
+          ends_with_example: "ie. #shapado"
+          facebook_app: Pengaturan aplikasi Facebook
+          question_must_include_example: "ie. #iAsk"
+          secret_key: Kunci Rahasia
+          starts_with_example: "ie. #qa"
+          title: Bagikan
+          title_on_dlvr: Bagikan di dlvr.it
+        theme: 
+          logo_legend: Unggah logo untuk grup Anda. Ukurannya harus lebih kecil dari 2MB.
+          title: Tetapkan tema grup

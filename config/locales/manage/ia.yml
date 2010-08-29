@@ -14,10 +14,15 @@ ia:
         top_bar: Barra superior
         top_bar_tip: Entra un ligamine per linea
       properties: 
+        constrains: 
+          reputation_constrains_description: Iste formulario permitte configurar quante punctos de reputation le usatores require pro exequer un determinate action
+          reputation_constrains_subtitle: Lista de requisitos de reputation pro cata action
+          title: Requisitos
         domain: 
           description: "Tu pote configurar tu sito de sorta que illo es accessibile per tu proprie dominio. Ecce como facer lo:"
           instruction1: Pro facer lo, tu debe prima authenticar te al providitor de tu dominio. Isto es le sito ubi tu ha acquirite tu dominio como %{subdomain}.com.
           instruction2: Ibi, tu debe vader al section DNS e crear un cosa appellate CNAME.
+          instruction3: Selige 'www' o altere cosa como le nomine de tu CNAME.
           instruction4: "Postea, in le campo de host o de destination, insere tu dominio actual de Shapado: %{domain}."
           instruction5: Quando isto es facite, post circa un hora, tu dominio www.%{subdomain} deberea punctar verso %{appdomain}.
           instruction6: Si isto es le caso, reveni hic e insere tu nomine de dominio www.%{subdomain} in le campo hic infra e preme le button 'actualisar'. Si tu ha questiones, pone los in le %{chat_url} o in nostre foro de supporto.
@@ -29,3 +34,22 @@ ia:
           reputation_rewards_description: Iste formulario permitte configurar como le usatores pote ganiar e perder punctos de reputation pro un date action
           reputation_rewards_subtitle: Lista de recompensas de reputation
           title: Recompensas
+        share: 
+          add_tags: Adder etiquettas a tu tweets
+          application_id: ID de application
+          asking_from_twitter: Poner questiones ab Twitter
+          ends_with_example: "p.ex. #shapado"
+          facebook_app: Configuration del application Facebook
+          question_asked_to: Questiones ponite a
+          question_must_include: Le question debe includer le sequente etiquetta pro poter esser inviate a Twitter
+          question_must_include_example: "p.ex. #iAsk"
+          secret_key: Clave secrete
+          starts_with_example: "p.ex. #qa"
+          title: Condivider
+          title_on_dlvr: Condivider in dlvr.it
+          tweet_ends_with: Appender un etiquetta a tu tweets
+          tweet_starts_with: Anteponer un etiquetta a tu tweets
+          twitter_account: Le conto Twitter a que tu usatores ponera questiones.
+        theme: 
+          logo_legend: Incarga un logotypo pro tu grupo. Illo debe esser minor que 2MB.
+          title: Defini le thema del gruppo

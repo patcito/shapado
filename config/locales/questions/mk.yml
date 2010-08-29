@@ -95,16 +95,22 @@ mk:
       ban: забрани
       close: затвори
       close_reason: "прашањево е затворено од следнава причина:"
+      edit_request: Уреди барање
       favorite_tooltip: додајте го прашањево во вашите омилени
       flag: знаменце
       flagged_as: означени како
       flags: пријавено како
       last_activity: последна активност
+      open: Отворени
       related_questions: поврзани прашања
       request_closing: побарај затворање
       request_closing_details: побарај затворање на прашањево
+      request_opening: Побарај повторно отворање
+      request_opening_details: Побарај повторно отворање на прашањево
+      requested_close_as: Побаравте да се затвори прашањево како
+      requested_reopening: Побаравте повторно отворање на прашањево
       retag: преозначи
-      retract_request: веќе имате поставено барање. дали би сакале да го повлечете?
+      retract_request: Повлечи барање
       share: сподели го прашањево на
       share_on: сподели го прашањево на %{site}
       solution: решение

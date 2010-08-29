@@ -1,0 +1,43 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  notifier: 
+    earned_badge: 
+      message1: Tu ha ganiate un insignia %{badge} in %{app}
+      message2: "Description del insignia:"
+      message3: Tu pote vider tote tu insignias in tu %{user_page}
+    favorited: 
+      message1: "%{user} addeva tu question como favorite in %{group}"
+      message2: "Le texto de tu question:"
+      message3: "Tu pote vider lo hic:"
+    follow: 
+      message1: "%{user} seque ora tu questiones e responsas in %{app}"
+      message2: Tu pote reciprocar con un clic super le button "Sequer" in su %{user_page}
+    give_advice: 
+      message1: "%{user} justo poneva un question a que tu forsan sape responder:"
+      message2: "Tu pote responder a iste message hic:"
+      message3: "O, si tu cognosce un persona qui forsan sape responder, invia le iste ligamine de referimento:"
+      message4: Si nos non recipe tosto un responsa de te, nos lo demandara a qualcuno altere. Tu pote sempre responder al question quandocunque tu vole.
+    global: 
+      hi: Salute %{user},
+      user_page: pagina de usator
+    new_answer: 
+      message: "%{user} respondeva %{new_answer} al question %{question}"
+    new_comment: 
+      message: "%{user} commentava %{new_comment} al question %{question}"
+    new_feedback: 
+      message1: Le usator %{user} <%{email}> ha inviate un retroaction
+      message2: Un usator anonyme ha inviate un retroaction ab le adresse IP %{ip}
+      message3: "Adresse de e-mail: %{email}"
+      message4: "Subjecto: %{subject}"
+    report: 
+      message1: Reporto pro le gruppo %{group.name}
+      message2: Depost %{since}
+      message3: "%{questions} questiones ha essite create"
+      message4: "%{answers} responsas ha essite create"
+      message5: "%{votes} votos ha essite exprimite"
+      message6: "%{badges} insignias ha essite conferite"
+      message7: Le conto ha %{users} usatores.
+      message8: Visita tu gruppo a %{link}

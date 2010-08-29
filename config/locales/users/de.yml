@@ -44,6 +44,8 @@ de:
       vote_to_close_any_question: Beantrage die Beendigung einer beliebigen Frage
       vote_to_close_own_question: Beantrage die Beendigung einer eigenen Frage
       vote_up: Aufwerten
+    anonymous_form: 
+      never_shown: nie angezeigt
     create: 
       flash_error: Wir konnten dieses Nutzerkonto leider nicht einrichten. Versuche es erneut oder kontaktiere einen Administrator (Link s.o.).
       flash_notice: Vielen Dank für die Anmeldung!

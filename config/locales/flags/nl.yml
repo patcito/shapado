@@ -2,20 +2,31 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Siebrand
-nl:
-  activerecord:
-    attributes:
-      flag:
+nl: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: Reden
-    models:
+    models: 
       flag: Markering
       flags: Markeringen
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: U kunt dit niet markeren
       flash_notice: Dan u wel voor uw rapport
-    form:
+    destroy: 
+      flash_notice: Uw markering is ingetrokken.
+    edit: 
+      title: Markering van {{model}} bewerken
+    form: 
       attention: Heeft aandacht van een moderator nodig
       label: Markeer alstublieft alleen als het nodig is
       offensive: Aanstootgevend, beledigend of haatdragend
       spam: Spam
+    model: 
+      messages: 
+        already_requested: U hebt dit {{model}} al gemarkeerd
+    new: 
+      title: "{{model}} markeren"
+    update: 
+      flash_notice: De markering van de vraag is bijgewerkt.

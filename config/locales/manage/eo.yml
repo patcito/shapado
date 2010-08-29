@@ -1,0 +1,43 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+eo: 
+  admin: 
+    manage: 
+      content: 
+        top_bar_tip: Enigu po unu ligilon en linion
+      properties: 
+        constrains: 
+          reputation_constrains_description: Tiu ĉi respondilo ebligas al vi agordi, kiom da reputacio uzantoj devas havi por povi fari certan agon
+          reputation_constrains_subtitle: Listo de reputaci-necesaĵoj por ĉiu ago
+          title: Necesaĵoj
+        domain: 
+          instruction1: Por fari tion, vi unue ensalutu ĉe via domajnprovizisto. Tio estas la paĝaro, kie vi aĉetis vian domajnon, ekzemple %{subdomain}.com.
+          instruction2: Tie vi iru al la DNS-parto kaj kreu CNAME-on.
+          instruction3: Elektu 'www' aŭ ion alian kiel nomon de via CNAME.
+          instruction4: "Tiam en la gastigan aŭ celan kampon metu vian nunan Shapado-domajnon: %{domain}."
+          instruction5: Kiam tio estas farita, post proksimume unu horo, via domajno www.%{subdomain} direktigos al %{appdomain}.
+          instruction6: Kiam estas tiel, revenu tien ĉi kaj enigu vian domajnnamon www.%{subdomain} en la ĉi-malsupran kampon kaj klaku la butonon 'ĝisdatigi'. Se vi havas demandojn, demandu nin en la %{chat_url} aŭ en nia konsultejo.
+          title: Agordi vian domajnon
+          warning: Ĉu vi certas, ke vi volas ŝanĝi vian domajnon?
+        general: 
+          title: Ecoj de grupo
+        rewards: 
+          reputation_rewards_description: Tiu ĉi respondilo ebligas al vi agordi, kiel uzantoj povas gajni kaj perdi reputacion por certa ago
+          reputation_rewards_subtitle: Listo de reputacirekompencoj
+          title: Rekompencoj
+        share: 
+          add_tags: Aldoni etikedojn al viaj pepaĵoj
+          asking_from_twitter: Demandi per Twitter
+          ends_with_example: "t. e. #shapado"
+          facebook_app: Facebook-programagordoj
+          question_must_include: La demando devas enhavi la jenan etikedon por esti sendata al Twitter
+          question_must_include_example: "t. e. #miDemandas"
+          secret_key: Sekreta ŝlosilo
+          starts_with_example: "t. e. #qa"
+          title: Disvastigi
+          title_on_dlvr: Disvastigi ĉe dlvr.it
+          twitter_account: La Twitter-konto, al kiu uzantoj demandos.
+        theme: 
+          title: Agordi la aspekton de la grupo

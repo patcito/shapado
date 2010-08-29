@@ -1,0 +1,22 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  open_requests: 
+    create: 
+      flash_notice: Het heropeningsverzoek is opgeslagen
+    destroy: 
+      flash_notice: Het heropeningsverzoek is verwijderd
+    edit: 
+      title: Heropeningsverzoek bewerken
+    form: 
+      request_opening_details: Heropeningsverzoek voor deze vraag indienen
+    index: 
+      title: Lijst met heropeningsverzoeken
+    model: 
+      prural_name: Heropeningsverzoeken
+    new: 
+      title: Heropeningsverzoek
+    update: 
+      flash_notice: Het heropeningsverzoek is bijgewerkt

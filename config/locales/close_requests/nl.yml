@@ -8,6 +8,8 @@ nl:
       flash_notice: Het sluitingsverzoek is ingediend
     destroy: 
       flash_notice: Het sluitingsverzoek is afgehandeld
+    edit: 
+      title: Sluitingsverzoek bewerken
     form: 
       close_with_reason: Deze vraag met deze reden sluiten
       dupe: Duplicaat

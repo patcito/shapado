@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
-pt-PT:
-  activerecord:
-    attributes:
-      reason:
-        type: Motivo
-    models:
+pt-PT: 
+  activerecord: 
+    attributes: 
+      flag: 
+        reason: Motivo
+    models: 
       flag: Reportada
       flags: Reportadas
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: Não pode reportar isto
       flash_notice: Obrigado por ter reportado
-    form:
+    form: 
       attention: Requer a atenção do moderador
       label: Reporte com cuidado, por favor
       offensive: Conteúdo ofensivo, abusivo ou insultuoso

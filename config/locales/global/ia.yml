@@ -20,8 +20,8 @@ ia:
     active: Activar
     by: per
     current: Actual
-    from: ex {{site}}
-    group_not_found: Le pagina {{url}} non existe
+    from: de %{site}
+    group_not_found: Le pagina %{url} non existe
     or: o
     permission_denied: Permission refusate
     please_login: Per favor aperi un session
@@ -32,13 +32,13 @@ ia:
     any: Qualcunque
     user: Mi linguas preferite
   messages: 
-    success: Le {{model}} ha essite {{action}} con successo.
+    success: "%{model} ha essite %{action} con successo."
   models: 
     question: Le question
   number: 
     x_time: 
-      one: "{{count}} vice"
-      other: "{{count}} vices"
+      one: "%{count} vice"
+      other: "%{count} vices"
       zero: Nunquam
   scaffold: 
     add: Adder
@@ -50,12 +50,12 @@ ia:
     details: Detalios
     edit: Modificar
     more: Plus...
-    new: Adder nove {{model}}
+    new: Adder nove %{model}
     save: Salveguardar
     send: Inviar
     show: Monstrar
-    sure: Es tu secur de voler deler iste {{model}}?
+    sure: Es tu secur de voler deler iste %{model}?
     update: Actualisar
   time: 
-    ago: "{{time}} retro"
+    ago: "%{time} retro"
     today: hodie

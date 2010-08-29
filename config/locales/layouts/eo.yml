@@ -1,0 +1,50 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+# Author: Gufulo
+eo: 
+  layouts: 
+    application: 
+      ask_question: Demandi
+      badges: Insignoj
+      forgot: Ĉu vi forgesis?
+      home: Ĉefpaĝo
+      languages: Lingvoj
+      log_in: Ensaluti
+      logged: Ensalutinta kiel %{login}
+      logout: Elsalutu
+      manage_ads: Administri reklamojn
+      moderate: Administri
+      now: nun!
+      openid: 
+        explaination: "Se vi volas registriĝi aŭ simple nur ensaluti, bonvolu elekti vian OpenID-proviziston:"
+      pages: Paĝoj
+      questions: Demandoj
+      questions_in: Demandoj en
+      questions_tagged: etikedita kiel
+      search: Serĉi
+      settings: Agordoj
+      signup: Registriĝi
+      subscribe: Aboni
+      tags: Etikedoj
+      title: Demandoj kaj respondoj
+      unanswered: Sen respondo
+      users: Uzantoj
+      welcome_from: Bonvenon! Vi povas
+    manage: 
+      actions: Agoj
+      announcements: Anoncoj
+      constrains: Necesaĵoj
+      content: Enhavo
+      domain: Domajno
+      general: Ĝenerala
+      members: Anoj
+      pages: Paĝoj
+      properties: Ecoj
+      reputation: Reputacio
+      rewards: Rekompencoj
+      stats: Statistikoj
+      theme: Aspekto
+    notifications: 
+      message: Se vi ne plu volas ricevi aŭtomatajn sciigojn de %{domain}, ŝanĝu viajn preferojn en la ekrano de sciigoj

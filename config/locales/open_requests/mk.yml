@@ -1,0 +1,22 @@
+# Messages for Macedonian (Македонски)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Bjankuloski06
+mk: 
+  open_requests: 
+    create: 
+      flash_notice: Барањето за потворно отворање е успешно создадено
+    destroy: 
+      flash_notice: Барањето за потворно отворање е успешно избришано
+    edit: 
+      title: Уреди барање за затворање
+    form: 
+      request_opening_details: Побарај повторно отворање на прашањево
+    index: 
+      title: Список на барања за повторно отворање
+    model: 
+      prural_name: Барања за повторно отворање
+    new: 
+      title: Барање за повторно отворање
+    update: 
+      flash_notice: Барањето за потворно отворање е успешно подновено

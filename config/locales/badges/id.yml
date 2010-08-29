@@ -1,0 +1,88 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    models: 
+      badge: Lencana
+      badges: Lencana
+  badges: 
+    index: 
+      title: lencana
+    shared: 
+      addict: 
+        description: Mengunjungi situs ini setiap hari selama 20 hari berturut-turut
+      celebrity: 
+        description: Mendapatkan lebih dari 100 pengikut
+        name: Selebriti
+      citizen_patrol: 
+        description: Kiriman tertandai pertama
+      civic_duty: 
+        description: Memeroleh 300 suara
+        name: Tugas sipil
+      critic: 
+        description: Memberi suara menolak untuk pertama kalinya
+      effort_medal: 
+        description: Memeroleh 100 suara mendukung
+      famous_question: 
+        description: Menanyakan pertanyaan dengan 10000 kali dilihat
+      fanatic: 
+        description: Mengunjungi situs ini setiap hari selama 100 hari berturut-turut
+      friendly: 
+        name: Ramah
+      great_answer: 
+        name: Jawaban bagus
+      great_question: 
+        name: Pertanyaan hebat
+      inquirer: 
+        description: Bertanya untuk pertama kalinya
+      interesting_person: 
+        description: Mendapatkan lebih dari 10 pengikut
+        name: Orang menarik
+      merit_medal: 
+        description: Memeroleh 200 suara mendukung
+      necromancer: 
+        name: Tukang sihir
+      nice_answer: 
+        name: Jawaban bagus
+      nice_question: 
+        name: Pertanyaan bagus
+      notable_question: 
+        description: Menanyakan pertanyaan dengan 2500 kali dilihat
+      organizer: 
+        description: Tag kembali pertama
+        name: Penyelenggara
+      pioneer: 
+        description: Jadilah salah satu pengguna pertama yang mendaftar
+      popstar: 
+        description: Maksimal 500 suara mendukung, 10 suara menolak
+      popular_person: 
+        description: Mendapatkan lebih dari 50 pengikut
+        name: Orang terkenal
+      popular_question: 
+        description: Menanyakan pertanyaan dengan 1000 kali dilihat
+      rockstar: 
+        description: Maksimal 1000 suara mendukung, 10 suara menolak
+      scholar: 
+        description: Jawaban yang pertama diterima di pertanyaan Anda
+        name: Sarjana
+      self-learner: 
+        name: Pelajar otodidak
+      service_medal: 
+        description: 300 suara positif
+      shapado: 
+        description: Mengunjungi situs ini setiap hari selama 8 hari berturut-turut
+      stellar_question: 
+        name: Pertanyaan berbintang
+      student: 
+        description: Menanyakan pertanyaan pertama dengan sedikitnya satu suara mendukung
+      supporter: 
+        description: Memberi suara mendukung untuk pertama kalinya
+      troubleshooter: 
+        description: Terjawab untuk pertama kalinya
+    show: 
+      earned: diperoleh
+      for_tag_bronze: 200 suara di tag %{tag}
+      for_tag_gold: 1000 suara di tag %{tag}
+      for_tag_silver: 400 suara di tag %{tag}

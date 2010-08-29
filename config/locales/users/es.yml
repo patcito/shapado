@@ -42,7 +42,7 @@ es:
       retag_others_questions: cambiar las etiquetas de las preguntas de otros usuarios
       vote_down: votar negativo
       vote_to_close_any_question: request closing any question
-      vote_to_close_own_question: request closing own question
+      vote_to_close_own_question: Pedir cerrar su propia pregunta
       vote_up: votar positivo
     create: 
       flash_error: no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba).

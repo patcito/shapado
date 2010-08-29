@@ -1,0 +1,22 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+eo: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Vi gajnis insignon ĉe %{group}!
+      favorited: 
+        subject: "%{login} aldonis vian demandon al sia listo de plej ŝatataj!"
+      follow: 
+        subject: "%{login} eksekvis vin en %{app}"
+      give_advice: 
+        friend_subject: "Via amiko bezonas helpon: %{question_title}"
+        subject: "Ni bezonas vian konsilon: %{question_title}"
+      new_answer: 
+        subject_friend: Via amiko %{login} respondis la demandon %{title}
+        subject_other: "%{login} respondis la demandon %{title}"
+        subject_owner: "%{login} respondis vian demandon %{title}"
+      new_comment: 
+        subject: "%{login} komentis ĉe %{group}"

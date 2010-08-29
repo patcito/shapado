@@ -1,0 +1,22 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Gufulo
+eo: 
+  errors: 
+    forbidden: 
+      explanation: Vi ne havas la postulatajn rajtojn por aliri ĉi tiun paĝon
+      title: Aliro malpermesita
+    go_to: Iru al la paĝo %{link}
+    help_us_answer: Helpu nin respondi %{link}
+    internal_error: 
+      explanation: Ni jam estis avertitaj pri tiu problemo kaj ni planas esplori ĝin kiel eble plej frue.
+      title: Ni bedaŭras, sed estis eraro.
+    not_found: 
+      explanation: Eble vi mistajpis la adreson aŭ la paĝon delokiĝis.
+      title: Paĝo ne trovita.
+    options_label: "Aliaj aĵoj kiujn vi povas fari:"
+    search: Serĉu
+    unprocessable_entity: 
+      explanation: Eble vi intencis modifi ion senpermese.
+      title: La modifo kiun vi celis estis malakceptita.

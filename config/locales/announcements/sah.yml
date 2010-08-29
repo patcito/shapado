@@ -1,0 +1,20 @@
+# Messages for Yakut (Саха тыла)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: HalanTul
+sah: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Манан бүтэр
+        message: Биллэрии сурук
+        only_anonymous: Ааттарын эппэтэх эрэ кыттаччыларга
+        starts_at: Мантан саҕаланар
+  announcements: 
+    actions: 
+      delete: Соторго
+      title: Дьайыылар
+    create: 
+      success: Биллэрии сөпкө оҥоһулунна
+    index: 
+      title: Биллэриилэр

@@ -1,0 +1,22 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  wiki: 
+    actions: 
+      all_history: Kembali ke versi terdahulu
+      back_to_question: Kembali ke pertanyaan
+      revert: Kembalikan ke versi ini
+      show_diff: Bandingkan versi terpilih
+    diff: 
+      title: Perbedaan antara %{prev} dan %{curr}
+    history: 
+      current_version: Versi terkini
+      previous_versions: Versi sebelumnya
+      title: Versi terdahulu (%{count})
+      version: Versi
+      version_summary: Ringkasan versi
+    model: 
+      attributes: 
+        message: Ringkasan

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Patcito
 es: 
   activerecord: 
     models: 
@@ -42,7 +43,7 @@ es:
         description: recibir 100 votos positivos
       enlightened: 
         description: primera respuesta aceptada con al menos 10 votos positivos
-        name: enlightened
+        name: Iluminado
       famous_question: 
         description: hace una pregunta con 10000 visitas
       fanatic: 

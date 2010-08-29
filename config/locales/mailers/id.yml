@@ -1,0 +1,24 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Anda mendapatkan lencana di %{group}!
+      favorited: 
+        subject: "%{login} menambahkan pertanyaan Anda ke dalam favoritnya!"
+      follow: 
+        subject: "%{login} sekarang mengikuti Anda di %{app}"
+      give_advice: 
+        friend_subject: "Teman Anda butuh bantuan:  %{question_title}"
+        subject: "Kami butuh saran Anda:  %{question_title}"
+      new_answer: 
+        subject_friend: Teman Anda %{login} menjawab pertanyaan %{title}
+        subject_other: "%{login} menjawab pertanyaan %{title}"
+        subject_owner: "%{login} menjawab pertanyaan Anda %{title}"
+      new_comment: 
+        subject: "%{login} memberi komentar di %{group}"
+      report: 
+        subject: Laporkan grup %{group} di %{app}

@@ -2,10 +2,11 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Giro720
+# Author: McDutchie
 pt-BR: 
   activerecord: 
     models: 
-      vote: Votar
+      vote: Voto
       votes: Votos
   votes: 
     control: 

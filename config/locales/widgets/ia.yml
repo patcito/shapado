@@ -1,0 +1,30 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  widgets: 
+    badges: 
+      description: Iste widget monstra insignias recentemente ganiate per usatores o questiones
+      title: Insignias recente
+    groups: 
+      description: Iste widgets monstra le ultime gruppos
+      title: Gruppos recente
+    index: 
+      description: Usa le sagittas pro displaciar tu widgets
+      title: Administrar widgets del barra lateral
+    pages: 
+      description: Iste widget monstra le lista de paginas wiki
+      title: Paginas wiki
+    tag_cloud: 
+      description: Iste widget monstra un nube de etiquettas
+      title: Etiquettario
+    top_groups: 
+      description: Iste widget monstra le prime cinque gruppos
+      title: Prime 5 gruppos
+    top_users: 
+      description: Iste widget monstra le prime cinque usatores
+      title: Prime 5 usatores
+    users: 
+      description: Iste widget monstra le membros registrate recentemente
+      title: Usatores recente

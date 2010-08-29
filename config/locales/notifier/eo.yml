@@ -1,0 +1,42 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+eo: 
+  notifier: 
+    earned_badge: 
+      message1: Vi gajnis %{badge}-insignon ĉe %{app}
+      message2: "Insignopriskribo:"
+      message3: Vi povas vidi ĉiujn viajn insignojn sur via %{user_page}
+    favorited: 
+      message1: "%{user} aldonis vian demandon kiel plej ŝatatan ĉe %{group}"
+      message2: "La teksto de via demando:"
+      message3: "Vi povas vidi ĝin tie ĉi:"
+    follow: 
+      message1: "%{user} nun sekvas viajn demandojn kaj respondojn ĉe %{app}"
+      message2: Vi povas resekvi tiun klakante ties butonon "Sekvi" sur ties %{user_page}
+    give_advice: 
+      message1: "%{user} ĵus demandis ion, kion vi eble povas respondi:"
+      message2: "Por respondi, simple respondu al tiu ĉi mesaĝo tie ĉi:"
+      message3: "Aŭ, se vi konas iun, kiu eble povas respondi, sendu tiun ĉi referencoligilon al tiu:"
+      message4: Se ni ne baldaŭ ricevas respondon de vi, ni demandos aliulon. Vi povas ankoraŭ respondi ĝin, kiam ajn vi volas.
+    global: 
+      hi: Saluton, %{user},
+      user_page: uzantpaĝo
+    new_answer: 
+      message: "%{user} respondis %{new_answer} al la demando %{question}"
+    new_comment: 
+      message: "%{user} komentis %{new_comment} al la demando %{question}"
+    new_feedback: 
+      message1: La uzanto %{user} <%{email}> sendis takson
+      message2: Anonimulo sendis takson de la IP-adreso %{ip}
+      message3: "Retpoŝtadreso: %{email}"
+      message4: "Temo: %{subject}"
+    report: 
+      message2: Ekde %{since}
+      message3: "%{questions} demandoj estis kreitaj"
+      message4: "%{answers} respondoj estis kreitaj"
+      message5: "%{votes} voĉdonoj estis faritaj"
+      message6: "%{badges} insignoj estis fordonitaj"
+      message7: La konto havas %{users} uzantojn.
+      message8: Viziti vian grupon ĉe %{link}

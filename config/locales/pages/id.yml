@@ -1,0 +1,34 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Pengubah tampilan
+        js: JavaScript
+    models: 
+      page: Halaman
+      pages: Halaman
+  pages: 
+    actions: 
+      create_page: Buat halaman baru
+      edit_page: Sunting halaman
+      title: Tindakan
+    create: 
+      success: Halaman berhasil dibuat.
+    edit: 
+      title: Menyunting halaman
+    form: 
+      language_tip: Bahasa halaman
+      title_tip: "Judul halaman. Gunakan ini untuk merujuk halaman. Contoh: [[FAQ|baca faq]]"
+    index: 
+      create_page: Buat halaman baru
+      title: Daftar bahasa
+      written_in: Ditulis dalam %{language}
+    new: 
+      title: Halaman baru
+    title: Perbaiki
+    update: 
+      success: Halaman berhasil dimutakhirkan.

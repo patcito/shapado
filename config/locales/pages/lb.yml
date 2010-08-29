@@ -20,7 +20,9 @@ lb:
     form: 
       language_tip: Sprooch vun der Säit
     index: 
+      create_page: Nei Säit uleeën
       title: Säitelëscht
+      written_in: op  %{language} geschriwwen
     new: 
       title: Nei Säit
     title: Verbesser mech

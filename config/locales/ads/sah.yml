@@ -1,0 +1,16 @@
+# Messages for Yakut (Саха тыла)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: HalanTul
+sah: 
+  ads: 
+    ad_links: Саҥа арбыыр биллэрии %{type} эбии
+    create: 
+      success: Арбыыр биллэрии сөпкө оҥоһулунна
+    index: 
+      add_adbard: Саҥа Ad Bard биллэриини эбии
+      add_adsense: Google AdSense саҥа биллэриитин эбии
+      title: Арбааһын
+    name: "Аата:"
+    position: "Миэстэтэ:"
+    title: Саҥа арбыыр биллэрии %{type} эбии

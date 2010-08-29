@@ -1,0 +1,25 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    models: 
+      vote: Voto
+      votes: Votos
+  votes: 
+    control: 
+      have_voted_down: Clicca pro disfacer tu voto negative
+      have_voted_up: Clicca pro disfacer tu voto positive
+      to_vote_down: Clicca pro votar negativemente
+      to_vote_up: Clicca pro votar positivemente
+    create: 
+      flash_error: Tu non pote votar isto
+      flash_notice: Gratias pro votar!
+      unauthenticated: Usatores anonyme non pote votar
+    destroy: 
+      flash_notice: Tu voto ha essite revocate con successo.
+    model: 
+      messages: 
+        closed_question: Tu non pote votar in entratas que pertine a un question claudite
+        vote_down_comment: Commentos non pote esser votate negativemente

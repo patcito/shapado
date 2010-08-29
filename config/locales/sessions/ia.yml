@@ -1,0 +1,22 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  sessions: 
+    create: 
+      flash_error: Non poteva aperir tu session como '%{login}'
+      flash_notice: Session aperite con successo
+    destroy: 
+      flash_notice: Tu session ha essite claudite.
+    new: 
+      log_in: Aperir session
+      not_registered: Non ancora registrate?
+      registered: Jam registrate?
+      remember_me: Memorar me
+      sign_in: Aperir session
+      signup: Crear conto
+      with_authentication: Aperir session con nostre systema de authentication
+      with_facebook: Aperir session con Facebook
+      with_openid: Aperir session con OpenID
+      with_twitter: Aperir session con Twitter

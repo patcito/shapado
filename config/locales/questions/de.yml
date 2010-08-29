@@ -95,16 +95,22 @@ de:
       ban: Verbieten
       close: Beendet
       close_reason: "Die Frage wurde aus folgenden Gründen beendet:"
+      edit_request: Bitte bearbeiten
       favorite_tooltip: Diese Frage zur Favoritenliste hinzufügen
       flag: Kennzeichen
       flagged_as: Gekennzeichnet als
       flags: Gemeldet als
       last_activity: Letzte Aktivität
+      open: Öffnen
       related_questions: Ähnliche Frage
-      request_closing: Beendigung beantragen
-      request_closing_details: Beantrage diese Frage zu beenden
+      request_closing: Um Beendigung der Frage bitten
+      request_closing_details: Um Beendigung dieser Frage bitten
+      request_opening: Bitte um Aktivierung
+      request_opening_details: Um die erneute Aktivierung dieser Frage bitten
+      requested_close_as: Du batest um Beendigung dieser Frage als
+      requested_reopening: Du hast um die erneute Aktivierung dieser Frage gebeten
       retag: Stichwörter ändern
-      retract_request: Du hast bereits einen Antrag gestellt. Möchtest Du ihn zurückziehen?
+      retract_request: Bitte zurückziehen
       share: Auf diese Frage aufmerksam machen bei
       share_on: Auf diese Frage bei %{site} aufmerksam machen
       solution: Lösung

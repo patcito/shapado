@@ -1,0 +1,16 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rolo
+  members: 
+    form: 
+      login_tip: Cercar durante que tu digita
+    index: 
+      manage_members_title: Gerer membros
+      title: Membros del gruppo de %{name}
+      title_isolate: Membros de %{name}

@@ -1,10 +1,11 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Peter17
 fr: 
   shared: 
     current_tags: 
-      title: selected tags
+      title: Étiquettes sélectionnées
     topbar: 
       admin: administrer
       logged_as: connecté en tant que %{login}

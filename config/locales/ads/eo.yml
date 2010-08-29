@@ -2,14 +2,15 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: ArnoLagrange
+# Author: Gufulo
 # Author: LaPingvino
 eo: 
   ads: 
     ad_links: Aldoni novan reklamon %{type}
     create: 
-      success: Anonco estis sukcese kreita.
+      success: Reklamo estis sukcese kreita.
     index: 
-      add_adbard: Aldoni novan ''adbard''-anoncon
+      add_adbard: Aldoni novan „Ad Bard”-reklamon
       add_adsense: Aldoni novan reklamon Google AdSense
       title: Reklamo
     name: "Nomo:"

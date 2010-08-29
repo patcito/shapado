@@ -1,0 +1,22 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  sessions: 
+    create: 
+      flash_error: Tidak dapat masuk log sebagai '%{login}'
+      flash_notice: Berhasil masuk log
+    destroy: 
+      flash_notice: Anda telah keluar log.
+    new: 
+      log_in: Masuk log
+      not_registered: Belum mendaftar?
+      registered: Sudah terdaftar?
+      remember_me: Ingat saya
+      sign_in: Daftar
+      signup: Daftar
+      with_authentication: Masuk log dengan sistem otentikasi kami
+      with_facebook: Daftar dengan Facebook
+      with_openid: Masuk log dengan OpenID
+      with_twitter: Daftar dengan Twitter

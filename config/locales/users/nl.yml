@@ -43,6 +43,8 @@ nl:
       vote_to_close_any_question: Sluitingsverzoek voor een vraag indienen
       vote_to_close_own_question: Sluitingsverzoek voor eigen vraag indienen
       vote_up: Positief beoordelen
+    anonymous_form: 
+      never_shown: nooit weergegeven
     create: 
       flash_error: Het was niet mogelijk die gebruiker aan te maken. Probeer het opnieuw of neem contact op met een beheerder via de verwijzing hierboven.
       flash_notice: Bedankt voor uw aanmelding!

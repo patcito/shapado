@@ -18,6 +18,7 @@ br:
     tag: Koumanantiñ d'an dikedenn
     user: En em enskrivit da goulennoù an implijer
   global: 
+    active: Gweredekaat
     by: gant
     current: Red
     from: eus %{site}

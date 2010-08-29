@@ -1,0 +1,12 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  shared: 
+    current_tags: 
+      title: Etiquettas seligite
+    topbar: 
+      admin: Admin
+      logged_as: Authenticate como %{login}
+      user_page: Mi pagina

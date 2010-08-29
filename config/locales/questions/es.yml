@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   activerecord: 
     attributes: 
@@ -69,7 +70,7 @@ es:
       how_to_ask: como preguntar
       title: pregunte
     question: 
-      accepted_tooltip: Esta pregunta ha sido contestada
+      accepted_tooltip: Esta pregunta tiene una respuesta aceptada
     retag: 
       title: re-etiquetar
     retag_form: 

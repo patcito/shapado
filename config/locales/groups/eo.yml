@@ -1,0 +1,68 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+# Author: Gufulo
+eo: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Defaŭltaj etikedoj
+        description: Priskribo
+        domain: Domajno
+        fb_button: Ebligi Facebook-ecan butonon (ne privateca)
+        forum: Permesi pli ol unu respondon por ĉiu uzanto
+        group_created_by: kreita de
+        language: Lingvo
+        legend: Klarigeto
+        may_contain_adult_content: Tiu ĉi paĝaro eble enhavas materialon por plenkreskuloj
+        name: Nomo
+        openid_only: Nur OpenID-uzantoj povas atingi la paĝaron
+        owner: Tiun ĉi grupon kreis %{login}
+        registered_only: Nur registritaj homoj povas atingi la paĝaron
+        subdomain: Retadreso
+        wysiwyg_editor: Ebligi pli bone uzeblan redaktilon
+    models: 
+      default_tags_message: Vi ne rajtas havi pli da 10 etikedojn defaŭlte
+      group: Grupo
+      groups: Grupo
+  groups: 
+    create: 
+      flash_notice: Via grupo estis sukcese kreita. Vi jam povas ekagordi ĝin.
+    form: 
+      access: Agordoj de Aliro
+      analytics_engine: Motoro de analizo
+      analytics_legend: La grupo rajtos uzi ĝian propran spurado-kodon
+      custom_analytics: Permesu Tajloritajn Analizojn (Analytics)
+      custom_html: Permesu tajloritan HTML
+      custom_js: Permesu tajloritan Ĝavoskripton
+      default_tags_legend: Apartigu etikedojn per komoj. Nur 10 etikedoj permesitaj defaŭlte.
+      description_legend: Eblas uzi 400 signojn por priskribi la grupon.
+      isolate_group: Izoligu la grupon el la aliaj grupoj
+      legend_legend: Ĉi tiu estos uzita en la titolo. Eblas uzi 40 signojn.
+      logo_legend: Vi povas alŝuti la grupa emblemo. La maksimuma dosier-grando estas 2MB.
+      members_only: Nur la grup-membroj havos aliron al ĉi tiu grupo
+    group: 
+      about: Pri
+      accept_group: Akceptu ĉi tiun grupon
+      allow_ads: Permesu reklamojn
+      close: Fermu
+      close_group: Fermu ĉi tiun grupon
+      disallow_ads: Malpermesu reklamojn
+    index: 
+      actives: Aktiva
+      filter: Serĉu grupojn
+      most_active: Plej aktiva
+      name: Nomo
+      request_group: Petu novan grupon
+      title: Grupoj
+    new: 
+      title: Kreu vian grupon
+    show: 
+      accept_group: Akceptu ĉi tiun grupon
+      accept_group_with_custom_ads: Akceptu grupon kaj permesu tajloritajn anoncojn
+      close_group: Fermu ĉi tiun grupon
+      group_awaiting_acceptance: Ĉi tiu grupo atendas aprobon far kontrolanto
+      group_closed: Ĉi tiu grupo estis fermita.
+      title: Pri %{name}
+      visit_group: Vizitu ĉi tiun grupon

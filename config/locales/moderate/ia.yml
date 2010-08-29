@@ -1,0 +1,16 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  admin: 
+    moderate: 
+      index: 
+        all: Totes
+        ban: Bannir
+        banned: Questiones bannite
+        content: Contento
+        flagged: Questiones marcate
+        item_title: Titulo
+        need_tags: Re-etiquettar
+        title: Moderate

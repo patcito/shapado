@@ -1,0 +1,13 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    models: 
+      favorite: Favorite
+      favorites: Favorites
+  unfavorites: 
+    create: 
+      success: Le question ha essite removite de tu favorites
+      unauthenticated: Tu debe haber un conto pro remover un favorite

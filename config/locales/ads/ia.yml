@@ -4,7 +4,7 @@
 # Author: McDutchie
 ia: 
   ads: 
-    ad_links: Adder un nove annuncio {{type}}
+    ad_links: Adder un nove annuncio %{type}
     create: 
       success: Le annuncio ha essite create con successo.
     index: 
@@ -13,4 +13,4 @@ ia:
       title: Publicitate
     name: "Nomine:"
     position: "Position:"
-    title: Adder un nove annuncio {{type}}
+    title: Adder un nove annuncio %{type}

@@ -1,0 +1,63 @@
+# Messages for Esperanto (Esperanto)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Darkweasel
+# Author: Gufulo
+# Author: LaPingvino
+eo: 
+  actions: 
+    closed: Fermita
+    created: creita
+    deleted: forigita
+    updated: Ĝisdatigita
+  feeds: 
+    feed: RSS-fonto
+    post_new_questions: Sendu novajn demandojn al
+    question: Abonu al tiu ĉi demando
+    questions: Abonu ĉiujn demandojn
+    share_on_twitter: twitter, facebook kaj pli...
+    tag: Aboni la etikedon
+    user: Aboni demandojn de uzanto
+  global: 
+    active: Aktivigu
+    by: de
+    current: Nuna
+    from: el %{site}
+    group_not_found: La paĝo %{url} ne ekzistas
+    or: aŭ
+    permission_denied: Permeso neita
+    please_login: Bonvolu ensaluti
+    preview: Antaŭrigardo
+    previous: Antaŭa
+    share: Diskonigu
+  languages: 
+    any: Iu ajn
+    user: Miaj Preferataj Lingvoj
+  messages: 
+    success: "%{model} estis sukcese %{action}"
+  models: 
+    question: La demando
+  number: 
+    x_time: 
+      one: "%{count} fojon"
+      other: "%{count} fojojn"
+      zero: Neniam
+  scaffold: 
+    add: Aldonu
+    back: Reen
+    cancel: Nuligu
+    close: Fermu
+    create: Kreu
+    destroy: Forviŝu
+    details: Detaloj
+    edit: Redaktu
+    more: Pli...
+    new: Aldonu novan %{model}n
+    save: Konservu
+    send: Sendu
+    show: Montru
+    sure: ĉu vi vere volas forviŝi tiun %{model}n?
+    update: Ĝisdatigu
+  time: 
+    ago: "%{time} antaŭe"
+    today: hodiaŭ

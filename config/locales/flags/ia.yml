@@ -2,20 +2,31 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
-ia:
-  activerecord:
-    attributes:
-      flag:
+ia: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: Motivo
-    models:
+    models: 
       flag: Reporto
       flags: Reportos
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: Tu non pote reportar isto
       flash_notice: Gratias pro tu reporto
-    form:
+    destroy: 
+      flash_notice: Tu marca ha essite revocate con successo.
+    edit: 
+      title: Modificar le marca de {{model}}
+    form: 
       attention: Require attention de un moderator
       label: Per favor reporta con cautela
       offensive: Discurso offensive, abusive o odiose
       spam: Spam
+    model: 
+      messages: 
+        already_requested: Tu ha jam marcate iste {{model}}
+    new: 
+      title: Marcar {{model}}
+    update: 
+      flash_notice: Le marca del question ha essite actualisate con successo.

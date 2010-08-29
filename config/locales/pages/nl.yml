@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -21,7 +22,7 @@ nl:
     edit: 
       title: Bezig met het bewerken van pagina
     form: 
-      language_tip: Paginataal
+      language_tip: Taal van de pagina
       title_tip: "Paginanaam. Gebruik dit als referentie aan de pagina. Bijvoorbeeld: [[FAQ|Kijk in de FAQ]]"
     index: 
       create_page: Nieuwe pagina aanmaken

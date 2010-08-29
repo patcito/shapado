@@ -1,6 +1,7 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   admin: 
@@ -10,5 +11,7 @@ br:
         ban: Forbannañ
         banned: Goulenn forbannet
         content: Danvez
+        flagged: Goulennoù bannielet
         item_title: Titl
+        need_tags: Adtikedenniñ
         title: Habaskaat

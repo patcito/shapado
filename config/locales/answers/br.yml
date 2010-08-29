@@ -1,6 +1,7 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   activerecord: 
@@ -23,5 +24,7 @@ br:
       comment_label: Addisplegañ an respont-mañ
       comment_submit: Addispleg
       submit: Respont
+    revert: 
+      title: Disteuler ar respont
     update: 
       flash_notice: Krouet eo bet ar respont ervat.

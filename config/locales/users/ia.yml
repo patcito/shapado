@@ -1,0 +1,90 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: activate le
+        activation_code: Codice de activation
+        age: Etate
+        asked_by: ponite per
+        avatar: Imagine de profilo
+        birthday: Anniversario
+        created_at: registrate
+        current_password: Contrasigno actual
+        email: E-mail
+        fullname: Nomine complete
+        hide_country: Non monstrar mi pais
+        language: Lingua
+        language_filter: Filtrar per lingua
+        last_logged_at: vidite
+        login: Nomine de usator
+        name: Nomine real
+        password: Contrasigno
+        password_confirmation: Confirmation del contrasigno
+        preferred_languages: Selige le linguas que tu cognosce
+        preferred_tags: Etiquettas preferite
+        reputation: Reputation
+        timezone: Fuso horari
+        updated_at: actualisate le
+        website: Sito web
+    models: 
+      user: Usator
+      users: Usatores
+  users: 
+    actions: 
+      edit_others_posts: Modificar le articulos de alteres
+      edit_wiki_post: Modificar articulos wiki
+      flag: Marcar
+      retag_others_questions: Re-etiquettar le questiones de alteres
+      vote_down: Votar negativemente
+      vote_to_close_any_question: Requestar le clausura de qualcunque question
+      vote_to_close_own_question: Requestar le clausura de un proprie question
+      vote_up: Votar positivemente
+    anonymous_form: 
+      never_shown: nunquam monstrate
+    create: 
+      flash_error: Infelicemente, nos non poteva crear iste conto. Per favor reproba, o contacta un administrator (le ligamine es hic supra).
+      flash_notice: Gratias pro registrar te!
+    edit: 
+      enable_twitter: Activar tu contos de Facebook o Twitter
+      submit: Salveguardar
+      title: Configurationes
+    follow: 
+      flash_notice: Le usator %{user} esseva addite a tu amicos
+    form: 
+      activities_notification: Reciper notificationes per e-mail super activitates de systema como insignias ganiate, nove sequitores, etc.
+      avatar_tip: Cambiar le imagine de tu profilo usante Gravatar
+      give_advice_notification: Reciper notificationes per e-mail super questiones in tu campo de expertise
+      information: Information
+      new_answer_notification: Reciper notificationes per e-mail pro nove responsas
+      notifications: Notificationes
+      reports_notification: Reciper un reporto con le ultime activitate del gruppo (solmente pro administratores del gruppo)
+      show_more_lang: Monstrar plus linguas
+    index: 
+      empty: Iste gruppo non ha membros. Participa per unir te a iste gruppo.
+      filter: Cercar usatores
+      name: Nomine
+      name_tooltip: Usatores per ordine alphabetic
+      newest: Le plus nove
+      newest_tooltip: Usatores qui justo se registrava
+      oldest: Le plus ancian
+      oldest_tooltip: Usatores qui esseva le primes a registrar se
+      reputation: Reputation
+      reputation_tooltip: Usatores per ordine descendente de reputation
+      title: Tote le usatores
+    messages: 
+      errors: 
+        reputation_needed: Tu debe haber un reputation de %{min_reputation} pro poter %{action}
+    new: 
+      submit: Crear un conto
+      title: Registrar te como nove usator
+    show: 
+      follow: Sequer
+      title: Usator %{user}
+      unfollow: Non plus sequer
+      views: visitas
+    unfollow: 
+      flash_notice: Le usator %{user} esseva removite de tu amicos

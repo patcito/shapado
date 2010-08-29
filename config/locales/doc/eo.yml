@@ -1,16 +1,25 @@
 # Messages for Esperanto (Esperanto)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Darkweasel
+# Author: Gufulo
 # Author: LaPingvino
 eo: 
   doc: 
+    chat: 
+      title: Babileja subteno
     plans: 
       15millions: 15 milionoj da paĝvidoj monate
+      1million: 1 miliono da paĝlegoj ĉiumonate
+      247_all_support: TTT-a, retpoŝta, babileja kaj telefona tutdiurna subteno
+      5millions: 5 milionoj da paĝlegoj ĉiumonate
+      all_support: Subteno TTT-a, retpoŝta, babileja kaj telefona
       basic_restrictions: Sen propra reklamo nek kun plene adaptebla interfaco
       beta_info: Por nun ĉiuj retejoj ĝuas la samajn eblojn kiel donas la Optimum-plano, krom la subteno kiu nur estas reta, retpoŝte kaj babile.
       big_sites: Multtrafikretejoj
       custom_ads: Uzi vian propran reklamon
       custom_analytics: Trafikstatistikoj
+      custom_domain: Laŭmenda domajno
       custom_themes: Uzi niajn antaŭe faritajn temojn
       custom_ui: Plene ŝanĝebla interfaco
       getting_popular: Populariĝi
@@ -19,4 +28,6 @@ eo:
       plans: Planoj
       private_site: Ebligi privatan/publikan aliron
       support: Subteno
+      unlimited: Nelimigita trafiko ĉiumonate
+      web_support: Subteno TTT-a
       with_unlimited: kun senlima trafiko sen propra reklamo nek propra domajno.

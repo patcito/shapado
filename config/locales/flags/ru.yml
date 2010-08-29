@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Lockal
-ru:
-  activerecord:
-    attributes:
-      flag:
+ru: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: причина
-    models:
+    models: 
       flag: Отметка
       flags: Отметки
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: Вы не можете отметить это
       flash_notice: Благодарим за ваше сообщение
-    form:
+    form: 
       attention: Необходимо внимание модератора
       label: Пожалуйста, будьте внимательны при отметке
       offensive: Агрессия, оскорбление или проявление ненависти

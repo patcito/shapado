@@ -8,6 +8,8 @@ de:
       flash_notice: Beendigungsanfrage wurde erfolgreich erstellt
     destroy: 
       flash_notice: Beendigungsanfrage wurde erfolgreich gelöscht
+    edit: 
+      title: Beendigungsanfrage bearbeiten
     form: 
       close_with_reason: Frage unter Verwendung dieses Grundes beenden
       dupe: Duplikat

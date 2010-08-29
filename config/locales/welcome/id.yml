@@ -1,0 +1,59 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Farras
+id: 
+  welcome: 
+    confirm_age: 
+      notice: Anda hanya diperbolehkan masuk halaman ini bila berusia sedikitnya 18 tahun, atau batas usia menurut hukum di daerah tempat tinggal Anda atau tempat Anda mengakses halaman ini.
+      over_18: Saya berusia lebih dari 18 tahun
+      under_18: Saya berusia di bawah 18 tahun
+      warning: "PERINGATAN: Halaman ini mungkin berisi konten dewasa yang berlebihan."
+    facts: 
+      features: 
+        cols: 
+          adaptable: dapat beradaptasi
+          foss: bebas/sumber terbuka
+          joel: akankah saya membuat joel lebih kaya?
+          multilanguage: multibahasa
+          multitopic: multitopik
+        shapado: 
+          adaptable: ya!
+          foss: ya!
+          joel: tidak :/
+          multilanguage: ya!
+          multitopic: ya!
+        stackexchange: 
+          adaptable: tidak
+          foss: tidak
+          joel: ya!
+          multilanguage: tidak
+          multitopic: tidak
+      prices: 
+        cols: 
+          onsite: di tempat
+        shapado: 
+          large: mungkin $500
+          medium: <=== ditto
+          onsite: mungkin $0 di server Anda
+          small: mungkin $50 hingga $100/bulan di sebagian besar penyedia hosting
+        stackexchange: 
+          large: $1299/bulan
+          medium: $999/bulan
+          onsite: $2500/bulan
+          small: $129/bulan
+    feedback: 
+      captcha_error: Tolong selesaikan sebuah operasi matematika sederhana
+      email_description: Harap beritahu alamat surel Anda agar kami dapat menjawab pesan Anda
+      feedback_description: Deskripsi
+      feedback_title: Judul
+      title: Kirim tanggapan Anda
+    index: 
+      active: Aktif
+      browse_all_or_by_tags: Lihat %{full_list_of_questions} atau %{browse_by_tags}
+      browse_by_tags: cari menurut tag
+      create_own_site: Buat situs Q&amp;A Anda dalam 8 detik secara gratis
+      full_list_of_questions: daftar lengkap pertanyaan
+      hot: Panas
+      quick_question: Tanyakan sebuah pertanyaan, kami akan mencari seseorang untuk menjawabnya
+      recent_questions: Pertanyaan terkini

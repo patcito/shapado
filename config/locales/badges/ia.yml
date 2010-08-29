@@ -9,7 +9,7 @@ ia:
       badges: Insignias
   badges: 
     index: 
-      description: Tote le insignias que tu pote ganiar. Parti tu cognoscentia e merita insignias.
+      description: Tote le insignias que tu pote ganiar. Reparti tu cognoscentia e merita insignias.
       title: insignias
     shared: 
       addict: 
@@ -122,8 +122,8 @@ ia:
         description: Dava un solution a un question con un medio de plus de 2 votos
     show: 
       description: "Usatores que ganiava iste insignia. Recentemente meritate per:"
-      earned: meritate
-      for_tag_bronze: 200 votos in etiquetta {{tag}}
-      for_tag_gold: 1000 votos in etiquetta {{tag}}
-      for_tag_silver: 400 votos in etiquetta {{tag}}
-      title: Insignia {{type}}
+      earned: ganiate
+      for_tag_bronze: 200 votos in etiquetta %{tag}
+      for_tag_gold: 1000 votos in etiquetta %{tag}
+      for_tag_silver: 400 votos in etiquetta %{tag}
+      title: Insignia %{type}

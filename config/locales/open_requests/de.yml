@@ -1,0 +1,22 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Kghbln
+de: 
+  open_requests: 
+    create: 
+      flash_notice: Bitte um erneute Aktivierung wurde erfolgreich erstellt
+    destroy: 
+      flash_notice: Bitte um erneute Aktivierung wurde erfolgreich gelöscht
+    edit: 
+      title: Bitte um erneute Aktivierung bearbeiten
+    form: 
+      request_opening_details: Um die erneute Aktivierung dieser Frage bitten
+    index: 
+      title: Liste der Bitten zur erneuten Aktivierung
+    model: 
+      prural_name: Bitten um erneute Aktivierung
+    new: 
+      title: Bitte um erneute Aktivierung
+    update: 
+      flash_notice: Bitte um erneute Aktivierung wurde erfolgreich aktualisiert
