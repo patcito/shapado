@@ -1,18 +1,18 @@
 en:
   open_requests:
     index:
-      title: List of reopening requests
+      title: List of requests to re-open
     form:
-      request_opening_details: Request to reopen this question
+      request_opening_details: Request to re-open this question
     new:
-      title: Reopening request
+      title: Request to re-open
     edit:
-      title: Edit closing request
+      title: Edit request to re-open
     create:
-      flash_notice: Reopening request created successfully
+      flash_notice: Request to re-open created successfully
     update:
-      flash_notice: Reopening request updated successfully
+      flash_notice: Request to re-open updated successfully
     destroy:
-      flash_notice: Reopening request deleted successfully
+      flash_notice: Request to re-open deleted successfully
     model:
-      prural_name: Reopening requests
+      prural_name: Requests to re-open
