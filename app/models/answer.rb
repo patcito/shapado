@@ -18,7 +18,7 @@ class Answer < Comment
   key :question_id, String
   belongs_to :question
 
-  has_many :flags, :as => "flaggeable", :dependent => :destroy
+  has_many :flags
 
   has_many :comments, :foreign_key => "commentable_id", :class_name => "Comment", :order => "created_at asc", :dependent => :destroy
 
@@ -64,8 +64,7 @@ class Answer < Comment
   end
 
   def flagged!
-    self.collection.update({:_id => self._id}, {:$inc => {:flags_count => 1}},
-                                               :upsert => true)
+    self.increment(:flags_count => 1)
   end
 
 

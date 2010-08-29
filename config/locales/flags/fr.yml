@@ -1,19 +1,19 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
-fr: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: raison
-    models: 
+fr:
+  activerecord:
+    attributes:
+      flag:
+        reason: raison
+    models:
       flag: rapport
       flags: rapports
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: vous ne pouvez rapporter ceci
       flash_notice: merci pour votre rapport
-    form: 
+    form:
       attention: nécesite l'attention des modérateurs
       label: s'il vous plait, raporter avec attention
       offensive: injurieux, abusif ou discours de haine

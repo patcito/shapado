@@ -2,6 +2,9 @@
 -solution = question.accepted && question.answer_id == answer.id
 -source = question_path(@question)
 
+- @aflag = current_user.has_flagged?(answer) if logged_in?
+- @aflag ||= Flag.new
+
 .answer.commentable{:class => "post-#{answer.id} #{solution ? "solution" : ""}" }
   %a{:name=>answer.id}
   .vote-col
@@ -11,7 +14,7 @@
   .body-col
     .markdown.entry-content
       =find_and_preserve(shapado_auto_link(markdown(answer.body), :link_users => true))
-    -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags_count > 0
+    -if logged_in? && (current_user.mod_of?(current_group) || current_user.can_view_offensive_counts_on?(current_group)) && answer.flags.count > 0
       %h3
         = t(:flags, :scope => "activerecord.models")
       = render :partial => "flags/list", :locals => {:flaggeable => answer}
@@ -48,8 +51,12 @@
               = t("global.from", :site => answer.user.country_name)
             = country_flag(answer.user.country_code, answer.user.country_name)
     .controls
-      -if logged_in?
-        .actions
+      .actions
+        = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question.id, answer.id), :class => "bookmark"
+        - if logged_in? && @aflag.new? && current_user != answer.user
+          = link_to t(".flag"), new_question_answer_flag_path(@question,answer), :class => "flag-link", :rel => 'nofollow'
+
+        -if logged_in?
           -if (current_user.mod_of?(@question.group) || current_user.can_modify?(@question))
             -unless @question.accepted
               = link_to t(".pick_answer"), solve_question_path(@question, :answer_id => answer)
@@ -57,14 +64,14 @@
               = link_to t(".unset_answer"),  unsolve_question_path(@question)
           -if answer.wiki || current_user.can_edit_others_posts_on?(answer.group) || current_user.can_modify?(answer)
             = link_to t("scaffold.edit"), edit_question_answer_path(@question, answer)
-      .actions
-        = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question.id, answer.id), :class => "bookmark"
-        -if logged_in?
           -if current_user.can_modify?(answer)
             = link_to t("scaffold.destroy"), question_answer_path(@question, answer), :confirm => t("scaffold.sure", :model => "answer"), :method => :delete, :class =>"cancel"
+          -if !@aflag.new?
+            .flagged
+              = "#{t('questions.show.flagged_as')} #{t(@aflag.reason, :scope=>'flags.form')}"
+              =link_to t("scaffold.edit"), edit_question_answer_flag_path(@question,answer,@aflag), :class => "flag-link", :id => "edit_answer_flag_link", :rel => 'nofollow'
+              =link_to t("scaffold.destroy"), question_answer_flag_path(@question,answer,@aflag), :id => "destroy_answer_flag_link", :rel => 'nofollow', :confirm => "are you sure?", :method => :delete
 
-          -if current_user != answer.user
-            = link_to t(".flag"), flag_question_answer_path(@question,answer), :class => "flag-link"
         -if answer.versions.count > 0
           = link_to t(".history", :default => "history"), history_question_answer_path(@question, answer)
         -if logged_in?
@@ -74,10 +81,7 @@
             = link_to "ban", ban_path(:answer_ids => [answer.id]), :confirm => "are you sure?"
       .clear
       .forms
-        -if current_user != answer.user
-          -flag = Flag.new
-          -flag.flaggeable = answer
-          = render :partial => "flags/form", :locals => {:flag => flag, :source => source }
+
     .clear
 
     -if logged_in?

@@ -6,17 +6,31 @@
 %h2.title
   =link_to h(@question.title), question_path(@question)
 
-%table.table
-  %tr
-    %th
-      user
-    %th
-      reason
-    %th
-      comment
-
-  -@close_requests.each do |request|
+-content_for :close_requests_table do
+  %table.table
     %tr
-      %td= link_to h(request.user.login), user_path(request.user)
-      %td= t(request.reason, :scope=>"close_requests.form")
-      %td= h(request.comment)
+      - if logged_in? && current_user.mod_of?(current_group)
+        %th
+      %th
+        =t("close_requests.model.attributes.user")
+      %th
+        =t("close_requests.model.attributes.reason")
+      %th
+        =t("close_requests.model.attributes.comment")
+    - @close_requests.each do |request|
+      %tr
+        %td= radio_button_tag 'close_request_id', request.id
+        %td= link_to h(request.user.login), user_path(request.user)
+        %td= t(request.reason, :scope=>"close_requests.form")
+        %td= h(request.comment)
+
+
+- if logged_in? && current_user.mod_of?(current_group)
+  - form_for @question, :url => close_question_url(@question), :method => :post, :html => {:class => "form"} do |form|
+    = yield :close_requests_table
+    .group.navform
+      = form.submit t("scaffold.update"), :id => "close_question_submit_#{@question.id}"
+      = t("global.or")
+      = link_to t("scaffold.cancel"), question_path(@question), :class => "button cancel"
+- else
+  = yield :close_requests_table

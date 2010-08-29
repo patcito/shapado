@@ -1,0 +1,14 @@
+
+
+-form_for [@question, @open_request], :html => {:class => "open_form form  #{local_assigns[:hide] ? "hide": ""}", :id => local_assigns[:form_id]} do |form|
+  .group
+    = form.label :comment, t(:comment, :scope=>"models"), :class => "label"
+    = form.text_field :comment, :class => "text_field"
+
+  .group.navform
+    -if @open_request.new?
+      = submit_tag t(".request_opening_details"), :class => "button", :id => "open_question_submit_#{@question.id}"
+    -else
+      = form.submit t("scaffold.update"), :id => "open_question_submit_#{@question.id}"
+    = t("global.or")
+    = link_to t("scaffold.cancel"), question_path(@question), :class => "button cancel"

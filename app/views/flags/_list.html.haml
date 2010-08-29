@@ -1,7 +1,7 @@
 %ul.flags.list
-  -flaggeable.flags.group_by{|f| f.type}.each do |type, flags|
+  -flaggeable.flags.group_by{|f| f.reason}.each do |reason, flags|
     %li
       = flags.size
       x
       %strong
-        = t(type, :scope=>"flags.form")
+        = t(reason, :scope=>"flags.form")

@@ -3,19 +3,19 @@
 # Export driver: syck
 # Author: Borichèt
 # Author: Dragonòt
-pms: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: Rason
-    models: 
+pms:
+  activerecord:
+    attributes:
+      flag:
+        reason: Rason
+    models:
       flag: Marca
       flags: Marcador
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: A peul pa buteje na marca a sòn
       flash_notice: Mersì për tò rapòrt
-    form: 
+    form:
       attention: A ciama l'atension dël moderator
       label: Për piasì, ch'a marca con atension
       offensive: Dëscors ofensiv, abusiv o ëd ghignon

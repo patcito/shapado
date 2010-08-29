@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Kghbln
-de: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: Grund
-    models: 
+de:
+  activerecord:
+    attributes:
+      flag:
+        reason: Grund
+    models:
       flag: Kennzeichen
       flags: Kennzeichen
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: Du kannst dies nicht kennzeichnen
       flash_notice: Vielen Dank für Deinen Hinweis
-    form: 
+    form:
       attention: erfordert die Aufmerksamkeit eines Moderatoren
       label: bitte mit Bedacht kennzeichnen
       offensive: anstößiger, beleidigender oder hasserfüllter Beitrag

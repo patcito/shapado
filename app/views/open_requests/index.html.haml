@@ -1,0 +1,19 @@
+
+-content_for :subtabs do
+  .navtitle
+    = t(".title")
+
+%h2.title
+  =link_to h(@question.title), question_path(@question)
+
+%table.table
+  %tr
+    %th
+      user
+    %th
+      comment
+
+  -@open_requests.each do |request|
+    %tr
+      %td= link_to h(request.user.login), user_path(request.user)
+      %td= h(request.comment)

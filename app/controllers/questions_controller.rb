@@ -425,6 +425,7 @@ class QuestionsController < ApplicationController
 
     @question.closed = true
     @question.closed_at = Time.zone.now
+    @question.close_reason_id = params[:close_request_id]
 
     respond_to do |format|
       if @question.save
@@ -440,14 +441,23 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def flag
+  def open
     @question = Question.find_by_slug_or_id(params[:id])
-    @flag = Flag.new
-    @flag.flaggeable_type = @question.class.name
-    @flag.flaggeable_id = @question.id
+
+    @question.closed = false
+    @question.close_reason_id = nil
+
     respond_to do |format|
-      format.html
-      format.json
+      if @question.save
+        sweep_question(@question)
+
+        format.html { redirect_to question_path(@question) }
+        format.json { head :ok }
+      else
+        flash[:error] = @question.errors.full_messages.join(", ")
+        format.html { redirect_to question_path(@question) }
+        format.json { render :json => @question.errors, :status => :unprocessable_entity  }
+      end
     end
   end
 

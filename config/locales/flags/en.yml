@@ -8,11 +8,21 @@ en:
     create:
       flash_notice: Thanks for your report
       flash_error: You cannot flag this
-
+    new:
+      title: Flag {{model}}
+    edit:
+      title: Edit {{model}}'s flag
+    destroy:
+      flash_notice: "Your flag has been revoked successfully."
+    update:
+      flash_notice: "The question flag was successfully updated."
+    model:
+      messages:
+        already_requested: "You already flagged this {{model}}"
   activerecord:
     models:
       flags: Flags
       flag: Flag
     attributes:
       flag:
-        type: Reason
+        reason: Reason

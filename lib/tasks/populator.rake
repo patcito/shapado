@@ -29,23 +29,21 @@ namespace :populator do
         if a.valid?
           q.answer_added!
           rand(10).times do |i|
-            f = Flag.new(:flaggeable_id => a.id,
-                         :flaggeable_type => a.class.name,
-                         :user => users.rand,
-                         :type => Flag::TYPES[rand(Flag::TYPES.size)],
+            f = Flag.new(:user => users.rand,
+                         :reason => Flag::TYPES[rand(Flag::TYPES.size)],
                          :banned => false)
-            f.save
-            a.flagged!
+          a.flaggs << f
+          a.flagged!
+          a.save
           end
         end
       end
 
       rand(10).times do |i|
-        f = Flag.new(:flaggeable_id => q.id,
-                     :flaggeable_type => q.class.name,
-                     :user => users.rand,
-                     :type => Flag::TYPES[rand(Flag::TYPES.size)])
-        f.save
+        f = Flag.new(:user => users.rand,
+                     :reason => Flag::REASONS[rand(Flag::REASONS.size)])
+        q.flaggs << f
+        q.save
         q.flagged!
       end
 

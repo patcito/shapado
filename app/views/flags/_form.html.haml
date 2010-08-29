@@ -1,19 +1,24 @@
-- flaggeable_class_name = flag.flaggeable.class.name
+-object_form = flag
+-if flaggeable.is_a?(Answer)
+  -object_form = [flaggeable.question, flaggeable, flag]
+-elsif flaggeable.is_a?(Question)
+  -object_form = [flaggeable, flag]
 
--form_for flag, :html => {:class=>"form flag_form", :id => local_assigns[:form_id]} do |f|
+-form_for object_form, :html => {:class=>"form flag_form", :id => local_assigns[:form_id]} do |f|
   .fields
-    =f.hidden_field "flaggeable_type", :value => flaggeable_class_name, :id => "flaggeable_type_#{flaggeable_class_name}_#{flag.flaggeable.id}"
-    =f.hidden_field "flaggeable_id", :value => flag.flaggeable.id, :id => "flaggeable_id_#{flaggeable_class_name}_#{flag.flaggeable.id}"
-    =f.hidden_field "return_to", :value => source, :id => "flaggeable_source_#{flaggeable_class_name}_#{flag.flaggeable.id}"
+    =hidden_field_tag "return_to", source, :id => "flaggeable_source_#{flaggeable.class.name}_#{flaggeable.id}"
   .group
     %label.label
       =t(".label")
 
   .group
-    = f.label :type,t(:type, :scope=>"activerecord.attributes.flag"), :class => "label"
-    = select_tag "flag[type]", options_for_select(Flag::TYPES.collect{|type| [t(type, :scope=>"flags.form"), type]}), :id => "flaggeable_typeselect_#{flaggeable_class_name}_#{flag.flaggeable.id}"
+    = label_tag "flag[reason]", t(:reason, :scope=>"activerecord.attributes.flag"), :class => "label"
+    = select "flag", "reason", Flag::REASONS.collect{|type| [t(type, :scope=>"flags.form"), type]}, :selected => flag.reason, :id => "flaggeable_typeselect_#{flaggeable.class.name}_#{flaggeable.id}"
 
   .group.navform
-    = f.submit t("scaffold.create"), :id => "flaggeable_submit_#{flaggeable_class_name}_#{flag.flaggeable.id}"
+    -if flag.new?
+      = f.submit t("scaffold.create"), :id => "flaggeable_submit_#{flaggeable.class.name}_#{flaggeable.id}"
+    -else
+      = f.submit t("scaffold.update"), :id => "flaggeable_submit_#{flaggeable.class.name}_#{flaggeable.id}"
     = t("global.or")
     = link_to t("scaffold.cancel"), source, :class => "button cancel"

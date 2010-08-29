@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Discon
-el: 
-  activerecord: 
-    attributes: 
-      flag: 
-        type: Αιτία
-    models: 
+el:
+  activerecord:
+    attributes:
+      flag:
+        reason: Αιτία
+    models:
       flag: Αναφορά
       flags: Αναφορές
-  flags: 
-    create: 
+  flags:
+    create:
       flash_error: Δεν μπορείτε να αναφέρετε αυτή την ερώτηση
       flash_notice: Ευχαριστούμε για την αναφορά σας
-    form: 
+    form:
       attention: Απαιτεί την προσοχή συντονιστή
       label: Παρακαλώ αναφέρετε με προσοχή
       offensive: Προσβλητική ή υβριστική

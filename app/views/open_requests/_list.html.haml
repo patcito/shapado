@@ -1,0 +1,4 @@
+%ul.open_requests.list
+  = t(".open_requests_counter", :count => question.open_requests.count)
+  -if current_user.mod_of?(current_group)
+    = link_to t("scaffold.details"), question_open_requests_path(question)

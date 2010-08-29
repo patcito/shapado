@@ -8,6 +8,18 @@ class CloseRequestsController < ApplicationController
     @close_requests = @question.close_requests
   end
 
+  def new
+    @close_request = CloseRequest.new(:reason => "dupe")
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:html => render_to_string(:partial => "close_requests/form",
+                                                   :locals => {:question => @question,
+                                                               :close_request => @close_request})}.to_json
+      end
+    end
+  end
+
   def create
     @close_request = CloseRequest.new(:reason => params[:close_request][:reason],
                                       :comment => params[:close_request][:comment])
@@ -43,6 +55,19 @@ class CloseRequestsController < ApplicationController
     end
   end
 
+  def edit
+    @close_request = @question.close_requests.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:html => render_to_string(:partial => "close_requests/form",
+                                                   :locals => {:close_request => @close_request,
+                                                               :question => @question,
+                                                               :form_id => "question_close_form" })}.to_json
+      end
+    end
+  end
+
   def update
     @close_request = @question.close_requests.find(params[:id])
     @close_request.reason = params[:close_request][:reason]
@@ -64,7 +89,7 @@ class CloseRequestsController < ApplicationController
         @question.save
         flash[:notice] = t(:flash_notice, :scope => "close_requests.update")
         format.html { redirect_to(question_path(@question)) }
-        format.json { render :json => @close_request.to_json}
+        format.json { render :json => @close_request.to_json }
         format.js { render :json => {:message => flash[:notice], :success => true }.to_json }
       else
         flash[:error] = @close_request.errors.full_messages.join(", ")
@@ -88,13 +113,6 @@ class CloseRequestsController < ApplicationController
       format.html { redirect_to(question_path(@question)) }
       format.json {head :ok}
       format.js { render :json => {:message => flash[:notice], :success => true}.to_json }
-    end
-  end
-
-  def new
-    @close_request = CloseRequest.new(:reason => "dupe")
-    respond_to do |format|
-      format.html
     end
   end
 
