@@ -25,7 +25,7 @@ class SearchesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.js do
+      format.json do
         render :json => {:html => render_to_string(:partial => "questions/question",
                                                    :collection  => @questions)}.to_json
       end
