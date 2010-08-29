@@ -29,6 +29,7 @@ class SearchesController < ApplicationController
         render :json => {:html => render_to_string(:partial => "questions/question",
                                                    :collection  => @questions)}.to_json
       end
+      format.json { render :json => @questions.to_json(:except => %w[_keywords slug]) }
     end
   end
 end
