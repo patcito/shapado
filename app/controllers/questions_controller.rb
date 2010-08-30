@@ -55,7 +55,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json  { render :json => @questions.to_json(:except => %w[_keywords slug watchers]) }
+      format.json  { render :json => @questions.to_json(:except => %w[_keywords watchers slugs]) }
       format.atom
     end
   end
