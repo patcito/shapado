@@ -166,6 +166,7 @@ class QuestionsController < ApplicationController
         html = render_to_string(:partial => "tag_table", :object => @tag_cloud)
         render :json => {:html => html}
       end
+      format.json  { render :json => @tag_cloud.to_json }
     end
   end
 
