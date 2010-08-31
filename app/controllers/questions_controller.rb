@@ -183,7 +183,10 @@ class QuestionsController < ApplicationController
         results = result.map do |t|
           {:caption => "#{t["name"]} (#{t["count"].to_i})", :value => t["name"]}
         end
-
+        # if no results, show default tags
+        if results.empty?
+          results = current_group.default_tags.map  {|tag|{:value=> tag, :caption => tag}}
+        end
         render :json => results
       end
     end
