@@ -35,7 +35,7 @@
             %i=t(".written_in", :language => t("languages.#{page.language}"))
       .clear
 #additional_info
-  =will_paginate @pages
+  = will_paginate @pages
 
 -if logged_in? && current_user.can_edit_wiki_post_on?(current_group)
   = link_to t(".create_page"), new_page_path, :class => "request_group"
