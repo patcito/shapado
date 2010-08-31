@@ -116,10 +116,10 @@ namespace :fixdb do
     end
   end
 
-<<<<<<< HEAD
   task :anonymous => :environment do
     User.set({}, {:anonymous => false})
-=======
+  end
+
   task :flags => :environment do
     Group.find_each do |group|
       puts "Updating #{group["name"]} flags"
@@ -143,7 +143,6 @@ namespace :fixdb do
       puts count
     end
     MongoMapper.database.collection("falgs").drop
->>>>>>> origin/refactoring-user-request
   end
 end
 
