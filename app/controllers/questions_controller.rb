@@ -267,7 +267,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      if recaptcha_valid? && @question.user.valid? && @question.save
+      if (recaptcha_valid? || logged_in?) && @question.user.valid? && @question.save
         sweep_question_views
 
         @question.user.stats.add_question_tags(*@question.tags)
