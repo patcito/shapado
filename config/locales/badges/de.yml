@@ -124,7 +124,7 @@ de:
     show: 
       description: "Nutzer, die dieses Abzeichen erhalten haben. Kürzlich vergeben an:"
       earned: erhalten
-      for_tag_bronze: 200 Bewertungen in Kategorie {{tag}}
-      for_tag_gold: 1000 Bewertungen in Kategorie {{tag}}
-      for_tag_silver: 400 Bewertungen in Kategorie {{tag}}
-      title: Abzeichen {{type}}
+      for_tag_bronze: 200 Bewertungen in Kategorie %{tag}
+      for_tag_gold: 1000 Bewertungen in Kategorie %{tag}
+      for_tag_silver: 400 Bewertungen in Kategorie %{tag}
+      title: Abzeichen %{type}

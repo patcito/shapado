@@ -13,7 +13,7 @@ ru:
       home: В начало
       languages: Языки
       log_in: Войти
-      logged: Вы вошли как {{login}}
+      logged: Вы вошли как %{login}
       logout: Выход
       manage_ads: Управление рекламой
       moderate: Модерация

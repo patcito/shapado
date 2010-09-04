@@ -8,5 +8,5 @@ nb:
       title: Valgte merker
     topbar: 
       admin: Admin
-      logged_as: Innlogget som {{login}}
+      logged_as: Innlogget som %{login}
       user_page: Min side

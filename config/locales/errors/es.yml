@@ -6,8 +6,8 @@ es:
     forbidden: 
       explanation: no tienes los derechos de acceso requeridos para esta página.
       title: acceso denegado
-    go_to: ir a la {{link}}
-    help_us_answer: ayudanos a responder {{link}}
+    go_to: ir a la %{link}
+    help_us_answer: ayudanos a responder %{link}
     internal_error: 
       explanation: ya se nos ha informado de este problema y lo resolveremos a la brevedad.
       title: lo sentimos pero algo salió mal.

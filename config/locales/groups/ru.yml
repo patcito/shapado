@@ -68,5 +68,5 @@ ru:
       close_group: Закрыть эту группу
       group_awaiting_acceptance: Эта группа ждёт своего принятия модератором.
       group_closed: Эта группа была закрыта.
-      title: О {{name}}
+      title: О %{name}
       visit_group: Перейти в эту группу

@@ -49,4 +49,4 @@ lb:
       reputation: Reputatioun
       title: All Benotzer
     show: 
-      title: Benotzer {{user}}
+      title: Benotzer %{user}

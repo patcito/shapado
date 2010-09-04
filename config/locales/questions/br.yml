@@ -65,8 +65,8 @@ br:
       submit: Dilec'hiañ !
       title: "Treuzkas ar goulenn : %{title}"
     move_to: 
-      group_dont_exists: N'eus ket eus ar strollad {{group}}
-      success: Goulenn bet dilec'hiet da {{group}}
+      group_dont_exists: N'eus ket eus ar strollad %{group}
+      success: Goulenn bet dilec'hiet da %{group}
     new: 
       how_to_ask: Penaos goulenn
       title: Sevel ur goulenn
@@ -90,8 +90,8 @@ br:
       another_answers: Respontoù all
       answers: Respontoù
       answers_title: 
-        one: "{{count}} respont"
-        other: "{{count}} respont"
+        one: "%{count} respont"
+        other: "%{count} respont"
       asked_on: Goulennet e
       ban: Forbannañ
       close: Serriñ

@@ -21,7 +21,7 @@ ru:
   global: 
     active: Активировать
     current: Текущий
-    from: с сайта {{site}}
+    from: с сайта %{site}
     group_not_found: Страница %{url} не существует
     or: или
     permission_denied: Доступ запрещён
@@ -33,13 +33,13 @@ ru:
     any: Любой
     user: Мои предпочитаемые языки
   messages: 
-    success: "{{model}} успешно {{action}}."
+    success: "%{model} успешно %{action}."
   models: 
     question: Вопрос
   number: 
     x_time: 
-      one: "{{count}} раз"
-      other: "{{count}} раз(а)"
+      one: "%{count} раз"
+      other: "%{count} раз(а)"
       zero: Никогда
   scaffold: 
     add: Добавить
@@ -51,11 +51,11 @@ ru:
     details: Подробности
     edit: Редактировать
     more: Далее…
-    new: Добавить {{model}}
+    new: Добавить %{model}
     save: Сохранить
     send: Отправить
     show: Показать
-    sure: Вы уверены, что хотите удалить {{model}}?
+    sure: Вы уверены, что хотите удалить %{model}?
     update: Обновить
   time: 
     ago: "%{time} назад"

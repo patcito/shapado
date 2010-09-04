@@ -4,7 +4,7 @@
 # Author: Sp5uhe
 pl: 
   ads: 
-    ad_links: Dodaj nową {{type}} reklamę
+    ad_links: Dodaj nową %{type} reklamę
     create: 
       success: Reklama została utworzona.
     index: 
@@ -13,4 +13,4 @@ pl:
       title: Reklamy
     name: Nazwa
     position: Pozycja
-    title: Dodaj nową {{type}} reklamę
+    title: Dodaj nową %{type} reklamę

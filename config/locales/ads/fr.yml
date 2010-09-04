@@ -4,7 +4,7 @@
 # Author: Peter17
 fr: 
   ads: 
-    ad_links: Ajouter une nouvelle annonce {{type}}
+    ad_links: Ajouter une nouvelle annonce %{type}
     create: 
       success: L’annonce a été créée avec succès.
     index: 
@@ -13,4 +13,4 @@ fr:
       title: Annonces
     name: "Nom :"
     position: "Position :"
-    title: Ajouter une nouvelle annonce {{type}}
+    title: Ajouter une nouvelle annonce %{type}

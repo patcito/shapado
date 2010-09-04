@@ -10,11 +10,11 @@ be-TARASK:
       revert: Адкаціць да гэтай вэрсіі
       show_diff: Параўнаць выбраныя вэрсіі
     diff: 
-      title: Розьніца паміж {{prev}} і {{curr}}
+      title: Розьніца паміж %{prev} і %{curr}
     history: 
       current_version: Цяперашняя вэрсія
       previous_versions: Папярэднія вэрсіі
-      title: Гісторыя ({{count}})
+      title: Гісторыя (%{count})
       version: Вэрсія
       version_summary: Кароткае апісаньне вэрсіі
     model: 

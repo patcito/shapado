@@ -20,12 +20,12 @@ de:
           title: Voraussetzungen
         domain: 
           description: "Du kannst Deine Website katalogisieren, so dass sie über Deine eigene Domain aufgerufen werden kann. So wird es gemacht:"
-          instruction1: Hierzu musst Du Dich zunächst bei Deinem Hoster anmelden. Dies ist die Seite bei der Deine Domain wie bspw. {{subdomain}}.de gehostet wird.
+          instruction1: Hierzu musst Du Dich zunächst bei Deinem Hoster anmelden. Dies ist die Seite bei der Deine Domain wie bspw. %{subdomain}.de gehostet wird.
           instruction2: Dort musst Du im DNS-Abschnitt einen kanonischen Namen (CNAME) erstellen.
           instruction3: Wähle „www“ oder irgendetwas anderes als kanonischen Namen (CNAME).
-          instruction4: Füge hernach Deine aktuelle {{domain}} für Shapado in das Feld für das Domainziel ein.
-          instruction5: Sobald dies erledigt ist, sollte Deine Domain www.{{subdomain}} nach ca. einer Stunde auf {{appdomain}} weiterleiten.
-          instruction6: Sobald dies der Fall ist, kannst Du im folgenden Feld den Namen Deiner www.{{subdomain}} angeben und die Schaltfläche „aktualisieren“ anklicken. Sofern Du Fragen hast, kannst Du uns im Chat {{chat_url}} oder in unserem Hilfeforum kontaktieren.
+          instruction4: Füge hernach Deine aktuelle %{domain} für Shapado in das Feld für das Domainziel ein.
+          instruction5: Sobald dies erledigt ist, sollte Deine Domain www.%{subdomain} nach ca. einer Stunde auf %{appdomain} weiterleiten.
+          instruction6: Sobald dies der Fall ist, kannst Du im folgenden Feld den Namen Deiner www.%{subdomain} angeben und die Schaltfläche „aktualisieren“ anklicken. Sofern Du Fragen hast, kannst Du uns im Chat %{chat_url} oder in unserem Hilfeforum kontaktieren.
           title: Domain festlegen
           warning: Bist Du sicher, dass Du Deine Domain ändern möchtest?
         general: 

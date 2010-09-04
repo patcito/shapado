@@ -12,5 +12,5 @@ ru:
       login_tip: Поиск по мере ввода
     index: 
       manage_members_title: Управление участниками
-      title: Участники группы {{name}}
-      title_isolate: Участники {{name}}
+      title: Участники группы %{name}
+      title_isolate: Участники %{name}

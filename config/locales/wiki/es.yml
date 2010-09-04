@@ -9,11 +9,11 @@ es:
       revert: revertir a esta versión
       show_diff: comparar versiones seleccionadas
     diff: 
-      title: diferencias entre las versiones {{prev}} y {{curr}}
+      title: diferencias entre las versiones %{prev} y %{curr}
     history: 
       current_version: versión actual
       previous_versions: versiónes antériores
-      title: historia ({{count}})
+      title: historia (%{count})
       version: versión
       version_summary: resume de esta versión
     model: 

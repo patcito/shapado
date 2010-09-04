@@ -11,7 +11,7 @@ es:
       home: pagina principal
       languages: idiomas
       log_in: acceder
-      logged: conectado como {{login}}
+      logged: conectado como %{login}
       logout: salir
       manage_ads: propagandas
       moderate: moderar

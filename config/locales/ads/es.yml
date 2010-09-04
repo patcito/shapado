@@ -5,7 +5,7 @@
 # Author: McDutchie
 es: 
   ads: 
-    ad_links: Agregar un nuevo anuncio {{type}}
+    ad_links: Agregar un nuevo anuncio %{type}
     create: 
       success: Anuncio fue creado exitosamente.
     index: 
@@ -14,4 +14,4 @@ es:
       title: Anuncios
     name: "Nombre:"
     position: "Posición:"
-    title: Agregar un nuevo anuncio {{type}}
+    title: Agregar un nuevo anuncio %{type}

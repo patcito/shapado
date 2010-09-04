@@ -51,7 +51,7 @@ gl:
       submit: Gardar
       title: Configuracións
     follow: 
-      flash_notice: O usuario {{user}} xa forma parte dos seus amigos
+      flash_notice: O usuario %{user} xa forma parte dos seus amigos
     form: 
       activities_notification: Recibir notificacións por correo electrónico sobre as actividades do sistema, como ganancia de insignias, novos seguidores etc.
       avatar_tip: Cambiar a imaxe do seu perfil usando o gravatar
@@ -75,14 +75,14 @@ gl:
       title: Todos os usuarios
     messages: 
       errors: 
-        reputation_needed: Necesita unha reputación de {{min_reputation}} para poder {{action}}
+        reputation_needed: Necesita unha reputación de %{min_reputation} para poder %{action}
     new: 
       submit: Rexístrese
       title: Rexístrese como novo usuario
     show: 
       follow: Vixiar
-      title: Usuario {{user}}
+      title: Usuario %{user}
       unfollow: Deixar de vixiar
       views: visitas
     unfollow: 
-      flash_notice: O usuario {{user}} xa non pertence aos seus amigos
+      flash_notice: O usuario %{user} xa non pertence aos seus amigos

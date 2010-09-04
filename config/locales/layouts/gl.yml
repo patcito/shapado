@@ -11,7 +11,7 @@ gl:
       home: Inicio
       languages: Linguas
       log_in: Rexistro
-      logged: Conectado como {{login}}
+      logged: Conectado como %{login}
       logout: Saír ao anonimato
       manage_ads: Xestionar os anuncios
       moderate: Moderar

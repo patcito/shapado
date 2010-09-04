@@ -17,7 +17,7 @@ ia:
     destroy: 
       flash_notice: Tu marca ha essite revocate con successo.
     edit: 
-      title: Modificar le marca de {{model}}
+      title: Modificar le marca de %{model}
     form: 
       attention: Require attention de un moderator
       label: Per favor reporta con cautela
@@ -25,8 +25,8 @@ ia:
       spam: Spam
     model: 
       messages: 
-        already_requested: Tu ha jam marcate iste {{model}}
+        already_requested: Tu ha jam marcate iste %{model}
     new: 
-      title: Marcar {{model}}
+      title: Marcar %{model}
     update: 
       flash_notice: Le marca del question ha essite actualisate con successo.

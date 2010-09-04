@@ -115,4 +115,4 @@ br:
       for_tag_bronze: 200 mouezh evit an tikedenn %{tag}
       for_tag_gold: 1 000 mouezh evit an tikedenn %{tag}
       for_tag_silver: 400 mouezh evit an tikedenn %{tag}
-      title: Badj {{type}}
+      title: Badj %{type}

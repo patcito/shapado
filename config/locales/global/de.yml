@@ -20,8 +20,8 @@ de:
     active: Aktivieren
     by: von
     current: Aktuell
-    from: von {{site}}
-    group_not_found: Die Seite {{url}} existiert nicht
+    from: von %{site}
+    group_not_found: Die Seite %{url} existiert nicht
     or: oder
     permission_denied: Zugriff verweigert
     please_login: Bitte melde Dich an
@@ -32,13 +32,13 @@ de:
     any: Alle
     user: Meine bevorzugten Sprachen
   messages: 
-    success: "{{model}} wurde erfolgreich {{action}}."
+    success: "%{model} wurde erfolgreich %{action}."
   models: 
     question: Die Frage
   number: 
     x_time: 
-      one: "{{count}}-mal"
-      other: "{{count}}-mal"
+      one: "%{count}-mal"
+      other: "%{count}-mal"
       zero: Nie
   scaffold: 
     add: Hinzufügen
@@ -50,12 +50,12 @@ de:
     details: Einzelheiten
     edit: Bearbeiten
     more: Mehr …
-    new: Neue {{model}} hinzufügen
+    new: Neue %{model} hinzufügen
     save: Speichern
     send: Senden
     show: Zeigen
-    sure: Bist Du sicher, dass Du diese {{model}} löschen möchtest?
+    sure: Bist Du sicher, dass Du diese %{model} löschen möchtest?
     update: Aktualisieren
   time: 
-    ago: vor {{time}}
+    ago: vor %{time}
     today: heute

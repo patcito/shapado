@@ -52,7 +52,7 @@ es:
       submit: guardar
       title: configuración
     follow: 
-      flash_notice: El usuario {{user}} fue añadido a su lista de amigos
+      flash_notice: El usuario %{user} fue añadido a su lista de amigos
     form: 
       activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
       avatar_tip: cambia tu imagen del perfil usando gravatar
@@ -76,7 +76,7 @@ es:
       title: todos los usuarios
     messages: 
       errors: 
-        reputation_needed: necesitas una reputación de {{min_reputation}} para {{action}}
+        reputation_needed: necesitas una reputación de %{min_reputation} para %{action}
     new: 
       submit: registrar
       title: registrar un nuevo usuario
@@ -86,4 +86,4 @@ es:
       unfollow: dejar de seguir
       views: vistas
     unfollow: 
-      flash_notice: El usuario {{user}} fue removido de su lista de amigos
+      flash_notice: El usuario %{user} fue removido de su lista de amigos

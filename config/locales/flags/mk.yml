@@ -17,7 +17,7 @@ mk:
     destroy: 
       flash_notice: Вашата ознака е успешно поништена.
     edit: 
-      title: Уреди ознака на {{model}}
+      title: Уреди ознака на %{model}
     form: 
       attention: бара внимание од модератор
       label: означувајте внимателно
@@ -25,8 +25,8 @@ mk:
       spam: спам
     model: 
       messages: 
-        already_requested: Веќе го означивте ова {{model}}
+        already_requested: Веќе го означивте ова %{model}
     new: 
-      title: Означи го {{model}}
+      title: Означи го %{model}
     update: 
       flash_notice: Ознаката на прашањето е успешно подновена.

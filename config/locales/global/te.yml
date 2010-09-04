@@ -20,7 +20,7 @@ te:
   global: 
     by: చే
     current: ప్రస్తుత
-    from: "{{site}} నుంచి"
+    from: "%{site} నుంచి"
     group_not_found: "%{url}  అనే పుట లేనే లేదు"
     or: లేదా
     permission_denied: అనుమతి నిరాకరించారు
@@ -57,5 +57,5 @@ te:
     sure: మీరు నిజంగానే ఈ %{model}ని తొలగించాలనుకుంటున్నారా?
     update: తాజాకరించు
   time: 
-    ago: "{{time}} క్రితం"
+    ago: "%{time} క్రితం"
     today: ఈరోజు

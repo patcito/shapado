@@ -90,8 +90,8 @@ ru:
       another_answers: Другие ответы
       answers: Ответы
       answers_title: 
-        one: "{{count}} ответ"
-        other: "{{count}} ответ(а/ов)"
+        one: "%{count} ответ"
+        other: "%{count} ответ(а/ов)"
       asked_on: задано
       ban: Заблокировать
       close: Закрыть

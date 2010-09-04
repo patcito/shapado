@@ -4,7 +4,7 @@
 # Author: عمرو
 ar: 
   ads: 
-    ad_links: أضف إعلان {{type}} جديد
+    ad_links: أضف إعلان %{type} جديد
     create: 
       success: تم إنشاء الإعلان بنجاح
     index: 
@@ -12,4 +12,4 @@ ar:
       title: إعلانات
     name: "الاسم:"
     position: "الموضع:"
-    title: أضف إعلان {{type}} جديد
+    title: أضف إعلان %{type} جديد

@@ -4,7 +4,7 @@
 # Author: Y-M D
 br: 
   ads: 
-    ad_links: Ouzhpennañ ur c'hemenn nevez {{type}}
+    ad_links: Ouzhpennañ ur c'hemenn nevez %{type}
     create: 
       success: Krouet eo bet ar c'hemenn.
     index: 
@@ -13,4 +13,4 @@ br:
       title: Kemennoù
     name: "anv :"
     position: "lec'hiadur :"
-    title: Ouzhpennañ ur c'hemenn nevez {{type}}
+    title: Ouzhpennañ ur c'hemenn nevez %{type}

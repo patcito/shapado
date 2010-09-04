@@ -17,7 +17,7 @@ nl:
     destroy: 
       flash_notice: Uw markering is ingetrokken.
     edit: 
-      title: Markering van {{model}} bewerken
+      title: Markering van %{model} bewerken
     form: 
       attention: Heeft aandacht van een moderator nodig
       label: Markeer alstublieft alleen als het nodig is
@@ -25,8 +25,8 @@ nl:
       spam: Spam
     model: 
       messages: 
-        already_requested: U hebt dit {{model}} al gemarkeerd
+        already_requested: U hebt dit %{model} al gemarkeerd
     new: 
-      title: "{{model}} markeren"
+      title: "%{model} markeren"
     update: 
       flash_notice: De markering van de vraag is bijgewerkt.

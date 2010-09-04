@@ -123,7 +123,7 @@ ru:
     show: 
       description: "раз(а) бедж вручён пользователям. Недавно награждены:"
       earned: заработано
-      for_tag_bronze: 200 голосов в теге {{tag}}
-      for_tag_gold: 1000 голосов в теге {{tag}}
-      for_tag_silver: 400 голосов в теге {{tag}}
-      title: Бедж {{type}}
+      for_tag_bronze: 200 голосов в теге %{tag}
+      for_tag_gold: 1000 голосов в теге %{tag}
+      for_tag_silver: 400 голосов в теге %{tag}
+      title: Бедж %{type}

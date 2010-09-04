@@ -17,7 +17,7 @@ de:
     destroy: 
       flash_notice: Dein Kennzeichen wurde erfolgreich zurückgenommen.
     edit: 
-      title: Kennzeichen von {{model}} bearbeiten
+      title: Kennzeichen von %{model} bearbeiten
     form: 
       attention: Erfordert die Aufmerksamkeit eines Moderatoren
       label: Bitte mit Bedacht kennzeichnen
@@ -25,8 +25,8 @@ de:
       spam: Spam
     model: 
       messages: 
-        already_requested: Du hast dieses {{model}} bereits gekennzeichnet
+        already_requested: Du hast dieses %{model} bereits gekennzeichnet
     new: 
-      title: "{{model}} kennzeichnen"
+      title: "%{model} kennzeichnen"
     update: 
       flash_notice: Das Kennzeichen der Frage wurde erfolgreich aktualisiert.

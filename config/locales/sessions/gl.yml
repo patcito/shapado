@@ -5,7 +5,7 @@
 gl: 
   sessions: 
     create: 
-      flash_error: Non se puido acceder ao sistema como "{{login}}"
+      flash_error: Non se puido acceder ao sistema como "%{login}"
       flash_notice: Accedeu ao sistema correctamente
     destroy: 
       flash_notice: Saíu ao anonimato.

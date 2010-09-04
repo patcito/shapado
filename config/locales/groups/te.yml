@@ -52,5 +52,5 @@ te:
       accept_group: ఈ గుంపుని అంగీకరించండి
       close_group: ఈ గుంపుని మూసివేయి
       group_closed: ఈ గుంపుని మూసేసారు.
-      title: "{{name}} గురించి"
+      title: "%{name} గురించి"
       visit_group: ఈ బృందాన్ని సందర్శించండి

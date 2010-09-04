@@ -15,7 +15,7 @@ br:
     history: 
       current_version: Stumm red
       previous_versions: Stummoù kent
-      title: istor ({{count}})
+      title: istor (%{count})
       version: stumm
       version_summary: Diverrañ eus ar stumm-mañ
     model: 

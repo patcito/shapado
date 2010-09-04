@@ -27,7 +27,7 @@ ru:
     index: 
       create_page: Создать новую страницу
       title: Список страниц
-      written_in: "Язык страницы: {{language}}"
+      written_in: "Язык страницы: %{language}"
     new: 
       title: Новая страница
     title: FIXME

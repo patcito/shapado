@@ -6,7 +6,7 @@
 ru: 
   sessions: 
     create: 
-      flash_error: Невозможно войти в систему как «{{login}}»
+      flash_error: Невозможно войти в систему как «%{login}»
       flash_notice: Вы успешно вошли
     destroy: 
       flash_notice: Вы вышли из системы.

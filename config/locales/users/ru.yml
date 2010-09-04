@@ -77,7 +77,7 @@ ru:
       title: Все пользователи
     messages: 
       errors: 
-        reputation_needed: Вам необходимо обладать репутацией более {{min_reputation}} для того, чтобы {{action}}
+        reputation_needed: Вам необходимо обладать репутацией более %{min_reputation} для того, чтобы %{action}
     new: 
       submit: Зарегистрироваться
       title: Зарегистрироваться как новый пользователь
@@ -87,4 +87,4 @@ ru:
       unfollow: Не следить
       views: просмотры
     unfollow: 
-      flash_notice: Пользователь {{user}} удалён из списка ваших друзей
+      flash_notice: Пользователь %{user} удалён из списка ваших друзей
