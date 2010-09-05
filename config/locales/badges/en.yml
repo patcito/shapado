@@ -12,78 +12,54 @@ en:
       earned: earned
     shared:
       rockstar:
-        name: Rockstar
         description: 1000 positive votes, 10 negative votes maximum
       popstar:
-        name: Popstar
         description: 500 positive votes, 10 negative votes maximum
       fanatic:
-        name: Fanatic
         description: Visited the site each day for 100 consecutive days
       service_medal:
-        name: Service medal
         description: 300 positive votes
       famous_question:
-        name: Famous question
         description: Asked a question with 10000 views
       notable_question:
-        name: Notable question
         description: Asked a question with 2500 views
       popular_question:
-        name: Popular question
         description: Asked a question with 1000 views
       popular_person:
-        name: Popular person
         description: Your profile is visited 10000 times
       guru:
-        name: Guru
         description: Gave a solution to a question with an average of more than 40 votes
       favorite_question:
-        name: Favorite question
         description: Question favorited by 25 users
       tutor:
-        name: Tutor
         description: Gave a solution to a question with an average of more than 2 votes
       addict:
-        name: Addict
         description: Visited the site each day for 20 consecutive days
       good_question:
-        name: Good question
         description: Having a question that reaches an average of more than 25 votes
       good_answer:
-        name: Good answer
         description: Having an answer that reaches an average of more than 25 votes
       pioneer:
-        name: Pioneer
         description: Be one of the first users to register
       supporter:
-        name: Supporter
         description: Voted positively for the first time
       critic:
-        name: Critic
         description: Voted negatively for the first time
       inquirer:
-        name: Inquirer
         description: Asked for the first time
       troubleshooter:
-        name: Troubleshooter
         description: Answered for the first time
       commentator:
-        name: Commentator
         description: Left 10 comments
       merit_medal:
-        name: Merit medal
         description: Got 200 positive votes
       effort_medal:
-        name: Effort medal
         description: Got 100 positive votes
       student:
-        name: Student
         description: Asked first question with at least one up vote
       shapado:
         description: Visited the site each day for 8 consecutive days
       editor:
-        name: Editor
         description: First edited post
       friendly:
         name: Friendly
