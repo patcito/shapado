@@ -1,19 +1,20 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   comments: 
     create: 
-      flash_notice: merci pour votre commentaire
+      flash_notice: Merci pour votre commentaire
     edit: 
       title: Éditer le commentaire
     shared: 
-      add_comment: ajouter un commentaire...
-      comment_submit: commenter
-      reply: répondre
+      add_comment: Ajouter un commentaire...
+      comment_submit: Commenter
+      reply: Répondre
       said: a dit
     update: 
-      flash_notice: le commentaire a été actualisé avec succès.
+      flash_notice: Le commentaire a été actualisé avec succès.
   models: 
-    comment: comment
-    comments: commentaire
+    comment: Commentaire
+    comments: Commentaires

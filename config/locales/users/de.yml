@@ -14,7 +14,7 @@ de:
         avatar: Profilbild
         birthday: Geburtstag
         created_at: registriert
-        current_password: Aktuelles Passwort
+        current_password: Aktuelles Kennwort
         email: E-Mail
         fullname: Vollständiger Name
         hide_country: Mein Herkunftsland nicht anzeigen
@@ -25,7 +25,7 @@ de:
         name: Bürgerlicher Name
         password: Kennwort
         password_confirmation: Passwortbestätigung
-        preferred_languages: Sprachenwahl
+        preferred_languages: "Du möchtest Fragen in den folgenden Sprachen lesen:"
         preferred_tags: Bevorzugte Kennzeichnung
         reputation: Reputation
         timezone: Zeitzone
@@ -40,10 +40,10 @@ de:
       edit_wiki_post: Beiträge im Wiki bearbeiten
       flag: Kennzeichnen
       retag_others_questions: Ändere die Stichwörter von Fragen anderer
-      vote_down: Abwerten
+      vote_down: Negativ bewerten
       vote_to_close_any_question: Beantrage die Beendigung einer beliebigen Frage
       vote_to_close_own_question: Beantrage die Beendigung einer eigenen Frage
-      vote_up: Aufwerten
+      vote_up: Positiv bewerten
     anonymous_form: 
       never_shown: nie angezeigt
     create: 
@@ -56,10 +56,11 @@ de:
     follow: 
       flash_notice: Der Nutzer %{user} wurde zur Liste Deiner Freunde hinzugefügt
     form: 
-      activities_notification: E-Mail-Benachrichtigungen über Aktionen, z.B verdiente Auszeichnungen, weitere Kettenmitglieder, etc.
+      activities_notification: E-Mail-Benachrichtigungen zu Aktivitäten, z. B. erhaltene Auszeichnungen, neue Anhänger, etc.
       avatar_tip: Ändere Dein Profilbild mit „Gravatar“
       give_advice_notification: E-Mail-Benachrichtigungen über Fragen in Deinem Fachgebiet
       information: Information
+      language: Die Sprache, die für die Nutzeroberfläche verwendet werden soll
       new_answer_notification: E-Mail-Benachrichtigungen über neuen Antworten
       notifications: Benachrichtigungen
       reports_notification: Bericht mit den letzten Gruppenaktivitäten (nur für Gruppen-Administratoren)
@@ -81,7 +82,7 @@ de:
         reputation_needed: Du brauchst einen Reputationswert von %{min_reputation} für %{action}
     new: 
       submit: Anmeldung
-      title: Anmeldung als Nutzer
+      title: Anmeldung als neuer Nutzer
     show: 
       follow: Beachten
       title: Nutzer %{user}

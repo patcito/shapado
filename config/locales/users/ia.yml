@@ -24,7 +24,7 @@ ia:
         name: Nomine real
         password: Contrasigno
         password_confirmation: Confirmation del contrasigno
-        preferred_languages: Selige le linguas que tu cognosce
+        preferred_languages: "Tu vole leger questiones in le sequente linguas:"
         preferred_tags: Etiquettas preferite
         reputation: Reputation
         timezone: Fuso horari
@@ -59,6 +59,7 @@ ia:
       avatar_tip: Cambiar le imagine de tu profilo usante Gravatar
       give_advice_notification: Reciper notificationes per e-mail super questiones in tu campo de expertise
       information: Information
+      language: Lingua usate pro le interfacie del sito
       new_answer_notification: Reciper notificationes per e-mail pro nove responsas
       notifications: Notificationes
       reports_notification: Reciper un reporto con le ultime activitate del gruppo (solmente pro administratores del gruppo)

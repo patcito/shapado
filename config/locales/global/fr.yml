@@ -5,58 +5,58 @@
 # Author: Patcito
 fr: 
   actions: 
-    closed: fermé
+    closed: fermée
     created: crée
-    deleted: éffacé
+    deleted: supprimé
     updated: actualisé
   feeds: 
     feed: Flux
-    post_new_questions: poster les nouvelles questions à
-    question: souscrire à cette question
-    questions: souscrire à toutes les questions
+    post_new_questions: Poster les nouvelles questions à
+    question: Souscrire à cette question
+    questions: Souscrire à toutes les questions
     share_on_twitter: twitter, facebook et plus...
-    tag: souscrite au tag
-    user: inscrivez-vous aux questions de l'utilisateur
+    tag: Souscrite au tag
+    user: Inscrivez-vous aux questions de l'utilisateur
   global: 
     active: Activer
     by: par
     current: Actuel
     from: depuis %{site}
-    group_not_found: la page %{url} n'existe pas
+    group_not_found: La page %{url} n'existe pas
     or: ou
-    permission_denied: permission refusée
-    please_login: ouvrez une session s'il vous plait
-    preview: prévue
+    permission_denied: Permission refusée
+    please_login: Ouvrez une session s'il vous plait
+    preview: Aperçu du rendu
     previous: Précédent
-    share: share
+    share: Partager
   languages: 
-    any: any
-    user: mes langues
+    any: Toutes
+    user: Mes langues
   messages: 
     success: "%{model} a été %{action} avec succès."
   models: 
-    question: la question
+    question: La question
   number: 
     x_time: 
       one: "%{count} fois"
       other: "%{count} fois"
-      zero: jamais
+      zero: Jamais
   scaffold: 
-    add: ajouter
-    back: retour
-    cancel: annuler
-    close: fermer
-    create: créer
-    destroy: effacer
-    details: details
+    add: Ajouter
+    back: Retour
+    cancel: Annuler
+    close: Fermer
+    create: Créer
+    destroy: Supprimer
+    details: Détails
     edit: Éditer
-    more: plus...
-    new: ajouter %{model}
-    save: save
-    send: envoyer
-    show: monter
-    sure: Êtes-vous sûr de vouloir effacer ce %{model} ?
-    update: actualiser
+    more: Plus...
+    new: Ajouter %{model}
+    save: Sauvegarder
+    send: Envoyer
+    show: Monter
+    sure: Êtes-vous sûr de vouloir supprimer ce %{model} ?
+    update: Actualiser
   time: 
     ago: il y a %{time}
     today: aujourd'hui

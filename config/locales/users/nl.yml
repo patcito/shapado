@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Kjell
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -24,7 +25,7 @@ nl:
         name: Echte naam
         password: Wachtwoord
         password_confirmation: Wachtwoordbevestiging
-        preferred_languages: Selecteer de talen die u kent
+        preferred_languages: "U wilt vragen zien in de volgende talen:"
         preferred_tags: Voorkeurslabels
         reputation: Reputatie
         timezone: Tijdzone
@@ -59,6 +60,7 @@ nl:
       avatar_tip: Uw profielafbeelding wijzigen via gravatar
       give_advice_notification: E-mail ontvangen over vragen in uw expertisegebied
       information: Informatie
+      language: Taal die gebruikt wordt voor de interface van de site
       new_answer_notification: E-mail ontvangen over nieuwe antwoorden
       notifications: Kennisgevingen
       reports_notification: Een overzicht ontvangen van de laatste groepsactiviteit (alleen voor beheerders)

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Patcito
 # Author: Peter17
 fr: 
   activerecord: 
@@ -13,5 +14,5 @@ fr:
       login_tip: Chercher pendant la frappe
     index: 
       manage_members_title: Gérer les membres
-      title: members of %{name}'s group
-      title_isolate: members of %{name}
+      title: Membres du groupe %{name}
+      title_isolate: Membres de %{name}

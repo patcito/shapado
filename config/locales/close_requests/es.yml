@@ -5,29 +5,29 @@
 es: 
   close_requests: 
     create: 
-      flash_notice: close request created successfully
+      flash_notice: Solicitud de cierre creada con éxito
     destroy: 
-      flash_notice: close request deleted successfully
+      flash_notice: Solicitud de cierre eliminada con éxito
     edit: 
-      title: Editar la petición de cierre.
+      title: Editar la solicitud de cierre.
     form: 
-      close_with_reason: cerrar esta pregunta usando esta razón
-      dupe: duplicada
-      no_question: no es realmente una pregunta
-      not_relevant: no es pertinente
-      ot: fuera de tema
-      request_closing_details: pedir el cierre de esta pregunta
+      close_with_reason: Cerrar esta pregunta usando esta razón
+      dupe: Duplicada
+      no_question: No es realmente una pregunta
+      not_relevant: No es pertinente
+      ot: Fuera de tema
+      request_closing_details: Solicitar el cierre de esta pregunta
       spam: spam
     index: 
-      title: lista de peticiones de cierre
+      title: Lista de solicitudes de cierre
     model: 
       attributes: 
-        comment: comment
-        reason: reason
-        user: user
+        comment: Comentario
+        reason: Razón
+        user: Usuario
       messages: 
-        already_requested: you have already requested to close this question
-      name: petición de cierre
-      prural_name: peticiónes de cierre
+        already_requested: Ya has solicitado cerrar esta pregunta
+      name: Solicitud de cierre
+      prural_name: Solicitudes de cierre
     update: 
-      flash_notice: close request updated successfully
+      flash_notice: Solicitud de cierre actualizada con éxito

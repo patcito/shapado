@@ -5,7 +5,7 @@
 de: 
   shared: 
     current_tags: 
-      title: ausgewählte Schlagworte
+      title: Ausgewählte Stichworte
     topbar: 
       admin: administrieren
       logged_as: Als %{login} angemeldet

@@ -10,121 +10,121 @@ es:
       badges: insignias
   badges: 
     index: 
-      description: todas las insignias que puedes ganar. comparte tu conocimiento, gana placas.
-      title: insignias
+      description: Todas las insignias que puedes ganar. comparte tu conocimiento, gana placas.
+      title: Insignias
     shared: 
       addict: 
-        description: visita el sitio 20 días consecutivos
+        description: Visita el sitio 20 días consecutivos
       autobiographer: 
         description: completed all user profile fields
         name: autobiographer
       celebrity: 
-        description: tiene mas de 100 seguidores
-        name: celebridad
+        description: Tiene mas de 100 seguidores
+        name: Celebridad
       citizen_patrol: 
-        description: primer post reportado
-        name: citizen patrol
+        description: Primer post reportado
+        name: Patrulla civil
       civic_duty: 
-        description: vota 300 veces
-        name: civic duty
+        description: Vota 300 veces
+        name: Deber cívico
       cleanup: 
-        description: Primer rollback
-        name: cleanup
+        description: Primer reversión
+        name: Limpieza
       commentator: 
-        description: deja 10 comentarios
+        description: Deja 10 comentarios
       critic: 
-        description: votar negativamente por primera vez
+        description: Votar negativamente por primera vez
       disciplined: 
-        description: borra su propio post con puntaje mayor igual a 3
-        name: disciplined
+        description: Borra su propio post con puntaje mayor igual a 3
+        name: Disciplinado
       editor: 
-        description: primer mensaje editado
+        description: Primer mensaje editado
       effort_medal: 
-        description: recibir 100 votos positivos
+        description: Recibir 100 votos positivos
       enlightened: 
         description: primera respuesta aceptada con al menos 10 votos positivos
         name: Iluminado
       famous_question: 
-        description: hace una pregunta con 10000 visitas
+        description: Hace una pregunta con 10000 visitas
       fanatic: 
-        description: visita el sitio 100 días consecutivos
+        description: Visita el sitio 100 días consecutivos
       favorite_question: 
-        description: pregunta seleccionada como preferida por 25 usuarios
+        description: Pregunta seleccionada como preferida por 25 usuarios
       friendly: 
-        description: sigue a alguien por primera vez
-        name: amistoso
+        description: Sigue a alguien por primera vez
+        name: Amistoso
       good_answer: 
         description: Tener una respuesta que alcanzo un promedio de más de 25 votos
       good_question: 
-        description: haber hecho una pregunta que alcanzo el promedio de 10 votos
+        description: Haber hecho una pregunta que alcanzo el promedio de 10 votos
       great_answer: 
         description: respuesta votada 10 veces
         name: great answer
       great_question: 
-        description: pregunta votada 100 veces
-        name: great question
+        description: Pregunta votada 100 veces
+        name: Gran pregunta
       guru: 
         description: dar solución a una pregunta con promedio de votos superior a 40
       inquirer: 
-        description: preguntar por primera vez
+        description: Preguntar por primera vez
       interesting_person: 
-        description: tiene mas de 10 seguidores
-        name: persona interesante
+        description: Tiene mas de 10 seguidores
+        name: Persona interesante
       merit_medal: 
-        description: recibir 200 votos positivos
+        description: Recibir 200 votos positivos
       necromancer: 
-        description: contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
-        name: necromancer
+        description: Contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
+        name: Nigromante
       nice_answer: 
-        description: respuesta votada 10 veces
-        name: nice answer
+        description: Respuesta votada 10 veces
+        name: Respuesta bonita
       nice_question: 
-        description: pregunta votada 10 veces
-        name: nice question
+        description: Pregunta votada 10 veces
+        name: Pregunta bonita
       notable_question: 
-        description: hace una pregunta con 2500 visitas
+        description: Hace una pregunta con 2500 visitas
       organizer: 
-        description: primer re-etiquetado
-        name: organizador
+        description: Primer re-etiquetado
+        name: Organizador
       peer_pressure: 
         description: borra su propio post con puntaje menor igual a -3
         name: peer pressure
       pioneer: 
-        description: ser de los primeros usuarios registrados
+        description: Ser de los primeros usuarios registrados
       popstar: 
         description: 500 votos positivos, máximo 10 negativos
       popular_person: 
-        description: tiene mas de 50 seguidores
-        name: persona popular
+        description: Tiene mas de 50 seguidores
+        name: Persona popular
       popular_question: 
         description: hace una pregunta con 1000 visitas
       rockstar: 
         description: 1000 votos positivos, máximo 10 negativos
       scholar: 
-        description: first accepted answer on your own question
-        name: scholar
+        description: Primera respuesta aceptada en tu propia pregunta
+        name: Erudito
       self-learner: 
-        description: contesto su propia pregunta con al menos 3 votos positivos
-        name: self learner
+        description: Contesto su propia pregunta con al menos 3 votos positivos
+        name: Autodidacta
       service_medal: 
-        description: recibir 300 votos positivos
+        description: Recibir 300 votos positivos
       shapado: 
-        description: visita el sitio 8 días consecutivos
+        description: Visita el sitio 8 días consecutivos
       stellar_question: 
         description: Pregunta con mas de 100 favoritos
-        name: stellar question
+        name: Pregunta extraordinaria
       student: 
-        description: primera pregunta con al menos un voto positivo
+        description: Primera pregunta con al menos un voto positivo
       supporter: 
         description: votar positivamente por primera vez
       troubleshooter: 
-        description: responder por primera vez
+        description: Responder por primera vez
       tutor: 
-        description: dar solución a una pregunta con promedio de votos superior a 2
+        description: Dar solución a una pregunta con promedio de votos superior a 2
     show: 
-      description: "usuarios que ganaron esta insignia. recientemente otorgada a:"
-      earned: otorgada
+      description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
+      earned: Otorgada
       for_tag_bronze: 200 votos en la etiqueta %{tag}
       for_tag_gold: 1000 votos en la etiqueta %{tag}
       for_tag_silver: 400 votos en la etiqueta %{tag}
-      title: insignia %{type}
+      title: Insignia %{type}

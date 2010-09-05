@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   activerecord: 
     attributes: 
@@ -11,15 +12,21 @@ es:
       flags: reportes de abuso
   flags: 
     create: 
-      flash_error: usted no puede reportar como abuso esto
-      flash_notice: gracias por su reporte
+      flash_error: Usted no puede reportar como abuso esto
+      flash_notice: Gracias por tu reporte
+    destroy: 
+      flash_notice: Tu reporte ha sido retractado con éxito.
+    edit: 
+      title: Editar el reporte de %{model}
     form: 
-      attention: requiere atención de un moderador
+      attention: Requiere atención de un moderador
       label: por favor reporte con cuidado
       offensive: ofensivo, abusivo o intolerante
-      spam: spam
+      spam: Spam
     model: 
       messages: 
         already_requested: Ya has reportado este %{model}
     new: 
       title: Reportar %{model}
+    update: 
+      flash_notice: El reporte de pregunta ha sido creado con éxito

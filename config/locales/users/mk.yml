@@ -24,7 +24,7 @@ mk:
         name: вистинско име
         password: лозинка
         password_confirmation: потврда на лозинката
-        preferred_languages: одберете ги јазиците што ги познавате
+        preferred_languages: "Сакате да читате прашања на следниве јазици:"
         preferred_tags: претпочитани ознаки
         reputation: углед
         timezone: часовна зона
@@ -59,6 +59,7 @@ mk:
       avatar_tip: сменете си ја профилната слика со граватар
       give_advice_notification: добивање на известувања по е-пошта за прашања од вашата стручна област
       information: информации
+      language: Јазик на посредникот на мрежното место
       new_answer_notification: добивање на соопштенија по е-пошта за нови одговори
       notifications: соопштенија
       reports_notification: добивање на извештај за најновите активности во групата (само за администратори на групи)

@@ -1,0 +1,24 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Hai guadagnato un badge su %{group}!
+      favorited: 
+        subject: "%{login} ha aggiunto la tua domanda tra i preferiti!"
+      follow: 
+        subject: "%{login} ti sta seguendo su %{app}"
+      give_advice: 
+        friend_subject: "Il tuo amico ha bisogno di aiuto: %{question_title}"
+        subject: "Ci serve il tuo consiglio: %{question_title}"
+      new_answer: 
+        subject_friend: Il tuo amico %{login} ha risposto alla domanda %{title}
+        subject_other: "%{login} ha risposto alla domanda %{title}"
+        subject_owner: "%{login} ha risposto alla tua domanda %{title}"
+      new_comment: 
+        subject: "%{login} ha commentato su %{group}"
+      report: 
+        subject: Report del gruppo %{group} di %{app}

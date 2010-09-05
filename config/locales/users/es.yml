@@ -26,7 +26,7 @@ es:
         name: nombre real
         password: contraseña
         password_confirmation: confirmación de contraseña
-        preferred_languages: escoja los idiomas que conozca
+        preferred_languages: "Quieres leer las preguntas en los siguientes idiomas:"
         preferred_tags: etiquetas preferidas
         reputation: reputación
         timezone: zona horaria
@@ -61,6 +61,7 @@ es:
       avatar_tip: cambia tu imagen del perfil usando gravatar
       give_advice_notification: obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
       information: información
+      language: Idioma usado para la interfaz de la pagina
       new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
       notifications: notificaciones
       reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)

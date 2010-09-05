@@ -24,7 +24,7 @@ pt-PT:
         name: Nome verdadeiro
         password: Palavra-chave
         password_confirmation: Confirmação da palavra-chave
-        preferred_languages: Seleccione as línguas que conhece
+        preferred_languages: "Pretende ler perguntas nas seguintes línguas:"
         preferred_tags: Categorias preferidas
         reputation: Reputação
         timezone: Localização
@@ -59,6 +59,7 @@ pt-PT:
       avatar_tip: Alterar a imagem do perfil usando o Gravatar
       give_advice_notification: Receber por correio electrónico notificações de perguntas na sua área de especialidade
       information: Informação
+      language: Língua usada na interface do site
       new_answer_notification: Receber por correio electrónico notificações de respostas novas
       notifications: Notificações
       reports_notification: Receber um relatório das actividades mais recentes do grupo (só para administradores de grupos)

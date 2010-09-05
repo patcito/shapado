@@ -1,29 +1,30 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 # Author: Y-M D
 fr: 
   activerecord: 
     attributes: 
       answer: 
-        body: corps
-        created_at: répondue
-        link: lien
+        body: Corps
+        created_at: Répondue
+        link: Lien
     models: 
-      answer: réponse
-      answers: réponses
+      answer: Réponse
+      answers: Réponses
   answers: 
     create: 
-      flash_error: "une erreur s'est produite lors de l'ajout de votre question. \n  n'oubliez pas que: \n - les réponses vides de contenu ou les doublons ne sont pas autorisées. \n - vous devez attendre au moins 20 secondes avant de poster une autre réponse. \n - vous ne pouvez poster qu'une réponse par question."
-      flash_notice: merci!
+      flash_error: "Une erreur s'est produite lors de l'ajout de votre question. \n  N'oubliez pas que: \n - Les réponses vides de contenu ou les doublons ne sont pas autorisées. \n - Vous devez attendre au moins 20 secondes avant de poster une autre réponse. \n - Vous ne pouvez poster qu'une réponse par question."
+      flash_notice: Merci!
     edit: 
       title: Éditer la réponse
     form: 
-      answer_label: répondre à la question
-      comment_label: commenter sur cette réponse
-      comment_submit: commenter
-      submit: répondre
+      answer_label: Répondre à la question
+      comment_label: Commenter sur cette réponse
+      comment_submit: Commenter
+      submit: Répondre
     revert: 
-      title: revenir à cette réponse
+      title: Revenir à cette réponse
     update: 
-      flash_notice: la réponse a été créée avec succès.
+      flash_notice: La réponse a été créée avec succès.

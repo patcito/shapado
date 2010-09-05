@@ -1,32 +1,33 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 # Author: Peter17
 fr: 
   activerecord: 
     attributes: 
       group: 
-        default_tags: tags par défaut
-        description: description
-        domain: domaine
+        default_tags: Tags par défaut
+        description: Description
+        domain: Domaine
         fb_button: Activer le boutton Like de Facebook (ne protège pas la vie privée)
-        forum: permettre plus d'une réponse par utilisateur
+        forum: Permettre plus d'une réponse par utilisateur
         group_created_by: crée par
-        language: langue
-        legend: légende
-        logo: logo
-        may_contain_adult_content: ce site peut inclure du contenu pour adultes
-        name: name
-        openid_only: seules les personnes utilisant openid ont accès au site
+        language: Langue
+        legend: Légende
+        logo: Logo
+        may_contain_adult_content: Ce site peut inclure du contenu pour adultes
+        name: Name
+        openid_only: Seules les personnes utilisant openid ont accès au site
         owner: ce groupe a été crée par %{login}
-        registered_only: seules les personnes autorisées ont accès au site
-        state: état
-        subdomain: url
+        registered_only: Seules les personnes autorisées ont accès au site
+        state: État
+        subdomain: URL
         wysiwyg_editor: Activer l'éditeur de texte convivial (présente à l'écran tel qu'à l'écrit)
     models: 
-      default_tags_message: vous ne pouvez pas utiliser plus de 10 tags par défaut.
-      group: groupe
-      groups: groupes
+      default_tags_message: Vous ne pouvez pas utiliser plus de 10 tags par défaut.
+      group: Groupe
+      groups: Groupes
   groups: 
     create: 
       flash_notice: Votre groupe a été créé avec succès, vous pouvez maintenant commencer à le configurer.
@@ -34,39 +35,39 @@ fr:
       access: Configuration de l'accès
       analytics_engine: Moteur d’analyse
       analytics_legend: Le groupe pourra utiliser son propre code de suivi
-      any_language: n'importe qu'elle
+      any_language: Toutes
       custom_analytics: Autoriser l’analyse personnalisée
       custom_html: Autoriser le HTML personnalisé
       custom_js: Autoriser le Javascript personnalisé
       default_tags_legend: séparez les tags avec des virgules. seuls 10 tags par défaut sont autorisés.
       description_legend: vous avez 400 caractères pour décrire le groupe.
       isolate_group: Isoler le groupe des autres groupes
-      legend_legend: ceci sera utilisé dans l'entête, vous disposez de 40 caractères
-      logo_legend: vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb.
+      legend_legend: Ceci sera utilisé dans l'entête, vous disposez de 40 caractères
+      logo_legend: Vous pouvez télécharger le logo du groupe. la taille maximum est de 2mb.
       members_only: Seuls les membres du groupe pourront accéder à ce groupe
       website_analytics_id: Identifiant d’analyse du site web
     group: 
       about: À propos
-      accept_group: accepter ce groupe
-      allow_ads: permettre publicité
-      close: fermer
-      close_group: fermer ce groupe
-      disallow_ads: interdir publicité
+      accept_group: Accepter ce groupe
+      allow_ads: Permettre la publicité
+      close: Fermer
+      close_group: Fermer ce groupe
+      disallow_ads: Interdire la publicité
     index: 
-      actives: actifs
-      filter: chercher les groupes
-      most_active: most active
-      name: nom
-      pendings: en attente
-      request_group: demander un nouveau groupe
-      title: groups
+      actives: Actifs
+      filter: Chercher les groupes
+      most_active: Plus actifs
+      name: Nom
+      pendings: En attente
+      request_group: Solliciter un nouveau groupe
+      title: Groupes
     new: 
-      title: créez votre groupe
+      title: Créez votre groupe
     show: 
-      accept_group: accepter ce groupe
-      accept_group_with_custom_ads: accepter les groupes et autoriser les annonces personnalisées
-      close_group: fermer ce groupe
-      group_awaiting_acceptance: ce groupe est dans l'attente de l'acceptation d'un modérateur.
-      group_closed: ce groupe a été fermé.
-      title: à propos de %{name}
-      visit_group: visiter ce groupe
+      accept_group: Accepter ce groupe
+      accept_group_with_custom_ads: Accepter les groupes et autoriser les annonces personnalisées
+      close_group: Fermer ce groupe
+      group_awaiting_acceptance: Ce groupe est dans l'attente de l'acceptation d'un modérateur.
+      group_closed: Ce groupe a été fermé.
+      title: À propos de %{name}
+      visit_group: Visiter ce groupe

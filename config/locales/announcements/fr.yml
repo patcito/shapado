@@ -1,19 +1,20 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   activerecord: 
     attributes: 
       announcement: 
-        ends_at: termine le
-        message: message
-        only_anonymous: juste pour les utilisateurs anonymes
-        starts_at: débute le
+        ends_at: Termine le
+        message: Message
+        only_anonymous: Juste pour les utilisateurs anonymes
+        starts_at: Débute le
   announcements: 
     actions: 
-      delete: retirer
-      title: actions
+      delete: Supprimer
+      title: Actions
     create: 
-      success: announce créée avec succès.
+      success: Announce créée avec succès.
     index: 
-      title: annonces
+      title: Annonces

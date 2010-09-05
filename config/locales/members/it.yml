@@ -1,0 +1,16 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Ruolo
+  members: 
+    form: 
+      login_tip: Ricerca mentre si digita
+    index: 
+      manage_members_title: Gestione membri
+      title: Membri del gruppo di %{name}
+      title_isolate: Membri di %{name}

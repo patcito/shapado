@@ -5,47 +5,47 @@
 fr: 
   layouts: 
     application: 
-      ask_question: posez une question
-      badges: insignes
-      forgot: oublié?
-      home: page principale
-      languages: langues
-      log_in: se connecter
-      logged: connecté %{login}
-      logout: se déconnecter
+      ask_question: Posez une question
+      badges: Insignes
+      forgot: Oublié?
+      home: Page principale
+      languages: Langues
+      log_in: Se connecter
+      logged: Connecté %{login}
+      logout: Se déconnecter
       manage_ads: administrer les publicités
-      moderate: modérer
+      moderate: Modérer
       now: now!
       openid: 
-        explaination: "si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
-      pages: pages
-      questions: questions
-      questions_in: questions en
+        explaination: "Si vous souhaitez ouvrir un compte ou juste vous connectez, sélectionnez un fournisseur openid:"
+      pages: Pages
+      questions: Questions
+      questions_in: Questions en
       questions_tagged: taguées
-      search: chercher
-      settings: configuration
-      signup: créer un compte
-      subscribe: s'inscrire
-      tags: tags
+      search: Chercher
+      settings: Configuration
+      signup: Créer un compte
+      subscribe: S'inscrire
+      tags: Tags
       title: questions & réponses
-      unanswered: sans réponses
-      users: utilisateurs
+      unanswered: Sans réponses
+      users: Utilisateurs
       welcome_from: welcome! you can
     manage: 
-      actions: actions
-      announcements: annonces
-      constrains: constraintes
-      content: contenu
-      dashboard: dashboard
-      domain: domaine
-      general: général
-      members: membres
-      pages: pages
-      properties: propriétés
-      reputation: réputation
-      rewards: récompenses
+      actions: Actions
+      announcements: Annonces
+      constrains: Contraintes
+      content: Contenu
+      dashboard: Dashboard
+      domain: Domaine
+      general: Général
+      members: Membres
+      pages: Pages
+      properties: Propriétés
+      reputation: Réputation
+      rewards: Récompenses
       stats: États
-      theme: thème
-      widgets: widgets
+      theme: Thème
+      widgets: Widgets
     notifications: 
       message: Si vous ne souhaitez plus recevoir de notifications automatiques de %{domain}, vous pouvez changer votre configuration de notifications.

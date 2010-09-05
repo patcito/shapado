@@ -24,7 +24,7 @@ gl:
         name: Nome real
         password: Contrasinal
         password_confirmation: Confirmación do contrasinal
-        preferred_languages: Seleccione as linguas que domina
+        preferred_languages: "As linguas nas que quere ler as preguntas:"
         preferred_tags: Etiquetas preferidas
         reputation: Reputación
         timezone: Zona horaria
@@ -59,6 +59,7 @@ gl:
       avatar_tip: Cambiar a imaxe do seu perfil usando o gravatar
       give_advice_notification: Recibir notificacións por correo electrónico sobre as preguntas ligadas co seu campo de experiencia
       information: Información
+      language: Lingua empregada na interface do sitio
       new_answer_notification: Recibir notificacións por correo electrónico sobre novas respostas
       notifications: Notificacións
       reports_notification: Recibir un informe coas últimas actividades do grupo (soamente para o administrador do grupo)

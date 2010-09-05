@@ -2,13 +2,14 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: IAlex
+# Author: Patcito
 # Author: Peter17
 # Author: Y-M D
 fr: 
   activerecord: 
     models: 
-      badge: insigne
-      badges: insignes
+      badge: Insigne
+      badges: Insignes
   badges: 
     index: 
       description: Liste des insignes que vous pouvez gagner. Partagez votre connaissance, gagnez des insignes.
@@ -17,34 +18,34 @@ fr:
       addict: 
         description: Visiter le site 20 jours consécutifs
       autobiographer: 
-        description: a complété tous ses champs utilisateurs
-        name: autobiographe
+        description: A complété tous ses champs utilisateurs
+        name: Autobiographe
       celebrity: 
-        description: avoir plus de 100 suiveurs
-        name: célébrité
+        description: Avoir plus de 100 suiveurs
+        name: Célébrité
       citizen_patrol: 
         description: Premier rapport de poste
-        name: patrouille civile
+        name: Patrouille civile
       civic_duty: 
         description: A voté 300 fois
-        name: devoir civique
+        name: Devoir civique
       cleanup: 
         description: Premier défait
-        name: nettoyage
+        name: Nettoyage
       commentator: 
         description: Avoir laissé 10 commentaires
       critic: 
         description: Voter négativement pour la première fois
       disciplined: 
         description: A supprimé un poste avec un score de 3 ou plus
-        name: discipliné
+        name: Discipliné
       editor: 
         description: Premier poste édité
       effort_medal: 
-        description: recevoir 100 votes positifs
+        description: Recevoir 100 votes positifs
       enlightened: 
         description: Première réponse acceptée avec au moins 10 votes positifs
-        name: éclairé
+        name: Illuminé
       famous_question: 
         description: Question ayant reçu 10000 visites
       fanatic: 
@@ -52,80 +53,80 @@ fr:
       favorite_question: 
         description: Question sélectionnée comme favorite par 25 utilisateurs
       friendly: 
-        description: suivre quelqu'un pour la première fois
-        name: friendly
+        description: Suivre quelqu'un pour la première fois
+        name: Amical
       good_answer: 
         description: Avoir une réponse atteignant une moyenne de plus de 25 votes
       good_question: 
-        description: avoir fait une question ayant atteint une moyenne de 10 votes
+        description: Avoir fait une question ayant atteint une moyenne de 10 votes
       great_answer: 
         description: Réponse votée positivement 100 fois
-        name: formidable réponse
+        name: Formidable réponse
       great_question: 
         description: Question votée positivement 100 fois
-        name: formidable question
+        name: Formidable question
       guru: 
         description: Donner une solution à une question ayant une moyenne de votes supérieure à 40
       inquirer: 
         description: Poser une question pour la première fois
       interesting_person: 
-        description: avoir plus de 10 suiveurs
-        name: personne intéressante
+        description: Avoir plus de 10 suiveurs
+        name: Personne intéressante
       merit_medal: 
-        description: recevoir 200 votes positifs
+        description: Recevoir 200 votes positifs
       necromancer: 
         description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
-        name: nécromancien
+        name: Nécromancien
       nice_answer: 
         description: Réponse votée positivement 10 fois
-        name: bonne réponse
+        name: Jolie réponse
       nice_question: 
         description: Question votée positivement 10 fois
-        name: bonne question
+        name: Jolie question
       notable_question: 
         description: Question ayant reçu 2500 visites
       organizer: 
-        description: premier retag
-        name: organisateur
+        description: Premier retag
+        name: Organisateur
       peer_pressure: 
         description: A supprimé un post avec un score de -3 ou moins
-        name: influence des pairs
+        name: Influence des pairs
       pioneer: 
         description: Être parmi les premiers à s'être inscrit
       popstar: 
         description: 500 votes positifs, 10 négatifs maximum
       popular_person: 
-        description: avoir plus de 50 suiveurs
-        name: personne populaire
+        description: Avoir plus de 50 suiveurs
+        name: Personne populaire
       popular_question: 
         description: Question ayant reçu 1000 visites
       rockstar: 
         description: 1000 votes positifs, 10 négatifs maximum
       scholar: 
         description: Réponse acceptée à votre propre question
-        name: érudit
+        name: Érudit
       self-learner: 
         description: A répondu à sa propre question avec un score de 3 ou plus
-        name: autodidacte
+        name: Autodidacte
       service_medal: 
         description: Recevoir 300 votes positifs
       shapado: 
         description: Visiter le site tous jours durant 8 jours consécutifs
       stellar_question: 
-        description: Question favorie d'au moins 100 utilisateurs
-        name: question stellaire
+        description: Question favorite d'au moins 100 utilisateurs
+        name: Question extraordinaire
       student: 
         description: Recevoir au moins un vote positif sur sa première question
       supporter: 
-        description: voter positivement pour la première fois
+        description: Voter positivement pour la première fois
       troubleshooter: 
         description: Répondre pour la première fois
       tutor: 
         description: Donner une solution à une question ayant une moyenne de votes supérieure à 2
     show: 
       description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
-      earned: gagné
+      earned: Gagné
       for_tag_bronze: 200 votes pour le tag %{tag}
       for_tag_gold: 1000 votes pour le tag %{tag}
       for_tag_silver: 400 votes pour le tag %{tag}
-      title: insigne %{type}
+      title: Insigne %{type}

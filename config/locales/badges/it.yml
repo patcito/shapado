@@ -1,0 +1,66 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    models: 
+      badge: Badge
+      badges: Badge
+  badges: 
+    index: 
+      description: Tutti i badge che si possono guadagnare. Condividi le tue conoscenze, guadagna badge.
+      title: badge
+    shared: 
+      autobiographer: 
+        description: Completati tutti i campi del profilo utente
+        name: Autobiografo
+      celebrity: 
+        description: Raggiunti più di 100 follower
+        name: Celebrità
+      citizen_patrol: 
+        description: Primo post contrassegnato
+        name: Pattuglia cittadina
+      civic_duty: 
+        description: Votato 300 volte
+        name: Dovere civico
+      cleanup: 
+        description: Primo rollback
+        name: Pulizia
+      disciplined: 
+        description: Cancellato post proprio con punteggio di 3 o superiore
+        name: Disciplinato
+      enlightened: 
+        name: Illuminato
+      friendly: 
+        description: Follow qualcuno per la prima volta
+        name: Amichevole
+      great_answer: 
+        description: Risposta votata 100 volte
+        name: Ottima risposta
+      inquirer: 
+        description: Domandato per la prima volta
+      interesting_person: 
+        description: Raggiunti più di 10 follower
+        name: Persona interessante
+      necromancer: 
+        description: Risposto ad una domanda più di 60 giorni dopo con almeno 5 voti
+        name: Necromante
+      nice_question: 
+        description: Domanda votata 10 volte
+        name: Bella domanda
+      organizer: 
+        description: Primo retag
+        name: Organizzatore
+      peer_pressure: 
+        description: Cancellato post proprio con punteggio di -3 o inferiore
+        name: Sotto pressione
+      popular_person: 
+        description: Raggiunti più di 50 follower
+        name: Persona popolare
+      self-learner: 
+        description: Risposto alla propria domanda con almeno 3 voti
+        name: Autodidatta
+      stellar_question: 
+        description: Domanda aggiunta ai preferiti da 100 utenti
+        name: Domanda stellare

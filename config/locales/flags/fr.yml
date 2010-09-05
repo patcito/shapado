@@ -1,28 +1,29 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 # Author: Peter17
 fr: 
   activerecord: 
     attributes: 
       flag: 
-        reason: raison
+        reason: Raison
     models: 
-      flag: rapport
-      flags: rapports
+      flag: Rapport
+      flags: Rapports
   flags: 
     create: 
-      flash_error: vous ne pouvez rapporter ceci
-      flash_notice: merci pour votre rapport
+      flash_error: Vous ne pouvez rapporter ceci
+      flash_notice: Merci pour votre rapport
     destroy: 
       flash_notice: Votre signal a été révoqué avec succès.
     edit: 
       title: Modifier le signal du %{model}
     form: 
-      attention: nécesite l'attention des modérateurs
-      label: s'il vous plait, raporter avec attention
-      offensive: injurieux, abusif ou discours de haine
-      spam: spam
+      attention: Nécesite l'attention des modérateurs
+      label: S'il vous plait, raporter avec attention
+      offensive: Injurieux, abusif ou discours de haine
+      spam: Spam
     model: 
       messages: 
         already_requested: Vous avez déjà signalé ce %{model}

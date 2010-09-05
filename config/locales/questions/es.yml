@@ -96,6 +96,7 @@ es:
       ban: ban
       close: cerrar
       close_reason: "la pregunta ha sido cerrada por la siguiente razón:"
+      edit_request: Editar la solicitud
       favorite_tooltip: agregar esta pregunta a tus favoritas
       flag: reportar abuso
       flagged_as: reportado como
@@ -105,8 +106,12 @@ es:
       related_questions: preguntas relacionadas
       request_closing: pedir cierre
       request_closing_details: pide cerrar esta pregunta
+      request_opening: Solicitar re-abrid
+      request_opening_details: Solicitar re-abrir esta pregunta
+      requested_close_as: Has solicitado cerrar esta pregunta como
+      requested_reopening: Has solicitado re-abrir esta pregunta
       retag: re-etiquetar
-      retract_request: ya has hecho una petición, deseas retractarla?
+      retract_request: Retractar la solicitud
       share: compartir esta pregunta en
       share_on: compartir esta pregunta en %{site}
       solution: solución
