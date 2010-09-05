@@ -6,6 +6,7 @@ javascripts:
   - jquery-ui
   - jquery.textarea
   - jHtmlArea
+  - jquery.autocomplete
   - jquery.autoSuggest
   - jquery.notifyBar
   - showdown
