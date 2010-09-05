@@ -37,6 +37,7 @@ en:
       reports_notification: Receive a report with latest group activity (only for group admins)
       avatar_tip: "Change your profile image using Gravatar"
       show_more_lang: "Show more languages"
+      language: Language used for the interface of the site
     create:
       flash_notice: "Thanks for signing up!"
       flash_error:  "Sorry, we could not set up that account. Please try again, or contact an administrator (link is above)."
@@ -75,7 +76,7 @@ en:
         asked_by: asked by
         timezone: Time zone
         preferred_tags: Preferred tags
-        preferred_languages: Select the languages you know
+        preferred_languages: 'You want to read questions in the following languages:'
         last_logged_at: seen
         created_at: joined
         reputation: Reputation
