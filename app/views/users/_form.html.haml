@@ -55,13 +55,14 @@
 -if AppConfig.enable_i18n
   .group
     = f.label :preferred_languages, t(:preferred_languages, :scope => "activerecord.attributes.user"), :class => "label"
-    -AVAILABLE_LANGUAGES.each do |lang|
-      - (DEFAULT_USER_LANGUAGES.include? lang)? jsclass = '' : jsclass = 'jshide'
-      .radio_option
-        = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang), :class => "langbox checkbox #{jsclass}"
-        %label.radio.langbox{:class=>jsclass}
-          = language_desc(lang)
     = link_to t('.show_more_lang'), nil, :class => 'show-more-lang'
+    -AVAILABLE_LANGUAGES.sort.each do |lang|
+      - (DEFAULT_USER_LANGUAGES.include? lang)? jsclass = '' : jsclass = 'jshide'
+      #lang_opts
+        .radio_option{:id=>language_desc(lang)}
+          = check_box_tag "user[preferred_languages][]", lang, @user.preferred_languages.include?(lang), :class => "langbox checkbox #{jsclass}"
+          %label.radio.langbox{:class=>jsclass}
+            = language_desc(lang)
 -else
   = hidden_field_tag "user[preferred_languages][]", (current_group.language || AppConfig.default_language)
 

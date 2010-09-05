@@ -70,9 +70,10 @@ $(document).ready(function() {
   fillTextareas();
 
   $(".highlight_for_user").effect("highlight", {}, 2000);
-  sortValues('group_language', ':last');
-  sortValues('language_filter', ':lt(2)');
-  sortValues('user_language', false);
+  sortValues('#group_language', 'option', ':last', 'text', null);
+  sortValues('#language_filter', 'option',  ':lt(2)', 'text', null);
+  sortValues('#user_language', 'option',  false, 'text', null);
+  sortValues('#lang_opts', '.radio_option', false, 'attr', 'id');
 
   $('.langbox.jshide').hide();
   $('.show-more-lang').click(function(){
@@ -183,17 +184,17 @@ function removeFromLocalStorage(key, id){
 }
 
 
-function sortValues(selectID, keepers){
+function sortValues(selectID, child, keepers, method, arg){
   if(keepers){
-    var any = $('#'+selectID+' option'+keepers);
+    var any = $(selectID+' '+child+keepers);
     any.remove();
   }
-  var sortedVals = $.makeArray($('#'+selectID+' option')).sort(function(a,b){
-    return $(a).text() > $(b).text() ? 1: -1;
+  var sortedVals = $.makeArray($(selectID+' '+child)).sort(function(a,b){
+    return $(a)[method](arg) > $(b)[method](arg) ? 1: -1;
   });
-  $('#'+selectID).empty().html(sortedVals);
+  $(selectID).empty().html(sortedVals);
   if(keepers)
-    $('#'+selectID).prepend(any);
+    $(selectID).prepend(any);
   //updateValueList();
 };
 
