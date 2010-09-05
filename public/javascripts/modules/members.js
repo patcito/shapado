@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-    $('#member_user_id').autocomplete('/users/autocomplete_for_user_login', {
+    $('#member_user_id').autocomplete('/users/autocomplete_for_user_login.json', {
             multiple: false,
             dataType: 'json',
             delay: 200,
