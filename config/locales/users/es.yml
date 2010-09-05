@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Danke7
 # Author: Patcito
 es: 
   activerecord: 
@@ -44,6 +45,8 @@ es:
       vote_to_close_any_question: request closing any question
       vote_to_close_own_question: Pedir cerrar su propia pregunta
       vote_up: votar positivo
+    anonymous_form: 
+      never_shown: nunca mostrado
     create: 
       flash_error: no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba).
       flash_notice: gracias por registrarse!

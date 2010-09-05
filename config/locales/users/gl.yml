@@ -43,6 +43,8 @@ gl:
       vote_to_close_any_question: Pedir o peche de calquera pregunta
       vote_to_close_own_question: Pedir o peche dunha pregunta propia
       vote_up: Votar positivamente
+    anonymous_form: 
+      never_shown: nunca mostrado
     create: 
       flash_error: Por desgraza, non podemos crear a conta. Inténteo de novo ou póñase en contacto cun administrador (a ligazón está enriba).
       flash_notice: Grazas por se rexistrar!

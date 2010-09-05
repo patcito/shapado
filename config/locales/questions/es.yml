@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Danke7
 # Author: Patcito
 es: 
   activerecord: 
@@ -100,6 +101,7 @@ es:
       flagged_as: reportado como
       flags: reportado como
       last_activity: última actividad
+      open: Abierto
       related_questions: preguntas relacionadas
       request_closing: pedir cierre
       request_closing_details: pide cerrar esta pregunta

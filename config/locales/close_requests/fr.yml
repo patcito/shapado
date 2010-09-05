@@ -8,6 +8,8 @@ fr:
       flash_notice: demande de fermeture créée avec succès
     destroy: 
       flash_notice: demande de fermeture retirée avec succès
+    edit: 
+      title: Modifier la demande de clôture
     form: 
       close_with_reason: fermer cette question en utilisant cette raison
       dupe: doublon

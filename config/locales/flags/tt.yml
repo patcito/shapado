@@ -2,7 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Ильнар
-tt-cyrl: 
+tt: 
   activerecord: 
     attributes: 
       flag: 

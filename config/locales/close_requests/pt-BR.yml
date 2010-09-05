@@ -9,6 +9,8 @@ pt-BR:
       flash_notice: O pedido de fechamento foi criado com sucesso.
     destroy: 
       flash_notice: O pedido de fechamento foi eliminado com sucesso
+    edit: 
+      title: Editar pedido de encerramento
     form: 
       close_with_reason: Fechar esta pergunta usando este motivo
       dupe: Duplicada

@@ -2,12 +2,15 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   close_requests: 
     create: 
       flash_notice: Запрос на закрытие успешно создан
     destroy: 
       flash_notice: Запрос на закрытие успешно удалён
+    edit: 
+      title: Изменить закрытый запрос
     form: 
       close_with_reason: Закрыть вопрос по этой причине
       dupe: Копия

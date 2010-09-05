@@ -96,16 +96,18 @@ br:
       ban: Forbannañ
       close: Serriñ
       close_reason: "Serret eo bet ar goulenn-mañ evit an abeg da-heul :"
+      edit_request: Kemmañ ar goulenn
       favorite_tooltip: Ouzhpennañ ar goulenn-mañ d'ar sinedoù
       flag: Kas kemenn un implij direizh
       flagged_as: Kemennet evel
       flags: Kemennet evel
       last_activity: oberiantizoù ziwezhañ
+      open: Digor
       related_questions: Goulennoù kar
       request_closing: Goulenn serriñ
       request_closing_details: Goulenn ma vo serret ar goulenn-mañ
       retag: Adtikedenniñ
-      retract_request: Ur goulenn hoc'h eus savet c'hoazh, tennañ anezhañ a fell deoc'h ?
+      retract_request: Tennañ ar goulenn
       share: Kenrannañ ar goulenn-mañ war
       share_on: Kenrannañ ar goulenn-mañ war %{site}
       solution: Diskoulm

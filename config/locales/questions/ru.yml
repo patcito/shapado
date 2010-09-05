@@ -1,8 +1,10 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: G0rn
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   activerecord: 
     attributes: 
@@ -96,16 +98,22 @@ ru:
       ban: Заблокировать
       close: Закрыть
       close_reason: "Вопрос закрыт по следующей причине:"
+      edit_request: Изменить запрос
       favorite_tooltip: Добавить этот вопрос в избранное
       flag: Отметить
       flagged_as: С отметкой
       flags: Отмечен как
       last_activity: Последние действия
+      open: Открыть
       related_questions: Похожие вопросы
       request_closing: Запрос закрытия
       request_closing_details: Оставить запрос на закрытие этого вопроса
+      request_opening: Переоткрытие запроса
+      request_opening_details: Запрос на повторное открытие этого вопроса
+      requested_close_as: Вы запросили закрытие этого вопроса
+      requested_reopening: Вы запросили переоткрытие этого вопроса
       retag: Изменить теги
-      retract_request: Вы уже сделали запрос; вы хотите отказаться от него?
+      retract_request: Отозвать запрос
       share: Разместить этот вопрос на
       share_on: Разместить этот вопрос на %{site}
       solution: Решение

@@ -19,3 +19,6 @@ pt-PT:
       label: Reporte com cuidado, por favor
       offensive: Conteúdo ofensivo, abusivo ou insultuoso
       spam: Spam
+    model: 
+      messages: 
+        already_requested: Já marcou este %{model}.

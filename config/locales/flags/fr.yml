@@ -1,6 +1,7 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Peter17
 fr: 
   activerecord: 
     attributes: 
@@ -13,8 +14,19 @@ fr:
     create: 
       flash_error: vous ne pouvez rapporter ceci
       flash_notice: merci pour votre rapport
+    destroy: 
+      flash_notice: Votre signal a été révoqué avec succès.
+    edit: 
+      title: Modifier le signal du %{model}
     form: 
       attention: nécesite l'attention des modérateurs
       label: s'il vous plait, raporter avec attention
       offensive: injurieux, abusif ou discours de haine
       spam: spam
+    model: 
+      messages: 
+        already_requested: Vous avez déjà signalé ce %{model}
+    new: 
+      title: Signaler le %{model}
+    update: 
+      flash_notice: Le signal de la question a été mis à jour avec succès.

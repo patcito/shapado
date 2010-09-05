@@ -97,6 +97,7 @@ ia:
         name: Persona popular
       popular_question: 
         description: Poneva un question con 1000 visitas
+        name: Question popular
       rockstar: 
         description: 1000 votos positive, maximo de 10 votos negative
       scholar: 

@@ -37,8 +37,11 @@ ru:
           reputation_rewards_subtitle: Список вознаграждений к репутации
           title: Награды
         share: 
+          ends_with_example: "например, #shapado"
+          question_must_include_example: "например, #iAsk"
           secret_key: Секретный Ключ
           title: Распространение
+          twitter_account: Учётная запись Twitter, на которую пользователи будут задавать вопросы.
         theme: 
           logo_legend: Загрузка логотипа своей группы, его размер должен быть менее 2 МБ.
           title: Установка темы оформления группы

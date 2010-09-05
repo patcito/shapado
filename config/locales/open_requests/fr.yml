@@ -1,0 +1,22 @@
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  open_requests: 
+    create: 
+      flash_notice: La requête de réouverture a été créée avec succès
+    destroy: 
+      flash_notice: La requête de réouverture a été supprimée avec succès
+    edit: 
+      title: Modifier la demande de réouverture
+    form: 
+      request_opening_details: Demander la réouverture de cette question
+    index: 
+      title: Liste des demandes de réouverture
+    model: 
+      prural_name: Demandes de réouverture
+    new: 
+      title: Demandes de réouverture
+    update: 
+      flash_notice: La requête de réouverture a été mise à jour avec succès

@@ -9,7 +9,7 @@ ia:
     destroy: 
       flash_notice: Requesta de reapertura delite con successo
     edit: 
-      title: Modificar requesta de clausura
+      title: Modificar requesta de reapertura
     form: 
       request_opening_details: Requestar a reaperir iste question
     index: 

@@ -18,3 +18,8 @@ es:
       label: por favor reporte con cuidado
       offensive: ofensivo, abusivo o intolerante
       spam: spam
+    model: 
+      messages: 
+        already_requested: Ya has reportado este %{model}
+    new: 
+      title: Reportar %{model}

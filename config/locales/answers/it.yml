@@ -1,0 +1,29 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Corpo
+        created_at: Risposta
+        link: Collegamento
+    models: 
+      answer: Risposta
+      answers: Risposte
+  answers: 
+    create: 
+      flash_error: "Qualcosa non ha funzionato nell'aggiunta della risposta.\n  Da notare:\n - Non sono ammesse riposte vuote o ripetute\n - Bisogna attendere almeno 20 secondi prima di immettere una nuova risposta.\n - Si può immettere una sola risposta per ogni domanda."
+      flash_notice: Grazie!
+    edit: 
+      title: Modifica la risposta
+    form: 
+      answer_label: Rispondi alla domanda
+      comment_label: Commenta questa risposta
+      comment_submit: Commenta
+      submit: Risposta
+    revert: 
+      title: Ripristina risposta
+    update: 
+      flash_notice: La risposta è stata aggiornata con successo.

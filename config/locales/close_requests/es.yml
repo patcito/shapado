@@ -1,12 +1,15 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   close_requests: 
     create: 
       flash_notice: close request created successfully
     destroy: 
       flash_notice: close request deleted successfully
+    edit: 
+      title: Editar la petición de cierre.
     form: 
       close_with_reason: cerrar esta pregunta usando esta razón
       dupe: duplicada

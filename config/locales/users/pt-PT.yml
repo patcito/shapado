@@ -40,12 +40,14 @@ pt-PT:
       flag: Reportar
       retag_others_questions: Recategorizar perguntas de outros
       vote_down: Voto negativo
-      vote_to_close_any_question: request closing any question
+      vote_to_close_any_question: Pedir o encerramento de qualquer pergunta
       vote_to_close_own_question: Pedir encerramento de uma pergunta própria
       vote_up: Voto positivo
+    anonymous_form: 
+      never_shown: nunca mostrado
     create: 
       flash_error: Desculpe, não foi possível criar essa conta. Tente novamente ou contacte um administrador (link está acima), por favor.
-      flash_notice: Obrigado por se registar!
+      flash_notice: Obrigado por se ter registado!
     edit: 
       enable_twitter: Activar as suas contas no Facebook ou no Twitter
       submit: Gravar
@@ -53,11 +55,11 @@ pt-PT:
     follow: 
       flash_notice: O utilizador %{user} foi adicionado aos seus amigos
     form: 
-      activities_notification: Receber notificações por correio electrónico de actividades como atribuição de condecorações, novos seguidores, etc.
+      activities_notification: Receber por correio electrónico notificações de actividades como atribuição de condecorações, novos seguidores, etc.
       avatar_tip: Alterar a imagem do perfil usando o Gravatar
-      give_advice_notification: Receber notificações por correio electrónico de perguntas na sua área de especialidade
+      give_advice_notification: Receber por correio electrónico notificações de perguntas na sua área de especialidade
       information: Informação
-      new_answer_notification: Receber notificações por correio electrónico das novas respostas
+      new_answer_notification: Receber por correio electrónico notificações de respostas novas
       notifications: Notificações
       reports_notification: Receber um relatório das actividades mais recentes do grupo (só para administradores de grupos)
       show_more_lang: Mostrar mais línguas

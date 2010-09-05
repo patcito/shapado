@@ -6,27 +6,29 @@
 pt-PT: 
   close_requests: 
     create: 
-      flash_notice: O pedido de fecho foi criado
+      flash_notice: O pedido de encerramento foi criado
     destroy: 
-      flash_notice: O pedido de fecho foi eliminado
+      flash_notice: O pedido de encerramento foi eliminado
+    edit: 
+      title: Editar pedido de encerramento
     form: 
-      close_with_reason: Fechar esta pergunta usando este motivo
+      close_with_reason: Encerrar esta pergunta usando este motivo
       dupe: Duplicada
       no_question: Não é uma pergunta
       not_relevant: Não é relevante
       ot: Está fora do tema
-      request_closing_details: Pedir para fechar esta pergunta
+      request_closing_details: Pedir para encerrar esta pergunta
       spam: spam
     index: 
-      title: Lista de pedidos de fecho
+      title: Lista de pedidos de encerramento
     model: 
       attributes: 
         comment: Comentário
         reason: motivo
         user: Utilizador
       messages: 
-        already_requested: Já pediu para fechar esta pergunta
-      name: Pedido de fecho
-      prural_name: Pedidos de fecho
+        already_requested: Já pediu o encerramento desta pergunta
+      name: Pedido de encerramento
+      prural_name: Pedidos de encerramento
     update: 
-      flash_notice: O pedido de fecho foi actualizado
+      flash_notice: O pedido de encerramento foi actualizado

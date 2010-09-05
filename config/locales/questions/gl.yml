@@ -95,16 +95,22 @@ gl:
       ban: Bloquear
       close: Pechar
       close_reason: "A pregunta foi pechada polo seguinte motivo:"
+      edit_request: Editar a solicitude
       favorite_tooltip: Engadir a pregunta aos seus favoritos
       flag: Informar
       flagged_as: Informado como
       flags: Informar como
       last_activity: Última actividade
+      open: Aberta
       related_questions: Preguntas relacionadas
       request_closing: Pedir o peche
       request_closing_details: Pedir o peche desta pregunta
+      request_opening: Solicitar a reapertura
+      request_opening_details: Solicitar a reapertura desta pregunta
+      requested_close_as: Solicitou o peche desta pregunta como
+      requested_reopening: Solicitou a reapertura desta pregunta
       retag: Cambiar as etiquetas
-      retract_request: Xa fixo unha proposta. Quere retirala?
+      retract_request: Retirar a proposta
       share: Compartir esta pregunta en
       share_on: Compartir esta pregunta en %{site}
       solution: Solución

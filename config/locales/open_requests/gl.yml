@@ -1,0 +1,22 @@
+# Messages for Galician (Galego)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Toliño
+gl: 
+  open_requests: 
+    create: 
+      flash_notice: A solicitude de reapertura creouse correctamente
+    destroy: 
+      flash_notice: A solicitude de reapertura borrouse correctamente
+    edit: 
+      title: Editar a solicitude de reapertura
+    form: 
+      request_opening_details: Solicitar a reapertura desta pregunta
+    index: 
+      title: Lista de solicitudes de reapertura
+    model: 
+      prural_name: Solicitudes de reapertura
+    new: 
+      title: Solicitar a reapertura
+    update: 
+      flash_notice: A solicitude de reapertura actualizouse correctamente

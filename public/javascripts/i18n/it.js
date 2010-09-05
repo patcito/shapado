@@ -2,10 +2,10 @@
  *  Exported from translatewiki.net
  *
  * Translators:
- *  - Gianfranco
+ *  - Giallu
  */
 
 var I18n = {
-	on_leave_page: "Le tue modifiche potrebbero andare perse"
+	on_leave_page: "Le modifiche potrebbero andare perse"
 };
 

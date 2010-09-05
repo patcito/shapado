@@ -95,16 +95,22 @@ fr:
       ban: ban
       close: fermer
       close_reason: "cette question a été fermée pour la raison suivante:"
+      edit_request: Modifier la demande
       favorite_tooltip: ajouter cette question à vos favorites
       flag: reporter un abus
       flagged_as: reporté comme
       flags: reporter en tant que
       last_activity: dernières activités
+      open: Ouvert
       related_questions: questions en relation
       request_closing: demande de fermeture
       request_closing_details: demander de fermer cette question
+      request_opening: Demander la réouverture
+      request_opening_details: Demander la réouverture de cette question
+      requested_close_as: Vous avez demandé de fermer cette question comme
+      requested_reopening: Vous avez demandé la réouverture de cette question
       retag: modifier les tags
-      retract_request: vous avez déjà fait une demande, voulez-vous vous rétracter?
+      retract_request: Rétracter la demande
       share: partager cette question
       share_on: partager cette question %{site}
       solution: solution

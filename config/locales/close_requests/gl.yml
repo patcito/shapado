@@ -8,6 +8,8 @@ gl:
       flash_notice: a solicitude de peche creouse correctamente
     destroy: 
       flash_notice: a solicitude de peche borrouse correctamente
+    edit: 
+      title: Editar a solicitude de peche
     form: 
       close_with_reason: pechar esta pregunta por este motivo
       dupe: duplicado

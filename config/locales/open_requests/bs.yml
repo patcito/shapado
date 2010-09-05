@@ -1,0 +1,22 @@
+# Messages for Bosnian (Bosanski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: CERminator
+bs: 
+  open_requests: 
+    create: 
+      flash_notice: Zahtjev za ponovo otvaranje uspješno napravljen
+    destroy: 
+      flash_notice: Zahtjev za ponovo otvaranje uspješno obrisan
+    edit: 
+      title: Uredi zahtjev za ponovno otvaranje
+    form: 
+      request_opening_details: Zahtjev za ponovo otvaranje ovog pitanja
+    index: 
+      title: Spisak zahtjeva za ponovno otvaranje
+    model: 
+      prural_name: Zahtjevi za ponovno otvaranje
+    new: 
+      title: Zahtjev za ponovno otvaranje
+    update: 
+      flash_notice: Zahtjev za ponovo otvaranje uspješno ažuriran

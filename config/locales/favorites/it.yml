@@ -1,0 +1,12 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    models: 
+      favorite: Preferito
+      favorites: Preferiti
+  favorites: 
+    create: 
+      unauthenticated: Serve un account per aggiungere preferiti

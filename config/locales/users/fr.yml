@@ -44,6 +44,8 @@ fr:
       vote_to_close_any_question: demander de fermer toute question
       vote_to_close_own_question: demander de fermer sa propre question
       vote_up: voter positif
+    anonymous_form: 
+      never_shown: jamais montré
     create: 
       flash_error: désolé, nous n'avons pas pu configurer votre compte. Éssayer encore s'il vous plait, ou contacter un administrateur, le lien es ci-dessus.
       flash_notice: merci de vous avoir enregistrer!

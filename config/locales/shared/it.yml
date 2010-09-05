@@ -1,6 +1,7 @@
 # Messages for Italian (Italiano)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giallu
 # Author: HalphaZ
 it: 
   shared: 
@@ -8,5 +9,5 @@ it:
       title: Tag selezionati
     topbar: 
       admin: Amministrazione
-      logged_as: Loggato come ((login))
+      logged_as: Collegato come %{login}
       user_page: La mia pagina

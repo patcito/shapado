@@ -1,0 +1,32 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    attributes: 
+      flag: 
+        reason: Motivo
+    models: 
+      flag: Contrassegno
+      flags: Contrassegni
+  flags: 
+    create: 
+      flash_error: Impossibile contrassegnare questo
+      flash_notice: Grazie per la segnalazione
+    destroy: 
+      flash_notice: Il contrassegno è stato revocato.
+    edit: 
+      title: Modifica contrassegno %{model}
+    form: 
+      attention: Richiede controllo di un moderatore
+      label: Contrassegna con attenzione
+      offensive: Offensivo, ingiurioso o incitante all'odio
+      spam: Spam
+    model: 
+      messages: 
+        already_requested: "%{model} già contrassegnato"
+    new: 
+      title: Contrassegna %{model}
+    update: 
+      flash_notice: Il contrassegno della domanda è stato aggiornato.

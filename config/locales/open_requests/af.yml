@@ -1,0 +1,22 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  open_requests: 
+    create: 
+      flash_notice: Versoek om te heropen is suksesvol geskep
+    destroy: 
+      flash_notice: Versoek om te heropen is suksesvol geskrap
+    edit: 
+      title: Wysig heropeningsversoek
+    form: 
+      request_opening_details: Dien 'n heropeningsversoek vir hierdie vraag in
+    index: 
+      title: Lys met heropeningsversoeke
+    model: 
+      prural_name: Heropeningsversoeke
+    new: 
+      title: Versoek heropening
+    update: 
+      flash_notice: Die heropeningsversoek is bygewerk

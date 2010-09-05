@@ -1,0 +1,31 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+# Author: Wizardist
+be-TARASK: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Тэкст
+        created_at: З адказамі
+        link: Спасылка
+    models: 
+      answer: адказ
+      answers: адказы
+  answers: 
+    create: 
+      flash_error: "Падчас даданьня Вашага адказу штосьці пайшло ня так. \n  Помніце што: \n - Не дапускаюцца пустыя ці паўтараючыяся адказы \n - Вам неабходна пачакаць 20 сэкундаў перад адпраўкай наступнага адказу. \n - Вы можаце даць толькі адзін адказ на адно пытаньне."
+      flash_notice: Дзякуй!
+    edit: 
+      title: Рэдагаваньне адказу
+    form: 
+      answer_label: Адказ на пытаньне
+      comment_label: Камэнтар на гэты адказ
+      comment_submit: Камэнтаваць
+      submit: Адказаць
+    revert: 
+      title: Адмяніць адказ
+    update: 
+      flash_notice: Адказ быў пасьпяхова абноўлены.

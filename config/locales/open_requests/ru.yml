@@ -1,0 +1,22 @@
+# Messages for Russian (Русский)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Eleferen
+ru: 
+  open_requests: 
+    create: 
+      flash_notice: Запрос на повторное открытие успешно создан
+    destroy: 
+      flash_notice: Запрос на повторное открытие успешно удалён
+    edit: 
+      title: Изменить запрос на повторное открытие
+    form: 
+      request_opening_details: Запрос на повторное открытие этого вопроса
+    index: 
+      title: Список запросов на повторное открытие
+    model: 
+      prural_name: Запрос на повторное открытие
+    new: 
+      title: Запрос на повторное открытие
+    update: 
+      flash_notice: Запрос на повторное открытие успешно обновлён
