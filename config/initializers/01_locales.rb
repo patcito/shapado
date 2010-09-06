@@ -9,6 +9,7 @@ I18n.backend.store_translations 'es-419', {}
 I18n.backend.store_translations 'fr', {}
 I18n.backend.store_translations 'gl', {}
 I18n.backend.store_translations 'ia', {}
+I18n.backend.store_translations 'it', {}
 I18n.backend.store_translations 'id', {}
 I18n.backend.store_translations 'ja', {}
 I18n.backend.store_translations 'ko', {}
@@ -24,7 +25,7 @@ I18n.load_path << Dir[ File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,y
 # You need to "force-initialize" loaded locales
 I18n.backend.send(:init_translations)
 
-AVAILABLE_LOCALES = ["br" "ca", "de", "el", "en", "eo", "es", "es-419", "fr", "gl", "ia", "id", "ja", "ko", "mk", "nl", "pt-BR", "pt-PT", "ru", "te"] #I18n.backend.available_locales.map { |l| l.to_s }
+AVAILABLE_LOCALES = ["br" "ca", "de", "el", "en", "eo", "es", "es-419", "fr", "gl", "ia", "it", "id", "ja", "ko", "mk", "nl", "pt-BR", "pt-PT", "ru", "te"] #I18n.backend.available_locales.map { |l| l.to_s }
 AVAILABLE_LANGUAGES = I18n.backend.available_locales.map { |l| l.to_s.split("-").first}.uniq
 
 ## this is only for the user settings, not related to translatewiki.net
