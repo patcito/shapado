@@ -1,0 +1,47 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    attributes: 
+      group: 
+        language: Lingua
+        name: Nome
+  groups: 
+    create: 
+      flash_notice: Il gruppo è stato creato correttamente. Ora si può iniziare a configurarlo.
+    form: 
+      access: Impostazioni di accesso
+      analytics_legend: Il gruppo potrà usare un proprio codice di tracking
+      any_language: Qualsiasi
+      custom_analytics: Consenti Analytics personalizzati
+      custom_js: Consenti JavaScript personalizzato
+      default_tags_legend: Separa i tag con virgole. Sono consentiti 10 tag di default.
+      description_legend: Hai 400 caratteri per descrivere il gruppo.
+      isolate_group: Isolare il gruppo dagli altri gruppi
+      members_only: Solo i membri del gruppo saranno in grado di accedere a questo gruppo
+      website_analytics_id: Analytics ID
+    group: 
+      about: Informazioni
+      accept_group: Accetta questo gruppo
+      allow_ads: Consenti annunci
+      close: Chiudi
+      close_group: Chiudi questo gruppo
+      disallow_ads: Disattiva annunci
+    index: 
+      actives: Attivo
+      filter: Cerca gruppo
+      most_active: Più attivi
+      name: Nome
+      pendings: In attesa
+      request_group: Richiedi un nuovo gruppo
+      title: Gruppi
+    show: 
+      accept_group: Accetta questo gruppo
+      accept_group_with_custom_ads: Accetta il gruppo e consenti annunci personalizzati
+      close_group: Chiudi questo gruppo
+      group_awaiting_acceptance: Questo gruppo è in attesa di accettazione di un moderatore.
+      group_closed: Questo gruppo è stato chiuso.
+      title: Informazioni su %{name}
+      visit_group: Visita questo gruppo

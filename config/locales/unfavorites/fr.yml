@@ -1,12 +1,13 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   activerecord: 
     models: 
-      favorite: favorite
-      favorites: favorites
+      favorite: Favorite
+      favorites: Favorites
   unfavorites: 
     create: 
-      success: la question a été retiré de vos favorits
-      unauthenticated: vous devez créer un compte pour retirer des favorits
+      success: La question a été retiré de vos favorites
+      unauthenticated: Vous devez créer un compte pour supprimer des favorites

@@ -7,18 +7,18 @@ es:
   admin: 
     manage: 
       content: 
-        footer: pie de página
-        head: cabecera
-        question_help: question help
-        question_prompt: question prompt
-        title: custom content
-        top_bar: barra superior
-        top_bar_tip: entre un vinculo por linea
+        footer: Pie de página
+        head: Cabecera
+        question_help: Ayuda de preguntas
+        question_prompt: Título del formulario de preguntas
+        title: Contenido personalizado
+        top_bar: Barra superior
+        top_bar_tip: Entre un enlace por línea
       properties: 
         constrains: 
           reputation_constrains_description: Este formulario te permite configurar cuantos puntos de reputación necesitan los usuarios para efectuar una acción determinada
-          reputation_constrains_subtitle: lista de las restricciónes de repotación por acción
-          title: restricciónes
+          reputation_constrains_subtitle: Lista de las restricciónes de repotación por acción
+          title: Restricciónes
         domain: 
           description: "Puedes conectar tu grupo con tu propio dominio, asi se hace:"
           instruction1: Primero tienes que conectarte en tu provedor de dominio (la pagina donde has comprado tu dominio como %{subdomain}.com).
@@ -30,11 +30,11 @@ es:
           title: configura tu dominio
           warning: Estas seguro de querer cambiar tu dominio?
         general: 
-          title: propiedades del grupo
+          title: Propiedades del grupo
         rewards: 
-          reputation_rewards_description: este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
-          reputation_rewards_subtitle: lista de los premios de reputación
-          title: premios
+          reputation_rewards_description: Este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
+          reputation_rewards_subtitle: Lista de los premios de reputación
+          title: Premios
         share: 
           add_tags: Agregar etiquetas a sus tweets
           application_id: Application ID
@@ -46,11 +46,11 @@ es:
           question_must_include_example: "por ejemplo #yoPregunto"
           secret_key: Llave Secreta (Secret Key)
           starts_with_example: "por ejemplo #pr"
-          title: compartir
+          title: Compartir
           title_on_dlvr: Compartir en dlvr.it
           tweet_ends_with: Anexar una etiqueta a sus tweets
           tweet_starts_with: Anteponer una etiqueta a sus tweets
           twitter_account: La cuenta Twitter que usara tus usuarios para hacer preguntas.
         theme: 
           logo_legend: Subir un logo para tu grupo, debe ser menor que 2mb.
-          title: configure el tema del grupo
+          title: Configure el tema del grupo

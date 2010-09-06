@@ -1,15 +1,16 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   activerecord: 
     attributes: 
       member: 
-        role: rol
+        role: Rol
   members: 
     form: 
-      login_tip: busca cuando usted digita
+      login_tip: Busca cuando digitas
     index: 
-      manage_members_title: administrar membresías
-      title: miembros del group %{name}
-      title_isolate: miembros de %{name}
+      manage_members_title: Administrar membresías
+      title: Miembros del grupo %{name}
+      title_isolate: Miembros de %{name}

@@ -1,13 +1,14 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   searches: 
     form: 
-      clear: effacer
+      clear: Effacer
       search_box_title: Vérifiez que votre question n'ait pas déjà été posé
-      tags_tip: utiliser [tag] pour décrire vos tags.
+      tags_tip: Utiliser [tag] pour décrire vos tags.
     index: 
-      empty: aucune question ne correspond aux termes de recherche spécifiés.
-      search_text: questions contenant
+      empty: Aucune question ne correspond aux termes de recherche spécifiés.
+      search_text: Questions contenant
       tags: parmi ces tags

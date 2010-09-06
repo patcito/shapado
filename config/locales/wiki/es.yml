@@ -1,21 +1,22 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   wiki: 
     actions: 
-      all_history: regresar al historial
-      back_to_question: volver a la pregunta
-      revert: revertir a esta versión
-      show_diff: comparar versiones seleccionadas
+      all_history: Regresar al historial
+      back_to_question: Volver a la pregunta
+      revert: Revertir a esta versión
+      show_diff: Comparar versiones seleccionadas
     diff: 
-      title: diferencias entre las versiones %{prev} y %{curr}
+      title: Diferencias entre las versiones %{prev} y %{curr}
     history: 
-      current_version: versión actual
-      previous_versions: versiónes antériores
-      title: historia (%{count})
-      version: versión
-      version_summary: resume de esta versión
+      current_version: Versión actual
+      previous_versions: Versiones anteriores
+      title: Historia (%{count})
+      version: Versión
+      version_summary: Resumen de esta versión
     model: 
       attributes: 
-        message: resumen
+        message: Resumen

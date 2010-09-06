@@ -1,11 +1,12 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   shared: 
     current_tags: 
-      title: etiquetas seleccionadas
+      title: Etiquetas seleccionadas
     topbar: 
-      admin: administrar
-      logged_as: conectado como %{login}
-      user_page: mi página
+      admin: Administrar
+      logged_as: Conectado como %{login}
+      user_page: Mi página

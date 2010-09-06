@@ -1,6 +1,7 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   mailers: 
     notifications: 
@@ -11,13 +12,13 @@ es:
       follow: 
         subject: "%{login} ahora te esta siguiendo en %{app}"
       give_advice: 
-        friend_subject: "tu amigo necesita ayuda: %{question_title}"
-        subject: "necesitamos tu ayuda: %{question_title}"
+        friend_subject: "Tu amigo necesita ayuda: %{question_title}"
+        subject: "Necesitamos tu ayuda: %{question_title}"
       new_answer: 
-        subject_friend: tu amigo %{login} respondio la pregunta %{title}
+        subject_friend: Tu amigo %{login} respondio la pregunta %{title}
         subject_other: "%{login} respondio la pregunta %{title}"
         subject_owner: "%{login} respondio su pregunta %{title}"
       new_comment: 
         subject: "%{login} comento en %{group}"
       report: 
-        subject: reporte para el grupo %{group} de %{app}
+        subject: Reporte para el grupo %{group} de %{app}

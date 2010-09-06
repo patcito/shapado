@@ -1,21 +1,22 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   wiki: 
     actions: 
-      all_history: retourner à l'historique
-      back_to_question: retourner à la question
-      revert: retourner à cette version
-      show_diff: comparer les versions sélectionnées
+      all_history: Revenir à l'historique
+      back_to_question: Revenir à la question
+      revert: Revenir à cette version
+      show_diff: Comparer les versions sélectionnées
     diff: 
-      title: différences entre %{prev} et %{curr}
+      title: Différences entre %{prev} et %{curr}
     history: 
-      current_version: version actuelle
-      previous_versions: versions précédentes
-      title: historial (%{count})
-      version: version
-      version_summary: résumé de cette version
+      current_version: Version actuelle
+      previous_versions: Versions précédentes
+      title: Historial (%{count})
+      version: Version
+      version_summary: Résumé de cette version
     model: 
       attributes: 
-        message: résumé
+        message: Résumé

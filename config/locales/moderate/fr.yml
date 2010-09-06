@@ -1,15 +1,16 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   admin: 
     moderate: 
       index: 
-        all: tous
-        ban: ban
+        all: Tous
+        ban: Bannir
         banned: questions banée
-        content: contenu
+        content: Contenu
         flagged: questions reportées
-        item_title: titre
+        item_title: Titre
         need_tags: a besoin de tags
-        title: modérer
+        title: Modérer

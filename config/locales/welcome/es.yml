@@ -43,17 +43,17 @@ es:
           onsite: $2500/mes
           small: $129/mes
     feedback: 
-      captcha_error: por favor, resuelve una simple operación matemática
-      email_description: por favor, provee tu correo electrónico para poder responder tu inquietud
-      feedback_description: descripción
-      feedback_title: titulo
-      title: envía tu sugerencia
+      captcha_error: Por favor, resuelve una simple operación matemática
+      email_description: Por favor, provee tu correo electrónico para poder responder tu inquietud
+      feedback_description: Descripción
+      feedback_title: Titulo
+      title: Envía tu sugerencia
     index: 
-      active: activas
+      active: Activas
       browse_all_or_by_tags: Descubre la %{full_list_of_questions} o %{browse_by_tags}
-      browse_by_tags: naviga por tag
+      browse_by_tags: navega por tags
       create_own_site: Crea gratuitamente tu propio sitio en 8 segundos
-      full_list_of_questions: lista completa de preguntas
-      hot: calientes
-      quick_question: haz tu pregunta, nosotros buscaremos quien la responda
-      recent_questions: preguntas recientes
+      full_list_of_questions: Lista completa de preguntas
+      hot: Calientes
+      quick_question: Haz tu pregunta, nosotros buscaremos quien la responda
+      recent_questions: Preguntas recientes

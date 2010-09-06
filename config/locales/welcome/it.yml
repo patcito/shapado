@@ -2,8 +2,12 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Giallu
+# Author: Ric
 it: 
   welcome: 
+    confirm_age: 
+      over_18: Ho più di 18 anni
+      under_18: Ho meno di 18 anni
     facts: 
       features: 
         cols: 
@@ -36,6 +40,8 @@ it:
           onsite: $ 2500/mese
           small: $129/mese
     feedback: 
+      email_description: Inserire l'indirizzo email a cui inviare la risposta al vostro messaggio
+      feedback_description: Descrizione
       feedback_title: Titolo
       title: Invia i tuoi commenti
     index: 

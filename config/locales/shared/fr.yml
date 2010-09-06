@@ -1,12 +1,13 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 # Author: Peter17
 fr: 
   shared: 
     current_tags: 
       title: Étiquettes sélectionnées
     topbar: 
-      admin: administrer
-      logged_as: connecté en tant que %{login}
-      user_page: my page
+      admin: Administrer
+      logged_as: Connecté en tant que %{login}
+      user_page: Ma page

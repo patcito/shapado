@@ -21,7 +21,7 @@ te:
         name: అసలు పేరు
         password: సంకేతపదం
         password_confirmation: సంకేతపదపు నిర్ధారణ
-        preferred_languages: మీకు తెలిసిన భాషలను ఎంచుకోండి
+        preferred_languages: "మీరు ఏయే భాషలలో ప్రశ్నలని చదవాలనుకుంటున్నారు:"
         reputation: ఖ్యాతి
         timezone: కాలమండలం
         website: వెబ్ సైటు

@@ -1,9 +1,10 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   imports: 
     subtabs: 
       need_confirmation: 
-        name: necesitan confirmación
+        name: Necesitan confirmación
         title: Enviar emails de confirmación

@@ -44,16 +44,16 @@ fr:
           small: $129/mois
     feedback: 
       captcha_error: s'il vous plait, veuillez résoudre cette simple opération mathématique
-      email_description: s'il vous plait, donnez-nous votre email afin que nous puissions répondre à votre message.
-      feedback_description: description
-      feedback_title: titre
-      title: envoyer votre feedback
+      email_description: S'il vous plait, donnez-nous votre email afin que nous puissions répondre à votre message.
+      feedback_description: Description
+      feedback_title: Titre
+      title: Envoyer votre feedback
     index: 
-      active: actives
+      active: Actives
       browse_all_or_by_tags: Découvrez la %{full_list_of_questions} ou %{browse_by_tags}
-      browse_by_tags: naviguez par tag
+      browse_by_tags: Naviguez par tag
       create_own_site: Créez votre propre site de QR en 8 secondes gratuitement
-      full_list_of_questions: liste complète de questions
-      hot: chaudes
-      quick_question: posez une question, nous trouverons quelqu'un pour y répondre
-      recent_questions: questions récentes
+      full_list_of_questions: Liste complète de questions
+      hot: Chaudes
+      quick_question: Posez une question, nous trouverons quelqu'un pour y répondre
+      recent_questions: Questions récentes

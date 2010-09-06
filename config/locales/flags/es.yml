@@ -6,10 +6,10 @@ es:
   activerecord: 
     attributes: 
       flag: 
-        reason: razón
+        reason: Razón
     models: 
-      flag: reporte de abuso
-      flags: reportes de abuso
+      flag: Reporte de abuso
+      flags: Reportes de abuso
   flags: 
     create: 
       flash_error: Usted no puede reportar como abuso esto

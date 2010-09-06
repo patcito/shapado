@@ -2,25 +2,26 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Patcito
 # Author: Peter17
 fr: 
   activerecord: 
     models: 
       vote: Vote
-      votes: votes
+      votes: Votes
   votes: 
     control: 
-      have_voted_down: cliquez pour annuler votre désapprouvement
-      have_voted_up: cliquez pour annuler votre approuvement
-      to_vote_down: cliquez si vous désapprouvez
-      to_vote_up: cliquez si vous approuvez
+      have_voted_down: Cliquez pour annuler votre désapprobation
+      have_voted_up: Cliquez pour annuler votre approbation
+      to_vote_down: Cliquez si vous désapprouvez.
+      to_vote_up: Cliquez si vous approuvez
     create: 
-      flash_error: vous ne pouvez pas voter
-      flash_notice: merci d'avoir voté!
-      unauthenticated: les utilisateurs anonymes ne peuvent pas voter, vous devez ouvrir une nouvelle session s'il vous plait
+      flash_error: Vous ne pouvez pas voter
+      flash_notice: Merci d'avoir voté!
+      unauthenticated: Les utilisateurs anonymes ne peuvent pas voter.
     destroy: 
-      flash_notice: votre vote a été annulé avec succès
+      flash_notice: Votre vote a été annulé avec succès.
     model: 
       messages: 
-        closed_question: vous ne pouvez pas voter sur les entées qui appartienent à une question fermée.
-        vote_down_comment: Les commentaires ne peuvent pas recevoir de vote négatif
+        closed_question: Vous ne pouvez pas voter sur les entées qui appartienent à une question fermée.
+        vote_down_comment: Les commentaires ne peuvent pas recevoir de votes négatifs

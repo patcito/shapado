@@ -1,15 +1,16 @@
 # Messages for French (Français)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 fr: 
   activerecord: 
     attributes: 
       page: 
-        css: feuille de style
-        js: javascript
+        css: Feuilles de style
+        js: Javascript
     models: 
-      page: page
-      pages: pages
+      page: Page
+      pages: Pages
   pages: 
     actions: 
       create_page: Créer une nouvelle page
@@ -20,14 +21,14 @@ fr:
     edit: 
       title: Editer la page
     form: 
-      language_tip: lange de la page
+      language_tip: Langue de la page
       title_tip: "Titre de la page, utilisez cecir afin de créer une référence à cette page. Par exemple: [[FAQ|lire cette faq]]"
     index: 
-      create_page: créer une nouvelle page
+      create_page: Créer une nouvelle page
       title: Liste de pages
-      written_in: écrite en %{language}
+      written_in: Écrite en %{language}
     new: 
-      title: nouvelle page
-    title: fixme
+      title: Nouvelle page
+    title: Arrangez-moi
     update: 
       success: La page a été actualisé avec succès.
