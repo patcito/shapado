@@ -18,15 +18,8 @@ en:
   time:
     today: today
     ago: "%{time} ago"
-  messages:
-    success: "%{model} was successfully %{action}."
   models:
     question:   The question
-  actions:
-    created:     created
-    deleted:     deleted
-    updated:     updated
-    closed:      closed
   global:
     from: "from %{site}"
     permission_denied: Permission denied
