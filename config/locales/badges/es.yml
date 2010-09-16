@@ -15,6 +15,7 @@ es:
     shared: 
       addict: 
         description: Visita el sitio 20 días consecutivos
+        name: Adicto
       autobiographer: 
         description: completed all user profile fields
         name: autobiographer
@@ -32,31 +33,40 @@ es:
         name: Limpieza
       commentator: 
         description: Deja 10 comentarios
+        name: Comentador
       critic: 
         description: Votar negativamente por primera vez
+        name: Crítico
       disciplined: 
         description: Borra su propio post con puntaje mayor igual a 3
         name: Disciplinado
       editor: 
         description: Primer mensaje editado
+        name: Editor
       effort_medal: 
         description: Recibir 100 votos positivos
+        name: Insignia del esfuerzo
       enlightened: 
         description: primera respuesta aceptada con al menos 10 votos positivos
         name: Iluminado
       famous_question: 
         description: Hace una pregunta con 10000 visitas
+        name: Pregunta famosa
       fanatic: 
         description: Visita el sitio 100 días consecutivos
+        name: Fanático
       favorite_question: 
         description: Pregunta seleccionada como preferida por 25 usuarios
+        name: Pregunta favorita
       friendly: 
         description: Sigue a alguien por primera vez
         name: Amistoso
       good_answer: 
         description: Tener una respuesta que alcanzo un promedio de más de 25 votos
+        name: Buena respuesta
       good_question: 
         description: Haber hecho una pregunta que alcanzo el promedio de 10 votos
+        name: Buena pregunta
       great_answer: 
         description: respuesta votada 10 veces
         name: great answer
@@ -65,13 +75,16 @@ es:
         name: Gran pregunta
       guru: 
         description: dar solución a una pregunta con promedio de votos superior a 40
+        name: Guru
       inquirer: 
         description: Preguntar por primera vez
+        name: Investigador
       interesting_person: 
         description: Tiene mas de 10 seguidores
         name: Persona interesante
       merit_medal: 
         description: Recibir 200 votos positivos
+        name: Insignia del merito
       necromancer: 
         description: Contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
         name: Nigromante
@@ -83,6 +96,7 @@ es:
         name: Pregunta bonita
       notable_question: 
         description: Hace una pregunta con 2500 visitas
+        name: Pregunta memorable
       organizer: 
         description: Primer re-etiquetado
         name: Organizador
@@ -91,15 +105,19 @@ es:
         name: peer pressure
       pioneer: 
         description: Ser de los primeros usuarios registrados
+        name: Pionero
       popstar: 
         description: 500 votos positivos, máximo 10 negativos
+        name: Popstar
       popular_person: 
         description: Tiene mas de 50 seguidores
         name: Persona popular
       popular_question: 
         description: hace una pregunta con 1000 visitas
+        name: Pregunta popular
       rockstar: 
         description: 1000 votos positivos, máximo 10 negativos
+        name: Rockstar
       scholar: 
         description: Primera respuesta aceptada en tu propia pregunta
         name: Erudito
@@ -108,6 +126,7 @@ es:
         name: Autodidacta
       service_medal: 
         description: Recibir 300 votos positivos
+        name: Insignia de servicio
       shapado: 
         description: Visita el sitio 8 días consecutivos
       stellar_question: 
@@ -115,12 +134,16 @@ es:
         name: Pregunta extraordinaria
       student: 
         description: Primera pregunta con al menos un voto positivo
+        name: Estudiante
       supporter: 
         description: votar positivamente por primera vez
+        name: Aficionado
       troubleshooter: 
         description: Responder por primera vez
+        name: Solucionador de problemas
       tutor: 
         description: Dar solución a una pregunta con promedio de votos superior a 2
+        name: Tutor
     show: 
       description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
       earned: Otorgada

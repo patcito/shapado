@@ -14,6 +14,7 @@ gl:
     shared: 
       addict: 
         description: Visitou o sitio cada día durante 20 días consecutivos
+        name: Adicto
       autobiographer: 
         description: Completou todos os campos do perfil de usuario
         name: Autobiógrafo
@@ -31,31 +32,40 @@ gl:
         name: Limpeza
       commentator: 
         description: Deixou 10 comentarios
+        name: Comentador
       critic: 
         description: Votou negativamente por vez primeira
+        name: Crítico
       disciplined: 
         description: Borrou a súa propia mensaxe cunha puntuación de 3 ou maior
         name: Disciplinado
       editor: 
         description: Primeira mensaxe editada
+        name: Editor
       effort_medal: 
         description: Recibiu 100 votos positivos
+        name: Medalla do esforzo
       enlightened: 
         description: A primeira resposta foi aceptada con, polo menos, 10 votos positivos
         name: Esclarecido
       famous_question: 
         description: Realizou unha pregunta con 10.000 visitas
+        name: Pregunta famosa
       fanatic: 
         description: Visitou o sitio cada día durante 100 días consecutivos
+        name: Fanático
       favorite_question: 
         description: Pregunta marcada como favorita por 25 usuarios
+        name: Pregunta favorita
       friendly: 
         description: Segue a alguén por vez primeira
         name: Agradable
       good_answer: 
         description: Ten unha resposta que atinxe unha media de máis de 25 votos
+        name: Boa resposta
       good_question: 
         description: Ten unha pregunta que atinxe unha media de máis de 25 votos
+        name: Boa pregunta
       great_answer: 
         description: Resposta votada positivamente 100 veces
         name: Resposta formidable
@@ -64,13 +74,16 @@ gl:
         name: Pregunta formidable
       guru: 
         description: Deu unha solución a unha pregunta, cunha media de máis de 40 votos
+        name: Gurú
       inquirer: 
         description: Preguntou por vez primeira
+        name: Indagador
       interesting_person: 
         description: Ten máis de 10 seguidores
         name: Persoa interesante
       merit_medal: 
         description: Recibiu 200 votos positivos
+        name: Medalla do mérito
       necromancer: 
         description: Respondeu a unha pregunta máis de 60 días despois con, polo menos, 5 votos
         name: Nigromante
@@ -82,6 +95,7 @@ gl:
         name: Boa pregunta
       notable_question: 
         description: Realizou unha pregunta con 2.500 visitas
+        name: Pregunta memorable
       organizer: 
         description: Primeiro cambio de etiqueta
         name: Organizador
@@ -90,15 +104,19 @@ gl:
         name: Presión dos pares
       pioneer: 
         description: Sexa un dos primeiros usuarios en se rexistrar
+        name: Pioneiro
       popstar: 
         description: 500 votos positivos, máximo de 10 votos negativos
+        name: Estrela do pop
       popular_person: 
         description: Ten máis de 50 seguidores
         name: Persoa popular
       popular_question: 
         description: Realizou unha pregunta con 1.000 visitas
+        name: Pregunta popular
       rockstar: 
         description: 1.000 votos positivos, máximo de 10 votos negativos
+        name: Estrela do rock
       scholar: 
         description: Primeira resposta aceptada na súa propia pregunta
         name: Alumno
@@ -107,6 +125,7 @@ gl:
         name: Autodidacta
       service_medal: 
         description: 300 votos positivos
+        name: Medalla do servizo
       shapado: 
         description: Visitou o sitio cada día durante 8 días consecutivos
       stellar_question: 
@@ -114,12 +133,16 @@ gl:
         name: Pregunta estelar
       student: 
         description: Preguntou por vez primeira con, polo menos, un voto positivo
+        name: Estudante
       supporter: 
         description: Votou positivamente por vez primeira
+        name: Seguidor
       troubleshooter: 
         description: Respondeu por vez primeira
+        name: Amañador de problemas
       tutor: 
         description: Deu unha solución a unha pregunta, cunha media de máis de 2 votos
+        name: Titor
     show: 
       description: "Usuarios que gañaron esta insignia. Recentemente outorgada a:"
       earned: gañou

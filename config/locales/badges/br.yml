@@ -19,6 +19,7 @@ br:
         name: Emvuhezskriver
       celebrity: 
         description: Kaout muioc'h eget 100 heulier
+        name: Den brudet
       citizen_patrol: 
         name: Patrouilh keodedel
       civic_duty: 
@@ -33,8 +34,11 @@ br:
         description: bet votet a-enep evit ar wech gentañ
       disciplined: 
         name: Kenurzhiek
+      editor: 
+        name: Embannner
       effort_medal: 
         description: Kaout 100 mouezh pozitivel
+        name: Medalenn ar striv
       enlightened: 
         description: Respont gentañ bet degemeret gant d'an nebeutañ 10 vot a-du
         name: Goulaouiñ
@@ -48,8 +52,10 @@ br:
         description: Heuliañ unan bennak evit ar wech gentañ
       good_answer: 
         description: Kaout ur respont gant ur geidenn uheloc'h eget 25 mouezh
+        name: Respont vat
       good_question: 
         description: Kaout ur goulenn gant ur geidenn uheloc'h eget 25 mouezh
+        name: Goulenn vat
       great_answer: 
         description: Respont bet votet a-du 100 gwech
         name: Respont dispar
@@ -82,6 +88,7 @@ br:
         description: Bezañ er re gentañ o vezañ en em enskrivet
       popstar: 
         description: 500 vot pozitivel, 10 negativel d'ar muiañ
+        name: Popstar
       popular_person: 
         description: Kaout muioc'h eget 50 heulier
         name: Den poblel
@@ -89,6 +96,7 @@ br:
         description: Goulenn gant 1 000 gweladenn
       rockstar: 
         description: 1 000 vot pozitivel, 10 negativel d'ar muiañ
+        name: Rockstar
       scholar: 
         description: Respont gentañ bet degemeret evit ho koulenn
         name: helenneg
@@ -104,6 +112,7 @@ br:
         name: Goulenn steredel
       student: 
         description: Resevout ur vouezh a-du evit e c'houlenn gentañ
+        name: Studier
       supporter: 
         description: bet votet a-du evit ar wech gentañ
       troubleshooter: 
@@ -112,6 +121,7 @@ br:
         description: Reiñ un diskoulm d'ur goulenn gant ur geidenn a votoù uheloc'h eget 2
     show: 
       description: "Implijerien hag o deus gounezet ar badj-mañ. Bet roet n'eus ket pell da :"
+      earned: gounezet
       for_tag_bronze: 200 mouezh evit an tikedenn %{tag}
       for_tag_gold: 1 000 mouezh evit an tikedenn %{tag}
       for_tag_silver: 400 mouezh evit an tikedenn %{tag}

@@ -1,0 +1,30 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  widgets: 
+    badges: 
+      description: Questo widget mostra i badge recentemente assegnati ad utenti o domande
+      title: Badge recenti
+    groups: 
+      description: Questo widget mostra i gruppi più recenti
+      title: Gruppi recenti
+    index: 
+      description: Utilizzare le frecce per spostare i widget
+      title: Gestione widget della barra laterale
+    pages: 
+      description: Questo widget mostra la lista delle pagine wiki
+      title: Pagine wiki
+    tag_cloud: 
+      description: Questo widget visualizza una tag cloud
+      title: Tag cloud
+    top_groups: 
+      description: Questo widget mostra i primi cinque gruppi
+      title: Top 5 gruppi
+    top_users: 
+      description: Questo widget mostra i primi cinque utenti
+      title: Top 5 utenti
+    users: 
+      description: Questo widget mostra i nuovi iscritti
+      title: Utenti recenti

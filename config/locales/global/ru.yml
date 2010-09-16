@@ -5,11 +5,6 @@
 # Author: G0rn
 # Author: Lockal
 ru: 
-  actions: 
-    closed: Закрыто
-    created: создано
-    deleted: удалено
-    updated: обновлено
   feeds: 
     feed: Канал
     post_new_questions: Отправить новые вопросы в
@@ -32,8 +27,6 @@ ru:
   languages: 
     any: Любой
     user: Мои предпочитаемые языки
-  messages: 
-    success: "%{model} успешно %{action}."
   models: 
     question: Вопрос
   number: 

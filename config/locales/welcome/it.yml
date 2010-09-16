@@ -6,8 +6,10 @@
 it: 
   welcome: 
     confirm_age: 
+      notice: Si può aprire questa pagina solo se si hanno almeno 18 anni ovvero la maggiore età in base alla giurisdizione in cui si risiede o da cui si accede a questa pagina.
       over_18: Ho più di 18 anni
       under_18: Ho meno di 18 anni
+      warning: "Attenzione: questa pagina potrebbe contenere materiale per adulti esplicito."
     facts: 
       features: 
         cols: 
@@ -29,6 +31,8 @@ it:
           multilanguage: 'no'
           multitopic: 'no'
       prices: 
+        cols: 
+          onsite: on site
         shapado: 
           large: probabilmente circa $500
           medium: <=== Idem
@@ -40,6 +44,7 @@ it:
           onsite: $ 2500/mese
           small: $129/mese
     feedback: 
+      captcha_error: Risolvere questa semplice operazione matematica
       email_description: Inserire l'indirizzo email a cui inviare la risposta al vostro messaggio
       feedback_description: Descrizione
       feedback_title: Titolo

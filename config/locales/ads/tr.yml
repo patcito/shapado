@@ -1,0 +1,16 @@
+# Messages for Turkish (Türkçe)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Mert.subay
+tr: 
+  ads: 
+    ad_links: Yeni bir %{type} reklamı ekle
+    create: 
+      success: Reklam başarıyla oluşturuldu.
+    index: 
+      add_adbard: Yeni bir Ad Bard reklamı ekleyin
+      add_adsense: Yeni bir Google AdSense reklamı ekle
+      title: Reklamlar
+    name: "İsim:"
+    position: "Konum:"
+    title: Yeni bir %{type} reklamı ekle

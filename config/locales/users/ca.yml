@@ -1,6 +1,7 @@
 # Messages for Catalan (Català)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Martorell
 # Author: Papapep
 ca: 
   activerecord: 
@@ -24,7 +25,7 @@ ca:
         name: Nom real
         password: Contrasenya
         password_confirmation: Confirmació de la contrasenya
-        preferred_languages: Trieu els idiomes que coneixeu
+        preferred_languages: "Trieu els idiomes que coneixeu:"
         preferred_tags: Etiquetes preferides
         reputation: Reputació
         timezone: Zona horària
@@ -43,6 +44,8 @@ ca:
       vote_to_close_any_question: Petició de tancament de qualsevol pregunta
       vote_to_close_own_question: Petició de tancament de la pregunta
       vote_up: Vot positiu
+    anonymous_form: 
+      never_shown: mai mostrat
     create: 
       flash_error: No s'ha pogut crear el compte. Torneu-ho a provar o contacteu amb un administrador (teniu l'enllaç més amunt).
       flash_notice: Gràcies per registrar-vos!
@@ -57,6 +60,7 @@ ca:
       avatar_tip: Canvieu la imatge del vostre perfil emprant Gravatar
       give_advice_notification: Rebre notificacions per correu electrònic sobre preguntes del vostre sector de coneixement
       information: Informació
+      language: Idioma utilitzat per a la interfície del lloc
       new_answer_notification: Rebre notificacions per correu electrònic per a les noves respostes
       notifications: Notificacions
       reports_notification: Rebre un informe amb l'última activitat del grup (només per a administradors de grups)

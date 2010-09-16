@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Farras
 id: 
-  actions: 
-    closed: ditutup
-    created: dibuat
-    deleted: dihapus
-    updated: dimutakhirkan
   feeds: 
     feed: Umpan
     post_new_questions: Kirim pertanyaan baru ke
@@ -31,8 +26,6 @@ id:
   languages: 
     any: Apa pun
     user: Bahasa Pilihan Saya
-  messages: 
-    success: "%{model} berhasil %{action}."
   models: 
     question: Pertanyaan
   number: 

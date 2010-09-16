@@ -1,13 +1,9 @@
 # Messages for Catalan (Català)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Martorell
 # Author: Papapep
 ca: 
-  actions: 
-    closed: tancat
-    created: creat
-    deleted: eliminat
-    updated: actualitzat
   feeds: 
     feed: Canal
     post_new_questions: Publiqueu una nova pregunta a
@@ -17,6 +13,7 @@ ca:
     tag: Subscriure-us a una etiqueta
     user: Subscriviu-vos a les preguntes d'usuaris
   global: 
+    active: Activa
     by: per
     current: Actual
     from: des de %{site}
@@ -30,8 +27,6 @@ ca:
   languages: 
     any: Qualsevol
     user: Els meus idiomes preferits
-  messages: 
-    success: S'ha %{action} %{model} correctament.
   models: 
     question: La pregunta
   number: 

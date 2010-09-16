@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Naudefj
 af: 
-  actions: 
-    closed: gesluit
-    created: geskep
-    deleted: verwyder
-    updated: opgedateer
   feeds: 
     feed: Voer
     post_new_questions: Pos nuwe vrae by
@@ -30,8 +25,6 @@ af:
   languages: 
     any: Enige
     user: My voorkeurtale
-  messages: 
-    success: "%{model} is suksesvol %{action}."
   models: 
     question: Die vraag
   number: 

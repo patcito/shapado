@@ -1,0 +1,23 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+# Author: Tuxwet
+it: 
+  wiki: 
+    actions: 
+      all_history: Torna alla cronologia
+      back_to_question: Torna alla domanda
+      revert: Ripristina questa versione
+      show_diff: Confronta versioni selezionate
+    diff: 
+      title: Differenze tra %{prev} e %{curr}
+    history: 
+      current_version: Versione attuale
+      previous_versions: Versioni precedenti
+      title: Cronologia (%{count})
+      version: Versione
+      version_summary: Sommario delle versioni
+    model: 
+      attributes: 
+        message: Sommario

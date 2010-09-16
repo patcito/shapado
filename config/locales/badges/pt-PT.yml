@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   activerecord: 
     models: 
@@ -14,6 +15,7 @@ pt-PT:
     shared: 
       addict: 
         description: Visitou o site em 20 dias consecutivos
+        name: Viciado
       autobiographer: 
         description: Preencheu todos os campos do perfil de utilizador
         name: Autobiógrafo
@@ -31,31 +33,40 @@ pt-PT:
         name: Limpeza
       commentator: 
         description: Fez 10 comentários
+        name: Comentador
       critic: 
         description: Votou negativamente pela primeira vez
+        name: Crítico
       disciplined: 
         description: Eliminou publicação própria com pontuação de 3 ou superior
         name: Disciplinado
       editor: 
         description: Primeira publicação editada
+        name: Editor
       effort_medal: 
         description: Obteve 100 votos positivos
+        name: Medalha de esforço
       enlightened: 
         description: Primeira resposta foi aceite com pelo menos 10 votos positivos
         name: Esclarecido
       famous_question: 
         description: Fez uma pergunta com 10 000 visitas
+        name: Pergunta famosa
       fanatic: 
         description: Visitou o site em 100 dias consecutivos
+        name: Fanático
       favorite_question: 
         description: Pergunta adicionada aos favoritos por 25 utilizadores
+        name: Pergunta favorita
       friendly: 
         description: Seguir alguém pela primeira vez
         name: Amistoso
       good_answer: 
         description: Ter dado uma resposta que atinge uma média de mais de 25 votos
+        name: Boa resposta
       good_question: 
         description: Ter feito uma pergunta que atinge uma média de mais de 25 votos
+        name: Boa pergunta
       great_answer: 
         description: Resposta com 100 votos positivos
         name: Óptima resposta
@@ -64,13 +75,16 @@ pt-PT:
         name: Óptima pergunta
       guru: 
         description: Deu uma solução a uma pergunta com uma média de mais de 40 votos
+        name: Guru
       inquirer: 
         description: Fez a sua primeira pergunta
+        name: Questionador
       interesting_person: 
         description: Obter mais de 10 seguidores
         name: Pessoa interessante
       merit_medal: 
         description: Obter 200 votos positivos
+        name: Medalha de mérito
       necromancer: 
         description: Respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
         name: Necromante
@@ -82,6 +96,7 @@ pt-PT:
         name: Boa pergunta
       notable_question: 
         description: Fez uma pergunta com 2500 visitas
+        name: Pergunta notável
       organizer: 
         description: Primeira recategorização
         name: Organizador
@@ -90,15 +105,19 @@ pt-PT:
         name: Pressão dos pares
       pioneer: 
         description: Ser um dos primeiros utilizadores a registar-se
+        name: Pioneiro
       popstar: 
         description: 500 votos positivos, máximo de 10 votos negativos
+        name: Estrela pop
       popular_person: 
         description: Tem mais de 50 seguidores
         name: Pessoa popular
       popular_question: 
         description: Fez uma pergunta com 1000 visitas
+        name: Pergunta popular
       rockstar: 
         description: 1000 votos positivos, máximo de 10 votos negativos
+        name: Estrela de rock
       scholar: 
         description: Primeira resposta aceite, numa pergunta do próprio
         name: Académico
@@ -107,6 +126,7 @@ pt-PT:
         name: Autodidata
       service_medal: 
         description: 300 votos positivos
+        name: Medalha de serviço
       shapado: 
         description: Visitou o site em 8 dias consecutivos
       stellar_question: 
@@ -114,12 +134,16 @@ pt-PT:
         name: Pergunta extraordinária
       student: 
         description: Fez a primeira pergunta com pelo menos um voto positivo
+        name: Estudante
       supporter: 
         description: Votou positivamente pela primeira vez
+        name: Apoiante
       troubleshooter: 
         description: Deu a sua primeira resposta
+        name: Solucionador de problemas
       tutor: 
         description: Deu uma solução a uma pergunta com uma média de mais de 2 votos
+        name: Tutor
     show: 
       description: "Utilizadores que receberam esta condecoração. Recentemente atribuída a:"
       earned: recebeu

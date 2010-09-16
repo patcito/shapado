@@ -1,0 +1,18 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Deneb
+# Author: Giallu
+it: 
+  errors: 
+    forbidden: 
+      explanation: Diritti insufficienti per accedere alla pagina.
+      title: Accesso negato
+    internal_error: 
+      explanation: Il problema ci è stato notificato, a breve lo esamineremo.
+      title: Qualcosa non ha funzionato.
+    not_found: 
+      explanation: L'indirizzo è errato oppure la pagina è stata spostata.
+      title: Pagina non trovata.
+    options_label: "Altre cose da provare:"
+    search: Ricerca

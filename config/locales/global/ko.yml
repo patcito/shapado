@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Linkr
 ko: 
-  actions: 
-    closed: 마감됨
-    created: 생성됨
-    deleted: 삭제됨
-    updated: 업데이트됨
   feeds: 
     feed: Feed
     post_new_questions: 새로운 질문을 게시
@@ -30,8 +25,6 @@ ko:
   languages: 
     any: 모두
     user: 언어 설정
-  messages: 
-    success: "{model}이 성공적으로  %{action} 되었습니다."
   models: 
     question: 질문
   number: 

@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Patcito
 es-419: 
-  actions: 
-    closed: closed
-    created: created
-    deleted: deleted
-    updated: updated
   feeds: 
     feed: Flujo
     post_new_questions: publicar nuevas preguntas a
@@ -31,8 +26,6 @@ es-419:
   languages: 
     any: cualquiera
     user: idiomas que conozco
-  messages: 
-    success: "%{model} fue exitosamente %{action}."
   models: 
     question: la pregunta
   number: 

@@ -4,11 +4,6 @@
 # Author: McDutchie
 # Author: Patcito
 fr: 
-  actions: 
-    closed: fermée
-    created: crée
-    deleted: supprimé
-    updated: actualisé
   feeds: 
     feed: Flux
     post_new_questions: Poster les nouvelles questions à
@@ -32,8 +27,6 @@ fr:
   languages: 
     any: Toutes
     user: Mes langues
-  messages: 
-    success: "%{model} a été %{action} avec succès."
   models: 
     question: La question
   number: 

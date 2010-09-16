@@ -1,0 +1,90 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+# Author: Ric
+# Author: Tuxwet
+it: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Risposte
+        asked_by: Chiesto da
+        body: Testo
+        closed: Chiusa
+        created_at: Chiesto il
+        language: Lingua
+        tags: Tag
+        title: Titolo
+        updated_at: modificata
+        updated_by: aggiornato da
+        views: Visualizzazioni
+        votes: Voti
+    models: 
+      question: Domanda
+      questions: Domande
+  questions: 
+    answer: 
+      pick_answer: Scegli come soluzione
+    create: 
+      flash_notice: La domanda è stata creata.
+    edit: 
+      title: Modifica la domanda
+    flag: 
+      title: Contrassegna domanda
+    form: 
+      language_tip: Seleziona la lingua in cui è posta la domanda.
+    index: 
+      active: Attive
+      active_tooltip: Domande aggiornate di recente
+      ask_question: Fai una domanda
+      empty: Ancora nessuno ha fatto domande. Sii il primo!
+      help_to_answer: Aiutaci a rispondere
+      hot: Hot
+      hot_tooltip: Domande più attive negli ultimi 5 giorni
+      newest: più recenti
+      newest_tooltip: Domande chieste più di recente
+      oldest: più datate
+      title: Tutte le domande
+      unanswered_questions: Senza risposta
+      votes: Voti
+      votes_tooltip: Domande con più voti
+    model: 
+      messages: 
+        empty_tags: È necessario aggiungere almeno un tag.
+        title_too_long: Il titolo è troppo lungo. Non deve contenere più di 100 caratteri.
+        too_short: Troppo breve. Utilizzare almeno %{count} parole per essere più specifici.
+    move: 
+      submit: Sposta!
+    new: 
+      how_to_ask: Come domandare
+      title: Fai una domanda
+    question: 
+      accepted_tooltip: Questa domanda ha una risposta che è stata accettata
+    retag_form: 
+      cancel: Annulla
+      submit: Modifica tag
+      title: Modifica tag
+    retag_to: 
+      failure: I tag non non possono essere modificati.
+      success: Tag modificati con successo.
+    shared: 
+      flag: Contrassegna
+    show: 
+      another_answers: Altre risposte
+      answers: Risposte
+      answers_title: 
+        one: "%{count} risposta"
+        other: "%{count} risposte"
+      flag: Contrassegno
+      solution: Soluzione
+      watch_tooltip: Segui questa domanda
+    solve: 
+      flash_notice: La domanda è stata risolta.
+    tags: 
+      filter: Cerca per tag
+      title: Tag
+      tooltip: Mostra domande con il tag %{tag}
+    unanswered: 
+      expert: Esperti
+      title: Domande senza risposta

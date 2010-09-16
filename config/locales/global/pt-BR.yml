@@ -4,11 +4,6 @@
 # Author: Giro720
 # Author: Luckas Blade
 pt-BR: 
-  actions: 
-    closed: fechada
-    created: criada
-    deleted: apagada
-    updated: atualizada
   feeds: 
     feed: Feed
     post_new_questions: Publicar perguntas novas
@@ -32,8 +27,6 @@ pt-BR:
   languages: 
     any: Qualquer
     user: Minhas línguas preferidas
-  messages: 
-    success: "%{model} foi %{action}."
   models: 
     question: A pergunta
   number: 

@@ -14,6 +14,7 @@ ia:
     shared: 
       addict: 
         description: Visitava le sito cata die durante 20 dies consecutive
+        name: Maniaco
       autobiographer: 
         description: Completava tote le campos del profilo de usator
         name: Autobiographo
@@ -31,31 +32,40 @@ ia:
         name: Nettation
       commentator: 
         description: Lassava 10 commentos
+        name: Commentator
       critic: 
         description: Votava negativemente pro le prime vice
+        name: Critico
       disciplined: 
         description: Deleva un proprie message con un score de 3 o plus
         name: Disciplinate
       editor: 
         description: Prime message modificate
+        name: Redactor
       effort_medal: 
         description: Recipeva 100 votos positive
+        name: Medalia de effortio
       enlightened: 
         description: Prime responsa acceptate con al minus 10 votos positive
         name: Exclarate
       famous_question: 
         description: Poneva un question con 10000 visitas
+        name: Question famose
       fanatic: 
         description: Visitava le sito cata die durante 100 dies consecutive
+        name: Fanatico
       favorite_question: 
         description: Question marcate como favorite per 25 usatores
+        name: Question favorite
       friendly: 
         description: Sequer alcuno pro le prime vice
         name: Amical
       good_answer: 
         description: Haber un responsa que attinge un medio de plus de 25 votos
+        name: Bon responsa
       good_question: 
         description: Haber un question que attinge un medio de plus de 25 votos
+        name: Bon question
       great_answer: 
         description: Responsa con 100 votos positive
         name: Optime responsa
@@ -64,13 +74,16 @@ ia:
         name: Optime question
       guru: 
         description: Dava un solution a un question con un medio de plus de 40 votos
+        name: Guru
       inquirer: 
         description: Poneva su prime question
+        name: Investigator
       interesting_person: 
         description: Ha plus de 10 sequitores
         name: Persona interessante
       merit_medal: 
         description: Recipeva 200 votos positive
+        name: Medalia de merito
       necromancer: 
         description: Respondeva a un question plus de 60 dies plus tarde con al minus 5 votos
         name: Necromante
@@ -82,6 +95,7 @@ ia:
         name: Bon question
       notable_question: 
         description: Poneva un question con 2500 visitas
+        name: Question notabile
       organizer: 
         description: Prime re-etiquettage
         name: Organisator
@@ -90,15 +104,19 @@ ia:
         name: Pression del pares
       pioneer: 
         description: Esser un del prime usatores a crear un conto
+        name: Pionero
       popstar: 
         description: 500 votos positive, maximo de 10 votos negative
+        name: Popstar
       popular_person: 
         description: Ha plus de 50 sequitores
         name: Persona popular
       popular_question: 
         description: Poneva un question con 1000 visitas
+        name: Question popular
       rockstar: 
         description: 1000 votos positive, maximo de 10 votos negative
+        name: Rockstar
       scholar: 
         description: Prime responsa acceptate a un proprie question
         name: Erudito
@@ -107,6 +125,7 @@ ia:
         name: Autodidacto
       service_medal: 
         description: 300 votos positive
+        name: Medalia de servicio
       shapado: 
         description: Visitava le sito cata die durante 8 dies consecutive
       stellar_question: 
@@ -114,12 +133,16 @@ ia:
         name: Question stellar
       student: 
         description: Poneva su prime question con al minus un voto positive
+        name: Studente
       supporter: 
         description: Votava positivemente pro le prime vice
+        name: Supporter
       troubleshooter: 
         description: Respondeva pro le prime vice
+        name: Resolutor de problemas
       tutor: 
         description: Dava un solution a un question con un medio de plus de 2 votos
+        name: Tutor
     show: 
       description: "Usatores que ganiava iste insignia. Recentemente meritate per:"
       earned: ganiate

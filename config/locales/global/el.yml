@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Discon
 el: 
-  actions: 
-    closed: κλειδώθηκε
-    created: δημιουργήθηκε
-    deleted: διαγράφηκε
-    updated: ενημερώθηκε
   feeds: 
     feed: ροή
     post_new_questions: Αποστολή νέων ερωτήσεων προς
@@ -30,8 +25,6 @@ el:
   languages: 
     any: Οποιαδήποτε
     user: Τις προτιμώμενες γλώσσες μου
-  messages: 
-    success: "%{model} %{action} επιτυχώς."
   models: 
     question: Η ερώτηση
   number: 

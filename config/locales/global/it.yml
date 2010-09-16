@@ -1,0 +1,46 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  feeds: 
+    feed: Feed
+    question: Iscriviti a questa domanda
+    questions: Iscriviti a tutte le domande
+    share_on_twitter: twitter, facebook e molti altri...
+    tag: Iscriviti al tag
+    user: Iscriviti alle domande dell'utente
+  global: 
+    active: Attiva
+    current: Attuale
+    group_not_found: La pagina %{url} non esiste
+    permission_denied: Permesso negato
+    please_login: Accedi
+    preview: Anteprima
+    previous: Precedenti
+  languages: 
+    any: Qualsiasi
+    user: Lingue preferite
+  models: 
+    question: La domanda
+  number: 
+    x_time: 
+      one: "%{count} volta"
+      other: "%{count} volte"
+      zero: Mai
+  scaffold: 
+    add: Aggiungi
+    back: Indietro
+    cancel: Annulla
+    close: Chiudi
+    create: Crea
+    destroy: Cancella
+    details: Dettagli
+    edit: Modifica
+    more: Altro...
+    new: Aggiungi nuovo %{model}
+    save: Salva
+    send: Invia
+    show: Mostra
+    sure: Cancellare questo %{model} ?
+    update: Aggiorna

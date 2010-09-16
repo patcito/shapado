@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Bjankuloski06
 mk: 
-  actions: 
-    closed: затворено
-    created: создадено
-    deleted: избришано
-    updated: подновено
   feeds: 
     feed: Канал
     post_new_questions: поставај нови прашања на
@@ -31,8 +26,6 @@ mk:
   languages: 
     any: било кој
     user: мои претпочитани јазици
-  messages: 
-    success: "%{model} е успешно %{action}."
   models: 
     question: прашање
   number: 

@@ -1,0 +1,17 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  activerecord: 
+    models: 
+      vote: Voto
+      votes: Voti
+  votes: 
+    create: 
+      flash_error: Impossibile votare questo
+      flash_notice: Grazie per il voto!
+      unauthenticated: Gli utenti anonimi non possono votare
+    model: 
+      messages: 
+        closed_question: Non è possibile votare i post appartenenti a una domanda chiusa

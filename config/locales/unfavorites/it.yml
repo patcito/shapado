@@ -7,7 +7,6 @@ it:
     models: 
       favorite: Preferito
       favorites: Preferiti
-  favorites: 
+  unfavorites: 
     create: 
-      success: La domanda è stata aggiunta ai preferiti
-      unauthenticated: Serve un account per aggiungere preferiti
+      success: La domanda è stata rimossa dai preferiti

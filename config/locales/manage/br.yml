@@ -34,6 +34,8 @@ br:
           reputation_rewards_subtitle: Roll ar profoù brud
           title: Prizioù
         share: 
+          ends_with_example: "da skouer #shapado"
+          question_must_include_example: "da skouer #goulennAran"
           title: Rannañ
         theme: 
           logo_legend: Enporzhit ul logo evit ho strollad. D'ar muiañ e c'hell bezañ 2 Mo.

@@ -7,6 +7,9 @@ it:
     attributes: 
       page: 
         js: JavaScript
+    models: 
+      page: Pagina
+      pages: Pagine
   pages: 
     actions: 
       create_page: Crea nuova pagina

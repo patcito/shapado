@@ -1,0 +1,35 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  layouts: 
+    application: 
+      ask_question: Poni domanda
+      badges: Badge
+      home: Home
+      languages: Lingue
+      log_in: Entra
+      logout: Esci
+      manage_ads: Gestisci annunci
+      moderate: Modera
+      pages: Pagine
+      search: Cerca
+      users: Utenti
+      welcome_from: Benvenuto! È possibile
+    manage: 
+      actions: Azioni
+      announcements: Annunci
+      constrains: Requisiti
+      content: Contenuto
+      dashboard: Dashboard
+      domain: Dominio
+      general: Generale
+      members: Membri
+      pages: Pagine
+      properties: Proprietà
+      reputation: Reputazione
+      rewards: Ricompense
+      stats: Statistiche
+      theme: Tema
+      widgets: Widget

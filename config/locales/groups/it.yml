@@ -6,20 +6,43 @@ it:
   activerecord: 
     attributes: 
       group: 
+        default_tags: tag predefiniti
+        description: Descrizione
+        domain: Dominio
+        fb_button: Abilita pulsante "Mi piace" di Facebook (diminuisce la privacy)
+        forum: Permetti più risposte per ogni utente
+        group_created_by: creato da
         language: Lingua
+        legend: Legenda
+        logo: Logo
+        may_contain_adult_content: Il sito può avere contenuti per adulti
         name: Nome
+        openid_only: Permetti l'accesso esclusivamente con OpenID
+        owner: Questo gruppo è stato creato da %{login}
+        registered_only: Solo gli utenti registrati possono accedere al sito
+        state: Stato
+        subdomain: URL
+        wysiwyg_editor: Attiva editor semplificato
+    models: 
+      default_tags_message: Non si pososno avere più di 10 tag predefiniti
+      group: Group
+      groups: Gruppi
   groups: 
     create: 
       flash_notice: Il gruppo è stato creato correttamente. Ora si può iniziare a configurarlo.
     form: 
       access: Impostazioni di accesso
+      analytics_engine: Sistema di analytics
       analytics_legend: Il gruppo potrà usare un proprio codice di tracking
       any_language: Qualsiasi
       custom_analytics: Consenti Analytics personalizzati
+      custom_html: Consenti HTML personalizzato
       custom_js: Consenti JavaScript personalizzato
       default_tags_legend: Separa i tag con virgole. Sono consentiti 10 tag di default.
       description_legend: Hai 400 caratteri per descrivere il gruppo.
       isolate_group: Isolare il gruppo dagli altri gruppi
+      legend_legend: Sarà utilizzata nell'intestazione. Massimo 40 caratteri.
+      logo_legend: È possibile caricare il logo del gruppo. La dimensione massima del file è di 2MB.
       members_only: Solo i membri del gruppo saranno in grado di accedere a questo gruppo
       website_analytics_id: Analytics ID
     group: 
@@ -37,6 +60,8 @@ it:
       pendings: In attesa
       request_group: Richiedi un nuovo gruppo
       title: Gruppi
+    new: 
+      title: Crea il tuo gruppo
     show: 
       accept_group: Accetta questo gruppo
       accept_group_with_custom_ads: Accetta il gruppo e consenti annunci personalizzati

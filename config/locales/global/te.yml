@@ -4,11 +4,6 @@
 # Author: Ravichandra
 # Author: Veeven
 te: 
-  actions: 
-    closed: మూసివేయబడింది
-    created: సృష్టించబడినది
-    deleted: తొలిగించబడినది
-    updated: తాజాకరించబడినది
   feeds: 
     feed: ఫీడు
     post_new_questions: పై కొత్త ప్రశ్నలు అడగండి
@@ -31,8 +26,6 @@ te:
   languages: 
     any: ఏదయినా
     user: నా ప్రాధాన్యతా భాషలు
-  messages: 
-    success: "%{model} విజయవంతంగా %{action}."
   models: 
     question: ప్రశ్న
   number: 

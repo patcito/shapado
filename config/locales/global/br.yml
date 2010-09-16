@@ -4,11 +4,6 @@
 # Author: Fulup
 # Author: Y-M D
 br: 
-  actions: 
-    closed: serret
-    created: krouet
-    deleted: diverket
-    updated: hizivaet
   feeds: 
     feed: Lanvad
     post_new_questions: Sevel goulennoù nevez ouzh
@@ -32,8 +27,6 @@ br:
   languages: 
     any: Ne vern
     user: Ma yezhoù karetañ
-  messages: 
-    success: "%{model} a zo bet %{action}."
   models: 
     question: Ar goulenn
   number: 

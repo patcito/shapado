@@ -4,11 +4,6 @@
 # Author: McDutchie
 # Author: Siebrand
 nl: 
-  actions: 
-    closed: gesloten
-    created: aangemaakt
-    deleted: verwijderd
-    updated: bijgewerkt
   feeds: 
     feed: Feed
     post_new_questions: Nieuwe vragen toevoegen aan
@@ -32,8 +27,6 @@ nl:
   languages: 
     any: Alle
     user: Voorkeurstalen
-  messages: 
-    success: "%{model} is %{action}."
   models: 
     question: De vraag
   number: 

@@ -37,10 +37,20 @@ ru:
           reputation_rewards_subtitle: Список вознаграждений к репутации
           title: Награды
         share: 
+          add_tags: Добавить теги в ваши твиты
+          application_id: ID приложения
+          asking_from_twitter: Задавание вопросов по Твиттеру
           ends_with_example: "например, #shapado"
+          facebook_app: Настройки приложения Facebook
+          question_asked_to: Вопрос, заданный
+          question_must_include: Вопрос должен содержать следующий тег, для попадания в Твиттер
           question_must_include_example: "например, #iAsk"
           secret_key: Секретный Ключ
+          starts_with_example: "например, #qa"
           title: Распространение
+          title_on_dlvr: Поделиться на dlvr.it
+          tweet_ends_with: Добавить тег в конец ваших твитов
+          tweet_starts_with: Добавить тег в начало ваших твитов
           twitter_account: Учётная запись Twitter, на которую пользователи будут задавать вопросы.
         theme: 
           logo_legend: Загрузка логотипа своей группы, его размер должен быть менее 2 МБ.

@@ -15,6 +15,7 @@ nl:
     shared: 
       addict: 
         description: heeft de site twintig dagen achter elkaar bezocht
+        name: Verslaafde
       autobiographer: 
         description: heeft alle velden in het gebruikersprofiel ingevuld
         name: autobiograaf
@@ -32,31 +33,40 @@ nl:
         name: opruimen
       commentator: 
         description: heeft tien opmerkingen achtergelaten
+        name: Commentator
       critic: 
         description: heeft voor de eerste keer negatief beoordeeld
+        name: Criticus
       disciplined: 
         description: heeft een eigen bericht met een score van drie of hoger verwijderd
         name: gedisciplineerd
       editor: 
         description: eerste bericht bewerkt
+        name: Redacteur
       effort_medal: 
         description: honderd positieve stemmen halen
+        name: Inspanningsmedaille
       enlightened: 
         description: heeft een eerste antwoord dat tenminste tien keer positief is beoordeeld
         name: verlicht
       famous_question: 
         description: heeft een vraag gesteld die tienduizend keer bekeken is
+        name: Beroemde vraag
       fanatic: 
         description: heeft de site honderd dagen achter elkaar bezocht
+        name: Fanaticus
       favorite_question: 
         description: heeft een vraag gesteld die door 25 gebruikers als favoriet is ingesteld
+        name: Favoriete vraag
       friendly: 
         description: voor de eerste keer iemand gaan volgen
         name: vriendelijk
       good_answer: 
         description: met een antwoord dat een gemiddelde van meer dan 25 stemmen bereikt
+        name: Goed antwoord
       good_question: 
         description: heeft een vraag die een gemiddelde van meer dan 25 stemmen bereikt
+        name: Goede vraag
       great_answer: 
         description: antwoord dat honderd keer positief is beoordeeld
         name: perfect antwoord
@@ -65,13 +75,16 @@ nl:
         name: supervraag
       guru: 
         description: geef een oplossing voor een vraag met een gemiddelde van meer dan 40 stemmen
+        name: Goeroe
       inquirer: 
         description: heeft een eerste vraag gesteld
+        name: Onderzoeker
       interesting_person: 
         description: meer dan tien volgers
         name: interessant persoon
       merit_medal: 
         description: krijg tweehonderd positieve stemmen
+        name: Medaille van verdienste
       necromancer: 
         description: heeft een vraag beantwoord meer dan twee maanden na het stellen met tenminste vijf stemmen
         name: geestenbezweerder
@@ -83,6 +96,7 @@ nl:
         name: goede vraag
       notable_question: 
         description: heeft een vraag gesteld die 2500 keer bekeken is
+        name: Vermeldenswaardige vraag
       organizer: 
         description: eerste herlabeling
         name: organisator
@@ -91,15 +105,19 @@ nl:
         name: groepsdruk
       pioneer: 
         description: een van de eerste geregistreerde gebruikers
+        name: Pionier
       popstar: 
         description: vijfhonderd positieve stemmen, maximaal 10 negatieve stemmen
+        name: Popster
       popular_person: 
         description: heeft meer dan vijftig volgers
         name: populiare gebruiker
       popular_question: 
         description: Heeft een vraag gesteld die duizend keer bekeken is
+        name: Populaire vraag
       rockstar: 
         description: duizend positieve stemmen, maximaal tien negatieve stemmen
+        name: Rockster
       scholar: 
         description: eerste geaccepteerde antwoord op een eigen vraag
         name: geleerde
@@ -108,6 +126,7 @@ nl:
         name: zelflerend
       service_medal: 
         description: driehonderd positieve stemmen
+        name: Dienstmedaille
       shapado: 
         description: heeft de site acht dagen achter elkaar bezocht
       stellar_question: 
@@ -115,12 +134,16 @@ nl:
         name: bovennatuurlijk goede vraag
       student: 
         description: heeft een vraag gesteld met tenminste één positieve stem
+        name: Student
       supporter: 
         description: heeft de eerste keer positief gestemd
+        name: Supporter
       troubleshooter: 
         description: het eerste antwoord gegeven
+        name: Probleemoplosser
       tutor: 
         description: geef een antwoord op een vraag met een gemiddelde van meer dan twee stemmen
+        name: Leermeester
     show: 
       description: "gebruikers die dit speldje recentelijk hebben verdiend:"
       earned: verdiend

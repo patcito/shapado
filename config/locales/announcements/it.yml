@@ -1,0 +1,22 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+# Author: Ric
+# Author: Tuxwet
+it: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Finisce il
+        message: Messaggio
+        only_anonymous: Solo per utenti anonimi
+        starts_at: Inizia il
+  announcements: 
+    actions: 
+      delete: Rimuovi
+      title: Azioni
+    create: 
+      success: Annuncio creato
+    index: 
+      title: Annunci

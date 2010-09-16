@@ -15,8 +15,19 @@ pt-BR:
     create: 
       flash_error: Você não pode reportar isto
       flash_notice: Obrigado por ter reportado
+    destroy: 
+      flash_notice: A sua marcação foi revogada com sucesso.
+    edit: 
+      title: Editar a marcação de %{model}
     form: 
       attention: Requer a atenção do moderador
       label: Reporte com cuidado, por favor
       offensive: Conteúdo ofensivo, abusivo ou insultuoso
       spam: Spam
+    model: 
+      messages: 
+        already_requested: Você já marcou este %{model}.
+    new: 
+      title: Marcar o %{model}
+    update: 
+      flash_notice: A marcação da questão foi atualizada com sucesso.

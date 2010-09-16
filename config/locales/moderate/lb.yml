@@ -1,0 +1,12 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  admin: 
+    moderate: 
+      index: 
+        all: All
+        flagged: ¨Markéiert Froen
+        item_title: Titel
+        title: Moderéieren

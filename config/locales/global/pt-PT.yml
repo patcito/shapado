@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Hamilton Abreu
 pt-PT: 
-  actions: 
-    closed: fechada
-    created: criada
-    deleted: apagada
-    updated: actualizada
   feeds: 
     feed: Feed
     post_new_questions: Publicar perguntas novas
@@ -31,8 +26,6 @@ pt-PT:
   languages: 
     any: Qualquer
     user: As Minhas Línguas Preferidas
-  messages: 
-    success: "%{model} foi %{action}."
   models: 
     question: A pergunta
   number: 

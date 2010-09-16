@@ -1,0 +1,121 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  activerecord: 
+    models: 
+      badge: Ідэнтыфікатар
+      badges: Ідэнтыфікатары
+  badges: 
+    shared: 
+      addict: 
+        description: Наведваў сайт кожны дзень на працягу 20 дзён
+        name: Залежны
+      autobiographer: 
+        description: Запоўніць усе палі профілю карыстальніка
+        name: Аўтабіёграф
+      celebrity: 
+        description: Мае болей за 100 пасьлядоўнікаў
+        name: Знакамітасьць
+      citizen_patrol: 
+        description: Першае пазначанае паведамленьне
+        name: Патрулюючы
+      civic_duty: 
+        description: Прагаласаваў 300 разоў
+        name: Грамадзянская адказнасьць
+      cleanup: 
+        description: Першы адкат
+        name: Уборка
+      commentator: 
+        description: Пакінуў 10 камэнтараў
+        name: Камэнтатар
+      critic: 
+        description: Першы раз прагаласавалі «супраць»
+        name: Крытык
+      disciplined: 
+        description: Выдаліць уласнае паведамленьне з адзнакай 3 ці вышэй
+        name: Дысцыплінаваны
+      editor: 
+        description: Першы раз рэдагавалі паведамленьне
+      effort_medal: 
+        description: Атрымаў 100 галасоў «за»
+      enlightened: 
+        description: Першы адказ быў прыняты хаця б 10 галасамі «за»
+        name: Асьвечаны
+      famous_question: 
+        description: Задаў пытаньне з 10000 праглядаў
+      fanatic: 
+        description: Наведваў сайт кожны дзень на працягу 100 дзён
+      favorite_question: 
+        description: Улюблёнае пытаньне 25 удзельнікаў
+        name: Улюблёнае пытаньне
+      friendly: 
+        description: Упершыню пачаў за кімсьці сачыць
+        name: Сяброўскі
+      good_answer: 
+        description: Мае адказ, які атрымаў у сярэднім больш за 25 галасоў
+        name: Добры адказ
+      great_answer: 
+        description: За адказ прагаласавалі «за» 100 разоў
+        name: Выдатны адказ
+      great_question: 
+        description: За пытаньне прагаласавалі 100 разоў «за»
+        name: Выдатнае пытаньне
+      guru: 
+        description: Вырашыў пытаньне з сярэдняй колькасьцю галасоў больш за 40
+        name: Настаўнік
+      inquirer: 
+        description: Запытаў першы раз
+        name: Пытаючы
+      interesting_person: 
+        description: Мае болей за 10 пасьлядоўнікаў
+        name: Цікавая асоба
+      merit_medal: 
+        description: Атрымаў 200 галасоў «за»
+      nice_answer: 
+        description: За адказ прагаласавалі «за» 10 разоў
+        name: Добры адказ
+      nice_question: 
+        description: За пытаньне прагаласавалі 10 разоў «за»
+        name: Добрае пытаньне
+      notable_question: 
+        description: Задаў пытаньне з 2500 праглядамі
+      organizer: 
+        description: Першая зьмена тэгаў
+        name: Арганізатар
+      peer_pressure: 
+        description: Выдаліць уласнае паведамленьне з адзнакай -3 ці ніжэй
+        name: Ціск атачэньня
+      pioneer: 
+        description: Адзін з першых зарэгістраваных карыстальнікаў
+      popstar: 
+        description: 500 галасоў «за», і ня болей 10 галасоў «супраць»
+        name: Поп-зорка
+      popular_person: 
+        description: Мае болей за 50 пасьлядоўнікаў
+        name: Папулярная асоба
+      popular_question: 
+        description: Задаў пытаньне з 1000 праглядаў
+        name: Папулярнае пытаньне
+      rockstar: 
+        description: 1000 галасоў «за», і ня болей 10 галасоў «супраць»
+      scholar: 
+        description: Першы раз прыняў адказ на ўласнае пытаньне
+        name: Эрудыт
+      self-learner: 
+        description: Адказаў на ўласнае пытаньне, хаця б з 3 галасамі «за»
+        name: Самастойна навучаючыся
+      shapado: 
+        description: Наведваў сайт кожны дзень на працягу 8 дзён
+      stellar_question: 
+        description: 100 карыстальнікаў дадалі пытаньне да ўлюблёных
+        name: Зорнае пытаньне
+      student: 
+        description: Задаў першае пытаньне, з хаця б адным голасам «за»
+      supporter: 
+        description: Першы раз прагаласавалі «за»
+        name: Прыхільнік
+      troubleshooter: 
+        description: Адказаў першы раз

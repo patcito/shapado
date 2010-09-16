@@ -1,0 +1,22 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+pt-BR: 
+  open_requests: 
+    create: 
+      flash_notice: O pedido de reabertura foi criado
+    destroy: 
+      flash_notice: O pedido de reabertura foi apagado
+    edit: 
+      title: Editar pedido de reabertura
+    form: 
+      request_opening_details: Solicitar a reabertura desta pergunta
+    index: 
+      title: Lista dos pedidos de reabertura
+    model: 
+      prural_name: Pedidos de reabertura
+    new: 
+      title: Solicitar a reabertura
+    update: 
+      flash_notice: O pedido de reabertura foi atualizado

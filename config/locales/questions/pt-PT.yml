@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   activerecord: 
     attributes: 
@@ -95,16 +96,22 @@ pt-PT:
       ban: Banir
       close: Fechar
       close_reason: "A pergunta foi fechada pelo seguinte motivo:"
+      edit_request: Editar pedido
       favorite_tooltip: Adicionar esta pergunta às suas favoritas
       flag: Reportar
       flagged_as: Reportada como
       flags: Reportada como
       last_activity: Actividade mais recente
+      open: Aberta
       related_questions: Perguntas relacionadas
       request_closing: Pedir encerramento
       request_closing_details: Pedir para fechar esta pergunta
+      request_opening: Solicitar reabertura
+      request_opening_details: Solicitar a reabertura desta pergunta
+      requested_close_as: Solicitou o encerramento desta pergunta como
+      requested_reopening: Solicitou a reabertura desta pergunta
       retag: Recategorizar
-      retract_request: Já colocou um pedido. Quer retirá-lo?
+      retract_request: Retirar o pedido
       share: Partilhar esta pergunta em
       share_on: Partilhar esta pergunta em %{site}
       solution: Solução

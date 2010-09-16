@@ -1,0 +1,16 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  ads: 
+    ad_links: Aggiungi un nuovo annuncio %{type}
+    create: 
+      success: Annuncio creato.
+    index: 
+      add_adbard: Aggiungi annuncio Ad Bard
+      add_adsense: Aggiungi annuncio Google AdSense
+      title: Annunci
+    name: "Nome:"
+    position: "Posizione:"
+    title: Aggiungi un nuovo annuncio %{type}

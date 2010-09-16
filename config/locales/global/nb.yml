@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Nghtwlkr
 nb: 
-  actions: 
-    closed: lukket
-    created: opprettet
-    deleted: slettet
-    updated: oppdatert
   feeds: 
     feed: Mating
     share_on_twitter: twitter, facebook og mer...
@@ -23,8 +18,6 @@ nb:
     share: del
   languages: 
     user: Mine foretrukne språk
-  messages: 
-    success: "%{model} ble %{action}."
   models: 
     question: Spørsmålet
   number: 

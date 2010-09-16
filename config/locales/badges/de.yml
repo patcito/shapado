@@ -15,6 +15,7 @@ de:
     shared: 
       addict: 
         description: Hat die Website an zwanzig aufeinander folgenden Tagen besucht
+        name: Süchtiger
       autobiographer: 
         description: Alle Felder des Nutzerprofils wurden ausgefüllt
         name: Autobiograph
@@ -32,31 +33,40 @@ de:
         name: Bereinigung
       commentator: 
         description: Hat zehn Kommentare verfasst
+        name: Kommentator
       critic: 
         description: erstmalig negativ bewertet
+        name: Kritiker
       disciplined: 
         description: Eigenen Beitrag mit einer Punktzahl von 3 und höher gelöscht
         name: Verwarnt
       editor: 
         description: Erster bearbeiteter Beitrag
+        name: Bearbeiter
       effort_medal: 
         description: Hat 100 positive Bewertungen erhalten
+        name: Fleißmedaille
       enlightened: 
         description: Erste Antwort wurde mit mindestens 10 positiven Bewertungen angenommen
         name: beeindruckend
       famous_question: 
         description: Hat eine Frage mit über 10000 Aufrufen gestellt
+        name: Berühmte Frage
       fanatic: 
         description: Hat die Website an 100 aufeinander folgenden Tagen besucht
+        name: Fanatiker
       favorite_question: 
         description: Frage wurde von 25 Nutzern auf den Merkzettel gesetzt
+        name: Lieblingsfrage
       friendly: 
         description: Folgt jemandem zum ersten Mal
         name: Freundlich
       good_answer: 
         description: Gab eine Antwort, die durchschnittlich mehr als 25 Bewertungen erhalten hat
+        name: Gute Antwort
       good_question: 
         description: Hatte eine Frage, die durchschnittlich mehr als 25 Bewertungen erhalten hat
+        name: Gute Frage
       great_answer: 
         description: Antwort wurde bis zu 100-mal positiv bewertet
         name: Großartige Antwort
@@ -65,13 +75,16 @@ de:
         name: Großartige Frage
       guru: 
         description: Gab eine Antwort, die durchschnittlich mehr als 40 Bewertungen erhalten hat
+        name: Guru
       inquirer: 
         description: Erstmalig gefragt
+        name: Fragender
       interesting_person: 
         description: Hat mehr als 10 Anhänger
         name: Interessante Person
       merit_medal: 
         description: Hat 200 positive Bewertungen erhalten
+        name: Verdienstmedaille
       necromancer: 
         description: Gab mehr als 60 Tage später eine Antwort, die mindestens 5 Bewertungen erhalten hat
         name: Zauberer
@@ -83,6 +96,7 @@ de:
         name: Gute Frage
       notable_question: 
         description: Hat eine Frage mit über 250 Aufrufen gestellt
+        name: Bedeutende Frage
       organizer: 
         description: Erste Neubenennung
         name: Organisator
@@ -91,15 +105,19 @@ de:
         name: Gruppenzwang
       pioneer: 
         description: Sei unter den ersten Nutzern, die sich anmelden
+        name: Pionier
       popstar: 
         description: 500 positive und maximal 10 negative Bewertungen
+        name: Popstar
       popular_person: 
         description: Hat mehr als 50 Anhänger
         name: Beliebte Person
       popular_question: 
         description: Hat eine Frage mit über 1000 Aufrufen gestellt
+        name: Häufige Frage
       rockstar: 
         description: 1000 positive und maximal 10 negative Bewertungen
+        name: Rockstar
       scholar: 
         description: Erste akzeptierte Antwort auf Deine eigene Frage
         name: Gelehrter
@@ -108,6 +126,7 @@ de:
         name: Autodidakt
       service_medal: 
         description: Hat 300 positive Bewertungen erhalten
+        name: Einsatzmedaille
       shapado: 
         description: Hat die Website an acht aufeinander folgenden Tagen besucht
       stellar_question: 
@@ -115,12 +134,16 @@ de:
         name: Ausgezeichnete Frage
       student: 
         description: Hat eine erste Frage mit mindestens einer positiven Bewertung gestellt
+        name: Student
       supporter: 
         description: erstmalig positiv bewertet
+        name: Anhänger
       troubleshooter: 
         description: Hat zum ersten Mal geantwortet
+        name: Problemlöser
       tutor: 
         description: Gab eine Antwort, die durchschnittlich mehr als 2 Bewertungen erhalten hat
+        name: Tutor
     show: 
       description: "Nutzer, die dieses Abzeichen erhalten haben. Kürzlich vergeben an:"
       earned: erhalten

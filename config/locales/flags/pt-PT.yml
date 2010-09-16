@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   activerecord: 
     attributes: 
@@ -14,6 +15,10 @@ pt-PT:
     create: 
       flash_error: Não pode reportar isto
       flash_notice: Obrigado por ter reportado
+    destroy: 
+      flash_notice: A sua marcação foi revogada.
+    edit: 
+      title: Editar a marcação de %{model}
     form: 
       attention: Requer a atenção do moderador
       label: Reporte com cuidado, por favor
@@ -21,4 +26,8 @@ pt-PT:
       spam: Spam
     model: 
       messages: 
-        already_requested: Já marcou este %{model}.
+        already_requested: Já reportou este %{model}.
+    new: 
+      title: Reportar o %{model}
+    update: 
+      flash_notice: A marcação da questão foi actualizada com sucesso.

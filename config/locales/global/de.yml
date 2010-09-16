@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Kghbln
 de: 
-  actions: 
-    closed: beendet
-    created: erstellt
-    deleted: gelöscht
-    updated: aktualisiert
   feeds: 
     feed: Feed
     post_new_questions: Erstelle neue Fragen zu
@@ -31,8 +26,6 @@ de:
   languages: 
     any: Alle
     user: Meine bevorzugten Sprachen
-  messages: 
-    success: "%{model} wurde erfolgreich %{action}."
   models: 
     question: Die Frage
   number: 

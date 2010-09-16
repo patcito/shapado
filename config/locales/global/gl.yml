@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: Toliño
 gl: 
-  actions: 
-    closed: pechado
-    created: creado
-    deleted: borrado
-    updated: actualizado
   feeds: 
     feed: Fonte de novas
     post_new_questions: Publicar novas preguntas en
@@ -31,8 +26,6 @@ gl:
   languages: 
     any: Calquera
     user: As linguas que coñezo
-  messages: 
-    success: "%{model} foi %{action} correctamente."
   models: 
     question: A pregunta
   number: 

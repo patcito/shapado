@@ -3,11 +3,6 @@
 # Export driver: syck
 # Author: McDutchie
 ia: 
-  actions: 
-    closed: claudite
-    created: create
-    deleted: delite
-    updated: actualisate
   feeds: 
     feed: Syndication
     post_new_questions: Publicar nove questiones in
@@ -31,8 +26,6 @@ ia:
   languages: 
     any: Qualcunque
     user: Mi linguas preferite
-  messages: 
-    success: "%{model} ha essite %{action} con successo."
   models: 
     question: Le question
   number: 

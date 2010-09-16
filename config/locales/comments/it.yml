@@ -1,0 +1,21 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Deneb
+# Author: Giallu
+it: 
+  comments: 
+    create: 
+      flash_notice: Grazie per il commento
+    edit: 
+      title: Modifica commento
+    shared: 
+      add_comment: Aggiungi un commento...
+      comment_submit: Commento
+      reply: Rispondi
+      said: ha detto
+    update: 
+      flash_notice: Commento modificato con successo.
+  models: 
+    comment: Commento
+    comments: Commenti

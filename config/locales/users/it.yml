@@ -1,0 +1,62 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+# Author: Tuxwet
+it: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: attivato il
+        activation_code: Codice di attivazione
+        age: Età
+        asked_by: chiesto da
+        avatar: Immagine profilo
+        birthday: Compleanno
+        created_at: iscritto da
+        current_password: Password attuale
+        email: Email
+        fullname: Nome completo
+        hide_country: Non mostrare il mio paese
+        language: Lingua
+        language_filter: Filtro per lingua
+        last_logged_at: visto
+        login: Nome utente
+        name: Nome vero
+        password: Password
+        password_confirmation: Conferma password
+        preferred_languages: "Mostra le domande nelle seguenti lingue:"
+        preferred_tags: Tag preferiti
+        reputation: Reputazione
+        timezone: Fuso orario
+        updated_at: aggiornato il
+        website: Sito web
+    models: 
+      user: Utente
+      users: Utenti
+  users: 
+    anonymous_form: 
+      never_shown: mai mostrato
+    create: 
+      flash_error: Spiacente, creazione account non riuscita. Riprovare o contattare un amministratore (link sopra).
+    edit: 
+      submit: Salva
+    form: 
+      notifications: Notifiche
+      reports_notification: Ricevi un report dell'attività recente del gruppo (solo per amministratori)
+      show_more_lang: Mostra altre lingue
+    index: 
+      empty: Il gruppo non ha nessun membro. Partecipa unendoti a questo gruppo.
+      filter: Cerca utenti
+      name: Nome
+      name_tooltip: Utenti in ordine alfabetico
+      newest: più recente
+      newest_tooltip: Utenti iscritti da meno tempo
+      oldest: più datato
+      oldest_tooltip: Utenti iscritti da più tempo
+      reputation: Reputazione
+      reputation_tooltip: Utenti in ordine di reputazione
+      title: Tutti gli utenti
+    new: 
+      submit: Iscriviti
+      title: Iscriviti come nuovo utente

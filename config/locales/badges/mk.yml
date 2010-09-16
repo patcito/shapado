@@ -14,6 +14,7 @@ mk:
     shared: 
       addict: 
         description: го посетил мрежното место 20 дена по ред
+        name: Зависник
       autobiographer: 
         description: ги пополнил сите полиња во корисничкиот профил
         name: автобиограф
@@ -31,31 +32,40 @@ mk:
         name: расчистување
       commentator: 
         description: даде 10 коментари
+        name: Коментатор
       critic: 
         description: негативен глас за прв пат
+        name: Критичар
       disciplined: 
         description: избришавте своја порака со барем 3 бода
         name: дисциплиниран
       editor: 
         description: прва уредена порака
+        name: Уредник
       effort_medal: 
         description: добивање на 100 позитивни гласа
+        name: Медал за труд
       enlightened: 
         description: првиот одговор бил прифатен со барем 10 гласа „за“
         name: просветлен
       famous_question: 
         description: поставил прашање со 10 000 прегледи
+        name: Прочуено прашање
       fanatic: 
         description: го посетил мрежното место 100 дена по ред
+        name: Фанатик
       favorite_question: 
         description: прашање омилено на 25 корисници
+        name: Омилено прашање
       friendly: 
         description: следење некого за прв пат
         name: дружељубив
       good_answer: 
         description: давање на одговор што ќе достигне просечно над 25 гласа
+        name: Добар одговор
       good_question: 
         description: имање поставено прашање што достигнало просечно над 25 гласа
+        name: Добро прашање
       great_answer: 
         description: одговор со 100 гласови „за“
         name: одличен одговор
@@ -64,13 +74,16 @@ mk:
         name: одлично прашање
       guru: 
         description: изнаоѓање решение на прашање со просечно над 40 гласа
+        name: Гуру
       inquirer: 
         description: поставање на прашање за прв пат
+        name: Распрашувач
       interesting_person: 
         description: имање над 10 следбеници
         name: интересна личност
       merit_medal: 
         description: добивање на 200 позитивни гласа
+        name: Медал за заслуги
       necromancer: 
         description: одговорено прашање во рок подолг од 60 дена и со барем 5 гласа
         name: некромант
@@ -82,6 +95,7 @@ mk:
         name: фино прашање
       notable_question: 
         description: поставено прашање со 2500 прегледи
+        name: Значајно прашање
       organizer: 
         description: прво преозначување
         name: организатор
@@ -90,15 +104,19 @@ mk:
         name: притисок од средината
       pioneer: 
         description: меѓу првите регистрирани корисници
+        name: Пионер
       popstar: 
         description: 500 позитивни, а само 10 негативни гласови
+        name: Поп-ѕвезда
       popular_person: 
         description: имање над 50 следбеници
         name: популарана личност
       popular_question: 
         description: поставил прашање со 1000 прегледи
+        name: Популарно прашање
       rockstar: 
         description: 1000 позитивни, а највеќе 10 негавитни гласа
+        name: Рок-ѕвезда
       scholar: 
         description: прв прифатен одговор на ваше прашање
         name: научен трудбеник
@@ -107,6 +125,7 @@ mk:
         name: самоученик
       service_medal: 
         description: 300 позитивни гласа
+        name: Медал за служба
       shapado: 
         description: го посетил мрежното место 8 дена по ред
       stellar_question: 
@@ -114,12 +133,16 @@ mk:
         name: ѕвездено прашање
       student: 
         description: го поставил првото прашање со барем еден глас „за“
+        name: Ученик
       supporter: 
         description: гласање позитивно за прв пат
+        name: Поддржувач
       troubleshooter: 
         description: давање одговор за прв пат
+        name: Решавач на проблеми
       tutor: 
         description: давање решение на прашање со просечно над 2 гласа
+        name: Тутор
     show: 
       description: "корисници што ја добиле оваа значка. неодамна доделена на:"
       earned: заработил

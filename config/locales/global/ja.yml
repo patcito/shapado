@@ -2,11 +2,6 @@
 # Exported from translatewiki.net
 # Export driver: syck
 ja: 
-  actions: 
-    closed: 終了
-    created: 作成
-    deleted: 削除
-    updated: 更新
   feeds: 
     feed: フィード
     post_new_questions: post new questions to
@@ -29,8 +24,6 @@ ja:
   languages: 
     any: 選択しない
     user: 自分の設定している言語のみ
-  messages: 
-    success: "%{model}は%{action}されました"
   models: 
     question: 質問
   number: 
