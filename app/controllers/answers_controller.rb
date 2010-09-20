@@ -227,7 +227,7 @@ class AnswersController < ApplicationController
                     :_id => {:$ne => @answer.user.id},
                     :select => ["email"]}
 
-    users = User.find(@question.watchers, search_opts)
+    users = User.all(:_id => @question.watchers, search_opts)
     users.push(@question.user) if !@question.user.nil? && @question.user != @answer.user
     followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
 
