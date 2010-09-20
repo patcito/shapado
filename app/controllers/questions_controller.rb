@@ -34,9 +34,10 @@ class QuestionsController < ApplicationController
     end
 
     @questions = Question.paginate({:per_page => 25, :page => params[:page] || 1,
-                                   :order => current_order,
-                                   :fields => (Question.keys.keys - ["_keywords", "watchers"])}.
-                                               merge(conditions))
+                       :order => current_order,
+                       :fields => {:_keywords => 0, :watchers => 0, :flags => 0,
+                                   :close_requests => 0, :open_requests => 0,
+                                   :versions => 0}}.merge(conditions))
 
     @langs_conds = scoped_conditions[:language][:$in]
 
@@ -108,7 +109,10 @@ class QuestionsController < ApplicationController
 
     @questions = Question.related_questions(@question, :page => params[:page],
                                                        :per_page => params[:per_page],
-                                                       :order => "answers_count desc")
+                                                       :order => "answers_count desc",
+                                                       :fields => {:_keywords => 0, :watchers => 0, :flags => 0,
+                                                                  :close_requests => 0, :open_requests => 0,
+                                                                  :versions => 0})
 
     respond_to do |format|
       format.js do
@@ -142,7 +146,9 @@ class QuestionsController < ApplicationController
     @questions = Question.paginate({:order => current_order,
                                     :per_page => 25,
                                     :page => params[:page] || 1,
-                                    :fields => (Question.keys.keys - ["_keywords", "watchers"])
+                                    :fields => {:_keywords => 0, :watchers => 0, :flags => 0,
+                                                :close_requests => 0, :open_requests => 0,
+                                                :versions => 0}
                                    }.merge(conditions))
 
     respond_to do |format|
@@ -205,6 +211,7 @@ class QuestionsController < ApplicationController
     options = {:per_page => 25, :page => params[:page] || 1,
                :order => current_order, :banned => false}
     options[:_id] = {:$ne => @question.answer_id} if @question.answer_id
+    options[:fields] = {:_keywords => 0}
     @answers = @question.answers.paginate(options)
 
     @answer = Answer.new(params[:answer])
