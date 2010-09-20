@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
   config.gem "rdiscount", :version => "1.6.5"
   config.gem "jnunemaker-validatable", :version => "1.8.4", :lib => "validatable"
   config.gem "mongo_mapper", :version => "0.8.3", :source => "http://gemcutter.org"
-  config.gem "compass", :version => "0.10.4", :lib => "compass", :source => "http://gemcutter.org"
+  config.gem "compass", :version => "0.10.5", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.5.5", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
   config.gem "ruby-stemmer", :version => ">=0.8.2", :lib => "lingua/stemmer"
@@ -37,7 +37,7 @@ Rails::Initializer.run do |config|
   config.gem "magent", :version => "0.4.2"
   config.gem "differ", :version => "0.1.1"
   config.gem 'super_exception_notifier', :version => '~> 2.0.0', :lib => 'exception_notifier'
-  config.gem "warden", :version => "0.10.7"
+  config.gem "warden"
   config.gem "dcu-devise", :version => "1.0.7", :lib => "devise"
   config.gem "twitter-text", :version => "1.1.1"
   config.gem "oauth2", :version => "0.0.8"
