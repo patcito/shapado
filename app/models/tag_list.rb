@@ -12,7 +12,7 @@ class TagList
     tags.each do |tag|
       toinc["tags.#{tag.gsub('.', '%dot%')}"] = 1
     end
-    self.collection.update({:group_id => group_id}, {:$inc => toinc}, {:upsert => true})
+    self.collection.update({:group_id => group_id}, {:$inc => toinc})
   end
 
   def add_tags(*tags)

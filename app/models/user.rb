@@ -147,8 +147,7 @@ class User
       t = t.split(",").join(" ").split(" ")
     end
     self.collection.update({:_id => self._id, "membership_list.#{group.id}.preferred_tags" =>  {:$nin => t}},
-                    {:$pushAll => {"membership_list.#{group.id}.preferred_tags" => t}},
-                    {:upsert => true})
+                    {:$pushAll => {"membership_list.#{group.id}.preferred_tags" => t}})
   end
 
   def remove_preferred_tags(t, group)
@@ -415,9 +414,7 @@ Time.zone.now ? 1 : 0)
   end
 
   def viewed_on!(group)
-    self.collection.update({:_id => self._id},
-                           {:$inc => {"membership_list.#{group.id}.views_count" => 1.0}},
-                            :upsert => true)
+    self.increment("membership_list.#{group.id}.views_count" => 1.0)
   end
 
   def method_missing(method, *args, &block)

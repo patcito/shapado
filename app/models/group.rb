@@ -204,9 +204,7 @@ class Group
       when :answer_question
         value = 0.3
     end
-
-    self.collection.update({:_id => self._id}, {:$inc => {:activity_rate => value}},
-                                                               :upsert => true)
+    self.increment(:activity_rate => value)
   end
 
   def language=(lang)

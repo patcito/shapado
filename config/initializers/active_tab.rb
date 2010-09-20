@@ -71,9 +71,7 @@ module ActiveTab
           key = "#{params[:controller]}/#{params[:action]}"
           (session[:subtab] ||= {})[key] = subtab
           if logged_in?
-            current_user.collection.update({:_id => current_user._id},
-                                           {:$set => {"default_subtab.#{key}" => subtab}},
-                                           {:upsert => true})
+            current_user.set({"default_subtab.#{key}" => subtab})
           end
         end
       end

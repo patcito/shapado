@@ -26,14 +26,12 @@ class Comment
   validate :disallow_spam
 
   def ban
-    self.collection.update({:_id => self.id}, {:$set => {:banned => true}},
-                                               :upsert => true)
+    self.collection.update({:_id => self.id}, {:$set => {:banned => true}})
   end
 
   def self.ban(ids)
     ids.each do |id|
-      self.collection.update({:_id => id}, {:$set => {:banned => true}},
-                                                       :upsert => true)
+      self.collection.update({:_id => id}, {:$set => {:banned => true}})
     end
   end
 

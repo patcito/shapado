@@ -38,7 +38,7 @@
     -when :footer
       -AVAILABLE_LANGUAGES.sort.each do |lang|
         .group
-          = form.label "footer", "footer", :class => "label"
+          = form.label "footer", language_desc(lang), :class => "label"
           = text_area_tag "group[custom_html][footer[#{lang}]]", @group.custom_html.footer[lang], :class => "text_area"
     -when :head_tag
       .group
