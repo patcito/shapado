@@ -258,7 +258,7 @@ class QuestionsController < ApplicationController
 
     if !logged_in?
       if recaptcha_valid? && params[:user]
-        @user = User.find(:email => params[:user][:email])
+        @user = User.first(:email => params[:user][:email])
         if @user.present?
           if !@user.anonymous
             flash[:notice] = "The user is already registered, please log in"
@@ -277,7 +277,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      if (recaptcha_valid? || logged_in?) && @question.user.valid? && @question.save
+      if (recaptcha_valid? || logged_in?) && (!@question.user.anonymous || @question.user.valid?) && @question.save
         sweep_question_views
 
         @question.user.stats.add_question_tags(*@question.tags)

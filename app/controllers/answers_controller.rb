@@ -68,7 +68,7 @@ class AnswersController < ApplicationController
     @answer.user = current_user
     if !logged_in?
       if recaptcha_valid? && params[:user]
-        @user = User.find(:email => params[:user][:email])
+        @user = User.first(:email => params[:user][:email])
         if @user.present?
           if !@user.anonymous
             flash[:notice] = "The user is already registered, please log in"
@@ -87,7 +87,7 @@ class AnswersController < ApplicationController
     end
 
     respond_to do |format|
-      if (recaptcha_valid? || logged_in?) && @question && @answer.user.valid? && @answer.save
+      if (recaptcha_valid? || logged_in?) && @question && (!@answer.user.anonymous || @answer.user.valid?) && @answer.save
         after_create_answer
 
         flash[:notice] = t(:flash_notice, :scope => "answers.create")
@@ -100,10 +100,15 @@ class AnswersController < ApplicationController
                                       :locals => {:question => @question})}.to_json)
         end
       else
-        @answer.errors.add(:captcha, "is invalid") unless recaptcha_valid?
-        flash[:error] = t(:flash_error, :scope => "answers.create")
+        @answer.errors.add(:captcha, "is invalid") if !recaptcha_valid?
+
+        errors = @answer.errors
+        errors.merge!(@answer.user.errors) if @answer.user.anonymous && !@answer.user.valid?
+        puts errors.inspect
+
+        flash[:error] = errors.full_messages
         format.html{redirect_to question_path(@question)}
-        format.json { render :json => @answer.errors, :status => :unprocessable_entity }
+        format.json { render :json => errors, :status => :unprocessable_entity }
         format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
       end
     end
