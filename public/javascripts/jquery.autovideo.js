@@ -1,24 +1,24 @@
 (function($) {
   $.fn.autoVideo = function(){
       this.each(function(){
-          var isInCode = $(this).parents('code').length
+          var isInCode = $(this).parents('code').length;
           if(!isInCode){
             var url = new String($(this).attr('href'));
             var video = false;
             var playButton = '<img src="/images/play_button.png" class="play_button">';
             if (video = url.match(/http:\/\/www\.dailymotion\.com.*\/video\/(.+)_*/)){
                 var thumb = $('<div class="thumb"><img src="http://www.dailymotion.com/thumbnail/160x120/video/'+video[1]+'" class="video_thumbnail"></div>').attr({ "data-video-provider":"dailymotion", "data-videoid": video[1]}).append(playButton);
-                $(this).after(thumb)
+                $(this).after(thumb);
                 thumb.one("click", function(){showPlayer(thumb)});
                 $(this).remove();
             } else if (video = url.match(/http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?/)){
                 var thumb = $('<div class="thumb"><img src="http://i.ytimg.com/vi/'+video[2]+'/1.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"youtube", "data-videoid": video[2]}).append(playButton);
-          $(this).after(thumb)
+          $(this).after(thumb);
                 thumb.one("click", function(){showPlayer(thumb)});
                 $(this).remove();
             } else if (video = url.match(/^(https?:\/\/[^\/]*metacafe.com\/)watch\/([\w-]+)\/([^\/]*)/i)){
                 var thumb = $('<div class="thumb"><img src="http://www.metacafe.com/thumb/'+video[2]+'.jpg" class="video_thumbnail"></div>').attr({ "data-video-provider":"metacafe", "data-videoid": video[2]+'/'+video[3]}).append(playButton);
-                $(this).after(thumb)
+                $(this).after(thumb);
                 thumb.one("click", function(){showPlayer(thumb)});
                 $(this).remove();
             } else if (video = url.match(/http:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)((\?|#)\S+)?/)){

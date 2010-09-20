@@ -10,10 +10,9 @@ require 'action_controller/test_process'
 ActionController::Base.logger = nil
 ActionController::Routing::Routes.reload rescue nil
 
-$asset_packages_yml = YAML.load_file("#{RAILS_ROOT}/vendor/plugins/asset_packager/test/asset_packages.yml")
-$asset_base_path = "#{RAILS_ROOT}/vendor/plugins/asset_packager/test/assets"
-
 class AssetPackageHelperProductionTest < Test::Unit::TestCase
+  include ActionController::Assertions::DomAssertions
+  include ActionController::TestCase::Assertions
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::AssetTagHelper
   include Synthesis::AssetPackageHelper
@@ -21,6 +20,9 @@ class AssetPackageHelperProductionTest < Test::Unit::TestCase
   cattr_accessor :packages_built
 
   def setup
+    Synthesis::AssetPackage.asset_base_path    = "#{Rails.root}/vendor/plugins/asset_packager/test/assets"
+    Synthesis::AssetPackage.asset_packages_yml = YAML.load_file("#{Rails.root}/vendor/plugins/asset_packager/test/asset_packages.yml")
+
     Synthesis::AssetPackage.any_instance.stubs(:log)
     self.stubs(:should_merge?).returns(true)
 

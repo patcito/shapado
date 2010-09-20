@@ -31,6 +31,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Ruby 1.9 Compatibility Fix - the below isAlphanum uses Fixnum#ord to be compatible with Ruby 1.9 and 1.8.7
+# Fixnum#ord is not found by default in 1.8.6, so monkey patch it in:
+if RUBY_VERSION == '1.8.6'
+  class Fixnum; def ord; return self; end; end
+end
+
 EOF = -1
 $theA = ""
 $theB = ""
@@ -41,7 +47,7 @@ def isAlphanum(c)
    return false if !c || c == EOF
    return ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') ||
            (c >= 'A' && c <= 'Z') || c == '_' || c == '$' ||
-           c == '\\' || c[0] > 126)
+           c == '\\' || c[0].ord > 126)
 end
 
 # get -- return the next character from stdin. Watch out for lookahead. If
