@@ -131,7 +131,7 @@ class User
       conditions["membership_list.#{group_id}"] = {:$exists => true}
     end
 
-    u = User.find(user_ids, conditions.merge(:select => [:email, :login, :name, :language]))
+    u = User.all(conditions.merge(:_id => user_ids, :select => [:email, :login, :name, :language]))
     u ? u : []
   end
 

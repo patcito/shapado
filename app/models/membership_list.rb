@@ -24,6 +24,6 @@ class MembershipList < Hash
   end
 
   def groups(options = {})
-    Group.find(self.keys, options)
+    Group.all(options.merge(:_id => self.keys))
   end
 end

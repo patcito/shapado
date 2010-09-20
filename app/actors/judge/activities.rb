@@ -2,8 +2,8 @@ module JudgeActions
   module Activities
     def on_activity(payload)
       group_id, user_id = payload
-      user = User.find(user_id, :select => [:_id])
-      group = Group.find(group_id, :select => [:_id])
+      user = User.first(:_id => user_id, :select => [:_id])
+      group = Group.first(:_id => group_id, :select => [:_id])
 
       days = user.config_for(group).activity_days
       if days > 100
