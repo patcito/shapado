@@ -177,7 +177,10 @@ module AuthenticatedSystem
       name = "#{registration['http://axschema.org/namePerson/first']} #{registration['http://axschema.org/namePerson/last']}"
     end
     if language.to_s.blank? && registration['http://axschema.org/pref/language']
-      language = registration['http://axschema.org/pref/language']
+      language = registration['http://axschema.org/pref/language'][0]
+    end
+    if !AVAILABLE_LOCALES.include? language.downcase!
+      language = 'en'
     end
     if country_name.to_s.blank? && registration['http://axschema.org/contact/country/home']
       country_name = registration['http://axschema.org/contact/country/home']
