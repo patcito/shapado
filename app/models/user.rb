@@ -67,6 +67,7 @@ class User
 
   before_create :create_friend_list
   before_create :generate_uuid
+  after_create :update_anonymous_user
 
   timestamps!
 
@@ -480,6 +481,13 @@ Time.zone.now ? 1 : 0)
     self.feed_token = UUIDTools::UUID.random_create.hexdigest
   end
 
+  def merge_user(user)
+    [Question, Answer, Comment, Vote, Badge, UserStat].each do |m|
+      m.set({:user_id => user.id}, {:user_id => self.id})
+    end
+    user
+  end
+
   protected
   def update_languages
     self.preferred_languages = self.preferred_languages.map { |e| e.split("-").first }
@@ -497,6 +505,19 @@ Time.zone.now ? 1 : 0)
     end
     if !self.notification_opts
       self.notification_opts = NotificationConfig.new
+    end
+  end
+
+  def update_anonymous_user
+    return if self.anonymous
+
+    user = User.first(:email => self.email, :anonymous => true)
+    if user.present?
+      Rails.logger.info "Merging #{self.email}(#{self.id}) into #{user.email}(#{user.id})"
+      merge_user(user)
+      self.membership_list = user.membership_list
+
+      user.destroy
     end
   end
 end
