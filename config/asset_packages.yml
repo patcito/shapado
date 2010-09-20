@@ -27,8 +27,8 @@ javascripts:
   - modules/editor
 
 - show:
-  - modules/single/question
   - jquery.autovideo
+  - modules/single/question
   - modules/show_question
 
 - login:
