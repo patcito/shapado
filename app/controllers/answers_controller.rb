@@ -87,7 +87,7 @@ class AnswersController < ApplicationController
     end
 
     respond_to do |format|
-      if recaptcha_valid? && @question && @answer.user.valid? && @answer.save
+      if (recaptcha_valid? || logged_in?) && @question && @answer.user.valid? && @answer.save
         after_create_answer
 
         flash[:notice] = t(:flash_notice, :scope => "answers.create")
