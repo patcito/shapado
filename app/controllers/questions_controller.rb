@@ -105,7 +105,7 @@ class QuestionsController < ApplicationController
       @question.group_id = current_group.id
     end
 
-    @question.tags += @question.title.downcase.split(",").join(" ").split(" ")
+    @question.tags += @question.title.downcase.split(",").join(" ").split(" ") if @question.title
 
     @questions = Question.related_questions(@question, :page => params[:page],
                                                        :per_page => params[:per_page],

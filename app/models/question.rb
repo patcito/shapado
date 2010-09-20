@@ -10,7 +10,7 @@ class Question
   ensure_index :language
 
   key :_id, String
-  key :title, String, :required => true
+  key :title, String, :default => "", :required => true
   key :body, String
   slug_key :title, :unique => true, :min_length => 8
   key :slugs, Array, :index => true
