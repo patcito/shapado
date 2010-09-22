@@ -195,7 +195,8 @@ function sortValues(selectID, child, keepers, method, arg){
   $(selectID).empty().html(sortedVals);
   if(keepers)
     $(selectID).prepend(any);
-  //updateValueList();
+  // needed for firefox:
+  $(selectID).val($(selectID+' '+child+'[selected=selected]').val());
 };
 
 function highlightEffect(object) {
