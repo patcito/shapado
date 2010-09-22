@@ -1,4 +1,7 @@
 en:
+  pagination:
+    previous: "&laquo; Previous"
+    next: "Next &raquo;"
   scaffold:
     sure: Are you sure you want to delete this %{model} ?
     show: Show
