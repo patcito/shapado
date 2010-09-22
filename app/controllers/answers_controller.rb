@@ -68,11 +68,13 @@ class AnswersController < ApplicationController
     @answer.user = current_user
     if !logged_in?
       if recaptcha_valid? && params[:user]
-        @user = User.find(:email => params[:user][:email])
+        @user = User.first(:email => params[:user][:email])
         if @user.present?
           if !@user.anonymous
             flash[:notice] = "The user is already registered, please log in"
             return create_draft!
+          else
+            @answer.user = @user
           end
         else
           @user = User.new(:anonymous => true, :login => "Anonymous")
@@ -87,7 +89,7 @@ class AnswersController < ApplicationController
     end
 
     respond_to do |format|
-      if (recaptcha_valid? || logged_in?) && @question && @answer.user.valid? && @answer.save
+      if (logged_in? || (recaptcha_valid? && @answer.user.valid?)) && @answer.save
         after_create_answer
 
         flash[:notice] = t(:flash_notice, :scope => "answers.create")
@@ -100,11 +102,19 @@ class AnswersController < ApplicationController
                                       :locals => {:question => @question})}.to_json)
         end
       else
-        @answer.errors.add(:captcha, "is invalid") unless recaptcha_valid?
-        flash[:error] = t(:flash_error, :scope => "answers.create")
+        @answer.errors.add(:captcha, "is invalid") if !logged_in? && !recaptcha_valid?
+
+        puts "RECAPTCHA VALID: #{recaptcha_valid?}"
+        puts "User VALID: #{@answer.user.valid?}"
+        puts "Answer VALID: #{@answer.valid?}"
+        errors = @answer.errors
+        errors.merge!(@answer.user.errors) if @answer.user.anonymous && !@answer.user.valid?
+        puts errors.full_messages
+
+        flash.now[:error] = errors.full_messages
         format.html{redirect_to question_path(@question)}
-        format.json { render :json => @answer.errors, :status => :unprocessable_entity }
-        format.js {render :json => {:success => false, :message => flash[:error] }.to_json }
+        format.json { render :json => errors, :status => :unprocessable_entity }
+        format.js {render :json => {:success => false, :message => flash.now[:error] }.to_json }
       end
     end
   end
@@ -217,7 +227,7 @@ class AnswersController < ApplicationController
                     :_id => {:$ne => @answer.user.id},
                     :select => ["email"]}
 
-    users = User.find(@question.watchers, search_opts)
+    users = User.all(search_opts.merge(:_id => @question.watchers))
     users.push(@question.user) if !@question.user.nil? && @question.user != @answer.user
     followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
 

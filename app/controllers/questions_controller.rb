@@ -258,17 +258,19 @@ class QuestionsController < ApplicationController
 
     if !logged_in?
       if recaptcha_valid? && params[:user]
-        @user = User.find(:email => params[:user][:email])
+        @user = User.first(:email => params[:user][:email])
         if @user.present?
           if !@user.anonymous
             flash[:notice] = "The user is already registered, please log in"
             return create_draft!
+          else
+            @question.user = @user
           end
         else
           @user = User.new(:anonymous => true, :login => "Anonymous")
           @user.safe_update(%w[name email website], params[:user])
           @user.login = @user.name if @user.name.present?
-          @user.save
+          @user.save!
           @question.user = @user
         end
       elsif !AppConfig.recaptcha["activate"]
@@ -277,7 +279,7 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      if (recaptcha_valid? || logged_in?) && @question.user.valid? && @question.save
+      if (logged_in? ||  (@question.user.valid? && recaptcha_valid?)) && @question.save
         sweep_question_views
 
         @question.user.stats.add_question_tags(*@question.tags)

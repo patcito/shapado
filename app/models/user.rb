@@ -84,7 +84,7 @@ class User
   validates_length_of       :name,     :maximum => 100
 
   validates_presence_of     :email,    :if => lambda { |e| !e.openid_login? && !e.twitter_login? }
-  validates_uniqueness_of   :email,    :scope => [:anonymous], :if => lambda { |e| !e.openid_login? && !e.twitter_login? && !e.anonymous }
+  validates_uniqueness_of   :email,    :if => lambda { |e| e.anonymous || (!e.openid_login? && !e.twitter_login?) }
   validates_length_of       :email,    :within => 6..100, :allow_nil => true, :if => lambda { |e| !e.email.blank? }
   validates_format_of       :email,    :with => Devise::EMAIL_REGEX, :allow_blank => true
 
@@ -131,7 +131,7 @@ class User
       conditions["membership_list.#{group_id}"] = {:$exists => true}
     end
 
-    u = User.find(user_ids, conditions.merge(:select => [:email, :login, :name, :language]))
+    u = User.all(conditions.merge(:_id => user_ids, :select => [:email, :login, :name, :language]))
     u ? u : []
   end
 
