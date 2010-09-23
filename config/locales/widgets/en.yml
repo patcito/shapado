@@ -24,3 +24,4 @@ en:
     pages:
       title: Wiki pages
       description: "This widget displays the list of wiki pages"
+      new: Add new page
