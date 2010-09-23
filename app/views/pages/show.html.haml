@@ -24,6 +24,6 @@
 .markdown
   -if safe_page?(@page)
     -body = current_group.wysiwyg_editor ? CGI.unescapeHTML(@page.body) : @page.body
-    = RDiscount.new(render_page_links(body)).to_html
+    = markdown(body, :raw => true)
   -else
     = markdown(@page.body)
