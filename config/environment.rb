@@ -21,15 +21,22 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "mongo", :version => "1.0.8"
-  config.gem "bson", :version => "1.0.7", :lib => "bson"
-  config.gem "rdiscount", :version => "1.6.5"
+  config.gem "mongo", :version => "1.0.9"
+  config.gem "bson", :version => "1.0.9", :lib => "bson"
+
+  if RUBY_PLATFORM !~ /mswin|mingw/
+    config.gem "rdiscount", :version => "1.6.5"
+    config.gem "ruby-stemmer", :version => ">=0.8.2", :lib => "lingua/stemmer"
+    config.gem "sanitize", :version => "1.2.1"
+  else
+    config.gem "maruku", :version => "0.6.0"
+  end
+
   config.gem "jnunemaker-validatable", :version => "1.8.4", :lib => "validatable"
   config.gem "mongo_mapper", :version => "0.8.3", :source => "http://gemcutter.org"
   config.gem "compass", :version => "0.10.5", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.5.5", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
-  config.gem "ruby-stemmer", :version => ">=0.8.2", :lib => "lingua/stemmer"
   config.gem "mongomapper_ext", :version => "0.4.0", :source => "http://gemcutter.org"
   config.gem "geoip"
   config.gem "whatlanguage", :version => "1.0.0"
@@ -42,7 +49,6 @@ Rails::Initializer.run do |config|
   config.gem "twitter-text", :version => "1.1.1"
   config.gem "oauth2", :version => "0.0.8"
   config.gem "twitter_oauth", :version => "0.4.3"
-  config.gem "sanitize", :version => "1.2.1"
   config.gem "rack-recaptcha", :lib => "rack/recaptcha", :version => "0.2.2"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

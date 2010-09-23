@@ -81,7 +81,7 @@ class Answer < Comment
   end
 
   def to_html
-    Maruku.new(self.body).to_html
+    RDiscount.new(self.body).to_html
   end
 
   def disable_limits?
