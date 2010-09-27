@@ -98,7 +98,7 @@ class TwitterBot
     end
 
     group.set({:last_twitter_question_at => last_date})
-    group.last_twitter_question_at = last_date
+    group[:last_twitter_question_at] = last_date
   end
 
   private
