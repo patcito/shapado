@@ -68,7 +68,8 @@ class TwitterBot
       if user.present?
         username = user.login
       else
-        user = nil
+        user = User.new(:anonymous => true, :login => "#{username}_twitter", :twitter_login => username, :from_twitter => true)
+        user.save(:validate => false)
       end
 
       title = status_text.gsub(/^@#{share.twitter_user}\s+/, "")
@@ -98,7 +99,7 @@ class TwitterBot
     end
 
     group.set({:last_twitter_question_at => last_date})
-    group.last_twitter_question_at = last_date
+    group[:last_twitter_question_at] = last_date
   end
 
   private

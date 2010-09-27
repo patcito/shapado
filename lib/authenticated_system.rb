@@ -179,7 +179,7 @@ module AuthenticatedSystem
     if language.to_s.blank? && registration['http://axschema.org/pref/language']
       language = registration['http://axschema.org/pref/language'][0]
     end
-    if !AVAILABLE_LOCALES.include? language.downcase!
+    if !AVAILABLE_LOCALES.include? language.to_s.downcase!
       language = 'en'
     end
     if country_name.to_s.blank? && registration['http://axschema.org/contact/country/home']
