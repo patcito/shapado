@@ -1,51 +1,52 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Crazymadlover
 # Author: Patcito
-es-419: 
-  layouts: 
-    application: 
-      ask_question: pregunte
-      badges: insignias
-      forgot: la olvido?
-      home: pagina principal
-      languages: idiomas
-      log_in: acceder
-      logged: conectado como %{login}
-      logout: salir
-      manage_ads: propagandas
-      moderate: moderar
+es-419:
+  layouts:
+    application:
+      ask_question: Pregunte
+      badges: Insignias
+      forgot: La olvido?
+      home: Pagina principal
+      languages: Idiomas
+      log_in: Acceder
+      logged: Conectado como %{login}
+      logout: Salir
+      manage_ads: Gestionar propagandas
+      moderate: Moderar
       now: ya!
-      openid: 
-        explaination: "si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
-      pages: paginas
-      questions: preguntas
-      questions_in: preguntas en
+      openid:
+        explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
+      pages: Paginas
+      questions: Preguntas
+      questions_in: Preguntas en
       questions_tagged: etiquetadas con
-      search: buscar
-      settings: configuración
-      signup: registrarse
-      subscribe: subscribirse
-      tags: etiquetas
-      title: preguntas & respuestas
-      unanswered: sin contestar
-      users: usuarios
-      welcome_from: bienvenido! puedes
-    manage: 
-      actions: actions
-      announcements: anuncios
-      constrains: restricciones
-      content: contenido
-      dashboard: dashboard
-      domain: dominio
-      general: general
-      members: miembros
-      pages: paginas
-      properties: properties
-      reputation: reputación
-      rewards: premios
-      stats: stats
-      theme: tema
-      widgets: widgets
-    notifications: 
-      message: Si ya no quieres recibir notificaciones automáticas de %{domain}, cambie sus preferencias en las opciones de notificaciones.
+      search: Buscar
+      settings: Configuración
+      signup: Registrarse
+      subscribe: Subscribirse
+      tags: Etiquetas
+      title: Preguntas & respuestas
+      unanswered: Sin contestar
+      users: Usuarios
+      welcome_from: Bienvenido! puedes
+    manage:
+      actions: Acciones
+      announcements: Anuncios
+      constrains: Restricciones
+      content: Contenido
+      dashboard: Panel de control
+      domain: Dominio
+      general: General
+      members: Miembros
+      pages: Paginas
+      properties: Propiedades
+      reputation: Reputación
+      rewards: Premios
+      stats: Estadísticas
+      theme: Tema
+      widgets: Widgets
+    notifications:
+      message: Si no deseas recibir notificaciones automáticas de %{domain} otra vez, cambia tus preferencias en la pantalla de notificaciones.

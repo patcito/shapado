@@ -2,72 +2,73 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Diego Grez
 # Author: Patcito
-es-419: 
-  activerecord: 
-    attributes: 
-      group: 
-        default_tags: etiquetas por omision
-        description: descripción
+es-419:
+  activerecord:
+    attributes:
+      group:
+        default_tags: Etiquetas por omision
+        description: Descripción
         domain: dominio
         fb_button: Activar el boton Like de Facebook (no muy amigable para la privacidad)
-        forum: permitir más de una respuesta por usuario
-        group_created_by: created by
-        language: idioma
-        legend: leyenda
-        logo: logo
-        may_contain_adult_content: este sitio podria tener contenido para adultos
-        name: nombre
-        openid_only: solo las personas que usan openid pueden entrar a este sitio
-        owner: esta grupo fue creado por %{login}
-        registered_only: solo las personas registradas pueden entrar a este sitio
-        state: estado
-        subdomain: url
-        wysiwyg_editor: habilitar un editor mas amigable para el usuario
-    models: 
-      default_tags_message: no se puede tener mas de 10 tags por defecto.
-      group: grupo
-      groups: grupos
-  groups: 
-    create: 
+        forum: Permitir más de una respuesta por usuario
+        group_created_by: creado por
+        language: Idioma
+        legend: Leyenda
+        logo: Logo
+        may_contain_adult_content: Este sitio podria tener contenido para adultos
+        name: Nombre
+        openid_only: Solo las personas que usan openid pueden entrar a este sitio
+        owner: Este grupo fue creado por %{login}
+        registered_only: Solo las personas registradas pueden entrar a este sitio
+        state: Estado
+        subdomain: URL
+        wysiwyg_editor: Habilitar un editor de texto mas amigable para el usuario
+    models:
+      default_tags_message: No se puede tener mas de 10 tags por defecto.
+      group: Grupo
+      groups: Grupos
+  groups:
+    create:
       flash_notice: Tu grupo ah sido creado exitosamente, ahora puedes empezar a configurarlo.
-    form: 
+    form:
       access: Configuración de Acceso
       analytics_engine: Motor de análisis
-      analytics_legend: El grupo podra utilizar su propio codigo de seguimiento
-      any_language: cualquiera
+      analytics_legend: El grupo podrá utilizar su propio código de seguimiento
+      any_language: Cualquiera
       custom_analytics: Permitir análisis personalizados
       custom_html: Permitir HTML personalizado
       custom_js: Permitir javascript personalizado
       default_tags_legend: separate tags by commas. only 10 default tags allowed.
-      description_legend: tiene 4000 caracteres para describir el grupo.
+      description_legend: Tiene 400 caracteres para describir el grupo.
       isolate_group: Aislar el grupo de otros
-      legend_legend: esto será usado en el titulo de la web, tienes 40 caracteres
-      logo_legend: you can upload the group logo. the maximum file size is 2mb.
+      legend_legend: Esto será usado en el titulo de la web, tienes 40 caracteres.
+      logo_legend: Puedes subir el logo del grupo. Lo máximo es para el tamaño del archivo es de 2mb.
       members_only: Solamente los miembros del grupo serán capaces de acceder a este grupo
       website_analytics_id: ID de análisis de sitio web
-    group: 
-      about: acerca de
-      accept_group: aceptar este grupo
-      allow_ads: permitir propaganda
-      close: cerrar
-      close_group: cerrar este grupo
-      disallow_ads: prohibir propaganda
-    index: 
-      actives: activos
-      filter: buscar grupos
-      most_active: más activos
-      name: nombre
-      pendings: pendientes
-      request_group: pedir un nuevo grupo
-      title: grupos
-    new: 
-      title: crear su grupo
-    show: 
-      accept_group: aceptar este grupo
-      accept_group_with_custom_ads: aceptar grupo y permitir anuncios personalizados
-      close_group: cerrar este grupo
-      group_awaiting_acceptance: este grupo esta pendiente de la aceptación de un moderador.
-      group_closed: este grupo ha sido cerrado.
-      title: sobre %{name}
-      visit_group: visitar este grupo
+    group:
+      about: Acerca de
+      accept_group: Aceptar este grupo
+      allow_ads: Permitir propaganda
+      close: Cerrar
+      close_group: Cerrar este grupo
+      disallow_ads: Prohibir propaganda
+    index:
+      actives: Activos
+      filter: Buscar grupos
+      most_active: Más activos
+      name: Nombre
+      pendings: Pendientes
+      request_group: Pedir un nuevo grupo
+      title: Grupos
+    new:
+      title: Crear su grupo
+    show:
+      accept_group: Aceptar este grupo
+      accept_group_with_custom_ads: Aceptar grupo y permitir anuncios personalizados
+      close_group: Cerrar este grupo
+      group_awaiting_acceptance: Este grupo esta pendiente de la aceptación de un moderador.
+      group_closed: Este grupo ha sido cerrado.
+      title: Sobre %{name}
+      visit_group: Visitar este grupo

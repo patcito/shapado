@@ -2,88 +2,92 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
+# Author: Danke7
 # Author: Patcito
-es-419: 
-  activerecord: 
-    attributes: 
-      user: 
+es-419:
+  activerecord:
+    attributes:
+      user:
         activated_at: activado en
-        activation_code: código de activación
+        activation_code: Código de activación
         age: Edad
-        asked_by: asked by
-        avatar: imagen del perfil
+        asked_by: preguntado por
+        avatar: Imagen del perfil
         birthday: Fecha de Cumpleaños
         created_at: registrado
-        current_password: contraseña actual
-        email: correo electrónico
-        fullname: nombre completo
+        current_password: Contraseña actual
+        email: Correo electrónico
+        fullname: Nombre completo
         hide_country: No mostrar mi pais
-        language: idioma
-        language_filter: filtro por idioma
+        language: Idioma
+        language_filter: Filtro por idioma
         last_logged_at: visto
-        login: nombre de usuario
-        name: nombre real
-        password: contraseña
-        password_confirmation: confirmación de contraseña
-        preferred_languages: escoja los idiomas que conozca
-        preferred_tags: etiquetas preferidas
-        reputation: reputación
-        timezone: zona horaria
+        login: Nombre de usuario
+        name: Nombre real
+        password: Contraseña
+        password_confirmation: Confirmación de contraseña
+        preferred_languages: "Quieres leer las preguntas en los siguientes idiomas:"
+        preferred_tags: Etiquetas preferidas
+        reputation: Reputación
+        timezone: Zona horaria
         updated_at: actualizado en
         website: Sitio Web
-    models: 
-      user: usuario
-      users: usuarios
-  users: 
-    actions: 
-      edit_others_posts: editar preguntas o respuestas de otros usuarios
-      edit_wiki_post: editar wikis
-      flag: reportar como abuso
-      retag_others_questions: cambiar las etiquetas de las preguntas de otros usuarios
-      vote_down: votar negativo
-      vote_to_close_any_question: request closing any question
-      vote_to_close_own_question: request closing own question
-      vote_up: votar positivo
-    create: 
-      flash_error: no hemos podido crear tu cuenta, lo sentimos. por favor intentalo otra vez, o contacta a un admin (el enlace esta arriba).
-      flash_notice: gracias por registrarse!
-    edit: 
+    models:
+      user: Usuario
+      users: Usuarios
+  users:
+    actions:
+      edit_others_posts: Editar preguntas o respuestas de otros usuarios
+      edit_wiki_post: Editar wikis
+      flag: Reportar como abuso
+      retag_others_questions: Cambiar las etiquetas de las preguntas de otros usuarios
+      vote_down: Votar negativo
+      vote_to_close_any_question: " Solicitar el cierre de cualquiera pregunta"
+      vote_to_close_own_question: Pedir cerrar su propia pregunta
+      vote_up: Votar positivo
+    anonymous_form:
+      never_shown: Nunca mostrado
+    create:
+      flash_error: No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un administrador (el enlace esta arriba).
+      flash_notice: ¡Gracias por registrarse!
+    edit:
       enable_twitter: Habilita tus cuentas twitter y facebook
-      submit: guardar
-      title: configuración
-    follow: 
+      submit: Guardar
+      title: Configuración
+    follow:
       flash_notice: El usuario %{user} fue añadido a su lista de amigos
-    form: 
-      activities_notification: recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
-      avatar_tip: cambia tu imagen del perfil usando gravatar
-      give_advice_notification: obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
-      information: información
-      new_answer_notification: obtener notificaciones via correo electrónico de nuevas respuestas
-      notifications: notificaciones
-      reports_notification: recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
+    form:
+      activities_notification: Recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
+      avatar_tip: Cambia tu imagen del perfil usando gravatar
+      give_advice_notification: Obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
+      information: Información
+      language: Idioma usado para la interfaz de la pagina
+      new_answer_notification: Obtener notificaciones via correo electrónico de nuevas respuestas
+      notifications: Notificaciones
+      reports_notification: Recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
       show_more_lang: Mostrar más idiomas
-    index: 
-      empty: este grupo no tiene miembros, participe para unirse a este grupo.
+    index:
+      empty: Este grupo no tiene miembros, participe para unirse a este grupo.
       filter: Busca usuarios
-      name: por nombre de usuario
-      name_tooltip: usuarios ordenados alfabéticamente
-      newest: recientes
-      newest_tooltip: usuarios que se acaban de unir
-      oldest: antiguos
-      oldest_tooltip: usuarios que se unieron primero
-      reputation: reputación
-      reputation_tooltip: usuarios ordenados por reputación
-      title: todos los usuarios
-    messages: 
-      errors: 
-        reputation_needed: necesitas una reputación de %{min_reputation} para %{action}
-    new: 
-      submit: registrar
-      title: registrar un nuevo usuario
-    show: 
-      follow: seguir
-      title: Usuario %{user}
-      unfollow: dejar de seguir
+      name: Por nombre de usuario
+      name_tooltip: Usuarios ordenados alfabéticamente
+      newest: Recientes
+      newest_tooltip: Usuarios que se acaban de unir
+      oldest: Antiguos
+      oldest_tooltip: Usuarios que se unieron primero
+      reputation: Reputación
+      reputation_tooltip: Usuarios ordenados por reputación
+      title: Todos los usuarios
+    messages:
+      errors:
+        reputation_needed: Necesitas una reputación de %{min_reputation} para %{action}
+    new:
+      submit: Registrarse
+      title: Registrar un nuevo usuario
+    show:
+      follow: Seguir
+      title: Usuario {user}
+      unfollow: Dejar de seguir
       views: vistas
-    unfollow: 
+    unfollow:
       flash_notice: El usuario %{user} fue removido de su lista de amigos

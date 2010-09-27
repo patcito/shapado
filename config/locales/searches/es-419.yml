@@ -1,13 +1,14 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  searches: 
-    form: 
-      clear: limpiar
+# Author: Patcito
+es-419:
+  searches:
+    form:
+      clear: Limpiar
       search_box_title: Comprueba si tu pregunta ya ha sido hecha
       tags_tip: User [etiqueta] para especificar etiquetas.
-    index: 
-      empty: su búsqueda no produjo ningún resultados.
-      search_text: questions containing
+    index:
+      empty: Tu búsqueda no produjo ningún resultados.
+      search_text: Preguntas conteniendo
       tags: con estas etiquetas

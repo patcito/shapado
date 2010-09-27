@@ -2,21 +2,22 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Crazymadlover
-es-419: 
-  sessions: 
-    create: 
-      flash_error: no pudo ingresar como '%{login}'
-      flash_notice: ingreso exitoso
-    destroy: 
-      flash_notice: usted ha cerrado la sesión.
-    new: 
-      log_in: entrar
-      not_registered: todavía no esta registrado?
-      registered: ¿ya esta registrado?
+# Author: Patcito
+es-419:
+  sessions:
+    create:
+      flash_error: No pudo ingresar como '%{login}'
+      flash_notice: Ingreso exitoso
+    destroy:
+      flash_notice: Has cerrado la sesión.
+    new:
+      log_in: Ingresar
+      not_registered: ¿Todavía no estas registrado?
+      registered: ¿Ya estas registrado?
       remember_me: Recordarme
-      sign_in: Iniciar sesión
-      signup: registrarse
-      with_authentication: entra con nuestro propio sistema de usuarios
-      with_facebook: entra usando facebook
-      with_openid: entra usando openid
-      with_twitter: entra usando twitter
+      sign_in: Ingresar
+      signup: Registrarse
+      with_authentication: Entra con nuestro propio sistema de usuarios
+      with_facebook: Ingresa usando facebook
+      with_openid: Ingresa usando OpenID
+      with_twitter: Ingresa usando Twitter

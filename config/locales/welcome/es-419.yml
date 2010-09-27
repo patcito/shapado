@@ -2,58 +2,58 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419: 
-  welcome: 
-    confirm_age: 
+es-419:
+  welcome:
+    confirm_age:
       notice: Usted solo deberia entrar a esta pagina si usted tiene 18 años o más de edad, o al menos la mayoria de edad en el lugar donde usted reside o desde donde entra a esta pagina.
       over_18: Soy mayor de edad
       under_18: Soy menor de edad
       warning: "ATENCION: Esta pagina puede contener material explicito para adultos."
-    facts: 
-      features: 
-        cols: 
+    facts:
+      features:
+        cols:
           adaptable: adaptable
           foss: libre/open source
           joel: voy a hacer joel más rico?
           multilanguage: multilenguas
           multitopic: multi-topic
-        shapado: 
+        shapado:
           adaptable: si!
           foss: si!
           joel: no :/
           multilanguage: si!
           multitopic: si!
-        stackexchange: 
+        stackexchange:
           adaptable: 'no'
           foss: 'no'
           joel: si!
           multilanguage: 'no'
           multitopic: 'no'
-      prices: 
-        cols: 
+      prices:
+        cols:
           onsite: en su sitio
-        shapado: 
+        shapado:
           large: mas o menos $500
           medium: <=== igual
           onsite: pues $0 en tu propio servidor
           small: mas o menos $50 - $100/mes en cualquier provedor de hosting
-        stackexchange: 
+        stackexchange:
           large: $1299/mes
           medium: $999/mes
           onsite: $2500/mes
           small: $129/mes
-    feedback: 
-      captcha_error: por favor, resuelve una simple operación matemática
-      email_description: por favor, provee tu correo electrónico para poder responder tu inquietud
-      feedback_description: descripción
-      feedback_title: titulo
-      title: envía tu sugerencia
-    index: 
-      active: activas
+    feedback:
+      captcha_error: Por favor, resuelve una simple operación matemática
+      email_description: Por favor, provee tu correo electrónico para poder responder tu inquietud
+      feedback_description: Descripción
+      feedback_title: Titulo
+      title: Envía tu sugerencia
+    index:
+      active: Activas
       browse_all_or_by_tags: Descubre la %{full_list_of_questions} o %{browse_by_tags}
-      browse_by_tags: naviga por tag
+      browse_by_tags: navega por tags
       create_own_site: Crea gratuitamente tu propio sitio en 8 segundos
-      full_list_of_questions: lista completa de preguntas
-      hot: calientes
-      quick_question: haz tu pregunta, nosotros buscaremos quien la responda
-      recent_questions: preguntas recientes
+      full_list_of_questions: Lista completa de preguntas
+      hot: Calientes
+      quick_question: Haz tu pregunta, nosotros buscaremos quien la responda
+      recent_questions: Preguntas recientes

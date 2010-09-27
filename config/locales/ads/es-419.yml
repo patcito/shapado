@@ -1,15 +1,17 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  ads: 
-    ad_links: add a new %{type} ad
-    create: 
-      success: ad was successfully created.
-    index: 
-      add_adbard: add a new adbard ad
-      add_adsense: add a new google adsense ad
-      title: ads
-    name: "name:"
-    position: "position:"
-    title: add a new %{type} ad
+# Author: Crazymadlover
+# Author: McDutchie
+es-419:
+  ads:
+    ad_links: Agregar un nuevo anuncio %{type}
+    create:
+      success: Anuncio fue creado exitosamente.
+    index:
+      add_adbard: Agregar un nuevo anuncio adbard
+      add_adsense: Agregar un nuevo anuncio google adsense
+      title: Anuncios
+    name: "Nombre:"
+    position: "Posición:"
+    title: Agregar un nuevo anuncio %{type}

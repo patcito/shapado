@@ -1,15 +1,16 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  activerecord: 
-    attributes: 
-      member: 
-        role: rol
-  members: 
-    form: 
-      login_tip: busca cuando usted digita
-    index: 
-      manage_members_title: administrar membresías
-      title: miembros del group %{name}
-      title_isolate: miembros de %{name}
+# Author: Patcito
+es-419:
+  activerecord:
+    attributes:
+      member:
+        role: Rol
+  members:
+    form:
+      login_tip: Busca cuando digitas
+    index:
+      manage_members_title: Administrar membresías
+      title: Miembros del grupo %{name}
+      title_isolate: Miembros de %{name}

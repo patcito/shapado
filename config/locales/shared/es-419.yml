@@ -1,11 +1,12 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  shared: 
-    current_tags: 
-      title: etiquetas seleccionadas
-    topbar: 
-      admin: administrar
-      logged_as: conectado como %{login}
-      user_page: mi página
+# Author: Patcito
+es-419:
+  shared:
+    current_tags:
+      title: Etiquetas seleccionadas
+    topbar:
+      admin: Administrar
+      logged_as: Conectado como %{login}
+      user_page: Mi página

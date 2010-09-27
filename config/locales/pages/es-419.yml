@@ -1,33 +1,34 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  activerecord: 
-    attributes: 
-      page: 
-        css: hojas de estilo
-        js: javascript
-    models: 
-      page: página
-      pages: páginas
-  pages: 
-    actions: 
+# Author: Patcito
+es-419:
+  activerecord:
+    attributes:
+      page:
+        css: Hojas de estilo
+        js: Javascript
+    models:
+      page: Página
+      pages: Páginas
+  pages:
+    actions:
       create_page: Crear una nueva página
       edit_page: Editar página
       title: Acciones
-    create: 
+    create:
       success: La página ha sido creada con exito.
-    edit: 
+    edit:
       title: Editando página
-    form: 
-      language_tip: idioma de la página
+    form:
+      language_tip: Idioma de la página
       title_tip: "Titulo de la página, utiliza eso para hacer una referencia a esta página. Por ejemplo: [[FAQ|leer este faq]]"
-    index: 
-      create_page: crear una nueva página
+    index:
+      create_page: Crear una nueva página
       title: Lista de páginas
-      written_in: escrita en %{language}
-    new: 
-      title: nueva página
-    title: fixme
-    update: 
+      written_in: Escrita en %{language}
+    new:
+      title: Nueva página
+    title: Arréglame
+    update:
       success: La página ha sido actualizada con exito.

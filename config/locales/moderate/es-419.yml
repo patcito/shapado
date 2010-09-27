@@ -1,15 +1,16 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419: 
-  admin: 
-    moderate: 
-      index: 
-        all: todas
-        ban: ban
-        banned: preguntas baneadas
-        content: contenido
-        flagged: preguntas reportadas
-        item_title: titulo
-        need_tags: necesita etiquetas
-        title: moderar
+# Author: Patcito
+es-419:
+  admin:
+    moderate:
+      index:
+        all: Todas
+        ban: Prohibir
+        banned: Preguntas baneadas
+        content: Contenido
+        flagged: Preguntas reportadas
+        item_title: Título
+        need_tags: Necesita etiquetas
+        title: Moderar
