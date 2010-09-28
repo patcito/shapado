@@ -75,6 +75,7 @@ Rails::Initializer.run do |config|
   # middlewares
   config.middleware.use "MongoMapperMiddleware"
   config.middleware.use "DynamicDomain"
+  config.middleware.use "GridfsMiddleware"
   if AppConfig.recaptcha["activate"]
     config.middleware.use "Rack::Recaptcha", :public_key => AppConfig.recaptcha["public_key"],
                                              :private_key => AppConfig.recaptcha["private_key"],

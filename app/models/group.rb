@@ -223,6 +223,18 @@ class Group
     I18n.t("groups.shared.reputation_rewards.#{key}", :default => key.humanize)
   end
 
+  def self.find_file_from_params(params)
+    @group = Group.find_by_slug_or_id(params["id"], :select => [:file_list])
+
+    if params["type"] == "logo"
+      @group.logo
+    elsif params["type"] == "css" && @group.has_custom_css?
+      @group.custom_css
+    elsif params["type"] == "favicon" && @group.has_custom_favicon?
+      @group.custom_favicon
+    end
+  end
+
   def check_reputation_configs
     if self.reputation_constrains_changed?
       self.reputation_constrains.each do |k,v|
