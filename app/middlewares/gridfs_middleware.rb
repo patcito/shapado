@@ -57,7 +57,8 @@ class GridfsMiddleware
   end
 
   def each
-    while part = @file.read(8192)
+    f = @file.get
+    while part = f.read(8192)
       yield part
     end
   end
