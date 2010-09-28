@@ -7,7 +7,7 @@ class GridfsMiddleware
   end
 
   def call(env)
-    if env["PATH_INFO"] =~ /^\/_files\/([^\/?]+)$/
+    if env["PATH_INFO"] =~ /^\/_files\/([^\/?]+)/
       @model = $1.classify.constantize rescue nil
       return forbidden if @model.nil?
 
@@ -21,7 +21,7 @@ class GridfsMiddleware
     request = Rack::Request.new(env)
     params = request.GET
 
-    @file = @model.find_file_from_params(params)
+    @file = @model.find_file_from_params(params, request)
     return not_found if @file.nil?
 
     if @file.present?

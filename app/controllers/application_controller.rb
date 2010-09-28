@@ -268,4 +268,19 @@ class ApplicationController < ActionController::Base
   def build_datetime(params, name)
     Time.zone.parse("#{params["#{name}(1i)"]}-#{params["#{name}(2i)"]}-#{params["#{name}(3i)"]} #{params["#{name}(4i)"]}:#{params["#{name}(5i)"]}") rescue nil
   end
+
+  def logo_group_path(group)
+    "/_files/groups/logo?id=#{group.id}"
+  end
+  helper_method :logo_group_path
+
+  def css_group_path(group)
+    "/_files/groups/css?id=#{group.id}"
+  end
+  helper_method :css_group_path
+
+  def favicon_group_path(group)
+    "/_files/groups/favicon?id=#{group.id}"
+  end
+  helper_method :favicon_group_path
 end
