@@ -60,6 +60,7 @@ class GridfsMiddleware
     f = @file.get
     while part = f.read(8192)
       yield part
+      break if part.empty?
     end
   end
 end
