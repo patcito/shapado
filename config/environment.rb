@@ -37,7 +37,7 @@ Rails::Initializer.run do |config|
   config.gem "compass", :version => "0.10.5", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.5.5", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
-  config.gem "mongomapper_ext", :version => "0.4.0", :source => "http://gemcutter.org"
+  config.gem "mongomapper_ext", :version => "0.5.0", :source => "http://gemcutter.org"
   config.gem "geoip"
   config.gem "whatlanguage", :version => "1.0.0"
   config.gem "uuidtools", :version => "2.1.1"
@@ -75,7 +75,7 @@ Rails::Initializer.run do |config|
   # middlewares
   config.middleware.use "MongoMapperMiddleware"
   config.middleware.use "DynamicDomain"
-  config.middleware.use "GridfsMiddleware"
+  config.middleware.use "MongoMapperExt::FileServer"
   if AppConfig.recaptcha["activate"]
     config.middleware.use "Rack::Recaptcha", :public_key => AppConfig.recaptcha["public_key"],
                                              :private_key => AppConfig.recaptcha["private_key"],
