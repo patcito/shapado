@@ -60,7 +60,8 @@ class WelcomeController < ApplicationController
       flash[:error] += ". Domo arigato, Mr. Roboto. "
       redirect_to feedback_path(:feedback => params[:feedback])
     else
-      Notifier.deliver_new_feedback(current_user, params[:feedback][:title],
+      user = current_user || User.new(:email => params[:feedback][:email], :login => "Anonymous")
+      Notifier.deliver_new_feedback(user, params[:feedback][:title],
                                                   params[:feedback][:description],
                                                   params[:feedback][:email],
                                                   request.remote_ip)
