@@ -1,19 +1,20 @@
 # Messages for Spanish (Español)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Patcito
 es: 
   activerecord: 
     attributes: 
       announcement: 
-        ends_at: ends at
-        message: message
-        only_anonymous: only for anonymous users
-        starts_at: starts at
+        ends_at: Finaliza en el
+        message: Mensaje
+        only_anonymous: Sólo para usuarios anónimos
+        starts_at: Comienza a las
   announcements: 
     actions: 
-      delete: remove
-      title: actions
+      delete: Suprimir
+      title: Acciones
     create: 
-      success: announcement was successfully created.
+      success: El anuncio se ha creado con éxito.
     index: 
-      title: announcements
+      title: Anuncios

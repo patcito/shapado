@@ -3,12 +3,12 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: McDutchie
-es-419:
-  ads:
+es-419: 
+  ads: 
     ad_links: Agregar un nuevo anuncio %{type}
-    create:
+    create: 
       success: Anuncio fue creado exitosamente.
-    index:
+    index: 
       add_adbard: Agregar un nuevo anuncio adbard
       add_adsense: Agregar un nuevo anuncio google adsense
       title: Anuncios

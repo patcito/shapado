@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Darkweasel
+# Author: McDutchie
 eo: 
   admin: 
     manage: 
@@ -30,12 +31,12 @@ eo:
         share: 
           add_tags: Aldoni etikedojn al viaj pepaĵoj
           asking_from_twitter: Demandi per Twitter
-          ends_with_example: "t. e. #shapado"
+          ends_with_example: "ekz. #shapado"
           facebook_app: Facebook-programagordoj
           question_must_include: La demando devas enhavi la jenan etikedon por esti sendata al Twitter
-          question_must_include_example: "t. e. #miDemandas"
+          question_must_include_example: "ekz. #miDemandas"
           secret_key: Sekreta ŝlosilo
-          starts_with_example: "t. e. #qa"
+          starts_with_example: "ekz. #qa"
           title: Disvastigi
           title_on_dlvr: Disvastigi ĉe dlvr.it
           twitter_account: La Twitter-konto, al kiu uzantoj demandos.

@@ -3,148 +3,148 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Patcito
-es-419:
-  activerecord:
-    models:
+es-419: 
+  activerecord: 
+    models: 
       badge: insignia
       badges: insignias
-  badges:
-    index:
+  badges: 
+    index: 
       description: Todas las insignias que puedes ganar. comparte tu conocimiento, gana placas.
       title: Insignias
-    shared:
-      addict:
+    shared: 
+      addict: 
         description: Visita el sitio 20 días consecutivos
         name: Adicto
-      autobiographer:
+      autobiographer: 
         description: completed all user profile fields
         name: autobiographer
-      celebrity:
+      celebrity: 
         description: Tiene mas de 100 seguidores
         name: Celebridad
-      citizen_patrol:
+      citizen_patrol: 
         description: Primer post reportado
         name: Patrulla civil
-      civic_duty:
+      civic_duty: 
         description: Vota 300 veces
         name: Deber cívico
-      cleanup:
+      cleanup: 
         description: Primer reversión
         name: Limpieza
-      commentator:
+      commentator: 
         description: Deja 10 comentarios
         name: Comentador
-      critic:
+      critic: 
         description: Votar negativamente por primera vez
         name: Crítico
-      disciplined:
+      disciplined: 
         description: Borra su propio post con puntaje mayor igual a 3
         name: Disciplinado
-      editor:
+      editor: 
         description: Primer mensaje editado
         name: Editor
-      effort_medal:
+      effort_medal: 
         description: Recibir 100 votos positivos
         name: Insignia del esfuerzo
-      enlightened:
+      enlightened: 
         description: primera respuesta aceptada con al menos 10 votos positivos
         name: Iluminado
-      famous_question:
+      famous_question: 
         description: Hace una pregunta con 10000 visitas
         name: Pregunta famosa
-      fanatic:
+      fanatic: 
         description: Visita el sitio 100 días consecutivos
         name: Fanático
-      favorite_question:
+      favorite_question: 
         description: Pregunta seleccionada como preferida por 25 usuarios
         name: Pregunta favorita
-      friendly:
+      friendly: 
         description: Sigue a alguien por primera vez
         name: Amistoso
-      good_answer:
+      good_answer: 
         description: Tener una respuesta que alcanzo un promedio de más de 25 votos
         name: Buena respuesta
-      good_question:
+      good_question: 
         description: Haber hecho una pregunta que alcanzo el promedio de 10 votos
         name: Buena pregunta
-      great_answer:
+      great_answer: 
         description: respuesta votada 10 veces
         name: great answer
-      great_question:
+      great_question: 
         description: Pregunta votada 100 veces
         name: Gran pregunta
-      guru:
+      guru: 
         description: dar solución a una pregunta con promedio de votos superior a 40
         name: Guru
-      inquirer:
+      inquirer: 
         description: Preguntar por primera vez
         name: Investigador
-      interesting_person:
+      interesting_person: 
         description: Tiene mas de 10 seguidores
         name: Persona interesante
-      merit_medal:
+      merit_medal: 
         description: Recibir 200 votos positivos
         name: Insignia del merito
-      necromancer:
+      necromancer: 
         description: Contesta una pregunta mas de 60 dias despues con al menos 5 votos positivos
         name: Nigromante
-      nice_answer:
+      nice_answer: 
         description: Respuesta votada 10 veces
         name: Respuesta bonita
-      nice_question:
+      nice_question: 
         description: Pregunta votada 10 veces
         name: Pregunta bonita
-      notable_question:
+      notable_question: 
         description: Hace una pregunta con 2500 visitas
         name: Pregunta memorable
-      organizer:
+      organizer: 
         description: Primer re-etiquetado
         name: Organizador
-      peer_pressure:
+      peer_pressure: 
         description: borra su propio post con puntaje menor igual a -3
         name: peer pressure
-      pioneer:
+      pioneer: 
         description: Ser de los primeros usuarios registrados
         name: Pionero
-      popstar:
+      popstar: 
         description: 500 votos positivos, máximo 10 negativos
         name: Popstar
-      popular_person:
+      popular_person: 
         description: Tiene mas de 50 seguidores
         name: Persona popular
-      popular_question:
+      popular_question: 
         description: hace una pregunta con 1000 visitas
         name: Pregunta popular
-      rockstar:
+      rockstar: 
         description: 1000 votos positivos, máximo 10 negativos
         name: Rockstar
-      scholar:
+      scholar: 
         description: Primera respuesta aceptada en tu propia pregunta
         name: Erudito
-      self-learner:
+      self-learner: 
         description: Contesto su propia pregunta con al menos 3 votos positivos
         name: Autodidacta
-      service_medal:
+      service_medal: 
         description: Recibir 300 votos positivos
         name: Insignia de servicio
-      shapado:
+      shapado: 
         description: Visita el sitio 8 días consecutivos
-      stellar_question:
+      stellar_question: 
         description: Pregunta con mas de 100 favoritos
         name: Pregunta extraordinaria
-      student:
+      student: 
         description: Primera pregunta con al menos un voto positivo
         name: Estudiante
-      supporter:
+      supporter: 
         description: votar positivamente por primera vez
         name: Aficionado
-      troubleshooter:
+      troubleshooter: 
         description: Responder por primera vez
         name: Solucionador de problemas
-      tutor:
+      tutor: 
         description: Dar solución a una pregunta con promedio de votos superior a 2
         name: Tutor
-    show:
+    show: 
       description: "Usuarios que ganaron esta insignia. recientemente otorgada a:"
       earned: Otorgada
       for_tag_bronze: 200 votos en la etiqueta %{tag}

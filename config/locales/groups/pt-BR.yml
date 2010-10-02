@@ -2,29 +2,50 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Luckas Blade
+# Author: Vgeorge
 pt-BR: 
   activerecord: 
     attributes: 
       group: 
+        default_tags: Categorias predefinidas
         description: Descrição
+        domain: Domínio
+        fb_button: Ativar botão "Curtir" do Facebook (não respeita privacidade)
         forum: Permitir mais do que uma resposta por usuário
+        group_created_by: criado por
         language: Língua
+        legend: Legenda
         logo: Logotipo
+        may_contain_adult_content: Este site pode ter conteúdo para adultos
         name: Nome
+        openid_only: Só pessoas que usam OpenID podem acessar o site
+        owner: Este grupo foi criado por %{login}
         registered_only: Somente pessoas registradas podem acessar o site
         state: Estado
         subdomain: Url
+        wysiwyg_editor: Ativar editor amigável para o usuário
     models: 
+      default_tags_message: Não pode ter mais do que 10 categorias predefinidas
       group: Grupo
       groups: Grupos
   groups: 
     create: 
       flash_notice: O seu grupo foi criado, pode agora começar a configurá-lo.
     form: 
+      access: Definições de Acesso
+      analytics_engine: Motor de Análise
+      analytics_legend: O grupo poderá usar o seu próprio código de rastreamento
+      any_language: Qualquer
+      custom_analytics: Permitir Análises Personalizadas
       custom_html: Permitir HTML personalizado
       custom_js: Permitir javascript personalizado
+      default_tags_legend: Separe as categorias por vírgulas. Só são permitidas 10 categorias predefinidas.
       description_legend: Você pode usar 400 caracteres para descrever o grupo.
       isolate_group: Isolar o grupo de outros grupos
+      legend_legend: Será usado no cabeçalho. Você tem 40 caracteres.
+      logo_legend: Você pode fazer upload do logotipo do grupo. O tamanho máximo do arquivo é 2MB.
+      members_only: Só os membros do grupo poderão acessar a este grupo
+      website_analytics_id: ID da Análise do Site
     group: 
       about: Sobre
       accept_group: Aceitar este grupo
@@ -33,8 +54,12 @@ pt-BR:
       close_group: Fechar este grupo
       disallow_ads: Não permitir anúncios
     index: 
+      actives: Ativos
       filter: Pesquisar grupos
+      most_active: Mais ativos
       name: Nome
+      pendings: Pendentes
+      request_group: Pedir um grupo novo
       title: Grupos
     new: 
       title: Criar seu grupo
@@ -44,4 +69,5 @@ pt-BR:
       close_group: Fechar este grupo
       group_awaiting_acceptance: Este grupo está aguardando a aceitação de um moderador.
       group_closed: Este grupo foi fechado.
+      title: Sobre %{name}
       visit_group: Visitar este grupo

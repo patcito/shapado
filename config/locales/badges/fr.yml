@@ -56,6 +56,7 @@ fr:
         name: Question fameuse
       fanatic: 
         description: Visiter le site 100 jours consécutifs
+        name: Fanatique
       favorite_question: 
         description: Question sélectionnée comme favorite par 25 utilisateurs
         name: Question favorite
@@ -67,6 +68,7 @@ fr:
         name: Bonne réponse
       good_question: 
         description: Avoir fait une question ayant atteint une moyenne de 10 votes
+        name: Bonne question
       great_answer: 
         description: Réponse votée positivement 100 fois
         name: Formidable réponse
@@ -84,6 +86,7 @@ fr:
         name: Personne intéressante
       merit_medal: 
         description: Recevoir 200 votes positifs
+        name: Médaille du Mérite
       necromancer: 
         description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
         name: Nécromancien
@@ -95,6 +98,7 @@ fr:
         name: Jolie question
       notable_question: 
         description: Question ayant reçu 2500 visites
+        name: Question mémorable
       organizer: 
         description: Premier retag
         name: Organisateur
@@ -103,6 +107,7 @@ fr:
         name: Influence des pairs
       pioneer: 
         description: Être parmi les premiers à s'être inscrit
+        name: Pionnier
       popstar: 
         description: 500 votes positifs, 10 négatifs maximum
         name: Popstar
@@ -114,6 +119,7 @@ fr:
         name: Question populaire
       rockstar: 
         description: 1000 votes positifs, 10 négatifs maximum
+        name: Rockstar
       scholar: 
         description: Réponse acceptée à votre propre question
         name: Érudit
@@ -122,6 +128,7 @@ fr:
         name: Autodidacte
       service_medal: 
         description: Recevoir 300 votes positifs
+        name: Médaille du service
       shapado: 
         description: Visiter le site tous jours durant 8 jours consécutifs
       stellar_question: 
@@ -135,8 +142,10 @@ fr:
         name: Supporter
       troubleshooter: 
         description: Répondre pour la première fois
+        name: Dépanneur
       tutor: 
         description: Donner une solution à une question ayant une moyenne de votes supérieure à 2
+        name: Tuteur
     show: 
       description: "Utilisateurs ayant gagné cette insigne. Récemment décernée à:"
       earned: Gagné

@@ -7,14 +7,28 @@ it:
     application: 
       ask_question: Poni domanda
       badges: Badge
+      forgot: Dimenticato?
       home: Home
       languages: Lingue
       log_in: Entra
+      logged: Collegato come %{login}
       logout: Esci
       manage_ads: Gestisci annunci
       moderate: Modera
+      now: ora!
+      openid: 
+        explaination: "Per iscriversi o accedere, selezionare il provider OpenID:"
       pages: Pagine
+      questions: Domande
+      questions_in: Domande in
+      questions_tagged: taggato con
       search: Cerca
+      settings: Impostazioni
+      signup: Iscriviti
+      subscribe: Iscriviti
+      tags: Tag
+      title: Domande & Risposte
+      unanswered: Senza risposta
       users: Utenti
       welcome_from: Benvenuto! È possibile
     manage: 
@@ -33,3 +47,5 @@ it:
       stats: Statistiche
       theme: Tema
       widgets: Widget
+    notifications: 
+      message: Per non ricevere più notifiche da %{domain}, cambiare le preferenze nella pagina Notifiche.

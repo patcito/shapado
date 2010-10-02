@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: KagerMtc
 # Author: Kghbln
+# Author: The Evil IP address
 de: 
   activerecord: 
     attributes: 
@@ -23,7 +24,7 @@ de:
         last_logged_at: gesehen
         login: Nutzername
         name: Bürgerlicher Name
-        password: Kennwort
+        password: Passwort
         password_confirmation: Passwortbestätigung
         preferred_languages: "Du möchtest Fragen in den folgenden Sprachen lesen:"
         preferred_tags: Bevorzugte Kennzeichnung

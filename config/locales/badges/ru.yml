@@ -1,6 +1,7 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Eleferen
 # Author: Lockal
 ru: 
   activerecord: 
@@ -31,13 +32,16 @@ ru:
         name: Очистка
       commentator: 
         description: Оставил 10 комментариев
+        name: Комментатор
       critic: 
         description: Первый раз проголосовал «против»
+        name: Критик
       disciplined: 
         description: Удалил собственный пост с оценкой 3 или выше
         name: Дисциплинированный
       editor: 
         description: Первый раз отредактировал пост
+        name: Редактор
       effort_medal: 
         description: Получил 100 положительных голосов
       enlightened: 
@@ -56,6 +60,7 @@ ru:
         description: Написал ответ, получивший в среднем больше 25 голосов
       good_question: 
         description: Написал вопрос, получивший в среднем больше 25 голосов
+        name: Хороший вопрос
       great_answer: 
         description: За ответ проголосовали «за» 100 раз
         name: Отличный ответ
@@ -64,6 +69,7 @@ ru:
         name: Отличный вопрос
       guru: 
         description: Дал решение вопроса со средним числом голосов более 40
+        name: Гуру
       inquirer: 
         description: Задал первый вопрос
       interesting_person: 
@@ -90,13 +96,16 @@ ru:
         name: Под давлением со стороны
       pioneer: 
         description: Зарегистрировался одним из первых
+        name: Пионер
       popstar: 
         description: 500 голосов «за» и до 10 голосов «против»
+        name: Звезда эстрады
       popular_person: 
         description: Число следящих составило более 50
         name: Популярная личность
       popular_question: 
         description: Задал вопрос с 1000 просмотров
+        name: Популярные вопросы
       rockstar: 
         description: 1000 голосов «за» и до 10 голосов «против»
       scholar: 
@@ -107,6 +116,7 @@ ru:
         name: Самообучающийся
       service_medal: 
         description: 300 голосов «за»
+        name: Памятная медаль
       shapado: 
         description: Посещал сайт каждый день 8 дней подряд
       stellar_question: 
@@ -114,12 +124,14 @@ ru:
         name: Звёздный вопрос
       student: 
         description: Задал первый вопрос хотя бы с одним голосом «за»
+        name: Студент
       supporter: 
         description: Первый раз проголосовал «за»
       troubleshooter: 
         description: Ответил первый раз
       tutor: 
         description: Дал решение вопроса со средним числом голосов более 2
+        name: Репетитор
     show: 
       description: "раз(а) бедж вручён пользователям. Недавно награждены:"
       earned: заработано

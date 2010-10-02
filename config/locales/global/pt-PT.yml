@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   feeds: 
     feed: Feed
@@ -33,6 +34,9 @@ pt-PT:
       one: "%{count} vez"
       other: "%{count} vezes"
       zero: Nunca
+  pagination: 
+    next: Seguinte &raquo;
+    previous: "&laquo; Anterior"
   scaffold: 
     add: Adicionar
     back: Voltar

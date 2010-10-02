@@ -1,0 +1,29 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Vgeorge
+pt-BR: 
+  widgets: 
+    badges: 
+      description: Este widget mostra as condecorações recebidas recentemente por usuários ou por perguntas
+      title: Condecorações recentes
+    groups: 
+      description: Este widget mostra os grupos mais recentes
+      title: Grupos recentes
+    index: 
+      description: Use as setas para mover os seus widgets
+      title: Administrar widgets da barra lateral
+    pages: 
+      title: Páginas wiki
+    tag_cloud: 
+      description: Este widget mostra uma nuvem de categorias
+      title: Nuvem de categorias
+    top_groups: 
+      description: Este widget mostra os cinco grupos principais
+      title: 5 grupos principais
+    top_users: 
+      description: Este widget mostra os cinco usuários principais
+      title: 5 usuários principais
+    users: 
+      description: Este widget mostra usuários registados recentemente
+      title: Usuários recentes

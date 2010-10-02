@@ -23,7 +23,7 @@ it:
         description: Raggiunti più di 100 follower
         name: Celebrità
       citizen_patrol: 
-        description: Primo post contrassegnato
+        description: Primo post segnalato
         name: Pattuglia cittadina
       civic_duty: 
         description: Votato 300 volte
@@ -59,7 +59,7 @@ it:
         description: Domanda preferita da 25 utenti
         name: Domanda preferita
       friendly: 
-        description: Follow qualcuno per la prima volta
+        description: Segui qualcuno per la prima volta
         name: Amichevole
       good_answer: 
         description: Avere una risposta che raggiunge una media di più di 25 voti

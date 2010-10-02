@@ -1,0 +1,22 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  errors: 
+    forbidden: 
+      explanation: Wala ka ng kailangang mga karapatan upang mapuntahan ang pahinang ito.
+      title: Tinanggihan ang pagpunta.
+    go_to: Magpunta sa pahina ng %{link}
+    help_us_answer: Tulungan kaming sagutin ang %{link}
+    internal_error: 
+      explanation: Ipinabatid sa amin ang tungkol sa paksang ito at titingnan namin ito sa loob ng ilang sandali.
+      title: Nagpapaumanhin kami, ngunit may naganap na pagkakamali.
+    not_found: 
+      explanation: Maaaring mali ang pagmamakinilya mo ng tirahan o maaaring inilipat ang pahina.
+      title: Hindi natagpuan ang pahina.
+    options_label: "Ibang mga bagay na masusubukan:"
+    search: Maghanap
+    unprocessable_entity: 
+      explanation: Maaaring sinubukan mong baguhin ang bagay na hindi mo dapat pinupuntahan.
+      title: Tinanggihan ang pagbabagong ninais mo.

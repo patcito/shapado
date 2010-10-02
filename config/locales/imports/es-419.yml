@@ -2,9 +2,9 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  imports:
-    subtabs:
-      need_confirmation:
+es-419: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
         name: Necesitan confirmación
         title: Enviar emails de confirmación

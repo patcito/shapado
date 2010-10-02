@@ -1,0 +1,22 @@
+# Messages for Latin American Spanish (espanol de America Latina)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Patcito
+es-419: 
+  open_requests: 
+    create: 
+      flash_notice: La solicitud de re-apertura ha sido creada con éxito
+    destroy: 
+      flash_notice: Solicitud de re-apertura borrada con éxito
+    edit: 
+      title: Editar la solicitud de re-apertura
+    form: 
+      request_opening_details: Solicitar la re-apertura de esta pregunta
+    index: 
+      title: Lista de solicitudes de re-apertura
+    model: 
+      prural_name: Solicitudes de re-apertura.
+    new: 
+      title: Solicitar re-abrir
+    update: 
+      flash_notice: Solicitud de re-apertura actualizada con éxito

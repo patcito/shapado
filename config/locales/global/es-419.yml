@@ -2,8 +2,8 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  feeds:
+es-419: 
+  feeds: 
     feed: Flujo
     post_new_questions: Publicar nuevas preguntas en
     question: Subscribirse a esta pregunta
@@ -11,7 +11,7 @@ es-419:
     share_on_twitter: twitter, facebook y mas...
     tag: Subscribirse al tag
     user: Subscribirse a las preguntas del usuario
-  global:
+  global: 
     active: Activar
     by: por
     current: Actual
@@ -23,17 +23,19 @@ es-419:
     preview: Vista previa
     previous: Anterior
     share: Compartir
-  languages:
+  languages: 
     any: Cualquiera
     user: Idiomas que conozco
-  models:
+  models: 
     question: La pregunta
-  number:
-    x_time:
+  number: 
+    x_time: 
       one: "%{count} vez"
       other: "%{count} veces"
       zero: Nunca
-  scaffold:
+  pagination: 
+    next: Siguiente &raquo;
+  scaffold: 
     add: Añadir
     back: Volver
     cancel: Cancelar
@@ -49,6 +51,6 @@ es-419:
     show: Ver
     sure: ¿Esta seguro que quiere borrar esta %{model}?
     update: Actualizar
-  time:
+  time: 
     ago: hace %{time}
     today: hoy

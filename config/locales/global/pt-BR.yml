@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: Giro720
 # Author: Luckas Blade
+# Author: Vgeorge
 pt-BR: 
   feeds: 
     feed: Feed
@@ -34,6 +35,9 @@ pt-BR:
       one: "%{count} vez"
       other: "%{count} vezes"
       zero: Nunca
+  pagination: 
+    next: Seguinte &raquo;
+    previous: "&laquo; Anterior"
   scaffold: 
     add: Adicionar
     back: Voltar

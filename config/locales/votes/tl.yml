@@ -1,0 +1,25 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  activerecord: 
+    models: 
+      vote: Boto
+      votes: Mga boto
+  votes: 
+    control: 
+      have_voted_down: Pindutin upang tanggalin ang pababa mong boto
+      have_voted_up: Pindutin upang tanggalin ang boto mong paitaas
+      to_vote_down: Pindutin upang makaboto ng pababa
+      to_vote_up: Pindutin upang bumotong paitaas
+    create: 
+      flash_error: Hindi mo ito maiboboto
+      flash_notice: Salamat sa pagboto!
+      unauthenticated: Hindi makaboboto ang hindi nagpapakilalang mga tagagamit
+    destroy: 
+      flash_notice: Matagumpay na napawalang-bisa ang boto mo.
+    model: 
+      messages: 
+        closed_question: Hindi ka makakaboto sa anumang mga pagpapaskil na pag-aari ng isang saradong tanong
+        vote_down_comment: Hindi maibobotong paibaba ang mga puna

@@ -1,0 +1,14 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  searches: 
+    form: 
+      clear: Pulisci
+      search_box_title: Controlla se la domanda già stata chiesta
+      tags_tip: Usare [tag] per specificare i tag.
+    index: 
+      empty: La ricerca non ha prodotto risultati.
+      search_text: Domande contenenti
+      tags: con questi tag

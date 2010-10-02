@@ -33,6 +33,9 @@ es:
       one: "%{count} vez"
       other: "%{count} veces"
       zero: Nunca
+  pagination: 
+    next: Siguiente &raquo;
+    previous: "&laquo; Anterior"
   scaffold: 
     add: Añadir
     back: Volver

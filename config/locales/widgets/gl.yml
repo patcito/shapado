@@ -15,6 +15,7 @@ gl:
       title: Xestionar os widgets da barra lateral
     pages: 
       description: Este widget mostra a lista de páxinas wiki
+      new: Engadir unha nova páxina
       title: Páxinas wiki
     tag_cloud: 
       description: Este widget mostra unha nube de etiquetas

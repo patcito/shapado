@@ -5,6 +5,7 @@
 it: 
   feeds: 
     feed: Feed
+    post_new_questions: Manda le nuove domande su
     question: Iscriviti a questa domanda
     questions: Iscriviti a tutte le domande
     share_on_twitter: twitter, facebook e molti altri...
@@ -12,12 +13,16 @@ it:
     user: Iscriviti alle domande dell'utente
   global: 
     active: Attiva
+    by: da
     current: Attuale
+    from: da %{site}
     group_not_found: La pagina %{url} non esiste
+    or: o
     permission_denied: Permesso negato
     please_login: Accedi
     preview: Anteprima
     previous: Precedenti
+    share: Condividi
   languages: 
     any: Qualsiasi
     user: Lingue preferite
@@ -28,6 +33,9 @@ it:
       one: "%{count} volta"
       other: "%{count} volte"
       zero: Mai
+  pagination: 
+    next: Successivo &raquo;
+    previous: "&laquo; Precedente"
   scaffold: 
     add: Aggiungi
     back: Indietro
@@ -44,3 +52,6 @@ it:
     show: Mostra
     sure: Cancellare questo %{model} ?
     update: Aggiorna
+  time: 
+    ago: "%{time} fa"
+    today: oggi

@@ -1,0 +1,53 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+# Author: Luckas Blade
+# Author: Vgeorge
+pt-BR: 
+  layouts: 
+    application: 
+      ask_question: Perguntar
+      badges: Condecorações
+      forgot: Esqueceu?
+      home: Início
+      languages: Línguas
+      log_in: Entrar
+      logged: Autenticado como %{login}
+      logout: Sair
+      manage_ads: Gerenciar anúncios
+      moderate: Moderar
+      now: agora!
+      openid: 
+        explaination: "Se pretende registar-se ou entrar, selecione o seu provedor de OpenID, por favor:"
+      pages: Páginas
+      questions: Perguntas
+      questions_in: Perguntas em
+      questions_tagged: categorizada em
+      search: Pesquisar
+      settings: Preferências
+      signup: Registar-se
+      subscribe: Inscrever-se
+      tags: Categorias
+      title: Perguntas e Respostas
+      unanswered: Sem resposta
+      users: Usuários
+      welcome_from: Bem-vindo(a)! Você pode
+    manage: 
+      actions: Ações
+      announcements: Anúncios
+      constrains: Requisitos
+      content: Conteúdo
+      dashboard: Painel de controle
+      domain: Domínio
+      general: Geral
+      members: Membros
+      pages: Páginas
+      properties: Propriedades
+      reputation: Reputação
+      rewards: Recompensas
+      stats: Estatísticas
+      theme: Tema
+      widgets: Widgets
+    notifications: 
+      message: Se você não quer mais receber as notificações automáticas de %{domain}, altere as suas preferências na página das notificações.

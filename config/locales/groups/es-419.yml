@@ -4,10 +4,10 @@
 # Author: Crazymadlover
 # Author: Diego Grez
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      group:
+es-419: 
+  activerecord: 
+    attributes: 
+      group: 
         default_tags: Etiquetas por omision
         description: Descripción
         domain: dominio
@@ -25,14 +25,14 @@ es-419:
         state: Estado
         subdomain: URL
         wysiwyg_editor: Habilitar un editor de texto mas amigable para el usuario
-    models:
+    models: 
       default_tags_message: No se puede tener mas de 10 tags por defecto.
       group: Grupo
       groups: Grupos
-  groups:
-    create:
+  groups: 
+    create: 
       flash_notice: Tu grupo ah sido creado exitosamente, ahora puedes empezar a configurarlo.
-    form:
+    form: 
       access: Configuración de Acceso
       analytics_engine: Motor de análisis
       analytics_legend: El grupo podrá utilizar su propio código de seguimiento
@@ -47,14 +47,14 @@ es-419:
       logo_legend: Puedes subir el logo del grupo. Lo máximo es para el tamaño del archivo es de 2mb.
       members_only: Solamente los miembros del grupo serán capaces de acceder a este grupo
       website_analytics_id: ID de análisis de sitio web
-    group:
+    group: 
       about: Acerca de
       accept_group: Aceptar este grupo
       allow_ads: Permitir propaganda
       close: Cerrar
       close_group: Cerrar este grupo
       disallow_ads: Prohibir propaganda
-    index:
+    index: 
       actives: Activos
       filter: Buscar grupos
       most_active: Más activos
@@ -62,9 +62,9 @@ es-419:
       pendings: Pendientes
       request_group: Pedir un nuevo grupo
       title: Grupos
-    new:
+    new: 
       title: Crear su grupo
-    show:
+    show: 
       accept_group: Aceptar este grupo
       accept_group_with_custom_ads: Aceptar grupo y permitir anuncios personalizados
       close_group: Cerrar este grupo

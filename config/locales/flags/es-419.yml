@@ -2,31 +2,31 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      flag:
+es-419: 
+  activerecord: 
+    attributes: 
+      flag: 
         reason: Razón
-    models:
+    models: 
       flag: Reporte de abuso
       flags: Reportes de abuso
-  flags:
-    create:
+  flags: 
+    create: 
       flash_error: Usted no puede reportar como abuso esto
       flash_notice: Gracias por tu reporte
-    destroy:
+    destroy: 
       flash_notice: Tu reporte ha sido retractado con éxito.
-    edit:
+    edit: 
       title: Editar el reporte de %{model}
-    form:
+    form: 
       attention: Requiere atención de un moderador
       label: por favor reporte con cuidado
       offensive: ofensivo, abusivo o intolerante
       spam: Spam
-    model:
-      messages:
+    model: 
+      messages: 
         already_requested: Ya has reportado este %{model}
-    new:
+    new: 
       title: Reportar %{model}
-    update:
+    update: 
       flash_notice: El reporte de pregunta ha sido creado con éxito

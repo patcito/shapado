@@ -1,19 +1,20 @@
 # Messages for Latin American Spanish (espanol de America Latina)
 # Exported from translatewiki.net
 # Export driver: syck
-es-419:
-  activerecord:
-    attributes:
-      announcement:
-        ends_at: ends at
-        message: message
-        only_anonymous: only for anonymous users
-        starts_at: starts at
-  announcements:
-    actions:
-      delete: remove
-      title: actions
-    create:
-      success: announcement was successfully created.
-    index:
-      title: announcements
+# Author: Patcito
+es-419: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Finaliza en el
+        message: Mensaje
+        only_anonymous: Sólo para usuarios anónimos
+        starts_at: Comienza a las
+  announcements: 
+    actions: 
+      delete: Suprimir
+      title: Acciones
+    create: 
+      success: El anuncio se ha creado con éxito.
+    index: 
+      title: Anuncios

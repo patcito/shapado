@@ -4,10 +4,10 @@
 # Author: Crazymadlover
 # Author: Danke7
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      user:
+es-419: 
+  activerecord: 
+    attributes: 
+      user: 
         activated_at: activado en
         activation_code: Código de activación
         age: Edad
@@ -32,11 +32,11 @@ es-419:
         timezone: Zona horaria
         updated_at: actualizado en
         website: Sitio Web
-    models:
+    models: 
       user: Usuario
       users: Usuarios
-  users:
-    actions:
+  users: 
+    actions: 
       edit_others_posts: Editar preguntas o respuestas de otros usuarios
       edit_wiki_post: Editar wikis
       flag: Reportar como abuso
@@ -45,18 +45,18 @@ es-419:
       vote_to_close_any_question: " Solicitar el cierre de cualquiera pregunta"
       vote_to_close_own_question: Pedir cerrar su propia pregunta
       vote_up: Votar positivo
-    anonymous_form:
+    anonymous_form: 
       never_shown: Nunca mostrado
-    create:
+    create: 
       flash_error: No hemos podido crear tu cuenta, lo sentimos. Por favor intentalo otra vez, o contacta a un administrador (el enlace esta arriba).
       flash_notice: ¡Gracias por registrarse!
-    edit:
+    edit: 
       enable_twitter: Habilita tus cuentas twitter y facebook
       submit: Guardar
       title: Configuración
-    follow:
+    follow: 
       flash_notice: El usuario %{user} fue añadido a su lista de amigos
-    form:
+    form: 
       activities_notification: Recibir notificaciones via correo electronico sobre actividades del sistema tales como insignias ganadas, nuevos seguidores, etc.
       avatar_tip: Cambia tu imagen del perfil usando gravatar
       give_advice_notification: Obtener notificaciones via correo electrónico sobre preguntas en su campo de experiencia.
@@ -66,7 +66,7 @@ es-419:
       notifications: Notificaciones
       reports_notification: Recibir un reporte con las ultimas actividades del grupo (solo para administradores de grupo)
       show_more_lang: Mostrar más idiomas
-    index:
+    index: 
       empty: Este grupo no tiene miembros, participe para unirse a este grupo.
       filter: Busca usuarios
       name: Por nombre de usuario
@@ -78,16 +78,16 @@ es-419:
       reputation: Reputación
       reputation_tooltip: Usuarios ordenados por reputación
       title: Todos los usuarios
-    messages:
-      errors:
+    messages: 
+      errors: 
         reputation_needed: Necesitas una reputación de %{min_reputation} para %{action}
-    new:
+    new: 
       submit: Registrarse
       title: Registrar un nuevo usuario
-    show:
+    show: 
       follow: Seguir
-      title: Usuario {user}
+      title: Usuario %{user}
       unfollow: Dejar de seguir
       views: vistas
-    unfollow:
+    unfollow: 
       flash_notice: El usuario %{user} fue removido de su lista de amigos

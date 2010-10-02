@@ -8,25 +8,25 @@ it:
       flag: 
         reason: Motivo
     models: 
-      flag: Contrassegno
-      flags: Contrassegni
+      flag: Segnalazione
+      flags: Segnalazioni
   flags: 
     create: 
-      flash_error: Impossibile contrassegnare questo
+      flash_error: Impossibile segnalare questo
       flash_notice: Grazie per la segnalazione
     destroy: 
-      flash_notice: Il contrassegno è stato revocato.
+      flash_notice: La segnalazione è stata revocata.
     edit: 
-      title: Modifica contrassegno %{model}
+      title: Modifica segnalazione %{model}
     form: 
       attention: Richiede controllo di un moderatore
-      label: Contrassegna con attenzione
+      label: Segnala accuratamente
       offensive: Offensivo, ingiurioso o incitante all'odio
       spam: Spam
     model: 
       messages: 
-        already_requested: "%{model} già contrassegnato"
+        already_requested: "%{model} già segnalato"
     new: 
-      title: Contrassegna %{model}
+      title: Segnala %{model}
     update: 
-      flash_notice: Il contrassegno della domanda è stato aggiornato.
+      flash_notice: La segnalazione della domanda è stata aggiornata.

@@ -1,0 +1,43 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  notifier: 
+    earned_badge: 
+      message1: Hai guadagnato il badge %{badge} su %{app}
+      message2: "Descrizione del badge:"
+      message3: I tuoi badge sono visbili sulla tua %{user_page}
+    favorited: 
+      message1: "%{user} ha aggiunto ai preferiti la tua domanda in {%group}"
+      message2: "Testo della tua domanda:"
+      message3: "Lo si può vedere qui:"
+    follow: 
+      message1: "%{user} sta ora seguendo le tue domande e risposte su %{app}"
+      message2: Puoi seguirlo a tua volta cliccando su "Follow" sulla sua %{user_page}
+    give_advice: 
+      message1: "%{user} ha posto una domanda che potresti essere in grado di rispondere:"
+      message2: "Per dare una risposta basta rispondere a questo messaggio:"
+      message3: "Oppure, se conosci qualcuno che potrebbe essere in grado di rispondere, invia loro il seguente link:"
+      message4: Se non si riceverà risposta, la domanda verrà posta a qualcun altro. Si potrà comunque rispondere in qualsiasi momento.
+    global: 
+      hi: Ciao %{user},
+      user_page: pagina utente
+    new_answer: 
+      message: "%{user} ha risposto %{new_answer} alla domanda %{question}"
+    new_comment: 
+      message: "%{user} ha commentato %{new_comment} alla domanda %{question}"
+    new_feedback: 
+      message1: L'utente %{user} <%{email}> ha inviato un feedback
+      message2: Un utente anonimo ha inviato un feedback dall'indirizzo IP %{ip}
+      message3: "Indirizzo email: %{email}"
+      message4: "Oggetto: %{subject}"
+    report: 
+      message1: Report per il gruppo %{group.name}
+      message2: Dal %{since}
+      message3: "%{questions} domande create"
+      message4: "%{answers} risposte create"
+      message5: "%{votes} voti effettuati"
+      message6: "%{badges} badge assegnati"
+      message7: L'account ha %{users} utenti.
+      message8: Visita il tuo gruppo su %{link}

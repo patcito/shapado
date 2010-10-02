@@ -14,6 +14,7 @@ nl:
     user: Op gebruikersvragen abonneren
   global: 
     active: Activeren
+    anonymous: Anoniem
     by: door
     current: huidige
     from: Van %{site}
@@ -22,7 +23,7 @@ nl:
     permission_denied: Geen toegang
     please_login: Meld u aan
     preview: Voorvertoning
-    previous: vorige
+    previous: Vorige
     share: Delen
   languages: 
     any: Alle
@@ -34,6 +35,9 @@ nl:
       one: "%{count} keer"
       other: "%{count} keer"
       zero: Nooit
+  pagination: 
+    next: Volgende &raquo;
+    previous: "&laquo; Vorige"
   scaffold: 
     add: Toevoegen
     back: Terug
@@ -45,6 +49,7 @@ nl:
     edit: Bewerken
     more: Meer...
     new: Nieuwe %{model} toevoegen
+    post_as_anonymous: Bericht anoniem plaatsen
     save: Opslaan
     send: Verzenden
     show: Weergeven

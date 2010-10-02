@@ -17,7 +17,7 @@ nl:
       not_relevant: Niet relevant
       ot: Ander onderwerp
       request_closing_details: Sluitingsverzoek voor deze vraag indienen
-      spam: Spam
+      spam: spam
     index: 
       title: Lijst met sluitingsverzoeken
     model: 

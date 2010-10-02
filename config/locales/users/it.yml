@@ -35,13 +35,33 @@ it:
       user: Utente
       users: Utenti
   users: 
+    actions: 
+      edit_others_posts: Modificare post di altri
+      edit_wiki_post: Modificare messaggi wiki
+      flag: Segnalare
+      retag_others_questions: Modificare tag delle domande
+      vote_down: Votare negativamente
+      vote_to_close_any_question: Richiedere la chiusura di una domanda
+      vote_to_close_own_question: Richiedere la chiusura di una propria domanda
+      vote_up: Votare positivamente
     anonymous_form: 
       never_shown: mai mostrato
     create: 
-      flash_error: Spiacente, creazione account non riuscita. Riprovare o contattare un amministratore (link sopra).
+      flash_error: Creazione account non riuscita. Riprovare o contattare un amministratore (link sopra).
+      flash_notice: Grazie per esserti iscritto!
     edit: 
+      enable_twitter: Attiva il tuo account Facebook o Twitter
       submit: Salva
+      title: Impostazioni
+    follow: 
+      flash_notice: L'utente %{user} è stato aggiunto agli amici
     form: 
+      activities_notification: "Ricevi email di notifica per eventi come: nuovi follow, bagde conquistati, etc."
+      avatar_tip: Cambia l'immagine del profilo utilizzando Gravatar
+      give_advice_notification: Ricevi email di notifica su domande nel tuo campo di competenza
+      information: Informazione
+      language: Lingua utilizzata per l'interfaccia del sito
+      new_answer_notification: Ricevi email di notifica su nuove risposte
       notifications: Notifiche
       reports_notification: Ricevi un report dell'attività recente del gruppo (solo per amministratori)
       show_more_lang: Mostra altre lingue
@@ -57,6 +77,16 @@ it:
       reputation: Reputazione
       reputation_tooltip: Utenti in ordine di reputazione
       title: Tutti gli utenti
+    messages: 
+      errors: 
+        reputation_needed: E' necessaria una reputazione di %{min_reputation} per %{action}
     new: 
       submit: Iscriviti
       title: Iscriviti come nuovo utente
+    show: 
+      follow: Follow
+      title: Utente %{user}
+      unfollow: Annulla follow
+      views: visualizzazioni
+    unfollow: 
+      flash_notice: L'utente %{user} è stato rimosso dagli amici

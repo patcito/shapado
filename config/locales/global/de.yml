@@ -33,6 +33,9 @@ de:
       one: "%{count}-mal"
       other: "%{count}-mal"
       zero: Nie
+  pagination: 
+    next: Nächste &raquo;
+    previous: "&laquo; Vorige"
   scaffold: 
     add: Hinzufügen
     back: Zurück

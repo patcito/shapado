@@ -2,29 +2,30 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  widgets:
-    badges:
+es-419: 
+  widgets: 
+    badges: 
       description: Este widget muestra las insignias ganadas por los usuarios o las preguntas
       title: Insignias recientes
-    groups:
+    groups: 
       description: Este widget muestra los últimos grupos registrados
       title: Grupos recientes
-    index:
+    index: 
       description: Usar las flechas para mover los widgets
       title: Administrar los widgets de la barra lateral
-    pages:
+    pages: 
       description: Este widget muestra las paginas wiki
+      new: Añadir una página nueva
       title: Paginas wiki
-    tag_cloud:
+    tag_cloud: 
       description: Este widget muestra una nube de etiquetas
       title: Nube de etiquetas
-    top_groups:
+    top_groups: 
       description: Este widget muestra los grupos mas activos
       title: Top 5 grupos
-    top_users:
+    top_users: 
       description: Este widget muestra ranking de usuarios
       title: Top 5 usuarios
-    users:
+    users: 
       description: Este widget muestra los nuevos miembros registrados
       title: Usuarios recientes

@@ -12,7 +12,7 @@ it:
         asked_by: Chiesto da
         body: Testo
         closed: Chiusa
-        created_at: Chiesto il
+        created_at: Chiesto
         language: Lingua
         tags: Tag
         title: Titolo
@@ -25,15 +25,21 @@ it:
       questions: Domande
   questions: 
     answer: 
+      add_comment: Aggiungi commento...
+      flag: Segnala
       pick_answer: Scegli come soluzione
+      unset_answer: Annulla soluzione?
     create: 
       flash_notice: La domanda è stata creata.
     edit: 
       title: Modifica la domanda
     flag: 
-      title: Contrassegna domanda
+      title: Segnala domanda
     form: 
+      adult_content: Questa domanda contiene materiale per adulti.
+      body_tip: Qual è la tua domanda? Sii descrittivo.
       language_tip: Seleziona la lingua in cui è posta la domanda.
+      tags_tip: Utilizzare i tag per aggiungere ulteriori informazioni sulla tua domanda.
     index: 
       active: Attive
       active_tooltip: Domande aggiornate di recente
@@ -53,14 +59,21 @@ it:
       messages: 
         empty_tags: È necessario aggiungere almeno un tag.
         title_too_long: Il titolo è troppo lungo. Non deve contenere più di 100 caratteri.
+        too_many_tags: Sono ammessi al massimo 9 tag.
         too_short: Troppo breve. Utilizzare almeno %{count} parole per essere più specifici.
     move: 
       submit: Sposta!
+      title: "Sposta domanda : %{title}"
+    move_to: 
+      group_dont_exists: Il gruppo %{group} non esiste
+      success: Domanda spostata su %{group}
     new: 
       how_to_ask: Come domandare
       title: Fai una domanda
     question: 
       accepted_tooltip: Questa domanda ha una risposta che è stata accettata
+    retag: 
+      title: Modifica tag
     retag_form: 
       cancel: Annulla
       submit: Modifica tag
@@ -68,16 +81,45 @@ it:
     retag_to: 
       failure: I tag non non possono essere modificati.
       success: Tag modificati con successo.
+    revert: 
+      title: Ripristina domanda
     shared: 
-      flag: Contrassegna
+      flag: Segnala
     show: 
+      accepted_tooltip: Una delle risposte è stata accettata come risposta corretta.
       another_answers: Altre risposte
       answers: Risposte
       answers_title: 
         one: "%{count} risposta"
         other: "%{count} risposte"
-      flag: Contrassegno
+      asked_on: chiesto il
+      ban: Banna
+      close: Chiudi
+      close_reason: "La domanda è stata chiusa per il seguente motivo:"
+      edit_request: Modifica richiesta
+      favorite_tooltip: Aggiungi la domanda ai preferiti
+      flag: Segnalazione
+      flagged_as: Segnalato come
+      flags: Segnalata come
+      last_activity: Attività recente
+      open: Apri
+      related_questions: Domande correlate
+      request_closing: Richiedi chiusura
+      request_closing_details: Richiedi la chiusura della domanda
+      request_opening: Richiedi riapertura
+      request_opening_details: Richiedi la riapertura della domanda
+      requested_close_as: Hai chiesto di chiudere questa domanda in quanto
+      requested_reopening: Hai chiesto la riapertura di questa domanda
+      retag: Modifica tag
+      retract_request: Annulla richiesta
+      share: Condividi la domanda su
+      share_on: Condividi la domanda su %{site}
       solution: Soluzione
+      to_answer_question: per rispondere alla domanda
+      unauthenticated_retag: Serve un account per modificare i tag delle domande
+      unfavorite_tooltip: Rimuovi questa domanda dai preferiti
+      unwatch_tooltip: Non seguire più la domanda
+      viewed: visite
       watch_tooltip: Segui questa domanda
     solve: 
       flash_notice: La domanda è stata risolta.
@@ -86,5 +128,16 @@ it:
       title: Tag
       tooltip: Mostra domande con il tag %{tag}
     unanswered: 
+      empty: Questo gruppo non ha domande senza risposta.
       expert: Esperti
+      my_tags: I miei tag
+      tags: tag senza risposta
       title: Domande senza risposta
+    unsolve: 
+      flash_notice: La domanda non è più risolta.
+    unwatch: 
+      success: Non si riceveranno più notifiche via e-mail per le nuove risposte a questa domanda.
+    update: 
+      flash_notice: La domanda è stata modificata.
+    watch: 
+      success: Si riceverà notificha via e-mail per ogni nuova risposta a questa domanda.

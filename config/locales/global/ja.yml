@@ -1,6 +1,7 @@
 # Messages for Japanese (日本語)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: 青子守歌
 ja: 
   feeds: 
     feed: フィード
@@ -11,6 +12,7 @@ ja:
     tag: このタグの質問をフィードで購読する
     user: このユーザの質問をフィードで購読する
   global: 
+    active: 有効化
     by: によって
     current: 現在
     from: "%{site}から"

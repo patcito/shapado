@@ -15,6 +15,7 @@ ia:
       title: Administrar widgets del barra lateral
     pages: 
       description: Iste widget monstra le lista de paginas wiki
+      new: Adder nove pagina
       title: Paginas wiki
     tag_cloud: 
       description: Iste widget monstra un nube de etiquettas

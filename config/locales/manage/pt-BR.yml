@@ -1,0 +1,55 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Vgeorge
+pt-BR: 
+  admin: 
+    manage: 
+      content: 
+        footer: Rodapé
+        head: Cabeçalho
+        question_help: Ajuda de perguntas
+        question_prompt: Título do formulário de perguntas
+        title: Conteúdo personalizado
+        top_bar: Barra superior
+        top_bar_tip: Introduza um link por linha
+      properties: 
+        constrains: 
+          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os usuários necessitam para executar uma determinada acção
+          reputation_constrains_subtitle: Lista de requisitos de reputação para cada acção
+          title: Requisitos
+        domain: 
+          description: "Você pode mapear o seu site de forma a ser acessado através do seu próprio domínio. Faça assim:"
+          instruction1: Para fazê-lo, antes autentique-se no fornecedor do seu domínio. É o site onde comprou o seu domínio, como %{subdomain}.com.
+          instruction2: Lá, vá à seção de DNS e crie uma coisa chamada CNAME.
+          instruction3: Escolha 'www' ou outra coisa para o seu CNAME.
+          instruction4: "Depois, no campo do host ou de destino, coloque o seu domínio Shapado atual: %{domain}."
+          instruction5: Cerca de uma hora depois, o seu domínio www.%{subdomain} deverá apontar para %{appdomain}.
+          instruction6: Quando isto acontecer, volte aqui e coloque o nome do seu domínio www.%{subdomain} no campo abaixo e clique 'Atualizar'. Se você tem dúvidas, pergunte no %{chat_url} ou no nosso fórum de suporte.
+          title: Defina o seu domínio
+          warning: Tem a certeza de que quer alterar o seu domínio?
+        general: 
+          title: Propriedades do grupo
+        rewards: 
+          reputation_rewards_description: Este formulário permite configurar de que forma os usuários podem ganhar e perder pontos de reputação por uma dada ação
+          reputation_rewards_subtitle: Lista de recompensas de reputação
+          title: Recompensas
+        share: 
+          add_tags: Acrescentar categorias aos seus tweets
+          application_id: ID da Aplicação
+          asking_from_twitter: Perguntar a partir do Twitter
+          ends_with_example: "ex: #shapado"
+          facebook_app: Configurações do Facebook
+          question_asked_to: Pergunta Feita a
+          question_must_include: A pergunta tem que ter a seguinte tag para ser enviada pelo Twitter
+          question_must_include_example: "ex: #euPergunto"
+          secret_key: Chave Secreta
+          starts_with_example: "ex: #pr"
+          title: Compartilhar
+          title_on_dlvr: Partilhar no dlvr.it
+          tweet_ends_with: Acrescentar uma tag no fim dos seus tweets
+          tweet_starts_with: Acrescentar uma tag no início dos seus tweets
+          twitter_account: A conta do Twitter à qual seus usuários farão perguntas.
+        theme: 
+          logo_legend: Faça o upload de um logotipo para o seu grupo; tem que ser inferior a 2 MB.
+          title: Defina o tema do grupo

@@ -10,3 +10,4 @@ it:
   unfavorites: 
     create: 
       success: La domanda è stata rimossa dai preferiti
+      unauthenticated: Serve un account per rimuovere preferiti

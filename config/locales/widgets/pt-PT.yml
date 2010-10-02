@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   widgets: 
     badges: 
@@ -15,6 +16,7 @@ pt-PT:
       title: Administrar widgets da barra lateral
     pages: 
       description: Este widget mostra a lista das páginas wiki
+      new: Adicionar nova página
       title: Páginas wiki
     tag_cloud: 
       description: Este widget mostra uma nuvem de categorias

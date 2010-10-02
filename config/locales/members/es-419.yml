@@ -2,15 +2,15 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      member:
+es-419: 
+  activerecord: 
+    attributes: 
+      member: 
         role: Rol
-  members:
-    form:
+  members: 
+    form: 
       login_tip: Busca cuando digitas
-    index:
+    index: 
       manage_members_title: Administrar membresías
       title: Miembros del grupo %{name}
       title_isolate: Miembros de %{name}

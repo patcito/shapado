@@ -7,24 +7,24 @@ nl:
   activerecord: 
     attributes: 
       answer: 
-        body: tekst
-        created_at: beantwoord
-        link: verwijzing
+        body: Tekst
+        created_at: Beantwoord
+        link: Verwijzing
     models: 
-      answer: antwoord
-      answers: antwoorden
+      answer: Antwoord
+      answers: Antwoorden
   answers: 
     create: 
-      flash_error: "er is iets misgegaan bij het toevoegen van uw antwoord. Denk eraan dat:\n- lege en herhaalde antwoorden niet zijn toegestaan;\n- u twintig seconden moet wachten voordat u weer een antwoord kan geven;\n- u kunt per vraag één antwoord geven."
-      flash_notice: bedankt!
+      flash_error: "Er is iets misgegaan bij het toevoegen van uw antwoord. Denk eraan dat:\n- lege en herhaalde antwoorden niet zijn toegestaan;\n- u twintig seconden moet wachten voordat u weer een antwoord kan geven;\n- u kunt per vraag één antwoord geven."
+      flash_notice: Bedankt!
     edit: 
       title: Antwoord bewerken
     form: 
-      answer_label: vraag beantwoorden
-      comment_label: opmerking bij dit antwoord plaatsen
+      answer_label: Vraag beantwoorden
+      comment_label: Opmerking bij dit antwoord plaatsen
       comment_submit: Opmerking plaatsen
-      submit: antwoorden
+      submit: Beantwoorden
     revert: 
-      title: antwoord terugdraaien
+      title: Antwoord terugdraaien
     update: 
-      flash_notice: het antwoord is aangepast.
+      flash_notice: Het antwoord is aangepast.

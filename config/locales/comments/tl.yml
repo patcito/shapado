@@ -1,0 +1,20 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  comments: 
+    create: 
+      flash_notice: Salamat sa puna mo
+    edit: 
+      title: Baguhin ang puna
+    shared: 
+      add_comment: Idagdag ang puna...
+      comment_submit: Puna
+      reply: tugon
+      said: nagsabi
+    update: 
+      flash_notice: Matagumpay na naisapanahon ang puna.
+  models: 
+    comment: puna
+    comments: mga puna

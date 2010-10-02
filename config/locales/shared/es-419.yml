@@ -2,11 +2,11 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  shared:
-    current_tags:
+es-419: 
+  shared: 
+    current_tags: 
       title: Etiquetas seleccionadas
-    topbar:
+    topbar: 
       admin: Administrar
       logged_as: Conectado como %{login}
       user_page: Mi página

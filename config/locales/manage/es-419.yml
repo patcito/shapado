@@ -3,10 +3,10 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Patcito
-es-419:
-  admin:
-    manage:
-      content:
+es-419: 
+  admin: 
+    manage: 
+      content: 
         footer: Pie de página
         head: Cabecera
         question_help: Ayuda de preguntas
@@ -14,12 +14,12 @@ es-419:
         title: Contenido personalizado
         top_bar: Barra superior
         top_bar_tip: Entre un enlace por línea
-      properties:
-        constrains:
+      properties: 
+        constrains: 
           reputation_constrains_description: Este formulario te permite configurar cuantos puntos de reputación necesitan los usuarios para efectuar una acción determinada
           reputation_constrains_subtitle: Lista de las restricciónes de repotación por acción
           title: Restricciónes
-        domain:
+        domain: 
           description: "Puedes conectar tu grupo con tu propio dominio, asi se hace:"
           instruction1: Primero tienes que conectarte en tu provedor de dominio (la pagina donde has comprado tu dominio como %{subdomain}.com).
           instruction2: Ahi, tienes que ir a la seccion DNS y crear un CNAME.
@@ -29,13 +29,13 @@ es-419:
           instruction6: Si es que apunta bien, ahora regresa aqui y entra tu nombre de dominio www.%{subdomain} en el campo de texto aqui a bajo y presiona el boton para actualizar. Si tienes preguntas, puedes hablarnos en el %{chat_url} o en el foro de soporte
           title: configura tu dominio
           warning: Estas seguro de querer cambiar tu dominio?
-        general:
+        general: 
           title: Propiedades del grupo
-        rewards:
+        rewards: 
           reputation_rewards_description: Este formulario permite configurar como los usuarios pueden ganar o perder puntos de reputación para cada acción
           reputation_rewards_subtitle: Lista de los premios de reputación
           title: Premios
-        share:
+        share: 
           add_tags: Agregar etiquetas a sus tweets
           application_id: Application ID
           asking_from_twitter: Preguntar desde Twitter
@@ -51,6 +51,6 @@ es-419:
           tweet_ends_with: Anexar una etiqueta a sus tweets
           tweet_starts_with: Anteponer una etiqueta a sus tweets
           twitter_account: La cuenta Twitter que usara tus usuarios para hacer preguntas.
-        theme:
+        theme: 
           logo_legend: Subir un logo para tu grupo, debe ser menor que 2mb.
           title: Configure el tema del grupo

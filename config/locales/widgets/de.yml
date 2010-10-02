@@ -15,6 +15,7 @@ de:
       title: Widgets der Seitenleiste verwalten
     pages: 
       description: Dieses Widget zeigt die Liste der Wiki-Seiten an
+      new: Neue Seite hinzufügen
       title: Wiki-Seiten
     tag_cloud: 
       description: Dieses Widget zeigt die Stichwortwolke an

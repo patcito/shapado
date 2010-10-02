@@ -19,7 +19,7 @@ lb:
         name: Richtegen Numm
         password: Passwuert
         password_confirmation: Passwuert confirméieren
-        preferred_languages: Sicht déi Sproochen eraus déi Dir verstitt
+        preferred_languages: "Dir wëllt Froen an dëse Sprooche liesen:"
         reputation: Reputatioun
         timezone: Zäitzone
         website: Internetsite

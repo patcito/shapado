@@ -2,12 +2,12 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  activerecord:
-    models:
+es-419: 
+  activerecord: 
+    models: 
       favorite: Favorito
       favorites: Favoritos
-  unfavorites:
-    create:
+  unfavorites: 
+    create: 
       success: La pregunta ha sido removida de tus favoritas
       unauthenticated: Necesitas tener una cuenta para remover favoritos

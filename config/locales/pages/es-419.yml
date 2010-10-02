@@ -2,33 +2,33 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      page:
+es-419: 
+  activerecord: 
+    attributes: 
+      page: 
         css: Hojas de estilo
         js: Javascript
-    models:
+    models: 
       page: Página
       pages: Páginas
-  pages:
-    actions:
+  pages: 
+    actions: 
       create_page: Crear una nueva página
       edit_page: Editar página
       title: Acciones
-    create:
+    create: 
       success: La página ha sido creada con exito.
-    edit:
+    edit: 
       title: Editando página
-    form:
+    form: 
       language_tip: Idioma de la página
       title_tip: "Titulo de la página, utiliza eso para hacer una referencia a esta página. Por ejemplo: [[FAQ|leer este faq]]"
-    index:
+    index: 
       create_page: Crear una nueva página
       title: Lista de páginas
       written_in: Escrita en %{language}
-    new:
+    new: 
       title: Nueva página
     title: Arréglame
-    update:
+    update: 
       success: La página ha sido actualizada con exito.
