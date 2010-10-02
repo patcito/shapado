@@ -9,6 +9,7 @@ class Answer < Comment
   key :flags_count, Integer, :default => 0
   key :banned, Boolean, :default => false
   key :wiki, Boolean, :default => false
+  key :anonymous, Boolean, :default => false
 
   timestamps!
 

@@ -55,7 +55,7 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new
-    @answer.safe_update(%w[body wiki], params[:answer])
+    @answer.safe_update(%w[body wiki anonymous], params[:answer])
     @question = Question.find_by_slug_or_id(params[:question_id])
     @answer.question = @question
     @answer.group_id = @question.group_id
@@ -104,9 +104,6 @@ class AnswersController < ApplicationController
       else
         @answer.errors.add(:captcha, "is invalid") if !logged_in? && !recaptcha_valid?
 
-        puts "RECAPTCHA VALID: #{recaptcha_valid?}"
-        puts "User VALID: #{@answer.user.valid?}"
-        puts "Answer VALID: #{@answer.valid?}"
         errors = @answer.errors
         errors.merge!(@answer.user.errors) if @answer.user.anonymous && !@answer.user.valid?
         puts errors.full_messages
@@ -126,7 +123,7 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       @question = @answer.question
-      @answer.safe_update(%w[body wiki version_message], params[:answer])
+      @answer.safe_update(%w[body wiki version_message anonymous], params[:answer])
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save

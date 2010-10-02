@@ -18,6 +18,7 @@ en:
     send: Send
     save: Save
     details: Details
+    post_as_anonymous: Post as Anonymous
   time:
     today: today
     ago: "%{time} ago"
