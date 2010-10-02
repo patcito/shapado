@@ -1,7 +1,7 @@
 -if !is_bot?
   .group
     = label_tag "user[name]", t(:name, :scope => "activerecord.attributes.user"), :class => "label"
-    = text_field_tag "user[name]", params[:user] ? params[:user][:name] : "", :class => "text_field"
+    = text_field_tag "user[name]", params[:user] ? params[:user][:name] : t("global.anonymous"), :class => "text_field"
   .group
     = label_tag "user[email]", t(:email, :scope => "activerecord.attributes.user"), :class => "label"
     .description
