@@ -72,11 +72,15 @@
   .post-info
     .author.user_info.vcard
       .gravatar.logo
-        = gravatar(@question.user.email.to_s, :size => 32)
+        -if !@question.anonymous
+          = gravatar(@question.user.email.to_s, :size => 32)
       .user_data
         %span.asked_by
           = t('activerecord.attributes.question.asked_by')
-        =render :partial => "users/user_mini", :locals => {:user => @question.user}
+        -if @question.anonymous
+          =t("global.anonymous")
+        -else
+          =render :partial => "users/user_mini", :locals => {:user => @question.user}
         %span.time_ago.published{:title => @question.created_at, :class => "relativetime"}
           = t("time.ago", :time => time_ago_in_words(@question.created_at))
           - if @question.wiki
