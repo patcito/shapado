@@ -16,10 +16,11 @@
       = link_to t("questions.index.hot"), root_path(:tab=>"hot"), :title => t("questions.index.hot_tooltip"), :rel => "nofollow"
 
 %div
-  #quick_question
-    =render :partial => "quick_question_box"
-  %ul.items#related_questions
-    %li
+  -if logged_in?
+    #quick_question
+      =render :partial => "quick_question_box"
+    %ul.items#related_questions
+      %li
 %ul.items#questions
   -if @questions.empty?
     .box.highlight
