@@ -1,4 +1,4 @@
--cache("tag_cloud_#{current_group.id}") do
+-cache("tag_cloud_#{current_group.id}_#{I18n.locale}") do
   %h3
     = t('.tags', :default => [:"layouts.applications.tags", :"activerecord.attributes.user.tags", "tags"])
   .content

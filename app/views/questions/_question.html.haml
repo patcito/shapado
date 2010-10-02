@@ -49,7 +49,7 @@
                 = hidden_field_tag "source", questions_path, :id =>  "source_#{question.id}"
                 = image_submit_tag("dialog-ok.png", :name=>"vote_up", :value=>"1", :title => t("votes.control.to_vote_up"), :class => "quick-vote-button")
 
-      -cache("question_on_index_#{question.id}") do
+      -cache("question_on_index_#{question.id}_#{I18n.locale}") do
         %h3= link_to title, question_path(question), :title => truncate(strip_tags(question.body), :length => 200)
         .tag-list
           -if question.tags.empty? && logged_in? && (current_user.can_modify?(@question) || current_user.can_retag_others_questions_on?(current_group))
@@ -71,7 +71,7 @@
             wiki
     .clear
 -else
-  -cache("mini_question_on_index_#{question.id}") do
+  -cache("mini_question_on_index_#{question.id}_#{I18n.locale}") do
     %li.item{:class => "#{class_for_question(question)} #{local_assigns[:lite] ? 'lite' : ''}"}
       .stats
         .box.answers{:class => question.accepted ? "accepted" : "" }

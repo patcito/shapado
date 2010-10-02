@@ -25,6 +25,7 @@ module AuthenticatedSystem
 
     if user
       after_authentication(user)
+      sweep_new_users(current_group)
     end
 
     user
