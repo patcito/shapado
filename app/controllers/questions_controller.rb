@@ -324,7 +324,7 @@ class QuestionsController < ApplicationController
   # PUT /questions/1.xml
   def update
     respond_to do |format|
-      @question.safe_update(%w[title body language tags wiki adult_content version_message  anonymous], params[:question])
+      @question.safe_update(%w[title body language tags wiki adult_content version_message], params[:question])
       @question.updated_by = current_user
       @question.last_target = @question
 

@@ -98,8 +98,7 @@ class AnswersController < ApplicationController
         format.js do
           render(:json => {:success => true, :message => flash[:notice],
             :html => render_to_string(:partial => "questions/answer",
-                                      :object => @answer,
-                                      :locals => {:question => @question})}.to_json)
+                                      :locals => {:answer => @answer, :question => @question})}.to_json)
         end
       else
         @answer.errors.add(:captcha, "is invalid") if !logged_in? && !recaptcha_valid?
@@ -123,7 +122,7 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       @question = @answer.question
-      @answer.safe_update(%w[body wiki version_message anonymous], params[:answer])
+      @answer.safe_update(%w[body wiki version_message], params[:answer])
       @answer.updated_by = current_user
 
       if @answer.valid? && @answer.save

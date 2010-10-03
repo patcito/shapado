@@ -44,7 +44,7 @@
       .avatar.logo
         = gravatar(answer.user.email.to_s, :size => 32) unless answer.anonymous
       .user
-        -unless answer.anonymous
+        -if !answer.anonymous
           = render :partial => "users/user_mini", :locals => {:user => answer.user}
           -unless answer.user.hide_country
             .adr

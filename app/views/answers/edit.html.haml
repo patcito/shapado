@@ -10,9 +10,6 @@
         .left{:style => "width: 49.5%"}
           = f.label :wiki, "Wiki", :class => "radio"
           = f.check_box :wiki, :class => "checkbox"
-        .left{:style => "width: 49.5%"}
-          = f.label :anonymous, t("scaffold.post_as_anonymous"), :class => "radio"
-          = f.check_box :anonymous, :class => "checkbox"
       = f.submit t("scaffold.update"), :class => "buttton"
       = t("global.or")
       = link_to t('scaffold.cancel'), question_path(@question), :class => "button cancel"
