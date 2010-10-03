@@ -32,7 +32,7 @@ class TwitterBot
           puts "WARNING: #{e} #{e.backtrace.join("\n\t")}"
         end
       end
-      sleep 5.minutes
+      sleep 600
     end
   end
 
