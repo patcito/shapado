@@ -24,6 +24,6 @@
 .markdown
   -if safe_page?(@page)
     -body = current_group.wysiwyg_editor ? CGI.unescapeHTML(@page.body) : @page.body
-    = markdown(body, :raw => true)
+    = markdown(body, :raw => true, :sanitize => false)
   -else
     = markdown(@page.body)
