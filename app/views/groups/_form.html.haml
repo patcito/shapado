@@ -5,7 +5,7 @@
   = form.text_field :name, :class => "text_field"
 
 .group
-  -unless has_custom_domain?
+  -unless @group.has_custom_domain?
     = form.label :subdomain, "URL", :class => "label"
     %div
       %span.description
