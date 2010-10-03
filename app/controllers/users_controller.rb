@@ -75,14 +75,16 @@ class UsersController < ApplicationController
                                           :order => order,
                                           :per_page => 10,
                                           :group_id => current_group.id,
-                                          :banned => false)
+                                          :banned => false,
+                                          :anonymous => false)
 
     @a_sort, order = active_subtab(:a_sort)
     @answers = @user.answers.paginate(:page=>params[:answers_page],
                                       :order => order,
                                       :group_id => current_group.id,
                                       :per_page => 10,
-                                      :banned => false)
+                                      :banned => false,
+                                      :anonymous => false)
 
     @badges = @user.badges.paginate(:page => params[:badges_page],
                                     :group_id => current_group.id,

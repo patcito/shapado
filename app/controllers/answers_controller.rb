@@ -214,31 +214,34 @@ class AnswersController < ApplicationController
     sweep_question(@question)
 
     Question.update_last_target(@question.id, @answer)
-    @answer.user.stats.add_answer_tags(*@question.tags)
+
     @question.answer_added!
-
     current_group.on_activity(:answer_question)
-    @answer.user.on_activity(:answer_question, current_group)
 
-    search_opts = {"notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
-                    :_id => {:$ne => @answer.user.id},
-                    :select => ["email"]}
+    unless @answer.anonymous
+      @answer.user.stats.add_answer_tags(*@question.tags)
+      @answer.user.on_activity(:answer_question, current_group)
 
-    users = User.all(search_opts.merge(:_id => @question.watchers))
-    users.push(@question.user) if !@question.user.nil? && @question.user != @answer.user
-    followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
+      search_opts = {"notification_opts.#{current_group.id}.new_answer" => {:$in => ["1", true]},
+                      :_id => {:$ne => @answer.user.id},
+                      :select => ["email"]}
 
-    users ||= []
-    followers ||= []
-    (users - followers).each do |u|
-      if !u.email.blank? && u.notification_opts.new_answer
-        Notifier.deliver_new_answer(u, current_group, @answer, false)
+      users = User.all(search_opts.merge(:_id => @question.watchers))
+      users.push(@question.user) if !@question.user.nil? && @question.user != @answer.user
+      followers = @answer.user.followers(:languages => [@question.language], :group_id => current_group.id)
+
+      users ||= []
+      followers ||= []
+      (users - followers).each do |u|
+        if !u.email.blank? && u.notification_opts.new_answer
+          Notifier.deliver_new_answer(u, current_group, @answer, false)
+        end
       end
-    end
 
-    followers.each do |u|
-      if !u.email.blank? && u.notification_opts.new_answer
-        Notifier.deliver_new_answer(u, current_group, @answer, true)
+      followers.each do |u|
+        if !u.email.blank? && u.notification_opts.new_answer
+          Notifier.deliver_new_answer(u, current_group, @answer, true)
+        end
       end
     end
   end

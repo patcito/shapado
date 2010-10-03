@@ -68,7 +68,7 @@
   .secondary-navigation{:class => @q_sort||"votes"}
     .navtitle
       %span.counter
-        = number_with_delimiter(@favorites.total_entries)
+        = number_with_delimiter(@questions.total_entries)
       =t(:questions, :scope => "activerecord.models")
     %ul
       %li.newest
