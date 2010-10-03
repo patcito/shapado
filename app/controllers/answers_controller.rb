@@ -181,7 +181,7 @@ class AnswersController < ApplicationController
         if @answer.wiki
           if !current_user.can_edit_wiki_post_on?(@answer.group)
             allow_update = false
-            reputation = @question.group.reputation_constrains["edit_wiki_post"]
+            reputation = @answer.group.reputation_constrains["edit_wiki_post"]
             flash[:error] = I18n.t("users.messages.errors.reputation_needed",
                                         :min_reputation => reputation,
                                         :action => I18n.t("users.actions.edit_wiki_post"))
