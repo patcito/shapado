@@ -229,13 +229,17 @@ class Group
   end
 
   def self.find_file_from_params(params, request)
-    if request.path =~ /\/(logo|css|favicon)\/([^\/?]+)/
+    if request.path =~ /\/(logo|css|favicon)\/([^\/\.?]+)/
       @group = Group.find_by_slug_or_id($2, :select => [:file_list])
       case $1
       when "logo"
         @group.logo
       when "css"
-        @group.custom_css if @group.has_custom_css?
+        if @group.has_custom_css?
+          css=@group.custom_css
+          css.content_type = "text/css"
+          css
+        end
       when "favicon"
         @group.custom_favicon if @group.has_custom_favicon?
       end
