@@ -271,17 +271,17 @@ class ApplicationController < ActionController::Base
   end
 
   def logo_group_path(group)
-    "/_files/groups/logo?id=#{group.id}"
+    "/_files/groups/logo/#{group.id}"
   end
   helper_method :logo_group_path
 
   def css_group_path(group)
-    "/_files/groups/css?id=#{group.id}"
+    "/_files/groups/css/#{group.id}"
   end
   helper_method :css_group_path
 
   def favicon_group_path(group)
-    "/_files/groups/favicon?id=#{group.id}"
+    "/_files/groups/favicon/#{group.id}"
   end
   helper_method :favicon_group_path
 end

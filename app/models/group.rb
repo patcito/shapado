@@ -229,14 +229,16 @@ class Group
   end
 
   def self.find_file_from_params(params, request)
-    @group = Group.find_by_slug_or_id(params["id"], :select => [:file_list])
-
-    if request.env["PATH_INFO"] =~ /logo/
-      @group.logo
-    elsif request.env["PATH_INFO"] =~ /css/ && @group.has_custom_css?
-      @group.custom_css
-    elsif request.env["PATH_INFO"] =~ /favicon/ && @group.has_custom_favicon?
-      @group.custom_favicon
+    if request.path =~ /\/(logo|css|favicon)\/([^\/?]+)/
+      @group = Group.find_by_slug_or_id($2, :select => [:file_list])
+      case $1
+      when "logo"
+        @group.logo
+      when "css"
+        @group.custom_css if @group.has_custom_css?
+      when "favicon"
+        @group.custom_favicon if @group.has_custom_favicon?
+      end
     end
   end
 
