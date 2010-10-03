@@ -174,7 +174,7 @@ class AnswersController < ApplicationController
   end
 
   def check_update_permissions
-    @answer = Answer.find(params[:id])
+    @answer = Answer.find!(params[:id])
 
     allow_update = true
     unless @answer.nil?

@@ -62,6 +62,8 @@ $(document).ready(function() {
     var button = $(this)
 
     button.attr('disabled', true)
+    if($("#wysiwyg_editor").length > 0 )
+      $("#wysiwyg_editor").htmlarea('updateTextArea');
     $.ajax({ url: form.attr("action"),
       data: form.serialize()+"&format=js",
       dataType: "json",
@@ -101,6 +103,8 @@ $(document).ready(function() {
     var commentable = $(this).parents(".commentable");
     var comments = commentable.find(".comments")
     var button = $(this)
+    if($("#wysiwyg_editor").length > 0 )
+      $("#wysiwyg_editor").htmlarea('updateTextArea');
 
     button.attr('disabled', true)
     $.ajax({ url: form.attr("action"),
@@ -170,7 +174,7 @@ $(document).ready(function() {
   $(".edit_comment").live("click", function() {
     var comment = $(this).parents(".comment")
     var link = $(this)
-    link.hide()
+    link.hide();
     $.ajax({
       url: $(this).attr("href"),
       dataType: "json",
@@ -190,6 +194,8 @@ $(document).ready(function() {
         var textarea = form.find('textarea');
         form.submit(function() {
           button.attr('disabled', true)
+          if($("#wysiwyg_editor").length > 0 )
+            $("#wysiwyg_editor").htmlarea('updateTextArea');
           $.ajax({url: form.attr("action"),
                   dataType: "json",
                   type: "PUT",
