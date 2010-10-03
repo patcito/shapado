@@ -107,7 +107,7 @@ class Group
 
   # TODO: store this variable
   def has_custom_domain?
-    @has_custom_domain ||= self[:domain] !~ AppConfig.domain
+    @has_custom_domain ||= self[:domain].to_s !~ /#{AppConfig.domain}/
   end
 
   def disallow_javascript
