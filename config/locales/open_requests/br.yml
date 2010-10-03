@@ -1,0 +1,22 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Fulup
+br: 
+  open_requests: 
+    create: 
+      flash_notice: Krouet eo bet ervat ho reked addigeriñ
+    destroy: 
+      flash_notice: Dilamet eo bet ervat ho reked addigeriñ
+    edit: 
+      title: Kemmañ ar goulenn addigeriñ
+    form: 
+      request_opening_details: Goulenn ma vo addigoret ar goulenn-mañ
+    index: 
+      title: Roll ar rekedoù addigeriñ
+    model: 
+      prural_name: Goulennoù addigeriñ
+    new: 
+      title: Goulenn addigeriñ
+    update: 
+      flash_notice: Hizivaet eo bet ervat ho reked addigeriñ

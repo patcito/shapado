@@ -15,8 +15,19 @@ br:
     create: 
       flash_error: Ne c'hellit ket danevelliñ an dra-se
       flash_notice: Trugarez evit ho tanevell
+    destroy: 
+      flash_notice: Distaolet eo bet ho panniel ervat.
+    edit: 
+      title: Kemmañ banniel ar %{model}
     form: 
       attention: Ezhomm 'zo eus evezh ar verourien
       label: Mar plij danevellit gant evezh
       offensive: Kunujennoù, komzoù tagus, droug-komzoù pe pozioù kasoni
       spam: Strob
+    model: 
+      messages: 
+        already_requested: Bannielet eo bet ar %{model}-mañ ganeoc'h c'hoazh
+    new: 
+      title: Bannielañ ar %{model}
+    update: 
+      flash_notice: Hizivaet eo bet merk ar goulenn ervat.

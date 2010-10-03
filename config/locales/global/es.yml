@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
+# Author: Translationista
 es: 
   feeds: 
     feed: Flujo
@@ -13,6 +14,7 @@ es:
     user: Subscribirse a las preguntas del usuario
   global: 
     active: Activar
+    anonymous: Anónimo
     by: por
     current: Actual
     from: desde %{site}
@@ -47,6 +49,7 @@ es:
     edit: Editar
     more: Más...
     new: Agregar un(a) nuevo(a) %{model}
+    post_as_anonymous: Publicar cómo anónimo
     save: Guardar
     send: Enviar
     show: Ver

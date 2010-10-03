@@ -15,6 +15,7 @@ pt-BR:
     user: Subscrever as perguntas do usuário
   global: 
     active: Ativar
+    anonymous: Anônimo
     by: por
     current: Atual
     from: de %{site}
@@ -49,6 +50,7 @@ pt-BR:
     edit: Editar
     more: Mais ...
     new: Adicionar novo %{model}
+    post_as_anonymous: Publicar como anônimo
     save: Salvar
     send: Enviar
     show: Mostrar

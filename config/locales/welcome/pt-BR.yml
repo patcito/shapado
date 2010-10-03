@@ -1,6 +1,7 @@
 # Messages for Brazilian Portuguese (Português do Brasil)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Vgeorge
 pt-BR: 
   welcome: 
@@ -16,6 +17,7 @@ pt-BR:
           foss: livre/código aberto
           joel: vou tornar o joel mais rico?
           multilanguage: multi-idioma
+          multitopic: multi-tópicos
         shapado: 
           adaptable: sim!
           foss: sim!
@@ -28,6 +30,19 @@ pt-BR:
           joel: sim!
           multilanguage: não
           multitopic: não
+      prices: 
+        cols: 
+          onsite: no site
+        shapado: 
+          large: aproximadamente $500
+          medium: <=== concordo
+          onsite: aproximadamente $0 em seu próprio servidor
+          small: aproximadamente de $50 a $100/mês na maior parte dos servidores de hospedagem
+        stackexchange: 
+          large: $1299/mês
+          medium: $999/mês
+          onsite: $2500/mês
+          small: $129/mês
     feedback: 
       captcha_error: Resolva um cálculo matemático simples, por favor
       email_description: Forneça o seu e-mail para podermos responder à sua mensagem

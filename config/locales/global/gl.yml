@@ -13,6 +13,7 @@ gl:
     user: Subscribirse ás preguntas do usuario
   global: 
     active: Activar
+    anonymous: Anónimo
     by: por
     current: Actual
     from: desde %{site}
@@ -47,6 +48,7 @@ gl:
     edit: Editar
     more: Máis...
     new: Engadir un novo %{model}
+    post_as_anonymous: Publicar como anónimo
     save: Gardar
     send: Enviar
     show: Mostrar

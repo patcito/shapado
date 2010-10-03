@@ -1,6 +1,7 @@
 # Messages for Brazilian Portuguese (Português do Brasil)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Vgeorge
 pt-BR: 
   widgets: 
@@ -14,6 +15,8 @@ pt-BR:
       description: Use as setas para mover os seus widgets
       title: Administrar widgets da barra lateral
     pages: 
+      description: Este widget mostra a lista das páginas wiki
+      new: Adicionar nova página
       title: Páginas wiki
     tag_cloud: 
       description: Este widget mostra uma nuvem de categorias

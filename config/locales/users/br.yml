@@ -25,7 +25,7 @@ br:
         name: Anv gwir
         password: Ger-tremen
         password_confirmation: Kadarnadur ar ger-tremen
-        preferred_languages: Dibabit ar yezhoù a anavezit
+        preferred_languages: "Er yezhoù-mañ e fell deoc'h lenn goulennoù :"
         preferred_tags: Tikedennoù karetañ
         reputation: Brud
         timezone: Gwerzhid-eur
@@ -44,6 +44,8 @@ br:
       vote_to_close_any_question: Goulenn serriñ pep goulenn
       vote_to_close_own_question: Goulenn serriñ goulenn an-unan
       vote_up: Votiñ a-du
+    anonymous_form: 
+      never_shown: N'eo ket bet diskouezet biskoazh c'hoazh
     create: 
       flash_error: Ho tigarez, disosupl eo bet krouiñ ho kont. Klaskit diwezhatoc'hik pe kit e darempred gant ur merour (a-us emañ al liamm)
       flash_notice: Trugarez deoc'h da vezañ en em enrollet
@@ -58,6 +60,7 @@ br:
       avatar_tip: Kemmañ skeudenn ho profil gant gravatar
       give_advice_notification: Degemer posteloù kelaouiñ diwar-benn ar goulennoù liammet ouzh ho tachenn varregezh
       information: Titouroù
+      language: Yezh implijet evit etrefas al lec'hienn
       new_answer_notification: Degemer ur postel kelaouiñ pa vez respontoù nevez
       notifications: Kemennoù
       reports_notification: Resev un danevell gant oberiantizoù diwezhañ ar strollad (evit merour ar strollad nemetken)

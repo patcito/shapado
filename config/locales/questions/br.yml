@@ -106,6 +106,10 @@ br:
       related_questions: Goulennoù kar
       request_closing: Goulenn serriñ
       request_closing_details: Goulenn ma vo serret ar goulenn-mañ
+      request_opening: Goulenn ma vo addigoret
+      request_opening_details: Goulenn ma vo addigoret ar goulenn-mañ
+      requested_close_as: Goulennet hoc'h eus serriñ ar goulenn-mañ evel
+      requested_reopening: Ganeoc'h eo bet goulennet addigeriñ ar goulenn-mañ
       retag: Adtikedenniñ
       retract_request: Tennañ ar goulenn
       share: Kenrannañ ar goulenn-mañ war

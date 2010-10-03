@@ -13,6 +13,8 @@ te:
     tag: ట్యాగుకి చందా చేరండి
     user: ఈ వాడుకరి ప్రశ్నలకి చందా చేరండి
   global: 
+    active: చేతనంచేయి
+    anonymous: అజ్ఞాత
     by: చే
     current: ప్రస్తుత
     from: "%{site} నుంచి"
@@ -47,6 +49,7 @@ te:
     edit: సరిదిద్దు
     more: ఇంకా...
     new: కొత్త %{model}ని చేర్చండి
+    post_as_anonymous: అజ్ఞాతంగా వ్రాయండి
     save: భద్రపరుచు
     send: పంపించు
     show: చూపించు

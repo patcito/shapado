@@ -14,6 +14,7 @@ br:
     user: En em enskrivit da goulennoù an implijer
   global: 
     active: Gweredekaat
+    anonymous: Dizanv
     by: gant
     current: Red
     from: eus %{site}
@@ -34,6 +35,9 @@ br:
       one: "%{count} gwech"
       other: "%{count} gwech"
       zero: Morse
+  pagination: 
+    next: War-lerc'h &raquo;
+    previous: "&laquo; Kent"
   scaffold: 
     add: Ouzhpennañ
     back: Distreiñ
@@ -45,6 +49,7 @@ br:
     edit: Kemmañ
     more: Muioc'h...
     new: Ouzhpennañ %{model}
+    post_as_anonymous: Postañ er mod dizanv
     save: Enrollañ
     send: Kas
     show: Diskouez

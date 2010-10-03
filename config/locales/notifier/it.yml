@@ -9,7 +9,7 @@ it:
       message2: "Descrizione del badge:"
       message3: I tuoi badge sono visbili sulla tua %{user_page}
     favorited: 
-      message1: "%{user} ha aggiunto ai preferiti la tua domanda in {%group}"
+      message1: "%{user} ha aggiunto ai preferiti la tua domanda in %{group}"
       message2: "Testo della tua domanda:"
       message3: "Lo si può vedere qui:"
     follow: 

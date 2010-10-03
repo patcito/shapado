@@ -13,6 +13,7 @@ ia:
     user: Subscriber a questiones de usatores
   global: 
     active: Activar
+    anonymous: Anonyme
     by: per
     current: Actual
     from: de %{site}
@@ -47,6 +48,7 @@ ia:
     edit: Modificar
     more: Plus...
     new: Adder nove %{model}
+    post_as_anonymous: Publicar anonymemente
     save: Salveguardar
     send: Inviar
     show: Monstrar

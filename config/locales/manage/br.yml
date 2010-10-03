@@ -24,7 +24,9 @@ br:
           instruction1: Da gentañ e rankit mont war al lec'hienn e lec'h m'hoc'h eus prennet ho anv domani, evel %{subdomain}.com.
           instruction2: Amañ e rankit mont er rann DNS evit krouiñ ur CNAME.
           instruction3: Dibabit "www" pe forzh peseurt anv all evit ho CNAME.
+          instruction4: "Goude-se, er vaezienn ostiz pe pal, merkit anv ho lec'hienn shapado a-vremañ : %{domain}."
           instruction5: Ur wech graet an dra-mañ, goude un eurvezh pe ziv, e rankfe biziañ ho tomani www.%{subdomain} davet %{appdomain}.
+          instruction6: Pa vez kont evel-se e c'hallit distreiñ amañ ha merkañ hoc'h anv domani www.%{subdomain} er vaezienn a-is ha klikañ war ar bouton 'hizivaat'. M'hoc'h eus goulennoù, goulennit ouzhimp dre %{chat_url} pe war hor forom skoazellañ.
           title: Kefluniañ ho anv domani
           warning: Ha sur oc'h kaout c'hoant kemmañ ho domani ?
         general: 
@@ -34,10 +36,21 @@ br:
           reputation_rewards_subtitle: Roll ar profoù brud
           title: Prizioù
         share: 
+          add_tags: Ouzhpennañ tikedennoù d'ho tweetadennoù
           application_id: Application ID
+          asking_from_twitter: Sevel goulennoù adalek Twitter
           ends_with_example: "da skouer #shapado"
+          facebook_app: Perzhioù an arload Facebook
+          question_asked_to: Goulenn savet ouzh
+          question_must_include: Ret eo d'an dikedenn da-heul bezañ merket er goulenn a-raok gallout bezañ kaset war Twitter.
           question_must_include_example: "da skouer #goulennAran"
+          secret_key: Alc'hwez kuzh
+          starts_with_example: "da sk. #qa"
           title: Rannañ
+          title_on_dlvr: Rannañ war dlvr.it
+          tweet_ends_with: Ouzhpennañ un dikedenn d'ho tweetadennoù
+          tweet_starts_with: Merkañ un dikedenn a-raok ho twitadennoù
+          twitter_account: Anv ar gont Twitter ma vo savet o goulennoù gant hoc'h implijerien.
         theme: 
           logo_legend: Enporzhit ul logo evit ho strollad. D'ar muiañ e c'hell bezañ 2 Mo.
           title: Kefluniañ tem ar strollad

@@ -1,6 +1,7 @@
 # Messages for Breton (Brezhoneg)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Fulup
 # Author: Y-M D
 br: 
   close_requests: 
@@ -8,6 +9,8 @@ br:
       flash_notice: Goulenn serriñ bet krouet ervat
     destroy: 
       flash_notice: Goulenn serriñ bet dilamet ervat
+    edit: 
+      title: Kemmañ ar goulenn serriñ
     form: 
       close_with_reason: Serriñ ar goulenn-mañ en ur implijout an abeg-se
       dupe: Doublenn
