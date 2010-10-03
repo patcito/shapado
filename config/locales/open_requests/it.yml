@@ -1,0 +1,22 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  open_requests: 
+    create: 
+      flash_notice: Richiesta di riapertura creata
+    destroy: 
+      flash_notice: Richiesta di riapertura cancellata
+    edit: 
+      title: Modifica richiesta di riapertura
+    form: 
+      request_opening_details: Richiesta di riapertura della domanda
+    index: 
+      title: Elenco delle domande di riapertura
+    model: 
+      prural_name: Richieste di riapertura
+    new: 
+      title: Richiesta di riapertura
+    update: 
+      flash_notice: Richiesta di riapertura modificata

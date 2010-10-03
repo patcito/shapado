@@ -4,13 +4,13 @@
 # Author: Siebrand
 nl: 
   ads: 
-    ad_links: nieuwe advertentie van het type %{type} toevoegen
+    ad_links: Nieuwe advertentie van het type %{type} toevoegen
     create: 
-      success: de advertentie is aangemaakt.
+      success: De advertentie is aangemaakt.
     index: 
-      add_adbard: nieuwe advertentie van het type adbard toevoegen
+      add_adbard: Nieuwe advertentie van het type Ad Bard toevoegen
       add_adsense: nieuwe Google AdSense advertentie toevoegen
-      title: advertenties
-    name: "naam:"
-    position: "positie:"
-    title: nieuwe advertentie van het type %{type} toevoegen
+      title: Advertenties
+    name: "Naam:"
+    position: "Positie:"
+    title: Nieuwe advertentie van het type %{type} toevoegen

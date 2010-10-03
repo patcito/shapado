@@ -1,0 +1,21 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  comments: 
+    create: 
+      flash_notice: Дзякуй за Ваш камэнтар
+    edit: 
+      title: Рэдагаваць камэнтар
+    shared: 
+      add_comment: Дадаць камэнтар…
+      comment_submit: Камэнтаваць
+      reply: Адказаць
+      said: паведаміў(-ла)
+    update: 
+      flash_notice: Камэнтар быў пасьпяхова абноўлены.
+  models: 
+    comment: Камэнтар
+    comments: Камэнтары

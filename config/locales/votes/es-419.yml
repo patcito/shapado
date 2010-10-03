@@ -2,24 +2,24 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  activerecord:
-    models:
+es-419: 
+  activerecord: 
+    models: 
       vote: Voto
       votes: Votos
-  votes:
-    control:
+  votes: 
+    control: 
       have_voted_down: Clic para deshacer tu desaprobación
       have_voted_up: Clic para deshacer tu aprobación
       to_vote_down: Clic para desaprobar
       to_vote_up: Clic para aprobar
-    create:
+    create: 
       flash_error: No puedes votar esta
       flash_notice: ¡Gracias por tu voto!
       unauthenticated: Los usuarios anónimos no pueden votar
-    destroy:
+    destroy: 
       flash_notice: Tu voto ha sido revocado exitosamente.
-    model:
-      messages:
+    model: 
+      messages: 
         closed_question: No puedes votar en cualquier entrada que pertenezcan a una pregunta cerrada
         vote_down_comment: Los comentarios no pueden ser votados negativamente

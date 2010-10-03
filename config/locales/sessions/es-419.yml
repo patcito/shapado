@@ -3,14 +3,14 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Patcito
-es-419:
-  sessions:
-    create:
+es-419: 
+  sessions: 
+    create: 
       flash_error: No pudo ingresar como '%{login}'
       flash_notice: Ingreso exitoso
-    destroy:
+    destroy: 
       flash_notice: Has cerrado la sesión.
-    new:
+    new: 
       log_in: Ingresar
       not_registered: ¿Todavía no estas registrado?
       registered: ¿Ya estas registrado?

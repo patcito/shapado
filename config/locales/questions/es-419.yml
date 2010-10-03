@@ -3,10 +3,10 @@
 # Export driver: syck
 # Author: Danke7
 # Author: Patcito
-es-419:
-  activerecord:
-    attributes:
-      question:
+es-419: 
+  activerecord: 
+    attributes: 
+      question: 
         answers: Respuestas
         asked_by: Preguntado por
         body: Contenido
@@ -19,27 +19,27 @@ es-419:
         updated_by: actualizado por
         views: Visitas
         votes: Votos
-    models:
+    models: 
       question: Pregunta
       questions: Preguntas
-  questions:
-    answer:
+  questions: 
+    answer: 
       add_comment: Comentar esta respuesta...
       flag: Reportar abuso
       pick_answer: Escoger como solución
       unset_answer: ¿Quitar como solución?
-    create:
+    create: 
       flash_notice: La pregunta fue creada exitosamente.
-    edit:
+    edit: 
       title: Editar pregunta
-    flag:
+    flag: 
       title: Reportar abuso en esta pregunta
-    form:
+    form: 
       adult_content: Esta pregunta tiene contenido para adultos
       body_tip: ¿Cuál es tu pregunta? por favor se descriptivo.
       language_tip: Selecciona el idioma de tu pregunta.
       tags_tip: Usa etiquetas para añadir más información sobre tu pregunta.
-    index:
+    index: 
       active: Activas
       active_tooltip: Preguntas que se han actualizado recientemente
       ask_question: Pregunte
@@ -54,42 +54,42 @@ es-419:
       unanswered_questions: Preguntas sin contestar
       votes: Votos
       votes_tooltip: Preguntas más votadas
-    model:
-      messages:
+    model: 
+      messages: 
         empty_tags: Disculpa, debes usar al menos una etiqueta.
         title_too_long: El titulo es demasiado largo. No puede tener mas de 100 letras
         too_many_tags: Disculpa, solo puedes entrar 9 etiquetas maximo.
         too_short: Demasiado corto. Por favor, usa mas palabras que %{count} para ser mas especifico.
-    move:
+    move: 
       group_label: "Mover la pregunta a el group con slug:"
       submit: Mover!
       title: "Mover la pregunta: %{title}"
-    move_to:
+    move_to: 
       group_dont_exists: El grupo %{group} no existe
       success: Pregunta movida a %{group}
-    new:
+    new: 
       how_to_ask: Como preguntar
       title: Pregunte
-    question:
+    question: 
       accepted_tooltip: Esta pregunta tiene una respuesta aceptada
-    retag:
+    retag: 
       title: Re-etiquetar
-    retag_form:
+    retag_form: 
       cancel: Cancelar
       submit: Actualizar las etiquetas!
       title: Actualizar las etiquetas
-    retag_to:
+    retag_to: 
       failure: Disculpa, las etiquetas no han podido ser actualizadas.
       success: Las etiquetas han sido actualizados con exito.
-    revert:
+    revert: 
       title: Revertir la pregunta
-    shared:
+    shared: 
       flag: Reportar abuso
-    show:
+    show: 
       accepted_tooltip: Una de las respuestas fue aceptada como correcta
       another_answers: Otras respuestas
       answers: Respuestas
-      answers_title:
+      answers_title: 
         one: "%{count} respuesta"
         other: "%{count} respuestas"
       asked_on: preguntado en
@@ -121,23 +121,23 @@ es-419:
       unwatch_tooltip: Dejar de seguir esta pregunta
       viewed: visto
       watch_tooltip: Seguir esta pregunta
-    solve:
+    solve: 
       flash_notice: La pregunta ha sido resuelta
-    tags:
+    tags: 
       filter: Buscar tags
       title: Etiquetas
       tooltip: Muestra las preguntas etiquetadas con %{tag}
-    unanswered:
+    unanswered: 
       empty: Este grupo no tiene preguntas no contestar.
       expert: Expertos
       my_tags: Mis etiquetas
       tags: Etiquetas sin respuesta
       title: Preguntas no contestadas
-    unsolve:
+    unsolve: 
       flash_notice: La pregunta ahora no esta resuelta.
-    unwatch:
+    unwatch: 
       success: Ya no recibirás notificaciones via email por cada respuesta a esta pregunta.
-    update:
+    update: 
       flash_notice: La pregunta fue actualizada exitosamente.
-    watch:
+    watch: 
       success: Ahora usted recibirá notificaciones via email por cada respuesta a esta pregunta.

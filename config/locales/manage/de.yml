@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Kghbln
+# Author: McDutchie
 de: 
   admin: 
     manage: 
@@ -38,13 +39,13 @@ de:
           add_tags: Deinen „Tweets“ Stichworte hinzufügen
           application_id: Anwendungsnummer
           asking_from_twitter: Fragen aus Twitter heraus stellen
-          ends_with_example: "d. h. #shapado"
+          ends_with_example: "z. B. #shapado"
           facebook_app: Einstellungen für die „Facebook-App“
           question_asked_to: Frage richtete sich an
           question_must_include: Die Frage muss folgendes Stichwort enthalten, damit sie veröffentlicht werden kann
-          question_must_include_example: "d. h. #iAsk"
+          question_must_include_example: "z. B. #iAsk"
           secret_key: Geheimschlüssel
-          starts_with_example: "d. h. #qa"
+          starts_with_example: "z. B. #qa"
           title: freigeben
           title_on_dlvr: Auf „dlvr.it“ veröffentlichen
           tweet_ends_with: Deinem „Tweet“ ein Stichwort hintanstellen

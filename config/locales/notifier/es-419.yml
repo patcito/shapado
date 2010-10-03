@@ -3,37 +3,37 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Patcito
-es-419:
-  notifier:
-    earned_badge:
+es-419: 
+  notifier: 
+    earned_badge: 
       message1: Has ganado una insigna %{badge} en %{app}
       message2: "La descripcion de la insigna:"
       message3: Puedes ver todas tus insignas en tu %{user_page}
-    favorited:
+    favorited: 
       message1: "%{user} agregó tu pregunta como un favorito en %{group}"
       message2: "El texto de tu pregunta:"
       message3: "Puedes verlo aquí:"
-    follow:
+    follow: 
       message1: "%{user} está ahora siguiendo tus preguntas y respuestas en %{app}"
       message2: Puedes seguirlo haciendo click en el botón "seguir" en su %{user_page}
-    give_advice:
+    give_advice: 
       message1: "%{user} acaba de hacer una pregunta que usted podria contestar:"
       message2: "Para contestar, responde a este mensaje en el siguiente enlace:"
       message3: "O, si conoces a alguien que pueda contestar, enviale este enlace:"
       message4: Si no tenemos respuesta de ti pronto, le preguntaremos a otra persona; puedes contestar la pregunta cuando quieras.
-    global:
+    global: 
       hi: Hola %{user},
       user_page: página de usuario
-    new_answer:
+    new_answer: 
       message: "%{user} respondió %{new_answer} a la pregunta %{question}"
-    new_comment:
+    new_comment: 
       message: "%{user} comento %{new_comment} en la pregunta %{question}"
-    new_feedback:
+    new_feedback: 
       message1: El usuario %{user} <%{email}> mando un feedback
       message2: Un usuario anónimo mando un feedback desde la dirección IP %{ip}
       message3: "Dirección de correo: %{email}"
       message4: "Objeto: %{subject}"
-    report:
+    report: 
       message1: Reporte para el groupo %{group.name}
       message2: Desde el %{since}
       message3: "%{questions} preguntas han sido creadas"

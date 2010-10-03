@@ -8,6 +8,8 @@ it:
     forbidden: 
       explanation: Diritti insufficienti per accedere alla pagina.
       title: Accesso negato
+    go_to: Vai alla pagina %{link}
+    help_us_answer: Aiutaci a rispondere %{link}
     internal_error: 
       explanation: Il problema ci è stato notificato, a breve lo esamineremo.
       title: Qualcosa non ha funzionato.
@@ -16,3 +18,6 @@ it:
       title: Pagina non trovata.
     options_label: "Altre cose da provare:"
     search: Ricerca
+    unprocessable_entity: 
+      explanation: Probabilmente si è tentato di cambiare qualcosa senza averne i diritti.
+      title: La modifca richiesta è stata rifiutata.

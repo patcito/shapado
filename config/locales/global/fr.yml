@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: McDutchie
 # Author: Patcito
+# Author: Verdy p
 fr: 
   feeds: 
     feed: Flux
@@ -34,6 +35,9 @@ fr:
       one: "%{count} fois"
       other: "%{count} fois"
       zero: Jamais
+  pagination: 
+    next: Suivant »
+    previous: « Précédent
   scaffold: 
     add: Ajouter
     back: Retour

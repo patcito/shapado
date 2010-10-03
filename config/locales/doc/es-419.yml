@@ -3,11 +3,11 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Patcito
-es-419:
-  doc:
-    chat:
+es-419: 
+  doc: 
+    chat: 
       title: Soporte por chat
-    plans:
+    plans: 
       15millions: 15 millions de paginas vistas/mes
       1million: 1 million de paginas vistas/mes
       247_all_support: Soporte web, email, chat y telefono las 24/7

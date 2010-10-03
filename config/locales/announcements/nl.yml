@@ -6,13 +6,13 @@ nl:
   activerecord: 
     attributes: 
       announcement: 
-        ends_at: eindigt om
-        message: bericht
-        only_anonymous: alleen voor anonieme gebruikers
-        starts_at: begint om
+        ends_at: Eindigt om
+        message: Bericht
+        only_anonymous: Alleen voor anonieme gebruikers
+        starts_at: Begint om
   announcements: 
     actions: 
-      delete: verwijderen
+      delete: Verwijderen
       title: Handelingen
     create: 
       success: De aankondiging is aangemaakt.

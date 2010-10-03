@@ -1,0 +1,33 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Jim-by
+be-TARASK: 
+  close_requests: 
+    create: 
+      flash_notice: Запыт на закрыцьцё пасьпяхова створаны
+    destroy: 
+      flash_notice: Запыт на закрыцьцё пасьпяхова выдалены
+    edit: 
+      title: Рэдагаваць запыт на закрыцьцё
+    form: 
+      close_with_reason: Закрыць гэтае пытаньне па гэтай прычыне
+      dupe: Капіяваць
+      no_question: Не зьяўляецца пытаньнем
+      not_relevant: Не істотна
+      ot: Не па тэме
+      request_closing_details: Запыт на закрыцьцё гэтага пытаньня
+      spam: спам
+    index: 
+      title: Сьпіс запытаў на закрыцьцё
+    model: 
+      attributes: 
+        comment: Камэнтар
+        reason: Прычына
+        user: Карыстальнік
+      messages: 
+        already_requested: Вы ўжо даслалі запыт на закрыцьцё гэтага пытаньня
+      name: Запыт на закрыцьцё
+      prural_name: Запыты на закрыцьцё
+    update: 
+      flash_notice: Запыт на закрыцьцё пасьпяхова зьменены

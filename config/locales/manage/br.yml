@@ -34,6 +34,7 @@ br:
           reputation_rewards_subtitle: Roll ar profoù brud
           title: Prizioù
         share: 
+          application_id: Application ID
           ends_with_example: "da skouer #shapado"
           question_must_include_example: "da skouer #goulennAran"
           title: Rannañ

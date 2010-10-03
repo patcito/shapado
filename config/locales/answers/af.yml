@@ -16,4 +16,5 @@ af:
     create: 
       flash_notice: Dankie!
     form: 
+      comment_submit: Opmerking
       submit: Antwoorde

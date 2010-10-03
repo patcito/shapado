@@ -33,6 +33,9 @@ ia:
       one: "%{count} vice"
       other: "%{count} vices"
       zero: Nunquam
+  pagination: 
+    next: Sequente &raquo;
+    previous: "&laquo; Precedente"
   scaffold: 
     add: Adder
     back: Retro

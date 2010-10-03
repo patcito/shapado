@@ -14,8 +14,19 @@ tl:
     create: 
       flash_error: hindi mo ito maibabandila
       flash_notice: salamat sa iyong ulat
+    destroy: 
+      flash_notice: Matagumpay na napawalang-bisa ang iyong bandila.
+    edit: 
+      title: Baguhin ang bandila ng %{model}
     form: 
       attention: kailangan ng pagpansin ng namumuno
       label: mangyaring ibandila ng may pag-iingat
       offensive: pananalitang nakapagpapagalit, mapagmalabis o mapoot
       spam: manlulusob
+    model: 
+      messages: 
+        already_requested: Binandilaan mo na ang ganitong %{model}
+    new: 
+      title: Bandilaan ang %{model}
+    update: 
+      flash_notice: Matagumpay na naisapanahon ang bandila ng pagtatanong.

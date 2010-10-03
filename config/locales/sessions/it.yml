@@ -7,6 +7,8 @@ it:
     create: 
       flash_error: Impossibile accedere come '%{login}'
       flash_notice: Accesso effettuato
+    destroy: 
+      flash_notice: Sei stato disconnesso.
     new: 
       log_in: Accedi
       not_registered: Non sei registrato?
@@ -14,6 +16,7 @@ it:
       remember_me: Ricordami
       sign_in: Iscriviti
       signup: Iscriviti
+      with_authentication: Accedi con il nostro sistema di autenticazione
       with_facebook: Accedi con Facebook
       with_openid: Accedi con OpenID
       with_twitter: Accedi con Twitter

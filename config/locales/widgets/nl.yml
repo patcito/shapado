@@ -15,6 +15,7 @@ nl:
       title: Menubalkwidgets beheren
     pages: 
       description: In deze widget wordt de lijst met wikipagina's weergegeven
+      new: Nieuwe pagina toevoegen
       title: Wikipagina's
     tag_cloud: 
       description: In deze widget wordt de woordenwolk weergegeven

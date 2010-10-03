@@ -1,0 +1,144 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+# Author: Luckas Blade
+# Author: Vgeorge
+pt-BR: 
+  activerecord: 
+    attributes: 
+      question: 
+        answers: Respostas
+        asked_by: Perguntado por
+        body: Conteúdo
+        closed: Fechada
+        created_at: Perguntado
+        language: Língua
+        tags: Categorias
+        title: Título
+        updated_at: atualizada
+        updated_by: atualizada por
+        views: Visualizações
+        votes: Votos
+    models: 
+      question: Pergunta
+      questions: Perguntas
+  questions: 
+    answer: 
+      add_comment: Adicionar comentário...
+      flag: Reportar
+      pick_answer: Escolher como solução
+      unset_answer: Retirar como solução?
+    create: 
+      flash_notice: A pergunta foi criada com sucesso.
+    edit: 
+      title: Editar pergunta
+    flag: 
+      title: Reportar pergunta
+    form: 
+      adult_content: Esta pergunta envolve conteúdo para adultos.
+      body_tip: Qual é a sua pergunta? Seja descritivo.
+      language_tip: Selecione o idioma da sua pergunta.
+      tags_tip: Use categorias para fornecer mais informação sobre a sua pergunta.
+    index: 
+      active: Ativas
+      active_tooltip: Perguntas atualizadas recentemente
+      ask_question: Perguntar
+      empty: Ninguém fez nenhuma pergunta ainda, seja o primeiro!
+      help_to_answer: Ajude-nos a responder
+      hot: Populares
+      hot_tooltip: Perguntas com maior atividade dos últimos 5 dias
+      newest: Mais recentes
+      newest_tooltip: Perguntas mais recentes
+      oldest: Mais antigas
+      title: Todas as perguntas
+      unanswered_questions: Perguntas sem resposta
+      votes: Votos
+      votes_tooltip: Perguntas com mais votos
+    model: 
+      messages: 
+        empty_tags: Desculpe, você tem que usar pelo menos uma categoria.
+        title_too_long: O título é muito longo. Não pode conter mais do que 100 caracteres.
+        too_many_tags: Desculpe, mas você só pode introduzir até 9 categorias.
+        too_short: Parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
+    move: 
+      group_label: "Mover para o grupo:"
+      submit: Mover!
+      title: "Mover a pergunta: %{title}"
+    move_to: 
+      group_dont_exists: O grupo %{group} não existe
+      success: Pergunta movida para o grupo %{group}
+    new: 
+      how_to_ask: Como perguntar
+      title: Perguntar
+    question: 
+      accepted_tooltip: Esta pergunta tem uma resposta que foi aceita
+    retag: 
+      title: Recategorizar
+    retag_form: 
+      cancel: Cancelar
+      submit: Atualizar categorias!
+      title: Atualizar categorias
+    retag_to: 
+      failure: Desculpe, não foi possível atualizar as categorias.
+      success: As categorias foram atualizadas.
+    revert: 
+      title: Reverter a pergunta
+    shared: 
+      flag: Reportar
+    show: 
+      accepted_tooltip: Uma das respostas foi aceitada como correta
+      another_answers: Outras respostas
+      answers: Respostas
+      answers_title: 
+        one: "%{count} resposta"
+        other: "%{count} respostas"
+      asked_on: perguntado em
+      ban: Banir
+      close: Fechar
+      close_reason: "A pergunta foi fechada pelo seguinte motivo:"
+      edit_request: Editar pedido
+      favorite_tooltip: Adicionar esta pergunta às suas favoritas
+      flag: Reportar
+      flagged_as: Reportada como
+      flags: Reportada como
+      last_activity: Atividade mais recente
+      open: Aberta
+      related_questions: Perguntas relacionadas
+      request_closing: Pedir encerramento
+      request_closing_details: Pedir para fechar esta pergunta
+      request_opening: Solicitar reabertura
+      request_opening_details: Solicitar a reabertura desta pergunta
+      requested_close_as: Você solicitou o encerramento desta pergunta como
+      requested_reopening: Você solicitou a reabertura desta pergunta
+      retag: Recategorizar
+      retract_request: Retirar o pedido
+      share: Compartilhar esta pergunta em
+      share_on: Compartilhar esta pergunta em %{site}
+      solution: Solução
+      to_answer_question: para responder a esta pergunta
+      unauthenticated_retag: É necessária uma conta para recategorizar perguntas
+      unfavorite_tooltip: Remover esta pergunta das suas favoritas
+      unwatch_tooltip: Deixar de vigiar esta pergunta
+      viewed: visitada
+      watch_tooltip: Vigiar esta pergunta
+    solve: 
+      flash_notice: A pergunta foi resolvida.
+    tags: 
+      filter: Pesquisar categorias
+      title: Categorias
+      tooltip: Mostrar perguntas na categoria %{tag}
+    unanswered: 
+      empty: Este grupo não contém perguntas sem resposta.
+      expert: Peritos
+      my_tags: As minhas categorias
+      tags: Categorias sem respostas
+      title: Perguntas sem resposta
+    unsolve: 
+      flash_notice: A pergunta deixou de estar resolvida.
+    unwatch: 
+      success: Você não receberá mais notificações por e-mail para cada nova resposta a esta pergunta.
+    update: 
+      flash_notice: A pergunta foi atualizada com sucesso.
+    watch: 
+      success: Você receberá notificações por correio electrónico a cada nova resposta a esta pergunta.

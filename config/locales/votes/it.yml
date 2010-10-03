@@ -8,10 +8,18 @@ it:
       vote: Voto
       votes: Voti
   votes: 
+    control: 
+      have_voted_down: Clicca per annullare il voto negativo
+      have_voted_up: Clicca per annullare il voto positivo
+      to_vote_down: Clicca per voto negativo
+      to_vote_up: Clicca per voto positivo
     create: 
       flash_error: Impossibile votare questo
       flash_notice: Grazie per il voto!
       unauthenticated: Gli utenti anonimi non possono votare
+    destroy: 
+      flash_notice: Il voto è stato revocato
     model: 
       messages: 
         closed_question: Non è possibile votare i post appartenenti a una domanda chiusa
+        vote_down_comment: Non si può votare negativamente un commento

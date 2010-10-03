@@ -6,6 +6,7 @@ it:
   activerecord: 
     attributes: 
       page: 
+        css: Fogli di stile
         js: JavaScript
     models: 
       page: Pagina

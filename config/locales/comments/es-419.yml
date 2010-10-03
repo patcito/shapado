@@ -2,19 +2,19 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  comments:
-    create:
+es-419: 
+  comments: 
+    create: 
       flash_notice: Gracias por tu comentario
-    edit:
+    edit: 
       title: Editar comentario
-    shared:
+    shared: 
       add_comment: Añadir comentario...
       comment_submit: Comentar
       reply: Contestar
       said: dijo
-    update:
+    update: 
       flash_notice: El comentario ha sido actualizado con exito.
-  models:
+  models: 
     comment: Comentario
     comments: Comentarios

@@ -33,6 +33,9 @@ te:
       one: "%{count} సారి"
       other: "%{count} సార్లు"
       zero: ఎప్పటికీ వద్దు
+  pagination: 
+    next: తదుపరి &raquo;
+    previous: "&laquo; గత"
   scaffold: 
     add: చేర్చు
     back: వెనక్కి

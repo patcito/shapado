@@ -15,6 +15,7 @@ es:
       title: Administrar los widgets de la barra lateral
     pages: 
       description: Este widget muestra las paginas wiki
+      new: Añadir una página nueva
       title: Paginas wiki
     tag_cloud: 
       description: Este widget muestra una nube de etiquetas

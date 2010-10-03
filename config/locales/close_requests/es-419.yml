@@ -2,15 +2,15 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  close_requests:
-    create:
+es-419: 
+  close_requests: 
+    create: 
       flash_notice: Solicitud de cierre creada con éxito
-    destroy:
+    destroy: 
       flash_notice: Solicitud de cierre eliminada con éxito
-    edit:
+    edit: 
       title: Editar la solicitud de cierre.
-    form:
+    form: 
       close_with_reason: Cerrar esta pregunta usando esta razón
       dupe: Duplicada
       no_question: No es realmente una pregunta
@@ -18,16 +18,16 @@ es-419:
       ot: Fuera de tema
       request_closing_details: Solicitar el cierre de esta pregunta
       spam: spam
-    index:
+    index: 
       title: Lista de solicitudes de cierre
-    model:
-      attributes:
+    model: 
+      attributes: 
         comment: Comentario
         reason: Razón
         user: Usuario
-      messages:
+      messages: 
         already_requested: Ya has solicitado cerrar esta pregunta
       name: Solicitud de cierre
       prural_name: Solicitudes de cierre
-    update:
+    update: 
       flash_notice: Solicitud de cierre actualizada con éxito

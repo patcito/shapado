@@ -6,148 +6,148 @@
 nl: 
   activerecord: 
     models: 
-      badge: speldje
-      badges: speldjes
+      badge: Speldje
+      badges: Speldjes
   badges: 
     index: 
-      description: alle speldjes die u kunt verdienen. Deel uw kennis, verdien speldjes.
+      description: Alle speldjes die u kunt verdienen. Deel uw kennis, verdien speldjes.
       title: speldjes
     shared: 
       addict: 
-        description: heeft de site twintig dagen achter elkaar bezocht
+        description: Heeft de site twintig dagen achter elkaar bezocht
         name: Verslaafde
       autobiographer: 
-        description: heeft alle velden in het gebruikersprofiel ingevuld
-        name: autobiograaf
+        description: Heeft alle velden in het gebruikersprofiel ingevuld
+        name: Autobiograaf
       celebrity: 
-        description: meer dan 100 volgers
-        name: beroemdheid
+        description: Meer dan honderd volgers
+        name: Beroemdheid
       citizen_patrol: 
-        description: eerste bericht gemarkeerd
-        name: burgerpatrouille
+        description: Eerste bericht gemarkeerd
+        name: Burgerpatrouille
       civic_duty: 
-        description: driehonderd keer gestemd
-        name: burgerplicht
+        description: Heeft driehonderd keer gestemd
+        name: Burgerplicht
       cleanup: 
-        description: eerste keer teruggedraaid
-        name: opruimen
+        description: Eerste keer teruggedraaid
+        name: Opruimen
       commentator: 
-        description: heeft tien opmerkingen achtergelaten
+        description: Heeft tien opmerkingen achtergelaten
         name: Commentator
       critic: 
-        description: heeft voor de eerste keer negatief beoordeeld
+        description: Heeft voor de eerste keer negatief beoordeeld
         name: Criticus
       disciplined: 
-        description: heeft een eigen bericht met een score van drie of hoger verwijderd
-        name: gedisciplineerd
+        description: Heeft een eigen bericht met een score van drie of hoger verwijderd
+        name: Gedisciplineerd
       editor: 
-        description: eerste bericht bewerkt
+        description: Eerste bericht bewerkt
         name: Redacteur
       effort_medal: 
-        description: honderd positieve stemmen halen
+        description: Heeft honderd positieve stemmen gekregen
         name: Inspanningsmedaille
       enlightened: 
-        description: heeft een eerste antwoord dat tenminste tien keer positief is beoordeeld
-        name: verlicht
+        description: Heeft een eerste antwoord dat tenminste tien keer positief is beoordeeld
+        name: Verlicht
       famous_question: 
-        description: heeft een vraag gesteld die tienduizend keer bekeken is
+        description: Heeft een vraag gesteld die tienduizend keer bekeken is
         name: Beroemde vraag
       fanatic: 
-        description: heeft de site honderd dagen achter elkaar bezocht
+        description: Heeft de site honderd dagen achter elkaar bezocht
         name: Fanaticus
       favorite_question: 
-        description: heeft een vraag gesteld die door 25 gebruikers als favoriet is ingesteld
+        description: Heeft een vraag gesteld die door 25 gebruikers als favoriet is ingesteld
         name: Favoriete vraag
       friendly: 
-        description: voor de eerste keer iemand gaan volgen
-        name: vriendelijk
+        description: Is voor de eerste keer iemand gaan volgen
+        name: Vriendelijk
       good_answer: 
-        description: met een antwoord dat een gemiddelde van meer dan 25 stemmen bereikt
+        description: Heeft een antwoord dat een gemiddelde van meer dan 25 stemmen bereikt
         name: Goed antwoord
       good_question: 
-        description: heeft een vraag die een gemiddelde van meer dan 25 stemmen bereikt
+        description: Heeft een vraag die een gemiddelde van meer dan 25 stemmen bereikt
         name: Goede vraag
       great_answer: 
-        description: antwoord dat honderd keer positief is beoordeeld
-        name: perfect antwoord
+        description: Antwoord dat honderd keer positief is beoordeeld
+        name: Perfect antwoord
       great_question: 
-        description: vraag die honderd keer positief beoordeeld is
+        description: Vraag die honderd keer positief beoordeeld is
         name: supervraag
       guru: 
-        description: geef een oplossing voor een vraag met een gemiddelde van meer dan 40 stemmen
+        description: Heeft een oplossing gegeven voor een vraag met een gemiddelde van meer dan 40 stemmen
         name: Goeroe
       inquirer: 
-        description: heeft een eerste vraag gesteld
+        description: Heeft een eerste vraag gesteld
         name: Onderzoeker
       interesting_person: 
-        description: meer dan tien volgers
-        name: interessant persoon
+        description: Heeft meer dan tien volgers
+        name: Interessant persoon
       merit_medal: 
-        description: krijg tweehonderd positieve stemmen
+        description: Heeft tweehonderd positieve stemmen gekregen
         name: Medaille van verdienste
       necromancer: 
-        description: heeft een vraag beantwoord meer dan twee maanden na het stellen met tenminste vijf stemmen
-        name: geestenbezweerder
+        description: Heeft een vraag beantwoord meer dan twee maanden na het stellen met tenminste vijf stemmen
+        name: Geestenbezweerder
       nice_answer: 
-        description: antwoord dat tien keer positief is beoordeeld
-        name: mooi antwoord
+        description: Antwoord dat tien keer positief is beoordeeld
+        name: Mooi antwoord
       nice_question: 
-        description: vraag die tien keer positief beoordeeld is
+        description: Vraag die tien keer positief beoordeeld is
         name: goede vraag
       notable_question: 
-        description: heeft een vraag gesteld die 2500 keer bekeken is
+        description: Heeft een vraag gesteld die 2500 keer bekeken is
         name: Vermeldenswaardige vraag
       organizer: 
-        description: eerste herlabeling
+        description: Eerste herlabeling
         name: organisator
       peer_pressure: 
-        description: heeft eigen bericht met een score van -3 of lager verwijderd
-        name: groepsdruk
+        description: Heeft eigen bericht met een score van -3 of lager verwijderd
+        name: Groepsdruk
       pioneer: 
-        description: een van de eerste geregistreerde gebruikers
+        description: Een van de eerste geregistreerde gebruikers
         name: Pionier
       popstar: 
-        description: vijfhonderd positieve stemmen, maximaal 10 negatieve stemmen
+        description: Vijfhonderd positieve stemmen, maximaal tien negatieve stemmen
         name: Popster
       popular_person: 
-        description: heeft meer dan vijftig volgers
-        name: populiare gebruiker
+        description: Heeft meer dan vijftig volgers
+        name: Populaire gebruiker
       popular_question: 
         description: Heeft een vraag gesteld die duizend keer bekeken is
         name: Populaire vraag
       rockstar: 
-        description: duizend positieve stemmen, maximaal tien negatieve stemmen
+        description: Duizend positieve stemmen, maximaal tien negatieve stemmen
         name: Rockster
       scholar: 
-        description: eerste geaccepteerde antwoord op een eigen vraag
-        name: geleerde
+        description: Eerste geaccepteerde antwoord op een eigen vraag
+        name: Geleerde
       self-learner: 
-        description: eigen vraag beantwoord met tenminste drie positieve beoordelingen
-        name: zelflerend
+        description: Eigen vraag beantwoord met tenminste drie positieve beoordelingen
+        name: Zelflerend
       service_medal: 
-        description: driehonderd positieve stemmen
+        description: Driehonderd positieve stemmen
         name: Dienstmedaille
       shapado: 
-        description: heeft de site acht dagen achter elkaar bezocht
+        description: Heeft de site acht dagen achter elkaar bezocht
       stellar_question: 
-        description: vraag die door honderd gebruikers als favoriet is aangegeven
-        name: bovennatuurlijk goede vraag
+        description: Vraag die door honderd gebruikers als favoriet is aangegeven
+        name: Bovennatuurlijk goede vraag
       student: 
-        description: heeft een vraag gesteld met tenminste één positieve stem
+        description: Heeft een vraag gesteld met tenminste één positieve stem
         name: Student
       supporter: 
-        description: heeft de eerste keer positief gestemd
+        description: Heeft de eerste keer positief gestemd
         name: Supporter
       troubleshooter: 
-        description: het eerste antwoord gegeven
+        description: Heeft voor de eerste keer antwoord gegeven
         name: Probleemoplosser
       tutor: 
         description: geef een antwoord op een vraag met een gemiddelde van meer dan twee stemmen
         name: Leermeester
     show: 
-      description: "gebruikers die dit speldje recentelijk hebben verdiend:"
+      description: "Gebruikers die dit speldje recentelijk hebben verdiend:"
       earned: verdiend
       for_tag_bronze: tweehonderd stemmen in label %{tag}
       for_tag_gold: duizend stemmen in label %{tag}
-      for_tag_silver: vierhonderd stemmen in label %{tag}
-      title: speldje %{type}
+      for_tag_silver: Vierhonderd stemmen in label %{tag}
+      title: Speldje %{type}

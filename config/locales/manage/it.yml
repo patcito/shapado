@@ -1,0 +1,55 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  admin: 
+    manage: 
+      content: 
+        footer: Piè di pagina
+        head: header
+        question_help: Aiuto formulazione
+        question_prompt: Prompt domanda
+        title: Contenuto personalizzato
+        top_bar: Barra superiore
+        top_bar_tip: Inserire un link per riga
+      properties: 
+        constrains: 
+          reputation_constrains_description: E' possibile configurare quanti punti reputazione sono necessari per effettuare una certa operazione
+          reputation_constrains_subtitle: Elenco della reputazione richiesta per ogni azione
+          title: Requisiti
+        domain: 
+          description: "E' possibile configurare il sito in modo che sia accessibile attraverso il vostro dominio personale. Di seguito la procedura da seguire:"
+          instruction1: Per farlo è necessario configurare il dominio con il proprio provider, ovvero dal sito presso il quale è stato acquistato il dominio, es. %{subdomain}.com.
+          instruction2: Lì va configurato il DNS creando un nuovo CNAME.
+          instruction3: Si può usare 'www' o qualunque altra cosa come CNAME.
+          instruction4: "Poi, nel campo host o destinazione, inserire il dominio attualmente usato su Shapado: %{domain}."
+          instruction5: Una volta eseguito, dopo un'ora o poco più, il dominio www.%{subdomain} dovrebbe puntare a %{appdomain}.
+          instruction6: A modifica avvenuta, sarà possibile immettere in questa pagina il dominio scelto (es. www.%{subdomain}) e premere il tasto "Aggiorna". Per qualunque dubbio, si può chiedere su %{chat_url} oppure nei forum di supporto.
+          title: Imposta il dominio
+          warning: Si è sicuri di voler cambiare i dati del dominio?
+        general: 
+          title: Proprietà del gruppo
+        rewards: 
+          reputation_rewards_description: E' possibile configurare come gli utenti acquisiscono e perdono punti reputazione per una determinata azione
+          reputation_rewards_subtitle: Elenco dei premi reputazione
+          title: Ricompense
+        share: 
+          add_tags: Tag da aggiungere ai tweet
+          application_id: ID applicazione
+          asking_from_twitter: Usa twitter per aggiungere domande
+          ends_with_example: "ad es. #shapado"
+          facebook_app: Impostazioni Facebook App
+          question_asked_to: Domande poste a
+          question_must_include: La domanda deve avere il seguente tag per essree twittata
+          question_must_include_example: "ad es. #iAsk"
+          secret_key: Secret Key
+          starts_with_example: "ad es. #qa"
+          title: Condividi
+          title_on_dlvr: Condividi su dlvr.it
+          tweet_ends_with: Tag da aggiungere in coda ai tweet
+          tweet_starts_with: Tag da aggiungere in testa ai tweet
+          twitter_account: L'account Twitter a cui gli utenti indirizzeranno le domande.
+        theme: 
+          logo_legend: Carica un logo per il gruppo. Può essere al massimo 2MB.
+          title: Imposta il tema del gruppo

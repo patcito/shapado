@@ -33,6 +33,9 @@ mk:
       one: "%{count} пат"
       other: "%{count} пати"
       zero: никогаш
+  pagination: 
+    next: Следна &raquo;
+    previous: "&laquo; Претходна"
   scaffold: 
     add: додај
     back: назад

@@ -1,0 +1,22 @@
+# Messages for Tagalog (Tagalog)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: AnakngAraw
+tl: 
+  sessions: 
+    create: 
+      flash_error: Hindi ka mailagdang papasok bilang '%{login}'
+      flash_notice: Matagumpay na nakalagda
+    destroy: 
+      flash_notice: Naalis ka na sa pagkakalagda.
+    new: 
+      log_in: Lumagda
+      not_registered: Hindi pa nagpapatala?
+      registered: Nakapagpatala ka na?
+      remember_me: Tandaan ako
+      sign_in: Lumagdang papasok
+      signup: Magpatala
+      with_authentication: Lumagda sa pamamagitan ng aming sistema ng pagpapatunay
+      with_facebook: Lumagda sa pamamagitan ng Facebook
+      with_openid: Lumagda sa pamamagitan ng OpenID
+      with_twitter: Lumagda sa pamamagitan ng Twitter

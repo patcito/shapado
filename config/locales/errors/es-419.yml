@@ -2,21 +2,21 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  errors:
-    forbidden:
+es-419: 
+  errors: 
+    forbidden: 
       explanation: No tienes los derechos de acceso requeridos para esta página.
       title: Acceso denegado
     go_to: Ir a la %{link}
     help_us_answer: Ayudanos a responder %{link}
-    internal_error:
+    internal_error: 
       explanation: Ya se nos ha informado de este problema y lo resolveremos a la brevedad.
       title: Lo sentimos pero algo salió mal.
-    not_found:
+    not_found: 
       explanation: Has digitado mal la direccion o esta página ha sido movida.
       title: Pagina no encontrada.
     options_label: "Otras cosas que puedes hacer:"
     search: Buscar
-    unprocessable_entity:
+    unprocessable_entity: 
       explanation: Quizás no tenías acceso a lo que intentaste cambiar.
       title: El cambio que querías ha sido rechazado.

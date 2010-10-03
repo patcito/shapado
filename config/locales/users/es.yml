@@ -86,7 +86,7 @@ es:
       title: Registrar un nuevo usuario
     show: 
       follow: Seguir
-      title: Usuario {user}
+      title: Usuario %{user}
       unfollow: Dejar de seguir
       views: vistas
     unfollow: 

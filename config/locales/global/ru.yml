@@ -34,6 +34,9 @@ ru:
       one: "%{count} раз"
       other: "%{count} раз(а)"
       zero: Никогда
+  pagination: 
+    next: Следующая &raquo;
+    previous: "&laquo; Предыдущая"
   scaffold: 
     add: Добавить
     back: Назад

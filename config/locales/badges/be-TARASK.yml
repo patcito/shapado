@@ -9,6 +9,9 @@ be-TARASK:
       badge: Ідэнтыфікатар
       badges: Ідэнтыфікатары
   badges: 
+    index: 
+      description: Усе ўзнагароды, якія Вы зарабілі. Дзяліцеся сваімі ведамі і зарабіце ўзнагароды.
+      title: узнагароды
     shared: 
       addict: 
         description: Наведваў сайт кожны дзень на працягу 20 дзён
@@ -39,15 +42,19 @@ be-TARASK:
         name: Дысцыплінаваны
       editor: 
         description: Першы раз рэдагавалі паведамленьне
+        name: Рэдактар
       effort_medal: 
         description: Атрымаў 100 галасоў «за»
+        name: Мэдаль за намаганьні
       enlightened: 
         description: Першы адказ быў прыняты хаця б 10 галасамі «за»
         name: Асьвечаны
       famous_question: 
         description: Задаў пытаньне з 10000 праглядаў
+        name: Вядомае пытаньне
       fanatic: 
         description: Наведваў сайт кожны дзень на працягу 100 дзён
+        name: Фанатык
       favorite_question: 
         description: Улюблёнае пытаньне 25 удзельнікаў
         name: Улюблёнае пытаньне
@@ -57,6 +64,9 @@ be-TARASK:
       good_answer: 
         description: Мае адказ, які атрымаў у сярэднім больш за 25 галасоў
         name: Добры адказ
+      good_question: 
+        description: Мае пытаньне, якое атрымала у сярэднім больш за 25 галасоў
+        name: Добрае пытаньне
       great_answer: 
         description: За адказ прагаласавалі «за» 100 разоў
         name: Выдатны адказ
@@ -74,6 +84,10 @@ be-TARASK:
         name: Цікавая асоба
       merit_medal: 
         description: Атрымаў 200 галасоў «за»
+        name: Мэдаль за заслугі
+      necromancer: 
+        description: Адказаў на пытаньне, з ня менш чым 5 галасамі, праз болей чым 60 дзён
+        name: Чараўнік
       nice_answer: 
         description: За адказ прагаласавалі «за» 10 разоў
         name: Добры адказ
@@ -82,6 +96,7 @@ be-TARASK:
         name: Добрае пытаньне
       notable_question: 
         description: Задаў пытаньне з 2500 праглядамі
+        name: Значнае пытаньне
       organizer: 
         description: Першая зьмена тэгаў
         name: Арганізатар
@@ -90,6 +105,7 @@ be-TARASK:
         name: Ціск атачэньня
       pioneer: 
         description: Адзін з першых зарэгістраваных карыстальнікаў
+        name: Піянэр
       popstar: 
         description: 500 галасоў «за», і ня болей 10 галасоў «супраць»
         name: Поп-зорка
@@ -101,12 +117,16 @@ be-TARASK:
         name: Папулярнае пытаньне
       rockstar: 
         description: 1000 галасоў «за», і ня болей 10 галасоў «супраць»
+        name: Рок-зорка
       scholar: 
         description: Першы раз прыняў адказ на ўласнае пытаньне
         name: Эрудыт
       self-learner: 
         description: Адказаў на ўласнае пытаньне, хаця б з 3 галасамі «за»
         name: Самастойна навучаючыся
+      service_medal: 
+        description: Атрымаў 300 галасоў «за»
+        name: Мэдаль за службу
       shapado: 
         description: Наведваў сайт кожны дзень на працягу 8 дзён
       stellar_question: 
@@ -114,8 +134,20 @@ be-TARASK:
         name: Зорнае пытаньне
       student: 
         description: Задаў першае пытаньне, з хаця б адным голасам «за»
+        name: Вучань
       supporter: 
         description: Першы раз прагаласавалі «за»
         name: Прыхільнік
       troubleshooter: 
         description: Адказаў першы раз
+        name: Вырашаючы праблемы
+      tutor: 
+        description: Вырашыў пытаньне з сярэдняй колькасьцю галасоў больш за 2
+        name: Настаўнік
+    show: 
+      description: "Карыстальнікі, якія зарабілі гэтую узнагароду. Апошнія ўзнагароджаныя:"
+      earned: зароблена
+      for_tag_bronze: 200 галасоў у тэге %{tag}
+      for_tag_gold: 1000 галасоў у тэге %{tag}
+      for_tag_silver: 400 галасоў у тэге %{tag}
+      title: Узнагарода %{type}

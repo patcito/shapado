@@ -1,0 +1,93 @@
+# Messages for Brazilian Portuguese (Português do Brasil)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giro720
+# Author: Luckas Blade
+# Author: Vgeorge
+pt-BR: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: ativado em
+        activation_code: Código de ativação
+        age: Idade
+        asked_by: feita por
+        avatar: Imagem do perfil
+        birthday: Data de nascimento
+        created_at: registado
+        current_password: Senha atual
+        email: E-mail
+        fullname: Nome completo
+        hide_country: Não mostrar o meu país
+        language: Idioma
+        language_filter: Filtro por idioma
+        last_logged_at: visto
+        login: Nome de usuário
+        name: Nome verdadeiro
+        password: Senha
+        password_confirmation: Confirmação da senha
+        preferred_languages: "Pretende ler perguntas nos seguintes idiomas:"
+        preferred_tags: Categorias preferidas
+        reputation: Reputação
+        timezone: Fuso horário
+        updated_at: atualizado em
+        website: Website
+    models: 
+      user: Usuário
+      users: Usuários
+  users: 
+    actions: 
+      edit_others_posts: Editar publicações de outros
+      edit_wiki_post: Editar publicações wiki
+      flag: Reportar
+      retag_others_questions: Recategorizar perguntas de outros
+      vote_down: Voto negativo
+      vote_to_close_any_question: Pedir o encerramento de qualquer pergunta
+      vote_to_close_own_question: Pedir encerramento de sua própria pergunta
+      vote_up: Votar positivo
+    anonymous_form: 
+      never_shown: nunca mostrado
+    create: 
+      flash_error: Desculpe, não foi possível criar essa conta. Tente novamente ou contate um administrador (link está acima), por favor.
+      flash_notice: Obrigado por seu registro!
+    edit: 
+      enable_twitter: Ativar as suas contas no Facebook ou no Twitter
+      submit: Gravar
+      title: Definições
+    follow: 
+      flash_notice: O usuário %{user} foi adicionado a sua lista de amigos
+    form: 
+      activities_notification: Receber por e-mail notificações de atividades de sistema, como condecorações dadas, novos seguidores, etc.
+      avatar_tip: Alterar a imagem do perfil usando o Gravatar
+      give_advice_notification: Receber por e-mail notificações de perguntas na sua área de especialidade
+      information: Informação
+      language: Idioma usado para a interface da página
+      new_answer_notification: Receber por e-mail notificações de novas respostas
+      notifications: Notificações
+      reports_notification: Receber um relatório das atividades mais recentes do grupo (só para administradores de grupos)
+      show_more_lang: Mostrar mais línguas
+    index: 
+      empty: Este grupo não tem membros. Participe, aderindo a este grupo.
+      filter: Busca usuários
+      name: Nome
+      name_tooltip: Usuários por ordem alfabética
+      newest: Mais recentes
+      newest_tooltip: Usuários que se acabam de aderir
+      oldest: Mais antigos
+      oldest_tooltip: Usuários que foram os primeiros a aderir
+      reputation: Reputação
+      reputation_tooltip: Usuários por ordem decrescente de reputação
+      title: Todos os usuários
+    messages: 
+      errors: 
+        reputation_needed: Você precisa de uma reputação mínima de %{min_reputation} para %{action}
+    new: 
+      submit: Registar
+      title: Registrar como um novo usuário
+    show: 
+      follow: Seguir
+      title: Usuário %{user}
+      unfollow: Deixar de seguir
+      views: visitas
+    unfollow: 
+      flash_notice: O usuário %{user} foi removido da sua lista de amigos

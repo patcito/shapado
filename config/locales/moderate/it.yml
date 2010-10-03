@@ -1,0 +1,16 @@
+# Messages for Italian (Italiano)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Giallu
+it: 
+  admin: 
+    moderate: 
+      index: 
+        all: Tutti
+        ban: Ban
+        banned: Domande bannate
+        content: Contenuto
+        flagged: Domande segnalate
+        item_title: Titolo
+        need_tags: Modifica tag
+        title: Modera

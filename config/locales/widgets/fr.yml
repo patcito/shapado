@@ -15,6 +15,7 @@ fr:
       title: administrer les widgets de la barre latérale
     pages: 
       description: Ce widget liste les pages wiki
+      new: Ajouter une nouvelle page
       title: Pages wiki
     tag_cloud: 
       description: Ce widget montre un nuage de tags

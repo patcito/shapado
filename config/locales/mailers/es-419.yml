@@ -2,23 +2,23 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  mailers:
-    notifications:
-      earned_badge:
+es-419: 
+  mailers: 
+    notifications: 
+      earned_badge: 
         subject: Has ganado una insignia en %{group}!
-      favorited:
+      favorited: 
         subject: "%{login} puso tu pregunta como favorita!"
-      follow:
+      follow: 
         subject: "%{login} ahora te esta siguiendo en %{app}"
-      give_advice:
+      give_advice: 
         friend_subject: "Tu amigo necesita ayuda: %{question_title}"
         subject: "Necesitamos tu ayuda: %{question_title}"
-      new_answer:
+      new_answer: 
         subject_friend: Tu amigo %{login} respondio la pregunta %{title}
         subject_other: "%{login} respondio la pregunta %{title}"
         subject_owner: "%{login} respondio su pregunta %{title}"
-      new_comment:
+      new_comment: 
         subject: "%{login} comento en %{group}"
-      report:
+      report: 
         subject: Reporte para el grupo %{group} de %{app}

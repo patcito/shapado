@@ -15,6 +15,7 @@ it:
       title: Gestione widget della barra laterale
     pages: 
       description: Questo widget mostra la lista delle pagine wiki
+      new: Aggiungi nuova pagina
       title: Pagine wiki
     tag_cloud: 
       description: Questo widget visualizza una tag cloud

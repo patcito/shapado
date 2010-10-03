@@ -2,13 +2,13 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
-es-419:
-  searches:
-    form:
+es-419: 
+  searches: 
+    form: 
       clear: Limpiar
       search_box_title: Comprueba si tu pregunta ya ha sido hecha
       tags_tip: User [etiqueta] para especificar etiquetas.
-    index:
+    index: 
       empty: Tu búsqueda no produjo ningún resultados.
       search_text: Preguntas conteniendo
       tags: con estas etiquetas
