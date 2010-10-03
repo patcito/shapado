@@ -42,14 +42,17 @@
             = t("time.ago", :time => time_ago_in_words(answer.created_at))
 
       .avatar.logo
-        = gravatar(answer.user.email.to_s, :size => 32)
+        = gravatar(answer.user.email.to_s, :size => 32) unless answer.anonymous
       .user
-        = render :partial => "users/user_mini", :locals => {:user => answer.user}
-        -unless answer.user.hide_country
-          .adr
-            .country-name
-              = t("global.from", :site => answer.user.country_name)
-            = country_flag(answer.user.country_code, answer.user.country_name)
+        -unless answer.anonymous
+          = render :partial => "users/user_mini", :locals => {:user => answer.user}
+          -unless answer.user.hide_country
+            .adr
+              .country-name
+                = t("global.from", :site => answer.user.country_name)
+              = country_flag(answer.user.country_code, answer.user.country_name)
+        -else
+          %b=t("global.anonymous")
     .controls
       .actions
         = link_to t('activerecord.attributes.answer.link'), question_answer_path(@question.id, answer.id), :class => "bookmark"

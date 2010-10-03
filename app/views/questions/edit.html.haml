@@ -7,9 +7,13 @@
 - form_for(@question, :url => question_path(@question), :html => {:class => "form"}) do |f|
   =render :partial => "form", :locals => {:f => f}
   .group.navform
-    .right
-      = f.label :wiki, "Wiki", :class => "radio"
-      = f.check_box :wiki, :class => "checkbox"
+    .controls.right{:style => "width: 50%"}
+      .left{:style => "width: 49.5%"}
+        = f.label :wiki, "Wiki", :class => "radio"
+        = f.check_box :wiki, :class => "checkbox"
+      .left{:style => "width: 49.5%"}
+        = f.label :anonymous, t("scaffold.post_as_anonymous"), :class => "radio"
+        = f.check_box :anonymous, :class => "checkbox"
 
     = f.submit t("scaffold.update")
     = t("global.or")

@@ -63,7 +63,7 @@
         -if owner
           =render :partial => "users/user_mini", :locals => {:user => owner}
         -else
-          Anonymous
+          =t("global.anonymous")
         %strong.time_ago
           = link_to t("time.ago", :time => time_ago_in_words(last_target.updated_at)), question_path(question)+"##{last_target.id}"
         -if question.wiki
