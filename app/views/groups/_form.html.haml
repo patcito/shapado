@@ -5,13 +5,14 @@
   = form.text_field :name, :class => "text_field"
 
 .group
-  = form.label :subdomain, "URL", :class => "label"
-  %div
-    %span.description
-      ="#{request.protocol}"
-    = form.text_field :subdomain, :class=>"text_field", :style => "width: 20%"
-    %span.description
-      = ".#{request.domain}"
+  -unless has_custom_domain?
+    = form.label :subdomain, "URL", :class => "label"
+    %div
+      %span.description
+        ="#{request.protocol}"
+      = form.text_field :subdomain, :class=>"text_field", :style => "width: 20%"
+      %span.description
+        = ".#{request.domain}"
 
 -if current_user.admin?
   .group

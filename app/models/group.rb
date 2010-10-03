@@ -105,6 +105,11 @@ class Group
     end
   end
 
+  # TODO: store this variable
+  def has_custom_domain?
+    @has_custom_domain ||= self[:domain] !~ AppConfig.domain
+  end
+
   def disallow_javascript
     unless self.has_custom_js
        %w[footer _head _question_help _question_prompt head_tag].each do |key|
