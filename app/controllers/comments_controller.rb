@@ -104,7 +104,7 @@ class CommentsController < ApplicationController
     if params[:action] == "destroy"
       valid = @comment.can_be_deleted_by?(current_user)
     else
-      valid = current_user.can_modify?(@comment)
+      valid = current_user.can_modify?(@comment) || current_user.mod_of?(@comment.group)
     end
 
     if !valid
@@ -113,6 +113,7 @@ class CommentsController < ApplicationController
           flash[:error] = t("global.permission_denied")
           redirect_to params[:source] || questions_path
         end
+        format.js { render :json => {:success => false, :message => t("global.permission_denied") } }
         format.json { render :json => {:message => t("global.permission_denied")}, :status => :unprocessable_entity }
       end
     end
