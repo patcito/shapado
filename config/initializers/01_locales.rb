@@ -1,4 +1,4 @@
-ShI18n.backend.store_translations 'br', {}
+I18n.backend.store_translations 'br', {}
 I18n.backend.store_translations 'ca', {}
 I18n.backend.store_translations 'de', {}
 I18n.backend.store_translations 'el', {}
