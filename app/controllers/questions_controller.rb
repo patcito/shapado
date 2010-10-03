@@ -252,7 +252,9 @@ class QuestionsController < ApplicationController
   # POST /questions.xml
   def create
     @question = Question.new
-    @question.safe_update(%w[title body language tags wiki anonymous], params[:question])
+    @question.safe_update(%w[title body language tags wiki], params[:question])
+    @question.anonymous = Boolean.to_mongo(params[:question][:anonymous])
+
     @question.group = current_group
     @question.user = current_user
 

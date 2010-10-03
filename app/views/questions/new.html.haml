@@ -19,7 +19,7 @@
         = f.check_box :wiki, :class => "checkbox"
       .left{:style => "width: 49.5%"}
         = f.label :anonymous, t("scaffold.post_as_anonymous"), :class => "radio"
-        = f.check_box :anonymous, :class => "checkbox"
+        = f.check_box :anonymous, {:class => "checkbox"}, true, false
 
     = f.submit t('scaffold.create')
     = t("global.or")

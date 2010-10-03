@@ -56,6 +56,8 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new
     @answer.safe_update(%w[body wiki anonymous], params[:answer])
+    @answer.anonymous = Boolean.to_mongo(params[:answer][:anonymous])
+
     @question = Question.find_by_slug_or_id(params[:question_id])
     @answer.question = @question
     @answer.group_id = @question.group_id
