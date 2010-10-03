@@ -7,7 +7,6 @@ class Question
   include Support::Voteable
 
   ensure_index :tags
-  ensure_index :language
 
   key :_id, String
   key :title, String, :default => "", :required => true
@@ -22,18 +21,18 @@ class Question
   key :favorites_count, Integer, :default => 0
 
   key :adult_content, Boolean, :default => false
-  key :banned, Boolean, :default => false
+  key :banned, Boolean, :default => false, :index => true
   key :accepted, Boolean, :default => false
   key :closed, Boolean, :default => false
   key :closed_at, Time
 
-  key :anonymous, Boolean, :default => false
+  key :anonymous, Boolean, :default => false, :index => true
 
   key :answered_with_id, String
   belongs_to :answered_with, :class_name => "Answer"
 
   key :wiki, Boolean, :default => false
-  key :language, String, :default => "en"
+  key :language, String, :default => "en", :index => true
 
   key :activity_at, Time
 

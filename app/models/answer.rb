@@ -5,18 +5,18 @@ class Answer < Comment
   key :_id, String
 
   key :body, String, :required => true
-  key :language, String, :default => "en"
+  key :language, String, :default => "en", :index => true
   key :flags_count, Integer, :default => 0
-  key :banned, Boolean, :default => false
+  key :banned, Boolean, :default => false, :index => true
   key :wiki, Boolean, :default => false
-  key :anonymous, Boolean, :default => false
+  key :anonymous, Boolean, :default => false, :index => true
 
   timestamps!
 
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
-  key :question_id, String
+  key :question_id, String, :index => true
   belongs_to :question
 
   has_many :flags

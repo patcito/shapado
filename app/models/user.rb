@@ -18,7 +18,7 @@ class User
   key :location,                  String, :limit => 200
   key :birthday,                  Time
 
-  key :identity_url,              String
+  key :identity_url,              String, :index => true
   key :role,                      String, :default => "user"
   key :last_logged_at,            Time
 
@@ -26,7 +26,7 @@ class User
 
   key :notification_opts,         NotificationConfig
 
-  key :language,                  String, :default => "en"
+  key :language,                  String, :default => "en", :index => true
   key :timezone,                  String
   key :language_filter,           String, :default => "user", :in => LANGUAGE_FILTERS
 
@@ -52,7 +52,7 @@ class User
 
   key :feed_token,                String
 
-  key :anonymous,                 Boolean, :default => false
+  key :anonymous,                 Boolean, :default => false, :index => true
 
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
