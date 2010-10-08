@@ -9,7 +9,7 @@ es:
       ask_question: Pregunte
       badges: Insignias
       forgot: La olvido?
-      home: Pagina principal
+      home: Página principal
       languages: Idiomas
       log_in: Acceder
       logged: Conectado como %{login}
@@ -19,7 +19,7 @@ es:
       now: ya!
       openid: 
         explaination: "Si deseas abrir una cuenta o solamente conectarte, por favor seleccione tu provedor openid:"
-      pages: Paginas
+      pages: Páginas
       questions: Preguntas
       questions_in: Preguntas en
       questions_tagged: etiquetadas con
