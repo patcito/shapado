@@ -7,4 +7,4 @@
     %br
     %p{:style=>"border-top: 1px solid #999"}
       = t('.message', :domain => @domain)
-      = url_for(:host => @domain, :controller => "users", :action => "show", :id => @user)
+      = url_for(:host => @domain, :controller => "users", :action => "edit", :id => @user, :anchor => "notifications")

@@ -22,7 +22,7 @@ class Notifier < ActionMailer::Base
   end
 
   def new_answer(user, group, answer, following = false)
-    self.class.layout "notification"
+    self.class.layout "notifications"
     template_for user do
 
       scope = "mailers.notifications.new_answer"
