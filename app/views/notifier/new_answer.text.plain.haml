@@ -1,0 +1,7 @@
+- new_answer = @answer.body
+- question = "#{@question.title}, #{url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)}"
+
+
+= t('notifier.global.hi', :user => h(@user.login))
+= t('.message', :user => h(@answer.user.login), :new_answer => h(new_answer), :question => question)
+

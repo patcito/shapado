@@ -70,7 +70,7 @@
   = hidden_field_tag "user[preferred_languages][]", (current_group.language || AppConfig.default_language)
 
 -unless @user.new_record?
-  %a(:name => "notifications")
+  %a{:name => "notifications"}
   %h2.title
     = t(".notifications")
 

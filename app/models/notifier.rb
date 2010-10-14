@@ -1,5 +1,6 @@
 class Notifier < ActionMailer::Base
   helper :application
+  layout "notifications"
 
   def give_advice(user, group, question, following = false)
     template_for user do
@@ -22,7 +23,6 @@ class Notifier < ActionMailer::Base
   end
 
   def new_answer(user, group, answer, following = false)
-    self.class.layout "notifications"
     template_for user do
 
       scope = "mailers.notifications.new_answer"
@@ -48,7 +48,6 @@ class Notifier < ActionMailer::Base
       body   :user => user, :answer => answer, :question => answer.question,
              :group => group, :domain => domain
 
-      content_type  "text/html"
     end
   end
 
@@ -58,13 +57,13 @@ class Notifier < ActionMailer::Base
       from "Shapado <#{AppConfig.notification_email}>"
       subject I18n.t("mailers.notifications.new_comment.subject", :login => comment.user.login, :group => group.name)
       sent_on Time.now
-      content_type    "multipart/alternative"
 
       body :user => user, :comment => comment, :question => question, :group => group
     end
   end
 
   def new_feedback(user, subject, content, email, ip)
+    self.class.layout ""
     recipients AppConfig.exception_notification["exception_recipients"]
     from "Shapado[feedback] <#{AppConfig.notification_email}>"
     subject "feedback: #{subject}"
@@ -91,7 +90,6 @@ class Notifier < ActionMailer::Base
       subject I18n.t("mailers.notifications.earned_badge.subject", :group => group.name)
       sent_on Time.now
       body :user => user, :group => group, :badge => badge
-      content_type    "multipart/alternative"
     end
   end
 
@@ -103,7 +101,6 @@ class Notifier < ActionMailer::Base
       subject I18n.t("mailers.notifications.favorited.subject", :login => user.login)
       sent_on Time.now
       body :user => user, :group => group, :question => question
-      content_type    "multipart/alternative"
     end
   end
 
