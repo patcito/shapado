@@ -13,34 +13,34 @@ en:
     shared:
       rockstar:
         name: Rockstar
-        description: 1000 positive votes, 10 negative votes maximum
+        description: Has 1,000 positive votes, 10 negative votes maximum
       popstar:
         name: Popstar
-        description: 500 positive votes, 10 negative votes maximum
+        description: Has 500 positive votes, 10 negative votes maximum
       fanatic:
         name: Fanatic
         description: Visited the site each day for 100 consecutive days
       service_medal:
         name: Service medal
-        description: 300 positive votes
+        description: Has 300 positive votes
       famous_question:
         name: Famous question
-        description: Asked a question with 10000 views
+        description: Asked a question with 10,000 views
       notable_question:
         name: Notable question
-        description: Asked a question with 2500 views
+        description: Asked a question with 2,500 views
       popular_question:
         name: Popular question
-        description: Asked a question with 1000 views
+        description: Asked a question with 1,000 views
       popular_person:
         name: Popular person
-        description: Your profile is visited 10000 times
+        description: Has a profile that was visited 10,000 times
       guru:
         name: Guru
         description: Gave a solution to a question with an average of more than 40 votes
       favorite_question:
         name: Favorite question
-        description: Question favorited by 25 users
+        description: Asked a question favorited by 25 users
       tutor:
         name: Tutor
         description: Gave a solution to a question with an average of more than 2 votes
@@ -49,13 +49,13 @@ en:
         description: Visited the site each day for 20 consecutive days
       good_question:
         name: Good question
-        description: Having a question that reaches an average of more than 25 votes
+        description: Asked a question that reached an average of more than 25 votes
       good_answer:
         name: Good answer
-        description: Having an answer that reaches an average of more than 25 votes
+        description: Gave an answer that reached an average of more than 25 votes
       pioneer:
         name: Pioneer
-        description: Be one of the first users to register
+        description: Was one of the first users to register
       supporter:
         name: Supporter
         description: Voted positively for the first time
@@ -64,7 +64,7 @@ en:
         description: Voted negatively for the first time
       inquirer:
         name: Inquirer
-        description: Asked for the first time
+        description: Asked a question for the first time
       troubleshooter:
         name: Troubleshooter
         description: Answered for the first time
@@ -79,72 +79,72 @@ en:
         description: Got 100 positive votes
       student:
         name: Student
-        description: Asked first question with at least one up vote
+        description: Asked a question with at least one up vote
       shapado:
         description: Visited the site each day for 8 consecutive days
       editor:
         name: Editor
-        description: First edited post
+        description: Edited a post for the first time
       friendly:
         name: Friendly
-        description: Following someone for the first time
+        description: Started following someone for the first time
       interesting_person:
         name: Interesting person
-        description: Getting more than 10 followers
+        description: Got more than 10 followers
       popular_person:
         name: Popular person
-        description: Getting more than 50 followers
+        description: Got more than 50 followers
       celebrity:
         name: Celebrity
-        description: Getting more than 100 followers
+        description: Got more than 100 followers
       necromancer:
         name: Necromancer
-        description: Answered a question more than 60 days later with at least 5 votes
+        description: Answered a question after more than 60 days later at least 5 votes
       stellar_question:
         name: Stellar question
-        description: Question added to favorites by 100 users
+        description: Asked a question added to favorites by 100 users
       nice_question:
         name: Nice question
-        description: Question voted up 10 times
+        description: Asked a question voted up 10 times
       nice_answer:
         name: Nice answer
-        description: Answer voted up 10 times
+        description: Has an answer voted up 10 times
       great_question:
         name: Great question
-        description: Question voted up 100 times
+        description: Asked a question voted up 100 times
       great_answer:
         name: Great answer
-        description: Answer voted up 100 times
+        description: Has an answer voted up 100 times
       peer_pressure:
         name: Peer pressure
         description: Deleted own post with score of -3 or lower
       enlightened:
         name: Enlightened
-        description: First answer was accepted with at least 10 up votes
+        description: Has an answer that was accepted with at least 10 up votes
       disciplined:
         name: Disciplined
         description: Deleted own post with score of 3 or higher
       cleanup:
         name: Cleanup
-        description: First rollback
+        description: Made first rollback
       civic_duty:
         name: Civic duty
         description: Voted 300 times
       citizen_patrol:
         name: Citizen patrol
-        description: First flagged post
+        description: Flagged first post
       self-learner:
         name: Self learner
-        description: Answered your own question with at least 3 up votes
+        description: Answered an own question with at least 3 up votes
       scholar:
         name: Scholar
-        description: First accepted answer on your own question
+        description: Answered first self asked question with an accepted answer
       autobiographer:
         name: Autobiographer
         description: Completed all user profile fields
       organizer:
         name: Organizer
-        description: First retag
+        description: Made first retag
   activerecord:
     models:
       badge: Badge
