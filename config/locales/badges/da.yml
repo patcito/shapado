@@ -1,0 +1,152 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    models: 
+      badge: Badge
+      badges: Badges
+  badges: 
+    index: 
+      description: Alle badges, som du kan tjene. Del din viden og optjen badges.
+      title: badges
+    shared: 
+      addict: 
+        description: Besøgte siden hver dag 20 dage i træk
+        name: Afhængig
+      autobiographer: 
+        description: Udfyldte alle profil felter
+        name: Autobiografi
+      celebrity: 
+        description: Få mere end 100 tilhængere
+        name: Berømthed
+      citizen_patrol: 
+        description: Første anmeldte indlæg
+        name: Borger patrulje
+      civic_duty: 
+        description: Stemte 300 gange
+        name: Borgerpligt
+      cleanup: 
+        description: Første rollback
+        name: Oprydning
+      commentator: 
+        description: Efterlod 10 kommentarer
+        name: Kommentator
+      critic: 
+        description: Stemte negativt for første gang
+        name: Kritiker
+      disciplined: 
+        description: Slettede eget indlæg med score på 3 eller højere
+        name: Disciplineret
+      editor: 
+        description: Første redigerede indlæg
+        name: Redaktør
+      effort_medal: 
+        description: Fik 100 positive stemmer
+        name: Indsats medalje
+      enlightened: 
+        description: Første svar blev accepteret med mindst 10 op stemmer
+        name: Oplyst
+      famous_question: 
+        description: Stillede et spørgsmål med 10000 visninger
+        name: Berømt spørgsmål
+      fanatic: 
+        description: Besøgte siden hver dag 100 dage i træk
+        name: Fanatiker
+      favorite_question: 
+        description: Spørgsmål favorit for 25 brugere
+        name: Favorit spørgsmål
+      friendly: 
+        description: Blev tilhænger af nogen for første gang
+        name: Venlig
+      good_answer: 
+        description: Har et svar der når et gennemsnit på mere end 25 stemmer
+        name: Godt svar
+      good_question: 
+        description: Har et spørgsmål der når et gennemsnit på mere end 25 stemmer
+        name: Godt spørgsmål
+      great_answer: 
+        description: Svar stemt op 100 gange
+        name: Fantastisk svar
+      great_question: 
+        description: Spørgsmål stemt op 100 gange
+        name: Fantastisk spørgsmål
+      guru: 
+        description: Gav en løsning på et spørgsmål med et gennemsnit på mere end 40 stemmer
+        name: Guru
+      inquirer: 
+        description: Spurgte for første gang
+        name: Spørger
+      interesting_person: 
+        description: Få mere end 10 tilhængere
+        name: Interessant person
+      merit_medal: 
+        description: Fik 200 positive stemmer
+        name: Fortjenestes medalje
+      necromancer: 
+        description: Besvarede et spørgsmål mere end 60 dage senere med mindst 5 stemmer
+        name: Åndemaner
+      nice_answer: 
+        description: Svar stemt op 10 gange
+        name: Fint svar
+      nice_question: 
+        description: Spørgsmål stemt op 10 gange
+        name: Fint spørgsmål
+      notable_question: 
+        description: Stillede et spørgsmål med 2500 visninger
+        name: Bemærkelsesværdigt spørgsmål
+      organizer: 
+        description: Første gentag
+        name: Organisator
+      peer_pressure: 
+        description: Slettede eget indlæg med score på -3 eller lavere
+        name: Gruppepres
+      pioneer: 
+        description: Vær blandt de første brugere til at registrere
+        name: Pioner
+      popstar: 
+        description: 500 positive stemmer, maksimalt 10 negative stemmer
+        name: Popstjerne
+      popular_person: 
+        description: Få mere end 50 tilhængere
+        name: Populær person
+      popular_question: 
+        description: Stillede et spørgsmål med 1000 visninger
+        name: Populært spørgsmål
+      rockstar: 
+        description: 1000 positive stemmer, maksimalt 10 negative stemmer
+        name: Rockstjerne
+      scholar: 
+        description: Første accepteret svar på eget spørgsmål
+        name: Belært
+      self-learner: 
+        description: Besvar dit eget spørgsmål med mindst 3 op stemmer
+        name: Selv lært
+      service_medal: 
+        description: Fik 300 positive stemmer
+        name: Service medalje
+      shapado: 
+        description: Besøgte siden hver dag 8 dage i træk
+      stellar_question: 
+        description: Spørgsmål tilføjet til favoritter af 100 brugere
+        name: Super spørgsmål
+      student: 
+        description: Stillede første spørgsmål med mindst én op stemme
+        name: Student
+      supporter: 
+        description: Stemte positivt for første gang
+        name: Tilhænger
+      troubleshooter: 
+        description: Svarede for første gang
+        name: Fejlfinder
+      tutor: 
+        description: Gav en løsning på et spørgsmål med et gennemsnit på mere end 2 stemmer
+        name: Vejleder
+    show: 
+      description: "Brugere, der optjente denne badge. Nylig tildelt til:"
+      earned: optjent
+      for_tag_bronze: 2000 stemmer i tag %{tag}
+      for_tag_gold: 1000 stemmer i tag %{tag}
+      for_tag_silver: 400 stemmer i tag %{tag}
+      title: Badge %{type}

@@ -1,0 +1,43 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  notifier: 
+    earned_badge: 
+      message1: Du har tjent en %{badge} badge på %{app}
+      message2: "Badge beskrivelse:"
+      message3: Du kan se alle dine badges på din %{user_page}
+    favorited: 
+      message1: "%{user} tilføjede dit spørgsmål som en favorit på %{group}"
+      message2: "Teksten til dit spørgsmål:"
+      message3: "Du kan se den her:"
+    follow: 
+      message1: "%{user}følger nu dine spørgsmål og svar på %{app}"
+      message2: Du kan også følge ham ved at klikke på knappen "Følg" på hans %{user_page}
+    give_advice: 
+      message1: "%{user} har lige stillet et spørgsmål du måske kunne svare på:"
+      message2: "Hvis du vil svare skal du blot besvare(reply) den besked her:"
+      message3: "Eller, hvis du kender nogen der kunne være i stand til at svare, send dem dette henvisningslink:"
+      message4: Hvis vi ikke får et svar fra dig snart, vil vi spørge en anden. Du kan stadig besvare det når du vil.
+    global: 
+      hi: Hej %{user},
+      user_page: brugerside
+    new_answer: 
+      message: "%{user} svarede %{new_answer} på spørgsmålet %{question}"
+    new_comment: 
+      message: "%{user} kommenterede %{new_comment} på spørgsmålet %{question}"
+    new_feedback: 
+      message1: Brugeren %{user} <%{email}> sendte feedback
+      message2: Anonym bruger har sendt feedback fra IP-adressen %{ip}
+      message3: "E-mail-adresse: %{email}"
+      message4: "Emne: %{subject}"
+    report: 
+      message1: Rapporten for gruppe %{group.name}
+      message2: Siden %{since}
+      message3: "%{questions} spørgsmål blev stillet"
+      message4: "%{answers} svar blev lavet"
+      message5: "%{votes} stemmer blev foretaget"
+      message6: "%{badges} badges blev tildelt"
+      message7: Kontoen har %{users} brugere.
+      message8: Besøg din gruppe ved %{link}

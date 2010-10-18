@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: McDutchie
 # Author: Patcito
+# Author: Peter17
 # Author: Verdy p
 fr: 
   feeds: 
@@ -15,6 +16,7 @@ fr:
     user: Inscrivez-vous aux questions de l'utilisateur
   global: 
     active: Activer
+    anonymous: Anonyme
     by: par
     current: Actuel
     from: depuis %{site}
@@ -49,6 +51,7 @@ fr:
     edit: Éditer
     more: Plus...
     new: Ajouter %{model}
+    post_as_anonymous: Publier de manière anonyme
     save: Sauvegarder
     send: Envoyer
     show: Monter

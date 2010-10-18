@@ -1,0 +1,22 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  open_requests: 
+    create: 
+      flash_notice: Anmodning om at genåbne oprettet
+    destroy: 
+      flash_notice: Anmodning om at genåbne slettet
+    edit: 
+      title: Rediger anmodning om at genåbne
+    form: 
+      request_opening_details: Anmodning om at genåbne dette spørgsmål
+    index: 
+      title: Liste over ansøgninger om at genåbne
+    model: 
+      prural_name: Anmodninger om at genåbne
+    new: 
+      title: Anmodning om at genåbne
+    update: 
+      flash_notice: Anmodning om at genåbne opdateret

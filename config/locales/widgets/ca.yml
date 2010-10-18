@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Papapep
+# Author: SMP
 ca: 
   widgets: 
     badges: 
@@ -15,6 +16,7 @@ ca:
       title: Gestiona els ginys de la barra lateral
     pages: 
       description: Aquest giny mostra la llista de pàgines wiki
+      new: Afegeix una nova pàgina
       title: Pàgines Wiki
     tag_cloud: 
       description: Aquest giny mostra un núvol d'etiquetes

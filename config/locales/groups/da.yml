@@ -1,0 +1,72 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Standard tags
+        description: Beskrivelse
+        domain: Domæne
+        fb_button: Aktiver Facebook "synes godt om"/like knap (ikke privatlivs venlig)
+        forum: Tillad mere end ét svar af bruger
+        group_created_by: oprettet af
+        language: Sprog
+        legend: Legende
+        logo: Logo
+        may_contain_adult_content: Dette site kan indeholde voksen indhold
+        name: Navn
+        openid_only: Kun folk med OpenID kan få adgang til webstedet
+        owner: Denne gruppe blev oprettet af %{login}
+        registered_only: Kun registrerede personer kan få adgang til webstedet
+        state: Tilstand
+        subdomain: URL
+        wysiwyg_editor: Aktiver brugervenlig editor
+    models: 
+      default_tags_message: Du kan ikke have mere end 10 standard tags
+      group: Gruppe
+      groups: Grupper
+  groups: 
+    create: 
+      flash_notice: Din gruppe blev oprettet. Du kan nu begynde at konfigurere den.
+    form: 
+      access: Åben Indstillinger
+      analytics_engine: Analyser Motor
+      analytics_legend: Gruppen vil være i stand til at bruge sin egen sporingskode
+      any_language: Alle
+      custom_analytics: Tillad Brugerdefinerede Analyser
+      custom_html: Tillad brugerdefineret HTML
+      custom_js: Tillad brugerdefineret JavaScript
+      default_tags_legend: Adskille tags med kommaer. Kun 10 standard tags er tilladt.
+      description_legend: Du har 400 tegn til at beskrive gruppen.
+      isolate_group: Isoler gruppen fra andre grupper
+      legend_legend: Den vil blive brugt i headeren. Du har 40 tegn.
+      logo_legend: Du kan uploade gruppe logoet. Den maksimale filstørrelse er 2MB.
+      members_only: Kun gruppens medlemmer vil kunne få adgang til denne gruppe
+      website_analytics_id: Webside Analyse ID
+    group: 
+      about: Om
+      accept_group: Accepter denne gruppe
+      allow_ads: Tillad annoncer
+      close: Luk
+      close_group: Luk denne gruppe
+      disallow_ads: Forbyd annoncer
+    index: 
+      actives: Aktiv
+      filter: Søg efter grupper
+      most_active: Mest aktive
+      name: Navn
+      pendings: Ventende
+      request_group: Anmod om en ny gruppe
+      title: Grupper
+    new: 
+      title: Opret din gruppe
+    show: 
+      accept_group: Accepter denne gruppe
+      accept_group_with_custom_ads: Accepter gruppe og tillad tilpassede annoncer
+      close_group: Luk denne gruppe
+      group_awaiting_acceptance: Denne gruppe afventer accept af en moderator.
+      group_closed: Denne gruppe blev lukket.
+      title: Om %{name}
+      visit_group: Besøg denne gruppe

@@ -15,6 +15,7 @@ ru:
     shared: 
       addict: 
         description: Посещал сайт каждый день 20 дней подряд
+        name: Увлечённый
       autobiographer: 
         description: Заполнил все поля пользовательского профиля
         name: Автобиограф
@@ -44,20 +45,25 @@ ru:
         name: Редактор
       effort_medal: 
         description: Получил 100 положительных голосов
+        name: Медаль за стремление
       enlightened: 
         description: Первый ответ был принят хотя бы 10 голосами «за»
         name: Просвещённый
       famous_question: 
         description: Задал вопрос с 10000 просмотров
+        name: Отличный вопрос
       fanatic: 
         description: Посещал сайт каждый день 100 дней подряд
+        name: Фанатик
       favorite_question: 
         description: Вопрос добавили в избранное 25 пользователей
+        name: Любимый вопрос
       friendly: 
         description: Впервые начал за кем-то следить
         name: Дружественный
       good_answer: 
         description: Написал ответ, получивший в среднем больше 25 голосов
+        name: Хороший ответ
       good_question: 
         description: Написал вопрос, получивший в среднем больше 25 голосов
         name: Хороший вопрос
@@ -72,11 +78,13 @@ ru:
         name: Гуру
       inquirer: 
         description: Задал первый вопрос
+        name: Опрашивающий
       interesting_person: 
         description: Число следящих составило более 10
         name: Интересная личность
       merit_medal: 
         description: Получил 200 голосов «за»
+        name: Медаль за заслуги
       necromancer: 
         description: Ответил более чем 60 дней спустя  на вопрос  по крайней мере с 5 голосами
         name: Некромант
@@ -88,6 +96,7 @@ ru:
         name: Хороший вопрос
       notable_question: 
         description: Задал вопрос с 2500 просмотров
+        name: Примечательный вопрос
       organizer: 
         description: Первая смена тегов
         name: Организатор
@@ -108,6 +117,7 @@ ru:
         name: Популярные вопросы
       rockstar: 
         description: 1000 голосов «за» и до 10 голосов «против»
+        name: Рок-звезда
       scholar: 
         description: Первый раз принял ответ на собственный вопрос
         name: Эрудит
@@ -127,8 +137,10 @@ ru:
         name: Студент
       supporter: 
         description: Первый раз проголосовал «за»
+        name: Помощник
       troubleshooter: 
         description: Ответил первый раз
+        name: Устраняющий проблемы
       tutor: 
         description: Дал решение вопроса со средним числом голосов более 2
         name: Репетитор

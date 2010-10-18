@@ -1,0 +1,22 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  errors: 
+    forbidden: 
+      explanation: Du har ikke de nødvendige rettigheder til at se denne side.
+      title: Adgang nægtet
+    go_to: Gå til %{link} side
+    help_us_answer: Hjælp os med at besvare %{link}
+    internal_error: 
+      explanation: Vi er blev gjort opmærksom på dette problem, og vi vil tage et kig på det så hurtigt som muligt.
+      title: Vi beklager, men noget gik galt.
+    not_found: 
+      explanation: Du kan have skrevet forkert adresse eller siden kan være flyttet.
+      title: Siden blev ikke fundet.
+    options_label: "Andre ting du kan prøve:"
+    search: Søg
+    unprocessable_entity: 
+      explanation: Måske har du forsøgt at ændre noget du ikke har haft adgang til.
+      title: Den ændring du ønsker blev afvist.

@@ -1,0 +1,33 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  close_requests: 
+    create: 
+      flash_notice: Die sluitingsversoek is ingedien
+    destroy: 
+      flash_notice: Die sluitingsversoek is afgehandel
+    edit: 
+      title: Wysig sluitingsversoek
+    form: 
+      close_with_reason: Sluit hierdie vraag met hierdie rede
+      dupe: Duplikaat
+      no_question: Nie 'n vraag nie
+      not_relevant: Nie van toepassing nie
+      ot: Ander onderwerp
+      request_closing_details: Versoek sluiting van hierdie vraag
+      spam: spam
+    index: 
+      title: Lys van sluitingsversoeke
+    model: 
+      attributes: 
+        comment: Opmerking
+        reason: Rede
+        user: Gebruiker
+      messages: 
+        already_requested: U het al 'n sluitingsversoek vir hierdie vraag ingedien
+      name: Sluitingsversoek
+      prural_name: Sluitingsversoeke
+    update: 
+      flash_notice: Die sluitingsversoek is opgedateer

@@ -1,0 +1,34 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Stylesheets
+        js: JavaScript
+    models: 
+      page: Side
+      pages: Sider
+  pages: 
+    actions: 
+      create_page: Opret ny side
+      edit_page: Rediger side
+      title: Handlinger
+    create: 
+      success: Side blev oprettet.
+    edit: 
+      title: Redigerings side
+    form: 
+      language_tip: Side sprog
+      title_tip: "Sidetitel. Brug dette til at henvise til siden. For eksempel: [[FAQ|tjek faq'en ud]]"
+    index: 
+      create_page: Opret ny side
+      title: Liste over sider
+      written_in: Skrevet på %{language}
+    new: 
+      title: Ny side
+    title: Fixme
+    update: 
+      success: Side blev opdateret.

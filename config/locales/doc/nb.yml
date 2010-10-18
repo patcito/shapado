@@ -1,0 +1,37 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  doc: 
+    chat: 
+      title: Nettpratstøtte
+    plans: 
+      15millions: 15 millioner sidevisninger per måned
+      1million: 1 million sidevisninger per måned
+      247_all_support: Nettbasert, e-post-, nettprat- og telefonstøtte 24/7
+      5millions: 5 millioner sidevisninger per måned
+      all_support: Nettbasert, e-post-, nettprat- og telefonstøtte
+      basic_restrictions: Ingen egendefinerte annonser og ikke fullt tilpassbart grensesnitt
+      beta_info: For nå er alle nettstedene gratis og alle nettstedene nyter godt av de samme alternativene som den optimale planen, foruten støtten som kun er nettbasert, e-post og lynmeldinger.
+      big_sites: Stortrafikknettsteder
+      custom_ads: Bruk dine egne annonser
+      custom_analytics: Trafikkstatistikk
+      custom_domain: Egendefinert domene
+      custom_themes: Benytt deg av våre ferdige egendefinerte temaer
+      custom_ui: Fullt tilpassbart grensesnitt
+      free_plan: gratis plan
+      getting_popular: Begynner å bli populær
+      huge_sites: Kjempetrafikknettsteder
+      month: måned
+      page_views: For små/private nettsteder
+      plans: Planer
+      private_site: Aktiver privat/offentlig tilgang
+      small_private: Små/Private nettsteder
+      start_monetizing: start å tjene penger
+      support: Støtte
+      title: Planer og priser
+      unlimited: Ubegrenset trafikk hver måned
+      we_offer: Vi tilbyr også
+      web_support: Nettbasert støtte
+      with_unlimited: med ubegrenset trafikk uten egendefinerte annonser og uten egendefinert domene.

@@ -1,0 +1,24 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Du har optjent en badge på %{group}!
+      favorited: 
+        subject: "%{login} tilføjede dit spørgsmål som en favorit!"
+      follow: 
+        subject: "%{login} følger dig nu på %{app}"
+      give_advice: 
+        friend_subject: "Din ven har behov for hjælp: %{question_title}"
+        subject: "Vi har brug for dit råd: %{question_title}"
+      new_answer: 
+        subject_friend: Din ven %{login} besvarede spørgsmålet %{title}
+        subject_other: "%{login} besvarede spørgsmålet %{title}"
+        subject_owner: "%{login} besvarede dit spørgsmål %{title}"
+      new_comment: 
+        subject: "%{login} kommenterede på %{group}"
+      report: 
+        subject: Rapport for gruppen %{group} af %{app}

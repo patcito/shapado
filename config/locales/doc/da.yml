@@ -1,0 +1,37 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  doc: 
+    chat: 
+      title: Chat Support
+    plans: 
+      15millions: 15 millioner sidevisninger om måneden
+      1million: 1 million sidevisninger om måneden
+      247_all_support: Web-baseret, e-mail, chat og 24/7 telefon support
+      5millions: 5 millioner sidevisninger om måneden
+      all_support: Web-baseret, e-mail, chat og telefon support
+      basic_restrictions: Ingen tilpassede annoncer og intet fuldt tilpasset UI
+      beta_info: For nu er alle websteder gratis, og alle websteder nyder godt af de samme muligheder som den optimale plan, med undtagelse af support, som kun er webbaseret, e-mail og chat.
+      big_sites: Stor Trafik Sider
+      custom_ads: Brug dine egne annoncer
+      custom_analytics: Trafik statistik
+      custom_domain: Brugerdefineret domæne
+      custom_themes: Gør brug af vores forud lavede brugerdefinerede temaer
+      custom_ui: Fuldt tilpasses UI
+      free_plan: gratis plan
+      getting_popular: Bliv Populær
+      huge_sites: Kæmpe Trafik Sider
+      month: måned
+      page_views: For Lille/Private Sider
+      plans: Planer
+      private_site: Åben for privat/offentlig adgang
+      small_private: Små/Private Sider
+      start_monetizing: start med at tjene penge
+      support: Støt
+      title: Planer og priser
+      unlimited: Ubegrænset trafik hver måned
+      we_offer: Vi tilbyder også en
+      web_support: Web-baseret support
+      with_unlimited: med ubegrænset trafik med ingen brugerdefineret annoncer og intet brugerdefineret domæne.

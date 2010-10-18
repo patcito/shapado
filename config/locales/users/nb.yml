@@ -21,7 +21,7 @@ nb:
         name: Virkelig navn
         password: Passord
         password_confirmation: Passordbekreftelse
-        preferred_languages: Velg språkene du kan
+        preferred_languages: "Du ønsker å lese spørsmålene på følgende språk:"
         timezone: Tidssone
         website: Nettsted
     models: 

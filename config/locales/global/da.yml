@@ -1,0 +1,59 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  feeds: 
+    feed: Feed
+    post_new_questions: Send nye spørgsmål til
+    question: Abonner på dette spørgsmål
+    questions: Abonner på alle spørgsmål
+    share_on_twitter: twitter, facebook and mere...
+    tag: Abonner på kategori
+    user: Abonner på spørgsmål fra denne bruger
+  global: 
+    active: Aktiver
+    anonymous: Anonym
+    by: af
+    current: Nuværende
+    from: fra %{site}
+    group_not_found: Side %{url}'en eksisterer ikke
+    or: eller
+    permission_denied: Tilladelse nægtet
+    please_login: Du bedes logge ind
+    preview: Forhåndsvisning
+    previous: Forrige
+    share: Del
+  languages: 
+    any: Alle
+    user: Mine Foretrukne Sprog
+  models: 
+    question: Spørgsmålet
+  number: 
+    x_time: 
+      one: "%{count} gang"
+      other: "%{count} gange"
+      zero: Aldrig
+  pagination: 
+    next: Næste &raquo;
+    previous: "&laquo; Forrige"
+  scaffold: 
+    add: Tilføj
+    back: Tilbage
+    cancel: Annuller
+    close: Luk
+    create: Opret
+    destroy: Slet
+    details: Detaljer
+    edit: Redigér
+    more: Mere ...
+    new: Tilføj ny %{model}
+    post_as_anonymous: Send som Anonym
+    save: Gem
+    send: Send
+    show: Vis
+    sure: Er du sikker på du vil slette denne %{model}?
+    update: Opdater
+  time: 
+    ago: "%{time} siden"
+    today: i dag

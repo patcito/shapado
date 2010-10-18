@@ -26,7 +26,7 @@ de:
         name: Bürgerlicher Name
         password: Passwort
         password_confirmation: Passwortbestätigung
-        preferred_languages: "Du möchtest Fragen in den folgenden Sprachen lesen:"
+        preferred_languages: "Ich möchte Fragen in den folgenden Sprachen lesen:"
         preferred_tags: Bevorzugte Kennzeichnung
         reputation: Reputation
         timezone: Zeitzone
@@ -60,7 +60,7 @@ de:
       activities_notification: E-Mail-Benachrichtigungen zu Aktivitäten, z. B. erhaltene Auszeichnungen, neue Anhänger, etc.
       avatar_tip: Ändere Dein Profilbild mit „Gravatar“
       give_advice_notification: E-Mail-Benachrichtigungen über Fragen in Deinem Fachgebiet
-      information: Information
+      information: Nutzerinformationen
       language: Die Sprache, die für die Nutzeroberfläche verwendet werden soll
       new_answer_notification: E-Mail-Benachrichtigungen über neuen Antworten
       notifications: Benachrichtigungen
@@ -71,7 +71,7 @@ de:
       filter: Suche nach Nutzern
       name: Name
       name_tooltip: Nutzer, alphabetisch geordnet
-      newest: Neueste
+      newest: Neuester
       newest_tooltip: Neue Nutzer
       oldest: Ältester
       oldest_tooltip: Die ersten Nutzer
@@ -88,6 +88,6 @@ de:
       follow: Beachten
       title: Nutzer %{user}
       unfollow: Nicht mehr beachten
-      views: Ansichten
+      views: Aufrufe
     unfollow: 
-      flash_notice: Nutzer  %{Nutzer} , die nicht mehr zu Ihren Freunden gehören
+      flash_notice: Der Nutzer %{user} wurde von der Liste Deiner Freunde entfernt

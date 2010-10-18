@@ -1,0 +1,59 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  welcome: 
+    confirm_age: 
+      notice: Du kan kun tilgå denne side hvis du er mindst 18 år eller mindst myndigheds alderen hvor du bor eller hvorfra du tilgår denne side.
+      over_18: Jeg er over 18
+      under_18: Jeg er under 18
+      warning: "ADVARSEL: Denne side kan indeholde eksplicit voksent materiale."
+    facts: 
+      features: 
+        cols: 
+          adaptable: fleksibel
+          foss: gratis/open source
+          joel: vil jeg gøre joel rigere?
+          multilanguage: multi-sprog
+          multitopic: multi-emne
+        shapado: 
+          adaptable: ja!
+          foss: ja!
+          joel: nej :/
+          multilanguage: ja!
+          multitopic: ja!
+        stackexchange: 
+          adaptable: nej
+          foss: nej
+          joel: ja!
+          multilanguage: nej
+          multitopic: nej
+      prices: 
+        cols: 
+          onsite: på stedet
+        shapado: 
+          large: nok omkring 500 dollars
+          medium: <=== ditto
+          onsite: formentlig $0 på din egen server
+          small: formentlig omkring 50 til 100 dollars/måned på de fleste hosting udbydere
+        stackexchange: 
+          large: 1299$(USD) om måneden
+          medium: 999$(USD) om måneden
+          onsite: 2500$(USD om måneden)
+          small: 129$(USD) om måneden
+    feedback: 
+      captcha_error: Løs en simpel matematisk opgave
+      email_description: Angiv venligst din e-mail-adresse så vi kan besvare din besked
+      feedback_description: Beskrivelse
+      feedback_title: Titel
+      title: Send din feedback
+    index: 
+      active: Aktiv
+      browse_all_or_by_tags: Se %{full_list_of_questions} eller %{browse_by_tags}
+      browse_by_tags: søg efter tags
+      create_own_site: Lav din egen Spørgsmål &amp; Svar side på 8 sekunder gratis
+      full_list_of_questions: den komplette liste over spørgsmål
+      hot: Atraktiv
+      quick_question: Stil et spørgsmål, vil vi finde nogen til at svare
+      recent_questions: Nylige spørgsmål

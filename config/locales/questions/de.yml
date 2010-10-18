@@ -17,7 +17,7 @@ de:
         updated_at: aktualisiert
         updated_by: aktualisiert von
         views: Aufrufe
-        votes: Bewertungen
+        votes: Bewert-<br />ungen
     models: 
       question: Frage
       questions: Fragen
@@ -43,14 +43,14 @@ de:
       active_tooltip: Fragen die vor kurzem aktualisiert wurden
       ask_question: Frage stellen
       empty: Bislang hat noch niemand eine Frage gestellt. Sei der Erste!
-      help_to_answer: Helfe uns beim Antworten
-      hot: Brandaktuell
+      help_to_answer: Helfe uns beim Beantworten
+      hot: Populär
       hot_tooltip: Fragen mit den meisten Aktivitäten während der letzten 5 Tage
       newest: Neueste
       newest_tooltip: Die zuletzt gestellten Fragen
       oldest: Älteste
       title: Alle Fragen
-      unanswered_questions: Offene Fragen
+      unanswered_questions: offener Fragen.
       votes: Bewertungen
       votes_tooltip: Fragen mit den meisten Bewertungen
     model: 
@@ -130,7 +130,7 @@ de:
       empty: Diese Gruppe beinhaltet keine offenen Fragen.
       expert: Experten
       my_tags: Meine Stichwörter
-      tags: Offene Stichwörter
+      tags: Stichwörter zu offenen Fragen
       title: Offene Fragen
     unsolve: 
       flash_notice: Die Frage wird nicht mehr beantwortet.

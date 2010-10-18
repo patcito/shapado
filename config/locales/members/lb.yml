@@ -1,0 +1,14 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Roll
+  members: 
+    form: 
+      login_tip: Siche wann Dir tippt
+    index: 
+      manage_members_title: Membere geréieren

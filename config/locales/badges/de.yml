@@ -17,31 +17,31 @@ de:
         description: Hat die Website an zwanzig aufeinander folgenden Tagen besucht
         name: Süchtiger
       autobiographer: 
-        description: Alle Felder des Nutzerprofils wurden ausgefüllt
+        description: Hat alle Felder des Nutzerprofils ausgefüllt
         name: Autobiograph
       celebrity: 
         description: Hat mehr als 100 Anhänger
         name: Berühmtheit
       citizen_patrol: 
-        description: Erster markierter Beitrag
-        name: Bürgerwehr
+        description: Hat den ersten Beitrag markiert
+        name: Ausputzer
       civic_duty: 
         description: Hat 300-mal bewertet
-        name: Bürgerpflicht
+        name: Vorbild
       cleanup: 
         description: Erstmalig zurückgesetzt
-        name: Bereinigung
+        name: Bereiniger
       commentator: 
         description: Hat zehn Kommentare verfasst
         name: Kommentator
       critic: 
-        description: erstmalig negativ bewertet
+        description: Hat erstmalig negativ bewertet
         name: Kritiker
       disciplined: 
-        description: Eigenen Beitrag mit einer Punktzahl von 3 und höher gelöscht
-        name: Verwarnt
+        description: Hat einen eigenen Beitrag mit einer Punktzahl von 3 oder höher gelöscht
+        name: Verwarnter
       editor: 
-        description: Erster bearbeiteter Beitrag
+        description: Hat den ersten Beitrag bearbeitet
         name: Bearbeiter
       effort_medal: 
         description: Hat 100 positive Bewertungen erhalten
@@ -60,13 +60,13 @@ de:
         name: Lieblingsfrage
       friendly: 
         description: Folgt jemandem zum ersten Mal
-        name: Freundlich
+        name: Freund
       good_answer: 
         description: Gab eine Antwort, die durchschnittlich mehr als 25 Bewertungen erhalten hat
-        name: Gute Antwort
+        name: Sehr gute Antwort
       good_question: 
         description: Hatte eine Frage, die durchschnittlich mehr als 25 Bewertungen erhalten hat
-        name: Gute Frage
+        name: Sehr gute Frage
       great_answer: 
         description: Antwort wurde bis zu 100-mal positiv bewertet
         name: Großartige Antwort
@@ -75,9 +75,9 @@ de:
         name: Großartige Frage
       guru: 
         description: Gab eine Antwort, die durchschnittlich mehr als 40 Bewertungen erhalten hat
-        name: Guru
+        name: Hervorragende Antwort
       inquirer: 
-        description: Erstmalig gefragt
+        description: Hat erstmalig gefragt
         name: Fragender
       interesting_person: 
         description: Hat mehr als 10 Anhänger
@@ -98,17 +98,17 @@ de:
         description: Hat eine Frage mit über 250 Aufrufen gestellt
         name: Bedeutende Frage
       organizer: 
-        description: Erste Neubenennung
+        description: Hat erstmalig ein Stichwort geändert
         name: Organisator
       peer_pressure: 
-        description: Eigenen Beitrag mit einer Punktzahl von -3 und niedriger gelöscht
-        name: Gruppenzwang
+        description: Hat einen eigenen Beitrag mit einer Punktzahl von -3 oder niedriger gelöscht
+        name: Schummler
       pioneer: 
-        description: Sei unter den ersten Nutzern, die sich anmelden
+        description: Einer der ersten Nutzer, die sich angemeldet haben
         name: Pionier
       popstar: 
         description: 500 positive und maximal 10 negative Bewertungen
-        name: Popstar
+        name: Meister
       popular_person: 
         description: Hat mehr als 50 Anhänger
         name: Beliebte Person
@@ -117,7 +117,7 @@ de:
         name: Häufige Frage
       rockstar: 
         description: 1000 positive und maximal 10 negative Bewertungen
-        name: Rockstar
+        name: Großmeister
       scholar: 
         description: Erste akzeptierte Antwort auf Deine eigene Frage
         name: Gelehrter
@@ -136,7 +136,7 @@ de:
         description: Hat eine erste Frage mit mindestens einer positiven Bewertung gestellt
         name: Student
       supporter: 
-        description: erstmalig positiv bewertet
+        description: Hat erstmalig positiv bewertet
         name: Anhänger
       troubleshooter: 
         description: Hat zum ersten Mal geantwortet

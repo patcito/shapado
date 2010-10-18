@@ -1,0 +1,20 @@
+# Messages for Tamil (தமிழ்)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: TRYPPN
+ta: 
+  comments: 
+    create: 
+      flash_notice: தங்கள் கருத்துக்களுக்கு நன்றி
+    edit: 
+      title: கருத்துக்களை தொகுக்கவும்
+    shared: 
+      add_comment: கருத்துக்களைக் கூறவும்...
+      comment_submit: கருத்து
+      reply: பதில் அளி
+      said: சொல்லப்பட்டது
+    update: 
+      flash_notice: தங்களது கருத்துக்கள் வெற்றிகரமாக புதுப்பிக்கப்பட்டுவிட்டது.
+  models: 
+    comment: கருத்து
+    comments: கருத்துரைகள்

@@ -20,7 +20,7 @@ te:
     from: "%{site} నుంచి"
     group_not_found: "%{url}  అనే పుట లేనే లేదు"
     or: లేదా
-    permission_denied: అనుమతి నిరాకరించారు
+    permission_denied: అనుమతిని నిరాకరించారు
     please_login: దయచేసి ప్రవేశించండి
     preview: మునుజూపు
     previous: మునుపటి

@@ -1,0 +1,44 @@
+# Messages for Interlingua (Interlingua)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: McDutchie
+ia: 
+  devise: 
+    confirmations: 
+      confirmed: Tu conto ha essite confirmate con successo. Tu es ora authenticate.
+      link: Instructiones pro confirmar non recipite?
+      send_instructions: Tu recipera post alcun minutas un e-mail con instructiones pro confirmar tu conto.
+    mailer: 
+      confirmation_instructions: Instructiones pro confirmar
+      reset_password_instructions: Instructiones pro reinitialisar contrasigno
+      unlock_instructions: Instructiones pro disblocar
+    passwords: 
+      link: Contrasigno oblidate?
+      send_instructions: Tu recipera post alcun minutas un e-mail con instructiones pro reinitialisar tu contrasigno.
+      updated: Tu contrasigno ha essite cambiate con successo. Tu es ora authenticate.
+    registrations: 
+      destroyed: Adeo! Tu conto ha essite cancellate con successo. Nos spera revider te tosto.
+      link: Crear conto
+      signed_up: Tu ha create un conto con successo.
+      updated: Tu ha actualisate tu conto con successo.
+    sessions: 
+      facebook_actions: 
+        sign_in: Aperir session
+        sign_out: Clauder session
+      facebook_authenticity_token: Qualcosa errava. Pro motivos de securitate, per favor reaperi session.
+      facebook_invalid: Non poteva aperir session. Conto invalide.
+      facebook_timeout: Session de Facebook expirate. Per favor reaperi session pro continuar.
+      inactive: Tu conto non ha ancora essite activate.
+      invalid: E-mail o contrasigno invalide.
+      invalid_token: Indicio de authentication invalide.
+      link: Aperir session
+      locked: Tu conto es blocate.
+      signed_in: Session aperite con successo.
+      signed_out: Session claudite con successo.
+      timeout: Session expirate. Per favor reaperi session pro continuar.
+      unauthenticated: Tu debe aperir un session o crear un conto ante de continuar.
+      unconfirmed: Tu debe confirmar tu conto ante de continuar.
+    unlocks: 
+      link: Instructiones pro disblocar non recipite?
+      send_instructions: Tu recipera post alcun minutas un e-mail con instructiones pro disblocar tu conto.
+      unlocked: Tu conto ha essite disblocate con successo. Tu es ora authenticate.

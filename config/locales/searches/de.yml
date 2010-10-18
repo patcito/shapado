@@ -6,7 +6,7 @@ de:
   searches: 
     form: 
       clear: leeren
-      search_box_title: Prüfe, ob deine Frage bereits gestellt wurde
+      search_box_title: Prüfe, ob Deine Frage bereits gestellt wurde
       tags_tip: Verwende [tag] um Stichworte anzugeben.
     index: 
       empty: Deine Suche hat keine Ergebnisse erzielt.

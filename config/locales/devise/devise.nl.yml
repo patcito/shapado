@@ -1,0 +1,44 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Siebrand
+nl: 
+  devise: 
+    confirmations: 
+      confirmed: Uw gebruiker is bevestigd. U bent nu aangemeld.
+      link: Hebt u geen instructies voor e-mailbevestiging ontvangen?
+      send_instructions: U ontvangt binnenkort een e-mail met daarin een beschrijving hoe u uw gebruiker kunt bevestigen.
+    mailer: 
+      confirmation_instructions: Instructies voor bevestigen e-mailadres
+      reset_password_instructions: Instructies voor opnieuw instellen wachtwoord
+      unlock_instructions: Instructief voor opheffen blokkade
+    passwords: 
+      link: Wachtwoord vergeten?
+      send_instructions: U ontvangt binnenkort een e-mail met daarin een beschrijving hoe u uw wachtwoord kunt wijzigen.
+      updated: Uw wachtwoord is gewijzigd. U bent nu aangemeld.
+    registrations: 
+      destroyed: Tot ziens! Uw gebruiker is geannuleerd. We hopen u snel opnieuw te zien.
+      link: Registreren
+      signed_up: U bent nu geregistreerd.
+      updated: Uw gebruiker is bijgewerkt.
+    sessions: 
+      facebook_actions: 
+        sign_in: Aanmelden
+        sign_out: Afmelden
+      facebook_authenticity_token: Er is iets verkeerd gegaan. Meld u zich om veiligheidsredenen opnieuw aan.
+      facebook_invalid: Het was niet mogelijk om aan te melden. Ongeldige gebruiker.
+      facebook_timeout: De sessie met Facebook is verlopen. Meld opnieuw aan om door te kunnen gaan.
+      inactive: Uw gebruiker is nog niet geactiveerd.
+      invalid: Ongeldig e-mailadres of wachtwoord.
+      invalid_token: Ongeldig authenticatietoken.
+      link: Aanmelden
+      locked: Uw gebruiker is geblokkeerd.
+      signed_in: Aangemeld.
+      signed_out: Afgemeld.
+      timeout: De sessie is verlopen. Meld opnieuw aan om door te kunnen gaan.
+      unauthenticated: U moet aanmelden of registeren voordat u door kunt gaan.
+      unconfirmed: U moet uw gebruiker bevestigen voordat u verder kunt gaan.
+    unlocks: 
+      link: Hebt u geen instructies ontvangen in de blokkade op te heffen?
+      send_instructions: U ontvangt binnenkort een e-mail met daarin een beschrijving hoe u de blokkade van uw gebruiker kunt opheffen.
+      unlocked: De blokkade van uw gebruiker is opgeheven. U bent nu aangemeld.

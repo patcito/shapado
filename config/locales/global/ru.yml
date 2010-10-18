@@ -4,6 +4,7 @@
 # Author: Eleferen
 # Author: G0rn
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   feeds: 
     feed: Канал
@@ -15,6 +16,7 @@ ru:
     user: Подписаться на вопросы пользователя
   global: 
     active: Активировать
+    anonymous: Аноним
     current: Текущий
     from: с сайта %{site}
     group_not_found: Страница %{url} не существует
@@ -48,6 +50,7 @@ ru:
     edit: Редактировать
     more: Далее…
     new: Добавить %{model}
+    post_as_anonymous: Отправить анонимно
     save: Сохранить
     send: Отправить
     show: Показать

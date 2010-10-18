@@ -1,0 +1,29 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Brødtekst
+        created_at: Besvaret
+        link: Link
+    models: 
+      answer: Svar
+      answers: Svar
+  answers: 
+    create: 
+      flash_error: "Noget gik galt da du tilføjede dit svar.\nHusk, at:\n- Tomme og gentagne svar ikke er tilladt\n- Du skal vente 20 sekunder, før du sender endnu et svar.\n- Du kan kun sende ét svar for hvert spørgsmål."
+      flash_notice: Tak!
+    edit: 
+      title: Redigerer svar
+    form: 
+      answer_label: Svar på spørgsmålet
+      comment_label: Kommentar til dette svar
+      comment_submit: Kommentar
+      submit: Svar
+    revert: 
+      title: Fortryd svar
+    update: 
+      flash_notice: Svaret blev oprettet med succes.

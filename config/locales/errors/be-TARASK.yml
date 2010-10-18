@@ -1,0 +1,23 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  errors: 
+    forbidden: 
+      explanation: Вы ня маеце неабходных правоў для доступу на гэтую старонку.
+      title: Доступ забаронены
+    go_to: Перайсьці на старонку %{link}
+    help_us_answer: Дапамажыце ў адказе %{link}
+    internal_error: 
+      explanation: Нам паведамілі пра гэтую праблему і мы хутка яе разгледзім.
+      title: Прабачце, але штосьці пайшло ня так.
+    not_found: 
+      explanation: Верагодна Вы зрабілі памылку ў адрасе, альбо старонка была перанесеная.
+      title: Старонка ня знойдзеная.
+    options_label: "Таксама можаце паспрабаваць:"
+    search: Шукаць
+    unprocessable_entity: 
+      explanation: Верагодна Вы спрабавалі зьмяніць што-небудзь, да чаго ня маеце доступу.
+      title: Зьмена, якую Вы жадалі зрабіць, была адхіленая.

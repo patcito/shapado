@@ -6,16 +6,24 @@ nb:
   activerecord: 
     attributes: 
       answer: 
+        body: Brødtekst
+        created_at: Besvart
         link: Lenke
     models: 
       answer: Svar
       answers: Svar
   answers: 
     create: 
+      flash_error: "Noe gikk galt da du la til svaret ditt.\n  Husk at:\n - Tomme og gjentatte svar er ikke tillatt.\n - Du må vente 20 sekund før du poster et nytt svar.\n - Du kan bare poste ett svar per spørsmål."
       flash_notice: Takk!
+    edit: 
+      title: Rediger svar
     form: 
+      answer_label: Svar på spørsmålet
       comment_label: Kommenter på dette svaret
       comment_submit: Kommentar
       submit: Svar
     revert: 
       title: Tilbakestill svar
+    update: 
+      flash_notice: Svaret ble oppdatert.

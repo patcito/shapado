@@ -1,0 +1,12 @@
+# Messages for Bosnian (Bosanski)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: CERminator
+bs: 
+  ads: 
+    ad_links: Dodaj novi %{type} oglas
+    index: 
+      title: Oglasi
+    name: "Ime:"
+    position: "Pozicija:"
+    title: Dodaj novi %{type} oglas

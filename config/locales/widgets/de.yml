@@ -6,10 +6,10 @@ de:
   widgets: 
     badges: 
       description: Dieses Widget zeigt die Abzeichen an, die kürzlich an Nutzer oder Fragen vergeben wurden
-      title: kürzlich vergebene Abzeichen
+      title: Kürzlich vergebene Abzeichen
     groups: 
       description: Dieses Widget zeigt die fünf neuesten Gruppen an
-      title: kürzlich aktive Gruppen
+      title: Kürzlich aktive Gruppen
     index: 
       description: Verwende die Pfeile, um Deine Widgets zu verschieben
       title: Widgets der Seitenleiste verwalten
@@ -28,4 +28,4 @@ de:
       title: Top 5 Nutzer
     users: 
       description: Dieses Widget zeigt die neu registrierten Nutzer an
-      title: kürzlich aktive Nutzer
+      title: Kürzlich aktive Nutzer

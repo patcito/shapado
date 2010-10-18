@@ -1,0 +1,22 @@
+# Messages for Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Nghtwlkr
+nb: 
+  errors: 
+    forbidden: 
+      explanation: Du har ikke de nødvendige rettighetene for å få tilgang til denne siden.
+      title: Tilgang nektet
+    go_to: Gå til siden %{link}
+    help_us_answer: Hjelp oss å svare %{link}
+    internal_error: 
+      explanation: Vi har blitt varslet om dette problemet og vi vil se på det innen kort tid.
+      title: Vi beklager, men noe gikk galt.
+    not_found: 
+      explanation: Du kan ha feilskrevet adressen eller siden kan ha blitt flyttet.
+      title: Side ikke funnet.
+    options_label: "Andre ting du kan prøve:"
+    search: Søk
+    unprocessable_entity: 
+      explanation: Kanskje du prøvde å endre noe du ikke hadde tilgang til.
+      title: Endringen du ønsket ble avvist.

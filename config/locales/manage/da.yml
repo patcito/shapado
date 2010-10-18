@@ -1,0 +1,55 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  admin: 
+    manage: 
+      content: 
+        footer: Sidefod
+        head: header
+        question_help: Spørgsmål hjælp
+        question_prompt: Spørgsmål prompt
+        title: Brugerdefineret indhold
+        top_bar: Top bjælke
+        top_bar_tip: Indtast et link per linie
+      properties: 
+        constrains: 
+          reputation_constrains_description: Denne formular giver dig mulighed for at konfigurere, hvor mange omdømme point brugerne behøver for at gøre en given handling
+          reputation_constrains_subtitle: Liste over omdømme for hver handling
+          title: Forudsætninger
+        domain: 
+          description: "Du kan kortlægge dit websted, så det kan tilgås via dit eget domæne. Dette er hvordan du gør det:"
+          instruction1: For at gøre det er du først nødt til at logge på din domæne udbyder. Det er stedet, hvor du har købt dit domæne såsom %{subdomain}.com.
+          instruction2: Der skal du gå til DNS afsnittet og lave noget der hedder en CNAME.
+          instruction3: Vælg 'www' eller noget andet som navnet på din CNAME.
+          instruction4: "Så i host eller destinations felt, sæt dit nuværende Shapado domæne: %{domain}."
+          instruction5: Når dette er gjort, efter en time eller deromkring, skulle dit domæne www.%{subdomain} pege på %{appdomain}.
+          instruction6: Når dette er tilfældet, kom tilbage her og sæt dit domænenavn www.%{subdomain} i feltet nedenfor og tryk på knappen 'opdater'. Hvis du har spørgsmål, så spørg os i %{chat_url} eller på vores support forum.
+          title: Sæt dit domæne
+          warning: Er du sikker på du vil ændre dit domæne?
+        general: 
+          title: Gruppe indstillinger
+        rewards: 
+          reputation_rewards_description: Denne form giver dig mulighed for at konfigurere, hvordan brugerne kan vinde og tabe omdømme points for en given handling
+          reputation_rewards_subtitle: Liste over omdømme belønninger
+          title: Belønninger
+        share: 
+          add_tags: Tilføj tags til dine tweets
+          application_id: Applikations ID
+          asking_from_twitter: Stille spørgsmål fra Twitter
+          ends_with_example: "fx #shapado"
+          facebook_app: Facebook app-indstillinger
+          question_asked_to: Spørgsmål Stillet Til
+          question_must_include: Spørgsmål skal indeholde følgende tag for at blive tweeted
+          question_must_include_example: "fx #iAsk"
+          secret_key: Hemmelig Nøgle
+          starts_with_example: "fx #qa"
+          title: Del
+          title_on_dlvr: Del på dlvr.it
+          tweet_ends_with: Vedhæft en tag til din tweets
+          tweet_starts_with: Foranstille et tag til dine tweets
+          twitter_account: Den Twitter-konto dine brugere vil stille spørgsmål til.
+        theme: 
+          logo_legend: Uploade et logo til din gruppe. Det skal være mindre end 2 MB.
+          title: Indstil gruppens tema

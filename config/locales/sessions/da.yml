@@ -1,0 +1,22 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  sessions: 
+    create: 
+      flash_error: Kunne ikke logge dig ind som '%{login}'
+      flash_notice: Succesfuldt logget ind
+    destroy: 
+      flash_notice: Du er blevet logget ud.
+    new: 
+      log_in: Log ind
+      not_registered: Ikke registreret endnu?
+      registered: Allerede registreret?
+      remember_me: Husk mig
+      sign_in: Log ind
+      signup: Tilmeld
+      with_authentication: Log ind med vores godkendelses system
+      with_facebook: Log ind med Facebook
+      with_openid: Log ind med OpenID
+      with_twitter: Log ind med Twitter

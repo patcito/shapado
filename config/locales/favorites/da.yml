@@ -1,0 +1,13 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    models: 
+      favorite: Favorit
+      favorites: Favoritter
+  favorites: 
+    create: 
+      success: Spørgsmålet er blevet tilføjet til dine favoriter
+      unauthenticated: Du skal bruge en konto for at tilføje favoritter

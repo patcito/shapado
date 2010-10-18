@@ -1,0 +1,12 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  shared: 
+    current_tags: 
+      title: Udvalgte tags
+    topbar: 
+      admin: Admin
+      logged_as: Logget ind som %{login}
+      user_page: Min side

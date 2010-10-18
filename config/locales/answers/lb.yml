@@ -1,0 +1,24 @@
+# Messages for Luxembourgish (Lëtzebuergesch)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Robby
+lb: 
+  activerecord: 
+    attributes: 
+      answer: 
+        link: Link
+    models: 
+      answer: Äntwert
+      answers: Äntwerten
+  answers: 
+    create: 
+      flash_notice: Merci!
+    edit: 
+      title: Äntwert änneren
+    form: 
+      answer_label: D'Fro beäntwerten
+      comment_label: Dës Äntwert kommentéieren
+      comment_submit: Bemierkung
+      submit: Äntwert
+    update: 
+      flash_notice: D'Äntwert gouf aktualiséiert.

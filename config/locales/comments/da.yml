@@ -1,0 +1,20 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  comments: 
+    create: 
+      flash_notice: Tak for din kommentar
+    edit: 
+      title: Rediger kommentar
+    shared: 
+      add_comment: Tilføj kommentar ...
+      comment_submit: Kommentar
+      reply: Svar
+      said: sagde
+    update: 
+      flash_notice: Kommentaren blev opdateret.
+  models: 
+    comment: Kommentar
+    comments: Kommentarer

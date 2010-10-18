@@ -1,0 +1,20 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  flags: 
+    create: 
+      flash_error: Вы ня можаце пазначыць гэта
+      flash_notice: Дзякуй за Вашае паведамленьне
+    form: 
+      attention: Патрабуе ўвагу мадэратара
+      label: Калі ласка, будзьце ўважлівымі падчас пазначэньня
+      offensive: Агрэсія, зьнявага ці праява нянавісьці
+      spam: Спам
+    model: 
+      messages: 
+        already_requested: Вы ўжо пазначылі гэтую %{model}
+    new: 
+      title: Метка %{model}

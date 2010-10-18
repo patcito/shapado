@@ -2,12 +2,15 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Papapep
+# Author: SMP
 ca: 
   close_requests: 
     create: 
       flash_notice: S'ha tancat la petició correctament
     destroy: 
       flash_notice: S'ha eliminat correctament la petició de tancament
+    edit: 
+      title: Edita la petició de tancament.
     form: 
       close_with_reason: Tanca aquesta pregunta per aquesta raó
       dupe: Duplicat

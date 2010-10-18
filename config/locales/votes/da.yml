@@ -1,0 +1,25 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    models: 
+      vote: Stemme
+      votes: Stemmer
+  votes: 
+    control: 
+      have_voted_down: Klik for at fortryde din ned stemme
+      have_voted_up: Klik for at fortryde din op stemme
+      to_vote_down: Klik for at stemme ned
+      to_vote_up: Klik for at stemme op
+    create: 
+      flash_error: Du kan ikke stemme dette
+      flash_notice: Tak for din stemme!
+      unauthenticated: Anonyme brugere kan ikke stemme
+    destroy: 
+      flash_notice: Din stemme blev tilbagekaldt med succes.
+    model: 
+      messages: 
+        closed_question: Du kan ikke stemme på nogen indlæg der tilhører et lukket spørgsmål
+        vote_down_comment: Kommentarer kan ikke stemmes ned

@@ -20,7 +20,7 @@ nl:
         description: Heeft alle velden in het gebruikersprofiel ingevuld
         name: Autobiograaf
       celebrity: 
-        description: Meer dan honderd volgers
+        description: Heeftmeer dan honderd volgers
         name: Beroemdheid
       citizen_patrol: 
         description: Eerste bericht gemarkeerd
@@ -29,7 +29,7 @@ nl:
         description: Heeft driehonderd keer gestemd
         name: Burgerplicht
       cleanup: 
-        description: Eerste keer teruggedraaid
+        description: Heeft een eerste keer teruggedraaid
         name: Opruimen
       commentator: 
         description: Heeft tien opmerkingen achtergelaten
@@ -47,7 +47,7 @@ nl:
         description: Heeft honderd positieve stemmen gekregen
         name: Inspanningsmedaille
       enlightened: 
-        description: Heeft een eerste antwoord dat tenminste tien keer positief is beoordeeld
+        description: Heeft een antwoord gegeven dat tenminste tien keer positief is beoordeeld
         name: Verlicht
       famous_question: 
         description: Heeft een vraag gesteld die tienduizend keer bekeken is
@@ -62,13 +62,13 @@ nl:
         description: Is voor de eerste keer iemand gaan volgen
         name: Vriendelijk
       good_answer: 
-        description: Heeft een antwoord dat een gemiddelde van meer dan 25 stemmen bereikt
+        description: Heeft een antwoord gegeven dat een gemiddelde van meer dan 25 stemmen bereikt
         name: Goed antwoord
       good_question: 
-        description: Heeft een vraag die een gemiddelde van meer dan 25 stemmen bereikt
+        description: Heeft een vraag gesteld die een gemiddelde van meer dan 25 stemmen bereikt
         name: Goede vraag
       great_answer: 
-        description: Antwoord dat honderd keer positief is beoordeeld
+        description: Heeft een antwoord gegeven dat honderd keer positief is beoordeeld
         name: Perfect antwoord
       great_question: 
         description: Vraag die honderd keer positief beoordeeld is
@@ -77,7 +77,7 @@ nl:
         description: Heeft een oplossing gegeven voor een vraag met een gemiddelde van meer dan 40 stemmen
         name: Goeroe
       inquirer: 
-        description: Heeft een eerste vraag gesteld
+        description: Heeft voor de eerste keer een vraag gesteld
         name: Onderzoeker
       interesting_person: 
         description: Heeft meer dan tien volgers
@@ -89,16 +89,16 @@ nl:
         description: Heeft een vraag beantwoord meer dan twee maanden na het stellen met tenminste vijf stemmen
         name: Geestenbezweerder
       nice_answer: 
-        description: Antwoord dat tien keer positief is beoordeeld
+        description: Heeft een antwoord gegeven dat tien keer positief is beoordeeld
         name: Mooi antwoord
       nice_question: 
-        description: Vraag die tien keer positief beoordeeld is
+        description: Heeft een vraag gesteld die tien keer positief beoordeeld is
         name: goede vraag
       notable_question: 
         description: Heeft een vraag gesteld die 2500 keer bekeken is
         name: Vermeldenswaardige vraag
       organizer: 
-        description: Eerste herlabeling
+        description: Heeft een eerste herlabeling uitgevoerd
         name: organisator
       peer_pressure: 
         description: Heeft eigen bericht met een score van -3 of lager verwijderd
@@ -107,7 +107,7 @@ nl:
         description: Een van de eerste geregistreerde gebruikers
         name: Pionier
       popstar: 
-        description: Vijfhonderd positieve stemmen, maximaal tien negatieve stemmen
+        description: Heeftvijfhonderd positieve stemmen en maximaal tien negatieve stemmen
         name: Popster
       popular_person: 
         description: Heeft meer dan vijftig volgers
@@ -116,21 +116,21 @@ nl:
         description: Heeft een vraag gesteld die duizend keer bekeken is
         name: Populaire vraag
       rockstar: 
-        description: Duizend positieve stemmen, maximaal tien negatieve stemmen
+        description: Heeft duizend positieve stemmen en maximaal tien negatieve stemmen
         name: Rockster
       scholar: 
-        description: Eerste geaccepteerde antwoord op een eigen vraag
+        description: Heeft voor het eerst een zelfgestelde vraag beantwoord met een geaccepteerd antwoord
         name: Geleerde
       self-learner: 
-        description: Eigen vraag beantwoord met tenminste drie positieve beoordelingen
+        description: Heeft een eigen vraag beantwoord met tenminste drie positieve beoordelingen
         name: Zelflerend
       service_medal: 
-        description: Driehonderd positieve stemmen
+        description: Heeft driehonderd positieve stemmen
         name: Dienstmedaille
       shapado: 
         description: Heeft de site acht dagen achter elkaar bezocht
       stellar_question: 
-        description: Vraag die door honderd gebruikers als favoriet is aangegeven
+        description: Heeft een vraag gesteld die door honderd gebruikers als favoriet is aangegeven
         name: Bovennatuurlijk goede vraag
       student: 
         description: Heeft een vraag gesteld met tenminste één positieve stem

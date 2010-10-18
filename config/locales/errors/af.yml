@@ -1,0 +1,14 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  errors: 
+    forbidden: 
+      title: Toegang geweier
+    go_to: Gaan na die bladsy %{link}
+    help_us_answer: Help ons om %{link} te antwoord
+    not_found: 
+      title: Bladsy nie gevind nie.
+    options_label: "Ander dinge om te probeer:"
+    search: Soek

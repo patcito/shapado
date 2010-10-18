@@ -1,0 +1,32 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  activerecord: 
+    attributes: 
+      flag: 
+        reason: Årsag
+    models: 
+      flag: Anmeldelse
+      flags: Anmeldelser
+  flags: 
+    create: 
+      flash_error: Du kan ikke anmelde dette
+      flash_notice: Tak for din rapport
+    destroy: 
+      flash_notice: Din anmeldelse blev tilbagekaldt med succes.
+    edit: 
+      title: Redigér %{model}'s anmeldelse
+    form: 
+      attention: Kræver moderators opmærksomhed
+      label: Anmeld venligst med forsigtighed
+      offensive: Krænkende, misbrug eller hadefuld tale
+      spam: Spam
+    model: 
+      messages: 
+        already_requested: Du har allerede anmeldt denne %{model}
+    new: 
+      title: Anmeld %{model}
+    update: 
+      flash_notice: Spørgsmålets anmeldelse blev opdateret.

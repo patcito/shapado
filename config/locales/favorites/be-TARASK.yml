@@ -1,0 +1,14 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  activerecord: 
+    models: 
+      favorite: Улюблёныя
+      favorites: Улюблёныя
+  favorites: 
+    create: 
+      success: Пытаньне было дададзенае да ўлюблёных
+      unauthenticated: Вам неабходна мець рахунак, каб дадаць да ўлюблёных

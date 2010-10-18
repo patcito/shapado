@@ -1,0 +1,31 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  widgets: 
+    badges: 
+      description: Denne widget viser de seneste badges optjent af brugere eller spørgsmål
+      title: Seneste badges
+    groups: 
+      description: Denne widget viser de seneste grupper
+      title: Nylige grupper
+    index: 
+      description: Brug pilene til at flytte dine widgets
+      title: Administrer sidebar widgets
+    pages: 
+      description: Denne widget vises en liste over wiki sider
+      new: Tilføj ny side
+      title: Wiki-sider
+    tag_cloud: 
+      description: Denne widget viser en tag sky
+      title: Tag sky
+    top_groups: 
+      description: Denne widget viser top fem grupper
+      title: Top 5 grupper
+    top_users: 
+      description: Denne widget viser top fem brugere
+      title: Top 5 brugere
+    users: 
+      description: Denne widget viser de nyeste registrerede medlemmer
+      title: Nyeste brugere

@@ -8,11 +8,12 @@ de:
     post_new_questions: Erstelle neue Fragen zu
     question: Abonniere diese Frage
     questions: Abonniere alle Fragen
-    share_on_twitter: Twitter, Facebook und mehr …
+    share_on_twitter: Twitter, Facebook und<br />mehr …
     tag: Abonniere das Stichwort
     user: Abonniere die Fragen des Nutzers
   global: 
     active: Aktivieren
+    anonymous: Anonymer
     by: von
     current: Aktuell
     from: von %{site}
@@ -47,6 +48,7 @@ de:
     edit: Bearbeiten
     more: Mehr …
     new: Neue %{model} hinzufügen
+    post_as_anonymous: Als Anonymer arbeiten
     save: Speichern
     send: Senden
     show: Zeigen

@@ -1,0 +1,51 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  layouts: 
+    application: 
+      ask_question: Stil spørgsmål
+      badges: Badges
+      forgot: Glemt?
+      home: Hjem
+      languages: Sprog
+      log_in: Log ind
+      logged: Logget ind som %{login}
+      logout: Log ud
+      manage_ads: Administrer annoncer
+      moderate: Moderat
+      now: nu!
+      openid: 
+        explaination: "Hvis du ønsker at registrere eller blot logge ind, skal du vælge din OpenID udbyder:"
+      pages: Sider
+      questions: Spørgsmål
+      questions_in: Spørgsmål i
+      questions_tagged: tagged med
+      search: Søg
+      settings: Indstillinger
+      signup: Tilmeld
+      subscribe: Abonner
+      tags: Tags
+      title: Spørgsmål & Svar
+      unanswered: Ubesvarede
+      users: Brugere
+      welcome_from: Velkommen! Du kan
+    manage: 
+      actions: Handlinger
+      announcements: Bekendtgørelser
+      constrains: Forudsætninger
+      content: Indhold
+      dashboard: Dashboard
+      domain: Domæne
+      general: Generelt
+      members: Medlemmer
+      pages: Sider
+      properties: Egenskaber
+      reputation: Omdømme
+      rewards: Belønninger
+      stats: Statetisker
+      theme: Tema
+      widgets: Widgets
+    notifications: 
+      message: Hvis du ikke ønsker at modtage automatiske meddelelser fra %{domain} længere, ændre dine indstillingere.
