@@ -63,7 +63,7 @@ class Notifier < ActionMailer::Base
   end
 
   def new_feedback(user, subject, content, email, ip)
-    self.class.layout ""
+    #self.class.layout ""
     recipients AppConfig.exception_notification["exception_recipients"]
     from "Shapado[feedback] <#{AppConfig.notification_email}>"
     subject "feedback: #{subject}"
