@@ -20,7 +20,7 @@ pt-BR:
         description: Preencheu todos os campos do perfil de usuário
         name: Autobiógrafo
       celebrity: 
-        description: Obter mais de 100 seguidores
+        description: Obteve mais de 100 seguidores
         name: Celebridade
       citizen_patrol: 
         description: Primeira post reportado
@@ -29,7 +29,7 @@ pt-BR:
         description: Votou 300 vezes
         name: Dever cívico
       cleanup: 
-        description: Primeira reversão
+        description: Fez a primeira reversão
         name: Limpeza
       commentator: 
         description: Fez 10 comentários
@@ -47,7 +47,7 @@ pt-BR:
         description: Obteve 100 votos positivos
         name: Medalha de esforço
       enlightened: 
-        description: Primeira resposta foi aceita com ao menos 10 votos positivos
+        description: Tem uma resposta que foi aceita com pelo menos 10 votos positivos
         name: Iluminado
       famous_question: 
         description: Fez uma pergunta com 10000 visualizações
@@ -56,19 +56,19 @@ pt-BR:
         description: Visitou o site em 100 dias consecutivos
         name: Fanático
       favorite_question: 
-        description: Pergunta adicionada aos favoritos por 25 usuários
+        description: Fez uma pergunta adicionada aos favoritos por 25 usuários
         name: Pergunta favorita
       friendly: 
         description: Seguir alguém pela primeira vez
         name: Amistoso
       good_answer: 
-        description: Ter dado uma resposta que atinge uma média de mais de 25 votos
+        description: Deu uma resposta que atingiu uma média de mais de 25 votos
         name: Boa resposta
       good_question: 
-        description: Ter feito uma pergunta que atinge uma média de mais de 25 votos
+        description: Fez uma pergunta que atingiu uma média de mais de 25 votos
         name: Boa pergunta
       great_answer: 
-        description: Resposta com 100 votos positivos
+        description: Tem uma resposta com 100 votos positivos
         name: Ótima resposta
       great_question: 
         description: Pergunta com 100 votos positivos
@@ -77,10 +77,10 @@ pt-BR:
         description: Deu uma solução a uma pergunta com uma média de mais de 40 votos
         name: Guru
       inquirer: 
-        description: Perguntou pela primeira vez
+        description: Fez sua primeira pergunta
         name: Questionador
       interesting_person: 
-        description: Obter mais de 10 seguidores
+        description: Obteve mais de 10 seguidores
         name: Pessoa interessante
       merit_medal: 
         description: Obter 200 votos positivos
@@ -89,16 +89,16 @@ pt-BR:
         description: Respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
         name: Necromante
       nice_answer: 
-        description: Resposta com 10 votos positivos
+        description: Tem uma resposta com 10 votos positivos
         name: Boa resposta
       nice_question: 
-        description: Pergunta votada positivamente 10 vezes
+        description: Fez uma pergunta votada positivamente 10 vezes
         name: Boa pergunta
       notable_question: 
         description: Fez uma pergunta com 2500 visualizações
         name: Pergunta notável
       organizer: 
-        description: Primeira recategorização
+        description: Fez a primeira alteração de tag
         name: Organizador
       peer_pressure: 
         description: Eliminou publicação própria com pontuação de -3 ou inferior
@@ -107,30 +107,30 @@ pt-BR:
         description: Ser um dos primeiros usuários a registar-se
         name: Pioneiro
       popstar: 
-        description: 500 votos positivos, máximo de 10 votos negativos
+        description: Tem 500 votos positivos, máximo de 10 votos negativos
         name: Popstar
       popular_person: 
-        description: Tem mais de 50 seguidores
+        description: Conseguiu mais de 50 seguidores
         name: Pessoa popular
       popular_question: 
         description: Fez uma pergunta com 1000 visualizações
         name: Pergunta popular
       rockstar: 
-        description: 1000 votos positivos, máximo de 10 votos negativos
+        description: Tem 1000 votos positivos, máximo de 10 votos negativos
         name: Rockstar
       scholar: 
-        description: Primeira resposta aceita em um pergunta sua
+        description: Respondeu à primeira pergunta própria com uma resposta aceita
         name: Erudito
       self-learner: 
         description: Respondeu à sua própria pergunta, com pelo menos 3 votos positivos
         name: Autodidata
       service_medal: 
-        description: 300 votos positivos
+        description: Tem 300 votos positivos
         name: Medalha de serviço
       shapado: 
         description: Visitou o site em 8 dias consecutivos
       stellar_question: 
-        description: Pergunta adicionada aos favoritos por 100 usuários
+        description: Fez uma pergunta adicionada aos favoritos por 100 usuários
         name: Pergunta extraordinária
       student: 
         description: Fez a primeira pergunta com pelo menos um voto positivo
@@ -145,9 +145,9 @@ pt-BR:
         description: Deu uma solução a uma pergunta com uma média de mais de 2 votos
         name: Tutor
     show: 
-      description: "Usuários que receberam esta condecoração. Recentemente dada a:"
+      description: "Usuários que receberam esta medalha. Recentemente dada a:"
       earned: recebida
       for_tag_bronze: 200 votos na categoria %{tag}
       for_tag_gold: 1000 votos na categoria %{tag}
       for_tag_silver: 400 votos na categoria %{tag}
-      title: Condecoração %{type}
+      title: Medalha %{type}

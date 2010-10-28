@@ -5,9 +5,9 @@
 mk: 
   activerecord: 
     models: 
-      favorite: омилено
-      favorites: омилени
+      favorite: Бендисано
+      favorites: Бендисани
   favorites: 
     create: 
-      success: прашањето е додадено во вашите омилени
-      unauthenticated: ќе ви треба сметка за да можете да додавате омилени
+      success: Прашањето е додадено во бендисаните
+      unauthenticated: Ќе ви треба сметка за да можете да бендисувате

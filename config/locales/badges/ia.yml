@@ -19,7 +19,7 @@ ia:
         description: Completava tote le campos del profilo de usator
         name: Autobiographo
       celebrity: 
-        description: Ha plus de 100 sequitores
+        description: Accumulava plus de 100 sequitores
         name: Celebritate
       citizen_patrol: 
         description: Prime message reportate
@@ -28,7 +28,7 @@ ia:
         description: Votava 300 vices
         name: Deber civic
       cleanup: 
-        description: Prime revocation
+        description: Faceva su prime revocation
         name: Nettation
       commentator: 
         description: Lassava 10 commentos
@@ -46,7 +46,7 @@ ia:
         description: Recipeva 100 votos positive
         name: Medalia de effortio
       enlightened: 
-        description: Prime responsa acceptate con al minus 10 votos positive
+        description: Ha un responsa que esseva acceptate con al minus 10 votos positive
         name: Exclarate
       famous_question: 
         description: Poneva un question con 10000 visitas
@@ -55,19 +55,19 @@ ia:
         description: Visitava le sito cata die durante 100 dies consecutive
         name: Fanatico
       favorite_question: 
-        description: Question marcate como favorite per 25 usatores
+        description: Poneva un question marcate como favorite per 25 usatores
         name: Question favorite
       friendly: 
         description: Sequer alcuno pro le prime vice
         name: Amical
       good_answer: 
-        description: Haber un responsa que attinge un medio de plus de 25 votos
+        description: Dava un responsa que attingeva un medio de plus de 25 votos
         name: Bon responsa
       good_question: 
-        description: Haber un question que attinge un medio de plus de 25 votos
+        description: Poneva un question que attingeva un medio de plus de 25 votos
         name: Bon question
       great_answer: 
-        description: Responsa con 100 votos positive
+        description: Ha un responsa con 100 votos positive
         name: Optime responsa
       great_question: 
         description: Question votate positivemente 100 vices
@@ -76,10 +76,10 @@ ia:
         description: Dava un solution a un question con un medio de plus de 40 votos
         name: Guru
       inquirer: 
-        description: Poneva su prime question
+        description: Poneva un question pro le prime vice
         name: Investigator
       interesting_person: 
-        description: Ha plus de 10 sequitores
+        description: Accumulava plus de 10 sequitores
         name: Persona interessante
       merit_medal: 
         description: Recipeva 200 votos positive
@@ -88,16 +88,16 @@ ia:
         description: Respondeva a un question plus de 60 dies plus tarde con al minus 5 votos
         name: Necromante
       nice_answer: 
-        description: Responsa con 10 votos positive
+        description: Ha un responsa con 10 votos positive
         name: Bon responsa
       nice_question: 
-        description: Question votate positivemente 10 vices
+        description: Poneva un question votate positivemente 10 vices
         name: Bon question
       notable_question: 
         description: Poneva un question con 2500 visitas
         name: Question notabile
       organizer: 
-        description: Prime re-etiquettage
+        description: Faceva su prime re-etiquettage
         name: Organisator
       peer_pressure: 
         description: Deleva un proprie message con un score de -3 o minus
@@ -106,30 +106,30 @@ ia:
         description: Esser un del prime usatores a crear un conto
         name: Pionero
       popstar: 
-        description: 500 votos positive, maximo de 10 votos negative
+        description: Ha 500 votos positive, maximo de 10 votos negative
         name: Popstar
       popular_person: 
-        description: Ha plus de 50 sequitores
+        description: Accumulava plus de 50 sequitores
         name: Persona popular
       popular_question: 
         description: Poneva un question con 1000 visitas
         name: Question popular
       rockstar: 
-        description: 1000 votos positive, maximo de 10 votos negative
+        description: Ha 1000 votos positive, maximo de 10 votos negative
         name: Rockstar
       scholar: 
-        description: Prime responsa acceptate a un proprie question
+        description: Respondeva a su prime proprie question con un responsa acceptate
         name: Erudito
       self-learner: 
-        description: Respondeva a su proprie question con al minus 3 votos positive
+        description: Respondeva a un proprie question con al minus 3 votos positive
         name: Autodidacto
       service_medal: 
-        description: 300 votos positive
+        description: Ha 300 votos positive
         name: Medalia de servicio
       shapado: 
         description: Visitava le sito cata die durante 8 dies consecutive
       stellar_question: 
-        description: Question addite al favorites per 100 usatores
+        description: Poneva un question addite al favorites per 100 usatores
         name: Question stellar
       student: 
         description: Poneva su prime question con al minus un voto positive

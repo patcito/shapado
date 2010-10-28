@@ -29,7 +29,7 @@ be-TARASK:
         description: Прагаласаваў 300 разоў
         name: Грамадзянская адказнасьць
       cleanup: 
-        description: Першы адкат
+        description: Зрабіў першы адкат
         name: Уборка
       commentator: 
         description: Пакінуў 10 камэнтараў
@@ -47,7 +47,7 @@ be-TARASK:
         description: Атрымаў 100 галасоў «за»
         name: Мэдаль за намаганьні
       enlightened: 
-        description: Першы адказ быў прыняты хаця б 10 галасамі «за»
+        description: Мае адказ, які быў прыняты хаця б 10 галасамі «за»
         name: Асьвечаны
       famous_question: 
         description: Задаў пытаньне з 10000 праглядаў
@@ -56,19 +56,19 @@ be-TARASK:
         description: Наведваў сайт кожны дзень на працягу 100 дзён
         name: Фанатык
       favorite_question: 
-        description: Улюблёнае пытаньне 25 удзельнікаў
+        description: Задаў улюблёнае пытаньне 25 удзельнікаў
         name: Улюблёнае пытаньне
       friendly: 
         description: Упершыню пачаў за кімсьці сачыць
         name: Сяброўскі
       good_answer: 
-        description: Мае адказ, які атрымаў у сярэднім больш за 25 галасоў
+        description: Даў адказ, які атрымаў у сярэднім больш за 25 галасоў
         name: Добры адказ
       good_question: 
-        description: Мае пытаньне, якое атрымала у сярэднім больш за 25 галасоў
+        description: Задаў пытаньне, якое атрымала у сярэднім больш за 25 галасоў
         name: Добрае пытаньне
       great_answer: 
-        description: За адказ прагаласавалі «за» 100 разоў
+        description: Мае адказ, за які прагаласавалі «за» 100 разоў
         name: Выдатны адказ
       great_question: 
         description: За пытаньне прагаласавалі 100 разоў «за»
@@ -77,10 +77,10 @@ be-TARASK:
         description: Вырашыў пытаньне з сярэдняй колькасьцю галасоў больш за 40
         name: Настаўнік
       inquirer: 
-        description: Запытаў першы раз
+        description: Задаў пытаньне першы раз
         name: Пытаючы
       interesting_person: 
-        description: Мае болей за 10 пасьлядоўнікаў
+        description: Атрымаў болей за 10 пасьлядоўнікаў
         name: Цікавая асоба
       merit_medal: 
         description: Атрымаў 200 галасоў «за»
@@ -89,16 +89,16 @@ be-TARASK:
         description: Адказаў на пытаньне, з ня менш чым 5 галасамі, праз болей чым 60 дзён
         name: Чараўнік
       nice_answer: 
-        description: За адказ прагаласавалі «за» 10 разоў
+        description: Мае адказ, за які прагаласавалі «за» 10 разоў
         name: Добры адказ
       nice_question: 
-        description: За пытаньне прагаласавалі 10 разоў «за»
+        description: Задаў пытаньне, за якое прагаласавалі 10 разоў «за»
         name: Добрае пытаньне
       notable_question: 
         description: Задаў пытаньне з 2500 праглядамі
         name: Значнае пытаньне
       organizer: 
-        description: Першая зьмена тэгаў
+        description: Зрабіў першую зьмену тэгаў
         name: Арганізатар
       peer_pressure: 
         description: Выдаліць уласнае паведамленьне з адзнакай -3 ці ніжэй
@@ -107,30 +107,30 @@ be-TARASK:
         description: Адзін з першых зарэгістраваных карыстальнікаў
         name: Піянэр
       popstar: 
-        description: 500 галасоў «за», і ня болей 10 галасоў «супраць»
+        description: Мае 500 галасоў «за» і ня болей 10 галасоў «супраць»
         name: Поп-зорка
       popular_person: 
-        description: Мае болей за 50 пасьлядоўнікаў
+        description: Атрымаў болей за 50 пасьлядоўнікаў
         name: Папулярная асоба
       popular_question: 
         description: Задаў пытаньне з 1000 праглядаў
         name: Папулярнае пытаньне
       rockstar: 
-        description: 1000 галасоў «за», і ня болей 10 галасоў «супраць»
+        description: Мае 1000 галасоў «за», і ня болей 10 галасоў «супраць»
         name: Рок-зорка
       scholar: 
-        description: Першы раз прыняў адказ на ўласнае пытаньне
+        description: Адказаў на ўласнае пытаньне з прынятым адказам
         name: Эрудыт
       self-learner: 
         description: Адказаў на ўласнае пытаньне, хаця б з 3 галасамі «за»
         name: Самастойна навучаючыся
       service_medal: 
-        description: Атрымаў 300 галасоў «за»
+        description: Мае 300 галасоў «за»
         name: Мэдаль за службу
       shapado: 
         description: Наведваў сайт кожны дзень на працягу 8 дзён
       stellar_question: 
-        description: 100 карыстальнікаў дадалі пытаньне да ўлюблёных
+        description: Задаў пытаньне, якое 100 карыстальнікаў дадалі да ўлюблёных
         name: Зорнае пытаньне
       student: 
         description: Задаў першае пытаньне, з хаця б адным голасам «за»

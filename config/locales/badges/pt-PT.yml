@@ -1,6 +1,7 @@
 # Messages for Portuguese (Português)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: GTNS
 # Author: Hamilton Abreu
 # Author: Waldir
 pt-PT: 
@@ -20,7 +21,7 @@ pt-PT:
         description: Preencheu todos os campos do perfil de utilizador
         name: Autobiógrafo
       celebrity: 
-        description: Obter mais de 100 seguidores
+        description: Obteve mais de 100 seguidores
         name: Celebridade
       citizen_patrol: 
         description: Primeira publicação reportada
@@ -29,7 +30,7 @@ pt-PT:
         description: Votou 300 vezes
         name: Dever cívico
       cleanup: 
-        description: Primeira reversão
+        description: Fez a primeira reversão
         name: Limpeza
       commentator: 
         description: Fez 10 comentários
@@ -47,7 +48,7 @@ pt-PT:
         description: Obteve 100 votos positivos
         name: Medalha de esforço
       enlightened: 
-        description: Primeira resposta foi aceite com pelo menos 10 votos positivos
+        description: Tem uma resposta que foi aceite com pelo menos 10 votos positivos
         name: Esclarecido
       famous_question: 
         description: Fez uma pergunta com 10 000 visitas
@@ -56,19 +57,19 @@ pt-PT:
         description: Visitou o site em 100 dias consecutivos
         name: Fanático
       favorite_question: 
-        description: Pergunta adicionada aos favoritos por 25 utilizadores
+        description: Fez uma pergunta adicionada aos favoritos por 25 utilizadores
         name: Pergunta favorita
       friendly: 
         description: Seguir alguém pela primeira vez
         name: Amistoso
       good_answer: 
-        description: Ter dado uma resposta que atinge uma média de mais de 25 votos
+        description: Deu uma resposta que atingiu uma média de mais de 25 votos
         name: Boa resposta
       good_question: 
-        description: Ter feito uma pergunta que atinge uma média de mais de 25 votos
+        description: Fez uma pergunta que atingiu uma média de mais de 25 votos
         name: Boa pergunta
       great_answer: 
-        description: Resposta com 100 votos positivos
+        description: Tem uma resposta com 100 votos positivos
         name: Óptima resposta
       great_question: 
         description: Pergunta com 100 votos positivos
@@ -80,7 +81,7 @@ pt-PT:
         description: Fez a sua primeira pergunta
         name: Questionador
       interesting_person: 
-        description: Obter mais de 10 seguidores
+        description: Obteve mais de 10 seguidores
         name: Pessoa interessante
       merit_medal: 
         description: Obter 200 votos positivos
@@ -89,16 +90,16 @@ pt-PT:
         description: Respondeu a uma pergunta mais de 60 dias depois, com pelo menos 5 votos
         name: Necromante
       nice_answer: 
-        description: Resposta com 10 votos positivos
+        description: Tem uma resposta com 10 votos positivos
         name: Boa resposta
       nice_question: 
-        description: Pergunta votada positivamente 10 vezes
+        description: Fez uma pergunta votada positivamente 10 vezes
         name: Boa pergunta
       notable_question: 
         description: Fez uma pergunta com 2500 visitas
         name: Pergunta notável
       organizer: 
-        description: Primeira recategorização
+        description: Fez a primeira recategorização
         name: Organizador
       peer_pressure: 
         description: Eliminou publicação própria com pontuação de -3 ou inferior
@@ -107,30 +108,30 @@ pt-PT:
         description: Ser um dos primeiros utilizadores a registar-se
         name: Pioneiro
       popstar: 
-        description: 500 votos positivos, máximo de 10 votos negativos
+        description: Tem 500 votos positivos, máximo de 10 votos negativos
         name: Estrela pop
       popular_person: 
-        description: Tem mais de 50 seguidores
+        description: Teve mais de 50 seguidores
         name: Pessoa popular
       popular_question: 
         description: Fez uma pergunta com 1000 visitas
         name: Pergunta popular
       rockstar: 
-        description: 1000 votos positivos, máximo de 10 votos negativos
+        description: Tem 1000 votos positivos, máximo de 10 votos negativos
         name: Estrela de rock
       scholar: 
-        description: Primeira resposta aceite, numa pergunta do próprio
+        description: Respondeu à primeira pergunta própria com uma resposta aceite
         name: Académico
       self-learner: 
         description: Respondeu à sua própria pergunta, com pelo menos 3 votos positivos
         name: Autodidata
       service_medal: 
-        description: 300 votos positivos
+        description: Tem 300 votos positivos
         name: Medalha de serviço
       shapado: 
         description: Visitou o site em 8 dias consecutivos
       stellar_question: 
-        description: Pergunta adicionada aos favoritos por 100 utilizadores
+        description: Fez uma pergunta adicionada aos favoritos por 100 utilizadores
         name: Pergunta extraordinária
       student: 
         description: Fez a primeira pergunta com pelo menos um voto positivo

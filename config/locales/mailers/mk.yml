@@ -8,7 +8,7 @@ mk:
       earned_badge: 
         subject: На %{group} добивте значка!
       favorited: 
-        subject: "%{login} го додаде вашето прашање како омилено!"
+        subject: "%{login} го бендиса вашето прашање!"
       follow: 
         subject: "%{login} сега ве следи на %{app}"
       give_advice: 

@@ -1,0 +1,44 @@
+# Messages for French (Français)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Peter17
+fr: 
+  devise: 
+    confirmations: 
+      confirmed: Votre compte a été confirmé. Vous êtes maintenant identifié.
+      link: Instructions de confirmation non reçues ?
+      send_instructions: Vous allez recevoir dans quelques minutes un courrier électronique contenant des instructions pour confirmer votre compte.
+    mailer: 
+      confirmation_instructions: Instructions de confirmation
+      reset_password_instructions: Instructions de réinitialisation du mot de passe
+      unlock_instructions: Instructions de déblocage
+    passwords: 
+      link: Mot de passe oublié ?
+      send_instructions: Vous allez recevoir dans quelques minutes un courrier électronique contenant des instructions pour réinitialiser votre mot de passe.
+      updated: Votre mot de passe a été changé. Vous êtes maintenant identifié.
+    registrations: 
+      destroyed: Au revoir ! Votre compte a été annulé. Nous espérons vous revoir bientôt.
+      link: Créer un compte
+      signed_up: Vous vous êtes inscrit.
+      updated: Vous avez mis à jour votre compte.
+    sessions: 
+      facebook_actions: 
+        sign_in: S’identifier
+        sign_out: Déconnexion
+      facebook_authenticity_token: Quelque chose s’est mal passé. Pour des raisons de sécurité, veuillez vous connecter de nouveau.
+      facebook_invalid: Impossible vous identifier. Compte invalide.
+      facebook_timeout: Votre session Facebook a expiré. Veuillez vous identifier à nouveau pour continuer.
+      inactive: Votre compte n’a pas encore été confirmé.
+      invalid: Adresse électronique ou mot de passe invalide.
+      invalid_token: Jeton d’identification invalide.
+      link: S’identifier
+      locked: Votre compte est bloqué.
+      signed_in: Identifié.
+      signed_out: Déconnecté.
+      timeout: Votre session a expiré. Veuillez vous identifier à nouveau pour continuer.
+      unauthenticated: Vous devez vous identifier ou vous inscrire avant de poursuivre.
+      unconfirmed: Vous devez confirmer votre compte avant de continuer.
+    unlocks: 
+      link: Instructions de déblocage non reçues ?
+      send_instructions: Vous allez recevoir dans quelques minutes un courrier électronique contenant des instructions pour débloquer votre compte.
+      unlocked: Votre compte a été débloqué. Vous êtes maintenant identifié.

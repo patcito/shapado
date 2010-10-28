@@ -2,13 +2,14 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Patcito
+# Author: Verdy p
 fr: 
   layouts: 
     application: 
       ask_question: Posez une question
       badges: Insignes
       forgot: Oublié?
-      home: Page principale
+      home: Accueil
       languages: Langues
       log_in: Se connecter
       logged: Connecté %{login}

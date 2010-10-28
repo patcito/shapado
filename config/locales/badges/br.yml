@@ -68,7 +68,7 @@ br:
         description: Kaout ur goulenn gant ur geidenn uheloc'h eget 25 mouezh
         name: Goulenn vat
       great_answer: 
-        description: Respont bet votet a-du 100 gwech
+        description: En deus ur respont bet votet a-du 100 gwech
         name: Respont dispar
       great_question: 
         description: Goulenn bet votet a-du 100 gwech
@@ -116,7 +116,7 @@ br:
         description: Goulenn gant 1 000 gweladenn
         name: Goulenn a ra berzh
       rockstar: 
-        description: 1 000 vot pozitivel, 10 negativel d'ar muiañ
+        description: En deus 1 000 vot pozitivel, 10 negativel d'ar muiañ
         name: Rockstar
       scholar: 
         description: Respont gentañ bet degemeret evit ho koulenn

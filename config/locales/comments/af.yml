@@ -1,0 +1,20 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Naudefj
+af: 
+  comments: 
+    create: 
+      flash_notice: Dankie vir u kommentaar
+    edit: 
+      title: Wysig opmerking
+    shared: 
+      add_comment: Voeg opmerking by...
+      comment_submit: Opmerking plaas
+      reply: Antwoord
+      said: het gesê
+    update: 
+      flash_notice: Kommentaar was suksesvol opgedateer.
+  models: 
+    comment: Opmerking
+    comments: Opmerkings

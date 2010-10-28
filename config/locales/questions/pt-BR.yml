@@ -141,4 +141,4 @@ pt-BR:
     update: 
       flash_notice: A pergunta foi atualizada com sucesso.
     watch: 
-      success: Você receberá notificações por correio electrónico a cada nova resposta a esta pergunta.
+      success: Você receberá notificações por e-mail a cada nova resposta a esta pergunta.

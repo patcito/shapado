@@ -22,7 +22,7 @@ fr:
         description: A complété tous ses champs utilisateurs
         name: Autobiographe
       celebrity: 
-        description: Avoir plus de 100 suiveurs
+        description: A plus de 100 suiveurs
         name: Célébrité
       citizen_patrol: 
         description: Premier rapport de poste
@@ -31,7 +31,7 @@ fr:
         description: A voté 300 fois
         name: Devoir civique
       cleanup: 
-        description: Premier défait
+        description: A fait sa première annulation
         name: Nettoyage
       commentator: 
         description: Avoir laissé 10 commentaires
@@ -49,7 +49,7 @@ fr:
         description: Recevoir 100 votes positifs
         name: Insigne de l'effort
       enlightened: 
-        description: Première réponse acceptée avec au moins 10 votes positifs
+        description: A une réponse acceptée avec au moins 10 votes positifs
         name: Illuminé
       famous_question: 
         description: Question ayant reçu 10000 visites
@@ -58,19 +58,19 @@ fr:
         description: Visiter le site 100 jours consécutifs
         name: Fanatique
       favorite_question: 
-        description: Question sélectionnée comme favorite par 25 utilisateurs
+        description: A posé une question sélectionnée comme favorite par 25 utilisateurs
         name: Question favorite
       friendly: 
         description: Suivre quelqu'un pour la première fois
         name: Amical
       good_answer: 
-        description: Avoir une réponse atteignant une moyenne de plus de 25 votes
+        description: A donné une réponse atteignant une moyenne de plus de 25 votes
         name: Bonne réponse
       good_question: 
-        description: Avoir fait une question ayant atteint une moyenne de 10 votes
+        description: A posé une question ayant atteint une moyenne d’au moins 25 votes
         name: Bonne question
       great_answer: 
-        description: Réponse votée positivement 100 fois
+        description: A une réponse votée positivement 100 fois
         name: Formidable réponse
       great_question: 
         description: Question votée positivement 100 fois
@@ -79,10 +79,10 @@ fr:
         description: Donner une solution à une question ayant une moyenne de votes supérieure à 40
         name: Gourou
       inquirer: 
-        description: Poser une question pour la première fois
+        description: A posé une question pour la première fois
         name: Enquêteur
       interesting_person: 
-        description: Avoir plus de 10 suiveurs
+        description: A plus de 10 suiveurs
         name: Personne intéressante
       merit_medal: 
         description: Recevoir 200 votes positifs
@@ -91,16 +91,16 @@ fr:
         description: A répondu à une question posée il y a plus de 60 jours avec au moins 5 votes
         name: Nécromancien
       nice_answer: 
-        description: Réponse votée positivement 10 fois
+        description: A une réponse votée positivement 10 fois
         name: Jolie réponse
       nice_question: 
-        description: Question votée positivement 10 fois
+        description: A posé une question votée positivement 10 fois
         name: Jolie question
       notable_question: 
         description: Question ayant reçu 2500 visites
         name: Question mémorable
       organizer: 
-        description: Premier retag
+        description: A fait son premier ré-étiquetage
         name: Organisateur
       peer_pressure: 
         description: A supprimé un post avec un score de -3 ou moins
@@ -109,30 +109,30 @@ fr:
         description: Être parmi les premiers à s'être inscrit
         name: Pionnier
       popstar: 
-        description: 500 votes positifs, 10 négatifs maximum
+        description: A 500 votes positifs, pour 10 négatifs maximum
         name: Popstar
       popular_person: 
-        description: Avoir plus de 50 suiveurs
+        description: A plus de 50 suiveurs
         name: Personne populaire
       popular_question: 
         description: Question ayant reçu 1000 visites
         name: Question populaire
       rockstar: 
-        description: 1000 votes positifs, 10 négatifs maximum
+        description: A 1000 votes positifs, pour 10 négatifs maximum
         name: Rockstar
       scholar: 
-        description: Réponse acceptée à votre propre question
+        description: A répondu en premier à une question posée par lui-même avec une réponse acceptée
         name: Érudit
       self-learner: 
-        description: A répondu à sa propre question avec un score de 3 ou plus
+        description: A répondu à sa propre question avec au moins 3 votes positifs
         name: Autodidacte
       service_medal: 
-        description: Recevoir 300 votes positifs
+        description: A reçu 300 votes positifs
         name: Médaille du service
       shapado: 
         description: Visiter le site tous jours durant 8 jours consécutifs
       stellar_question: 
-        description: Question favorite d'au moins 100 utilisateurs
+        description: A posé une question marquée comme favorite par au moins 100 utilisateurs
         name: Question extraordinaire
       student: 
         description: Recevoir au moins un vote positif sur sa première question

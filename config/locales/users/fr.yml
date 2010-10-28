@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: Patcito
 # Author: Peter17
+# Author: Verdy p
 fr: 
   activerecord: 
     attributes: 
@@ -15,7 +16,7 @@ fr:
         birthday: Anniversaire
         created_at: membre
         current_password: Mot de passe actuel
-        email: Email
+        email: Courriel
         fullname: Nom complet
         hide_country: Ne pas dévoiler mon pays
         language: Langue

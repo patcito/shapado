@@ -96,7 +96,7 @@ mk:
       close: затвори
       close_reason: "прашањево е затворено од следнава причина:"
       edit_request: Уреди барање
-      favorite_tooltip: додајте го прашањево во вашите омилени
+      favorite_tooltip: Бендисајте го прашањево
       flag: знаменце
       flagged_as: означени како
       flags: пријавено како
@@ -116,7 +116,7 @@ mk:
       solution: решение
       to_answer_question: за да одговорите на ова прашање
       unauthenticated_retag: треба да имате сметка за да можете да преозначувате прашања
-      unfavorite_tooltip: отстранете го прашањево од вашите омилени
+      unfavorite_tooltip: Отстранете го прашањево од бендисаните
       unwatch_tooltip: престани со набљудување на прашањево
       viewed: прегледани
       watch_tooltip: набљудувај го прашањево

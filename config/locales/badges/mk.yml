@@ -19,7 +19,7 @@ mk:
         description: ги пополнил сите полиња во корисничкиот профил
         name: автобиограф
       celebrity: 
-        description: имање над 100 следбеници
+        description: Има над 100 следбеници
         name: славна личност
       citizen_patrol: 
         description: прва означена порака
@@ -28,7 +28,7 @@ mk:
         description: изгласан 300 пати
         name: граѓанска должност
       cleanup: 
-        description: прво враќање
+        description: Направил прво враќање
         name: расчистување
       commentator: 
         description: даде 10 коментари
@@ -46,7 +46,7 @@ mk:
         description: добивање на 100 позитивни гласа
         name: Медал за труд
       enlightened: 
-        description: првиот одговор бил прифатен со барем 10 гласа „за“
+        description: Има одговор што бил прифатен со барем 10 гласа „за“
         name: просветлен
       famous_question: 
         description: поставил прашање со 10 000 прегледи
@@ -55,19 +55,19 @@ mk:
         description: го посетил мрежното место 100 дена по ред
         name: Фанатик
       favorite_question: 
-        description: прашање омилено на 25 корисници
-        name: Омилено прашање
+        description: Поставил прашање бендисано од 25 корисници
+        name: Бендисано прашање
       friendly: 
         description: следење некого за прв пат
         name: дружељубив
       good_answer: 
-        description: давање на одговор што ќе достигне просечно над 25 гласа
+        description: Дал одговор што достигнал просечно над 25 гласа
         name: Добар одговор
       good_question: 
-        description: имање поставено прашање што достигнало просечно над 25 гласа
+        description: Поставил прашање што достигнало просечно над 25 гласа
         name: Добро прашање
       great_answer: 
-        description: одговор со 100 гласови „за“
+        description: Има одговор со 100 гласови „за“
         name: одличен одговор
       great_question: 
         description: прашање добило 100 гласа „за“
@@ -76,10 +76,10 @@ mk:
         description: изнаоѓање решение на прашање со просечно над 40 гласа
         name: Гуру
       inquirer: 
-        description: поставање на прашање за прв пат
+        description: Поставил прашање за прв пат
         name: Распрашувач
       interesting_person: 
-        description: имање над 10 следбеници
+        description: Има над 10 следбеници
         name: интересна личност
       merit_medal: 
         description: добивање на 200 позитивни гласа
@@ -88,16 +88,16 @@ mk:
         description: одговорено прашање во рок подолг од 60 дена и со барем 5 гласа
         name: некромант
       nice_answer: 
-        description: одговорот добил 10 гласа „за“
+        description: Има одговор што добил 10 гласа „за“
         name: фин одговор
       nice_question: 
-        description: прашањето добило над 10 гласа „за“
+        description: Поставил прашање што добило над 10 гласа „за“
         name: фино прашање
       notable_question: 
         description: поставено прашање со 2500 прегледи
         name: Значајно прашање
       organizer: 
-        description: прво преозначување
+        description: Направил прво преозначување
         name: организатор
       peer_pressure: 
         description: избришал своја порака со -3 бода или пониско
@@ -106,30 +106,30 @@ mk:
         description: меѓу првите регистрирани корисници
         name: Пионер
       popstar: 
-        description: 500 позитивни, а само 10 негативни гласови
+        description: Има 500 позитивни, а највеќе 10 негативни гласови
         name: Поп-ѕвезда
       popular_person: 
-        description: имање над 50 следбеници
+        description: Има над 50 следбеници
         name: популарана личност
       popular_question: 
         description: поставил прашање со 1000 прегледи
         name: Популарно прашање
       rockstar: 
-        description: 1000 позитивни, а највеќе 10 негавитни гласа
+        description: Има 1000 позитивни, а највеќе 10 негавитни гласови
         name: Рок-ѕвезда
       scholar: 
-        description: прв прифатен одговор на ваше прашање
+        description: Дал прифатен офговор на прво самопоставено прашање
         name: научен трудбеник
       self-learner: 
-        description: самите си одговоривте свое прашање со барем три гласа „за“
+        description: Одговорил сопствено прашање со барем три гласа „за“
         name: самоученик
       service_medal: 
-        description: 300 позитивни гласа
+        description: Има 300 позитивни гласа
         name: Медал за служба
       shapado: 
         description: го посетил мрежното место 8 дена по ред
       stellar_question: 
-        description: прашање омилено на 100 корисници
+        description: Поставил прашање бендисано од 100 корисници
         name: ѕвездено прашање
       student: 
         description: го поставил првото прашање со барем еден глас „за“
