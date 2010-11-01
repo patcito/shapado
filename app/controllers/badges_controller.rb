@@ -5,11 +5,15 @@ class BadgesController < ApplicationController
   # GET /badges
   # GET /badges.xml
   def index
-    @badges = Badge.all
-
+    @badges = []
+    Badge.TOKENS.each do |token|
+     badge = Badge.new(:token => token)
+     badge["count"] = Badge.count(:token => token, :group_id => current_group.id)
+     @badges << badge
+    end
     respond_to do |format|
       format.html # index.html.erb
-      format.json  { render :json => @badges.to_json }
+      format.json  { render :json => @badges }
     end
   end
 

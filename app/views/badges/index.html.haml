@@ -7,13 +7,12 @@
     = t(".description")
   .inner
     %ul.list
-      -Badge.TOKENS.each do |token|
+      - @badges.each do |badge|
         %li
           .badge_item
-            -badge = Badge.new(:token => token)
             = render :partial => "badges/badge", :object => badge, :locals => {:hide_user => true}
             .counter
-              == × #{Badge.count(:token => token, :group_id => current_group.id)}
+              == × #{badge["count"]}
           .badge_description
             =badge.description
           .clear
