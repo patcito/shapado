@@ -29,8 +29,8 @@ en:
       message3: "Email address: %{email}"
       message4: "Subject: %{subject}"
     report:
-      message1: "Report for group %{group.name}"
-      message2: "Since %{since}"
+      message1: "Report for group %{group}"
+      message2: "Since %{date}"
       message3: "%{questions} questions were created"
       message4: "%{answers} answers were created"
       message5: "%{votes} votes were made"
