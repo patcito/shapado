@@ -14,8 +14,7 @@ class Version
     if cdata.respond_to?(:join)
       cdata.join(" ")
     else
-      cdata
+      cdata || ""
     end
   end
 end
-
