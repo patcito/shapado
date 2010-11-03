@@ -1,3 +1,6 @@
+-if current_group.enable_latex
+  -require_js 'jsMath/easy/load.js'
+
 -content_for :head do
   -if @page.has_css?
     %link{:href => css_page_path(@page),  :rel => "stylesheet", :media => "screen", :type => "text/css"}

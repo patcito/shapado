@@ -68,6 +68,10 @@
     = form.label :wysiwyg_editor, t('wysiwyg_editor', :scope => "activerecord.attributes.group"), :class => "radio"
 
   .group
+    = form.check_box :enable_latex, :class => "checkbox"
+    = form.label :enable_latex, t('enable_latex', :scope => "activerecord.attributes.group"), :class => "radio"
+
+  .group
     = form.check_box :fb_button, :class => "checkbox"
     = form.label :fb_button, t('fb_button', :scope => "activerecord.attributes.group"), :class => "radio"
 
