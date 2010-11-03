@@ -25,6 +25,7 @@ es:
         state: Estado
         subdomain: URL
         wysiwyg_editor: Habilitar un editor de texto mas amigable para el usuario
+        enable_latex: Habilitar Latex
     models: 
       default_tags_message: No se puede tener mas de 10 tags por defecto.
       group: Grupo
