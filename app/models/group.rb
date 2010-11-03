@@ -84,6 +84,7 @@ class Group
   validates_inclusion_of :language, :within => AVAILABLE_LANGUAGES, :allow_nil => true
   validates_inclusion_of :theme, :within => AVAILABLE_THEMES
 
+  before_validation_on_create :set_subdomain
   before_validation_on_create :check_domain
   before_save :disallow_javascript
   before_save :downcase_domain
@@ -97,6 +98,10 @@ class Group
   def downcase_domain
     domain.downcase!
     subdomain.downcase!
+  end
+
+  def set_subdomain
+    self["subdomain"] = self["slug"]
   end
 
   def check_domain
