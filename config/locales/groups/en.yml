@@ -65,5 +65,5 @@ en:
         registered_only: Only registered people can access the site
         may_contain_adult_content: This site may contain adult content
         wysiwyg_editor: Enable user-friendly editor
-        fb_button: Enable Facebook like button (not privacy friendly)
-        enable_latex: Enable Latex
+        fb_button: Enable Facebook Like button (not privacy friendly)
+        enable_latex: Enable LaTeX
