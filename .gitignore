@@ -10,3 +10,4 @@ data/*.dat
 config/database.yml
 base_packaged.*
 .directory
+public/javascripts/jsMath/fonts/
