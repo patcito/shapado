@@ -316,5 +316,11 @@ module ApplicationHelper
       render_page_links(line.strip)
     end
   end
+
+  def include_latex
+    if current_group.enable_latex
+      require_js domain_url(:custom => current_group.domain)+'/javascripts/jsMath/easy/load.js'
+    end
+  end
 end
 
