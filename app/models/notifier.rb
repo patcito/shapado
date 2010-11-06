@@ -3,6 +3,7 @@ class Notifier < ActionMailer::Base
   layout "notifications"
 
   def give_advice(user, group, question, following = false)
+    domain = group ? group.domain : AppConfig.domain
     template_for user do
 
       scope = "mailers.notifications.give_advice"
@@ -17,7 +18,7 @@ class Notifier < ActionMailer::Base
       end
       sent_on Time.now
       body   :user => user, :question => question,
-             :group => group, :domain => group.domain,
+             :group => group, :domain => domain,
              :following => following
     end
   end
@@ -52,13 +53,14 @@ class Notifier < ActionMailer::Base
   end
 
   def new_comment(group, comment, user, question)
+    domain = group ? group.domain : AppConfig.domain
     recipients user.email
     template_for user do
       from from_email(group)
       subject I18n.t("mailers.notifications.new_comment.subject", :login => comment.user.login, :group => group.name)
       sent_on Time.now
 
-      body :user => user, :comment => comment, :question => question, :group => group
+      body :user => user, :comment => comment, :question => question, :group => group, :domain => domain
     end
   end
 
@@ -72,39 +74,43 @@ class Notifier < ActionMailer::Base
     content_type  "text/plain"
   end
 
-  def follow(user, followed)
+  def follow(group, user, followed)
+    domain = group ? group.domain : AppConfig.domain
     recipients followed.email
     template_for followed do
       from from_email(group)
       subject I18n.t("mailers.notifications.follow.subject", :login => user.login, :app => AppConfig.application_name)
       sent_on Time.now
-      body :user => user, :followed => followed
+      body :user => user, :followed => followed, :group => group, :domain => domain
     end
   end
 
   def earned_badge(user, group, badge)
+    domain = group ? group.domain : AppConfig.domain
     recipients user.email
     template_for user do
 
       from from_email(group)
       subject I18n.t("mailers.notifications.earned_badge.subject", :group => group.name)
       sent_on Time.now
-      body :user => user, :group => group, :badge => badge
+      body :user => user, :group => group, :badge => badge, :domain => domain
     end
   end
 
   def favorited(user, group, question)
+    domain = group ? group.domain : AppConfig.domain
     recipients question.user.email
     template_for question.user do
 
       from from_email(group)
       subject I18n.t("mailers.notifications.favorited.subject", :login => user.login)
       sent_on Time.now
-      body :user => user, :group => group, :question => question
+      body :user => user, :group => group, :question => question, :domain => domain
     end
   end
 
   def report(user, report)
+    domain = group ? group.domain : AppConfig.domain
     recipients user.email
     template_for user do
       from from_email(group)
@@ -112,7 +118,7 @@ class Notifier < ActionMailer::Base
       sent_on Time.now
 
       content_type    "text/plain"
-      body :user => user, :report => report
+      body :user => user, :report => report, :domain => domain
     end
   end
 
