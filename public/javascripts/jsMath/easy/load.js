@@ -91,7 +91,7 @@ jsMath.Easy = {
   //  users from finding out that they can have a better experience on your
   //  site by installing some fonts, so don't disable this).
   //
-  showFontWarnings: 1,
+  showFontWarnings: 0,
 
   //
   //  Use "Process" or "ProcessBeforeShowing".  See the jsMath
