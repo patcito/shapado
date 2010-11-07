@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Bjankuloski06
+# Author: McDutchie
 mk: 
   activerecord: 
     attributes: 
@@ -9,6 +10,7 @@ mk:
         default_tags: основно зададени ознаки
         description: опис
         domain: домен
+        enable_latex: Овозможи LaTeX
         fb_button: Овозможи Facebook-овидно копче (не е погодно за приватност)
         forum: дозволи повеќе од еден одговор по корисник
         group_created_by: создадена од

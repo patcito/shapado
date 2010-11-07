@@ -1,0 +1,25 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    models: 
+      vote: Ääni
+      votes: Äänet
+  votes: 
+    control: 
+      have_voted_down: Peru hylkäämisäänesi näpsäyttämällä
+      have_voted_up: Peru kannatusäänesi näpsäyttämällä
+      to_vote_down: Anna hylkäämisääni näpsäyttämällä
+      to_vote_up: Anna kannatusääni näpsäyttämällä
+    create: 
+      flash_error: Et voi äänestää tässä
+      flash_notice: Kiitos äänestäsi!
+      unauthenticated: Anonyymit käyttäjät eivät voi äänestää
+    destroy: 
+      flash_notice: Äänesi peruutus onnistui.
+    model: 
+      messages: 
+        closed_question: Et voi äänestää missään kirjoituksessa, joka kuuluu suljettuun kysymykseen
+        vote_down_comment: Kommentteja ei voi äänestää kumoon

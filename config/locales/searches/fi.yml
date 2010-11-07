@@ -1,0 +1,14 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  searches: 
+    form: 
+      clear: Tyhjennä
+      search_box_title: Tarkista, onko kysymys on jo kysytty
+      tags_tip: Käytä [tag] määrittämään tunnisteita.
+    index: 
+      empty: Hakusi ei täsmää mihinkään kysymykseen.
+      search_text: Kysymykset, jotka sisältävät
+      tags: näiden tunnisteiden sisällä

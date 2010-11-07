@@ -1,0 +1,59 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  welcome: 
+    confirm_age: 
+      notice: Voit kirjoittaa tälle sivulle vain jos olet vähintään 18 vuoden ikäinen, tai ainakin täysi-ikäinen lainkäyttöalueella, jossa asut tai josta käytät tätä sivua.
+      over_18: Olen yli 18
+      under_18: Olen alle 18
+      warning: "VAROITUS: Tämä sivu saattaa sisältää vain aikuisille materiaalia."
+    facts: 
+      features: 
+        cols: 
+          adaptable: mukautuva
+          foss: vapaa/avoin lähdekoodi
+          joel: teenkö jussin rikkaammaksi?
+          multilanguage: monikielinen
+          multitopic: moniaiheinen
+        shapado: 
+          adaptable: kyllä!
+          foss: kyllä!
+          joel: "ei: /"
+          multilanguage: kyllä!
+          multitopic: kyllä!
+        stackexchange: 
+          adaptable: ei
+          foss: ei
+          joel: kyllä!
+          multilanguage: ei
+          multitopic: ei
+      prices: 
+        cols: 
+          onsite: sivuston
+        shapado: 
+          large: luultavasti kuten 500 dollaria
+          medium: <=== Sama
+          onsite: luultavasti 0 dollaria omalla palvelimella
+          small: luultavasti kuten $50 — 100 €/kuukausi useimmilla videopalvelujen tarjoajilla
+        stackexchange: 
+          large: 1299 dollaria/kuukausi
+          medium: 999 dollaria/kuukausi
+          onsite: 2500 dollaria/kuukausi
+          small: 129 dollaria/kuukausi
+    feedback: 
+      captcha_error: Ratkaise yksinkertainen laskutoimitus
+      email_description: Anna sähköpostiosoitteesi, niin voimme vastata viestiin
+      feedback_description: Kuvaus
+      feedback_title: Otsikko
+      title: Lähetä palautetta
+    index: 
+      active: Käytössä
+      browse_all_or_by_tags: Katso %{full_list_of_questions} tai %{browse_by_tags}
+      browse_by_tags: selaa tunnisteiden mukaisesti
+      create_own_site: Luo oma Kysymys&amp;Vastaus -sivusto 8 sekunnissa ilmaiseksi
+      full_list_of_questions: täydellinen luettelo kysymyksiä
+      hot: Suosittu
+      quick_question: Kysy kysymys, löydämme jonkun vastaamaan
+      recent_questions: Viimeaikaiset kysymykset

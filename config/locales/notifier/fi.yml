@@ -1,0 +1,43 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  notifier: 
+    earned_badge: 
+      message1: Ansaitsit rintanapin %{badge} sovelluksella %{app}
+      message2: "Rintanappikuvaus:"
+      message3: Voit nähdä kaikki rintanappisi käyttäjäsivullasi %{user_page}
+    favorited: 
+      message1: "%{user} lisäsi kysymyksesi suosikkina ryhmään %{group}"
+      message2: "Kysymysteksti:"
+      message3: "Näet sen täältä:"
+    follow: 
+      message1: "%{user} seuraa nyt kysymyksiäsi ja vastauksiasi sovelluksella %{app}"
+      message2: Voit seurata häntä takaisin näpsäyttämällä painiketta "Seuraa" hänen käyttäjäsivullaan %{user_page}
+    give_advice: 
+      message1: "%{user} kysyi juuri kysymyksen, johon saatat kyetä vastaamaan:"
+      message2: "Vastataksesi vastaa vain tähän viestiin täällä:"
+      message3: "Tai, jos tiedät jonkun, joka kykenee vastaamaan, lähetä hänelle tämä viitelinkki:"
+      message4: Jos emme saa vastausta sinulta pian, kysymme joltain muulta. Voit silti vastata milloin haluat.
+    global: 
+      hi: Hei %{user},
+      user_page: käyttäjäsivu
+    new_answer: 
+      message: "%{user} vastasi %{new_answer} kysymykseen %{question}"
+    new_comment: 
+      message: "%{user} kommentoi %{new_comment} kysymyksessä %{question}"
+    new_feedback: 
+      message1: Käyttäjä %{user} <%{email}> lähetti palautetta
+      message2: Anonyymi käyttäjä lähetti palautetta IP-osoitteesta %{ip}
+      message3: "Sähköpostiosoite: %{email}"
+      message4: "Aihe: %{subject}"
+    report: 
+      message1: Ilmoita ryhmälle %{group}
+      message2: "%{date} lähtien"
+      message3: "%{questions} kysymystä luotiin"
+      message4: "%{answers} vastausta luotiin"
+      message5: "%{votes} ääntä annettiin"
+      message6: "%{badges} rintanappia myönnettiin"
+      message7: Tilillä on %{users} käyttäjää.
+      message8: Vieraile ryhmässäsi kohteessa %{link}

@@ -1,0 +1,16 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    attributes: 
+      member: 
+        role: Rooli
+  members: 
+    form: 
+      login_tip: Etsi kirjoittamisen aikana
+    index: 
+      manage_members_title: Hallinnoi jäseniä
+      title: Jäsenet / ryhmä %{name}
+      title_isolate: Jäsenet / %{name}

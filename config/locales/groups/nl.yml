@@ -1,6 +1,7 @@
 # Messages for Dutch (Nederlands)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: McDutchie
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -9,6 +10,7 @@ nl:
         default_tags: Standaardlabels
         description: Beschrijving
         domain: Domein
+        enable_latex: LaTeX inschakelen
         fb_button: Knop "Facebook like" inschakelen (niet privacyvriendelijk)
         forum: Meer dan één antwoord per gebruiker toestaan
         group_created_by: Aangemaakt door

@@ -1,0 +1,22 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  errors: 
+    forbidden: 
+      explanation: Sinulla ei ole tämän sivun käyttämiseen tarvittavia oikeuksia.
+      title: Käyttö estetty
+    go_to: Siirry sivulle %{link}
+    help_us_answer: Auta meitä vastaamaan %{link}
+    internal_error: 
+      explanation: Meille on ilmoitettu tästä asiasta ja tutkimme sitä lähiaikoina.
+      title: Olemme pahoillamme, mutta jotain meni väärin.
+    not_found: 
+      explanation: Olet kirjoittanut osoitteen väärin tai sivu on ehkä siirretty.
+      title: Sivua ei löydy.
+    options_label: "Kokeile muita asioita:"
+    search: Etsi
+    unprocessable_entity: 
+      explanation: Yritit ehkä muuttaa jotain, johon sinulla ei ole pääsyä.
+      title: Haluamasi muutos torjuttiin.

@@ -1,0 +1,22 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  wiki: 
+    actions: 
+      all_history: Takaisin historiaan
+      back_to_question: Takaisin kysymykseen
+      revert: Palaa tähän versioon
+      show_diff: Vertaile valittuja versioita
+    diff: 
+      title: Kohteiden %{prev} ja %{curr} väliset erot
+    history: 
+      current_version: Nykyinen versio
+      previous_versions: Aiemmat versiot
+      title: Historia (%{count})
+      version: Versio
+      version_summary: Versioyhteenveto
+    model: 
+      attributes: 
+        message: Yhteenveto

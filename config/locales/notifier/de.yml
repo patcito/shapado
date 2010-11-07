@@ -33,8 +33,8 @@ de:
       message3: "E-Mail-Adresse: %{email}"
       message4: "Betreff: %{subject}"
     report: 
-      message1: Bericht für Gruppe %{group.name}
-      message2: Seit %{since}
+      message1: Bericht für Gruppe %{group}
+      message2: Seit %{date}
       message3: "%{questions} Fragen wurden gestellt"
       message4: "%{answers} Antworten wurden verfasst"
       message5: "%{votes} Bewertungen wurden abgegeben"

@@ -61,7 +61,7 @@ de:
       avatar_tip: Ändere Dein Profilbild mit „Gravatar“
       give_advice_notification: E-Mail-Benachrichtigungen über Fragen in Deinem Fachgebiet
       information: Nutzerinformationen
-      language: Die Sprache, die für die Nutzeroberfläche verwendet werden soll
+      language: "Die Sprache, die für die Nutzeroberfläche verwendet werden soll:"
       new_answer_notification: E-Mail-Benachrichtigungen über neuen Antworten
       notifications: Benachrichtigungen
       reports_notification: Bericht mit den letzten Gruppenaktivitäten (nur für Gruppen-Administratoren)

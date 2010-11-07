@@ -34,8 +34,8 @@ br:
       message3: "Chomlec'h postel : %{email}"
       message4: "Danvez : %{subject}"
     report: 
-      message1: Danevell evit ar strollad %{group.name}
-      message2: Abaoe %{since}
+      message1: Danevell evit ar strollad %{group}
+      message2: Abaoe %{date}
       message3: "%{questions} goulenn a zo bet savet"
       message4: "%{answers} respont a zo bet skrivet"
       message5: "%{votes} vot a zo bet graet"

@@ -1,0 +1,24 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  mailers: 
+    notifications: 
+      earned_badge: 
+        subject: Olet ansainnut rintanapin ryhmässä %{group}!
+      favorited: 
+        subject: "%{login} lisäsi kysymyksesi suosikkeihin!"
+      follow: 
+        subject: "%{login} seuraa sinua sovelluksella %{app}"
+      give_advice: 
+        friend_subject: "Ystäväsi tarvitsee opastusta: %{question_title}"
+        subject: "Tarvitsemme neuvoasi: %{question_title}"
+      new_answer: 
+        subject_friend: Ystäväsi %{login} vastasi kysymykseen %{title}
+        subject_other: "%{login} vastasi kysymykseen %{title}"
+        subject_owner: "%{login} vastasi kysymykseesi %{title}"
+      new_comment: 
+        subject: "%{login} kommentoi ryhmässä %{group}"
+      report: 
+        subject: Ilmoita ryhmälle %{group} / %{app}

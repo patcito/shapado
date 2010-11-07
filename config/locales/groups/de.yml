@@ -10,6 +10,7 @@ de:
         default_tags: Standard-Stichwörter
         description: Beschreibung
         domain: Domain
+        enable_latex: LaTeX aktivieren
         fb_button: Aktiviere eine Schaltfläche, ähnlich wie bei Facebook (nicht privatsphärenfreundlich)
         forum: Mehr als eine Antwort pro Nutzer zulassen
         group_created_by: erstellt von

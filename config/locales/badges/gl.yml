@@ -28,7 +28,7 @@ gl:
         description: Votou 300 veces
         name: Obriga cívica
       cleanup: 
-        description: Primeira reversión
+        description: Fixo a súa primeira reversión
         name: Limpeza
       commentator: 
         description: Deixou 10 comentarios
@@ -46,7 +46,7 @@ gl:
         description: Recibiu 100 votos positivos
         name: Medalla do esforzo
       enlightened: 
-        description: A primeira resposta foi aceptada con, polo menos, 10 votos positivos
+        description: Ten unha resposta aceptada con, polo menos, 10 votos positivos
         name: Esclarecido
       famous_question: 
         description: Realizou unha pregunta con 10.000 visitas
@@ -55,19 +55,19 @@ gl:
         description: Visitou o sitio cada día durante 100 días consecutivos
         name: Fanático
       favorite_question: 
-        description: Pregunta marcada como favorita por 25 usuarios
+        description: Fixo unha pregunta marcada como favorita por 25 usuarios
         name: Pregunta favorita
       friendly: 
         description: Segue a alguén por vez primeira
         name: Agradable
       good_answer: 
-        description: Ten unha resposta que atinxe unha media de máis de 25 votos
+        description: Deu unha resposta que atinxe unha media de máis de 25 votos
         name: Boa resposta
       good_question: 
-        description: Ten unha pregunta que atinxe unha media de máis de 25 votos
+        description: Fixo unha pregunta que atinxe unha media de máis de 25 votos
         name: Boa pregunta
       great_answer: 
-        description: Resposta votada positivamente 100 veces
+        description: Ten unha resposta votada positivamente 100 veces
         name: Resposta formidable
       great_question: 
         description: Pregunta votada positivamente 100 veces
@@ -76,7 +76,7 @@ gl:
         description: Deu unha solución a unha pregunta, cunha media de máis de 40 votos
         name: Gurú
       inquirer: 
-        description: Preguntou por vez primeira
+        description: Fixo unha pregunta por vez primeira
         name: Indagador
       interesting_person: 
         description: Ten máis de 10 seguidores
@@ -88,16 +88,16 @@ gl:
         description: Respondeu a unha pregunta máis de 60 días despois con, polo menos, 5 votos
         name: Nigromante
       nice_answer: 
-        description: Resposta votada positivamente 10 veces
+        description: Ten unha resposta votada positivamente 10 veces
         name: Boa resposta
       nice_question: 
-        description: Pregunta votada positivamente 10 veces
+        description: Fixo unha pregunta votada positivamente 10 veces
         name: Boa pregunta
       notable_question: 
         description: Realizou unha pregunta con 2.500 visitas
         name: Pregunta memorable
       organizer: 
-        description: Primeiro cambio de etiqueta
+        description: Fixo o seu primeiro cambio de etiqueta
         name: Organizador
       peer_pressure: 
         description: Borrou a súa propia mensaxe cunha puntuación de -3 ou menor
@@ -106,7 +106,7 @@ gl:
         description: Sexa un dos primeiros usuarios en se rexistrar
         name: Pioneiro
       popstar: 
-        description: 500 votos positivos, máximo de 10 votos negativos
+        description: Ten 500 votos positivos, máximo de 10 votos negativos
         name: Estrela do pop
       popular_person: 
         description: Ten máis de 50 seguidores
@@ -115,21 +115,21 @@ gl:
         description: Realizou unha pregunta con 1.000 visitas
         name: Pregunta popular
       rockstar: 
-        description: 1.000 votos positivos, máximo de 10 votos negativos
+        description: Ten 1.000 votos positivos, máximo de 10 votos negativos
         name: Estrela do rock
       scholar: 
-        description: Primeira resposta aceptada na súa propia pregunta
+        description: Respondeu á súa primeira pregunta cunha resposta aceptada
         name: Alumno
       self-learner: 
         description: Respondeu á súa propia pregunta con, polo menos, 3 votos positivos
         name: Autodidacta
       service_medal: 
-        description: 300 votos positivos
+        description: Ten 300 votos positivos
         name: Medalla do servizo
       shapado: 
         description: Visitou o sitio cada día durante 8 días consecutivos
       stellar_question: 
-        description: Pregunta engadida aos favoritos por 100 usuarios
+        description: Fixo unha pregunta engadida aos favoritos por 100 usuarios
         name: Pregunta estelar
       student: 
         description: Preguntou por vez primeira con, polo menos, un voto positivo

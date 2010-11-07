@@ -1,0 +1,37 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  doc: 
+    chat: 
+      title: Verkkojuttelutuki
+    plans: 
+      15millions: 15 miljoonaa sivuatselua/kuukausi
+      1million: 1 miljoonaa sivuatselua/kuukausi
+      247_all_support: Web-perustainen, sähköposti, verkkojuttelu ja 24/7 -puhelintuki
+      5millions: 5 miljoonaa sivuatselua/kuukausi
+      all_support: Web-perustainen, sähköposti, verkkojuttelu ja puhelintuki
+      basic_restrictions: Ei mukautettuja mainoksia ja täysin mukautettavissa olevaa käyttöliittymää
+      beta_info: Tästä alkaen kaikki sivustot ovat vapaita ja kaikki sivustot hyötyvät samoista valitsimista kuin Optimisuunnitelma, paitsi tuki, joka on vain web-perustainen, sähköposti ja verkkojuttelu.
+      big_sites: Suuriliikenteiset sivustot
+      custom_ads: Käytä omia mainoksiasi
+      custom_analytics: Liikenteen tilastot
+      custom_domain: Mukautettu toimialue
+      custom_themes: Käytä esivalmistettuja räätälöityjä teemojamme
+      custom_ui: Täysin muokattavissa oleva käyttöliittymä
+      free_plan: vapaa suunnitelma
+      getting_popular: Haetaan suositut
+      huge_sites: Jättiliikenteiset sivustot
+      month: kuukausi
+      page_views: Pienille / Yksityisille sivustoille
+      plans: Suunnitelmat
+      private_site: Ota käyttöön yksityinen/julkinen pääsy
+      small_private: Pienet / Yksityiset sivustot
+      start_monetizing: alkaa ansaita rahaa
+      support: Tuki
+      title: Suunnitelmat ja hinnoittelu
+      unlimited: Rajoittamaton liikenne kuukaudessa
+      we_offer: Tarjoamme myös
+      web_support: Web-pohjainen tuki
+      with_unlimited: rajoittamattomalla liikenteellä ilman mukautettuja mainoksia ja ilman mukautettua toimialuetta.

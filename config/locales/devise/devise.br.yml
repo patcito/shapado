@@ -1,0 +1,28 @@
+# Messages for Breton (Brezhoneg)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Y-M D
+br: 
+  devise: 
+    confirmations: 
+      confirmed: Kadarnaet eo bet ho kont. Kevreet oc'h bremañ.
+    passwords: 
+      link: Ankouaet hoc'h eus ho ker-tremen ?
+    registrations: 
+      destroyed: Kenavo ! Nullet eo bet ho kont. Spi hon eus ouzh ho kwelet adarre a-benn nebeut.
+      link: En em enskrivañ
+      signed_up: Enskrivet oc'h.
+      updated: Hizivaet ho peus ho kont.
+    sessions: 
+      facebook_actions: 
+        sign_in: Kevreañ
+        sign_out: Digevreañ
+      facebook_invalid: Dibosupl eo kevreañ. Kont direizh.
+      inactive: N'eo ket bet kadarnaet ho kont c'hoazh
+      invalid: Chomlec'h postel pe gêr-tremen direizh.
+      link: Kevreañ
+      locked: Stanket eo ho kont.
+      signed_in: Kevreet.
+      signed_out: Digevreet.
+    unlocks: 
+      unlocked: Distanket eo bet ho kont. Kevreet oc'h bremañ.

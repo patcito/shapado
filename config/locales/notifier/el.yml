@@ -34,8 +34,8 @@ el:
       message3: "Ηλεκτρονική διεύθυνση: %{email}"
       message4: "Θέμα: %{subject}"
     report: 
-      message1: αναφορά για την ομάδα %{group.name}
-      message2: από %{since}
+      message1: αναφορά για την ομάδα %{group}
+      message2: από %{date}
       message3: ερωτήθηκαν %{questions} ερωτήσεις
       message4: δόθηκαν %{answers} απαντήσεις
       message5: δόθηκαν %{votes} ψήφοι

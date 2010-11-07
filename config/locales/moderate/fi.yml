@@ -1,0 +1,16 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  admin: 
+    moderate: 
+      index: 
+        all: Kaikki
+        ban: Porttikielto
+        banned: Kielletyt kysymyset
+        content: Sisältö
+        flagged: Merkityt kysymykset
+        item_title: Otsikko
+        need_tags: Uudelleenmerkintä
+        title: Valvo

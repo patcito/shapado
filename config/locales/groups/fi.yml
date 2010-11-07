@@ -1,0 +1,72 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    attributes: 
+      group: 
+        default_tags: Oletustunnisteet
+        description: Kuvaus
+        domain: Toimialue
+        fb_button: Ota käyttöön Facebookin Tykkää-painike (ei yksityisyystävällinen)
+        forum: Salli käyttäjälle useampia kuin yhden vastauksen
+        group_created_by: "luotu:"
+        language: Kieli
+        legend: Selite
+        logo: Logo
+        may_contain_adult_content: Tämä sivusto voi sisältää aikuisviihdettä
+        name: Nimi
+        openid_only: Vain OpenID-tunnusta käyttävät pääsevät sivustolle
+        owner: "Tämän ryhmän loi: %{login}"
+        registered_only: Vain rekisteröityneet käyttäjät voivat käyttää sivustoa
+        state: Tila
+        subdomain: Verkko-osoite
+        wysiwyg_editor: Ota käyttöön käyttäjäystävällisiä editori
+    models: 
+      default_tags_message: Et voi luoda yli 10 oletustunnistetta
+      group: Ryhmä
+      groups: Ryhmät
+  groups: 
+    create: 
+      flash_notice: Ryhmäsi luotiin onnistuneesti. Voit aloittaa nyt asettamaan sen asetuksia.
+    form: 
+      access: Käyttöoikeusasetukset
+      analytics_engine: Analytiikkakone
+      analytics_legend: Ryhmä voi käyttää omaa jäljityskoodia
+      any_language: Mikä tahansa
+      custom_analytics: Salli räätälöity analytiikka
+      custom_html: Salli räätälöity HTML
+      custom_js: Salli mukautettu JavaScript
+      default_tags_legend: Erottele tunnisteet pilkuilla. Vain 10 oletustunnistetta sallitaan.
+      description_legend: Voit käyttää 400 merkkiä ryhmän kuvailemiseen.
+      isolate_group: Eristä ryhmä muista ryhmistä
+      legend_legend: Sitä käytetään otsakkeessa. Käytettävissä on 40 merkkiä.
+      logo_legend: Voit kopioida palvelimelle ryhmän logon. Tiedoston enimmäiskoko on 2 megatavua.
+      members_only: Vain ryhmän jäsenet voivat käyttää tätä ryhmää
+      website_analytics_id: Verkkosivun analytiikkatunnus
+    group: 
+      about: Tietoja
+      accept_group: Hyväksy tämä ryhmä
+      allow_ads: Salli mainokset
+      close: Sulje
+      close_group: Sulje tämä ryhmä
+      disallow_ads: Älä hyväksy mainoksia
+    index: 
+      actives: Käytössä
+      filter: Etsi ryhmiä
+      most_active: Aktiivisimmat
+      name: Nimi
+      pendings: Odottava
+      request_group: Pyydä uusi ryhmä
+      title: Ryhmät
+    new: 
+      title: Luo ryhmä
+    show: 
+      accept_group: Hyväksy tämä ryhmä
+      accept_group_with_custom_ads: Hyväksy ryhmä ja salli mukautetun mainokset
+      close_group: Sulje tämä ryhmä
+      group_awaiting_acceptance: Tämä ryhmä odottaa valvojan hyväksymistä.
+      group_closed: Tämä ryhmä oli suljettu.
+      title: Ohjelmasta %{name}
+      visit_group: Vieraile tässä ryhmässä

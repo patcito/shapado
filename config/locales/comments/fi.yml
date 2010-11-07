@@ -1,0 +1,20 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  comments: 
+    create: 
+      flash_notice: Kiitoksia kommentistasi
+    edit: 
+      title: Muokkaa kommenttia
+    shared: 
+      add_comment: Lisää kommentti...
+      comment_submit: Kommentti
+      reply: Vastaus
+      said: sanoi
+    update: 
+      flash_notice: Kommentti päivitettiin onnistuneesti.
+  models: 
+    comment: Kommentti
+    comments: Kommentit

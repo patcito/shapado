@@ -7,7 +7,7 @@ pt-BR:
   activerecord: 
     attributes: 
       group: 
-        default_tags: Categorias predefinidas
+        default_tags: Tags predefinidas
         description: Descrição
         domain: Domínio
         fb_button: Ativar botão "Curtir" do Facebook (não respeita privacidade)
@@ -25,7 +25,7 @@ pt-BR:
         subdomain: Url
         wysiwyg_editor: Ativar editor amigável para o usuário
     models: 
-      default_tags_message: Não pode ter mais do que 10 categorias predefinidas
+      default_tags_message: Não pode ter mais do que 10 tags predefinidas
       group: Grupo
       groups: Grupos
   groups: 
@@ -39,7 +39,7 @@ pt-BR:
       custom_analytics: Permitir Análises Personalizadas
       custom_html: Permitir HTML personalizado
       custom_js: Permitir javascript personalizado
-      default_tags_legend: Separe as categorias por vírgulas. Só são permitidas 10 categorias predefinidas.
+      default_tags_legend: Separe as tags por vírgulas. Só são permitidas 10 tags predefinidas.
       description_legend: Você pode usar 400 caracteres para descrever o grupo.
       isolate_group: Isolar o grupo de outros grupos
       legend_legend: Será usado no cabeçalho. Você tem 40 caracteres.

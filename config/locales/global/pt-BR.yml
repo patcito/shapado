@@ -8,11 +8,11 @@ pt-BR:
   feeds: 
     feed: Feed
     post_new_questions: Publicar perguntas novas
-    question: Subscrever esta pergunta
-    questions: Subscrever todas as perguntas
+    question: Assinar feed desta pergunta
+    questions: Assinar feed de todas perguntas
     share_on_twitter: no twitter, facebook e outros...
-    tag: Subscrever a categoria
-    user: Subscrever as perguntas do usuário
+    tag: Assinar feed da tag
+    user: Assinar feed das perguntas do usuário
   global: 
     active: Ativar
     anonymous: Anônimo

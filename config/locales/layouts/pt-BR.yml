@@ -7,7 +7,7 @@
 pt-BR: 
   layouts: 
     application: 
-      ask_question: Perguntar
+      ask_question: Faça uma pergunta
       badges: Condecorações
       forgot: Esqueceu?
       home: Início
@@ -23,12 +23,12 @@ pt-BR:
       pages: Páginas
       questions: Perguntas
       questions_in: Perguntas em
-      questions_tagged: categorizada em
+      questions_tagged: tagueada com
       search: Pesquisar
       settings: Preferências
       signup: Registar-se
       subscribe: Inscrever-se
-      tags: Categorias
+      tags: Tags
       title: Perguntas e Respostas
       unanswered: Sem resposta
       users: Usuários

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Giro720
+# Author: Vgeorge
 pt-BR: 
   admin: 
     moderate: 
@@ -12,5 +13,5 @@ pt-BR:
         content: Conteúdo
         flagged: Perguntas reportadas
         item_title: Título
-        need_tags: Recategorizar
+        need_tags: Modificar tag
         title: Moderar

@@ -35,8 +35,8 @@ fr:
       message3: "Adresse électronique : %{email}"
       message4: "Objet : %{objet}"
     report: 
-      message1: Rapport pour le groupe %{group.name}
-      message2: Depuis %{since}
+      message1: Rapport pour le groupe %{group}
+      message2: Depuis %{date}
       message3: "%{questions} questions ont été posées"
       message4: "%{answers} réponses ont été rédigées"
       message5: "%{votes} votes ont été exprimés"

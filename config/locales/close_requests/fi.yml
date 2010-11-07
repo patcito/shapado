@@ -1,0 +1,33 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  close_requests: 
+    create: 
+      flash_notice: Sulkupyyntö luotu onnistuneesti
+    destroy: 
+      flash_notice: Sulkemispyyntö poistettiin onnistuneesti
+    edit: 
+      title: Muokkaa sulkemispyyntöä
+    form: 
+      close_with_reason: Suljetaan tämä kysymys käyttäen tätä syytä
+      dupe: Kaksoiskappale
+      no_question: Ei kysymys
+      not_relevant: Ei olennainen
+      ot: Aiheen vierestä
+      request_closing_details: Pyyntö sulkea tämä kysymys
+      spam: roskaposti
+    index: 
+      title: Sulkupyyntöjen luettelo
+    model: 
+      attributes: 
+        comment: Kommentti
+        reason: Syy
+        user: Käyttäjä
+      messages: 
+        already_requested: Olet jo pyytänyt tämän kysymyksen sulkemista
+      name: Sulkemispyyntö
+      prural_name: Sulkemispyynnöt
+    update: 
+      flash_notice: Sulkemispyyntö päivitettiin onnistuneesti
