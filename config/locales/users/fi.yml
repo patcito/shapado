@@ -1,0 +1,91 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    attributes: 
+      user: 
+        activated_at: aktivoitu
+        activation_code: Aktivointikoodi
+        age: Ikä
+        asked_by: "kysytty:"
+        avatar: Profiilikuva
+        birthday: Syntymäpäivä
+        created_at: liittynyt
+        current_password: Nykyinen salasana
+        email: Sähköposti
+        fullname: Koko nimi
+        hide_country: Älä näytä maatani
+        language: Kieli
+        language_filter: Suodata kieli
+        last_logged_at: nähty
+        login: Käyttäjätunnus
+        name: Oikea nimi
+        password: Salasana
+        password_confirmation: Salasanan vahvistus
+        preferred_languages: "Haluat lukea kysymyksiä seuraavilla kielillä:"
+        preferred_tags: Ensisijaiset tunnisteet
+        reputation: Maine
+        timezone: Aikavyöhyke
+        updated_at: päivitetty
+        website: Web-sivusto
+    models: 
+      user: Käyttäjä
+      users: Käyttäjät
+  users: 
+    actions: 
+      edit_others_posts: Muokka toisten kirjoituksia
+      edit_wiki_post: Muokkaa wiki-kirjoituksia
+      flag: Merkintä
+      retag_others_questions: Uudelleenmerkitse muiden kysymyksiä
+      vote_down: Hylkäämisääni
+      vote_to_close_any_question: Pyyntö sulkea mikä tahansa kysymys
+      vote_to_close_own_question: Pyyntö sulkea oma kysymys
+      vote_up: Hyväksymisääni
+    anonymous_form: 
+      never_shown: ei koskaan näytetty
+    create: 
+      flash_error: Emme valitettavasti voineet perustaa kyseistä tiliä. Yritä uudelleen tai ota yhteyttä järjestelmänvalvojaan (linkki yllä).
+      flash_notice: Kiitos rekisteröitymisestä!
+    edit: 
+      enable_twitter: Ota käyttöön Facebook- tai Twitter- tilit
+      submit: Tallenna
+      title: Asetukset
+    follow: 
+      flash_notice: Käyttäjä %{user} lisättiin ystäviisi
+    form: 
+      activities_notification: Vastaanota sähköposti-ilmoituksia järjestelmän toiminnasta, kuten ansaituista rintanapeista, uusista seuraajista, jne.
+      avatar_tip: Muuta profiilikuvaasi käyttäen Gravatar-ohjelmaa
+      give_advice_notification: Vastaanota sähköposti-ilmoitukset kysymyksistä asiantuntija-alueeltasi
+      information: Tiedot
+      language: Sivuston käyttöliittymän kieli
+      new_answer_notification: Hae sähköposti-ilmoitukset uusille vastauksille
+      notifications: Ilmoitukset
+      reports_notification: Vastaanota ilmoitus viimeisimmistä ryhmätoimista (vain ryhmän ylläpitäjille)
+      show_more_lang: Näytä lisää kieliä
+    index: 
+      empty: Tässä ryhmässä ei ole jäseniä. Osallistu liittymällä tähän ryhmään.
+      filter: Etsi käyttäjiä
+      name: Nimi
+      name_tooltip: Käyttäjät aakkosjarjestyksessa
+      newest: Uusin
+      newest_tooltip: Käyttäjät, jotka juuri liittyivät
+      oldest: Vanhin
+      oldest_tooltip: Käyttäjät, jotka liittyivät ensimmäisenä
+      reputation: Maine
+      reputation_tooltip: Käyttäjät lajiteltu mainejärjestyksessä
+      title: Kaikki käyttäjät
+    messages: 
+      errors: 
+        reputation_needed: Tarvitset %{min_reputation} mainepistettä toimintoon %{action}
+    new: 
+      submit: Rekisteröidy
+      title: Rekisteröidy uutena käyttäjänä
+    show: 
+      follow: Seuraa
+      title: Käyttäjä %{user}
+      unfollow: Älä seuraa
+      views: näkymät
+    unfollow: 
+      flash_notice: Käyttäjä %{user} poistettiin ystävistäsi

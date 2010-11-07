@@ -1,0 +1,55 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  admin: 
+    manage: 
+      content: 
+        footer: Alatunniste
+        head: Otsake
+        question_help: Kysymysopaste
+        question_prompt: Kysymyksen kehote
+        title: Mukautettu sisältö
+        top_bar: Ylin palkki
+        top_bar_tip: Kirjoita yksi linkki per rivi
+      properties: 
+        constrains: 
+          reputation_constrains_description: Tämä lomake sallii sinun asettaa, kuinka monta mainepistettä käyttäjien tarvitsee tehdä tíetylle toimelle
+          reputation_constrains_subtitle: Jokaisen toimen mainepisteiden luettelo
+          title: Vaatimukset
+        domain: 
+          description: "Voit määrittää sivustosi siten, että sitä voi käyttää mukautetun toimialueen kautta. Se tehdään näin:"
+          instruction1: Tehdäksesi näin sinun on ensin kirjauduttava toimialuepalveluntarjoajaasi. Se on sivusto, josta ostit toimialueesi kuten %{subdomain}.com.
+          instruction2: Siellä sinun on mentävä DNS-kohtaan ja luotava jotain jota kutsutaan nimellä CNAME.
+          instruction3: Valitse "www" tai jotain muuta kuin oma CNAME-nimesi.
+          instruction4: "Laita sitten host- tai destination-kenttään nykyinen Shapado-toimialueesi: %{domain}."
+          instruction5: Kun tämä on tehty, niin noin tunnin kuluttua toimialueesi www.%{subdomain} pitäisi osoittaa kohteeseen %{appdomain}.
+          instruction6: Kun näin on tapahtunut, palaa tänne ja laita toimialuenimesi www.%{subdomain} alla olevaan kenttään ja paina painiketta 'update'. Jos sinulla on kysymyksiä, kysy meiltä verkkojuttelussa %{chat_url} tai tukifoorumillamme.
+          title: Aseta toimialueesi
+          warning: Oletko varma, että haluat muuttaa toimialueesi?
+        general: 
+          title: Ryhmän ominaisuudet
+        rewards: 
+          reputation_rewards_description: Tämän lomakkeen avulla voit määrittää, miten käyttäjät voivat voittaa ja menettää mainepisteitä tietystä toimesta
+          reputation_rewards_subtitle: Mainepalkintojen luettelo
+          title: Palkkiot
+        share: 
+          add_tags: Lisää tunnisteet twitter-sanomiisi
+          application_id: Sovellustunniste
+          asking_from_twitter: Kysytään kysymyksiä Twitteristä
+          ends_with_example: "esimerkiksi #shapado"
+          facebook_app: Facebook-sovellusasetukset
+          question_asked_to: Kysymys kysytty kohteeseen
+          question_must_include: Kysymyksen tulee sisältää seuraava tunniste, jotta se voidaan lähettää Twitterissä
+          question_must_include_example: "esimerkiksi #iAsk"
+          secret_key: Salainen avain
+          starts_with_example: "esimerkiksi #qa"
+          title: Jaa
+          title_on_dlvr: Jaa kohteessa dlvr.it
+          tweet_ends_with: Liitä tunniste Twitter-viesteihisi
+          tweet_starts_with: Liitä tunniste twitter-viestiesi alkuun
+          twitter_account: Twitter-tili, jossa käyttäjäsi kysyvät kysymyksiä.
+        theme: 
+          logo_legend: Kopioi logo ryhmäsi palvelimelle. Sen on oltava pienempi kuin 2 megatavua.
+          title: Aseta ryhmän teema

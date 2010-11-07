@@ -33,8 +33,8 @@ pt-PT:
       message3: "Correio electrónico: %{email}"
       message4: "Assunto: %{subject}"
     report: 
-      message1: Relatório do grupo %{group.name}
-      message2: Desde %{since}
+      message1: Relatório do grupo %{group}
+      message2: Desde %{date}
       message3: Foram criadas %{questions} perguntas
       message4: Foram criadas %{answers} respostas
       message5: Foram atribuídos %{votes} votos

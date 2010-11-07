@@ -1,0 +1,22 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  open_requests: 
+    create: 
+      flash_notice: Uudellenavauspyynnön luonti onnistui
+    destroy: 
+      flash_notice: Uudelleenavauspyynnön poisto onnistui
+    edit: 
+      title: Muokkaa uudelleenavauspyyntöä
+    form: 
+      request_opening_details: Tämän kysymyksen uudelleenavauspyyntö
+    index: 
+      title: Uudelleenavauspyyntöjen luettelo
+    model: 
+      prural_name: Uudelleenavauspyynnöt
+    new: 
+      title: Uudelleenavauspyyntö
+    update: 
+      flash_notice: Uudelleenavauspyynnön päivitys onnistui

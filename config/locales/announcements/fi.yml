@@ -1,0 +1,21 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+# Author: Silvonen
+fi: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: Loppuu kohteessa
+        message: Viesti
+        only_anonymous: Vain anonyymeille käyttäjille
+        starts_at: Alkaa kohteessa
+  announcements: 
+    actions: 
+      delete: Poista
+      title: Toimet
+    create: 
+      success: Ilmoituksen luonti onnistui.
+    index: 
+      title: Ilmoitukset

@@ -33,8 +33,8 @@ da:
       message3: "E-mail-adresse: %{email}"
       message4: "Emne: %{subject}"
     report: 
-      message1: Rapporten for gruppe %{group.name}
-      message2: Siden %{since}
+      message1: Rapporten for gruppe %{group}
+      message2: Siden %{date}
       message3: "%{questions} spørgsmål blev stillet"
       message4: "%{answers} svar blev lavet"
       message5: "%{votes} stemmer blev foretaget"

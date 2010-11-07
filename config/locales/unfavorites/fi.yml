@@ -1,0 +1,13 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    models: 
+      favorite: Suosikki
+      favorites: Suosikit
+  unfavorites: 
+    create: 
+      success: Kysymys on poistettu suosikeistasi
+      unauthenticated: Sinulla on oltava tili suosikin poistamiseksi

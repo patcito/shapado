@@ -1,0 +1,44 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  devise: 
+    confirmations: 
+      confirmed: Tilisi vahvistettiin. Olet nyt kirjautunut sisään.
+      link: Etkö ole vastaanottanut vahvistusohjeita?
+      send_instructions: Vastaanotat muutaman minuutin kuluttua sähköpostiviestin, jossa on ohjeet, kuinka tilisi vahvistetaan.
+    mailer: 
+      confirmation_instructions: Vahvistusohjeet
+      reset_password_instructions: Nollaa salasanaohjeet
+      unlock_instructions: Poista ohjeiden lukitus
+    passwords: 
+      link: Unohtuiko salasana?
+      send_instructions: Vastaanotat muutaman minuutin kuluttua sähköpostiviestin, jossa on ohjeet salasanan nollaamisesta.
+      updated: Salasanasi on vaihdettu. Olet nyt kirjautunut sisään.
+    registrations: 
+      destroyed: Heippa! Tilisi on peruutettu. Toivomme näkevämme sinut pian uudelleen.
+      link: Rekisteröidy
+      signed_up: Olet rekisteröitynyt.
+      updated: Olet päivittänyt tilisi.
+    sessions: 
+      facebook_actions: 
+        sign_in: Kirjaudu sisään
+        sign_out: Kirjaudu ulos
+      facebook_authenticity_token: Jokin meni vikaan. Turvallisuussyistä kirjaudu sisään uudelleen.
+      facebook_invalid: Ei voitu kirjautua sisään. Virheellinen tili.
+      facebook_timeout: Facebook-istunto on vanhentunut. Jatka kirjautumalla uudelleen sisään.
+      inactive: Tili ei ole vielä vahvistettu.
+      invalid: Virheellinen sähköpostiosoite tai salasana.
+      invalid_token: Virheellinen todennustunniste.
+      link: Kirjaudu sisään
+      locked: Tilisi on lukittu.
+      signed_in: Kirjautunut sisään
+      signed_out: Kirjautunut ulos.
+      timeout: Istuntosi on vanhentunut. Kirjaudu sisään jatkaaksesi.
+      unauthenticated: Sinun täytyy kirjautua sisään tai rekisteröityä ennen kuin jatkat.
+      unconfirmed: Sinun on vahvistettava tilisi ennen kuin jatkat.
+    unlocks: 
+      link: Etkö vastaanottanut lukituksenpoisto-ohjeita?
+      send_instructions: Vastaanotat muutaman minuutin kuluttua sähköpostiviestin, jossa on ohjeet, kuinka tilisi lukitus poistetaan.
+      unlocked: Tilisi on avattu. Olet nyt kirjautunut sisään

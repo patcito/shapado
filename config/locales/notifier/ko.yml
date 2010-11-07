@@ -33,8 +33,8 @@ ko:
       message3: 이메일 %{email}
       message4: 주제 %{subject}
     report: 
-      message1: " %{group.name} 그룹을 보고"
-      message2: Since %{since}
+      message1: " %{group} 그룹을 보고"
+      message2: Since %{date}
       message3: "%{questions} 질문이 작성되었습니다."
       message4: "%{answers} 답변이 있습니다."
       message5: "%{votes} votes가 있습니다."

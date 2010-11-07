@@ -22,4 +22,4 @@ nb:
       message3: "E-postadresse: %{email}"
       message4: "Emne: %{subject}"
     report: 
-      message2: Siden %{since}
+      message2: Siden %{date}

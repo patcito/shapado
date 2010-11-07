@@ -33,8 +33,8 @@ ca:
       message3: "Adreça de correu electrònic: %{email}"
       message4: "Assumpte: %{subject}"
     report: 
-      message1: Informe pel grup %{group.name}
-      message2: Des de %{since}
+      message1: Informe pel grup %{group}
+      message2: Des de %{date}
       message3: S'han creat %{questions} preguntes
       message4: S'han creat %{answers} respostes
       message5: S'han efectuat %{votes} vots

@@ -20,7 +20,7 @@ br:
         description: en deus leuniet e holl maeziennoù implijer
         name: Emvuhezskriver
       celebrity: 
-        description: Kaout muioc'h eget 100 heulier
+        description: En deus muioc'h eget 100 heulier
         name: Den brudet
       citizen_patrol: 
         description: Kentañ postadenn bannielet
@@ -92,7 +92,7 @@ br:
         description: Respont bet votet a-du 10 gwech
         name: Respont vat
       nice_question: 
-        description: Goulenn bet votet a-du 10 gwech
+        description: En deus savet ur goulenn bet votet a-du 10 gwech
         name: Goulenn vat
       notable_question: 
         description: Goulenn gant 2 500 gweladenn

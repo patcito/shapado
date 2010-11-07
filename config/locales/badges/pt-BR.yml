@@ -6,12 +6,12 @@
 pt-BR: 
   activerecord: 
     models: 
-      badge: Condecoração
-      badges: Condecorações
+      badge: Medalha
+      badges: Medalhas
   badges: 
     index: 
-      description: Todos as condecorações que você pode ganhar. Compartilhe o seu conhecimento, ganhe condecorações.
-      title: condecorações
+      description: Todas as medalhas que você pode ganhar. Compartilhe o seu conhecimento, ganhe medalhas.
+      title: medalhas
     shared: 
       addict: 
         description: Visitou o site em 20 dias consecutivos
@@ -113,7 +113,7 @@ pt-BR:
         description: Conseguiu mais de 50 seguidores
         name: Pessoa popular
       popular_question: 
-        description: Fez uma pergunta com 1000 visualizações
+        description: Fez uma pergunta com 1.000 visualizações
         name: Pergunta popular
       rockstar: 
         description: Tem 1000 votos positivos, máximo de 10 votos negativos
@@ -147,7 +147,7 @@ pt-BR:
     show: 
       description: "Usuários que receberam esta medalha. Recentemente dada a:"
       earned: recebida
-      for_tag_bronze: 200 votos na categoria %{tag}
-      for_tag_gold: 1000 votos na categoria %{tag}
-      for_tag_silver: 400 votos na categoria %{tag}
+      for_tag_bronze: 200 votos na tag %{tag}
+      for_tag_gold: 1000 votos na tag %{tag}
+      for_tag_silver: 400 votos na tag %{tag}
       title: Medalha %{type}

@@ -1,0 +1,34 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    attributes: 
+      page: 
+        css: Tyylisivut
+        js: JavaScript
+    models: 
+      page: Sivu
+      pages: Sivut
+  pages: 
+    actions: 
+      create_page: Luo uusi sivu
+      edit_page: Muokkaa sivua
+      title: Toiminnot
+    create: 
+      success: Sivu luotiin onnistuneesti.
+    edit: 
+      title: Muokkaa sivua
+    form: 
+      language_tip: Sivun kieli
+      title_tip: "Sivun otsikko. Käytä tätä viittausta sivulle. Esimerkki: [[FAQ | Tutustu usein kysyttyihin kysymyksiin]]"
+    index: 
+      create_page: Luo uusi sivu
+      title: Sivuluettelo
+      written_in: Kirjoitettu kielellä %{language}
+    new: 
+      title: Uusi sivu
+    title: Korjaa minua
+    update: 
+      success: Sivua on päivitetty onnistuneesti.

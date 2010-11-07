@@ -68,10 +68,10 @@ de:
         description: Hat eine Frage gestellt, die durchschnittlich mehr als 25 Bewertungen erhielt
         name: Sehr gute Frage
       great_answer: 
-        description: Hat eine Antwort gegeben, die bis zu 100-mal positiv bewertet wurde
+        description: Gab eine Antwort, die bis zu 100-mal positiv bewertet wurde
         name: Großartige Antwort
       great_question: 
-        description: Frage wurde 100-mal positiv bewertet
+        description: Hat ein Frage gestellt, die mehr als 100-mal positiv bewertet wurde
         name: Großartige Frage
       guru: 
         description: Gab eine Antwort, die durchschnittlich mehr als 40 Bewertungen erhalten hat
@@ -89,7 +89,7 @@ de:
         description: Gab mehr als 60 Tage später eine Antwort, die mindestens 5 Bewertungen erhalten hat
         name: Zauberer
       nice_answer: 
-        description: Hat eine Antwort gegeben, die bis zu 10-mal positiv bewertet wurde
+        description: Gab eine Antwort, die bis zu 10-mal positiv bewertet wurde
         name: Gute Antwort
       nice_question: 
         description: Hat ein Frage gestellt, die mehr als 10-mal positiv bewertet wurde

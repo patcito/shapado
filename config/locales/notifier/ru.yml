@@ -35,8 +35,8 @@ ru:
       message3: "Адрес электронной почты: %{email}"
       message4: "Тема: %{subject}"
     report: 
-      message1: Отчёт для группы %{group.name}
-      message2: С %{since}
+      message1: Отчёт для группы %{group}
+      message2: С %{date}
       message3: "Задано вопросов: %{questions}"
       message4: "Создано ответов: %{answers}"
       message5: "Отдано голосов: %{votes}"

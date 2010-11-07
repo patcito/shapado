@@ -1,0 +1,32 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  activerecord: 
+    attributes: 
+      flag: 
+        reason: Syy
+    models: 
+      flag: Merkintä
+      flags: Merkinnät
+  flags: 
+    create: 
+      flash_error: Et voi merkitä tätä
+      flash_notice: Kiitoksia ilmoituksestasi
+    destroy: 
+      flash_notice: Merkintäsi on peruutettu onnistuneesti.
+    edit: 
+      title: Muokkaa kohteen %{model} merkintää
+    form: 
+      attention: Edellyttää valvojan huomiota
+      label: Merkitse huolella
+      offensive: Loukkaava, herjaava tai vihapuhe
+      spam: Roskaposti
+    model: 
+      messages: 
+        already_requested: Olet jo merkinnyt tämän %{model}
+    new: 
+      title: Merkitse %{model}
+    update: 
+      flash_notice: Kysymysmerkintä päivitettiin onnistuneesti.

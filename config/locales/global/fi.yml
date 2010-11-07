@@ -1,0 +1,60 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+# Author: Str4nd
+fi: 
+  feeds: 
+    feed: Syöte
+    post_new_questions: Lähetä uusia kysymyksiä kohteeseen
+    question: Tilaa tähän kysymykseen
+    questions: Tilaa kaikkiin kysymyksiin
+    share_on_twitter: Twitter, Facebook ja lisää ...
+    tag: Tilaa merkintään
+    user: Tilaa käyttäjän kysymyksiin
+  global: 
+    active: Ota käyttöön
+    anonymous: Anonyymi
+    by: /
+    current: Nykyinen
+    from: sivustosta %{site}
+    group_not_found: Sivua %{url} ei ole olemassa
+    or: tai
+    permission_denied: Käyttö estetty
+    please_login: Kirjaudu sisään
+    preview: Esikatselu
+    previous: Edellinen
+    share: Jaa
+  languages: 
+    any: Mikä tahansa
+    user: Ensisijaiset kieleni
+  models: 
+    question: Kysymys
+  number: 
+    x_time: 
+      one: "%{count} kerta"
+      other: "%{count} kertaa"
+      zero: Ei koskaan
+  pagination: 
+    next: Seuraava &raquo;
+    previous: "&laquo; Edellinen"
+  scaffold: 
+    add: Lisää
+    back: Takaisin
+    cancel: Peru
+    close: Sulje
+    create: Luo
+    destroy: Poista
+    details: Yksityiskohdat
+    edit: Muokkaa
+    more: Lisää...
+    new: Lisää uusi %{model}
+    post_as_anonymous: Lähetä nimettömänä
+    save: Tallenna
+    send: Lähetä
+    show: Näytä
+    sure: Haluatko varmasti poistaa tämän %{model}?
+    update: Päivitä
+  time: 
+    ago: "%{time} sitten"
+    today: tänään

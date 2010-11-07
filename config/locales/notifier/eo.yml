@@ -33,7 +33,7 @@ eo:
       message3: "Retpoŝtadreso: %{email}"
       message4: "Temo: %{subject}"
     report: 
-      message2: Ekde %{since}
+      message2: Ekde %{date}
       message3: "%{questions} demandoj estis kreitaj"
       message4: "%{answers} respondoj estis kreitaj"
       message5: "%{votes} voĉdonoj estis faritaj"

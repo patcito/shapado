@@ -4,10 +4,21 @@
 # Author: EugeneZelenko
 # Author: Jim-by
 be-TARASK: 
+  activerecord: 
+    attributes: 
+      flag: 
+        reason: Прычына
+    models: 
+      flag: Сьцяг
+      flags: Сьцягі
   flags: 
     create: 
       flash_error: Вы ня можаце пазначыць гэта
       flash_notice: Дзякуй за Вашае паведамленьне
+    destroy: 
+      flash_notice: Ваш сьцяг быў пасьпяхова адкліканы.
+    edit: 
+      title: Рэдагаваць сьцяг %{model}
     form: 
       attention: Патрабуе ўвагу мадэратара
       label: Калі ласка, будзьце ўважлівымі падчас пазначэньня
@@ -18,3 +29,5 @@ be-TARASK:
         already_requested: Вы ўжо пазначылі гэтую %{model}
     new: 
       title: Метка %{model}
+    update: 
+      flash_notice: Сьцяг пытаньня быў пасьпяхова абноўлены.

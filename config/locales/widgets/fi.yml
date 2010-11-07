@@ -1,0 +1,31 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  widgets: 
+    badges: 
+      description: Tämä ikkunaolio näyttää käyttäjien tai kysymysten ansaitsemat äskettäiset rintanapit
+      title: Viimeaikaiset rintanapit
+    groups: 
+      description: Tämä ikkunaolio näyttää äskettäiset ryhmät
+      title: Äskettäiset ryhmät
+    index: 
+      description: Käytä nuolinäppäimiä ikkunaolioitesi siirtämiseen
+      title: Hallinnoi sivupalkki-ikkunaolioita
+    pages: 
+      description: Tämä ikkunaolio näyttää wiki-sivujen luettelon
+      new: Lisää uusi sivu
+      title: Wiki-sivut
+    tag_cloud: 
+      description: Tämä ikkunaolio näyttää painotetun luettelon
+      title: Painotettu luettelo
+    top_groups: 
+      description: Tämä ikkunaolio näyttää viisi huippuryhmää
+      title: Viisi huippuryhmää
+    top_users: 
+      description: Tämä ikkunaolio näyttää viisi huippukäyttäjää
+      title: Viisi huippukäyttäjää
+    users: 
+      description: Tämä ikkunaolio näyttää äskettäin rekisteröityneet jäsenet
+      title: Äskettäiset käyttäjät

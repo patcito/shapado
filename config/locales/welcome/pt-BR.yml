@@ -52,7 +52,7 @@ pt-BR:
     index: 
       active: Ativas
       browse_all_or_by_tags: Ver a %{full_list_of_questions} ou %{browse_by_tags}
-      browse_by_tags: navegar por categoria
+      browse_by_tags: navegar por tags
       create_own_site: Crie o seu próprio site de perguntas e respostas em 8 segundos, grátis
       full_list_of_questions: lista completa de perguntas
       hot: Popular

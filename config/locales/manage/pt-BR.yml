@@ -15,8 +15,8 @@ pt-BR:
         top_bar_tip: Introduza um link por linha
       properties: 
         constrains: 
-          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os usuários necessitam para executar uma determinada acção
-          reputation_constrains_subtitle: Lista de requisitos de reputação para cada acção
+          reputation_constrains_description: Este formulário permite-lhe configurar quantos pontos de reputação os usuários necessitam para executar uma determinada ação
+          reputation_constrains_subtitle: Lista de requisitos de reputação para cada ação
           title: Requisitos
         domain: 
           description: "Você pode mapear o seu site de forma a ser acessado através do seu próprio domínio. Faça assim:"
@@ -35,7 +35,7 @@ pt-BR:
           reputation_rewards_subtitle: Lista de recompensas de reputação
           title: Recompensas
         share: 
-          add_tags: Acrescentar categorias aos seus tweets
+          add_tags: Acrescentar tags aos seus tweets
           application_id: ID da Aplicação
           asking_from_twitter: Perguntar a partir do Twitter
           ends_with_example: "ex: #shapado"
@@ -46,7 +46,7 @@ pt-BR:
           secret_key: Chave Secreta
           starts_with_example: "ex: #pr"
           title: Compartilhar
-          title_on_dlvr: Partilhar no dlvr.it
+          title_on_dlvr: Publicar no dlvr.it
           tweet_ends_with: Acrescentar uma tag no fim dos seus tweets
           tweet_starts_with: Acrescentar uma tag no início dos seus tweets
           twitter_account: A conta do Twitter à qual seus usuários farão perguntas.

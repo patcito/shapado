@@ -9,6 +9,7 @@ gl:
         default_tags: Etiquetas por defecto
         description: Descrición
         domain: Dominio
+        enable_latex: Activar o LaTeX
         fb_button: Activar o botón "Like" do Facebook (non protexe o anonimato)
         forum: Permitir máis dunha resposta por usuario
         group_created_by: creado por

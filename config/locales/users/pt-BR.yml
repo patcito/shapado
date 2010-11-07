@@ -27,7 +27,7 @@ pt-BR:
         password: Senha
         password_confirmation: Confirmação da senha
         preferred_languages: "Pretende ler perguntas nos seguintes idiomas:"
-        preferred_tags: Categorias preferidas
+        preferred_tags: Tags preferidas
         reputation: Reputação
         timezone: Fuso horário
         updated_at: atualizado em
@@ -40,7 +40,7 @@ pt-BR:
       edit_others_posts: Editar publicações de outros
       edit_wiki_post: Editar publicações wiki
       flag: Reportar
-      retag_others_questions: Recategorizar perguntas de outros
+      retag_others_questions: Modificar tags de perguntas de outros
       vote_down: Voto negativo
       vote_to_close_any_question: Pedir o encerramento de qualquer pergunta
       vote_to_close_own_question: Pedir encerramento de sua própria pergunta

@@ -9,6 +9,7 @@ ia:
         default_tags: Etiquettas predefinite
         description: Description
         domain: Dominio
+        enable_latex: Activar LaTeX
         fb_button: Activar le button Like de Facebook (non protege le vita private)
         forum: Permitter plus de un responsa per usator
         group_created_by: create per

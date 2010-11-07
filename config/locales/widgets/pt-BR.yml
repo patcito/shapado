@@ -19,8 +19,8 @@ pt-BR:
       new: Adicionar nova página
       title: Páginas wiki
     tag_cloud: 
-      description: Este widget mostra uma nuvem de categorias
-      title: Nuvem de categorias
+      description: Este widget mostra uma nuvem de tags
+      title: Nuvem de tags
     top_groups: 
       description: Este widget mostra os cinco grupos principais
       title: 5 grupos principais

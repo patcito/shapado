@@ -14,7 +14,7 @@ pt-BR:
         closed: Fechada
         created_at: Perguntado
         language: Língua
-        tags: Categorias
+        tags: Tags
         title: Título
         updated_at: atualizada
         updated_by: atualizada por
@@ -39,7 +39,7 @@ pt-BR:
       adult_content: Esta pergunta envolve conteúdo para adultos.
       body_tip: Qual é a sua pergunta? Seja descritivo.
       language_tip: Selecione o idioma da sua pergunta.
-      tags_tip: Use categorias para fornecer mais informação sobre a sua pergunta.
+      tags_tip: Use tags para acrescentar informação sobre a sua pergunta.
     index: 
       active: Ativas
       active_tooltip: Perguntas atualizadas recentemente
@@ -57,9 +57,9 @@ pt-BR:
       votes_tooltip: Perguntas com mais votos
     model: 
       messages: 
-        empty_tags: Desculpe, você tem que usar pelo menos uma categoria.
+        empty_tags: Desculpe, você tem que usar pelo menos uma tag.
         title_too_long: O título é muito longo. Não pode conter mais do que 100 caracteres.
-        too_many_tags: Desculpe, mas você só pode introduzir até 9 categorias.
+        too_many_tags: Desculpe, mas você só pode introduzir até 9 tags.
         too_short: Parece demasiado curta. Use mais do que %{count} palavras para ser mais específico.
     move: 
       group_label: "Mover para o grupo:"
@@ -74,14 +74,14 @@ pt-BR:
     question: 
       accepted_tooltip: Esta pergunta tem uma resposta que foi aceita
     retag: 
-      title: Recategorizar
+      title: Alterar tag
     retag_form: 
       cancel: Cancelar
-      submit: Atualizar categorias!
-      title: Atualizar categorias
+      submit: Atualizar tags!
+      title: Atualizar tags
     retag_to: 
-      failure: Desculpe, não foi possível atualizar as categorias.
-      success: As categorias foram atualizadas.
+      failure: Desculpe, não foi possível atualizar as tags.
+      success: As tags foram atualizadas.
     revert: 
       title: Reverter a pergunta
     shared: 
@@ -111,13 +111,13 @@ pt-BR:
       request_opening_details: Solicitar a reabertura desta pergunta
       requested_close_as: Você solicitou o encerramento desta pergunta como
       requested_reopening: Você solicitou a reabertura desta pergunta
-      retag: Recategorizar
+      retag: Mudar tag
       retract_request: Retirar o pedido
       share: Compartilhar esta pergunta em
       share_on: Compartilhar esta pergunta em %{site}
       solution: Solução
       to_answer_question: para responder a esta pergunta
-      unauthenticated_retag: É necessária uma conta para recategorizar perguntas
+      unauthenticated_retag: É necessária uma conta para mudar tags de perguntas
       unfavorite_tooltip: Remover esta pergunta das suas favoritas
       unwatch_tooltip: Deixar de vigiar esta pergunta
       viewed: visitada
@@ -125,14 +125,14 @@ pt-BR:
     solve: 
       flash_notice: A pergunta foi resolvida.
     tags: 
-      filter: Pesquisar categorias
-      title: Categorias
-      tooltip: Mostrar perguntas na categoria %{tag}
+      filter: Pesquisar tags
+      title: Tags
+      tooltip: Mostrar perguntas na tag %{tag}
     unanswered: 
       empty: Este grupo não contém perguntas sem resposta.
       expert: Peritos
-      my_tags: As minhas categorias
-      tags: Categorias sem respostas
+      my_tags: Minhas tags
+      tags: Tags sem respostas
       title: Perguntas sem resposta
     unsolve: 
       flash_notice: A pergunta deixou de estar resolvida.

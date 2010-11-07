@@ -1,0 +1,51 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  layouts: 
+    application: 
+      ask_question: Kysy kysymys
+      badges: Kulkuluvat
+      forgot: Unohditko?
+      home: Etusivu
+      languages: Kielet
+      log_in: Kirjaudu sisään
+      logged: Kirjautunut nimellä %{login}
+      logout: Kirjaudu ulos
+      manage_ads: Hallitse mainoksia
+      moderate: Valvo
+      now: nyt!
+      openid: 
+        explaination: "Jos haluat rekisteröityä tai vain kirjautua sisään, valitse OpenID-palveluntarjoaja:"
+      pages: Sivut
+      questions: Kysymykset
+      questions_in: Kysymyksiin
+      questions_tagged: varustettu tunnisteella
+      search: Etsi
+      settings: Asetukset
+      signup: Rekisteröidy
+      subscribe: Tilaa
+      tags: Tunnisteet
+      title: Kysymyksiä ja vastauksia
+      unanswered: Vastaamaton
+      users: Käyttäjät
+      welcome_from: Tervetuloa! Voit
+    manage: 
+      actions: Toimet
+      announcements: Ilmoitukset
+      constrains: Vaatimukset
+      content: Sisältö
+      dashboard: Kojelauta
+      domain: Toimialue
+      general: Yleinen
+      members: Jäsenet
+      pages: Sivut
+      properties: Ominaisuudet
+      reputation: Maine
+      rewards: Palkkiot
+      stats: Tilastot
+      theme: Teema
+      widgets: Ikkunaoliot
+    notifications: 
+      message: Jos et halua enää vastaanottaa automaattisia ilmoituksia kohteesta %{domain}, muuta asetuksiasi ilmoitusnäytöllä.

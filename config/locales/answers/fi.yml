@@ -1,0 +1,30 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+# Author: Silvonen
+fi: 
+  activerecord: 
+    attributes: 
+      answer: 
+        body: Runko
+        created_at: Vastattu
+        link: Linkki
+    models: 
+      answer: Vastaus
+      answers: Vastaukset
+  answers: 
+    create: 
+      flash_error: "Jotain meni väärin lisättäessä vastaustasi.\nMuista että:\n- Tyhjiä ja toistuvia vastauksia ei sallita\n- Sinun on odotettava 20 sekuntia ennen toisen vastauksen lähettämistä.\n. Voit vain lähettää yhden vastauksen per kysymys."
+      flash_notice: Kiitos!
+    edit: 
+      title: Muokataan vastausta
+    form: 
+      answer_label: Vastaus kysymykseen
+      comment_label: Kommentoi tätä vastausta
+      comment_submit: Kommentoi
+      submit: Vastaa
+    revert: 
+      title: Palauta vastaus
+    update: 
+      flash_notice: Vastaus päivitettiin onnistuneesti.

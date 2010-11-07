@@ -33,8 +33,8 @@ gl:
       message3: "Enderezo de correo electrónico: %{email}"
       message4: "Asunto: %{subject}"
     report: 
-      message1: Informe sobre o grupo %{group.name}
-      message2: Desde %{since}
+      message1: Informe sobre o grupo %{group}
+      message2: Desde %{date}
       message3: Creáronse %{questions} preguntas
       message4: Creáronse %{answers} respostas
       message5: Efectuáronse %{votes} votos

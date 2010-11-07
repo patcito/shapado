@@ -3,6 +3,7 @@
 # Export driver: syck
 # Author: Crazymadlover
 # Author: Diego Grez
+# Author: McDutchie
 # Author: Patcito
 es: 
   activerecord: 
@@ -11,6 +12,7 @@ es:
         default_tags: Etiquetas por omision
         description: Descripción
         domain: dominio
+        enable_latex: Habilitar LaTeX
         fb_button: Activar el boton Like de Facebook (no muy amigable para la privacidad)
         forum: Permitir más de una respuesta por usuario
         group_created_by: creado por
@@ -25,7 +27,6 @@ es:
         state: Estado
         subdomain: URL
         wysiwyg_editor: Habilitar un editor de texto mas amigable para el usuario
-        enable_latex: Habilitar Latex
     models: 
       default_tags_message: No se puede tener mas de 10 tags por defecto.
       group: Grupo

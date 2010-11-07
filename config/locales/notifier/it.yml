@@ -33,8 +33,8 @@ it:
       message3: "Indirizzo email: %{email}"
       message4: "Oggetto: %{subject}"
     report: 
-      message1: Report per il gruppo %{group.name}
-      message2: Dal %{since}
+      message1: Report per il gruppo %{group}
+      message2: Dal %{date}
       message3: "%{questions} domande create"
       message4: "%{answers} risposte create"
       message5: "%{votes} voti effettuati"

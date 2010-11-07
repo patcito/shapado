@@ -34,8 +34,8 @@ es:
       message3: "Dirección de correo: %{email}"
       message4: "Objeto: %{subject}"
     report: 
-      message1: Reporte para el groupo %{group.name}
-      message2: Desde el %{since}
+      message1: Reporte para el groupo %{group}
+      message2: Desde el %{date}
       message3: "%{questions} preguntas han sido creadas"
       message4: "%{answers} respuestas han sido creadas"
       message5: "%{votes} votos has sido efectuados"

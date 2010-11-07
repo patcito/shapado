@@ -1,0 +1,22 @@
+# Messages for Finnish (Suomi)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Centerlink
+fi: 
+  sessions: 
+    create: 
+      flash_error: Et voinut kirjautua sisään käyttäjänä '%{login}'
+      flash_notice: Kirjautuminen onnistui
+    destroy: 
+      flash_notice: Olet kirjautunut ulos.
+    new: 
+      log_in: Kirjaudu
+      not_registered: Etkö ole vielä rekisteröitynyt?
+      registered: Oletko jo rekisteröitynyt?
+      remember_me: Muista minut
+      sign_in: Kirjaudu sisään
+      signup: Rekisteröidy
+      with_authentication: Kirjaudu sisään todennusjärjestelmäämme
+      with_facebook: Kirjaudu Facebookiin
+      with_openid: Kirjaudu sisään OpenID-järjestelmään
+      with_twitter: Kirjaudu sisään Twitteriin

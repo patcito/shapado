@@ -2,15 +2,16 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Giro720
+# Author: Vgeorge
 pt-BR: 
   mailers: 
     notifications: 
       earned_badge: 
-        subject: Recebeu uma condecoração do grupo %{group}!
+        subject: Você recebeu uma medalha no %{group}!
       favorited: 
-        subject: "%{login} adicionou a sua pergunta às favoritas!"
+        subject: "%{login} adicionou a sua pergunta como favorita!"
       follow: 
-        subject: "%{login} está agora a segui-lo na aplicação %{app}"
+        subject: "%{login} agora está te seguindo em %{app}"
       give_advice: 
         friend_subject: "O seu amigo precisa de ajuda: %{question_title}"
         subject: "Precisamos da sua ajuda: %{question_title}"
@@ -19,6 +20,6 @@ pt-BR:
         subject_other: "%{login} respondeu à pergunta %{title}"
         subject_owner: "%{login} respondeu à sua pergunta %{title}"
       new_comment: 
-        subject: "%{login} comentou no grupo %{group}"
+        subject: "%{login} comentou no %{group}"
       report: 
-        subject: Relatório do grupo %{group}, da aplicação %{app}
+        subject: Relatório do grupo %{group} de %{app}
