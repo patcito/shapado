@@ -11,6 +11,9 @@ pl:
       format:
         format: "%n %u"
         unit: "PLN"
+        separator: ","
+        delimiter: " "
+        precision: 2
     percentage:
       format:
         delimiter: ""
@@ -37,10 +40,10 @@ pl:
       default: "%Y-%m-%d"
       short: "%d %b"
       long: "%d %B %Y"
-    
+
     day_names: [Niedziela, Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota]
     abbr_day_names: [nie, pon, wto, śro, czw, pia, sob]
-    
+
     month_names: [~, Styczeń, Luty, Marzec, Kwiecień, Maj, Czerwiec, Lipiec, Sierpień, Wrzesień, Październik, Listopad, Grudzień]
     abbr_month_names: [~, sty, lut, mar, kwi, maj, cze, lip, sie, wrz, paź, lis, gru]
     order: [ :year, :month, :day ]
@@ -74,7 +77,7 @@ pl:
         other: "%{count} minut"
       about_x_hours:
         one:   "około godziny"
-        other: "about %{count} godzin"
+        other: "około %{count} godzin"
       x_days:
         one:   "1 dzień"
         other: "%{count} dni"
@@ -88,10 +91,29 @@ pl:
       about_x_years:
         one:   "około roku"
         other: "około %{count} lat"
+      almost_x_years:
+        one:   "prawie rok"
+        few:   "prawie %{count} lata"
+        other: "prawie %{count} lat"
       over_x_years:
         one:   "ponad rok"
         few:   "ponad %{count} lata"
         other: "ponad %{count} lat"
+    prompts:
+      second: "sekundy"
+      minute: "minuty"
+      hour:   "godziny"
+      day:    "dzień"
+      month:  "miesiąc"
+      year:   "rok"
+
+  activemodel:
+    errors:
+      template:
+        header:
+          one:    "%{model} nie został zachowany z powodu jednego błędu"
+          other:  "%{model} nie został zachowany z powodu %{count} błędów"
+        body: "Błędy dotyczą następujących pól:"
 
   activerecord:
     errors:
@@ -113,6 +135,7 @@ pl:
         wrong_length: "jest nieprawidłowej długości (powinna wynosić %{count} znaków)"
         taken: "zostało już zajęte"
         not_a_number: "nie jest liczbą"
+        not_an_integer: "nie jest liczbą całkowitą"
         greater_than: "musi być większe niż %{count}"
         greater_than_or_equal_to: "musi być większe lub równe %{count}"
         equal_to: "musi być równe %{count}"
@@ -120,7 +143,8 @@ pl:
         less_than_or_equal_to: "musi być mniejsze lub równe %{count}"
         odd: "musi być nieparzyste"
         even: "musi być parzyste"
-      
+        record_invalid: "Negatywne sprawdzenie poprawności: %{errors}"
+
   support:
     array:
       sentence_connector: "i"
@@ -128,3 +152,6 @@ pl:
       words_connector: ", "
       two_words_connector: " i "
       last_word_connector: " i "
+    select:
+      prompt: "Proszę wybrać:"
+

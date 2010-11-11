@@ -112,10 +112,10 @@
         header:
           one: "有 1 個錯誤發生使得「%{model}」無法被儲存。"
           other: "有 %{count} 個錯誤發生使得「%{model}」無法被儲存。"
-        body: "下面欄位有問題："
+        body: "以下欄位發生問題："
       messages:
         inclusion: "沒有包含在列表中"
-        exclusion: "是被保留的"
+        exclusion: "是被保留的關鍵字"
         invalid: "是無效的"
         confirmation: "不符合確認值"
         accepted: "必須是可被接受的"
@@ -126,6 +126,7 @@
         wrong_length: "字數錯誤（必須是 %{count} 個字）"
         taken: "已經被使用"
         not_a_number: "不是數字"
+        not_an_integer: "必須是整數"
         greater_than: "必須大於 %{count}"
         greater_than_or_equal_to: "必須大於或等於 %{count}"
         equal_to: "必須等於 %{count}"
@@ -141,6 +142,6 @@
         header:
           one: "有 1 個錯誤發生使得「%{model}」無法被儲存。"
           other: "有 %{count} 個錯誤發生使得「%{model}」無法被儲存。"
-        body: "下面欄位有問題："
+        body: "以下欄位發生問題："
   
 
