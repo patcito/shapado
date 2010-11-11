@@ -38,8 +38,8 @@ en:
       members_only: "Only the group's members will be able to access this group"
       custom_html: Allow custom HTML
       custom_js: Allow custom JavaScript
-      custom_analytics: Allow Custom Analytics
-      analytics_engine: Analytics Engine
+      custom_analytics: Allow custom analytics
+      analytics_engine: Analytics engine
       website_analytics_id: Website Analytics ID
       analytics_legend: The group will be able to use its own tracking code
   activerecord:

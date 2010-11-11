@@ -1,9 +1,7 @@
-# Spanish translations for Rails
-# by Francisco Fernando García Nieto (ffgarcianieto@gmail.com)
-# contributors:
-#  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
+# Basque translations for Rails
+# by Esti Alvarez (esti@efaber.net)
 
-"es":
+"eu":
   # Action View
   number:
     # Used in number_with_delimiter()
@@ -67,7 +65,7 @@
         units:
           byte:
             one:   "Byte"
-            other: "Bytes"
+            other: "Byte"
           kb: "KB"
           mb: "MB"
           gb: "GB"
@@ -92,79 +90,79 @@
           #   one: Ten
           #   other: Tens
           # hundred: Hundred
-          thousand: "Mil"
-          million: "Millón"
-          billion: "Mil millones"
-          trillion: "Trillón"
-          quadrillion: "Cuatrillón"
+          thousand: "Mila"
+          million: "Milioi"
+          billion: "Mila milioi"
+          trillion: "Trilioi"
+          quadrillion: "Kuatrilioi"
 
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:
     distance_in_words:
-      half_a_minute: "medio minuto"
+      half_a_minute: "minutu erdi"
       less_than_x_seconds:
-        one:  "menos de 1 segundo"
-        other: "menos de %{count} segundos"
+        one:  "segundu bat baino gutxiago"
+        other: "%{count} segundu baino gutxiago"
       x_seconds:
-        one:  "1 segundo"
-        other: "%{count} segundos"
+        one:  "segundu bat"
+        other: "%{count} segundu"
       less_than_x_minutes:
-        one:  "menos de 1 minuto"
-        other: "menos de %{count} minutos"
+        one:  "1 minutu bat baino gutxiago"
+        other: "%{count} minutu baino gutxiago"
       x_minutes:
-        one:  "1 minuto"
-        other: "%{count} minutos"
+        one:  "minutu bat"
+        other: "%{count} minutu"
       about_x_hours:
-        one:  "alrededor de 1 hora"
-        other: "alrededor de %{count} horas"
+        one:  "ordu bat inguru"
+        other: "%{count} ordu inguru"
       x_days:
-        one:  "1 día"
-        other: "%{count} días"
+        one:  "egun bat"
+        other: "%{count} egun"
       about_x_months:
-        one:  "alrededor de 1 mes"
-        other: "alrededor de %{count} meses"
+        one:  "hilabete bat inguru"
+        other: "%{count} hilabete inguru"
       x_months:
-        one:  "1 mes"
-        other: "%{count} meses"
+        one:  "hilabete bat"
+        other: "%{count} hilabete"
       about_x_years:
-        one:  "alrededor de 1 año"
-        other: "alrededor de %{count} años"
+        one:  "urte bat inguru"
+        other: "%{count} urte inguru"
       over_x_years:
-        one:  "más de 1 año"
-        other: "más de %{count} años"
+        one:  "urte bat baino gehiago"
+        other: "%{count} urte baino gehiago"
       almost_x_years:
-        one: "casi 1 año"
-        other: "casi %{count} años"
+        one: "ia urte bat"
+        other: "ia %{count} urte"
     prompts:
-      year:   "Año"
-      month:  "Mes"
-      day:    "Día"
-      hour:   "Hora"
-      minute: "Minutos"
-      second: "Segundos"
+      year:   "Urte"
+      month:  "Hilabete"
+      day:    "Egun"
+      hour:   "Ordu"
+      minute: "Minutu"
+      second: "Segundu"
 
   helpers:
     select:
       # Default value for :prompt => true in FormOptionsHelper
-      prompt: "Por favor seleccione"
+      prompt: "Mesedez, aukeratu"
 
     # Default translation keys for submit FormHelper
     submit:
-      create: 'Guardar %{model}'
-      update: 'Actualizar %{model}'
-      submit: 'Guardar %{model}'
+      create: '%{model}a eratu'
+      update: '%{model}a eguneratu'
+      submit: '%{model}a gorde'
 
   # Attributes names common to most models
   #attributes:
-    #created_at: "Created at"
-    #updated_at: "Updated at"
+    #created_at: "Sortze data"
+    #updated_at: "Eguneratze data"
 
   # Active Record models configuration
   activerecord:
     errors:
       messages:
-        taken: "ya está en uso"
-        record_invalid: "La validación falló: %{errors}"
+        taken: "hartuta dago"
+        record_invalid: "Balioztatze arazoa: %{errors}"
         # Append your own errors here or at the model/attributes scope.
 
       # You can define own errors for models or model attributes.
@@ -201,32 +199,32 @@
 
     template:
       header:
-        one:   "No se pudo guardar este/a %{model} porque se encontró 1 error"
-        other:  "No se pudo guardar este/a %{model} porque se encontraron %{count} errores"
+        one:   "Errore batek ezinezkoa egin du {{model}} hau gordetzea"
+        other:  "{{count}} errorek ezinezkoa egiten dute {{model}} hau gordetzea"
       # The variable :count is also available
-      body: "Se encontraron problemas con los siguientes campos:"
+      body: "Arazoak egon dira ondoko eremuekin:"
 
     # The values :model, :attribute and :value are always available for interpolation
     # The value :count is available when applicable. Can be used for pluralization.
-    messages: &errors_messages
-      inclusion: "no está incluido en la lista"
-      exclusion: "está reservado"
-      invalid: "no es válido"
-      confirmation: "no coincide con la confirmación"
-      accepted: "debe ser aceptado"
-      empty: "no puede estar vacío"
-      blank: "no puede estar en blanco"
-      too_long: "es demasiado largo (%{count} caracteres máximo)"
-      too_short: "es demasiado corto (%{count} caracteres mínimo)"
-      wrong_length: "no tiene la longitud correcta (%{count} caracteres exactos)"
-      not_a_number: "no es un número"
-      greater_than: "debe ser mayor que %{count}"
-      greater_than_or_equal_to: "debe ser mayor que o igual a %{count}"
-      equal_to: "debe ser igual a %{count}"
-      less_than: "debe ser menor que %{count}"
-      less_than_or_equal_to: "debe ser menor que o igual a %{count}"
-      odd: "debe ser impar"
-      even: "debe ser par"
+    messages:
+      inclusion: "ez da zerrendako aukera bat"
+      exclusion: "erreserbatuta dago"
+      invalid: "ez da zuzena"
+      confirmation: "ez dator bat konfirmazioarekin"
+      accepted: "onartuta izan behar da"
+      empty: "ezin da hutsik egon"
+      blank: "ezin da zuriz utzi"
+      too_long: "luzeegia da (%{count} karaktere gehienez)"
+      too_short: "laburregia da (%{count} karaktere gutxienez)"
+      wrong_length: "ez du luzeera zuzena (%{count} karaktere izan behar ditu)"
+      not_a_number: "ez da zenbaki bat"
+      greater_than: "%{count} baino handiagoa izan behar da"
+      greater_than_or_equal_to: "%{count} baino handiago edo berdin izan behar da"
+      equal_to: "%{count} izan behar da"
+      less_than: "%{count} baino txikiago izan behar da"
+      less_than_or_equal_to: "%{count} baino txikiago edo berdin izan behar da"
+      odd: "bakoitia izan behar du"
+      even: "bikoitia izan behar du"
 
   # Active Support
   date:
@@ -234,27 +232,27 @@
       # Use the strftime parameters for formats.
       # When no format has been given, it uses default.
       # You can provide other formats here if you like!
-      default: "%d/%m/%Y"
-      short: "%d de %b"
-      long: "%d de %B de %Y"
+      default: "%Y/%m/%e"
+      short: "%b %e"
+      long: "%Y(e)ko %Bk %e"
 
-    day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
-    abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
+    day_names: [Igandea, Astelehena, Asteartea, Asteazkena, Osteguna, Ostirala, Larunbata]
+    abbr_day_names: [Igan, Astel, Astear, Asteaz, Oste, Osti, Lar]
 
     # Don't forget the nil at the beginning; there's no such thing as a 0th month
-    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
-    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+    month_names: [~, Urtarrila, Otsaila, Martxoa, Apirila, Maiatza, Ekaina, Uztaila, Abuztua, Iraila, Urria, Azaroa, Abendua]
+    abbr_month_names: [~, Urt, Ots, Mar, Api, Mai, Eka, Uzt, Abu, Ira, Urr, Aza, Aben]
     # Used in date_select and datime_select.
     order:
-      - :day
-      - :month
       - :year
+      - :month
+      - :day
 
   time:
     formats:
-      default: "%A, %d de %B de %Y %H:%M:%S %z"
-      short: "%d de %b %H:%M"
-      long: "%d de %B de %Y %H:%M"
+      default: "%A, %Y(e)ko %Bren %e %H:%M:%S %z"
+      short: "%b %e, %H:%M"
+      long: "%Y(e)ko %Bren %e,  %H:%M"
     am: "am"
     pm: "pm"
 
@@ -262,24 +260,5 @@
   support:
     array:
       words_connector: ", "
-      two_words_connector: " y "
-      last_word_connector: ", y "
-    select:
-      prompt: "Por favor seleccione"
-
-  # For Rails 2
-  activerecord:
-    errors:
-      template:
-        header:
-          one:   "No se pudo guardar este/a %{model} porque se encontró 1 error"
-          other: "No se pudo guardar este/a %{model} porque se encontraron %{count} errores"
-        body: "Se encontraron problemas con los siguientes campos:"
-
-      messages:
-        taken: "ya está en uso"
-        record_invalid: "La validación falló: %{errors}"
-        <<: *errors_messages
-
-      full_messages:
-        format: "%{attribute} %{message}"
+      two_words_connector: " eta "
+      last_word_connector: " eta "

@@ -18,17 +18,17 @@ en:
     send: Send
     save: Save
     details: Details
-    post_as_anonymous: Post as Anonymous
+    post_as_anonymous: Post as anonymous
   time:
     today: today
     ago: "%{time} ago"
   models:
-    question:   The question
+    question: The question
   global:
     from: "from %{site}"
     permission_denied: Permission denied
     please_login: Please log in
-    group_not_found: "The page %{url} doesn't exist"
+    group_not_found: "The page %{url} does not exist"
     preview: Preview
     or: or
     by: by
@@ -44,10 +44,10 @@ en:
     user: Subscribe to user questions
     feed: Feed
     post_new_questions: Post new questions to
-    share_on_twitter: "twitter, facebook and more..."
+    share_on_twitter: "Twitter, Facebook and more..."
   languages:
     any:     Any
-    user:    My Preferred Languages
+    user:    My preferred languages
   number:
     x_time:
       zero: "Never"

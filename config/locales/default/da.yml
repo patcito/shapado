@@ -7,13 +7,14 @@ da:
     # See http://www.dsn.dk/oss_faq.htm#datoer and http://en.wikipedia.org/wiki/Date_formats
     # either use traditional (2.10.03, 2. oktober 2003): "%e.%m.%y", "%e. %B %Y"
     # or international ISO 8601 format (2003-10-20): "%Y-%m-%d"
+    # Note: some Windows distributions do not support %e - you may have to use %d instead
     formats:
       default: "%d.%m.%Y"
       short: "%e. %b %Y"
       long: "%e. %B %Y"
 
     day_names: [søndag, mandag, tirsdag, onsdag, torsdag, fredag, lørdag]
-    abbr_day_names: [sø, ma, ti, 'on', to, fr, lø]
+    abbr_day_names: [sø, ma, ti, 'on', to, fr, lø] # Note: unescaped 'on' is parsed as true
     month_names: [~, januar, februar, marts, april, maj, juni, juli, august, september, oktober, november, december]
     abbr_month_names: [~, jan, feb, mar, apr, maj, jun, jul, aug, sep, okt, nov, dec]
     order: [ :day, :month, :year ]
@@ -134,7 +135,7 @@ da:
         inclusion: "er ikke i listen"
         exclusion: "er reserveret"
         invalid: "er ikke gyldig"
-        confirmation: "stemmer ikke overens"
+        confirmation: stemmer ikke overens med bekræftelse"
         accepted: "skal accepteres"
         empty: "må ikke udelades"
         blank: "skal udfyldes"
@@ -143,6 +144,7 @@ da:
         wrong_length: "har forkert længde (skulle være %{count} tegn)"
         taken: "er allerede brugt"
         not_a_number: "er ikke et tal"
+        not_an_integer: "er ikke et heltal"
         greater_than: "skal være større end %{count}"
         greater_than_or_equal_to: "skal være større end eller lig med %{count}"
         equal_to: "skal være lig med %{count}"
@@ -152,11 +154,11 @@ da:
         even: "skal være lige"
         record_invalid: "Validering fejlede: %{errors}"
 
-      template:
-        header:
-          one:   "En fejl forhindrede %{model} i at blive gemt"
-          other:  "%{count} fejl forhindrede denne %{model} i at blive gemt"
-        body: "Der var problemer med følgende felter:"
+      #template:
+      #  header:
+      #    one:   "En fejl forhindrede %{model} i at blive gemt"
+      #    other:  "%{count} fejl forhindrede denne %{model} i at blive gemt"
+      #  body: "Der var problemer med følgende felter:"
 
   activemodel:
     errors:
