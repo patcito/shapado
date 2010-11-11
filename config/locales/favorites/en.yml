@@ -3,7 +3,6 @@ en:
     create:
       unauthenticated: "You need an account to add favorites"
       success:         "The question has been added to your favorities"
-
   activerecord:
     models:
       favorites: Favorites

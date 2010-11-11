@@ -6,13 +6,13 @@ en:
     search: "Search"
     forbidden:
       title: "Access denied"
-      explanation: "You don't have the required rights to access this page."
+      explanation: "You do not have the required rights to access this page."
     not_found:
       title: "Page not found."
       explanation: "You may have mistyped the address or the page may have moved."
     unprocessable_entity:
       title: "The change you wanted was rejected."
-      explanation: "Maybe you tried to change something you didn't have access to."
+      explanation: "Maybe you tried to change something you did not have access to."
     internal_error:
-      title: "We're sorry, but something went wrong."
-      explanation: "We've been notified about this issue and we'll take a look at it shortly."
+      title: "We are sorry, but something went wrong."
+      explanation: "We have been notified about this issue and we will take a look at it shortly."
