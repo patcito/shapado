@@ -109,7 +109,7 @@ class Notifier < ActionMailer::Base
     end
   end
 
-  def report(user, report)
+  def report(user, report, group)
     domain = group ? group.domain : AppConfig.domain
     recipients user.email
     template_for user do

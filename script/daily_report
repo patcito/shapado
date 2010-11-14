@@ -14,6 +14,6 @@ Group.find_each(:state => "active") do |group|
   User.find_each(:_id => {:$in => owners}, "notification_opts.reports" => true) do |user|
     next if user.email.blank?
 
-    Notifier.deliver_report(user, @report)
+    Notifier.deliver_report(user, @report, group)
   end
 end
