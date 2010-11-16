@@ -49,7 +49,7 @@ class TwitterBot
 
     since = last_date.strftime("%Y-%m-%d")
 
-    query = "#{share.twitter_pattern} to:#{share.twitter_user} ?"
+    query = "#{share.twitter_pattern} to:#{share.twitter_user} '?'"
     puts "Processing #{group.name}. query=#{query.inspect}"
     self.search(query.strip) do |status|
       id = status[:id]
@@ -78,7 +78,7 @@ class TwitterBot
       title = status_text.gsub(/^@#{share.twitter_user}\s+/, "")
       tags = Set.new(@extractor.extract_hashtags(status_text))
 
-      body += title
+      body = title
 
       language = group.language
       if language.nil?
