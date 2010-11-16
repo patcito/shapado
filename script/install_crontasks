@@ -11,5 +11,5 @@ CronEdit::Crontab.Add  'daily_report', {:hour => "2", :minute=> "50",:weekday =>
 cleanup = "#{APP_ROOT}/script/cleanup production"
 CronEdit::Crontab.Add  'cleanup', {:hour => "2", :minute=> "50", :weekday => "4",  :command => cleanup}
 
-twitter = "#{APP_ROOT}/script/import_twitter production"
+twitter = "#{APP_ROOT}/script/import_twitter production >/dev/null 2>&1"
 CronEdit::Crontab.Add  'twitter', {:minute=> "*/5", :command => twitter}
