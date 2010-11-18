@@ -58,7 +58,7 @@ class TwitterBot
         next
       end
 
-      if Question.first(:twitter_source => status[:id], :select => [:_id]).present?
+      if status[:text] =~ /\bRT @/ || Question.first(:twitter_source => status[:id], :select => [:_id]).present?
         next
       end
 
@@ -75,7 +75,7 @@ class TwitterBot
         user.save(:validate => false)
       end
 
-      title = status_text.gsub(/^@#{share.twitter_user}\s+/, "")
+      title = status_text.gsub(/#{Regexp.escape(share.twitter_pattern)}|@#{Regexp.escape(share.twitter_user)}/i, "").strip
       tags = Set.new(@extractor.extract_hashtags(status_text))
 
       body = title
