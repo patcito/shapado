@@ -58,7 +58,7 @@ class TwitterBot
         next
       end
 
-      if status[:text] =~ /\bRT @/ || Question.first(:twitter_source => status[:id], :select => [:_id]).present?
+      if status[:text] =~ /\b(RT|via) @/ || Question.first(:twitter_source => status[:id], :select => [:_id]).present?
         next
       end
 
