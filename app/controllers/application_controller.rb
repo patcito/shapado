@@ -157,7 +157,9 @@ class ApplicationController < ActionController::Base
   def set_locale
     locale = AppConfig.default_language || 'en'
     if AppConfig.enable_i18n
-      if logged_in?
+      if current_group.language.present?
+        I18n.locale = current_group.language
+      elsif logged_in?
         locale = current_user.language
         Time.zone = current_user.timezone || "UTC"
       elsif params[:feed_token] && (feed_user = User.find_by_feed_token(params[:feed_token]))
