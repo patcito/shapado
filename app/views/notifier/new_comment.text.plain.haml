@@ -1,7 +1,7 @@
 - new_comment = @comment.body
 - question = "#{h(@question.title)}, #{url_for(:host => @group.domain, :controller => "questions", :action => "show", :id => @question.slug)}"
 
-= t('notifier.global.hi', :user => h(@user.login))
+= t("notifier.global.hi", :user => h(@user.login))
 
 
-= t('.message', :user => h(@comment.user.login), :new_comment => h(new_comment), :question => question)
+= t("notifier.new_comment.message", :user => h(@comment.user.login), :new_comment => h(new_comment), :question => question)

@@ -2,6 +2,6 @@
 - question = link_to h(@question.title), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
 
 %p
-  = t('notifier.global.hi', :user => h(@user.login))
+  = t("notifier.global.hi", :user => h(@user.login))
   %br
-    = t('.message', :user => h(@answer.user.login), :new_answer => new_answer, :question => question)
+    = t("notifier.new_answer.message", :user => h(@answer.user.login), :new_answer => new_answer, :question => question)

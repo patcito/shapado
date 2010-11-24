@@ -61,3 +61,5 @@ if AppConfig.smtp["activate"]
     :password => AppConfig.smtp["password"]
   }
 end
+
+
