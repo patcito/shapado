@@ -2,6 +2,6 @@
 - question = "#{@question.title}, #{url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)}"
 
 
-= t('notifier.global.hi', :user => h(@user.login))
-= t('.message', :user => h(@answer.user.login), :new_answer => h(new_answer), :question => question)
+= t("notifier.global.hi", :user => h(@user.login))
+= t("notifier.new_answer.message", :user => h(@answer.user.login), :new_answer => h(new_answer), :question => question)
 

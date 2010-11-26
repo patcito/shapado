@@ -1,17 +1,17 @@
 %p
-  = t('notifier.global.hi', :user => h(@user.login))
+  = t("notifier.global.hi", :user => h(@user.login))
   %br
-  = t('.message1', :user => h(@question.user.login))
+  = t("notifier.give_advice.message1", :user => h(@question.user.login))
   %br
   == "#{h(@question.title)}"
   %br
-  = t('.message2')
+  = t("notifier.give_advice.message2")
   = link_to url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug), url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
   %br
 
-  = t('.message3')
+  = t("notifier.give_advice.message3")
   =  url_for(:host => @domain, :controller => "questions", :action => "show", :id => @question.slug)
   %br
-  = t('.message4')
+  = t("notifier.give_advice.message4")
   %br
 == - #{h(@group.name)}

@@ -17,3 +17,16 @@ ActiveSupport.use_standard_json_time_format = true
 # Don't escape HTML entities in JSON, leave that for the #json_escape helper.
 # if you're including raw json in an HTML page.
 ActiveSupport.escape_html_entities_in_json = false
+
+module ActionMailer
+  class Base
+    def default_template_format
+      if @current_template_content_type
+        @current_template_content_type.sub('/','.')
+        # Mime::Type.lookup(@current_template_content_type).to_sym
+      else
+        :html
+     end
+    end
+  end
+end

@@ -1,5 +1,7 @@
 =yield
 
 = "_"*80
-= t('.message', :domain => @domain)
+= I18n.t("layouts.notifications.message", :domain => @domain, :locale => @language)
+
 = url_for(:host => @domain, :controller => "users", :action => "edit", :id => @user, :anchor => "notifications")
+

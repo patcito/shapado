@@ -1,12 +1,12 @@
 
 -if @user
-  = t('.message1', :user =>h(@user.login), :email => h(@user.email))
+  = t("notifier.new_feedback.message1", :user =>h(@user.login), :email => h(@user.email))
 -else
-  = t('.message2', :ip => @ip)
+  = t("notifier.new_feedback.message2", :ip => @ip)
 
-= t('.message3', :email => h(@user.email))
+= t("notifier.new_feedback.message3", :email => h(@user.email))
 
-= t('.message4', :subject => h(@subject))
+= t("notifier.new_feedback.message4", :subject => h(@subject))
 ==
 = @content
 

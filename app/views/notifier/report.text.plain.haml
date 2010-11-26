@@ -1,20 +1,20 @@
 -link = url_for(:host => @report.group.domain, :controller => "welcome", :action => "index")
 
-= t('notifier.global.hi', :user => h(@user.login))
+= t("notifier.global.hi", :user => h(@user.login))
 ==
 ==
-= t('.message1', :group => @report.group.name)
+= t("notifier.reportmessage1", :group => @report.group.name)
 ==
 
-= t('.message2', :date => @report.since)
+= t("notifier.reportmessage2", :date => @report.since)
 ==
 ==
-= t('.message3', :questions => @report.questions)
-= t('.message4', :answers => @report.answers)
-= t('.message5', :votes => @report.votes)
-= t('.message6', :badges => @report.badges)
+= t("notifier.reportmessage3", :questions => @report.questions)
+= t("notifier.reportmessage4", :answers => @report.answers)
+= t("notifier.reportmessage5", :votes => @report.votes)
+= t("notifier.reportmessage6", :badges => @report.badges)
 ==
 ==
-= t('.message7', :users => @report.users)
+= t("notifier.reportmessage7", :users => @report.users)
 
-= t('.message8', :link => link)
+= t("notifier.reportmessage8", :link => link)
