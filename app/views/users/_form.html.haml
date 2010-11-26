@@ -47,7 +47,7 @@
 
 .group
   = f.label :timezone, t(:timezone, :scope => "activerecord.attributes.user"), :class => "label"
-  - ActiveSupport::TimeZone.zones_map.delete("")
+  - ActiveSupport::TimeZone.zones_map.delete(""); ActiveSupport::TimeZone.zones_map.delete(nil)
   = f.time_zone_select(:timezone, nil, :include_blank => true, :class => "select")
 
 -unless @user.new_record?
