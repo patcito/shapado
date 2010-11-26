@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
     self.exception_notifiable_silent_exceptions << SuperExceptionNotifier::CustomExceptionClasses::PageNotFound
     self.exception_notifiable_silent_exceptions << ActionController::InvalidAuthenticityToken
     self.exception_notifiable_silent_exceptions << ActionController::RoutingError
+    self.exception_notifiable_silent_exceptions << ActionController::UnknownAction
 
     local_addresses.clear
 
