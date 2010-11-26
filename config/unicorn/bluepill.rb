@@ -19,7 +19,7 @@ Bluepill.application("shapado", :log_file => RAILS_ROOT+"/log/bluepill.log") do 
     process.monitor_children do |child_process|
       child_process.stop_command = "kill -QUIT {{PID}}"
 
-      child_process.checks :mem_usage, :every => 15.seconds, :below => 150.megabytes, :times => [3,4], :fires => :stop
+      child_process.checks :mem_usage, :every => 15.seconds, :below => 165.megabytes, :times => [3,4], :fires => :stop
       child_process.checks :cpu_usage, :every => 15.seconds, :below => 90, :times => [3,4], :fires => :stop
     end
   end
