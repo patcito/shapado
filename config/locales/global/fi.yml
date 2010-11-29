@@ -17,7 +17,7 @@ fi:
     anonymous: Anonyymi
     by: /
     current: Nykyinen
-    from: sivustosta %{site}
+    from: maasta %{site}
     group_not_found: Sivua %{url} ei ole olemassa
     or: tai
     permission_denied: Käyttö estetty

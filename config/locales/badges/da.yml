@@ -19,7 +19,7 @@ da:
         description: Udfyldte alle profil felter
         name: Autobiografi
       celebrity: 
-        description: Få mere end 100 tilhængere
+        description: Fik mere end 100 tilhængere
         name: Berømthed
       citizen_patrol: 
         description: Første anmeldte indlæg
@@ -28,7 +28,7 @@ da:
         description: Stemte 300 gange
         name: Borgerpligt
       cleanup: 
-        description: Første rollback
+        description: Lavede første rollback
         name: Oprydning
       commentator: 
         description: Efterlod 10 kommentarer
@@ -46,7 +46,7 @@ da:
         description: Fik 100 positive stemmer
         name: Indsats medalje
       enlightened: 
-        description: Første svar blev accepteret med mindst 10 op stemmer
+        description: Har et svar der blev accepteret med mindst 10 op stemmer
         name: Oplyst
       famous_question: 
         description: Stillede et spørgsmål med 10000 visninger
@@ -55,19 +55,19 @@ da:
         description: Besøgte siden hver dag 100 dage i træk
         name: Fanatiker
       favorite_question: 
-        description: Spørgsmål favorit for 25 brugere
+        description: Stillede et spørgsmål der blev favorit for 25 brugere
         name: Favorit spørgsmål
       friendly: 
         description: Blev tilhænger af nogen for første gang
         name: Venlig
       good_answer: 
-        description: Har et svar der når et gennemsnit på mere end 25 stemmer
+        description: Gav et svar der nåede et gennemsnit på mere end 25 stemmer
         name: Godt svar
       good_question: 
-        description: Har et spørgsmål der når et gennemsnit på mere end 25 stemmer
+        description: Stillede et spørgsmål som nåede et gennemsnit på mere end 25 stemmer
         name: Godt spørgsmål
       great_answer: 
-        description: Svar stemt op 100 gange
+        description: Har et svar der er stemt op 100 gange
         name: Fantastisk svar
       great_question: 
         description: Spørgsmål stemt op 100 gange
@@ -76,10 +76,10 @@ da:
         description: Gav en løsning på et spørgsmål med et gennemsnit på mere end 40 stemmer
         name: Guru
       inquirer: 
-        description: Spurgte for første gang
+        description: Stillede et spørgsmål for første gang
         name: Spørger
       interesting_person: 
-        description: Få mere end 10 tilhængere
+        description: Fik mere end 10 tilhængere
         name: Interessant person
       merit_medal: 
         description: Fik 200 positive stemmer
@@ -88,16 +88,16 @@ da:
         description: Besvarede et spørgsmål mere end 60 dage senere med mindst 5 stemmer
         name: Åndemaner
       nice_answer: 
-        description: Svar stemt op 10 gange
+        description: Har et svar der blev stemt op 10 gange
         name: Fint svar
       nice_question: 
-        description: Spørgsmål stemt op 10 gange
+        description: Stillede et spørgsmål der blev stemt op 10 gange
         name: Fint spørgsmål
       notable_question: 
         description: Stillede et spørgsmål med 2500 visninger
         name: Bemærkelsesværdigt spørgsmål
       organizer: 
-        description: Første gentag
+        description: Lavede første retag
         name: Organisator
       peer_pressure: 
         description: Slettede eget indlæg med score på -3 eller lavere
@@ -106,30 +106,30 @@ da:
         description: Vær blandt de første brugere til at registrere
         name: Pioner
       popstar: 
-        description: 500 positive stemmer, maksimalt 10 negative stemmer
+        description: Har 500 positive stemmer, maksimalt 10 negative stemmer
         name: Popstjerne
       popular_person: 
-        description: Få mere end 50 tilhængere
+        description: Fik mere end 50 tilhængere
         name: Populær person
       popular_question: 
         description: Stillede et spørgsmål med 1000 visninger
         name: Populært spørgsmål
       rockstar: 
-        description: 1000 positive stemmer, maksimalt 10 negative stemmer
+        description: Har 1000 positive stemmer, maksimalt 10 negative stemmer
         name: Rockstjerne
       scholar: 
-        description: Første accepteret svar på eget spørgsmål
+        description: Besvarede først selv stillede spørgsmål med et godkendt svar
         name: Belært
       self-learner: 
-        description: Besvar dit eget spørgsmål med mindst 3 op stemmer
+        description: Besvarede sit eget spørgsmål med mindst 3 op stemmer
         name: Selv lært
       service_medal: 
-        description: Fik 300 positive stemmer
+        description: Har 300 positive stemmer
         name: Service medalje
       shapado: 
         description: Besøgte siden hver dag 8 dage i træk
       stellar_question: 
-        description: Spørgsmål tilføjet til favoritter af 100 brugere
+        description: Stillede et spørgsmål der blev favorit for 100 brugere
         name: Super spørgsmål
       student: 
         description: Stillede første spørgsmål med mindst én op stemme

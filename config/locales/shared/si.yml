@@ -1,0 +1,10 @@
+# Messages for Sinhala (සිංහල)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Singhalawap
+si: 
+  shared: 
+    topbar: 
+      admin: පරිපාලක
+      logged_as: "%{login} ලෙස ලොග්වී ඇත"
+      user_page: මාගේ පිටු

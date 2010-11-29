@@ -6,5 +6,5 @@ pms:
   imports: 
     subtabs: 
       need_confirmation: 
-        name: ↓ A l'han da manca ëd na conferma
+        name: A l'han da manca ëd na conferma
         title: Mandé dij mëssagi ëd conferma

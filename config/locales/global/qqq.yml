@@ -1,0 +1,36 @@
+# Messages for Message documentation (Message documentation)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Kghbln
+qqq: 
+  feeds: 
+    share_on_twitter: This message allows only 20 characters in a row. Use a line break if the translation is longer than that.
+  global: 
+    anonymous: "{{Identical|Anonymous}}"
+    current: "{{Identical|Current}}"
+    or: "{{Identical|Or}}"
+    permission_denied: "{{Identical|Permission denied}}"
+    preview: "{{Identical|Preview}}"
+    previous: "{{Identical|Previous}}"
+  number: 
+    x_time: 
+      one: <nowiki>%{count}</nowiki> = 1. Refers to something that has happened once.
+      other: <nowiki>%{count}</nowiki> is a number. Refers to something that has happened more than once.
+      zero: "{{Identical|Never}}"
+  pagination: 
+    next: "{{Identical|Next}}"
+    previous: "{{Identical|Previous}}"
+  scaffold: 
+    add: "{{Identical|Add}}"
+    back: "{{Identical|Back}}"
+    cancel: "{{Identical|Cancel}}"
+    close: "{{Identical|Close}}"
+    create: "{{Identical|Create}}"
+    destroy: "{{Identical|Delete}}"
+    details: "{{Identical|Details}}"
+    edit: "{{Identical|Edit}}"
+    save: "{{Identical|Save}}"
+    send: "{{Identical|Send}}"
+    show: "{{Identical|Show}}"
+    update: "{{Identical|Update}}"

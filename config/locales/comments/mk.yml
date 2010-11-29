@@ -11,7 +11,7 @@ mk:
     shared: 
       add_comment: додај коментар...
       comment_submit: коментирај
-      reply: одговори
+      reply: Одговори
       said: рече
     update: 
       flash_notice: коментарот е успешно подновен.

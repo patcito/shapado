@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Protozoan
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -99,7 +100,7 @@ nl:
         name: Vermeldenswaardige vraag
       organizer: 
         description: Heeft een eerste herlabeling uitgevoerd
-        name: organisator
+        name: Organisator
       peer_pressure: 
         description: Heeft eigen bericht met een score van -3 of lager verwijderd
         name: Groepsdruk

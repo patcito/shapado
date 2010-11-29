@@ -1,0 +1,44 @@
+# Messages for Danish (Dansk)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Emilkris33
+da: 
+  devise: 
+    confirmations: 
+      confirmed: Din konto blev bekræftet. Du er nu logget ind
+      link: Har ikke modtaget bekræftelses instruktioner?
+      send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du kan bekræfte din konto inden for et par minutter.
+    mailer: 
+      confirmation_instructions: Bekræftelses instruktioner
+      reset_password_instructions: Nulstil password instruktioner
+      unlock_instructions: Lås op for Instruktioner
+    passwords: 
+      link: Glemt password?
+      send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du kan nulstille dit password inden for et par minutter.
+      updated: Dit password blev ændret. Du er nu logget ind.
+    registrations: 
+      destroyed: Farvel! Din konto blev annulleret. Vi håber at se dig igen.
+      link: Tilmeld
+      signed_up: Du har tilmeldt dig.
+      updated: Du har opdateret din konto.
+    sessions: 
+      facebook_actions: 
+        sign_in: Log ind
+        sign_out: Log ud
+      facebook_authenticity_token: Noget gik galt. Af sikkerhedsmæssige årsager, skal du logge ind igen.
+      facebook_invalid: Kunne ikke logge ind. Ugyldig konto.
+      facebook_timeout: Facebook session er udløbet. Du skal logge ind igen for at fortsætte.
+      inactive: Din konto er ikke bekræftet endnu.
+      invalid: Ugyldig e-mail-adresse eller adgangskode.
+      invalid_token: Ugyldig bekræftelses token.
+      link: Log ind
+      locked: Din konto er låst.
+      signed_in: Logget ind
+      signed_out: Logget ud.
+      timeout: Din session er udløbet. Log på igen for at fortsætte.
+      unauthenticated: Du skal logge ind eller tilmeld dig før du fortsætter.
+      unconfirmed: Du skal bekræfte din konto, før du fortsætter.
+    unlocks: 
+      link: Modtog ikke oplåsnings instruktioner?
+      send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du kan låse op din konto inden for et par minutter.
+      unlocked: Din konto blev låst op. Du er nu logget ind

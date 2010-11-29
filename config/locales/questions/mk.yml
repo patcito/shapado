@@ -6,7 +6,7 @@ mk:
   activerecord: 
     attributes: 
       question: 
-        answers: одговори
+        answers: Одговори
         asked_by: поставено од
         body: текст
         closed: затворено
@@ -16,8 +16,8 @@ mk:
         title: наслов
         updated_at: подновено
         updated_by: подновено од
-        views: прегледи
-        votes: гласови
+        views: Прегледи
+        votes: Гласа
     models: 
       question: прашање
       questions: прашања
@@ -51,7 +51,7 @@ mk:
       oldest: најстари
       title: сите прашања
       unanswered_questions: неодговорени прашања
-      votes: гласови
+      votes: Гласа
       votes_tooltip: прашања со највеќе гласови
     model: 
       messages: 
@@ -87,7 +87,7 @@ mk:
     show: 
       accepted_tooltip: еден од одговорите е прифатен како точен
       another_answers: други одговори
-      answers: одговори
+      answers: Одговори
       answers_title: 
         one: "%{count} одговор"
         other: "%{count} одговори"

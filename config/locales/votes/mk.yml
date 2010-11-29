@@ -6,7 +6,7 @@ mk:
   activerecord: 
     models: 
       vote: глас
-      votes: гласови
+      votes: Гласа
   votes: 
     control: 
       have_voted_down: кликнете за да го поништите гласот „против“

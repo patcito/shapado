@@ -1,0 +1,60 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  feeds: 
+    feed: Стужка
+    post_new_questions: Даслаць новае пытаньне ў
+    question: Падпісацца на гэтае пытаньне
+    questions: Падпісацца на ўсе пытаньні
+    share_on_twitter: Twitter, Facebook і іншае…
+    tag: Падпісацца на тэг
+    user: Падпісацца на пытаньні гэтага карыстальніка
+  global: 
+    active: Актывізаваць
+    anonymous: Ананім
+    by: ад
+    current: Цяперашняя
+    from: з %{site}
+    group_not_found: Старонка %{url} не існуе
+    or: ці
+    permission_denied: Доступ забаронены
+    please_login: Калі ласка, увайдзіце ў сыстэму
+    preview: Папярэдні прагляд
+    previous: Папярэдні
+    share: Адкрыць доступ
+  languages: 
+    any: Любая
+    user: Мовы, якім я аддаю перавагу
+  models: 
+    question: Пытаньне
+  number: 
+    x_time: 
+      one: "%{count} разоў"
+      other: "%{count} раз(оў)"
+      zero: Ніколі
+  pagination: 
+    next: Наступная &raquo;
+    previous: "&laquo; Папярэдняя"
+  scaffold: 
+    add: Дадаць
+    back: Назад
+    cancel: Скасаваць
+    close: Закрыць
+    create: Стварыць
+    destroy: Выдаліць
+    details: Падрабязнасьці
+    edit: Рэдагаваць
+    more: Далей…
+    new: Дадаць новую %{model}
+    post_as_anonymous: Даслаць ананімна
+    save: Захаваць
+    send: Даслаць
+    show: Паказаць
+    sure: Вы ўпэўнены, што жадаеце выдаліць %{model} ?
+    update: Абнавіць
+  time: 
+    ago: "%{time} таму"
+    today: сёньня

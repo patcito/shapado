@@ -6,7 +6,7 @@ fi:
   activerecord: 
     models: 
       badge: Rintanappi
-      badges: Rintananpit
+      badges: Rintanapit
   badges: 
     index: 
       description: Kaikki rintanapit, jotka voit ansaita. Jaa tietämystäsi rintanappien ansaitsemiseksi.

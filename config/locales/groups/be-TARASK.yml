@@ -1,0 +1,46 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  groups: 
+    create: 
+      flash_notice: Вашая група была пасьпяхова створаная. Цяпер Вы можаце пачаць яе ўстанаўліваць.
+    form: 
+      access: Устаноўкі доступу
+      analytics_engine: Рухавік Analytics
+      analytics_legend: Група будзе мець магчымасьць выкарыстоўваць уласны код сачэньня
+      any_language: Любая
+      custom_analytics: Дазволіць нестандартныя аналітыкі
+      custom_html: Дазволіць нестандартны HTML
+      custom_js: Дазволіць нестандартны JavaScript
+      default_tags_legend: Падзяляйце тэгі коскамі. Дазволена толькі 10 па змоўчваньні.
+      description_legend: Вы можаце выкарыстоўваць 400 сымбаляў для апісаньня групы.
+      isolate_group: Ізаляваць групу ад іншых групаў
+      logo_legend: Вы можаце загрузіць лягатып групы. Максымальны памер файла складае 2 Мб.
+      members_only: Толькі сябры групы будуць мець доступ да гэтай групы
+      website_analytics_id: Ідэнтыфікатар аналітыкі сайта
+    group: 
+      about: Пра
+      accept_group: Прыняць гэтую групу
+      allow_ads: Дазволіць рэкляму
+      close: Закрыць
+      close_group: Закрыць гэтую групу
+      disallow_ads: Забараніць рэкляму
+    index: 
+      actives: Актыўныя
+      filter: Пошук групаў
+      most_active: Самыя актыўныя
+      name: Назва
+      pendings: Чакае
+      request_group: Запытаць новую групу
+      title: Групы
+    show: 
+      accept_group: Прыняць гэтую групу
+      accept_group_with_custom_ads: Прыняць групу і дазволіць нестандартную рэкляму
+      close_group: Закрыць гэтую групу
+      group_awaiting_acceptance: Гэтая група чакае прыняцьця мадэратарам.
+      group_closed: Гэтая група была закрытая.
+      title: Пра %{name}
+      visit_group: Наведаць гэтую групу

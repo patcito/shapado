@@ -8,7 +8,7 @@ fi:
       index: 
         all: Kaikki
         ban: Porttikielto
-        banned: Kielletyt kysymyset
+        banned: Kielletyt kysymykset
         content: Sisältö
         flagged: Merkityt kysymykset
         item_title: Otsikko

@@ -6,7 +6,7 @@ fi:
   layouts: 
     application: 
       ask_question: Kysy kysymys
-      badges: Kulkuluvat
+      badges: Ansiomitalit
       forgot: Unohditko?
       home: Etusivu
       languages: Kielet
@@ -27,7 +27,7 @@ fi:
       signup: Rekisteröidy
       subscribe: Tilaa
       tags: Tunnisteet
-      title: Kysymyksiä ja vastauksia
+      title: Kysymykset ja vastaukset
       unanswered: Vastaamaton
       users: Käyttäjät
       welcome_from: Tervetuloa! Voit

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Lockal
+# Author: Александр Сигачёв
 ru: 
   activerecord: 
     attributes: 
@@ -9,6 +10,7 @@ ru:
         default_tags: Теги по умолчанию
         description: Описание
         domain: Домен
+        enable_latex: Включить LaTeX
         fb_button: Включить кнопку Facebook (отрицательно влияет на защиту личной информации)
         forum: Разрешить больше одного варианта ответа на пользователя
         group_created_by: кем создано

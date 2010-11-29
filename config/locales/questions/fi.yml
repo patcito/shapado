@@ -16,7 +16,7 @@ fi:
         title: Otsikko
         updated_at: päivitetty
         updated_by: "päivitetty:"
-        views: Näkymät
+        views: Luettu
         votes: Äänet
     models: 
       question: Kysymys
@@ -43,11 +43,11 @@ fi:
       active_tooltip: Kysymykset, jotka on päivitetty äskettäin
       ask_question: Kysy kysymys
       empty: Kukaan ei ole vielä kysynyt yhtään kysymystä. Ole ensimmäinen!
-      help_to_answer: Opasta meitä vastaamaan
+      help_to_answer: Opasta meitä vastaamaan kohteeseen
       hot: Suosittu
       hot_tooltip: Kysymykset, joissa on ollut eniten toimintaa viimeisen viiden päivän aikana
       newest: Uusin
-      newest_tooltip: Viimeksi kysyttyjä kysymyksiä
+      newest_tooltip: Viimeksi kysytyt kysymykset
       oldest: Vanhin
       title: Kaikki kysymykset
       unanswered_questions: Vastaamattomat kysymykset

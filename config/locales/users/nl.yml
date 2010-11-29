@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Kjell
+# Author: Protozoan
 # Author: Siebrand
 nl: 
   activerecord: 
@@ -87,6 +88,6 @@ nl:
       follow: Volgen
       title: Gebruiker %{user}
       unfollow: Niet langer volgen
-      views: keren bekeken
+      views: x bekeken
     unfollow: 
       flash_notice: De gebruiker %{user} is niet langer uw vriend

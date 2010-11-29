@@ -1,6 +1,7 @@
 # Messages for Brazilian Portuguese (Português do Brasil)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: Giro720
 # Author: Luckas Blade
 # Author: Vgeorge
 pt-BR: 
@@ -10,6 +11,7 @@ pt-BR:
         default_tags: Tags predefinidas
         description: Descrição
         domain: Domínio
+        enable_latex: Ativar LaTeX
         fb_button: Ativar botão "Curtir" do Facebook (não respeita privacidade)
         forum: Permitir mais do que uma resposta por usuário
         group_created_by: criado por

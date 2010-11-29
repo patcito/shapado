@@ -1,0 +1,16 @@
+# Messages for Persian (فارسی)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Persianizer
+fa: 
+  ads: 
+    ad_links: "%{type} افزودن یک آگهی  تازه"
+    create: 
+      success: آگهی با موفقیت ایجاد شد
+    index: 
+      add_adbard: آگهی ادبارد تازه‌ای بیافزایید
+      add_adsense: آگهی گوگل ادسنس تازه‌ای بیافزایید
+      title: آگهی‌ها
+    name: "نام:"
+    position: "مکان:"
+    title: "%{type} افزودن یک آگهی  تازه"

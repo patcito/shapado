@@ -10,6 +10,7 @@ fr:
         default_tags: Tags par défaut
         description: Description
         domain: Domaine
+        enable_latex: Activer LaTeX
         fb_button: Activer le boutton Like de Facebook (ne protège pas la vie privée)
         forum: Permettre plus d'une réponse par utilisateur
         group_created_by: crée par

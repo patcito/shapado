@@ -36,7 +36,7 @@ fi:
           large: luultavasti kuten 500 dollaria
           medium: <=== Sama
           onsite: luultavasti 0 dollaria omalla palvelimella
-          small: luultavasti kuten $50 — 100 €/kuukausi useimmilla videopalvelujen tarjoajilla
+          small: luultavasti kuten 50 € — 100 €/kuukausi useimmilla videopalvelujen tarjoajilla
         stackexchange: 
           large: 1299 dollaria/kuukausi
           medium: 999 dollaria/kuukausi
@@ -53,7 +53,7 @@ fi:
       browse_all_or_by_tags: Katso %{full_list_of_questions} tai %{browse_by_tags}
       browse_by_tags: selaa tunnisteiden mukaisesti
       create_own_site: Luo oma Kysymys&amp;Vastaus -sivusto 8 sekunnissa ilmaiseksi
-      full_list_of_questions: täydellinen luettelo kysymyksiä
+      full_list_of_questions: täydellinen luettelo kysymyksistä
       hot: Suosittu
       quick_question: Kysy kysymys, löydämme jonkun vastaamaan
       recent_questions: Viimeaikaiset kysymykset
