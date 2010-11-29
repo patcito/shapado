@@ -9,6 +9,7 @@ da:
         default_tags: Standard tags
         description: Beskrivelse
         domain: Domæne
+        enable_latex: Aktiver LaTeX
         fb_button: Aktiver Facebook "synes godt om"/like knap (ikke privatlivs venlig)
         forum: Tillad mere end ét svar af bruger
         group_created_by: oprettet af

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Malafaya
 pt-PT: 
   activerecord: 
     attributes: 
@@ -9,6 +10,7 @@ pt-PT:
         default_tags: Categorias predefinidas
         description: Descrição
         domain: Domínio
+        enable_latex: Activar o LaTeX
         fb_button: Activar botão de estilo Facebook (não respeita privacidade)
         forum: Permitir mais do que uma resposta por utilizador
         group_created_by: criado por

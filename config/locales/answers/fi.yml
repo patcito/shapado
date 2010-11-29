@@ -15,7 +15,7 @@ fi:
       answers: Vastaukset
   answers: 
     create: 
-      flash_error: "Jotain meni väärin lisättäessä vastaustasi.\nMuista että:\n- Tyhjiä ja toistuvia vastauksia ei sallita\n- Sinun on odotettava 20 sekuntia ennen toisen vastauksen lähettämistä.\n. Voit vain lähettää yhden vastauksen per kysymys."
+      flash_error: "Jotain meni väärin lisättäessä vastaustasi.\nMuista että:\n- Tyhjiä ja toistuvia vastauksia ei sallita\n- Sinun on odotettava 20 sekuntia ennen toisen vastauksen lähettämistä.\n- Voit vain lähettää yhden vastauksen per kysymys."
       flash_notice: Kiitos!
     edit: 
       title: Muokataan vastausta

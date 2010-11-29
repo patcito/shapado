@@ -1,0 +1,10 @@
+# Messages for Sinhala (සිංහල)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Singhalawap
+si: 
+  imports: 
+    subtabs: 
+      need_confirmation: 
+        name: තහවුරු කලයුතුය
+        title: තහවුරුකිරීමේ e-ලිපිය යවන්න

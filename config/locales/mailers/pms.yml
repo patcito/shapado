@@ -9,7 +9,7 @@ pms:
       earned_badge: 
         subject: It l'has vagnà un distintiv su %{group}!
       favorited: 
-        subject: ↓ %{login} a l'ha giontà soa chestion com un-a dle favorìe!
+        subject: "%{login} a l'ha giontà soa chestion com un-a dle favorìe!"
       follow: 
         subject: "%{login} adess a-j va dapress su %{app}"
       give_advice: 

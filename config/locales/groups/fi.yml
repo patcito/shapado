@@ -9,6 +9,7 @@ fi:
         default_tags: Oletustunnisteet
         description: Kuvaus
         domain: Toimialue
+        enable_latex: Ota käyttöön LaTex
         fb_button: Ota käyttöön Facebookin Tykkää-painike (ei yksityisyystävällinen)
         forum: Salli käyttäjälle useampia kuin yhden vastauksen
         group_created_by: "luotu:"
@@ -22,7 +23,7 @@ fi:
         registered_only: Vain rekisteröityneet käyttäjät voivat käyttää sivustoa
         state: Tila
         subdomain: Verkko-osoite
-        wysiwyg_editor: Ota käyttöön käyttäjäystävällisiä editori
+        wysiwyg_editor: Ota käyttöön käyttäjäystävällinen editori
     models: 
       default_tags_message: Et voi luoda yli 10 oletustunnistetta
       group: Ryhmä

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: McDutchie
+# Author: Protozoan
 # Author: Siebrand
 nl: 
   feeds: 
@@ -17,7 +18,7 @@ nl:
     anonymous: Anoniem
     by: door
     current: huidige
-    from: Van %{site}
+    from: uit %{site}
     group_not_found: De pagina %{url} bestaat niet
     or: of
     permission_denied: Geen toegang
@@ -49,7 +50,7 @@ nl:
     edit: Bewerken
     more: Meer...
     new: Nieuwe %{model} toevoegen
-    post_as_anonymous: Bericht anoniem plaatsen
+    post_as_anonymous: Anoniem plaatsen
     save: Opslaan
     send: Verzenden
     show: Weergeven

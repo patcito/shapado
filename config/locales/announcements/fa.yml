@@ -1,0 +1,20 @@
+# Messages for Persian (فارسی)
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: Persianizer
+fa: 
+  activerecord: 
+    attributes: 
+      announcement: 
+        ends_at: پایان در
+        message: پیام
+        only_anonymous: تنها برای کاربران ناشناس
+        starts_at: آغاز در
+  announcements: 
+    actions: 
+      delete: حذف
+      title: اقدامات
+    create: 
+      success: اطلاعیه با موفقیت ایجاد شد
+    index: 
+      title: اطلاعیه‌ها

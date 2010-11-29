@@ -86,6 +86,6 @@ fi:
       follow: Seuraa
       title: Käyttäjä %{user}
       unfollow: Älä seuraa
-      views: näkymät
+      views: katsottu
     unfollow: 
       flash_notice: Käyttäjä %{user} poistettiin ystävistäsi

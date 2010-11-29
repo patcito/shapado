@@ -10,6 +10,7 @@ br:
         default_tags: Tikedennoù dre ziouer
         description: Deskrivadur
         domain: Domani
+        enable_latex: Gweredekaat LaTeX
         fb_button: Gweredekaat bouton Like Facebook (ne warez ket ho puhez prevez)
         forum: Aotreañ muioc'h eget ur respont dre implijer
         group_created_by: krouet gant

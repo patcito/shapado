@@ -9,10 +9,10 @@ fi:
       votes: Äänet
   votes: 
     control: 
-      have_voted_down: Peru hylkäämisäänesi näpsäyttämällä
-      have_voted_up: Peru kannatusäänesi näpsäyttämällä
-      to_vote_down: Anna hylkäämisääni näpsäyttämällä
-      to_vote_up: Anna kannatusääni näpsäyttämällä
+      have_voted_down: Peru hylkäämisäänesi napsauttamalla
+      have_voted_up: Peru kannatusäänesi napsauttamalla
+      to_vote_down: Anna hylkäämisääni napsauttamalla
+      to_vote_up: Anna kannatusääni napsauttamalla
     create: 
       flash_error: Et voi äänestää tässä
       flash_notice: Kiitos äänestäsi!
