@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
+ENV["RAILS_ENV"] ||= (ARGV[0] || "development")
+
 require File.dirname(__FILE__)+"/../config/environment"
 
-gem 'twitter', '0.9.8'
-gem 'crack', '0.1.6'
+gem 'twitter', '0.9.12'
+gem 'crack', '0.1.8'
 
 require 'twitter'
 require 'whatlanguage'
@@ -24,7 +26,7 @@ class TwitterBot
   end
 
   def run!
-    loop do
+    Timeout.timeout(4.minutes.to_i) do
       Group.find_each("share.enable_twitter" => true) do |group|
         begin
           process_group(group)
@@ -32,8 +34,9 @@ class TwitterBot
           puts "WARNING: #{e} #{e.backtrace.join("\n\t")}"
         end
       end
-      sleep 600
     end
+  rescue Timeout::Error
+    $stderr.puts "Terminating... execution took longer than expected"
   end
 
   private
@@ -46,7 +49,7 @@ class TwitterBot
 
     since = last_date.strftime("%Y-%m-%d")
 
-    query = "#{share.twitter_pattern} to:#{share.twitter_user} ?"
+    query = "#{share.twitter_pattern} to:#{share.twitter_user} '?'"
     puts "Processing #{group.name}. query=#{query.inspect}"
     self.search(query.strip) do |status|
       id = status[:id]
@@ -55,7 +58,7 @@ class TwitterBot
         next
       end
 
-      if Question.first(:twitter_source => status[:id], :select => [:_id]).present?
+      if status[:text] =~ /\b(RT|via) @/ || Question.first(:twitter_source => status[:id], :select => [:_id]).present?
         next
       end
 
@@ -72,13 +75,10 @@ class TwitterBot
         user.save(:validate => false)
       end
 
-      title = status_text.gsub(/^@#{share.twitter_user}\s+/, "")
+      title = status_text.gsub(/#{Regexp.escape(share.twitter_pattern)}|@#{Regexp.escape(share.twitter_user)}/i, "").strip
       tags = Set.new(@extractor.extract_hashtags(status_text))
-      body = ""
-      if !user
-        body = %@<a rel="nofollow" href="http://twitter.com/#{username}/status/#{status[:id]}">#{username}</a> pregunta desde twitter:<br/><br/>@
-      end
-      body += title
+
+      body = title
 
       language = group.language
       if language.nil?
@@ -116,6 +116,5 @@ class TwitterBot
     end
   end
 end
-
 
 TwitterBot.new.run!

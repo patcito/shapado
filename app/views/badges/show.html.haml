@@ -1,6 +1,6 @@
 -content_for :subtabs do
   .navtitle
-    = t(".title", :type => @badge.name)
+    =h t(".title", :type => @badge.name)
 
 #badges_show
   %h2.title
@@ -11,9 +11,9 @@
   .description
     = render :partial => "badges/badge", :object => @badge, :locals => {:hide_user => true}
     -if @badge.for_tag || !Badge.TOKENS.include?(@badge.token)
-      =t(".for_tag_#{@badge.type}", :tag => render_tag(@badge.token))
+      = t(".for_tag_#{@badge.type}", :tag => render_tag(@badge.token))
     -else
-      =@badge.description
+      = @badge.description
   /Users
   %ul.items#users
     -@users.each do |user|
