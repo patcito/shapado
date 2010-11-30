@@ -1,5 +1,5 @@
 
-file = File.join(RAILS_ROOT, "data", "GeoLiteCity.dat")
+file = File.join(RAILS_ROOT, "shared", "GeoLiteCity.dat")
 
 if File.exist?(file)
   Localize = GeoIP.new(file)

@@ -346,8 +346,12 @@ Time.zone.now ? 1 : 0)
   end
 
   def localize(ip)
-    l = Localize.country(ip)
     self.ip = ip
+    if !defined?(Localize)
+      return self.save
+    end
+
+    l = Localize.country(ip)
     if l
       self.country_code = l[2]
       self.country_name = l[4]
