@@ -2,6 +2,7 @@ module OpenIdAuthentication
   class Association
     include MongoMapper::Document
 
+    key :_id, String
     key :issued, Integer
     key :lifetime, Integer
     key :handle, String
