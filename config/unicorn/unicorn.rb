@@ -45,7 +45,7 @@ after_fork do |server, worker|
 
   # the following is *required* for Rails + "preload_app true"
 
-  MongoMapper.connection.connect_to_master
+  MongoMapper.connection.connect
 
   # if preload_app is true, then you may also want to check and
   # restart any other shared sockets/descriptors such as Memcached,
