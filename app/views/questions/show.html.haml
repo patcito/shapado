@@ -7,7 +7,7 @@
 - show_open_request_form = @question.closed && logged_in? && @question.can_be_requested_to_open_by?(current_user)
 
 - if logged_in?
-  - if current_user.mod_of?(current_group) && @question.closed
+  - if current_user.mod_of?(current_group) && @question.closed && @question.close_reason.present?
     - show_close_request_form = (@question.close_reason.user_id == current_user.id)
   - @flag = current_user.has_flagged?(@question) || Flag.new
 
