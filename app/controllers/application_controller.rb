@@ -53,7 +53,7 @@ class ApplicationController < ActionController::Base
     end
 
     if logged_in?
-      if !current_user.user_of?(@current_group)
+      if current_group.private && !current_user.user_of?(@current_group)
         access_denied
       end
     else

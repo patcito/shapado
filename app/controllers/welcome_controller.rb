@@ -38,7 +38,8 @@ class WelcomeController < ApplicationController
 
   def send_feedback
     ok = !params[:result].blank? &&
-         (params[:result].to_i == (params[:n1].to_i * params[:n2].to_i))
+         (params[:result].to_i == (params[:n1].to_i * params[:n2].to_i)) &&
+         !params[:feedback][:description].include?("[/url]")
 
     if ok && params[:feedback][:title].split(" ").size < 3
       single_words = params[:feedback][:description].split(" ").size
