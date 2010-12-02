@@ -34,6 +34,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :announcements, :collection => {:hide => :any }
   map.resources :imports, :collection => {:send_confirmation => :post}
 
+  map.se_user "/users/:se_id/:id", :controller => "users", :action => "show", :se_id => /\d+/,
+                                   :conditions => { :method => :get }
 
   def build_questions_routes(router, options ={})
     router.with_options(options) do |route|
