@@ -61,7 +61,6 @@ class OauthController < ApplicationController
                               :website => user_json["link"],
                               :name => "#{user_json["first_name"]} #{user_json["last_name"]}",
                               :login => user_json["name"],
-                              :timezone => ActiveSupport::TimeZone[user_json["timezone"]],
                               :email => user_json["email"]
                             ))
 
