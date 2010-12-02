@@ -50,7 +50,7 @@
     %h2.title
       .counter
         = number_with_delimiter(@user.following.count)
-      Following
+      = t('.following')
     .friend_list
       -@user.following.each do |follower|
         %span
@@ -59,7 +59,7 @@
     %h2.title
       .counter
         = number_with_delimiter(@user.followers.count)
-      Followers
+      = t('.followers')
     .friend_list
       -@user.followers.each do |follower|
         %span

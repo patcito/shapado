@@ -24,6 +24,8 @@ en:
       follow: Follow
       unfollow: Unfollow
       views: views
+      followers: Followers
+      following: Following
     follow:
       flash_notice: "The user %{user} was added to your friends"
     unfollow:
