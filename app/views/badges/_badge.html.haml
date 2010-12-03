@@ -1,4 +1,4 @@
-%a.badge{:class => local_assigns[:mini] ? "mini" : "big", :href => badge_path(:id => badge.token)}
+%a.badge{:class => local_assigns[:mini] ? "mini" : "big", :href => badge_path(:id => badge.token), :title => badge.description}
   %span.badgeicon{:class => badge.type}
   =h badge.name
 
