@@ -23,7 +23,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "bson", :version => "1.1.4", :lib => "bson"
   config.gem "mongo", :version => "1.1.4"
-  config.gem "plucky", :version => "0.3.5"
+  config.gem "plucky", :version => "0.3.6"
 
   if RUBY_PLATFORM !~ /mswin|mingw/
     config.gem "rdiscount", :version => "1.6.5"
@@ -34,7 +34,7 @@ Rails::Initializer.run do |config|
   end
 
   config.gem "jnunemaker-validatable", :version => "1.8.4", :lib => "validatable"
-  config.gem "mongo_mapper", :version => "0.8.3", :source => "http://gemcutter.org"
+  config.gem "mongo_mapper", :version => "0.8.6", :source => "http://gemcutter.org"
   config.gem "compass", :version => "0.10.5", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "fancy-buttons", :version => "0.5.5", :source => "http://gemcutter.org"
   config.gem "compass-colors", :version => "0.3.1", :source => "http://gemcutter.org"
