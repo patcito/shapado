@@ -117,6 +117,7 @@ module ApplicationHelper
 
     cloud = '<div class="tag_cloud">'
     tags.each do |tag|
+      next if tag["count"].kind_of?(String)
       size = min_size + (tag["count"] - lowest_value["count"]) * ratio
       url = url_for(:controller => "questions", :action => "index", :tags => tag["name"])
       cloud << "<span>#{link_to(tag["name"], url, :class => "#{tag_class} #{css[size.round]}")}</span> "
