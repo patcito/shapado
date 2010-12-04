@@ -39,7 +39,7 @@ class PagesController < ApplicationController
           @page = Page.new(:title => params[:title], :slug => params[:id])
           render :action => "new"
         else
-          set_page_title(@page.title)
+          set_page_title(@page.title) if @page
           render
         end
       end
