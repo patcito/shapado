@@ -123,7 +123,9 @@ class Group
          value = self.custom_html[key]
          if value.kind_of?(Hash)
            value.each do |k,v|
-             value[k] = v.gsub(/<*.?script.*?>/, "")
+             if v.kind_of?(String)
+               value[k] = v.gsub(/<*.?script.*?>/, "")
+             end
            end
          elsif value.kind_of?(String)
            value = value.gsub(/<*.?script.*?>/, "")
