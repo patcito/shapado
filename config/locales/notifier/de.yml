@@ -5,11 +5,11 @@
 de: 
   notifier: 
     earned_badge: 
-      message1: Du hast ein %{badge}-Abzeichen auf %{app} erhalten
-      message2: "Beschreibung zum Abzeichen:"
-      message3: Du kannst alle Deine Abzeichen auf Deiner %{user_page} sehen
+      message1: Du hast ein %{badge}-Abzeichen auf %{app} erhalten.
+      message2: "Beschreibung des Abzeichens:"
+      message3: Du kannst alle Deine Abzeichen auf Deiner %{user_page} ansehen.
     favorited: 
-      message1: "%{user} hat Deine Frage als Favorit in %{group} hinzugefügt"
+      message1: "%{user} hat Deine Frage als Favorit in der Gruppe %{group} hinzugefügt"
       message2: "Der Text Deiner Frage:"
       message3: "Du kannst es hier sehen:"
     follow: 
@@ -24,9 +24,9 @@ de:
       hi: Hallo %{user},
       user_page: Nutzerseite
     new_answer: 
-      message: "%{user} hat %{new_answer} zu Frage %{question} verfasst"
+      message: "%{user} hat %{new_answer} zu Frage „%{question}“ verfasst"
     new_comment: 
-      message: "%{user} hat %{new_comment} zu Frage %{question} verfasst"
+      message: "%{user} hat %{new_comment} zu Frage „%{question}“ verfasst"
     new_feedback: 
       message1: Der Nutzer %{user} <%{email}> hat eine Rückmeldung gegeben
       message2: Ein anonymer Nutzer mit der IP-Adresse %{ip} hat eine Rückmeldung gegeben

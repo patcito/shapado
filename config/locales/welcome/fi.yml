@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Centerlink
+# Author: Nike
 fi: 
   welcome: 
     confirm_age: 
@@ -36,7 +37,7 @@ fi:
           large: luultavasti kuten 500 dollaria
           medium: <=== Sama
           onsite: luultavasti 0 dollaria omalla palvelimella
-          small: luultavasti kuten 50 € — 100 €/kuukausi useimmilla videopalvelujen tarjoajilla
+          small: todennäköisesti 50 € — 100 € kuukaudessa useimmilla videopalvelujen tarjoajilla
         stackexchange: 
           large: 1299 dollaria/kuukausi
           medium: 999 dollaria/kuukausi

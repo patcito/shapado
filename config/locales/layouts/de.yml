@@ -48,4 +48,4 @@ de:
       theme: Theme
       widgets: Widgets
     notifications: 
-      message: Sofern Du keine automatischen Benachrichtigungen mehr von %{domain} erhalten möchtest, musst Du Deine Einstellungen auf der Benachrichtigungsseite ändern.
+      message: Sofern Du keine automatischen Benachrichtigungen mehr von %{domain} erhalten möchtest, musst Du Deine Einstellungen auf der Benachrichtigungsseite ändern. Siehe

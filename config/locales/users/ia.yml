@@ -84,6 +84,8 @@ ia:
       title: Registrar te como nove usator
     show: 
       follow: Sequer
+      followers: Sequitores
+      following: Seque
       title: Usator %{user}
       unfollow: Non plus sequer
       views: visitas

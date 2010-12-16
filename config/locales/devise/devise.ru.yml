@@ -1,20 +1,26 @@
 # Messages for Russian (Русский)
 # Exported from translatewiki.net
 # Export driver: syck
+# Author: DCamer
 # Author: Eleferen
 ru: 
   devise: 
     confirmations: 
       confirmed: Ваш аккаунт был успешно подтвержден. Теперь вы вошли в систему
+      link: Не получили инструкции по подтверждению?
       send_instructions: В течение нескольких минут вы получите письмо с инструкциями о том, как подтвердить свой аккаунт.
     mailer: 
+      confirmation_instructions: Подтверждение инструкции
       reset_password_instructions: Инструкция по сбросу пароля
+      unlock_instructions: Разблокировать инструкции
     passwords: 
       link: Забыли пароль?
       send_instructions: В течение нескольких минут вы получите письмо с инструкциями о том, как сбросить пароль.
       updated: Ваш пароль был успешно изменён. Теперь вы вошли в систему.
     registrations: 
+      destroyed: Пока! Ваша учетная запись была удалена. Мы надеемся увидеть вас снова.
       link: Зарегистрироваться
+      signed_up: Вы подписаны.
       updated: Обновление учётной записи прошло успешно.
     sessions: 
       facebook_actions: 

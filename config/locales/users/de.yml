@@ -55,16 +55,16 @@ de:
       submit: Speichern
       title: Einstellungen
     follow: 
-      flash_notice: Der Nutzer %{user} wurde zur Liste Deiner Freunde hinzugefügt
+      flash_notice: Der Nutzer %{user} wurde zur Liste Deiner Freunde hinzugefügt.
     form: 
-      activities_notification: E-Mail-Benachrichtigungen zu Aktivitäten, z. B. erhaltene Auszeichnungen, neue Anhänger, etc.
+      activities_notification: E-Mail-Benachrichtigungen zu Aktivitäten, z. B. zu erhaltenen Auszeichnungen, neuen Anhängern, etc.
       avatar_tip: Ändere Dein Profilbild mit „Gravatar“
-      give_advice_notification: E-Mail-Benachrichtigungen über Fragen in Deinem Fachgebiet
+      give_advice_notification: E-Mail-Benachrichtigungen zu Fragen in Deinem Fachgebiet
       information: Nutzerinformationen
       language: "Die Sprache, die für die Nutzeroberfläche verwendet werden soll:"
-      new_answer_notification: E-Mail-Benachrichtigungen über neuen Antworten
+      new_answer_notification: E-Mail-Benachrichtigungen zu neuen Antworten
       notifications: Benachrichtigungen
-      reports_notification: Bericht mit den letzten Gruppenaktivitäten (nur für Gruppen-Administratoren)
+      reports_notification: Bericht mit den letzten Gruppenaktivitäten (nur für Gruppenadministratoren)
       show_more_lang: Weitere Sprachen
     index: 
       empty: Diese Gruppe hat keine Mitglieder - beteilige Dich, indem Du dieser Gruppe beitrittst
@@ -80,14 +80,16 @@ de:
       title: Alle Nutzer
     messages: 
       errors: 
-        reputation_needed: Du brauchst einen Reputationswert von %{min_reputation} für %{action}
+        reputation_needed: "Du brauchst einen Reputationswert von %{min_reputation} für: %{action}"
     new: 
       submit: Anmeldung
       title: Anmeldung als neuer Nutzer
     show: 
       follow: Beachten
+      followers: Anhänger
+      following: folgend
       title: Nutzer %{user}
       unfollow: Nicht mehr beachten
       views: Aufrufe
     unfollow: 
-      flash_notice: Der Nutzer %{user} wurde von der Liste Deiner Freunde entfernt
+      flash_notice: Der Nutzer %{user} wurde von der Liste Deiner Freunde entfernt.

@@ -84,6 +84,8 @@ mk:
       title: регистрирај се како нов корисник
     show: 
       follow: следи
+      followers: Следбеници
+      following: Следи
       title: Корисник %{user}
       unfollow: повеќе не следи
       views: прегледи

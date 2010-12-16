@@ -86,6 +86,8 @@ ru:
       title: Зарегистрироваться как новый пользователь
     show: 
       follow: Следить
+      followers: Последователи
+      following: Отслеживание
       title: Пользователь %{user}
       unfollow: Не следить
       views: просмотры

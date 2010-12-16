@@ -9,5 +9,5 @@ de:
       favorites: Favoriten
   unfavorites: 
     create: 
-      success: Die Frage ist aus deiner Favoritenliste entfernt worden
+      success: Die Frage ist aus deiner Favoritenliste entfernt worden.
       unauthenticated: Du musst angemeldet sein, um Favoriten entfernen zu können.

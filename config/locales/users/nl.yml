@@ -86,6 +86,8 @@ nl:
       title: Aanmelden als nieuwe gebruiker
     show: 
       follow: Volgen
+      followers: Abonnees
+      following: Abonnementen
       title: Gebruiker %{user}
       unfollow: Niet langer volgen
       views: x bekeken

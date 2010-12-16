@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck
 # Author: Hamilton Abreu
+# Author: Waldir
 pt-PT: 
   activerecord: 
     attributes: 
@@ -84,6 +85,8 @@ pt-PT:
       title: Registar-se como novo utilizador
     show: 
       follow: Seguir
+      followers: Seguidores
+      following: A seguir
       title: Utilizador %{user}
       unfollow: Deixar de seguir
       views: visitas

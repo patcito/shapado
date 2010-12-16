@@ -86,6 +86,8 @@ fr:
       title: Se connecter en tant que nouvel utilisateur
     show: 
       follow: Suivre
+      followers: Suiveurs
+      following: Suivi
       title: Utilisateur %{user}
       unfollow: Ne plus suivre
       views: vues

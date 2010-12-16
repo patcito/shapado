@@ -58,7 +58,7 @@ de:
         empty_tags: Du musst mindestens ein Stichwort verwenden.
         title_too_long: Der Titel ist zu lang. Er darf aus nicht mehr als 100 Zeichen bestehen.
         too_many_tags: Du kannst maximal neun Stichwörter verwenden.
-        too_short: Scheint zu kurz zu sein. Bitte verwende mehr als %{count} Wörter.
+        too_short: Er scheint zu kurz zu sein. Bitte verwende mehr als %{count} Wörter.
     move: 
       group_label: "Verschiebe zur Gruppe:"
       submit: Verschieben!
@@ -75,7 +75,7 @@ de:
       title: Stichwörter ändern
     retag_form: 
       cancel: Abbrechen
-      submit: Stichwörter aktualisieren!
+      submit: Stichwörter aktualisieren
       title: Stichwörter aktualisieren
     retag_to: 
       failure: Leider konnten die Stichwörter nicht aktualisiert werden.
@@ -98,7 +98,7 @@ de:
       edit_request: Bitte bearbeiten
       favorite_tooltip: Diese Frage zur Favoritenliste hinzufügen
       flag: Kennzeichen
-      flagged_as: Gekennzeichnet als
+      flagged_as: "Gekennzeichnet als:"
       flags: Gemeldet als
       last_activity: Letzte Aktivität
       open: Öffnen
@@ -135,8 +135,8 @@ de:
     unsolve: 
       flash_notice: Die Frage wird nicht mehr beantwortet.
     unwatch: 
-      success: Du erhältst nun keine E-Mail-Benachrichtigungen mehr zu jeder neuen Antwort auf diese Frage
+      success: Du erhältst nun keine E-Mail-Benachrichtigungen mehr zu jeder neuen Antwort auf diese Frage.
     update: 
       flash_notice: Die Frage wurde erfolgreich aktualisiert.
     watch: 
-      success: Du erhältst nun E-Mail-Benachrichtigungen zu jeder neuen Antwort auf diese Frage
+      success: Du erhältst nun E-Mail-Benachrichtigungen zu jeder neuen Antwort auf diese Frage.

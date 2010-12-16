@@ -1,0 +1,52 @@
+# Messages for Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+# Exported from translatewiki.net
+# Export driver: syck
+# Author: EugeneZelenko
+# Author: Jim-by
+be-TARASK: 
+  layouts: 
+    application: 
+      ask_question: Задаць пытаньне
+      badges: Узнагароды
+      forgot: Забыліся?
+      home: Пачатак
+      languages: Мовы
+      log_in: Увайсьці ў сыстэму
+      logged: Увайшлі як %{login}
+      logout: Выйсьці
+      manage_ads: Кіраваньне рэклямай
+      moderate: Сярэдняя
+      now: зараз!
+      openid: 
+        explaination: "Калі Вы жадаеце зарэгістравацца ці проста ўвайсьці ў сыстэму, калі ласка, выберыце Ваш сэрвіс OpenID:"
+      pages: Старонкі
+      questions: Пытаньні
+      questions_in: Пытаньні ў
+      questions_tagged: памечаная з
+      search: Шукаць
+      settings: Устаноўкі
+      signup: Зарэгіструйцеся
+      subscribe: Падпісацца
+      tags: Тэгі
+      title: Пытаньні і адказы
+      unanswered: Без адказаў
+      users: Карыстальнікі
+      welcome_from: Вітаем! Вы можаце
+    manage: 
+      actions: Дзеяньні
+      announcements: Аб’явы
+      constrains: Патрабаваньні
+      content: Зьмест
+      dashboard: Панэль інструмэнтаў
+      domain: Дамэн
+      general: Агульныя
+      members: Удзельнікі
+      pages: Старонкі
+      properties: Уласьцівасьці
+      reputation: Рэпутацыя
+      rewards: Узнагароды
+      stats: Статыстыка
+      theme: Афармленьне
+      widgets: Віджэты
+    notifications: 
+      message: Калі Вы болей не жадаеце атрымліваць аўтаматычныя абвяшчэньні з %{domain}, зьмяніце Вашыя ўстаноўкі ў акне абвяшчэньняў.

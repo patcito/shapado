@@ -13,7 +13,7 @@ de:
   flags: 
     create: 
       flash_error: Du kannst dies nicht kennzeichnen
-      flash_notice: Vielen Dank für Deinen Hinweis
+      flash_notice: Vielen Dank für Deinen Hinweis.
     destroy: 
       flash_notice: Dein Kennzeichen wurde erfolgreich zurückgenommen.
     edit: 
